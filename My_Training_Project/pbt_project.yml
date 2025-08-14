@@ -1,0 +1,71 @@
+name: My_Training_Project
+description: ''
+version: 0.0.1
+author: callum@prophecy.io
+language: python
+buildSystem: ''
+buildSystemDetails:
+  artefactID: mytrainingproject
+  parentArtefactID: ''
+  buildSystem: wheel
+  author: null
+  createdAt: '2025-08-14 06:29:23'
+pipelines: {}
+datasets: {}
+templates: {}
+jobs: {}
+gemContainer:
+  languageVersion: ''
+  gemLibsVersion: ''
+  gems: {}
+  dependencies: null
+functions:
+  author: null
+  createdAt: '2025-08-14 06:29:23'
+  udfs: {}
+  udafs: {}
+  expressions: {}
+  airflowFunctions: {}
+  businessRules: {}
+subgraphs: {}
+sqlModels: {}
+sqlSnapshots: {}
+sqlTests: {}
+sqlMacros: {}
+sqlSeeds: {}
+sqlSources: {}
+sqlUnreferencedSources: {}
+sqlPipeline: null
+dependencies:
+- modifiedAt: '2025-08-14T06:29:23.129257Z'
+  name: plibMaven
+  version: 8.11.1
+  id: '1561358330'
+  createdAt: '2025-08-14T06:29:23.129257Z'
+  type: plibMaven
+- modifiedAt: '2025-08-14T06:29:23.129257Z'
+  name: plibPypi
+  version: 2.0.11
+  id: '132920070'
+  createdAt: '2025-08-14T06:29:23.129257Z'
+  type: plibPypi
+projectDependencies:
+  '12654':
+    projectUID: 12654
+    projectName: ProphecySparkBasicsPython
+    repositoryPath: gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=
+    version: 0.2.47
+    isDefault: true
+    author: null
+    createdAt: '2025-08-14 06:29:23'
+  '12655':
+    projectUID: 12655
+    projectName: ProphecyWarehousePython
+    repositoryPath: gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12655.git&subPath=
+    version: 0.0.10
+    isDefault: true
+    author: null
+    createdAt: '2025-08-14 06:29:23'
+flags:
+  shouldAddDefaultDependenciesIfAbsent: true
+pipelineConfigurations: {}
