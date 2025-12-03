@@ -1,6 +1,6 @@
 name: SQL_Project_test
 description: ''
-version: 0.0.1
+version: 1.0.0
 author: callum@prophecy.io
 language: sql
 buildSystem: ''
