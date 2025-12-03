@@ -1,0 +1,50 @@
+---
+version: 2
+sources:
+- name: "analyst_samples.retail"
+  database: "analyst_samples"
+  schema: "retail"
+  config:
+    enabled: true
+  tables:
+  - name: "l0_bronze_customer_snapshots"
+    quoting:
+      identifier: true
+    columns:
+    - name: "customer_id"
+      dataType:
+        type: "String"
+    - name: "signup_date"
+      dataType:
+        type: "String"
+    - name: "customer_name"
+      dataType:
+        type: "String"
+    - name: "phone_number"
+      dataType:
+        type: "String"
+    - name: "street_number"
+      dataType:
+        type: "String"
+    - name: "street_name"
+      dataType:
+        type: "String"
+    - name: "unit"
+      dataType:
+        type: "String"
+    - name: "city"
+      dataType:
+        type: "String"
+    - name: "state"
+      dataType:
+        type: "String"
+    - name: "postcode"
+      dataType:
+        type: "String"
+    - name: "lat"
+      dataType:
+        type: "String"
+    - name: "lon"
+      dataType:
+        type: "String"
+    type: "table"
