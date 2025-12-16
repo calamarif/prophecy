@@ -1,0 +1,27 @@
+{
+  "name" : "SQL_Project_test",
+  "fileSystem" : {
+    "type" : "Folder",
+    "name" : "",
+    "children" : { },
+    "path" : "",
+    "editable" : true
+  },
+  "providerType" : "databricks",
+  "prophecyIDEFolder" : {
+    "name" : "",
+    "children" : { },
+    "path" : "",
+    "editable" : true
+  },
+  "dependenciesContainer" : {
+    "dependencies" : { },
+    "prophecyProjectDependencies" : { }
+  },
+  "entitiesToSync" : [ {
+    "name" : "first_pipeline",
+    "type" : "Model",
+    "syncedOnce" : false
+  } ],
+  "frontEndLanguage" : "sql"
+}

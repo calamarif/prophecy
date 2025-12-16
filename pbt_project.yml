@@ -1,0 +1,164 @@
+name: SQL_Project_test
+description: ''
+version: 0.0.1
+author: callum@prophecy.io
+language: sql
+buildSystem: ''
+buildSystemDetails: null
+pipelines: {}
+datasets: {}
+templates: {}
+jobs: {}
+gemContainer:
+  languageVersion: ''
+  gemLibsVersion: ''
+  gems: {}
+  dependencies: null
+functions:
+  author: null
+  createdAt: '2025-12-03 06:30:00'
+  udfs: {}
+  udafs: {}
+  expressions: {}
+  airflowFunctions: {}
+  businessRules: {}
+subgraphs: {}
+sqlModels:
+  .prophecy/metadata/sqlmodels/first_pipeline:
+    name: first_pipeline
+    schema:
+      entityType: ''
+      providerType: Databricks
+      fields:
+      - name: customer_name
+        dataType:
+          type: String
+      - name: customer_id
+        dataType:
+          type: String
+      - name: signup_date
+        dataType:
+          type: String
+      - name: phone_number
+        dataType:
+          type: String
+      - name: street_number
+        dataType:
+          type: String
+      - name: street_name
+        dataType:
+          type: String
+      - name: unit
+        dataType:
+          type: String
+      - name: city
+        dataType:
+          type: String
+      - name: state
+        dataType:
+          type: String
+      - name: postcode
+        dataType:
+          type: String
+      - name: lat
+        dataType:
+          type: String
+      - name: lon
+        dataType:
+          type: String
+      - name: first_name
+        dataType:
+          type: String
+      - name: last_name
+        dataType:
+          type: String
+    description: null
+    author: callum@prophecy.io
+    files:
+    - models/first_pipeline.sql
+    - .prophecy/ide/models/first_pipeline.json
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2025-12-03 06:30:30'
+sqlSnapshots: {}
+sqlTests: {}
+sqlMacros: {}
+sqlSeeds: {}
+sqlSources:
+  .prophecy/metadata/sqlsources/analyst_samples_retail:
+    name: analyst_samples.retail
+    description: null
+    author: callum@prophecy.io
+    files:
+    - prophecy-sources/sources.yml
+    createdAt: '2025-12-03 06:32:33'
+    tables:
+    - name: l0_bronze_customer_snapshots
+      schema:
+        entityType: ''
+        providerType: databricks
+        fields:
+        - name: customer_id
+          dataType:
+            type: String
+        - name: signup_date
+          dataType:
+            type: String
+        - name: customer_name
+          dataType:
+            type: String
+        - name: phone_number
+          dataType:
+            type: String
+        - name: street_number
+          dataType:
+            type: String
+        - name: street_name
+          dataType:
+            type: String
+        - name: unit
+          dataType:
+            type: String
+        - name: city
+          dataType:
+            type: String
+        - name: state
+          dataType:
+            type: String
+        - name: postcode
+          dataType:
+            type: String
+        - name: lat
+          dataType:
+            type: String
+        - name: lon
+          dataType:
+            type: String
+      description: null
+      author: callum@prophecy.io
+      createdAt: '2025-12-03 06:32:33'
+      tableType: table
+sqlUnreferencedSources: {}
+sqlPipeline:
+  name: sqlPipeline
+  description: null
+  author: callum@prophecy.io
+  createdAt: '2025-12-03 06:30:00'
+dependencies: []
+projectDependencies:
+  '78064':
+    projectUID: 78064
+    projectName: prophecy_basics
+    repositoryPath: gitUri=https://github.com/prophecy-io/prophecy-basics&subPath=
+    version: 1.0.3
+    isDefault: true
+    author: null
+    createdAt: '2025-12-03 06:29:47'
+flags:
+  shouldAddDefaultDependenciesIfAbsent: false
+pipelineConfigurations: {}
+projectConfigurations: {}
