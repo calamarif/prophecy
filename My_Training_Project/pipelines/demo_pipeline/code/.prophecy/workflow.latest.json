@@ -13,8 +13,8 @@
     "codeGenConfiguration" : {
       "editableConfig" : true,
       "plibVersion" : {
-        "mavenVersion" : "8.12.1",
-        "pyPiVersion" : "2.1.3"
+        "mavenVersion" : "8.15.1",
+        "pyPiVersion" : "2.1.7"
       },
       "sparkConfigJinjaEnabled" : true,
       "workflowMode" : "batch"
@@ -176,8 +176,8 @@
       "metadata" : {
         "label" : "AcccountBookings2024_2025",
         "slug" : "AcccountBookings2024_2025",
-        "x" : -320,
-        "y" : -200,
+        "x" : -660,
+        "y" : -380,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,

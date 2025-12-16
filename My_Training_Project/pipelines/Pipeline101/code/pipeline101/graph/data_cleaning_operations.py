@@ -9,177 +9,93 @@ from pipeline101.functions import *
 def data_cleaning_operations(spark: SparkSession, df: DataFrame) -> DataFrame:
     from pyspark.sql.functions import col, trim, regexp_replace, lower, upper, initcap
     from pyspark.sql.types import StringType, IntegerType, FloatType, DoubleType, LongType, ShortType
+    replace_null_text_fields = False
+    replace_null_text_with = "NA"
+    replace_null_numeric_fields = False
+    replace_null_numeric_with = 0
+    trim_whitespace = True
+    remove_tabs_linebreaks = False
+    all_whitespace = False
+    clean_letters = False
+    clean_punctuations = False
+    clean_numbers = False
+    make_lowercase = False
+    make_uppercase = False
+    make_titlecase = True
     # Remove rows where all columns are null
     df = df.na.drop(how = "all")
     # Step 2: Apply data cleansing operations
-    # Start with the original columns
-    transformed_columns = []
+    # Create a set of columns that will be processed for quick lookup
+    cleansing_columns = {"Account",  "Address",  "Address Line 2",  "City",  "State",  "ZipCode",  "Country",  "MainPhoneNumber",                          "Bookings in 2024",  "Bookings in 2025"}
+    # Build expressions in the original column order from df
+    all_expressions = []
 
-    # Check if column exists after null operations
-    if "Account" not in df.columns:
-        print("Warning: Column 'Account' not found after null operation. Skipping transformations for this column.")
-    else:
-        # If the column is a string type, apply text-based operations
-        if isinstance(df.schema["Account"].dataType, StringType):
-            transformed_columns = [initcap(trim(col("Account"))).alias("Account")]
-        elif isinstance(df.schema["Account"].dataType, (IntegerType, FloatType, DoubleType, LongType, ShortType)):
-            transformed_columns = [col("Account")]
+    for col_name in df.columns:
+        if col_name in cleansing_columns:
+            # This column goes through cleansing operations
+            col_type = df.schema[col_name].dataType
+
+            # If the column is a string type, apply text-based operations
+            if isinstance(col_type, StringType):
+                col_expr = col(col_name) # Initialize column expression
+
+                # Replace null text fields with the provided value
+                if replace_null_text_fields:
+                    df = df.na.fill({col_name : replace_null_text_with})
+
+                # Trim whitespace
+                if trim_whitespace:
+                    col_expr = trim(col_expr)
+
+                # Remove tabs, line breaks, and duplicate whitespaces
+                if remove_tabs_linebreaks:
+                    col_expr = regexp_replace(col_expr, r'\s+', ' ')
+
+                # Remove all whitespace
+                if all_whitespace:
+                    col_expr = regexp_replace(col_expr, r'\s+', '')
+
+                # Clean letters (remove letters from the string)
+                if clean_letters:
+                    col_expr = regexp_replace(col_expr, r'[A-Za-z]', '')
+
+                # Clean punctuations (remove punctuation characters)
+                if clean_punctuations:
+                    col_expr = regexp_replace(col_expr, r'[^\w\s]', '')
+
+                # Clean numbers (remove numbers)
+                if clean_numbers:
+                    col_expr = regexp_replace(col_expr, r'\d+', '')
+
+                # Convert text to lowercase
+                if make_lowercase:
+                    col_expr = lower(col_expr)
+
+                # Convert text to uppercase
+                if make_uppercase:
+                    col_expr = upper(col_expr)
+
+                # Convert text to title case
+                if make_titlecase:
+                    col_expr = initcap(col_expr)
+
+                # Add the transformed column to the list with alias
+                all_expressions.append(col_expr.alias(col_name))
+            elif isinstance(col_type, (IntegerType, FloatType, DoubleType, LongType, ShortType)):
+                col_expr = col(col_name)
+
+                # Replace null with the provided numeric value
+                if replace_null_numeric_fields:
+                    df = df.na.fill({col_name : replace_null_numeric_with})
+
+                all_expressions.append(col_expr.alias(col_name))
+            else:
+                # If the column doesn't require transformation, add it as is
+                all_expressions.append(col(col_name))
         else:
-            transformed_columns = [col("Account")]
+            # This column remains unchanged
+            all_expressions.append(col(col_name))
 
-    # Check if column exists after null operations
-    if "Address" not in df.columns:
-        print("Warning: Column 'Address' not found after null operation. Skipping transformations for this column.")
-    else:
-        # If the column is a string type, apply text-based operations
-        if isinstance(df.schema["Address"].dataType, StringType):
-            # Add the transformed column to the list with alias
-            transformed_columns.append(initcap(trim(col("Address"))).alias("Address"))
-        elif isinstance(df.schema["Address"].dataType, (IntegerType, FloatType, DoubleType, LongType, ShortType)):
-            transformed_columns.append(col("Address"))
-        else:
-            # If the column doesn't require transformation, add it as is
-            transformed_columns.append(col("Address"))
-
-    # Check if column exists after null operations
-    if "Address Line 2" not in df.columns:
-        print(
-            "Warning: Column 'Address Line 2' not found after null operation. Skipping transformations for this column."
-        )
-    else:
-        # If the column is a string type, apply text-based operations
-        if isinstance(df.schema["Address Line 2"].dataType, StringType):
-            # Add the transformed column to the list with alias
-            transformed_columns.append(initcap(trim(col("Address Line 2"))).alias("Address Line 2"))
-        elif isinstance(df.schema["Address Line 2"].dataType, (IntegerType, FloatType, DoubleType, LongType, ShortType)):
-            transformed_columns.append(col("Address Line 2"))
-        else:
-            # If the column doesn't require transformation, add it as is
-            transformed_columns.append(col("Address Line 2"))
-
-    # Check if column exists after null operations
-    if "City" not in df.columns:
-        print("Warning: Column 'City' not found after null operation. Skipping transformations for this column.")
-    else:
-        # If the column is a string type, apply text-based operations
-        if isinstance(df.schema["City"].dataType, StringType):
-            # Add the transformed column to the list with alias
-            transformed_columns.append(initcap(trim(col("City"))).alias("City"))
-        elif isinstance(df.schema["City"].dataType, (IntegerType, FloatType, DoubleType, LongType, ShortType)):
-            transformed_columns.append(col("City"))
-        else:
-            # If the column doesn't require transformation, add it as is
-            transformed_columns.append(col("City"))
-
-    # Check if column exists after null operations
-    if "State" not in df.columns:
-        print("Warning: Column 'State' not found after null operation. Skipping transformations for this column.")
-    else:
-        # If the column is a string type, apply text-based operations
-        if isinstance(df.schema["State"].dataType, StringType):
-            # Add the transformed column to the list with alias
-            transformed_columns.append(initcap(trim(col("State"))).alias("State"))
-        elif isinstance(df.schema["State"].dataType, (IntegerType, FloatType, DoubleType, LongType, ShortType)):
-            transformed_columns.append(col("State"))
-        else:
-            # If the column doesn't require transformation, add it as is
-            transformed_columns.append(col("State"))
-
-    # Check if column exists after null operations
-    if "ZipCode" not in df.columns:
-        print("Warning: Column 'ZipCode' not found after null operation. Skipping transformations for this column.")
-    else:
-        # If the column is a string type, apply text-based operations
-        if isinstance(df.schema["ZipCode"].dataType, StringType):
-            # Add the transformed column to the list with alias
-            transformed_columns.append(initcap(trim(col("ZipCode"))).alias("ZipCode"))
-        elif isinstance(df.schema["ZipCode"].dataType, (IntegerType, FloatType, DoubleType, LongType, ShortType)):
-            transformed_columns.append(col("ZipCode"))
-        else:
-            # If the column doesn't require transformation, add it as is
-            transformed_columns.append(col("ZipCode"))
-
-    # Check if column exists after null operations
-    if "Country" not in df.columns:
-        print("Warning: Column 'Country' not found after null operation. Skipping transformations for this column.")
-    else:
-        # If the column is a string type, apply text-based operations
-        if isinstance(df.schema["Country"].dataType, StringType):
-            # Add the transformed column to the list with alias
-            transformed_columns.append(initcap(trim(col("Country"))).alias("Country"))
-        elif isinstance(df.schema["Country"].dataType, (IntegerType, FloatType, DoubleType, LongType, ShortType)):
-            transformed_columns.append(col("Country"))
-        else:
-            # If the column doesn't require transformation, add it as is
-            transformed_columns.append(col("Country"))
-
-    # Check if column exists after null operations
-    if "MainPhoneNumber" not in df.columns:
-        print(
-            "Warning: Column 'MainPhoneNumber' not found after null operation. Skipping transformations for this column."
-        )
-    else:
-        # If the column is a string type, apply text-based operations
-        if isinstance(df.schema["MainPhoneNumber"].dataType, StringType):
-            # Add the transformed column to the list with alias
-            transformed_columns.append(initcap(trim(col("MainPhoneNumber"))).alias("MainPhoneNumber"))
-        elif isinstance(
-            df.schema["MainPhoneNumber"].dataType,
-            (IntegerType, FloatType, DoubleType, LongType, ShortType)
-        ):
-            transformed_columns.append(col("MainPhoneNumber"))
-        else:
-            # If the column doesn't require transformation, add it as is
-            transformed_columns.append(col("MainPhoneNumber"))
-
-    # Check if column exists after null operations
-    if "Bookings in 2024" not in df.columns:
-        print(
-            "Warning: Column 'Bookings in 2024' not found after null operation. Skipping transformations for this column."
-        )
-    else:
-        # If the column is a string type, apply text-based operations
-        if isinstance(df.schema["Bookings in 2024"].dataType, StringType):
-            # Add the transformed column to the list with alias
-            transformed_columns.append(initcap(trim(col("Bookings in 2024"))).alias("Bookings in 2024"))
-        elif isinstance(
-            df.schema["Bookings in 2024"].dataType,
-            (IntegerType, FloatType, DoubleType, LongType, ShortType)
-        ):
-            transformed_columns.append(col("Bookings in 2024"))
-        else:
-            # If the column doesn't require transformation, add it as is
-            transformed_columns.append(col("Bookings in 2024"))
-
-    # Check if column exists after null operations
-    if "Bookings in 2025" not in df.columns:
-        print(
-            "Warning: Column 'Bookings in 2025' not found after null operation. Skipping transformations for this column."
-        )
-    else:
-        # If the column is a string type, apply text-based operations
-        if isinstance(df.schema["Bookings in 2025"].dataType, StringType):
-            # Add the transformed column to the list with alias
-            transformed_columns.append(initcap(trim(col("Bookings in 2025"))).alias("Bookings in 2025"))
-        elif isinstance(
-            df.schema["Bookings in 2025"].dataType,
-            (IntegerType, FloatType, DoubleType, LongType, ShortType)
-        ):
-            transformed_columns.append(col("Bookings in 2025"))
-        else:
-            # If the column doesn't require transformation, add it as is
-            transformed_columns.append(col("Bookings in 2025"))
-
-    df = df.select(
-        *[
-          col(c)
-          for c in df.columns
-          if (
-          c
-          not in ["Account",  "Address",  "Address Line 2",  "City",  "State",  "ZipCode",  "Country",  "MainPhoneNumber",              "Bookings in 2024",  "Bookings in 2025"]
-        )
-        ],
-        *transformed_columns
-    )
+    df = df.select(*all_expressions)
 
     return df

@@ -7,7 +7,7 @@ setup(
     package_data = {'prophecy_config_instances.demo_pipeline' : ['*.json', '*.py', '*.conf']},
     description = 'workflow',
     install_requires = [
-'prophecy-libs==2.1.3'],
+'gender-guesser==0.4.0', 'prophecy-libs==2.1.7'],
     entry_points = {
 'console_scripts' : [
 'main = demo_pipeline.pipeline:main'], },
