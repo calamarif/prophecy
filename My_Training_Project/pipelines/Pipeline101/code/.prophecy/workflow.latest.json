@@ -1,0 +1,1533 @@
+{
+  "metainfo" : {
+    "migrationVersions" : {
+      "gemBuilderVersion" : "v1",
+      "unitTestNullDataMigrated" : true
+    },
+    "functions" : {
+      "businessRules" : {
+        "rules" : [ ],
+        "sharedRules" : [ ]
+      },
+      "columnExpressions" : {
+        "expressions" : [ ],
+        "sharedExpressions" : [ ]
+      }
+    },
+    "codeGenConfiguration" : {
+      "editableConfig" : true,
+      "plibVersion" : {
+        "mavenVersion" : "8.12.1",
+        "pyPiVersion" : "2.1.3"
+      },
+      "sparkConfigJinjaEnabled" : true
+    },
+    "id" : "1",
+    "uri" : "pipelines/Pipeline101",
+    "sourceSuggestions" : [ ],
+    "pipelineSettingsInfo" : {
+      "applicationName" : "Pipeline101",
+      "hasApplication" : true,
+      "isFunctionsPackageDirDefined" : true,
+      "isNullValuesInUnitTestsEnabled" : true,
+      "sparkConfigOptions" : {
+        "disableSparkCreationTimeConfigGeneration" : true
+      }
+    },
+    "language" : "python",
+    "fabricId" : "22741",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ],
+      "functionPackageName" : "callumprophecyioteam.mytrainingproject.functions",
+      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions" ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ {
+      "name" : "spark.default.parallelism",
+      "value" : "4"
+    }, {
+      "name" : "spark.sql.legacy.allowUntypedScalaUDF",
+      "value" : "true"
+    } ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "12654",
+      "projectName" : "ProphecySparkBasicsPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12655",
+      "projectName" : "ProphecyWarehousePython",
+      "externalDependencies" : [ ]
+    } ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "pipeline101",
+    "configTopLevelPackage" : "pipeline101",
+    "configurationVersion" : "v2"
+  },
+  "connections" : [ {
+    "id" : "qm7Oyzi_6eCowrezWXxtb$$NTn6S1KaqgfdpeJY8SgEi",
+    "source" : "IassCvJoP1S3nPxbW2t3T$$FZ3LjUeg9My7ARhCBcGZR",
+    "sourcePort" : "0U7hRJX-dDKfEid003c6M$$6e1fD3t6WroR6Ix4vbN4j",
+    "target" : "zhO24Qaq_LNcrE3Z0RrKD$$RhUwJO6-5QhAHGUmdtK79",
+    "targetPort" : "DTyk19i74Qo0cwsD6L7yE$$iX--WXzRtObzj3Gm_QAFM"
+  }, {
+    "id" : "jN_o1HvLYt278NVYVcJ9z$$a4s9h2o2htu-DAwhSq8qW",
+    "source" : "CjclPB8t4hHtn7VC0SEJJ$$2gvhsR04ItnqPZDiNGTyV",
+    "sourcePort" : "lET-E3DuNQOXJSudCokyD$$QxKuhsRLV0SswTMIwOehX",
+    "target" : "In2yJ0P7N6sPtIQLSSNv5$$NWuqbL39YYhRADC5272rD",
+    "targetPort" : "0N72tkYm6kLAzKM5JDS9S$$tAbVI9c-Eq-GVjCU69Scm"
+  }, {
+    "id" : "oXUxsaMkhY9Wp8Qywqel2$$q-UqzczBEJjFXlRVYy3OT",
+    "source" : "In2yJ0P7N6sPtIQLSSNv5$$NWuqbL39YYhRADC5272rD",
+    "sourcePort" : "EOPc1HD7pm4XNICtkqC_q$$9HzP8Jsk2TspNgTRLFuCV",
+    "target" : "LYdxQm0JClHepzmTVJZ5l$$hZDGP2ELa9-lTYiAAlOzN",
+    "targetPort" : "ZxnWn_Hnh_VDDRHqg4LL2$$QScvr4keUFo3_NIHM63gc"
+  }, {
+    "id" : "z5HekIYpyFwRC_GHTL4h7$$T2reBclwJRfe9cpULahKk",
+    "source" : "zhO24Qaq_LNcrE3Z0RrKD$$RhUwJO6-5QhAHGUmdtK79",
+    "sourcePort" : "0SGh9cCapLlY6dRYu0NkK$$k3qUnFIkeqaknXCiK1QN7",
+    "target" : "LYdxQm0JClHepzmTVJZ5l$$hZDGP2ELa9-lTYiAAlOzN",
+    "targetPort" : "-aPA9fp9T-aZxyuL0Obv3$$AbBGz3b-6rpBMnpDhfRIF"
+  }, {
+    "id" : "avHdidKK3KvE7Mwz0VVf7$$0eIPsNbuiep9qVvb9DHEc",
+    "source" : "LYdxQm0JClHepzmTVJZ5l$$hZDGP2ELa9-lTYiAAlOzN",
+    "sourcePort" : "AR_o6MIdYuHMKQjL21G0r$$lExj709R1fogUq5-KkKf0",
+    "target" : "DS-vNPufFTg3SK22TrpqS$$gkxCiYznThDdw33QjDIyZ",
+    "targetPort" : "DmbayOb3Fmf1Jq0y1PzhE$$ZpZdzii2xw22ub1lU8Z4p"
+  } ],
+  "processes" : {
+    "FUkb23cPUO4_Yy2-fZOIm$$z1We8SL9KawJX4bqZz9lu" : {
+      "id" : "FUkb23cPUO4_Yy2-fZOIm$$z1We8SL9KawJX4bqZz9lu",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_1",
+        "slug" : "Reformat_1",
+        "x" : -840,
+        "y" : -60,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "dataPreview" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "_K-Wt2DRGY37hT_M9neVQ$$rF4wHJkGt62gL5a7mEzk9",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "XMpXp-VFpmbA0n65ihzFz$$W2Yd4RsOw7yUFySdPIs46",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.48&projectSubscriptionProjectId=12654&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "DVQfrr6YfY1u6vLSaAcEf$$cRXqVDJC9p78TAB5_LBoe" : {
+      "id" : "DVQfrr6YfY1u6vLSaAcEf$$cRXqVDJC9p78TAB5_LBoe",
+      "component" : "OrderBy",
+      "metadata" : {
+        "label" : "OrderBy_1",
+        "slug" : "OrderBy_1",
+        "x" : -1320,
+        "y" : -400,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "-DfjotrzcwLUkXZr23qAQ$$4879ag8UQ4HqIBxNGzCcm",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "ct6FLUzrnMSkMMxGuWa-7$$5nA4iux7m-5KfZ2-rOkrw",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "orders" : [ ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.48&projectSubscriptionProjectId=12654&path=gems/OrderBy",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "DS-vNPufFTg3SK22TrpqS$$gkxCiYznThDdw33QjDIyZ" : {
+      "id" : "DS-vNPufFTg3SK22TrpqS$$gkxCiYznThDdw33QjDIyZ",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "Target_1",
+        "slug" : "Target_1",
+        "x" : -580,
+        "y" : -300,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "DmbayOb3Fmf1Jq0y1PzhE$$ZpZdzii2xw22ub1lU8Z4p",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "Firm",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "TotalEmp",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "SICCode",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "MaxSegment",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "NumEmployeeStrata",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Industry",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "DUNS Number",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Global Ultimate DUNS",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Domestic Ultimate DUNS",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "SiteEmployee#",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "GlobalEmployee#",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "OrigMaxSegment",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Account",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Address",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Address Line 2",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "City",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "State",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ZipCode",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Country",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "MainPhoneNumber",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Bookings in 2024",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Bookings in 2025",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : { }
+    },
+    "zhO24Qaq_LNcrE3Z0RrKD$$RhUwJO6-5QhAHGUmdtK79" : {
+      "id" : "zhO24Qaq_LNcrE3Z0RrKD$$RhUwJO6-5QhAHGUmdtK79",
+      "component" : "DataCleansing",
+      "metadata" : {
+        "label" : "data_cleansing_operations",
+        "slug" : "data_cleansing_operations",
+        "x" : -960,
+        "y" : -400,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "dataPreview" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "DTyk19i74Qo0cwsD6L7yE$$iX--WXzRtObzj3Gm_QAFM",
+          "slug" : "df",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "Firm",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Name of the firm",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "TotalEmp",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Total number of employees in the firm",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "SICCode",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Standard Industry Classification code identifying the firm's industry",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "MaxSegment",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The maximum segment classification of the firm",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "NumEmployeeStrata",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Strata classification based on the number of employees in the firm",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Industry",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The industry classification of the firm",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "DUNS Number",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier assigned to the firm for business identification purposes",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Global Ultimate DUNS",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The unique identifier for the global ultimate parent company",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Domestic Ultimate DUNS",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for the domestic ultimate parent company",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "SiteEmployee#",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Number of employees at the specific site of the firm",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "GlobalEmployee#",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Total number of employees globally in the firm",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "OrigMaxSegment",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The original maximum segment classification of the firm",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "0SGh9cCapLlY6dRYu0NkK$$k3qUnFIkeqaknXCiK1QN7",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "trimWhiteSpace" : true,
+        "replaceNullForNumericFields" : false,
+        "cleanLetters" : false,
+        "replaceNullTextWith" : "NA",
+        "replaceNullTextFields" : false,
+        "columnNames" : [ "Firm", "TotalEmp", "SICCode", "MaxSegment", "NumEmployeeStrata", "Industry", "DUNS Number", "Global Ultimate DUNS", "Domestic Ultimate DUNS", "SiteEmployee#", "GlobalEmployee#", "OrigMaxSegment" ],
+        "makeTitlecase" : true,
+        "schema" : {
+          "type" : "struct",
+          "fields" : [ {
+            "name" : "Firm",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "Name of the firm",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "TotalEmp",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "Total number of employees in the firm",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "SICCode",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "Standard Industry Classification code identifying the firm's industry",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "MaxSegment",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "The maximum segment classification of the firm",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "NumEmployeeStrata",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "Strata classification based on the number of employees in the firm",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "Industry",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "The industry classification of the firm",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "DUNS Number",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "Unique identifier assigned to the firm for business identification purposes",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "Global Ultimate DUNS",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "The unique identifier for the global ultimate parent company",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "Domestic Ultimate DUNS",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "Unique identifier for the domestic ultimate parent company",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "SiteEmployee#",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "Number of employees at the specific site of the firm",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "GlobalEmployee#",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "Total number of employees globally in the firm",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "OrigMaxSegment",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "The original maximum segment classification of the firm",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          } ]
+        },
+        "allWhiteSpace" : false,
+        "removeTabsLineBreaksAndDuplicateWhitespace" : false,
+        "cleanPunctuations" : false,
+        "null_operation" : "remove_row_null_all_cols",
+        "makeLowercase" : false,
+        "makeUppercase" : false,
+        "cleanNumbers" : false,
+        "replaceNullNumericWith" : 0
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.48&projectSubscriptionProjectId=12654&path=gems/DataCleansing",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "SVDmcqJyE_jqhTrDqijlN$$Gn4lSA9R1C57RJLgK5Tzw" : {
+      "id" : "SVDmcqJyE_jqhTrDqijlN$$Gn4lSA9R1C57RJLgK5Tzw",
+      "component" : "Deduplicate",
+      "metadata" : {
+        "label" : "Deduplicate_1",
+        "slug" : "Deduplicate_1",
+        "x" : -1320,
+        "y" : -160,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "dataPreview" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "UaGET8iEqD7rbRVyDJwIo$$NkV73B-G_BiUZeDwXwVSN",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "vq_2JMwGhanCy0oGO7QSe$$-e43-otm0lbnrdptg3dLz",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "dedupColumns" : [ ],
+        "dedupType" : "any",
+        "columnsSelector" : [ ],
+        "orders" : [ ],
+        "useOrderBy" : false
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.48&projectSubscriptionProjectId=12654&path=gems/Deduplicate",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "QN5GIT14g5gwvjsBvNEJB$$R5HDj3-qFqbLNRoEIQ7Kf" : {
+      "id" : "QN5GIT14g5gwvjsBvNEJB$$R5HDj3-qFqbLNRoEIQ7Kf",
+      "component" : "WindowFunction",
+      "metadata" : {
+        "label" : "WindowFunction_1",
+        "slug" : "WindowFunction_1",
+        "x" : -760,
+        "y" : -400,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "iRVEeD3r5z0l__7euLTL7$$CSjMaqOc6v7QxHIvzx9kn",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "_hEj8xcAhuuRteAgGdaPm$$bkjLzxoe_ocXOql11nRzD",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "userSpecifiedEnd" : null,
+        "expressionColumns" : [ ],
+        "frameType" : "row",
+        "partitionColumns" : [ ],
+        "activeTab" : "windowPartition",
+        "columnsSelector" : [ ],
+        "specifyFrame" : false,
+        "frameStart" : null,
+        "orderColumns" : [ ],
+        "frameEnd" : null,
+        "userSpecifiedStart" : null
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.48&projectSubscriptionProjectId=12654&path=gems/WindowFunction",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "LYdxQm0JClHepzmTVJZ5l$$hZDGP2ELa9-lTYiAAlOzN" : {
+      "id" : "LYdxQm0JClHepzmTVJZ5l$$hZDGP2ELa9-lTYiAAlOzN",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "firm_account_join",
+        "slug" : "firm_account_join",
+        "x" : -820,
+        "y" : -300,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "dataPreview" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "-aPA9fp9T-aZxyuL0Obv3$$AbBGz3b-6rpBMnpDhfRIF",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "Firm",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "TotalEmp",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "SICCode",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "MaxSegment",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "NumEmployeeStrata",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Industry",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "DUNS Number",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Global Ultimate DUNS",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Domestic Ultimate DUNS",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "SiteEmployee#",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "GlobalEmployee#",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "OrigMaxSegment",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        }, {
+          "id" : "ZxnWn_Hnh_VDDRHqg4LL2$$QScvr4keUFo3_NIHM63gc",
+          "slug" : "in1",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "Account",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Address",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Address Line 2",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "City",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "State",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ZipCode",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Country",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "MainPhoneNumber",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Bookings in 2024",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Bookings in 2025",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "AR_o6MIdYuHMKQjL21G0r$$lExj709R1fogUq5-KkKf0",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.Firm = in1.Account"
+          },
+          "joinType" : "inner"
+        } ],
+        "expressions" : [ ],
+        "hints" : [ {
+          "id" : "-aPA9fp9T-aZxyuL0Obv3$$AbBGz3b-6rpBMnpDhfRIF",
+          "alias" : "in0",
+          "hintType" : "none",
+          "propagateColumns" : false
+        }, {
+          "id" : "ZxnWn_Hnh_VDDRHqg4LL2$$QScvr4keUFo3_NIHM63gc",
+          "alias" : "in1",
+          "hintType" : "none",
+          "propagateColumns" : false
+        } ],
+        "allIn1" : null,
+        "activeTab" : "conditions",
+        "columnsSelector" : [ "ZxnWn_Hnh_VDDRHqg4LL2$$QScvr4keUFo3_NIHM63gc##Account", "-aPA9fp9T-aZxyuL0Obv3$$AbBGz3b-6rpBMnpDhfRIF##Firm" ],
+        "allIn0" : null,
+        "whereClause" : null,
+        "headAlias" : "in0"
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.48&projectSubscriptionProjectId=12654&path=gems/Join",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "In2yJ0P7N6sPtIQLSSNv5$$NWuqbL39YYhRADC5272rD" : {
+      "id" : "In2yJ0P7N6sPtIQLSSNv5$$NWuqbL39YYhRADC5272rD",
+      "component" : "DataCleansing",
+      "metadata" : {
+        "label" : "data_cleaning_operations",
+        "slug" : "data_cleaning_operations",
+        "x" : -960,
+        "y" : -200,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "dataPreview" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "0N72tkYm6kLAzKM5JDS9S$$tAbVI9c-Eq-GVjCU69Scm",
+          "slug" : "df",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "Account",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The name of the account associated with the bookings",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Address",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The primary address of the account",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Address Line 2",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Additional address information for the account",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "City",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The city where the account is located",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "State",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The state where the account is located",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ZipCode",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Postal code for the account's location",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Country",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The country where the account is located",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "MainPhoneNumber",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Primary contact phone number for the account",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Bookings in 2024",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Total bookings expected for the year 2024",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Bookings in 2025",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Total bookings expected for the year 2025",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "EOPc1HD7pm4XNICtkqC_q$$9HzP8Jsk2TspNgTRLFuCV",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "trimWhiteSpace" : true,
+        "replaceNullForNumericFields" : false,
+        "cleanLetters" : false,
+        "replaceNullTextWith" : "NA",
+        "replaceNullTextFields" : false,
+        "columnNames" : [ "Account", "Address", "Address Line 2", "City", "State", "ZipCode", "Country", "MainPhoneNumber", "Bookings in 2024", "Bookings in 2025" ],
+        "makeTitlecase" : true,
+        "schema" : {
+          "type" : "struct",
+          "fields" : [ {
+            "name" : "Account",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "The name of the account associated with the bookings",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "Address",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "The primary address of the account",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "Address Line 2",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "Additional address information for the account",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "City",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "The city where the account is located",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "State",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "The state where the account is located",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "ZipCode",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "Postal code for the account's location",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "Country",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "The country where the account is located",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "MainPhoneNumber",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "Primary contact phone number for the account",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "Bookings in 2024",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "Total bookings expected for the year 2024",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "Bookings in 2025",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "Total bookings expected for the year 2025",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          } ]
+        },
+        "allWhiteSpace" : false,
+        "removeTabsLineBreaksAndDuplicateWhitespace" : false,
+        "cleanPunctuations" : false,
+        "null_operation" : "remove_row_null_all_cols",
+        "makeLowercase" : false,
+        "makeUppercase" : false,
+        "cleanNumbers" : false,
+        "replaceNullNumericWith" : 0
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.48&projectSubscriptionProjectId=12654&path=gems/DataCleansing",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "CjclPB8t4hHtn7VC0SEJJ$$2gvhsR04ItnqPZDiNGTyV" : {
+      "id" : "CjclPB8t4hHtn7VC0SEJJ$$2gvhsR04ItnqPZDiNGTyV",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "load_account_bookings",
+        "slug" : "load_account_bookings",
+        "x" : -1140,
+        "y" : -200,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Loads customer account and booking information for the years 2024 and 2025 from a CSV file.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "lET-E3DuNQOXJSudCokyD$$QxKuhsRLV0SswTMIwOehX",
+          "slug" : "out",
+          "dataExplorerProps" : {
+            "filter" : {
+              "type" : "Composite",
+              "op" : {
+                "type" : "AND"
+              },
+              "filters" : [ ]
+            },
+            "sorts" : [ ]
+          }
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/ThirdDataset"
+      }
+    },
+    "IassCvJoP1S3nPxbW2t3T$$FZ3LjUeg9My7ARhCBcGZR" : {
+      "id" : "IassCvJoP1S3nPxbW2t3T$$FZ3LjUeg9My7ARhCBcGZR",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "load_company_reference_data",
+        "slug" : "load_company_reference_data",
+        "x" : -1140,
+        "y" : -400,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "0U7hRJX-dDKfEid003c6M$$6e1fD3t6WroR6Ix4vbN4j",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/SecondDataset"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
+  },
+  "diagnostics" : [ {
+    "property" : "$.workflow.metainfo.functions.businessRules.rules[0].outputs",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "No Output defined for the business rule. Please define an output.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.metainfo.functions.businessRules.rules[0].data",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "Missing data for the case when all the inputs are `Any`",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.FUkb23cPUO4_Yy2-fZOIm$$z1We8SL9KawJX4bqZz9lu.ports.inputs[0]",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "Please connect input port in0",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.DVQfrr6YfY1u6vLSaAcEf$$cRXqVDJC9p78TAB5_LBoe.ports.inputs[0]",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "Please connect input port in0",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.DVQfrr6YfY1u6vLSaAcEf$$cRXqVDJC9p78TAB5_LBoe.properties.orders",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "At least one order rule has to be specified",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.DS-vNPufFTg3SK22TrpqS$$gkxCiYznThDdw33QjDIyZ.properties.datasetId",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "dataset id missing",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.SVDmcqJyE_jqhTrDqijlN$$Gn4lSA9R1C57RJLgK5Tzw.ports.inputs[0]",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "Please connect input port in0",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.SVDmcqJyE_jqhTrDqijlN$$Gn4lSA9R1C57RJLgK5Tzw.properties.dedupColumns",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "At least one rule has to be specified",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.QN5GIT14g5gwvjsBvNEJB$$R5HDj3-qFqbLNRoEIQ7Kf.ports.inputs[0]",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "Please connect input port in0",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.QN5GIT14g5gwvjsBvNEJB$$R5HDj3-qFqbLNRoEIQ7Kf.properties.expressionColumns",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "At least one expression in required. [Window Use]",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  } ]
+}

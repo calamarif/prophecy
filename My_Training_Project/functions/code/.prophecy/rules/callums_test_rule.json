@@ -1,0 +1,1 @@
+{"parameters":[{"name":"Account","type":"string","nullable":false,"metadata":{"description":"","mappings":[],"tags":[]}}],"outputs":[],"data":[{"inputs":[{"name":"Account","expression":{"format":"sql","expression":"!= \"Westpac\""}}],"outputs":[],"description":""}],"description":""}

@@ -6,17 +6,87 @@ language: python
 buildSystem: ''
 buildSystemDetails:
   artefactID: mytrainingproject
-  parentArtefactID: ''
+  parentArtefactID: callumprophecyioteam
   buildSystem: wheel
   author: null
   createdAt: '2025-08-14 06:29:23'
-pipelines: {}
-datasets: {}
+pipelines:
+  pipelines/Pipeline101:
+    name: Pipeline101
+    description: 'Loads three datasets: customer data from a Hive table, company reference
+      data from a CSV file, and account bookings data from another CSV file. Each
+      dataset is structured with specific schemas to ensure data integrity.'
+    author: callum@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2025-08-14 06:31:18'
+    datasets:
+      inputs:
+      - datasets/SecondDataset
+      - datasets/ThirdDataset
+      outputs: []
+    subgraphs: []
+    dependencies: {}
+  pipelines/demo_pipeline:
+    name: demo_pipeline
+    description: ''
+    author: callum@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2025-11-12 00:26:18'
+    datasets:
+      inputs:
+      - datasets/ThirdDataset
+      outputs: []
+    subgraphs: []
+    dependencies: {}
+datasets:
+  datasets/FirstDataset:
+    name: FirstDataset
+    description: ''
+    author: callum@prophecy.io
+    createdAt: '2025-08-14 06:32:49'
+    mode: batch
+    physicalDatasets:
+      workshop-fabric:
+        fabricId: 22741
+        datasetType: Database
+        description: ''
+        author: callum@prophecy.io
+        createdAt: '2025-08-14 06:32:49'
+  datasets/SecondDataset:
+    name: CompanyReferenceData
+    description: ''
+    author: callum@prophecy.io
+    createdAt: '2025-08-14 06:34:21'
+    mode: batch
+    physicalDatasets:
+      workshop-fabric:
+        fabricId: 22741
+        datasetType: File
+        description: ''
+        author: callum@prophecy.io
+        createdAt: '2025-08-14 06:34:21'
+  datasets/ThirdDataset:
+    name: AcccountBookings2024_2025
+    description: ''
+    author: callum@prophecy.io
+    createdAt: '2025-08-14 06:35:40'
+    mode: batch
+    physicalDatasets:
+      workshop-fabric:
+        fabricId: 22741
+        datasetType: File
+        description: ''
+        author: callum@prophecy.io
+        createdAt: '2025-08-14 06:35:40'
 templates: {}
 jobs: {}
 gemContainer:
-  languageVersion: ''
-  gemLibsVersion: ''
+  languageVersion: '3.10'
+  gemLibsVersion: 1.3.4.0
   gems: {}
   dependencies: null
 functions:
@@ -26,7 +96,15 @@ functions:
   udafs: {}
   expressions: {}
   airflowFunctions: {}
-  businessRules: {}
+  businessRules:
+    businessRules/callums_test_rule:
+      name: callums_test_rule
+      description: ''
+      tags: []
+      inputs: []
+      outputs: []
+      author: callum@prophecy.io
+      createdAt: '2022-12-15 18:04:50'
 subgraphs: {}
 sqlModels: {}
 sqlSnapshots: {}
@@ -39,25 +117,30 @@ sqlPipeline: null
 dependencies:
 - modifiedAt: '2025-08-14T06:29:23.129257Z'
   name: plibMaven
-  version: 8.11.1
-  id: '1561358330'
+  version: 8.12.1
   createdAt: '2025-08-14T06:29:23.129257Z'
   type: plibMaven
-- modifiedAt: '2025-08-14T06:29:23.129257Z'
-  name: plibPypi
-  version: 2.0.11
-  id: '132920070'
+  entity: Project
+  enabled: true
+- modifiedAt: '2025-08-25T06:17:48.420Z'
+  name: ProphecyLibsPython
+  version: 2.1.3
   createdAt: '2025-08-14T06:29:23.129257Z'
   type: plibPypi
+  enabled: true
+  description: Default dependency for Prophecy Libs
+  editable: true
+  scope: Project
+  entity: Project
 projectDependencies:
   '12654':
     projectUID: 12654
     projectName: ProphecySparkBasicsPython
     repositoryPath: gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=
-    version: 0.2.47
+    version: 0.2.48
     isDefault: true
     author: null
-    createdAt: '2025-08-14 06:29:23'
+    createdAt: '2025-08-25 06:17:48'
   '12655':
     projectUID: 12655
     projectName: ProphecyWarehousePython
@@ -69,3 +152,4 @@ projectDependencies:
 flags:
   shouldAddDefaultDependenciesIfAbsent: true
 pipelineConfigurations: {}
+projectConfigurations: {}

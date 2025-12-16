@@ -1,0 +1,89 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: Firm
+    type: string
+    nullable: true
+    metadata:
+      description: Name of the firm
+      mappings: []
+      tags: []
+  - name: TotalEmp
+    type: string
+    nullable: true
+    metadata:
+      description: Total number of employees in the firm
+      mappings: []
+      tags: []
+  - name: SICCode
+    type: string
+    nullable: true
+    metadata:
+      description: Standard Industry Classification code identifying the firm's industry
+      mappings: []
+      tags: []
+  - name: MaxSegment
+    type: string
+    nullable: true
+    metadata:
+      description: The maximum segment classification of the firm
+      mappings: []
+      tags: []
+  - name: NumEmployeeStrata
+    type: string
+    nullable: true
+    metadata:
+      description: Strata classification based on the number of employees in the firm
+      mappings: []
+      tags: []
+  - name: Industry
+    type: string
+    nullable: true
+    metadata:
+      description: The industry classification of the firm
+      mappings: []
+      tags: []
+  - name: DUNS Number
+    type: string
+    nullable: true
+    metadata:
+      description: Unique identifier assigned to the firm for business identification
+        purposes
+      mappings: []
+      tags: []
+  - name: Global Ultimate DUNS
+    type: string
+    nullable: true
+    metadata:
+      description: The unique identifier for the global ultimate parent company
+      mappings: []
+      tags: []
+  - name: Domestic Ultimate DUNS
+    type: string
+    nullable: true
+    metadata:
+      description: Unique identifier for the domestic ultimate parent company
+      mappings: []
+      tags: []
+  - name: SiteEmployee#
+    type: string
+    nullable: true
+    metadata:
+      description: Number of employees at the specific site of the firm
+      mappings: []
+      tags: []
+  - name: GlobalEmployee#
+    type: string
+    nullable: true
+    metadata:
+      description: Total number of employees globally in the firm
+      mappings: []
+      tags: []
+  - name: OrigMaxSegment
+    type: string
+    nullable: true
+    metadata:
+      description: The original maximum segment classification of the firm
+      mappings: []
+      tags: []

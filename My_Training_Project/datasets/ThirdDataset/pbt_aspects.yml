@@ -1,0 +1,74 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: Account
+    type: string
+    nullable: true
+    metadata:
+      description: The name of the account associated with the bookings
+      mappings: []
+      tags: []
+  - name: Address
+    type: string
+    nullable: true
+    metadata:
+      description: The primary address of the account
+      mappings: []
+      tags: []
+  - name: Address Line 2
+    type: string
+    nullable: true
+    metadata:
+      description: Additional address information for the account
+      mappings: []
+      tags: []
+  - name: City
+    type: string
+    nullable: true
+    metadata:
+      description: The city where the account is located
+      mappings: []
+      tags: []
+  - name: State
+    type: string
+    nullable: true
+    metadata:
+      description: The state where the account is located
+      mappings: []
+      tags: []
+  - name: ZipCode
+    type: string
+    nullable: true
+    metadata:
+      description: Postal code for the account's location
+      mappings: []
+      tags: []
+  - name: Country
+    type: string
+    nullable: true
+    metadata:
+      description: The country where the account is located
+      mappings: []
+      tags: []
+  - name: MainPhoneNumber
+    type: string
+    nullable: true
+    metadata:
+      description: Primary contact phone number for the account
+      mappings: []
+      tags: []
+  - name: Bookings in 2024
+    type: string
+    nullable: true
+    metadata:
+      description: Total bookings expected for the year 2024
+      mappings: []
+      tags: []
+  - name: Bookings in 2025
+    type: string
+    nullable: true
+    metadata:
+      description: Total bookings expected for the year 2025
+      mappings: []
+      tags: []

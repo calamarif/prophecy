@@ -1,0 +1,241 @@
+{
+  "metainfo" : {
+    "migrationVersions" : {
+      "gemBuilderVersion" : "v1",
+      "unitTestNullDataMigrated" : true
+    },
+    "functions" : {
+      "businessRules" : {
+        "rules" : [ ],
+        "sharedRules" : [ ]
+      }
+    },
+    "codeGenConfiguration" : {
+      "editableConfig" : true,
+      "plibVersion" : {
+        "mavenVersion" : "8.12.1",
+        "pyPiVersion" : "2.1.3"
+      },
+      "sparkConfigJinjaEnabled" : true,
+      "workflowMode" : "batch"
+    },
+    "id" : "1",
+    "uri" : "pipelines/demo_pipeline",
+    "sourceSuggestions" : [ {
+      "sourceLabel" : "SecondDataset",
+      "sourceDatasetId" : "datasets/SecondDataset",
+      "canJoinWith" : [ {
+        "processLabel" : "AcccountBookings2024_2025",
+        "processId" : "2fDcxF3UrYQPdh2dL683h$$cbqVPWU-t3rcGvtGxjPpH",
+        "joinColumns" : [ "ZipCode" ],
+        "isRecommended" : true,
+        "properties" : {
+          "columnsSelector" : [ "ZipCode" ],
+          "conditions" : [ {
+            "alias" : "SecondDataset",
+            "expression" : "(AcccountBookings2024_2025.ZipCode = SecondDataset.SICCode)",
+            "joinType" : "inner"
+          } ],
+          "expressions" : [ {
+            "alias" : "Firm",
+            "expression" : "SecondDataset.Firm"
+          }, {
+            "alias" : "TotalEmp",
+            "expression" : "SecondDataset.TotalEmp"
+          }, {
+            "alias" : "MaxSegment",
+            "expression" : "SecondDataset.MaxSegment"
+          }, {
+            "alias" : "NumEmployeeStrata",
+            "expression" : "SecondDataset.NumEmployeeStrata"
+          }, {
+            "alias" : "Industry",
+            "expression" : "SecondDataset.Industry"
+          }, {
+            "alias" : "DUNS Number",
+            "expression" : "SecondDataset.`DUNS Number`"
+          }, {
+            "alias" : "Global Ultimate DUNS",
+            "expression" : "SecondDataset.`Global Ultimate DUNS`"
+          }, {
+            "alias" : "Domestic Ultimate DUNS",
+            "expression" : "SecondDataset.`Domestic Ultimate DUNS`"
+          }, {
+            "alias" : "OrigMaxSegment",
+            "expression" : "SecondDataset.OrigMaxSegment"
+          }, {
+            "alias" : "Country",
+            "expression" : "AcccountBookings2024_2025.Country"
+          }, {
+            "alias" : "Account",
+            "expression" : "AcccountBookings2024_2025.Account"
+          }, {
+            "alias" : "Address Line 2",
+            "expression" : "AcccountBookings2024_2025.`Address Line 2`"
+          }, {
+            "alias" : "State",
+            "expression" : "AcccountBookings2024_2025.State"
+          }, {
+            "alias" : "Bookings in 2025",
+            "expression" : "AcccountBookings2024_2025.`Bookings in 2025`"
+          }, {
+            "alias" : "City",
+            "expression" : "AcccountBookings2024_2025.City"
+          }, {
+            "alias" : "MainPhoneNumber",
+            "expression" : "AcccountBookings2024_2025.MainPhoneNumber"
+          }, {
+            "alias" : "ZipCode",
+            "expression" : "AcccountBookings2024_2025.ZipCode"
+          }, {
+            "alias" : "Address",
+            "expression" : "AcccountBookings2024_2025.Address"
+          }, {
+            "alias" : "Bookings in 2024",
+            "expression" : "AcccountBookings2024_2025.`Bookings in 2024`"
+          } ],
+          "headAlias" : "datasets/SecondDataset"
+        }
+      } ]
+    } ],
+    "pipelineSettingsInfo" : {
+      "applicationName" : "demo_pipeline",
+      "hasApplication" : true,
+      "isFunctionsPackageDirDefined" : true,
+      "isNullValuesInUnitTestsEnabled" : true,
+      "sparkConfigOptions" : {
+        "disableSparkCreationTimeConfigGeneration" : true
+      }
+    },
+    "language" : "python",
+    "fabricId" : "22741",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ],
+      "functionPackageName" : "callumprophecyioteam.mytrainingproject.functions",
+      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions" ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ {
+      "name" : "spark.default.parallelism",
+      "value" : "4"
+    }, {
+      "name" : "spark.sql.legacy.allowUntypedScalaUDF",
+      "value" : "true"
+    } ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "12654",
+      "projectName" : "ProphecySparkBasicsPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12655",
+      "projectName" : "ProphecyWarehousePython",
+      "externalDependencies" : [ ]
+    } ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "demo_pipeline",
+    "configTopLevelPackage" : "demo_pipeline",
+    "configurationVersion" : "v2"
+  },
+  "connections" : [ ],
+  "processes" : {
+    "2fDcxF3UrYQPdh2dL683h$$cbqVPWU-t3rcGvtGxjPpH" : {
+      "id" : "2fDcxF3UrYQPdh2dL683h$$cbqVPWU-t3rcGvtGxjPpH",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "AcccountBookings2024_2025",
+        "slug" : "AcccountBookings2024_2025",
+        "x" : -320,
+        "y" : -200,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "v81UlgzW8XJaakRUcatBk$$vnh0MG6Ai6PiYBNtZ5ykw",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/ThirdDataset"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
+  },
+  "diagnostics" : [ {
+    "property" : "$.workflow.metainfo.functions.businessRules.rules[0].outputs",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "No Output defined for the business rule. Please define an output.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.metainfo.functions.businessRules.rules[0].data",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "Missing data for the case when all the inputs are `Any`",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  } ]
+}
