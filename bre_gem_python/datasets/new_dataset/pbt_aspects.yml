@@ -1,0 +1,67 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: TransactionLineID
+    type: string
+    nullable: true
+    metadata:
+      description: Unique identifier for each transaction line in the account records.
+      mappings: []
+      tags: []
+  - name: AccountCode
+    type: string
+    nullable: true
+    metadata:
+      description: Code representing the specific account involved in the transaction.
+      mappings: []
+      tags: []
+  - name: LegalEntityID
+    type: string
+    nullable: true
+    metadata:
+      description: Identifier for the legal entity responsible for the transaction.
+      mappings: []
+      tags: []
+  - name: TransactionDate
+    type: string
+    nullable: true
+    metadata:
+      description: Date when the transaction was recorded.
+      mappings: []
+      tags: []
+  - name: DebitAmount
+    type: string
+    nullable: true
+    metadata:
+      description: Amount debited from the account for the transaction.
+      mappings: []
+      tags: []
+  - name: CreditAmount
+    type: string
+    nullable: true
+    metadata:
+      description: The amount of money credited in the transaction.
+      mappings: []
+      tags: []
+  - name: Description
+    type: string
+    nullable: true
+    metadata:
+      description: Details or purpose of the transaction.
+      mappings: []
+      tags: []
+  - name: CreatedBy
+    type: string
+    nullable: true
+    metadata:
+      description: Name of the person or system that initiated the transaction.
+      mappings: []
+      tags: []
+  - name: VendorID
+    type: string
+    nullable: true
+    metadata:
+      description: Unique identifier for the vendor involved in the transaction.
+      mappings: []
+      tags: []
