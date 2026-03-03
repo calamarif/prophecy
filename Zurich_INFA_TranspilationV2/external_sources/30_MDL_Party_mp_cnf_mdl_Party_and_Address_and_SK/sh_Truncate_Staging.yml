@@ -1,0 +1,6 @@
+entityType: ""
+providerType: "Databricks"
+fields:
+- name: "PARAM_DUMMY"
+  dataType:
+    type: "String"

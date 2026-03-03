@@ -1,0 +1,9 @@
+---
+version: 2
+models:
+- name: "40_DM_ORAC_mp_date_refresh_event_wait__DUMMY_TARGET_EXP"
+  tags:
+  - "prophecy_temp"
+- name: "40_DM_ORAC_mp_date_refresh_event_wait__EXP_set_parameters"
+  tags:
+  - "prophecy_temp"

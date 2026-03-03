@@ -1,0 +1,87 @@
+entityType: ""
+providerType: "Databricks"
+fields:
+- name: "LOSS_PRD_CODE"
+  dataType:
+    type: "String"
+- name: "ASSESSOR_CODE"
+  dataType:
+    type: "String"
+- name: "DATE_OF_STATUS"
+  dataType:
+    type: "Timestamp"
+- name: "COVR_EXPIRY_DATE"
+  dataType:
+    type: "Timestamp"
+- name: "CLAIM_BRANCH_CODE"
+  dataType:
+    type: "String"
+- name: "DATE_RPTED"
+  dataType:
+    type: "Timestamp"
+- name: "DATE_OF_LOSS"
+  dataType:
+    type: "Timestamp"
+- name: "INVESTIGATOR_CODE"
+  dataType:
+    type: "String"
+- name: "ICA_CAT_CODE"
+  dataType:
+    type: "String"
+- name: "COVR_INCEPTION_DATE"
+  dataType:
+    type: "Timestamp"
+- name: "POL_ID"
+  dataType:
+    type: "Integer"
+- name: "CLAIM_STATUS_CODE"
+  dataType:
+    type: "String"
+- name: "CLAIM_OWNR_CODE"
+  dataType:
+    type: "String"
+- name: "MSTR_CLAIM_NUM"
+  dataType:
+    type: "String"
+- name: "CLAIM_NUM"
+  dataType:
+    type: "String"
+- name: "BUSN_AREA_NAME"
+  dataType:
+    type: "String"
+- name: "CMPY_NUM"
+  dataType:
+    type: "String"
+- name: "CLAIM_FRAUD_CODE"
+  dataType:
+    type: "String"
+- name: "CLAIM_OFFICER_PARTY_ID"
+  dataType:
+    type: "String"
+- name: "CLAIM_ID"
+  dataType:
+    type: "Integer"
+- name: "SOLICITOR_CODE"
+  dataType:
+    type: "String"
+- name: "RSK_ID"
+  dataType:
+    type: "Integer"
+- name: "UNDER_EXCESS_TYPE"
+  dataType:
+    type: "String"
+- name: "CLSD_DATE"
+  dataType:
+    type: "Timestamp"
+- name: "BODILY_INJURY_FLG"
+  dataType:
+    type: "String"
+- name: "CLIENT_PARTY_ID"
+  dataType:
+    type: "Integer"
+- name: "CLAIM_OFFICER_PARTY_NUM"
+  dataType:
+    type: "String"
+- name: "DEFAULT_PREM_CLASS_CODE"
+  dataType:
+    type: "String"

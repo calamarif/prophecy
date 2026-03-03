@@ -1,0 +1,9 @@
+entityType: ""
+providerType: "Databricks"
+fields:
+- name: "SEGMENT_ID"
+  dataType:
+    type: "Integer"
+- name: "SEGMENT_CODE"
+  dataType:
+    type: "String"

@@ -1,0 +1,9 @@
+---
+version: 2
+models:
+- name: "40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp"
+  tags:
+  - "prophecy_temp"
+- name: "40_DM_ORAC_mp_fact_claim_tran_temp__lkp_REF_CLAIM_TRAN_TYPE_mt2"
+  tags:
+  - "prophecy_temp"

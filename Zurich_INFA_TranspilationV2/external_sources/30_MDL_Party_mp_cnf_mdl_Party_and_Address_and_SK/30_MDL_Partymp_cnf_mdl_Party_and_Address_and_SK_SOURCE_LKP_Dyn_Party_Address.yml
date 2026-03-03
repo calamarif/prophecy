@@ -1,0 +1,48 @@
+entityType: ""
+providerType: "Databricks"
+fields:
+- name: "STREET_NO"
+  dataType:
+    type: "String"
+- name: "STREET_NAME"
+  dataType:
+    type: "String"
+- name: "ADDR_ROLE_CODE"
+  dataType:
+    type: "String"
+- name: "LOCATION_ID"
+  dataType:
+    type: "Integer"
+- name: "LCTN"
+  dataType:
+    type: "String"
+- name: "SUBURB"
+  dataType:
+    type: "String"
+- name: "PARTY_ADDRESS_ID"
+  dataType:
+    type: "Integer"
+- name: "DELIVERY_POINT"
+  dataType:
+    type: "String"
+- name: "DELIVERY_CODE"
+  dataType:
+    type: "String"
+- name: "PARTY_ID"
+  dataType:
+    type: "Integer"
+- name: "REC_STRT_DATE"
+  dataType:
+    type: "Timestamp"
+- name: "PCODE"
+  dataType:
+    type: "String"
+- name: "GEO_CODE"
+  dataType:
+    type: "String"
+- name: "NewLookupRow"
+  dataType:
+    type: "Integer"
+- name: "STATE"
+  dataType:
+    type: "String"

@@ -1,0 +1,617 @@
+{
+  "id" : "30_MDL_AUTHORITIES_mp_myauthorities_stg_mdl_dnm_AU_NZ_MyAuthority_Delta",
+  "metainfo" : {
+    "label" : "30_MDL_AUTHORITIES_mp_myauthorities_stg_mdl_dnm_AU_NZ_MyAuthority_Delta",
+    "autoLayout" : false,
+    "version" : 1,
+    "configuration" : {
+      "schema" : {
+        "type" : "record",
+        "fields" : [ {
+          "name" : "jdbcUrl",
+          "kind" : {
+            "type" : "string",
+            "value" : "''"
+          }
+        }, {
+          "name" : "username",
+          "kind" : {
+            "type" : "string",
+            "value" : "''"
+          }
+        }, {
+          "name" : "password",
+          "kind" : {
+            "type" : "string",
+            "value" : "''"
+          }
+        }, {
+          "name" : "SCHEMA",
+          "kind" : {
+            "type" : "string",
+            "value" : "'SCHEMA'"
+          }
+        } ]
+      }
+    },
+    "isTranspiledPipeline" : false,
+    "publishDiagnosticMetrics" : true,
+    "transpilerType" : "informatica",
+    "processesVsModelFiles" : {
+      "30_MDL_AUTHORITIESmp_myauthorities_stg_mdl_dnm_AU_NZ_MyAuthority_Delta_SRC_AUTH_AU_NZ_MYAUTHORITY_ALLUSERS_DELTA_SRC_AUTH_AU_NZ_MYAUTHORITY_ALLUSERS_DELTA_out0" : "models/30_MDL_AUTHORITIES_mp_myauthorities_stg_mdl_dnm_AU_NZ_MyAuthority_Delta/30_MDL_AUTHORITIES_mp_myauthorities_stg_mdl_dnm_AU_NZ_MyAuthority_Delta__DNM_AUTH_AU_NZ_MYAUTHORITY_ALLUSERS_DELTA.sql",
+      "EXP_INIT" : "models/30_MDL_AUTHORITIES_mp_myauthorities_stg_mdl_dnm_AU_NZ_MyAuthority_Delta/30_MDL_AUTHORITIES_mp_myauthorities_stg_mdl_dnm_AU_NZ_MyAuthority_Delta__DNM_AUTH_AU_NZ_MYAUTHORITY_ALLUSERS_DELTA.sql",
+      "DNM_AUTH_AU_NZ_MYAUTHORITY_ALLUSERS_DELTA_EXP" : "models/30_MDL_AUTHORITIES_mp_myauthorities_stg_mdl_dnm_AU_NZ_MyAuthority_Delta/30_MDL_AUTHORITIES_mp_myauthorities_stg_mdl_dnm_AU_NZ_MyAuthority_Delta__DNM_AUTH_AU_NZ_MYAUTHORITY_ALLUSERS_DELTA.sql",
+      "DNM_AUTH_AU_NZ_MYAUTHORITY_ALLUSERS_DELTA_EXP_JOIN" : "models/30_MDL_AUTHORITIES_mp_myauthorities_stg_mdl_dnm_AU_NZ_MyAuthority_Delta/30_MDL_AUTHORITIES_mp_myauthorities_stg_mdl_dnm_AU_NZ_MyAuthority_Delta__DNM_AUTH_AU_NZ_MYAUTHORITY_ALLUSERS_DELTA.sql",
+      "EXP_AUTH_AUDIT_COLUMNS" : "models/30_MDL_AUTHORITIES_mp_myauthorities_stg_mdl_dnm_AU_NZ_MyAuthority_Delta/30_MDL_AUTHORITIES_mp_myauthorities_stg_mdl_dnm_AU_NZ_MyAuthority_Delta__DNM_AUTH_AU_NZ_MYAUTHORITY_ALLUSERS_DELTA.sql",
+      "DNM_AUTH_AU_NZ_MYAUTHORITY_ALLUSERS_DELTA" : "models/30_MDL_AUTHORITIES_mp_myauthorities_stg_mdl_dnm_AU_NZ_MyAuthority_Delta/30_MDL_AUTHORITIES_mp_myauthorities_stg_mdl_dnm_AU_NZ_MyAuthority_Delta__DNM_AUTH_AU_NZ_MYAUTHORITY_ALLUSERS_DELTA.sql"
+    }
+  },
+  "processes" : {
+    "SRC_AUTH_AU_NZ_MYAUTHORITY_ALLUSERS_DELTA" : {
+      "id" : "SRC_AUTH_AU_NZ_MYAUTHORITY_ALLUSERS_DELTA",
+      "component" : "OrchestrationSource",
+      "kind" : "OracleSource",
+      "metadata" : {
+        "label" : "30_MDL_AUTHORITIESmp_myauthorities_stg_mdl_dnm_AU_NZ_MyAuthority_Delta_SRC_AUTH_AU_NZ_MYAUTHORITY_ALLUSERS_DELTA",
+        "x" : 20,
+        "y" : 40,
+        "phase" : 1
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "oracle",
+          "id" : "transpiled_connection",
+          "properties" : {
+            "database" : "dbName",
+            "server" : "$$jdbcUrl",
+            "username" : "$$username",
+            "id" : "transpiled_connection",
+            "port" : "1521",
+            "password" : {
+              "kind" : "prophecy",
+              "properties" : {
+                "name" : "transpiled_secret",
+                "value" : "transpiled_secret"
+              },
+              "subKind" : "text",
+              "type" : "secret"
+            }
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "pathSelection" : "tableFullName",
+          "tableFullName" : {
+            "schema" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "config",
+                  "properties" : {
+                    "kind" : "prophecy",
+                    "name" : "SCHEMA"
+                  }
+                } ]
+              }
+            },
+            "name" : "EBIDBD"
+          },
+          "warehouseQuery" : {
+            "query" : ""
+          }
+        },
+        "format" : {
+          "kind" : "oracle",
+          "category" : "table",
+          "properties" : {
+            "kind" : "oracle",
+            "schema" : {
+              "entityType" : "",
+              "providerType" : "Databricks",
+              "fields" : [ {
+                "name" : "LOBLIMITS_AUTOCONVERT",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "LOBLIMITS_ITEMLEVEL_LINEITEMS_CATEGORIES_FIELDNAME",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "LOATERMINATEDEFFECTIVEDATE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "LOBLIMITS_CONFIG_CATEGORIES_FIELDS_COLUMNS_COLUMNNAME",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "FILE_DATE",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "COUNTRYNAME",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "LOBLIMITS_ITEMLEVEL_TYPE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "REGIONNAME",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "INREISSUEDFLOW",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "LOBLIMITS_ACTION",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "FILE_NAME",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "ACTIVESIGNATOR_APPROVALSTATUS",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "LOBLIMITS_LOBNAME",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "STATUS",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "ACTION",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "USERROLE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "ORGANIZATIONS",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "LOBLIMITS_ITEMLEVEL_LINEITEMS_LEVELNAME",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "TITLE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "USERID",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "ALLVALUESIN",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "ISBEHALFOFGRANTORSSIGNATORIES",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "OLDLOAEFFECTIVEDATE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "HIDEUSD",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "ISREISSUED",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "USERTYPE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "LOBLIMITS_ITEMLEVEL_LINEITEMS_CATEGORIES_VALUES_VALUE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "ALLOWGRANTANDSIGNLOA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "SELECTEDGRANTORFORLOA_MAILID",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "ZURICHORG",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "LOAEFFECTIVEDATE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "LOBLIMITS_ITEMLEVEL_ITEMNAME",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "LOBLIMITS_CONFIG_CATEGORIES_FIELDS_FIELDNAME",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "MYAUTHORITYCOUNTRY",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "STATUSLOG_UPDATEDDATE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "ACTIVEGRANTOR_EMAILID",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "SELECTEDSIGNATORFORLOA_EMAILID",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "USERNAME",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "ACTIVESIGNATOR_EMAILID",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EMAILID",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "MANAGER",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "DEPARTMENT",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "LOBLIMITS_ITEMLEVEL_LINEITEMS_NOLEVELS",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "INACTIVE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "SELECTEDSIGNATORFORLOA_APPROVALSTATUS",
+                "dataType" : {
+                  "type" : "String"
+                }
+              } ]
+            }
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "SRC_AUTH_AU_NZ_MYAUTHORITY_ALLUSERS_DELTA_out0",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "LOBLIMITS_AUTOCONVERT",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LOBLIMITS_ITEMLEVEL_LINEITEMS_CATEGORIES_FIELDNAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LOATERMINATEDEFFECTIVEDATE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LOBLIMITS_CONFIG_CATEGORIES_FIELDS_COLUMNS_COLUMNNAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "FILE_DATE",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "COUNTRYNAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LOBLIMITS_ITEMLEVEL_TYPE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "REGIONNAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "INREISSUEDFLOW",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LOBLIMITS_ACTION",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "FILE_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ACTIVESIGNATOR_APPROVALSTATUS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LOBLIMITS_LOBNAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "STATUS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ACTION",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "USERROLE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ORGANIZATIONS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LOBLIMITS_ITEMLEVEL_LINEITEMS_LEVELNAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "TITLE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "USERID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ALLVALUESIN",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ISBEHALFOFGRANTORSSIGNATORIES",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "OLDLOAEFFECTIVEDATE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "HIDEUSD",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ISREISSUED",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "USERTYPE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LOBLIMITS_ITEMLEVEL_LINEITEMS_CATEGORIES_VALUES_VALUE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ALLOWGRANTANDSIGNLOA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "SELECTEDGRANTORFORLOA_MAILID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ZURICHORG",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LOAEFFECTIVEDATE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LOBLIMITS_ITEMLEVEL_ITEMNAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LOBLIMITS_CONFIG_CATEGORIES_FIELDS_FIELDNAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "MYAUTHORITYCOUNTRY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "STATUSLOG_UPDATEDDATE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ACTIVEGRANTOR_EMAILID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "SELECTEDSIGNATORFORLOA_EMAILID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "USERNAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ACTIVESIGNATOR_EMAILID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EMAILID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "MANAGER",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "DEPARTMENT",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LOBLIMITS_ITEMLEVEL_LINEITEMS_NOLEVELS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "INACTIVE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "SELECTEDSIGNATORFORLOA_APPROVALSTATUS",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : true
+      }
+    },
+    "DNM_AUTH_AU_NZ_MYAUTHORITY_ALLUSERS_DELTA" : {
+      "id" : "DNM_AUTH_AU_NZ_MYAUTHORITY_ALLUSERS_DELTA",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "30_MDL_AUTHORITIES_mp_myauthorities_stg_mdl_dnm_AU_NZ_MyAuthority_Delta__DNM_AUTH_AU_NZ_MYAUTHORITY_ALLUSERS_DELTA",
+        "phase" : 1
+      },
+      "properties" : {
+        "modelName" : "30_MDL_AUTHORITIES_mp_myauthorities_stg_mdl_dnm_AU_NZ_MyAuthority_Delta__DNM_AUTH_AU_NZ_MYAUTHORITY_ALLUSERS_DELTA"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "DNM_AUTH_AU_NZ_MYAUTHORITY_ALLUSERS_DELTA", "DNM_AUTH_AU_NZ_MYAUTHORITY_ALLUSERS_DELTA_EXP", "DNM_AUTH_AU_NZ_MYAUTHORITY_ALLUSERS_DELTA_EXP_JOIN", "EXP_AUTH_AUDIT_COLUMNS", "EXP_INIT", "30_MDL_AUTHORITIESmp_myauthorities_stg_mdl_dnm_AU_NZ_MyAuthority_Delta_SRC_AUTH_AU_NZ_MYAUTHORITY_ALLUSERS_DELTA_SRC_AUTH_AU_NZ_MYAUTHORITY_ALLUSERS_DELTA_out0" ],
+        "type" : "table",
+        "isTemporaryTable" : false,
+        "lastNodeProcessIds" : [ "DNM_AUTH_AU_NZ_MYAUTHORITY_ALLUSERS_DELTA" ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "30_MDL_AUTHORITIES_mp_myauthorities_stg_mdl_dnm_AU_NZ_MyAuthority_Delta__DNM_AUTH_AU_NZ_MYAUTHORITY_ALLUSERS_DELTA_in_0",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "30_MDL_AUTHORITIES_mp_myauthorities_stg_mdl_dnm_AU_NZ_MyAuthority_Delta__DNM_AUTH_AU_NZ_MYAUTHORITY_ALLUSERS_DELTA_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "edge_714",
+    "source" : "SRC_AUTH_AU_NZ_MYAUTHORITY_ALLUSERS_DELTA",
+    "sourcePort" : "SRC_AUTH_AU_NZ_MYAUTHORITY_ALLUSERS_DELTA_out0",
+    "target" : "DNM_AUTH_AU_NZ_MYAUTHORITY_ALLUSERS_DELTA",
+    "targetPort" : "30_MDL_AUTHORITIES_mp_myauthorities_stg_mdl_dnm_AU_NZ_MyAuthority_Delta__DNM_AUTH_AU_NZ_MYAUTHORITY_ALLUSERS_DELTA_in_0"
+  } ],
+  "component" : "Pipeline"
+}

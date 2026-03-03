@@ -1,0 +1,33 @@
+entityType: ""
+providerType: "Databricks"
+fields:
+- name: "CTL_REC_CRTN_DATE"
+  dataType:
+    type: "Timestamp"
+- name: "POL_ID"
+  dataType:
+    type: "Integer"
+- name: "CTL_JOB_ID"
+  dataType:
+    type: "Integer"
+- name: "PRD_CODE"
+  dataType:
+    type: "String"
+- name: "CTL_SRC_SYS_SET_NAME"
+  dataType:
+    type: "String"
+- name: "BUSN_AREA_NAME"
+  dataType:
+    type: "String"
+- name: "CTL_BATCH_ID"
+  dataType:
+    type: "Integer"
+- name: "CMPY_NUM"
+  dataType:
+    type: "String"
+- name: "CTL_EXTRACT_ID"
+  dataType:
+    type: "Integer"
+- name: "POL_NUM"
+  dataType:
+    type: "String"

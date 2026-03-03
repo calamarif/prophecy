@@ -1,0 +1,313 @@
+{
+  "id" : "15_RDV_POL_mp_log_audit_info__EXPTRANS1",
+  "metainfo" : {
+    "label" : "15_RDV_POL_mp_log_audit_info__EXPTRANS1",
+    "autoLayout" : true,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "entityConfig" : {
+        "materialized" : "ephemeral",
+        "database" : "\"qa_team\"",
+        "schema" : "\"qa_orchestration\"",
+        "type" : "ModelConfig"
+      }
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "EXPTRANS1_EXPTRANS1_out0" : {
+      "id" : "EXPTRANS1_EXPTRANS1_out0",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "EXPTRANS1"
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "\nSELECT *\n\nFROM EXPTRANS1\n\n",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_3",
+          "slug" : "input_port_3"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_3",
+          "slug" : "output_port_3"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "EXPTRANS1" : {
+      "id" : "EXPTRANS1",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "EXPTRANS1",
+        "x" : 620,
+        "y" : 120,
+        "phase" : 1
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "SUBJECT_AREA",
+            "_row_id" : null
+          },
+          "alias" : "SUBJECT_AREA",
+          "description" : null,
+          "_row_id" : "YLrY8U4yBn0SIVAXCie2T"
+        }, {
+          "expression" : {
+            "expression" : "JOB_ID",
+            "_row_id" : null
+          },
+          "alias" : "JOB_ID",
+          "description" : null,
+          "_row_id" : "vHz8OtcpCLvYJZhkUCMwH"
+        }, {
+          "expression" : {
+            "expression" : "JOB_NAME",
+            "_row_id" : null
+          },
+          "alias" : "JOB_NAME",
+          "description" : null,
+          "_row_id" : "K3oZa3prBjDuR3CLdThVW"
+        }, {
+          "expression" : {
+            "expression" : "TASK_ID",
+            "_row_id" : null
+          },
+          "alias" : "TASK_ID",
+          "description" : null,
+          "_row_id" : "irgjpobHg1Mz7K23fRvMN"
+        }, {
+          "expression" : {
+            "expression" : "TASK_NAME",
+            "_row_id" : null
+          },
+          "alias" : "TASK_NAME",
+          "description" : null,
+          "_row_id" : "lsBMx1IQVLMosiKNiNVmN"
+        }, {
+          "expression" : {
+            "expression" : "TARGET_OBJECT_NAME",
+            "_row_id" : null
+          },
+          "alias" : "TARGET_OBJECT_NAME",
+          "description" : null,
+          "_row_id" : "OsBWHWfzYiVFeq3f5doK2"
+        }, {
+          "expression" : {
+            "expression" : "JOB_RUN_ID",
+            "_row_id" : null
+          },
+          "alias" : "JOB_RUN_ID",
+          "description" : null,
+          "_row_id" : "5lPUwsMmJTR2yN8qwyGWo"
+        }, {
+          "expression" : {
+            "expression" : "SOURCE_AFFECTED_ROWS",
+            "_row_id" : null
+          },
+          "alias" : "SOURCE_AFFECTED_ROWS",
+          "description" : null,
+          "_row_id" : "bFDMVH-m5TsNN2FFNEdwC"
+        }, {
+          "expression" : {
+            "expression" : "SOURCE_REJECTED_ROWS",
+            "_row_id" : null
+          },
+          "alias" : "SOURCE_REJECTED_ROWS",
+          "description" : null,
+          "_row_id" : "1mXCuE5BGhIAIfrCrzKkz"
+        }, {
+          "expression" : {
+            "expression" : "SOURCE_FILTERED_ROWS",
+            "_row_id" : null
+          },
+          "alias" : "SOURCE_FILTERED_ROWS",
+          "description" : null,
+          "_row_id" : "jt_mz54RemVrXWtJKZZd3"
+        }, {
+          "expression" : {
+            "expression" : "TARGET_AFFECTED_ROWS",
+            "_row_id" : null
+          },
+          "alias" : "TARGET_AFFECTED_ROWS",
+          "description" : null,
+          "_row_id" : "pC_UN2HtKbL9Z-IffFka0"
+        }, {
+          "expression" : {
+            "expression" : "TARGET_REJECTED_ROWS",
+            "_row_id" : null
+          },
+          "alias" : "TARGET_REJECTED_ROWS",
+          "description" : null,
+          "_row_id" : "3rjTz8lL6ueRS32400MeY"
+        }, {
+          "expression" : {
+            "expression" : "TARGET_FILTERED_ROWS",
+            "_row_id" : null
+          },
+          "alias" : "TARGET_FILTERED_ROWS",
+          "description" : null,
+          "_row_id" : "agE6Qf_AtmqB16gDz3H1K"
+        }, {
+          "expression" : {
+            "expression" : "Job_START_DT",
+            "_row_id" : null
+          },
+          "alias" : "task_start_time",
+          "description" : null,
+          "_row_id" : "CB8oeLCvhARSRSinIIFIF"
+        }, {
+          "expression" : {
+            "expression" : "Job_END_DT",
+            "_row_id" : null
+          },
+          "alias" : "task_end_time",
+          "description" : null,
+          "_row_id" : "TkFfmfWKtEUYBcLr_Hp5H"
+        }, {
+          "expression" : {
+            "expression" : "Throughput",
+            "_row_id" : null
+          },
+          "alias" : "Throughput",
+          "description" : null,
+          "_row_id" : "6Vm_cIAcFr6-JfPnfQfK_"
+        }, {
+          "expression" : {
+            "expression" : "ERROR_MSG",
+            "_row_id" : null
+          },
+          "alias" : "error_msg",
+          "description" : null,
+          "_row_id" : "OSMH_XnhIpUhoraCcsMkf"
+        }, {
+          "expression" : {
+            "expression" : "metrics_query_output",
+            "_row_id" : null
+          },
+          "alias" : "EXECUTED_QUERY",
+          "description" : null,
+          "_row_id" : "rF39oTRS_MED8I-cVLQMm"
+        }, {
+          "expression" : {
+            "expression" : "SQLError",
+            "_row_id" : null
+          },
+          "alias" : "ERROR_LOG",
+          "description" : null,
+          "_row_id" : "OB86gKvO_T11z0MUVeB7e"
+        }, {
+          "expression" : {
+            "expression" : "{{ var('CTL_BATCH_ID') }}",
+            "_row_id" : null
+          },
+          "alias" : "CTL_BATCH_ID",
+          "description" : null,
+          "_row_id" : "MzQt_0kIm8fwtQWfmdrig"
+        }, {
+          "expression" : {
+            "expression" : "{{ var('CTL_INTRADAY_ID') }}",
+            "_row_id" : null
+          },
+          "alias" : "CTL_INTRADAY_ID",
+          "description" : null,
+          "_row_id" : "wFb6iFOdIuZFX-geujQKO"
+        }, {
+          "expression" : {
+            "expression" : "{{ var('PMWorkflowRunId') }}",
+            "_row_id" : null
+          },
+          "alias" : "CTL_JOB_RUN_ID",
+          "description" : null,
+          "_row_id" : "9qsMR-9o2_WPHD1hEIiwe"
+        }, {
+          "expression" : {
+            "expression" : "CURRENT_TIMESTAMP",
+            "_row_id" : null
+          },
+          "alias" : "CTL_REC_CRTN_DATE",
+          "description" : null,
+          "_row_id" : "FbkM0c1u6qlS0A2KVeewg"
+        }, {
+          "expression" : {
+            "expression" : "SQLError",
+            "_row_id" : null
+          },
+          "alias" : "EXECUTED_QUERY_ERROR_LOG",
+          "description" : null,
+          "_row_id" : "zANd4oiHsPyY6YNtCVpmq"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "EXPTRANS1_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "EXPTRANS1_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "SQL_SQL_out0" : {
+      "id" : "SQL_SQL_out0",
+      "component" : "SQLStatement",
+      "metadata" : {
+        "label" : "SQL"
+      },
+      "properties" : {
+        "fileTabs" : [ {
+          "path" : "output_port_2",
+          "id" : "output_port_2",
+          "language" : "sql",
+          "content" : "\nSELECT *\n\nFROM {{ prophecy_tmp_source('15_RDV_POL_mp_log_audit_info', 'SQL') }}\n\n"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_2",
+          "slug" : "input_port_2"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_2",
+          "slug" : "output_port_2"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "conn_EXPTRANS1_EXPTRANS1_out0_EXPTRANS1_EXPTRANS1_out0",
+    "source" : "EXPTRANS1",
+    "sourcePort" : "EXPTRANS1_out0",
+    "target" : "EXPTRANS1_EXPTRANS1_out0",
+    "targetPort" : "input_port_3",
+    "isWireless" : false
+  }, {
+    "id" : "edge_671",
+    "source" : "SQL_SQL_out0",
+    "sourcePort" : "output_port_2",
+    "target" : "EXPTRANS1",
+    "targetPort" : "EXPTRANS1_in0",
+    "isWireless" : false
+  } ],
+  "component" : "Model"
+}

@@ -1,0 +1,12 @@
+entityType: ""
+providerType: "Databricks"
+fields:
+- name: "CLAIM_ID"
+  dataType:
+    type: "Integer"
+- name: "CTL_SRC_SYS_SET_NAME"
+  dataType:
+    type: "String"
+- name: "TRANS_DATE"
+  dataType:
+    type: "Timestamp"

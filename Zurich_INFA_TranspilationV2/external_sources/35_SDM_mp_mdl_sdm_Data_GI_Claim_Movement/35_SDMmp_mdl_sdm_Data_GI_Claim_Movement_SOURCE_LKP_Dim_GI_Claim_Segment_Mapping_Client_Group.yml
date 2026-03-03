@@ -1,0 +1,27 @@
+entityType: ""
+providerType: "Databricks"
+fields:
+- name: "CLAIM_CMPY_CODE"
+  dataType:
+    type: "String"
+- name: "CLAIM_BRANCH_NUM"
+  dataType:
+    type: "String"
+- name: "SELECTION_PREF"
+  dataType:
+    type: "Integer"
+- name: "SEGMENT_CODE"
+  dataType:
+    type: "String"
+- name: "CTL_SRC_SYS_SET_NAME"
+  dataType:
+    type: "String"
+- name: "END_LOSS_DATE"
+  dataType:
+    type: "Integer"
+- name: "STRT_LOSS_DATE"
+  dataType:
+    type: "Integer"
+- name: "CLIENT_GROUP_CODE"
+  dataType:
+    type: "String"

@@ -1,0 +1,147 @@
+entityType: ""
+providerType: "Databricks"
+fields:
+- name: "CTL_REC_CRTN_DATE"
+  dataType:
+    type: "Timestamp"
+- name: "CLIENT_ID"
+  dataType:
+    type: "Integer"
+- name: "PRD_ID"
+  dataType:
+    type: "Integer"
+- name: "CTL_SRC_ROW_ID"
+  dataType:
+    type: "Integer"
+- name: "TRANS_TS"
+  dataType:
+    type: "Timestamp"
+- name: "INCEPTION_DATE_ID"
+  dataType:
+    type: "Integer"
+- name: "CLAIM_PAYMT_TYPE_ID"
+  dataType:
+    type: "Integer"
+- name: "ACDNT_MTH_ID"
+  dataType:
+    type: "Integer"
+- name: "UPC_AMT"
+  dataType:
+    type: "Double"
+- name: "INTERMEDIARY_ID"
+  dataType:
+    type: "Integer"
+- name: "MARKET_SEGMENT_ID"
+  dataType:
+    type: "Integer"
+- name: "CTL_JOB_ID"
+  dataType:
+    type: "Integer"
+- name: "TRANS_CCY_CODE"
+  dataType:
+    type: "String"
+- name: "CLAIM_OWNR_CODE"
+  dataType:
+    type: "String"
+- name: "ROL_AMT"
+  dataType:
+    type: "Double"
+- name: "ACCTING_MTH_ID"
+  dataType:
+    type: "Integer"
+- name: "SOL_AMT"
+  dataType:
+    type: "Double"
+- name: "BODILY_INJURY_CODE"
+  dataType:
+    type: "String"
+- name: "RPTED_MTH_ID"
+  dataType:
+    type: "Integer"
+- name: "TPC_AMT"
+  dataType:
+    type: "Double"
+- name: "CTL_SRC_SYS_SET_NAME"
+  dataType:
+    type: "String"
+- name: "EXPIRY_DATE_ID"
+  dataType:
+    type: "Integer"
+- name: "GPC_AMT"
+  dataType:
+    type: "Double"
+- name: "PREM_CLASS_ID"
+  dataType:
+    type: "Integer"
+- name: "CLAIM_SEGMENT_ID"
+  dataType:
+    type: "Integer"
+- name: "POLICY_ID"
+  dataType:
+    type: "Integer"
+- name: "APC_AMT"
+  dataType:
+    type: "Double"
+- name: "UOL_AMT"
+  dataType:
+    type: "Double"
+- name: "CLAIM_OFFICER_PARTY_ID"
+  dataType:
+    type: "Integer"
+- name: "CLAIM_ID"
+  dataType:
+    type: "Integer"
+- name: "POL_BRANCH_ID"
+  dataType:
+    type: "Integer"
+- name: "UNDER_EXCESS_TYPE"
+  dataType:
+    type: "String"
+- name: "ASSESSOR_ID"
+  dataType:
+    type: "Integer"
+- name: "TRANS_ID"
+  dataType:
+    type: "Integer"
+- name: "GOL_AMT"
+  dataType:
+    type: "Double"
+- name: "RI_METHOD_CODE"
+  dataType:
+    type: "String"
+- name: "MTRN_TYPE_CODE"
+  dataType:
+    type: "String"
+- name: "SPC_AMT"
+  dataType:
+    type: "Double"
+- name: "LOSS_DATE_ID"
+  dataType:
+    type: "Integer"
+- name: "RSK_CLASS_ID"
+  dataType:
+    type: "Integer"
+- name: "CLAIM_SUBSEG_ID"
+  dataType:
+    type: "Integer"
+- name: "RPC_AMT"
+  dataType:
+    type: "Double"
+- name: "CTL_EXTRACT_ID"
+  dataType:
+    type: "Integer"
+- name: "CLAIM_CATASTROPHE_CODE"
+  dataType:
+    type: "String"
+- name: "TOL_AMT"
+  dataType:
+    type: "Double"
+- name: "CLAIM_OFFICER_PARTY_NUM"
+  dataType:
+    type: "String"
+- name: "RPTED_DATE_ID"
+  dataType:
+    type: "Integer"
+- name: "AOL_AMT"
+  dataType:
+    type: "Double"

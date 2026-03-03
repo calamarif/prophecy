@@ -1,0 +1,219 @@
+entityType: ""
+providerType: "Databricks"
+fields:
+- name: "CTL_REC_CRTN_DATE"
+  dataType:
+    type: "Timestamp"
+- name: "CTL_REC_UPDATE_DATE"
+  dataType:
+    type: "Timestamp"
+- name: "DAMAGE_PERC"
+  dataType:
+    type: "Double"
+- name: "VIP_CLAIM_FLG"
+  dataType:
+    type: "String"
+- name: "CTL_SRC_ROW_ID"
+  dataType:
+    type: "Integer"
+- name: "LOSS_PRD_CODE"
+  dataType:
+    type: "String"
+- name: "TRANS_TS"
+  dataType:
+    type: "Timestamp"
+- name: "ASSESSOR_CODE"
+  dataType:
+    type: "String"
+- name: "MAA_SENT_MTH_ID"
+  dataType:
+    type: "Integer"
+- name: "DATE_OF_STATUS"
+  dataType:
+    type: "Timestamp"
+- name: "CLAIMANT_NAME"
+  dataType:
+    type: "String"
+- name: "PMT_BLOCK_FLG"
+  dataType:
+    type: "String"
+- name: "COVR_EXPIRY_DATE"
+  dataType:
+    type: "Timestamp"
+- name: "CLAIM_BRANCH_CODE"
+  dataType:
+    type: "String"
+- name: "DVSN_78_FLG"
+  dataType:
+    type: "String"
+- name: "DATE_RPTED"
+  dataType:
+    type: "Timestamp"
+- name: "LIAB_STATUS_CODE"
+  dataType:
+    type: "String"
+- name: "REC_END_DATE"
+  dataType:
+    type: "Timestamp"
+- name: "DVSN_11_EXCESS_FLG"
+  dataType:
+    type: "String"
+- name: "DATE_OF_LOSS"
+  dataType:
+    type: "Timestamp"
+- name: "DISP_CLAIM_NUM"
+  dataType:
+    type: "String"
+- name: "INVESTIGATOR_CODE"
+  dataType:
+    type: "String"
+- name: "SUBROGATION_FLG"
+  dataType:
+    type: "String"
+- name: "SALVAGE_FLG"
+  dataType:
+    type: "String"
+- name: "ICA_CAT_CODE"
+  dataType:
+    type: "String"
+- name: "COVR_INCEPTION_DATE"
+  dataType:
+    type: "Timestamp"
+- name: "CLAIM_CAUSE_CODE"
+  dataType:
+    type: "String"
+- name: "POL_ID"
+  dataType:
+    type: "Integer"
+- name: "CLAIM_STATUS_CODE"
+  dataType:
+    type: "String"
+- name: "CTL_JOB_ID"
+  dataType:
+    type: "Integer"
+- name: "CLAIM_OWNR_CODE"
+  dataType:
+    type: "String"
+- name: "DATE_NOTIFIED"
+  dataType:
+    type: "Timestamp"
+- name: "MSTR_CLAIM_NUM"
+  dataType:
+    type: "String"
+- name: "DATE_RJCTED"
+  dataType:
+    type: "Timestamp"
+- name: "RATE_NSB_FLG"
+  dataType:
+    type: "String"
+- name: "CLAIM_NUM"
+  dataType:
+    type: "String"
+- name: "MUTI_UNIT_FLG"
+  dataType:
+    type: "String"
+- name: "DATE_ACPTED"
+  dataType:
+    type: "Timestamp"
+- name: "CLAIM_HANDLER_ID"
+  dataType:
+    type: "Integer"
+- name: "CLIENT_CLAIM_NUM"
+  dataType:
+    type: "String"
+- name: "CTL_SRC_SYS_SET_NAME"
+  dataType:
+    type: "String"
+- name: "PORTFOLIO_ID"
+  dataType:
+    type: "Integer"
+- name: "BUSN_AREA_NAME"
+  dataType:
+    type: "String"
+- name: "GST_CAT"
+  dataType:
+    type: "String"
+- name: "OTHER_PARTY_FLG"
+  dataType:
+    type: "String"
+- name: "CTL_BATCH_ID"
+  dataType:
+    type: "Integer"
+- name: "NON_STAND_CODE"
+  dataType:
+    type: "String"
+- name: "CMPY_NUM"
+  dataType:
+    type: "String"
+- name: "CLAIM_SRC_CODE"
+  dataType:
+    type: "String"
+- name: "CLAIM_FRAUD_CODE"
+  dataType:
+    type: "String"
+- name: "DVSN_78_EXCESS_DATE"
+  dataType:
+    type: "Timestamp"
+- name: "CLAIM_OFFICER_PARTY_ID"
+  dataType:
+    type: "Integer"
+- name: "CLAIM_ID"
+  dataType:
+    type: "Integer"
+- name: "SOLICITOR_CODE"
+  dataType:
+    type: "String"
+- name: "RSK_ID"
+  dataType:
+    type: "Integer"
+- name: "CAUSE_OF_LOSS"
+  dataType:
+    type: "String"
+- name: "REOPENED_FLG"
+  dataType:
+    type: "String"
+- name: "UNDER_EXCESS_TYPE"
+  dataType:
+    type: "String"
+- name: "CLSD_DATE"
+  dataType:
+    type: "Timestamp"
+- name: "BODILY_INJURY_FLG"
+  dataType:
+    type: "String"
+- name: "CLIENT_PARTY_ID"
+  dataType:
+    type: "Integer"
+- name: "LIAB_STATUS_DATE"
+  dataType:
+    type: "Timestamp"
+- name: "REC_STRT_DATE"
+  dataType:
+    type: "Timestamp"
+- name: "RI_METHOD_CODE"
+  dataType:
+    type: "String"
+- name: "LOSS_PCODE"
+  dataType:
+    type: "String"
+- name: "BRANCH_TRANF_FLG"
+  dataType:
+    type: "String"
+- name: "CLAIM_TYPE_CODE"
+  dataType:
+    type: "String"
+- name: "UW_CODE"
+  dataType:
+    type: "String"
+- name: "DVSN_11_EXCESS_DATE"
+  dataType:
+    type: "Timestamp"
+- name: "CTL_EXTRACT_ID"
+  dataType:
+    type: "Integer"
+- name: "CLAIM_OFFICER_PARTY_NUM"
+  dataType:
+    type: "String"
+- name: "DEFAULT_PREM_CLASS_CODE"
+  dataType:
+    type: "String"

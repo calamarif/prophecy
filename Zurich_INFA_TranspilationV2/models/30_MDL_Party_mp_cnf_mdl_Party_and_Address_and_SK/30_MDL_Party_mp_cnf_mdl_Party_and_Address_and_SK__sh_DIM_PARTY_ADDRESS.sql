@@ -1,0 +1,518 @@
+{{
+  config({    
+    "materialized": "table",
+    "alias": "sh_DIM_PARTY_ADDRESS",
+    "database": "qa_team",
+    "schema": "qa_orchestration"
+  })
+}}
+
+WITH RTR_New_Existing_SK_EXPR_All AS (
+
+  SELECT *
+  
+  FROM {{ ref('30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__RTR_New_Existing_SK_EXPR_All')}}
+
+),
+
+FIL_Valid_Addresses AS (
+
+  SELECT * 
+  
+  FROM RTR_New_Existing_SK_EXPR_All AS in0
+  
+  WHERE CAST((OUT_VALID_ADDRESS_FLAG = 1) AS BOOLEAN)
+
+),
+
+FIL_Valid_Addresses_GENERATE_SK_0 AS (
+
+  SELECT 
+    (monotonically_increasing_id()) AS prophecy_sk,
+    *
+  
+  FROM FIL_Valid_Addresses AS in0
+
+),
+
+`30_MDL_Partymp_cnf_mdl_Party_and_Address_and_SK_SOURCE_LKP_Dyn_Party_Address` AS (
+
+  SELECT *
+  
+  FROM {{
+    prophecy_tmp_source(
+      '30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK', 
+      '30_MDL_Partymp_cnf_mdl_Party_and_Address_and_SK_SOURCE_LKP_Dyn_Party_Address'
+    )
+  }}
+
+),
+
+`30_MDL_Partymp_cnf_mdl_Party_and_Address_and_SK_SOURCE_sh_LKP_Dim_Location_Address_Match_SK` AS (
+
+  SELECT *
+  
+  FROM {{
+    prophecy_tmp_source(
+      '30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK', 
+      '30_MDL_Partymp_cnf_mdl_Party_and_Address_and_SK_SOURCE_sh_LKP_Dim_Location_Address_Match_SK'
+    )
+  }}
+
+),
+
+FIL_Valid_Addresses_GENERATE_SK_EXPR_197 AS (
+
+  SELECT 
+    GEO_SOURCE4 AS SOURCE_in,
+    LOCATION_CODE4 AS SOURCE_ID_in,
+    prophecy_sk AS prophecy_sk,
+    STATE AS STATE,
+    PARTY_ID AS PARTY_ID,
+    ADDR_ROLE_CODE AS ADDR_ROLE_CODE,
+    LOCTN AS LOCTN,
+    STREET_NAME AS STREET_NAME,
+    SUBURB AS SUBURB,
+    PCODE AS PCODE,
+    REC_STRT_DATE AS REC_STRT_DATE,
+    DELIVERY_POINT AS DELIVERY_POINT,
+    GEO_CODE AS GEO_CODE,
+    STREET_NO AS STREET_NO,
+    DELIVERY_CODE AS DELIVERY_CODE,
+    CTL_EXTRACT_ID AS CTL_EXTRACT_ID,
+    CTL_SRC_SYS_SET_NAME AS CTL_SRC_SYS_SET_NAME,
+    CTL_JOB_ID AS CTL_JOB_ID,
+    REC_END_DATE_CLOSED AS REC_END_DATE_CLOSED,
+    REC_END_DATE_HIGH AS REC_END_DATE_HIGH,
+    CTL_REC_CRTN_DATE AS CTL_REC_CRTN_DATE,
+    CTL_BATCH_ID AS CTL_BATCH_ID,
+    CTL_SRC_ROW_ID AS CTL_SRC_ROW_ID
+  
+  FROM FIL_Valid_Addresses_GENERATE_SK_0 AS in0
+
+),
+
+LKP_Dyn_Party_Address_PRE_JOIN_JOIN_merged AS (
+
+  SELECT 
+    in2.DELIVERY_CODE AS DELIVERY_CODE,
+    in2.ADDR_ROLE_CODE AS ADDR_ROLE_CODE,
+    in2.LOCTN AS LOCTN,
+    in1.SOURCE AS SOURCE,
+    in2.STREET_NO AS STREET_NO,
+    in2.STATE AS STATE,
+    in2.REC_STRT_DATE AS REC_STRT_DATE,
+    in0.SOURCE_in AS SOURCE_in,
+    in2.STREET_NAME AS STREET_NAME,
+    in1.LOCATION_ID AS LOCATION_ID,
+    in2.SUBURB AS SUBURB,
+    in2.DELIVERY_POINT AS DELIVERY_POINT,
+    in0.prophecy_sk AS prophecy_sk,
+    in0.SOURCE_ID_in AS SOURCE_ID_in,
+    in1.SOURCE_ID AS SOURCE_ID,
+    in2.PARTY_ID AS PARTY_ID,
+    in2.GEO_CODE AS GEO_CODE,
+    in2.PCODE AS PCODE
+  
+  FROM FIL_Valid_Addresses_GENERATE_SK_EXPR_197 AS in0
+  INNER JOIN `30_MDL_Partymp_cnf_mdl_Party_and_Address_and_SK_SOURCE_sh_LKP_Dim_Location_Address_Match_SK` AS in1
+     ON ((in1.SOURCE = in0.SOURCE_in) AND (in1.SOURCE_ID = in0.SOURCE_ID_in))
+  INNER JOIN FIL_Valid_Addresses_GENERATE_SK_0 AS in2
+     ON in0.prophecy_sk = in2.prophecy_sk
+
+),
+
+LKP_Dyn_Party_Address_PRE_JOIN_JOIN_EXPR_192 AS (
+
+  SELECT 
+    LOCATION_ID AS IN_LOCATION_ID,
+    prophecy_sk AS prophecy_sk,
+    STATE AS IN_STATE,
+    PARTY_ID AS IN_PARTY_ID,
+    ADDR_ROLE_CODE AS IN_ADDR_ROLE_CODE,
+    LOCTN AS IN_LCTN,
+    STREET_NAME AS IN_STREET_NAME,
+    SUBURB AS IN_SUBURB,
+    PCODE AS IN_PCODE,
+    REC_STRT_DATE AS IN_REC_STRT_DATE,
+    DELIVERY_POINT AS IN_DELIVERY_POINT,
+    GEO_CODE AS IN_GEO_CODE,
+    STREET_NO AS IN_STREET_NO,
+    DELIVERY_CODE AS IN_DELIVERY_CODE
+  
+  FROM LKP_Dyn_Party_Address_PRE_JOIN_JOIN_merged AS in0
+
+),
+
+RTR_New_Updated_Addr_JOIN_merged AS (
+
+  SELECT 
+    in1.DELIVERY_CODE AS DELIVERY_CODE,
+    in1.ADDR_ROLE_CODE AS ADDR_ROLE_CODE,
+    in0.IN_STREET_NO AS IN_STREET_NO,
+    in0.IN_DELIVERY_CODE AS IN_DELIVERY_CODE,
+    in0.IN_REC_STRT_DATE AS IN_REC_STRT_DATE,
+    in0.IN_LCTN AS IN_LCTN,
+    in1.NewLookupRow AS NewLookupRow,
+    in1.STREET_NO AS STREET_NO,
+    in1.STATE AS STATE,
+    in2.CTL_BATCH_ID AS CTL_BATCH_ID,
+    in2.CTL_SRC_SYS_SET_NAME AS CTL_SRC_SYS_SET_NAME,
+    in0.IN_DELIVERY_POINT AS IN_DELIVERY_POINT,
+    in1.PARTY_ADDRESS_ID AS PARTY_ADDRESS_ID,
+    in1.REC_STRT_DATE AS REC_STRT_DATE,
+    in0.IN_STREET_NAME AS IN_STREET_NAME,
+    in1.LCTN AS LCTN,
+    in2.CTL_REC_CRTN_DATE AS CTL_REC_CRTN_DATE,
+    in2.CTL_EXTRACT_ID AS CTL_EXTRACT_ID,
+    in2.REC_END_DATE_HIGH AS REC_END_DATE_HIGH,
+    in1.STREET_NAME AS STREET_NAME,
+    in1.LOCATION_ID AS LOCATION_ID,
+    in0.IN_GEO_CODE AS IN_GEO_CODE,
+    in1.SUBURB AS SUBURB,
+    in1.DELIVERY_POINT AS DELIVERY_POINT,
+    in2.REC_END_DATE_CLOSED AS REC_END_DATE_CLOSED,
+    in0.IN_PCODE AS IN_PCODE,
+    in0.IN_LOCATION_ID AS IN_LOCATION_ID,
+    in0.prophecy_sk AS prophecy_sk,
+    in0.IN_ADDR_ROLE_CODE AS IN_ADDR_ROLE_CODE,
+    in1.PARTY_ID AS PARTY_ID,
+    in0.IN_PARTY_ID AS IN_PARTY_ID,
+    in1.GEO_CODE AS GEO_CODE,
+    in0.IN_SUBURB AS IN_SUBURB,
+    in2.CTL_JOB_ID AS CTL_JOB_ID,
+    in1.PCODE AS PCODE,
+    in0.IN_STATE AS IN_STATE,
+    in2.CTL_SRC_ROW_ID AS CTL_SRC_ROW_ID
+  
+  FROM LKP_Dyn_Party_Address_PRE_JOIN_JOIN_EXPR_192 AS in0
+  INNER JOIN `30_MDL_Partymp_cnf_mdl_Party_and_Address_and_SK_SOURCE_LKP_Dyn_Party_Address` AS in1
+     ON ((in1.PARTY_ID = in0.IN_PARTY_ID) AND (in1.ADDR_ROLE_CODE = in0.IN_ADDR_ROLE_CODE))
+  INNER JOIN FIL_Valid_Addresses_GENERATE_SK_0 AS in2
+     ON in0.prophecy_sk = in2.prophecy_sk
+
+),
+
+RTR_New_Updated_Addr_JOIN_EXPR_194 AS (
+
+  SELECT 
+    IN_STREET_NO AS STREET_NO,
+    NewLookupRow AS NewLookupRow,
+    IN_PARTY_ID AS PARTY_ID,
+    IN_PCODE AS PCODE,
+    IN_STATE AS STATE,
+    IN_DELIVERY_CODE AS DELIVERY_CODE,
+    IN_GEO_CODE AS GEO_CODE,
+    PARTY_ID AS PARTY_ID4,
+    ADDR_ROLE_CODE AS ADDR_ROLE_CODE,
+    REC_STRT_DATE AS lk_REC_STRT_DATE,
+    IN_REC_STRT_DATE AS IN_REC_STRT_DATE,
+    STATE AS LKP_STATE,
+    STREET_NO AS LKP_STREET_NO,
+    STREET_NAME AS LKP_STREET_NAME,
+    SUBURB AS LKP_SUBURB,
+    PCODE AS LKP_PCODE,
+    IN_LCTN AS LCTN,
+    IN_DELIVERY_POINT AS DELIVERY_POINT,
+    IN_STREET_NAME AS STREET_NAME,
+    IN_SUBURB AS SUBURB,
+    IN_ADDR_ROLE_CODE AS ADRR_ROLE_CODE,
+    LCTN AS LKP_LCTN,
+    DELIVERY_POINT AS LKP_DELIVERY_POINT,
+    PARTY_ADDRESS_ID AS PARTY_ADDRESS_ID,
+    IN_LOCATION_ID AS LOCATION_ID,
+    LOCATION_ID AS LKP_LOCATION_ID,
+    GEO_CODE AS LKP_GEO_CODE,
+    DELIVERY_CODE AS LKP_DELIVERY_CODE,
+    prophecy_sk AS prophecy_sk,
+    CTL_EXTRACT_ID AS CTL_EXTRACT_ID,
+    REC_STRT_DATE AS REC_STRT_DATE,
+    CTL_SRC_SYS_SET_NAME AS CTL_SRC_SYS_SET_NAME,
+    CTL_JOB_ID AS CTL_JOB_ID,
+    REC_END_DATE_CLOSED AS REC_END_DATE_CLOSED,
+    REC_END_DATE_HIGH AS REC_END_DATE_HIGH,
+    CTL_REC_CRTN_DATE AS CTL_REC_CRTN_DATE,
+    CTL_BATCH_ID AS CTL_BATCH_ID,
+    CTL_SRC_ROW_ID AS CTL_SRC_ROW_ID
+  
+  FROM RTR_New_Updated_Addr_JOIN_merged AS in0
+
+),
+
+RTR_New_Updated_Addr_out1 AS (
+
+  SELECT * 
+  
+  FROM RTR_New_Updated_Addr_JOIN_EXPR_194 AS in0
+  
+  WHERE ((NewLookupRow = 1) AND (lk_REC_STRT_DATE IS NULL))
+
+),
+
+RTR_New_Updated_Addr_out0 AS (
+
+  SELECT * 
+  
+  FROM RTR_New_Updated_Addr_JOIN_EXPR_194 AS in0
+  
+  WHERE ((NewLookupRow = 2) AND (REC_STRT_DATE > lk_REC_STRT_DATE))
+
+),
+
+RTR_New_Updated_Addr_EXPR_New AS (
+
+  SELECT 
+    NewLookupRow AS NewLookupRow3,
+    PARTY_ID AS PARTY_ID3,
+    LCTN AS LCTN3,
+    DELIVERY_POINT AS DELIVERY_POINT3,
+    STREET_NO AS STREET_NO3,
+    STREET_NAME AS STREET_NAME3,
+    SUBURB AS SUBURB3,
+    PCODE AS PCODE3,
+    STATE AS STATE3,
+    DELIVERY_CODE AS DELIVERY_CODE3,
+    GEO_CODE AS GEO_CODE3,
+    ADRR_ROLE_CODE AS ADRR_ROLE_CODE3,
+    LKP_LCTN AS LKP_LCTN3,
+    LKP_DELIVERY_POINT AS LKP_DELIVERY_POINT3,
+    LKP_GEO_CODE AS LKP_GEO_CODE3,
+    LKP_DELIVERY_CODE AS LKP_DELIVERY_CODE3,
+    LKP_STREET_NO AS LKP_STREET_NO3,
+    LKP_STREET_NAME AS LKP_STREET_NAME3,
+    LKP_SUBURB AS LKP_SUBURB3,
+    LKP_PCODE AS LKP_PCODE3,
+    LKP_STATE AS LKP_STATE3,
+    CTL_BATCH_ID AS CTL_BATCH_ID3,
+    CTL_SRC_ROW_ID AS CTL_SRC_ROW_ID3,
+    CTL_EXTRACT_ID AS CTL_EXTRACT_ID3,
+    CTL_SRC_SYS_SET_NAME AS CTL_SRC_SYS_SET_NAME3,
+    REC_STRT_DATE AS REC_STRT_DATE3,
+    CTL_REC_CRTN_DATE AS CTL_REC_CRTN_DATE3,
+    REC_END_DATE_CLOSED AS REC_END_DATE_CLOSED3,
+    REC_END_DATE_HIGH AS REC_END_DATE3,
+    CTL_JOB_ID AS CTL_JOB_ID3,
+    PARTY_ADDRESS_ID AS PARTY_ADDRESS_ID4,
+    PARTY_ID4 AS PARTY_ID43,
+    ADDR_ROLE_CODE AS ADDR_ROLE_CODE3,
+    lk_REC_STRT_DATE AS lk_REC_STRT_DATE3,
+    IN_REC_STRT_DATE AS IN_REC_STRT_DATE3,
+    LOCATION_ID AS LOCATION_ID4,
+    LKP_LOCATION_ID AS LKP_LOCATION_ID3
+  
+  FROM RTR_New_Updated_Addr_out1 AS in0
+
+),
+
+UNI_New_Existing_Addr_EXPR_New_Insert AS (
+
+  SELECT 
+    PARTY_ID3 AS PARTY_ID,
+    LCTN3 AS LCTN,
+    DELIVERY_POINT3 AS DELIVERY_POINT,
+    STREET_NO3 AS STREET_NO,
+    STREET_NAME3 AS STREET_NAME,
+    SUBURB3 AS SUBURB,
+    PCODE3 AS PCODE,
+    STATE3 AS STATE,
+    DELIVERY_CODE3 AS DELIVERY_CODE,
+    GEO_CODE3 AS GEO_CODE,
+    ADRR_ROLE_CODE3 AS ADRR_ROLE_CODE,
+    CTL_BATCH_ID3 AS CTL_BATCH_ID,
+    CTL_SRC_ROW_ID3 AS CTL_SRC_ROW_ID,
+    CTL_EXTRACT_ID3 AS CTL_EXTRACT_ID,
+    CTL_SRC_SYS_SET_NAME3 AS CTL_SRC_SYS_SET_NAME,
+    REC_STRT_DATE3 AS REC_STRT_DATE,
+    CTL_REC_CRTN_DATE3 AS CTL_REC_CRTN_DATE,
+    CAST(NULL AS string) AS CTL_REC_UPDATE_DATE,
+    REC_END_DATE3 AS REC_END_DATE,
+    CTL_JOB_ID3 AS CTL_JOB_ID,
+    PARTY_ADDRESS_ID4 AS PARTY_ADDRESS_ID,
+    LOCATION_ID4 AS LOCATION_ID
+  
+  FROM RTR_New_Updated_Addr_EXPR_New AS in0
+
+),
+
+RTR_New_Updated_Addr_EXPR_Existing AS (
+
+  SELECT 
+    NewLookupRow AS NewLookupRow1,
+    PARTY_ID AS PARTY_ID1,
+    LCTN AS LCTN1,
+    DELIVERY_POINT AS DELIVERY_POINT1,
+    STREET_NO AS STREET_NO1,
+    STREET_NAME AS STREET_NAME1,
+    SUBURB AS SUBURB1,
+    PCODE AS PCODE1,
+    STATE AS STATE1,
+    DELIVERY_CODE AS DELIVERY_CODE1,
+    GEO_CODE AS GEO_CODE1,
+    ADRR_ROLE_CODE AS ADRR_ROLE_CODE1,
+    LKP_LCTN AS LKP_LCTN1,
+    LKP_DELIVERY_POINT AS LKP_DELIVERY_POINT1,
+    LKP_GEO_CODE AS LKP_GEO_CODE1,
+    LKP_DELIVERY_CODE AS LKP_DELIVERY_CODE1,
+    LKP_STREET_NO AS LKP_STREET_NO1,
+    LKP_STREET_NAME AS LKP_STREET_NAME1,
+    LKP_SUBURB AS LKP_SUBURB1,
+    LKP_PCODE AS LKP_PCODE1,
+    LKP_STATE AS LKP_STATE1,
+    CTL_BATCH_ID AS CTL_BATCH_ID1,
+    CTL_SRC_ROW_ID AS CTL_SRC_ROW_ID1,
+    CTL_EXTRACT_ID AS CTL_EXTRACT_ID1,
+    CTL_SRC_SYS_SET_NAME AS CTL_SRC_SYS_SET_NAME1,
+    REC_STRT_DATE AS REC_STRT_DATE1,
+    CTL_REC_CRTN_DATE AS CTL_REC_CRTN_DATE1,
+    REC_END_DATE_CLOSED AS REC_END_DATE_CLOSED1,
+    REC_END_DATE_HIGH AS REC_END_DATE_HIGH1,
+    CTL_JOB_ID AS CTL_JOB_ID1,
+    PARTY_ADDRESS_ID AS PARTY_ADDRESS_ID1,
+    PARTY_ID4 AS PARTY_ID41,
+    ADDR_ROLE_CODE AS ADDR_ROLE_CODE1,
+    lk_REC_STRT_DATE AS lk_REC_STRT_DATE1,
+    IN_REC_STRT_DATE AS IN_REC_STRT_DATE1,
+    LOCATION_ID AS LOCATION_ID1,
+    LKP_LOCATION_ID AS LKP_LOCATION_ID1,
+    CTL_BATCH_ID AS CTL_BATCH_ID2,
+    LOCATION_ID AS LOCATION_ID3,
+    DELIVERY_POINT AS DELIVERY_POINT2,
+    STREET_NO AS STREET_NO2,
+    STREET_NAME AS STREET_NAME2,
+    SUBURB AS SUBURB2,
+    PCODE AS PCODE2,
+    STATE AS STATE2,
+    DELIVERY_CODE AS DELIVERY_CODE2,
+    GEO_CODE AS GEO_CODE2,
+    ADRR_ROLE_CODE AS ADRR_ROLE_CODE2,
+    CTL_SRC_ROW_ID AS CTL_SRC_ROW_ID2,
+    CTL_EXTRACT_ID AS CTL_EXTRACT_ID2,
+    CTL_SRC_SYS_SET_NAME AS CTL_SRC_SYS_SET_NAME2,
+    REC_STRT_DATE AS REC_STRT_DATE2,
+    CTL_REC_CRTN_DATE AS CTL_REC_CRTN_DATE2,
+    CTL_JOB_ID AS CTL_JOB_ID2,
+    REC_END_DATE_HIGH AS REC_END_DATE2,
+    PARTY_ID AS PARTY_ID2,
+    LCTN AS LCTN2,
+    PARTY_ADDRESS_ID AS PARTY_ADDRESS_ID3,
+    PARTY_ADDRESS_ID AS PARTY_ADDRESS_ID2,
+    CTL_REC_CRTN_DATE AS CTL_REC_UPDATE_DATE1,
+    REC_END_DATE_CLOSED AS REC_END_DATE1
+  
+  FROM RTR_New_Updated_Addr_out0 AS in0
+
+),
+
+UNI_New_Existing_Addr_EXPR_Existing_Update AS (
+
+  SELECT 
+    PARTY_ID1 AS PARTY_ID,
+    CAST(NULL AS string) AS LCTN,
+    CAST(NULL AS string) AS DELIVERY_POINT,
+    CAST(NULL AS string) AS STREET_NO,
+    CAST(NULL AS string) AS STREET_NAME,
+    CAST(NULL AS string) AS SUBURB,
+    CAST(NULL AS string) AS PCODE,
+    CAST(NULL AS string) AS STATE,
+    CAST(NULL AS string) AS DELIVERY_CODE,
+    CAST(NULL AS string) AS GEO_CODE,
+    ADRR_ROLE_CODE1 AS ADRR_ROLE_CODE,
+    CAST(NULL AS INTEGER) AS CTL_BATCH_ID,
+    CAST(NULL AS INTEGER) AS CTL_SRC_ROW_ID,
+    CAST(NULL AS INTEGER) AS CTL_EXTRACT_ID,
+    CAST(NULL AS string) AS CTL_SRC_SYS_SET_NAME,
+    REC_STRT_DATE1 AS REC_STRT_DATE,
+    CAST(NULL AS string) AS CTL_REC_CRTN_DATE,
+    CTL_REC_UPDATE_DATE1 AS CTL_REC_UPDATE_DATE,
+    REC_END_DATE1 AS REC_END_DATE,
+    CAST(NULL AS INTEGER) AS CTL_JOB_ID,
+    PARTY_ADDRESS_ID2 AS PARTY_ADDRESS_ID,
+    CAST(NULL AS INTEGER) AS LOCATION_ID
+  
+  FROM RTR_New_Updated_Addr_EXPR_Existing AS in0
+
+),
+
+UNI_New_Existing_Addr_EXPR_Existing_Insert AS (
+
+  SELECT 
+    PARTY_ID2 AS PARTY_ID,
+    LCTN2 AS LCTN,
+    DELIVERY_POINT2 AS DELIVERY_POINT,
+    STREET_NO2 AS STREET_NO,
+    STREET_NAME2 AS STREET_NAME,
+    SUBURB2 AS SUBURB,
+    PCODE2 AS PCODE,
+    STATE2 AS STATE,
+    DELIVERY_CODE2 AS DELIVERY_CODE,
+    GEO_CODE2 AS GEO_CODE,
+    ADRR_ROLE_CODE2 AS ADRR_ROLE_CODE,
+    CTL_BATCH_ID2 AS CTL_BATCH_ID,
+    CTL_SRC_ROW_ID2 AS CTL_SRC_ROW_ID,
+    CTL_EXTRACT_ID2 AS CTL_EXTRACT_ID,
+    CTL_SRC_SYS_SET_NAME2 AS CTL_SRC_SYS_SET_NAME,
+    REC_STRT_DATE2 AS REC_STRT_DATE,
+    CTL_REC_CRTN_DATE2 AS CTL_REC_CRTN_DATE,
+    CAST(NULL AS string) AS CTL_REC_UPDATE_DATE,
+    REC_END_DATE2 AS REC_END_DATE,
+    CTL_JOB_ID2 AS CTL_JOB_ID,
+    PARTY_ADDRESS_ID3 AS PARTY_ADDRESS_ID,
+    LOCATION_ID3 AS LOCATION_ID
+  
+  FROM RTR_New_Updated_Addr_EXPR_Existing AS in0
+
+),
+
+UNI_New_Existing_Addr AS (
+
+  {{
+    prophecy_basics.UnionByName(
+      [
+        'UNI_New_Existing_Addr_EXPR_Existing_Update', 
+        'UNI_New_Existing_Addr_EXPR_Existing_Insert', 
+        'UNI_New_Existing_Addr_EXPR_New_Insert'
+      ], 
+      [
+        '[{"name": "PARTY_ID", "dataType": "Integer"}, {"name": "LCTN", "dataType": "String"}, {"name": "DELIVERY_POINT", "dataType": "String"}, {"name": "STREET_NO", "dataType": "String"}, {"name": "STREET_NAME", "dataType": "String"}, {"name": "SUBURB", "dataType": "String"}, {"name": "PCODE", "dataType": "String"}, {"name": "STATE", "dataType": "String"}, {"name": "DELIVERY_CODE", "dataType": "String"}, {"name": "GEO_CODE", "dataType": "String"}, {"name": "ADRR_ROLE_CODE", "dataType": "String"}, {"name": "CTL_BATCH_ID", "dataType": "Integer"}, {"name": "CTL_SRC_ROW_ID", "dataType": "Integer"}, {"name": "CTL_EXTRACT_ID", "dataType": "Integer"}, {"name": "CTL_SRC_SYS_SET_NAME", "dataType": "String"}, {"name": "REC_STRT_DATE", "dataType": "Timestamp"}, {"name": "CTL_REC_CRTN_DATE", "dataType": "String"}, {"name": "CTL_REC_UPDATE_DATE", "dataType": "Timestamp"}, {"name": "REC_END_DATE", "dataType": "Timestamp"}, {"name": "CTL_JOB_ID", "dataType": "Integer"}, {"name": "PARTY_ADDRESS_ID", "dataType": "Integer"}, {"name": "LOCATION_ID", "dataType": "Integer"}]', 
+        '[{"name": "PARTY_ID", "dataType": "Integer"}, {"name": "LCTN", "dataType": "String"}, {"name": "DELIVERY_POINT", "dataType": "String"}, {"name": "STREET_NO", "dataType": "String"}, {"name": "STREET_NAME", "dataType": "String"}, {"name": "SUBURB", "dataType": "String"}, {"name": "PCODE", "dataType": "String"}, {"name": "STATE", "dataType": "String"}, {"name": "DELIVERY_CODE", "dataType": "String"}, {"name": "GEO_CODE", "dataType": "String"}, {"name": "ADRR_ROLE_CODE", "dataType": "String"}, {"name": "CTL_BATCH_ID", "dataType": "Integer"}, {"name": "CTL_SRC_ROW_ID", "dataType": "Integer"}, {"name": "CTL_EXTRACT_ID", "dataType": "Integer"}, {"name": "CTL_SRC_SYS_SET_NAME", "dataType": "String"}, {"name": "REC_STRT_DATE", "dataType": "Timestamp"}, {"name": "CTL_REC_CRTN_DATE", "dataType": "Timestamp"}, {"name": "CTL_REC_UPDATE_DATE", "dataType": "String"}, {"name": "REC_END_DATE", "dataType": "Timestamp"}, {"name": "CTL_JOB_ID", "dataType": "Integer"}, {"name": "PARTY_ADDRESS_ID", "dataType": "Integer"}, {"name": "LOCATION_ID", "dataType": "Integer"}]', 
+        '[{"name": "PARTY_ID", "dataType": "Integer"}, {"name": "LCTN", "dataType": "String"}, {"name": "DELIVERY_POINT", "dataType": "String"}, {"name": "STREET_NO", "dataType": "String"}, {"name": "STREET_NAME", "dataType": "String"}, {"name": "SUBURB", "dataType": "String"}, {"name": "PCODE", "dataType": "String"}, {"name": "STATE", "dataType": "String"}, {"name": "DELIVERY_CODE", "dataType": "String"}, {"name": "GEO_CODE", "dataType": "String"}, {"name": "ADRR_ROLE_CODE", "dataType": "String"}, {"name": "CTL_BATCH_ID", "dataType": "Integer"}, {"name": "CTL_SRC_ROW_ID", "dataType": "Integer"}, {"name": "CTL_EXTRACT_ID", "dataType": "Integer"}, {"name": "CTL_SRC_SYS_SET_NAME", "dataType": "String"}, {"name": "REC_STRT_DATE", "dataType": "Timestamp"}, {"name": "CTL_REC_CRTN_DATE", "dataType": "Timestamp"}, {"name": "CTL_REC_UPDATE_DATE", "dataType": "String"}, {"name": "REC_END_DATE", "dataType": "Timestamp"}, {"name": "CTL_JOB_ID", "dataType": "Integer"}, {"name": "PARTY_ADDRESS_ID", "dataType": "Integer"}, {"name": "LOCATION_ID", "dataType": "Integer"}]'
+      ], 
+      'allowMissingColumns'
+    )
+  }}
+
+),
+
+SRT_First_Upd_Then_Ins_Addr_EXPR_196 AS (
+
+  SELECT 
+    CTL_SRC_SYS_SET_NAME AS CTL_SRC_SYS_SET_NAME,
+    CTL_BATCH_ID AS CTL_BATCH_ID,
+    REC_STRT_DATE AS REC_STRT_DATE,
+    STREET_NO AS STREET_NO,
+    PCODE AS PCODE,
+    PARTY_ID AS PARTY_ID,
+    PARTY_ADDRESS_ID AS PARTY_ADDRESS_ID,
+    DELIVERY_CODE AS DELIVERY_CODE,
+    CTL_REC_UPDATE_DATE AS CTL_REC_UPDATE_DATE,
+    CTL_REC_CRTN_DATE AS CTL_REC_CRTN_DATE,
+    DELIVERY_POINT AS DELIVERY_POINT,
+    ADRR_ROLE_CODE AS ADDR_ROLE_CODE,
+    LOCATION_ID AS LOCATION_ID,
+    STATE AS STATE,
+    CTL_EXTRACT_ID AS CTL_EXTRACT_ID,
+    STREET_NAME AS STREET_NAME,
+    LCTN AS LCTN,
+    CTL_JOB_ID AS CTL_JOB_ID,
+    SUBURB AS SUBURB,
+    REC_END_DATE AS REC_END_DATE,
+    CTL_SRC_ROW_ID AS CTL_SRC_ROW_ID,
+    GEO_CODE AS GEO_CODE
+  
+  FROM UNI_New_Existing_Addr AS in0
+
+)
+
+SELECT *
+
+FROM SRT_First_Upd_Then_Ins_Addr_EXPR_196

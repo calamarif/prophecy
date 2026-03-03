@@ -1,0 +1,21 @@
+entityType: ""
+providerType: "Databricks"
+fields:
+- name: "INCEPTION_DATE"
+  dataType:
+    type: "Timestamp"
+- name: "POLICY_NUMBER"
+  dataType:
+    type: "String"
+- name: "PREM_CLASS_CODE"
+  dataType:
+    type: "String"
+- name: "PREM_COVR_ID"
+  dataType:
+    type: "Integer"
+- name: "RSK_ID"
+  dataType:
+    type: "Integer"
+- name: "EXPIRY_DATE"
+  dataType:
+    type: "Timestamp"

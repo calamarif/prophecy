@@ -1,0 +1,12 @@
+---
+version: 2
+models:
+- name: "20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_SVU__SQL_Delete_Failed_EXPR_232"
+  tags:
+  - "prophecy_temp"
+- name: "20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_SVU__sh_P_DIM_GI_MESSAGE_from_Message_Document"
+  tags:
+  - "prophecy_temp"
+- name: "20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_SVU__sh_P_DIM_GI_MESSAGE_from_Request_Response"
+  tags:
+  - "prophecy_temp"

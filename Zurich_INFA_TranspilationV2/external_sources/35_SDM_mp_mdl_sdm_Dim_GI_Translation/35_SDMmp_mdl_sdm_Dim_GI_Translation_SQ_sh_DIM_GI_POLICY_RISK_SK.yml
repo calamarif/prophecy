@@ -1,0 +1,21 @@
+entityType: ""
+providerType: "Databricks"
+fields:
+- name: "PRD_CODE"
+  dataType:
+    type: "String"
+- name: "BUSN_AREA_NAME"
+  dataType:
+    type: "String"
+- name: "CMPY_NUM"
+  dataType:
+    type: "String"
+- name: "RISK_NUM"
+  dataType:
+    type: "Integer"
+- name: "RISK_ID"
+  dataType:
+    type: "Integer"
+- name: "POL_NUM"
+  dataType:
+    type: "String"

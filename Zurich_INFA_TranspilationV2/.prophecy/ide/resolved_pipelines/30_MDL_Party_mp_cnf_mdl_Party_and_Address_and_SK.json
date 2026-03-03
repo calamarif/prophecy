@@ -1,0 +1,2000 @@
+{
+  "id" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK",
+  "metainfo" : {
+    "label" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK",
+    "autoLayout" : false,
+    "version" : 1,
+    "configuration" : {
+      "schema" : {
+        "type" : "record",
+        "fields" : [ {
+          "name" : "username",
+          "kind" : {
+            "type" : "string",
+            "value" : "''"
+          }
+        }, {
+          "name" : "PMSourceFileDir",
+          "kind" : {
+            "type" : "string",
+            "value" : "''"
+          }
+        }, {
+          "name" : "SCHEMA",
+          "kind" : {
+            "type" : "string",
+            "value" : "'SCHEMA'"
+          }
+        }, {
+          "name" : "PMWorkflowRunId",
+          "kind" : {
+            "type" : "string",
+            "value" : "''"
+          }
+        }, {
+          "name" : "jdbcUrl",
+          "kind" : {
+            "type" : "string",
+            "value" : "''"
+          }
+        }, {
+          "name" : "PMTargetFileDir",
+          "kind" : {
+            "type" : "string",
+            "value" : "''"
+          }
+        }, {
+          "name" : "password",
+          "kind" : {
+            "type" : "string",
+            "value" : "''"
+          }
+        } ]
+      }
+    },
+    "isTranspiledPipeline" : false,
+    "publishDiagnosticMetrics" : true,
+    "transpilerType" : "informatica",
+    "processesVsModelFiles" : {
+      "bF6hZ4twuP3ElTbibnLeL" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_ADDRESS.sql",
+      "EXP_CTL_Columns" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__RTR_New_Existing_SK_JOIN_EXPR_191.sql",
+      "UNI_Ins_Upd_SK" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_SK.sql",
+      "zUhqcCJCfDVmbGJJVUFgN" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY.sql",
+      "SQL_Truncate_EXPR_201" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__SQL_Truncate_EXPR_201.sql",
+      "SQL_Truncate_SQL_Truncate_out0" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__SQL_Truncate_EXPR_201.sql",
+      "ObtPprkGkOvA64cyu90ow" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_ADDRESS.sql",
+      "UNI_New_Existing_Party_EXPR_Existing_Insert" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY.sql",
+      "UNI_New_Existing_Party_EXPR_200" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY.sql",
+      "FIL_Valid_Addresses_GENERATE_SK_EXPR_197" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_ADDRESS.sql",
+      "RTR_New_SK_New_Existing_party_JOIN" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY.sql",
+      "UNI_New_Existing_Addr" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_ADDRESS.sql",
+      "RTR_New_Updated_Addr_JOIN_EXPR_194" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_ADDRESS.sql",
+      "UNI_New_Existing_Party_EXPR_New_Insert" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY.sql",
+      "FIL_Remove_Pref_Party_Data_GENERATE_SK_EXPR_203" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY.sql",
+      "QvK502OoTvnZbvT5dzZNn" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_SK.sql",
+      "RTR_New_Existing_SK_JOIN_merged" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__RTR_New_Existing_SK_JOIN_EXPR_191.sql",
+      "UNI_New_Existing_Party_EXPR_Existing_Update" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY.sql",
+      "EXP_Flag_New_Batch" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__EXP_Flag_New_Batch.sql",
+      "sh_DIM_PARTY_ADDRESS" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_ADDRESS.sql",
+      "UNI_New_Existing_Party" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY.sql",
+      "30_MDL_Partymp_cnf_mdl_Party_and_Address_and_SK_SOURCE_sh_LKP_Dim_Location_Address_Match_SK_SOURCE_sh_LKP_Dim_Location_Address_Match_SK_out0" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_ADDRESS.sql",
+      "MIPEL8u_9etkN5TVSsAaI" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY.sql",
+      "RTR_New_Updated_Addr_EXPR_New" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_ADDRESS.sql",
+      "EXP_Flag_New_Batch_EXP_Flag_New_Batch_out0" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__EXP_Flag_New_Batch.sql",
+      "RTR_New_Existing_SK_EXPR_All" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__RTR_New_Existing_SK_EXPR_All.sql",
+      "UNI_New_Existing_Addr_EXPR_New_Insert" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_ADDRESS.sql",
+      "30_MDL_Partymp_cnf_mdl_Party_and_Address_and_SK_SOURCE_LKP_Dyn_Dim_Party_SOURCE_LKP_Dyn_Dim_Party_out0" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY.sql",
+      "LKP_Dyn_Dim_Party_JOIN" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY.sql",
+      "LKP_Dyn_Party_Address_PRE_JOIN_JOIN_EXPR_192" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_ADDRESS.sql",
+      "EXP_collect_source_EXP_collect_source_out0" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__RTR_New_Existing_SK_JOIN_EXPR_191.sql",
+      "RTR_New_SK_New_Existing_party_EXPR_Existing_Party" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY.sql",
+      "EXP_Is_Valid_Address" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__RTR_New_Existing_SK_JOIN_EXPR_191.sql",
+      "RTR_New_SK_New_Existing_party_EXPR_New_Party" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY.sql",
+      "FIL_Remove_Pref_Party_Data" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY.sql",
+      "EXP_collect_source" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__EXP_collect_source.sql",
+      "X45TqNqbHjj0AYN-tIYT5" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY.sql",
+      "LKP_Dyn_Dim_Party_JOIN_EXPR_199" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY.sql",
+      "RTR_New_Existing_SK_EXPR_All_RTR_New_Existing_SK_EXPR_All_out0" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY.sql",
+      "30_MDL_Partymp_cnf_mdl_Party_and_Address_and_SK_SOURCE_LKP_Dyn_Party_Address_SOURCE_LKP_Dyn_Party_Address_out0" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_ADDRESS.sql",
+      "SQL_Truncate_EXPR_201_SQL_Truncate_EXPR_201_out0" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__SQL_Truncate_EXPR_201.sql",
+      "EXP_Set_Default_TFN" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__RTR_New_Existing_SK_JOIN_EXPR_191.sql",
+      "UNI_Ins_Upd_SK_EXPR_Existing_SK" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_SK.sql",
+      "EiOZcl2ZAfSQDN1C9mIpu" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_SK.sql",
+      "sh_DIM_PARTY" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY.sql",
+      "RTR_New_Existing_SK_EXPR_New_SK" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_SK.sql",
+      "UNI_New_Existing_Addr_EXPR_Existing_Update" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_ADDRESS.sql",
+      "UNI_New_Existing_Addr_EXPR_Existing_Insert" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_ADDRESS.sql",
+      "EXP_Is_Pref_Party_Data" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__RTR_New_Existing_SK_JOIN_EXPR_191.sql",
+      "RTR_New_Updated_Addr_EXPR_Existing" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_ADDRESS.sql",
+      "XNRmbhonNIjnZJWa202NJ" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_ADDRESS.sql",
+      "sh_DIM_PARTY_SK" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_SK.sql",
+      "LKP_Dyn_Party_Address_PRE_JOIN_JOIN_merged" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_ADDRESS.sql",
+      "RTR_New_Existing_SK_JOIN_EXPR_191" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__RTR_New_Existing_SK_JOIN_EXPR_191.sql",
+      "30_MDL_Partymp_cnf_mdl_Party_and_Address_and_SK_SOURCE_LKP_Dyn_Dim_Party_SK_SOURCE_LKP_Dyn_Dim_Party_SK_out0" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__RTR_New_Existing_SK_JOIN_EXPR_191.sql",
+      "RTR_New_Updated_Addr_JOIN_merged" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_ADDRESS.sql",
+      "RTR_New_Existing_SK_JOIN_EXPR_191_RTR_New_Existing_SK_JOIN_EXPR_191_out0" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__RTR_New_Existing_SK_JOIN_EXPR_191.sql",
+      "RTR_New_SK_New_Existing_party_JOIN_EXPR_193" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY.sql",
+      "FIL_Valid_Addresses" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_ADDRESS.sql",
+      "30_MDL_Partymp_cnf_mdl_Party_and_Address_and_SK_sh_P_DIM_PARTY_ADDRESS_sh_P_DIM_PARTY_ADDRESS_out0" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__EXP_collect_source.sql",
+      "yDzIsXdmeIr7LhnqqSMxI" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__RTR_New_Existing_SK_EXPR_All.sql",
+      "UNI_Ins_Upd_SK_EXPR_New_SK" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_SK.sql",
+      "RTR_New_Existing_SK_EXPR_All_EXPR_205" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY.sql",
+      "SRT_First_Upd_Then_Ins_Addr_EXPR_196" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_ADDRESS.sql",
+      "RTR_New_Existing_SK_EXPR_Existing_SK" : "models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_SK.sql"
+    }
+  },
+  "processes" : {
+    "SQL_Truncate_EXPR_201" : {
+      "id" : "SQL_Truncate_EXPR_201",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__SQL_Truncate_EXPR_201",
+        "phase" : 2
+      },
+      "properties" : {
+        "modelName" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__SQL_Truncate_EXPR_201"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "SQL_Truncate_EXPR_201_SQL_Truncate_EXPR_201_out0", "SQL_Truncate_EXPR_201", "SQL_Truncate_SQL_Truncate_out0" ],
+        "type" : "ephemeral",
+        "isTemporaryTable" : true,
+        "lastNodeProcessIds" : [ "SQL_Truncate_EXPR_201_SQL_Truncate_EXPR_201_out0" ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__SQL_Truncate_EXPR_201_in_0",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__SQL_Truncate_EXPR_201_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "SOURCE_LKP_Dyn_Party_Address" : {
+      "id" : "SOURCE_LKP_Dyn_Party_Address",
+      "component" : "OrchestrationSource",
+      "kind" : "OracleSource",
+      "metadata" : {
+        "label" : "30_MDL_Partymp_cnf_mdl_Party_and_Address_and_SK_SOURCE_LKP_Dyn_Party_Address",
+        "x" : 2480,
+        "y" : 1340,
+        "phase" : 1
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "oracle",
+          "id" : "transpiled_connection",
+          "properties" : {
+            "database" : "dbName",
+            "server" : "$$jdbcUrl",
+            "username" : "$$username",
+            "id" : "transpiled_connection",
+            "port" : "1521",
+            "password" : {
+              "kind" : "prophecy",
+              "properties" : {
+                "name" : "transpiled_secret",
+                "value" : "transpiled_secret"
+              },
+              "subKind" : "text",
+              "type" : "secret"
+            }
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "pathSelection" : "tableFullName",
+          "tableFullName" : {
+            "schema" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "config",
+                  "properties" : {
+                    "kind" : "prophecy",
+                    "name" : "SCHEMA"
+                  }
+                } ]
+              }
+            },
+            "name" : "DIM_PARTY_ADDRESS"
+          },
+          "warehouseQuery" : {
+            "query" : ""
+          }
+        },
+        "format" : {
+          "kind" : "oracle",
+          "category" : "table",
+          "properties" : {
+            "kind" : "oracle",
+            "schema" : {
+              "entityType" : "",
+              "providerType" : "Databricks",
+              "fields" : [ {
+                "name" : "STREET_NO",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "STREET_NAME",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "ADDR_ROLE_CODE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "LOCATION_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "LCTN",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "SUBURB",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "PARTY_ADDRESS_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "DELIVERY_POINT",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "DELIVERY_CODE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "PARTY_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "REC_STRT_DATE",
+                "dataType" : {
+                  "type" : "Timestamp"
+                }
+              }, {
+                "name" : "PCODE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "GEO_CODE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "NewLookupRow",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "STATE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              } ]
+            }
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "SOURCE_LKP_Dyn_Party_Address_out0",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "STREET_NO",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "STREET_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ADDR_ROLE_CODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LOCATION_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "LCTN",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "SUBURB",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "PARTY_ADDRESS_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "DELIVERY_POINT",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "DELIVERY_CODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "PARTY_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "REC_STRT_DATE",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "PCODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "GEO_CODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "NewLookupRow",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "STATE",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : true
+      }
+    },
+    "sh_Flat_File_SQL_Out" : {
+      "id" : "sh_Flat_File_SQL_Out",
+      "component" : "OrchestrationTarget",
+      "kind" : "SFTPTarget",
+      "metadata" : {
+        "label" : "sh_Flat_File_SQL_Out",
+        "x" : 780,
+        "y" : 20,
+        "phase" : 2
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "sftp",
+          "id" : "transpiled_connection",
+          "properties" : {
+            "authMethod" : "password",
+            "username" : "transpiled_username",
+            "host" : "sftp.prophecy.io",
+            "id" : "transpiled_connection",
+            "port" : 22,
+            "password" : {
+              "kind" : "prophecy",
+              "properties" : {
+                "name" : "transpiled_secret",
+                "value" : "transpiled_secret"
+              },
+              "subKind" : "text",
+              "type" : "secret"
+            }
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "filePath" : {
+            "type" : "concat_operation",
+            "properties" : {
+              "elements" : [ {
+                "type" : "config",
+                "properties" : {
+                  "kind" : "prophecy",
+                  "name" : "PMTargetFileDir"
+                }
+              }, {
+                "type" : "literal",
+                "properties" : {
+                  "value" : "/sh_flat_file_sql_out1.out.xlsx"
+                }
+              } ]
+            }
+          }
+        },
+        "format" : {
+          "kind" : "xlsx",
+          "properties" : { }
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "sh_Flat_File_SQL_Out_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "k4j9pdM12OBDbdb9X1ZfF",
+          "slug" : "out0"
+        } ]
+      }
+    },
+    "EXP_Flag_New_Batch" : {
+      "id" : "EXP_Flag_New_Batch",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__EXP_Flag_New_Batch",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__EXP_Flag_New_Batch"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "EXP_Flag_New_Batch_EXP_Flag_New_Batch_out0", "EXP_Flag_New_Batch", "EXP_collect_source_EXP_collect_source_out0" ],
+        "type" : "ephemeral",
+        "isTemporaryTable" : true,
+        "lastNodeProcessIds" : [ "EXP_Flag_New_Batch_EXP_Flag_New_Batch_out0" ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__EXP_Flag_New_Batch_in_0",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__EXP_Flag_New_Batch_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "sh_DIM_PARTY_ADDRESS" : {
+      "id" : "sh_DIM_PARTY_ADDRESS",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_ADDRESS",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_ADDRESS"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "sh_DIM_PARTY_ADDRESS", "SRT_First_Upd_Then_Ins_Addr_EXPR_196", "UNI_New_Existing_Addr", "UNI_New_Existing_Addr_EXPR_New_Insert", "UNI_New_Existing_Addr_EXPR_Existing_Insert", "UNI_New_Existing_Addr_EXPR_Existing_Update", "RTR_New_Updated_Addr_EXPR_New", "RTR_New_Updated_Addr_EXPR_Existing", "ObtPprkGkOvA64cyu90ow", "XNRmbhonNIjnZJWa202NJ", "RTR_New_Updated_Addr_JOIN_EXPR_194", "RTR_New_Updated_Addr_JOIN_merged", "30_MDL_Partymp_cnf_mdl_Party_and_Address_and_SK_SOURCE_LKP_Dyn_Party_Address_SOURCE_LKP_Dyn_Party_Address_out0", "LKP_Dyn_Party_Address_PRE_JOIN_JOIN_EXPR_192", "bF6hZ4twuP3ElTbibnLeL", "LKP_Dyn_Party_Address_PRE_JOIN_JOIN_merged", "30_MDL_Partymp_cnf_mdl_Party_and_Address_and_SK_SOURCE_sh_LKP_Dim_Location_Address_Match_SK_SOURCE_sh_LKP_Dim_Location_Address_Match_SK_out0", "FIL_Valid_Addresses", "RTR_New_Existing_SK_EXPR_All_RTR_New_Existing_SK_EXPR_All_out0", "FIL_Valid_Addresses_GENERATE_SK_EXPR_197" ],
+        "type" : "table",
+        "isTemporaryTable" : false,
+        "lastNodeProcessIds" : [ "sh_DIM_PARTY_ADDRESS" ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_ADDRESS_in_0",
+          "slug" : "in_0"
+        }, {
+          "id" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_ADDRESS_in_1",
+          "slug" : "in_1"
+        }, {
+          "id" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_ADDRESS_in_2",
+          "slug" : "in_2"
+        }, {
+          "id" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_ADDRESS_in_3",
+          "slug" : "in_3"
+        }, {
+          "id" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_ADDRESS_in_4",
+          "slug" : "in_4"
+        }, {
+          "id" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_ADDRESS_in_5",
+          "slug" : "in_5"
+        }, {
+          "id" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_ADDRESS_in_6",
+          "slug" : "in_6"
+        } ],
+        "outputs" : [ {
+          "id" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_ADDRESS_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "SOURCE_sh_LKP_Dim_Location_Address_Match_SK" : {
+      "id" : "SOURCE_sh_LKP_Dim_Location_Address_Match_SK",
+      "component" : "OrchestrationSource",
+      "kind" : "OracleSource",
+      "metadata" : {
+        "label" : "30_MDL_Partymp_cnf_mdl_Party_and_Address_and_SK_SOURCE_sh_LKP_Dim_Location_Address_Match_SK",
+        "x" : 2020,
+        "y" : 1220,
+        "phase" : 1
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "oracle",
+          "id" : "transpiled_connection",
+          "properties" : {
+            "database" : "dbName",
+            "server" : "$$jdbcUrl",
+            "username" : "$$username",
+            "id" : "transpiled_connection",
+            "port" : "1521",
+            "password" : {
+              "kind" : "prophecy",
+              "properties" : {
+                "name" : "transpiled_secret",
+                "value" : "transpiled_secret"
+              },
+              "subKind" : "text",
+              "type" : "secret"
+            }
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "pathSelection" : "tableFullName",
+          "tableFullName" : {
+            "schema" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "config",
+                  "properties" : {
+                    "kind" : "prophecy",
+                    "name" : "SCHEMA"
+                  }
+                } ]
+              }
+            },
+            "name" : "DIM_LOCATION_ADDRESS_MATCH_SK"
+          },
+          "warehouseQuery" : {
+            "query" : ""
+          }
+        },
+        "format" : {
+          "kind" : "oracle",
+          "category" : "table",
+          "properties" : {
+            "kind" : "oracle",
+            "schema" : {
+              "entityType" : "",
+              "providerType" : "Databricks",
+              "fields" : [ {
+                "name" : "LOCATION_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "SOURCE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "SOURCE_ID",
+                "dataType" : {
+                  "type" : "String"
+                }
+              } ]
+            }
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "SOURCE_sh_LKP_Dim_Location_Address_Match_SK_out0",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "LOCATION_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "SOURCE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "SOURCE_ID",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : true
+      }
+    },
+    "SOURCE_LKP_Dyn_Dim_Party" : {
+      "id" : "SOURCE_LKP_Dyn_Dim_Party",
+      "component" : "OrchestrationSource",
+      "kind" : "OracleSource",
+      "metadata" : {
+        "label" : "30_MDL_Partymp_cnf_mdl_Party_and_Address_and_SK_SOURCE_LKP_Dyn_Dim_Party",
+        "x" : 2280,
+        "y" : 560,
+        "phase" : 1
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "oracle",
+          "id" : "transpiled_connection",
+          "properties" : {
+            "database" : "dbName",
+            "server" : "$$jdbcUrl",
+            "username" : "$$username",
+            "id" : "transpiled_connection",
+            "port" : "1521",
+            "password" : {
+              "kind" : "prophecy",
+              "properties" : {
+                "name" : "transpiled_secret",
+                "value" : "transpiled_secret"
+              },
+              "subKind" : "text",
+              "type" : "secret"
+            }
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "pathSelection" : "tableFullName",
+          "tableFullName" : {
+            "schema" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "config",
+                  "properties" : {
+                    "kind" : "prophecy",
+                    "name" : "SCHEMA"
+                  }
+                } ]
+              }
+            },
+            "name" : "DIM_PARTY"
+          },
+          "warehouseQuery" : {
+            "query" : ""
+          }
+        },
+        "format" : {
+          "kind" : "oracle",
+          "category" : "table",
+          "properties" : {
+            "kind" : "oracle",
+            "schema" : {
+              "entityType" : "",
+              "providerType" : "Databricks",
+              "fields" : [ {
+                "name" : "DOB",
+                "dataType" : {
+                  "type" : "Timestamp"
+                }
+              }, {
+                "name" : "JOB_TITLE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "OTHER_NAME",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "PRIVATE_PHONE_NUM",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "FIRST_NAME",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "GENDER_FLG",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "FAX_NUM",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "LAST_NAME",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "TITLE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "WEB_SITE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "MOBILE_PHONE_NUM",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "ANZSIC_CODE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "ACN",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EMAIL_ADDR",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "TAX_FILE_NUM",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "BUSN_PHONE_NUM",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "PARTY_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "REC_STRT_DATE",
+                "dataType" : {
+                  "type" : "Timestamp"
+                }
+              }, {
+                "name" : "ABN_LICENCE_NUM",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "NewLookupRow",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              } ]
+            }
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "SOURCE_LKP_Dyn_Dim_Party_out0",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "DOB",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "JOB_TITLE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "OTHER_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "PRIVATE_PHONE_NUM",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "FIRST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "GENDER_FLG",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "FAX_NUM",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "TITLE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "WEB_SITE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "MOBILE_PHONE_NUM",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ANZSIC_CODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ACN",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EMAIL_ADDR",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "TAX_FILE_NUM",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "BUSN_PHONE_NUM",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "PARTY_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "REC_STRT_DATE",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "ABN_LICENCE_NUM",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "NewLookupRow",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : true
+      }
+    },
+    "RTR_New_Existing_SK_EXPR_All" : {
+      "id" : "RTR_New_Existing_SK_EXPR_All",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__RTR_New_Existing_SK_EXPR_All",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__RTR_New_Existing_SK_EXPR_All"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "RTR_New_Existing_SK_EXPR_All_RTR_New_Existing_SK_EXPR_All_out0", "RTR_New_Existing_SK_EXPR_All", "yDzIsXdmeIr7LhnqqSMxI", "RTR_New_Existing_SK_JOIN_EXPR_191_RTR_New_Existing_SK_JOIN_EXPR_191_out0" ],
+        "type" : "ephemeral",
+        "isTemporaryTable" : true,
+        "lastNodeProcessIds" : [ "RTR_New_Existing_SK_EXPR_All_RTR_New_Existing_SK_EXPR_All_out0" ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__RTR_New_Existing_SK_EXPR_All_in_0",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__RTR_New_Existing_SK_EXPR_All_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "SOURCE_LKP_Dyn_Dim_Party_SK" : {
+      "id" : "SOURCE_LKP_Dyn_Dim_Party_SK",
+      "component" : "OrchestrationSource",
+      "kind" : "OracleSource",
+      "metadata" : {
+        "label" : "30_MDL_Partymp_cnf_mdl_Party_and_Address_and_SK_SOURCE_LKP_Dyn_Dim_Party_SK",
+        "x" : 420,
+        "y" : 700,
+        "phase" : 1
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "oracle",
+          "id" : "transpiled_connection",
+          "properties" : {
+            "database" : "dbName",
+            "server" : "$$jdbcUrl",
+            "username" : "$$username",
+            "id" : "transpiled_connection",
+            "port" : "1521",
+            "password" : {
+              "kind" : "prophecy",
+              "properties" : {
+                "name" : "transpiled_secret",
+                "value" : "transpiled_secret"
+              },
+              "subKind" : "text",
+              "type" : "secret"
+            }
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "pathSelection" : "warehouseQuery",
+          "tableFullName" : {
+            "schema" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "config",
+                  "properties" : {
+                    "kind" : "prophecy",
+                    "name" : "SCHEMA"
+                  }
+                } ]
+              }
+            },
+            "name" : "30_MDL_Partymp_cnf_mdl_Party_and_Address_and_SK_SOURCE_LKP_Dyn_Dim_Party_SK"
+          },
+          "warehouseQuery" : {
+            "query" : "SELECT GEO_SEGMENT_CODE AS GEO_SEGMENT_CODE,\r        PARTY_NUM AS PARTY_NUM,\r        PARTY_ID AS PARTY_ID,\r        PARTY_ID_TYPE AS PARTY_ID_TYPE,\r        INTL_REF_NUM AS INTL_REF_NUM,\r        INTL_REF_ID_TYPE AS INTL_REF_ID_TYPE,\r        PERS_CMPY_FLG AS PERS_CMPY_FLG\r FROM (       \r SELECT M.GEO_SEGMENT_CODE ,\r        M.PARTY_NUM,\r        M.PARTY_ID,\r        M.PARTY_ID_TYPE,\r        M.INTL_REF_NUM,\r        M.INTL_REF_ID_TYPE,\r        M.PERS_CMPY_FLG\r   FROM    MODEL.DIM_PARTY_SK M\r        INNER JOIN\r           (SELECT DISTINCT PARTY_NUM AS PARTY_NUM, GEO_SEGMENT_CODE AS GEO_SEGMENT_CODE , PARTY_ID_TYPE AS PARTY_ID_TYPE FROM STG.P_DIM_PARTY_ADDRESS) S \r        ON     M.PARTY_NUM = S.PARTY_NUM\r           AND M.GEO_SEGMENT_CODE = S.GEO_SEGMENT_CODE\r           AND M.PARTY_ID_TYPE = S.PARTY_ID_TYPE\r UNION\r SELECT '-','-',MAX(PARTY_ID),'-','-','-','-' FROM MODEL.DIM_PARTY_SK WHERE PARTY_ID<1000000000) --"
+          }
+        },
+        "format" : {
+          "kind" : "oracle",
+          "category" : "table",
+          "properties" : {
+            "kind" : "oracle",
+            "schema" : {
+              "entityType" : "",
+              "providerType" : "Databricks",
+              "fields" : [ {
+                "name" : "INTL_REF_ID_TYPE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "GEO_SEGMENT_CODE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "PERS_CMPY_FLG",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "PARTY_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "INTL_REF_NUM",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "PARTY_NUM",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "NewLookupRow",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "PARTY_ID_TYPE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              } ]
+            }
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "SOURCE_LKP_Dyn_Dim_Party_SK_out0",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "INTL_REF_ID_TYPE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "GEO_SEGMENT_CODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "PERS_CMPY_FLG",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "PARTY_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "INTL_REF_NUM",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "PARTY_NUM",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "NewLookupRow",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "PARTY_ID_TYPE",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : true
+      }
+    },
+    "EXP_collect_source" : {
+      "id" : "EXP_collect_source",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__EXP_collect_source",
+        "phase" : 1
+      },
+      "properties" : {
+        "modelName" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__EXP_collect_source"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "EXP_collect_source_EXP_collect_source_out0", "EXP_collect_source", "30_MDL_Partymp_cnf_mdl_Party_and_Address_and_SK_sh_P_DIM_PARTY_ADDRESS_sh_P_DIM_PARTY_ADDRESS_out0" ],
+        "type" : "ephemeral",
+        "isTemporaryTable" : true,
+        "lastNodeProcessIds" : [ "EXP_collect_source_EXP_collect_source_out0" ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__EXP_collect_source_in_0",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__EXP_collect_source_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "SQL_Truncate" : {
+      "id" : "SQL_Truncate",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "SQL_Truncate",
+        "x" : 220,
+        "y" : 20,
+        "phase" : 2
+      },
+      "properties" : {
+        "ports" : null,
+        "scriptMethodHeader" : "def Script(spark: SparkSession, in0: DataFrame) -> DataFrame:",
+        "scriptMethodFooter" : "return out0",
+        "script" : "\n# Couldn't handle this component please fill.\n# <TRANSFORMATION DESCRIPTION=\"\" NAME=\"SQL_Truncate\" OBJECTVERSION=\"1\" REUSABLE=\"NO\" TYPE=\"Custom Transformation\" VERSIONNUMBER=\"13\">\n#       <TRANSFORMFIELD DATATYPE=\"string\" DEFAULTVALUE=\"\" DESCRIPTION=\"\" NAME=\"PARAM_DUMMY\" PICTURETEXT=\"\" PORTTYPE=\"INPUT\" PRECISION=\"30\" SCALE=\"0\"/><TRANSFORMFIELD DATATYPE=\"string\" DEFAULTVALUE=\"\" DESCRIPTION=\"\" NAME=\"SQLError\" PICTURETEXT=\"\" PORTTYPE=\"OUTPUT\" PRECISION=\"4096\" SCALE=\"0\"/><TRANSFORMFIELD DATATYPE=\"string\" DEFAULTVALUE=\"\" DESCRIPTION=\"\" NAME=\"PARAM_DUMMY_output\" PICTURETEXT=\"\" PORTTYPE=\"OUTPUT\" PRECISION=\"30\" SCALE=\"0\"/>\n#       <TABLEATTRIBUTE NAME=\"Language\" VALUE=\"C++\"/><TABLEATTRIBUTE NAME=\"Module Identifier\" VALUE=\"sqltransform\"/><TABLEATTRIBUTE NAME=\"Class Name\" VALUE=\"SQLPluginDriver\"/><TABLEATTRIBUTE NAME=\"Function Identifier\" VALUE=\"\"/><TABLEATTRIBUTE NAME=\"Runtime Location\" VALUE=\"\"/><TABLEATTRIBUTE NAME=\"Tracing Level\" VALUE=\"Normal\"/><TABLEATTRIBUTE NAME=\"Is Partitionable\" VALUE=\"Across Grid\"/><TABLEATTRIBUTE NAME=\"Inputs Must Block\" VALUE=\"NO\"/><TABLEATTRIBUTE NAME=\"Is Active\" VALUE=\"YES\"/><TABLEATTRIBUTE NAME=\"Update Strategy Transformation\" VALUE=\"NO\"/><TABLEATTRIBUTE NAME=\"Transformation Scope\" VALUE=\"Row\"/><TABLEATTRIBUTE NAME=\"Generate Transaction\" VALUE=\"YES\"/><TABLEATTRIBUTE NAME=\"Output Is Repeatable\" VALUE=\"Never\"/><TABLEATTRIBUTE NAME=\"Requires Single Thread Per Partition\" VALUE=\"NO\"/><TABLEATTRIBUTE NAME=\"Output Is Deterministic\" VALUE=\"YES\"/><TABLEATTRIBUTE NAME=\"Preserves Data Set Boundary\" VALUE=\"No\"/>\n#     </TRANSFORMATION>\nout0 = in0\n"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "SQL_Truncate_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "SQL_Truncate_out0",
+          "slug" : "out0"
+        } ]
+      }
+    },
+    "sh_DIM_PARTY" : {
+      "id" : "sh_DIM_PARTY",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "sh_DIM_PARTY", "UNI_New_Existing_Party_EXPR_200", "UNI_New_Existing_Party", "UNI_New_Existing_Party_EXPR_Existing_Insert", "UNI_New_Existing_Party_EXPR_New_Insert", "UNI_New_Existing_Party_EXPR_Existing_Update", "RTR_New_SK_New_Existing_party_EXPR_Existing_Party", "RTR_New_SK_New_Existing_party_EXPR_New_Party", "zUhqcCJCfDVmbGJJVUFgN", "X45TqNqbHjj0AYN-tIYT5", "RTR_New_SK_New_Existing_party_JOIN_EXPR_193", "RTR_New_SK_New_Existing_party_JOIN", "LKP_Dyn_Dim_Party_JOIN_EXPR_199", "MIPEL8u_9etkN5TVSsAaI", "LKP_Dyn_Dim_Party_JOIN", "30_MDL_Partymp_cnf_mdl_Party_and_Address_and_SK_SOURCE_LKP_Dyn_Dim_Party_SOURCE_LKP_Dyn_Dim_Party_out0", "FIL_Remove_Pref_Party_Data", "FIL_Remove_Pref_Party_Data_GENERATE_SK_EXPR_203", "RTR_New_Existing_SK_EXPR_All_EXPR_205", "RTR_New_Existing_SK_EXPR_All_RTR_New_Existing_SK_EXPR_All_out0" ],
+        "type" : "table",
+        "isTemporaryTable" : false,
+        "lastNodeProcessIds" : [ "sh_DIM_PARTY" ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_in_0",
+          "slug" : "in_0"
+        }, {
+          "id" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_in_1",
+          "slug" : "in_1"
+        }, {
+          "id" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_in_2",
+          "slug" : "in_2"
+        } ],
+        "outputs" : [ {
+          "id" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "sh_DIM_PARTY_SK" : {
+      "id" : "sh_DIM_PARTY_SK",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_SK",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_SK"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "sh_DIM_PARTY_SK", "UNI_Ins_Upd_SK", "UNI_Ins_Upd_SK_EXPR_New_SK", "UNI_Ins_Upd_SK_EXPR_Existing_SK", "RTR_New_Existing_SK_EXPR_New_SK", "RTR_New_Existing_SK_EXPR_Existing_SK", "EiOZcl2ZAfSQDN1C9mIpu", "RTR_New_Existing_SK_JOIN_EXPR_191_RTR_New_Existing_SK_JOIN_EXPR_191_out0", "QvK502OoTvnZbvT5dzZNn", "RTR_New_Existing_SK_JOIN_EXPR_191_RTR_New_Existing_SK_JOIN_EXPR_191_out0" ],
+        "type" : "table",
+        "isTemporaryTable" : false,
+        "lastNodeProcessIds" : [ "sh_DIM_PARTY_SK" ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_SK_in_0",
+          "slug" : "in_0"
+        }, {
+          "id" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_SK_in_1",
+          "slug" : "in_1"
+        } ],
+        "outputs" : [ {
+          "id" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_SK_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "RTR_New_Existing_SK_JOIN_EXPR_191" : {
+      "id" : "RTR_New_Existing_SK_JOIN_EXPR_191",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__RTR_New_Existing_SK_JOIN_EXPR_191",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__RTR_New_Existing_SK_JOIN_EXPR_191"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "RTR_New_Existing_SK_JOIN_EXPR_191_RTR_New_Existing_SK_JOIN_EXPR_191_out0", "RTR_New_Existing_SK_JOIN_EXPR_191", "RTR_New_Existing_SK_JOIN_merged", "EXP_collect_source_EXP_collect_source_out0", "30_MDL_Partymp_cnf_mdl_Party_and_Address_and_SK_SOURCE_LKP_Dyn_Dim_Party_SK_SOURCE_LKP_Dyn_Dim_Party_SK_out0", "EXP_Is_Valid_Address", "EXP_collect_source_EXP_collect_source_out0", "EXP_Set_Default_TFN", "EXP_collect_source_EXP_collect_source_out0", "EXP_Is_Pref_Party_Data", "EXP_collect_source_EXP_collect_source_out0", "EXP_CTL_Columns", "EXP_collect_source_EXP_collect_source_out0" ],
+        "type" : "ephemeral",
+        "isTemporaryTable" : true,
+        "lastNodeProcessIds" : [ "RTR_New_Existing_SK_JOIN_EXPR_191_RTR_New_Existing_SK_JOIN_EXPR_191_out0" ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__RTR_New_Existing_SK_JOIN_EXPR_191_in_0",
+          "slug" : "in_0"
+        }, {
+          "id" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__RTR_New_Existing_SK_JOIN_EXPR_191_in_1",
+          "slug" : "in_1"
+        }, {
+          "id" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__RTR_New_Existing_SK_JOIN_EXPR_191_in_2",
+          "slug" : "in_2"
+        }, {
+          "id" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__RTR_New_Existing_SK_JOIN_EXPR_191_in_3",
+          "slug" : "in_3"
+        }, {
+          "id" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__RTR_New_Existing_SK_JOIN_EXPR_191_in_4",
+          "slug" : "in_4"
+        }, {
+          "id" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__RTR_New_Existing_SK_JOIN_EXPR_191_in_5",
+          "slug" : "in_5"
+        }, {
+          "id" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__RTR_New_Existing_SK_JOIN_EXPR_191_in_6",
+          "slug" : "in_6"
+        }, {
+          "id" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__RTR_New_Existing_SK_JOIN_EXPR_191_in_7",
+          "slug" : "in_7"
+        }, {
+          "id" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__RTR_New_Existing_SK_JOIN_EXPR_191_in_8",
+          "slug" : "in_8"
+        }, {
+          "id" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__RTR_New_Existing_SK_JOIN_EXPR_191_in_9",
+          "slug" : "in_9"
+        }, {
+          "id" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__RTR_New_Existing_SK_JOIN_EXPR_191_in_10",
+          "slug" : "in_10"
+        } ],
+        "outputs" : [ {
+          "id" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__RTR_New_Existing_SK_JOIN_EXPR_191_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "sh_Truncate_Staging" : {
+      "id" : "sh_Truncate_Staging",
+      "component" : "OrchestrationSource",
+      "kind" : "SFTPSource",
+      "metadata" : {
+        "label" : "sh_Truncate_Staging",
+        "x" : 20,
+        "y" : 20,
+        "phase" : 2
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "sftp",
+          "id" : "transpiled_connection",
+          "properties" : {
+            "authMethod" : "password",
+            "username" : "transpiled_username",
+            "host" : "sftp.prophecy.io",
+            "id" : "transpiled_connection",
+            "port" : 22,
+            "password" : {
+              "kind" : "prophecy",
+              "properties" : {
+                "name" : "transpiled_secret",
+                "value" : "transpiled_secret"
+              },
+              "subKind" : "text",
+              "type" : "secret"
+            }
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "filePath" : {
+            "type" : "concat_operation",
+            "properties" : {
+              "elements" : [ {
+                "type" : "config",
+                "properties" : {
+                  "kind" : "prophecy",
+                  "name" : "PMSourceFileDir"
+                }
+              }, {
+                "type" : "literal",
+                "properties" : {
+                  "value" : "/Flat_File_Dummy.dat.xlsx"
+                }
+              } ]
+            }
+          }
+        },
+        "format" : {
+          "kind" : "xlsx",
+          "properties" : {
+            "schema" : {
+              "entityType" : "",
+              "providerType" : "Databricks",
+              "fields" : [ {
+                "name" : "PARAM_DUMMY",
+                "dataType" : {
+                  "type" : "String"
+                }
+              } ]
+            }
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "sh_Truncate_Staging_out0",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "PARAM_DUMMY",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : true
+      }
+    },
+    "sh_P_DIM_PARTY_ADDRESS" : {
+      "id" : "sh_P_DIM_PARTY_ADDRESS",
+      "component" : "OrchestrationSource",
+      "kind" : "OracleSource",
+      "metadata" : {
+        "label" : "30_MDL_Partymp_cnf_mdl_Party_and_Address_and_SK_sh_P_DIM_PARTY_ADDRESS",
+        "x" : 20,
+        "y" : 380,
+        "phase" : 1
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "oracle",
+          "id" : "transpiled_connection",
+          "properties" : {
+            "database" : "dbName",
+            "server" : "$$jdbcUrl",
+            "username" : "$$username",
+            "id" : "transpiled_connection",
+            "port" : "1521",
+            "password" : {
+              "kind" : "prophecy",
+              "properties" : {
+                "name" : "transpiled_secret",
+                "value" : "transpiled_secret"
+              },
+              "subKind" : "text",
+              "type" : "secret"
+            }
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "pathSelection" : "tableFullName",
+          "tableFullName" : {
+            "schema" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "config",
+                  "properties" : {
+                    "kind" : "prophecy",
+                    "name" : "SCHEMA"
+                  }
+                } ]
+              }
+            },
+            "name" : "EBIDB_STG"
+          },
+          "warehouseQuery" : {
+            "query" : ""
+          }
+        },
+        "format" : {
+          "kind" : "oracle",
+          "category" : "table",
+          "properties" : {
+            "kind" : "oracle",
+            "schema" : {
+              "entityType" : "",
+              "providerType" : "Databricks",
+              "fields" : [ {
+                "name" : "CTL_REC_CRTN_DATE",
+                "dataType" : {
+                  "type" : "Timestamp"
+                }
+              }, {
+                "name" : "DOB",
+                "dataType" : {
+                  "type" : "Timestamp"
+                }
+              }, {
+                "name" : "CTL_SRC_ROW_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "JOB_TITLE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "GEO_SOURCE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "STREET_NO",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "STREET_NAME",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "ADDR_ROLE_CODE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "INTL_REF_ID_TYPE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "OTHER_NAME",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "PRIVATE_PHONE_NUM",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CTL_JOB_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "LCTN",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "SUBURB",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "FIRST_NAME",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "LOCATION_CODE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "GENDER_FLG",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "GEO_SEGMENT_CODE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "FAX_NUM",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "LAST_NAME",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "DELIVERY_POINT",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "TITLE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CTL_SRC_SYS_SET_NAME",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "WEB_SITE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "PERS_CMPY_FLG",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "MOBILE_PHONE_NUM",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "DELIVERY_CODE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "ANZSIC_CODE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CTL_BATCH_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "ACN",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EMAIL_ADDR",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "TAX_FILE_NUM",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "BUSN_PHONE_NUM",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "REC_STRT_DATE",
+                "dataType" : {
+                  "type" : "Timestamp"
+                }
+              }, {
+                "name" : "ABN_LICENCE_NUM",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "PCODE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "INTL_REF_NUM",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "PARTY_NUM",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "PARTY_TYPE_CODE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "GEO_CODE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "PARTY_ID_TYPE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CTL_EXTRACT_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "STATE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              } ]
+            }
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "sh_P_DIM_PARTY_ADDRESS_out0",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "CTL_REC_CRTN_DATE",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "DOB",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "CTL_SRC_ROW_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "JOB_TITLE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "GEO_SOURCE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "STREET_NO",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "STREET_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ADDR_ROLE_CODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "INTL_REF_ID_TYPE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "OTHER_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "PRIVATE_PHONE_NUM",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CTL_JOB_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "LCTN",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "SUBURB",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "FIRST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LOCATION_CODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "GENDER_FLG",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "GEO_SEGMENT_CODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "FAX_NUM",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "DELIVERY_POINT",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "TITLE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CTL_SRC_SYS_SET_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "WEB_SITE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "PERS_CMPY_FLG",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "MOBILE_PHONE_NUM",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "DELIVERY_CODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ANZSIC_CODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CTL_BATCH_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "ACN",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EMAIL_ADDR",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "TAX_FILE_NUM",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "BUSN_PHONE_NUM",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "REC_STRT_DATE",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "ABN_LICENCE_NUM",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "PCODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "INTL_REF_NUM",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "PARTY_NUM",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "PARTY_TYPE_CODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "GEO_CODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "PARTY_ID_TYPE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CTL_EXTRACT_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "STATE",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : true
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "edge_777",
+    "source" : "sh_Truncate_Staging",
+    "sourcePort" : "sh_Truncate_Staging_out0",
+    "target" : "SQL_Truncate",
+    "targetPort" : "SQL_Truncate_in0"
+  }, {
+    "id" : "edge_805",
+    "source" : "SOURCE_LKP_Dyn_Party_Address",
+    "sourcePort" : "SOURCE_LKP_Dyn_Party_Address_out0",
+    "target" : "sh_DIM_PARTY_ADDRESS",
+    "targetPort" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_ADDRESS_in_2"
+  }, {
+    "id" : "edge_814",
+    "source" : "SOURCE_sh_LKP_Dim_Location_Address_Match_SK",
+    "sourcePort" : "SOURCE_sh_LKP_Dim_Location_Address_Match_SK_out0",
+    "target" : "sh_DIM_PARTY_ADDRESS",
+    "targetPort" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_ADDRESS_in_4"
+  }, {
+    "id" : "edge_766",
+    "source" : "SOURCE_LKP_Dyn_Dim_Party",
+    "sourcePort" : "SOURCE_LKP_Dyn_Dim_Party_out0",
+    "target" : "sh_DIM_PARTY",
+    "targetPort" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_in_0"
+  }, {
+    "id" : "edge_792",
+    "source" : "RTR_New_Existing_SK_EXPR_All",
+    "sourcePort" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__RTR_New_Existing_SK_EXPR_All_out_0",
+    "target" : "sh_DIM_PARTY_ADDRESS",
+    "targetPort" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_ADDRESS_in_0"
+  }, {
+    "id" : "edge_793",
+    "source" : "RTR_New_Existing_SK_EXPR_All",
+    "sourcePort" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__RTR_New_Existing_SK_EXPR_All_out_0",
+    "target" : "sh_DIM_PARTY",
+    "targetPort" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_in_2"
+  }, {
+    "id" : "edge_811",
+    "source" : "SOURCE_LKP_Dyn_Dim_Party_SK",
+    "sourcePort" : "SOURCE_LKP_Dyn_Dim_Party_SK_out0",
+    "target" : "RTR_New_Existing_SK_JOIN_EXPR_191",
+    "targetPort" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__RTR_New_Existing_SK_JOIN_EXPR_191_in_9"
+  }, {
+    "id" : "edge_826",
+    "source" : "RTR_New_Existing_SK_JOIN_EXPR_191",
+    "sourcePort" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__RTR_New_Existing_SK_JOIN_EXPR_191_out_0",
+    "target" : "sh_DIM_PARTY_SK",
+    "targetPort" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_SK_in_0"
+  }, {
+    "id" : "edge_828",
+    "source" : "RTR_New_Existing_SK_JOIN_EXPR_191",
+    "sourcePort" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__RTR_New_Existing_SK_JOIN_EXPR_191_out_0",
+    "target" : "sh_DIM_PARTY_SK",
+    "targetPort" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_SK_in_1"
+  }, {
+    "id" : "edge_830",
+    "source" : "RTR_New_Existing_SK_JOIN_EXPR_191",
+    "sourcePort" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__RTR_New_Existing_SK_JOIN_EXPR_191_out_0",
+    "target" : "RTR_New_Existing_SK_EXPR_All",
+    "targetPort" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__RTR_New_Existing_SK_EXPR_All_in_0"
+  }, {
+    "id" : "edge_803",
+    "source" : "sh_P_DIM_PARTY_ADDRESS",
+    "sourcePort" : "sh_P_DIM_PARTY_ADDRESS_out0",
+    "target" : "EXP_collect_source",
+    "targetPort" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__EXP_collect_source_in_0"
+  }, {
+    "id" : "edge_771",
+    "source" : "EXP_collect_source",
+    "sourcePort" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__EXP_collect_source_out_0",
+    "target" : "RTR_New_Existing_SK_JOIN_EXPR_191",
+    "targetPort" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__RTR_New_Existing_SK_JOIN_EXPR_191_in_0"
+  }, {
+    "id" : "edge_776",
+    "source" : "EXP_collect_source",
+    "sourcePort" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__EXP_collect_source_out_0",
+    "target" : "RTR_New_Existing_SK_JOIN_EXPR_191",
+    "targetPort" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__RTR_New_Existing_SK_JOIN_EXPR_191_in_1"
+  }, {
+    "id" : "edge_780",
+    "source" : "EXP_collect_source",
+    "sourcePort" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__EXP_collect_source_out_0",
+    "target" : "RTR_New_Existing_SK_JOIN_EXPR_191",
+    "targetPort" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__RTR_New_Existing_SK_JOIN_EXPR_191_in_2"
+  }, {
+    "id" : "edge_783",
+    "source" : "EXP_collect_source",
+    "sourcePort" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__EXP_collect_source_out_0",
+    "target" : "RTR_New_Existing_SK_JOIN_EXPR_191",
+    "targetPort" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__RTR_New_Existing_SK_JOIN_EXPR_191_in_3"
+  }, {
+    "id" : "edge_807",
+    "source" : "EXP_collect_source",
+    "sourcePort" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__EXP_collect_source_out_0",
+    "target" : "RTR_New_Existing_SK_JOIN_EXPR_191",
+    "targetPort" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__RTR_New_Existing_SK_JOIN_EXPR_191_in_5"
+  }, {
+    "id" : "edge_810",
+    "source" : "EXP_collect_source",
+    "sourcePort" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__EXP_collect_source_out_0",
+    "target" : "RTR_New_Existing_SK_JOIN_EXPR_191",
+    "targetPort" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__RTR_New_Existing_SK_JOIN_EXPR_191_in_8"
+  }, {
+    "id" : "edge_779",
+    "source" : "EXP_collect_source",
+    "sourcePort" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__EXP_collect_source_out_0",
+    "target" : "EXP_Flag_New_Batch",
+    "targetPort" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__EXP_Flag_New_Batch_in_0"
+  }, {
+    "id" : "edge_778",
+    "source" : "SQL_Truncate",
+    "sourcePort" : "SQL_Truncate_out0",
+    "target" : "SQL_Truncate_EXPR_201",
+    "targetPort" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__SQL_Truncate_EXPR_201_in_0"
+  }, {
+    "id" : "edge_773",
+    "source" : "SQL_Truncate_EXPR_201",
+    "sourcePort" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__SQL_Truncate_EXPR_201_out_0",
+    "target" : "sh_Flat_File_SQL_Out",
+    "targetPort" : "sh_Flat_File_SQL_Out_in0"
+  } ],
+  "component" : "Pipeline"
+}

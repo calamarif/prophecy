@@ -1,0 +1,33 @@
+entityType: ""
+providerType: "Databricks"
+fields:
+- name: "EXCLUDE_BATCH_TRANS_TYPE"
+  dataType:
+    type: "String"
+- name: "CALCULATION_FACTOR"
+  dataType:
+    type: "Integer"
+- name: "FROM_BUSN_AREA_NAME"
+  dataType:
+    type: "String"
+- name: "FROM_AMT_TYPE_CODE"
+  dataType:
+    type: "String"
+- name: "FROM_PREM_CLASS"
+  dataType:
+    type: "String"
+- name: "TO_GL_AMT_TYPE"
+  dataType:
+    type: "String"
+- name: "EXCLUDE_MTRN_TYPE"
+  dataType:
+    type: "String"
+- name: "TO_AMT_TYPE_DESC"
+  dataType:
+    type: "String"
+- name: "FROM_MTRN_TYPE"
+  dataType:
+    type: "String"
+- name: "TRANS_REC_TYPE"
+  dataType:
+    type: "String"

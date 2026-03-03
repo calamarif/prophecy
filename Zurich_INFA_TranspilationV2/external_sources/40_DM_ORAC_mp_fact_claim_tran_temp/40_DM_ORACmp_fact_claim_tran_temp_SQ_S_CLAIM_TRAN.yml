@@ -1,0 +1,150 @@
+entityType: ""
+providerType: "Databricks"
+fields:
+- name: "Claim_Tran_Record_Code"
+  dataType:
+    type: "String"
+- name: "Claim_Payment_Amount"
+  dataType:
+    type: "Double"
+- name: "Claim_Tran_Last_Modified_Datetime"
+  dataType:
+    type: "Timestamp"
+- name: "Claim_Tran_Net_Incurred_Amount"
+  dataType:
+    type: "Double"
+- name: "TRAN_HK"
+  dataType:
+    type: "String"
+- name: "Cheq_Reqn_Type_Code"
+  dataType:
+    type: "String"
+- name: "Acct_Period_Code"
+  dataType:
+    type: "String"
+- name: "CLAIM_PAYEE_TRAN_BK"
+  dataType:
+    type: "String"
+- name: "Claim_Tran_UX_Paid_Amount"
+  dataType:
+    type: "Double"
+- name: "CTL_JOB_ID"
+  dataType:
+    type: "Integer"
+- name: "Claim_Payment_Description"
+  dataType:
+    type: "String"
+- name: "Claim_Tran_RI_Paid_Amount"
+  dataType:
+    type: "Double"
+- name: "Claim_Tran_UX_Outs_Amount"
+  dataType:
+    type: "Double"
+- name: "Claim_Tran_Ground_Up_Paid_Amount"
+  dataType:
+    type: "Double"
+- name: "CLAIM_HK"
+  dataType:
+    type: "String"
+- name: "Claim_Payment_GST_Claimed_Amount"
+  dataType:
+    type: "Double"
+- name: "Claim_Tran_Ground_Up_Incurred_Amount"
+  dataType:
+    type: "Double"
+- name: "Claim_Tran_Net_Outs_Amount"
+  dataType:
+    type: "Double"
+- name: "Claim_Number"
+  dataType:
+    type: "String"
+- name: "CTL_BATCH_ID"
+  dataType:
+    type: "Integer"
+- name: "Tran_Type_Code"
+  dataType:
+    type: "String"
+- name: "Company_Code"
+  dataType:
+    type: "String"
+- name: "Claim_Tran_Modify_Type_Code"
+  dataType:
+    type: "String"
+- name: "Claim_RI_Type_Code"
+  dataType:
+    type: "String"
+- name: "Claim_Tran_RI_Broker_Account_Code"
+  dataType:
+    type: "String"
+- name: "Claim_Tran_RI_Incurred_Amount"
+  dataType:
+    type: "Double"
+- name: "TRAN_BK"
+  dataType:
+    type: "String"
+- name: "Claim_Tran_Date_Key"
+  dataType:
+    type: "Integer"
+- name: "Claim_Tran_Gross_Outs_Amount"
+  dataType:
+    type: "Double"
+- name: "Claim_Payment_GST_Expected_Amount"
+  dataType:
+    type: "Double"
+- name: "Claim_Tran_Gross_Incurred_Amount"
+  dataType:
+    type: "Double"
+- name: "Claim_Tran_Batch_ID"
+  dataType:
+    type: "String"
+- name: "Claim_Tran_RI_Outs_Amount"
+  dataType:
+    type: "Double"
+- name: "GST_Division_Code"
+  dataType:
+    type: "String"
+- name: "Claim_Tran_Gross_Paid_Amount"
+  dataType:
+    type: "Double"
+- name: "CLAIM_BK"
+  dataType:
+    type: "String"
+- name: "Claim_Payment_GST_Rate"
+  dataType:
+    type: "Double"
+- name: "Claim_Tran_Recovery_Amount"
+  dataType:
+    type: "Double"
+- name: "Claim_Tran_Ground_Up_Outs_Amount"
+  dataType:
+    type: "Double"
+- name: "Claim_Payment_CITCE_Percent"
+  dataType:
+    type: "Double"
+- name: "Claim_Tran_UX_Incurred_Amount"
+  dataType:
+    type: "Double"
+- name: "Claim_Payment_GST_Difference_Amount"
+  dataType:
+    type: "Double"
+- name: "Claim_Tran_Id"
+  dataType:
+    type: "String"
+- name: "CTL_LOAD_DM"
+  dataType:
+    type: "Timestamp"
+- name: "Claim_Tran_Net_Paid_Amount"
+  dataType:
+    type: "Double"
+- name: "Claim_Payment_Country_Code"
+  dataType:
+    type: "String"
+- name: "Claim_Payment_Incl_GST_Amount"
+  dataType:
+    type: "Double"
+- name: "Payment_Type_Code"
+  dataType:
+    type: "String"
+- name: "Claim_Tran_Payment_Single_Stage_YN"
+  dataType:
+    type: "String"

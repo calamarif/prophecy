@@ -1,0 +1,129 @@
+{
+  "id" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__EXP_Flag_New_Batch",
+  "metainfo" : {
+    "label" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__EXP_Flag_New_Batch",
+    "autoLayout" : true,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "entityConfig" : {
+        "materialized" : "ephemeral",
+        "database" : "\"qa_team\"",
+        "schema" : "\"qa_orchestration\"",
+        "type" : "ModelConfig"
+      }
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "EXP_Flag_New_Batch_EXP_Flag_New_Batch_out0" : {
+      "id" : "EXP_Flag_New_Batch_EXP_Flag_New_Batch_out0",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "EXP_Flag_New_Batch"
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "\nSELECT *\n\nFROM EXP_Flag_New_Batch\n\n",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_4",
+          "slug" : "input_port_4"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_4",
+          "slug" : "output_port_4"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "EXP_Flag_New_Batch" : {
+      "id" : "EXP_Flag_New_Batch",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "EXP_Flag_New_Batch",
+        "x" : 420,
+        "y" : 900,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "(((SUM(1) OVER (PARTITION BY 1 ORDER BY 1 NULLS FIRST)) % 1000) = 1)",
+            "_row_id" : null
+          },
+          "alias" : "NEW_BATCH",
+          "description" : null,
+          "_row_id" : "iDsStu6jGmIme7M6uO2hT"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "EXP_Flag_New_Batch_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "EXP_Flag_New_Batch_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "EXP_collect_source_EXP_collect_source_out0" : {
+      "id" : "EXP_collect_source_EXP_collect_source_out0",
+      "component" : "SQLStatement",
+      "metadata" : {
+        "label" : "EXP_collect_source"
+      },
+      "properties" : {
+        "fileTabs" : [ {
+          "path" : "output_port_3",
+          "id" : "output_port_3",
+          "language" : "sql",
+          "content" : "\nSELECT *\n\nFROM {{ ref('30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__EXP_collect_source') }}\n\n"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_3",
+          "slug" : "input_port_3"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_3",
+          "slug" : "output_port_3"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "conn_EXP_Flag_New_Batch_EXP_Flag_New_Batch_out0_EXP_Flag_New_Batch_EXP_Flag_New_Batch_out0",
+    "source" : "EXP_Flag_New_Batch",
+    "sourcePort" : "EXP_Flag_New_Batch_out0",
+    "target" : "EXP_Flag_New_Batch_EXP_Flag_New_Batch_out0",
+    "targetPort" : "input_port_4",
+    "isWireless" : false
+  }, {
+    "id" : "edge_779",
+    "source" : "EXP_collect_source_EXP_collect_source_out0",
+    "sourcePort" : "output_port_3",
+    "target" : "EXP_Flag_New_Batch",
+    "targetPort" : "EXP_Flag_New_Batch_in0",
+    "isWireless" : false
+  } ],
+  "component" : "Model"
+}

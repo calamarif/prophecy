@@ -1,0 +1,422 @@
+{
+  "id" : "40_DM_ORAC_mp_data_refresh_master_bdv_Premium_Trans",
+  "metainfo" : {
+    "label" : "40_DM_ORAC_mp_data_refresh_master_bdv_Premium_Trans",
+    "autoLayout" : true,
+    "version" : 1,
+    "configuration" : {
+      "schema" : {
+        "type" : "record",
+        "fields" : [ {
+          "name" : "CTL_BATCH_ID",
+          "kind" : {
+            "type" : "int",
+            "value" : "0"
+          }
+        }, {
+          "name" : "CTL_JOB_ID",
+          "kind" : {
+            "type" : "int",
+            "value" : "0"
+          }
+        }, {
+          "name" : "CTL_LOAD_DM",
+          "kind" : {
+            "type" : "string",
+            "value" : "''"
+          }
+        }, {
+          "name" : "MONTHS_PRIOR_COUNT",
+          "kind" : {
+            "type" : "int",
+            "value" : "0"
+          }
+        }, {
+          "name" : "PMSourceFileDir",
+          "kind" : {
+            "type" : "string",
+            "value" : "''"
+          }
+        }, {
+          "name" : "Sp_Insert_S_Premium_Tran",
+          "kind" : {
+            "type" : "string",
+            "value" : "''"
+          }
+        }, {
+          "name" : "PMWorkflowRunId",
+          "kind" : {
+            "type" : "string",
+            "value" : "''"
+          }
+        }, {
+          "name" : "PMTargetFileDir",
+          "kind" : {
+            "type" : "string",
+            "value" : "''"
+          }
+        } ]
+      }
+    },
+    "isTranspiledPipeline" : false,
+    "publishDiagnosticMetrics" : true,
+    "transpilerType" : "informatica",
+    "processesVsModelFiles" : {
+      "Exp_Set_Parameters" : "models/40_DM_ORAC_mp_data_refresh_master_bdv_Premium_Trans/40_DM_ORAC_mp_data_refresh_master_bdv_Premium_Trans__Exp_Set_Parameters.sql",
+      "DUMMY_TARGET_EXP_DUMMY_TARGET_EXP_out0" : "models/40_DM_ORAC_mp_data_refresh_master_bdv_Premium_Trans/40_DM_ORAC_mp_data_refresh_master_bdv_Premium_Trans__DUMMY_TARGET_EXP.sql",
+      "Sp_Insert_S_Premium_Tran_Sp_Insert_S_Premium_Tran_out0" : "models/40_DM_ORAC_mp_data_refresh_master_bdv_Premium_Trans/40_DM_ORAC_mp_data_refresh_master_bdv_Premium_Trans__DUMMY_TARGET_EXP.sql",
+      "Exp_Set_Parameters_Exp_Set_Parameters_out0" : "models/40_DM_ORAC_mp_data_refresh_master_bdv_Premium_Trans/40_DM_ORAC_mp_data_refresh_master_bdv_Premium_Trans__Exp_Set_Parameters.sql",
+      "DUMMY_TARGET_EXP" : "models/40_DM_ORAC_mp_data_refresh_master_bdv_Premium_Trans/40_DM_ORAC_mp_data_refresh_master_bdv_Premium_Trans__DUMMY_TARGET_EXP.sql",
+      "DUMMY_SOURCE_DUMMY_SOURCE_out0" : "models/40_DM_ORAC_mp_data_refresh_master_bdv_Premium_Trans/40_DM_ORAC_mp_data_refresh_master_bdv_Premium_Trans__Exp_Set_Parameters.sql"
+    }
+  },
+  "processes" : {
+    "Exp_Set_Parameters" : {
+      "id" : "Exp_Set_Parameters",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Exp_Set_Parameters",
+        "phase" : 1
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "{{ var('CTL_BATCH_ID') }}",
+            "_row_id" : null
+          },
+          "alias" : "CTL_BATCH_ID",
+          "description" : null,
+          "_row_id" : "kv0xo7JINUQwpBCuZdoQh"
+        }, {
+          "expression" : {
+            "expression" : "{{ var('PMWorkflowRunId') }}",
+            "_row_id" : null
+          },
+          "alias" : "CTL_JOB_ID",
+          "description" : null,
+          "_row_id" : "TB_tjxLAQAI_Uo2kOox60"
+        }, {
+          "expression" : {
+            "expression" : "(TO_TIMESTAMP({{ var('CTL_LOAD_DM') }}, 'yyyy-MM-dd HH:mm:ss'))",
+            "_row_id" : null
+          },
+          "alias" : "CTL_LOAD_DM",
+          "description" : null,
+          "_row_id" : "tzdzEdZfCzTiFE4rQJcJy"
+        }, {
+          "expression" : {
+            "expression" : "{{ var('MONTHS_PRIOR_COUNT') }}",
+            "_row_id" : null
+          },
+          "alias" : "Months_Prior_Count",
+          "description" : null,
+          "_row_id" : "MdpzClLqP9jbWYi7dU0Tr"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Exp_Set_Parameters_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "Exp_Set_Parameters_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "DUMMY_SOURCE" : {
+      "id" : "DUMMY_SOURCE",
+      "component" : "OrchestrationSource",
+      "kind" : "SFTPSource",
+      "metadata" : {
+        "label" : "DUMMY_SOURCE",
+        "phase" : 1
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "sftp",
+          "id" : "transpiled_connection",
+          "properties" : {
+            "authMethod" : "password",
+            "username" : "transpiled_username",
+            "host" : "sftp.prophecy.io",
+            "id" : "transpiled_connection",
+            "port" : 22,
+            "password" : {
+              "kind" : "prophecy",
+              "properties" : {
+                "name" : "transpiled_secret",
+                "value" : "transpiled_secret"
+              },
+              "subKind" : "text",
+              "type" : "secret"
+            }
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "filePath" : {
+            "type" : "concat_operation",
+            "properties" : {
+              "elements" : [ {
+                "type" : "config",
+                "properties" : {
+                  "kind" : "prophecy",
+                  "name" : "PMSourceFileDir"
+                }
+              }, {
+                "type" : "literal",
+                "properties" : {
+                  "value" : "\\ORAC/dummy.csv"
+                }
+              } ]
+            }
+          }
+        },
+        "format" : {
+          "kind" : "csv",
+          "properties" : {
+            "schema" : {
+              "entityType" : "",
+              "providerType" : "Databricks",
+              "fields" : [ {
+                "name" : "DUMMY",
+                "dataType" : {
+                  "type" : "String"
+                }
+              } ]
+            }
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "DUMMY_SOURCE_out0",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "DUMMY",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : true
+      }
+    },
+    "Sp_Insert_S_Premium_Tran" : {
+      "id" : "Sp_Insert_S_Premium_Tran",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "Sp_Insert_S_Premium_Tran",
+        "phase" : 0
+      },
+      "properties" : {
+        "scriptMethodHeader" : "def Script(spark: SparkSession, in: DataFrame) -> DataFrame:",
+        "scriptMethodFooter" : "return out",
+        "script" : "\nimport cx_Oracle\ndsn = dbutils.secrets.get(scope = {{Sp_Insert_S_Premium_Tran}}, key = \"dsn\")\nusername = dbutils.secrets.get(scope = {{Sp_Insert_S_Premium_Tran}}, key = \"username\")\npassword = dbutils.secrets.get(scope = {{Sp_Insert_S_Premium_Tran}}, key = \"password\")\n\nresult = []\nfor row in in0.collect():\n  with cx_Oracle.connect(cfg.username, cfg.password, cfg.dsn) as connection:\n    with connection.cursor() as cursor:\n      Months_Prior_Count = cursor.var(str)\n      CTL_BATCH_ID = cursor.var(str)\n      CTL_JOB_ID = cursor.var(str)\n      CTL_LOAD_DM = cursor.var(str)\n      RETURN_VALUE = cursor.var(str)\n      cursor.callproc('BDV.INSERT_S_PREMIUM_TRAN_NET', [row['Months_Prior_Count'],row['CTL_BATCH_ID'],row['CTL_JOB_ID'],row['CTL_LOAD_DM'],Months_Prior_Count,CTL_BATCH_ID,CTL_JOB_ID,CTL_LOAD_DM,RETURN_VALUE])\n      result += [Row(Months_Prior_Count = row['Months_Prior_Count'],CTL_BATCH_ID = row['CTL_BATCH_ID'],CTL_JOB_ID = row['CTL_JOB_ID'],CTL_LOAD_DM = row['CTL_LOAD_DM'],RETURN_VALUE = RETURN_VALUE)]\nout = spark.createDataFrame(result, \nStructType([\nStructField(\"Months_Prior_Count\", IntegerType(), True),\nStructField(\"CTL_BATCH_ID\", IntegerType(), True),\nStructField(\"CTL_JOB_ID\", IntegerType(), True),\nStructField(\"CTL_LOAD_DM\", TimestampType(), True),\nStructField(\"RETURN_VALUE\", IntegerType(), True)\n])\n)\n"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Sp_Insert_S_Premium_Tran_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "Sp_Insert_S_Premium_Tran_out0",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "CTL_JOB_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "Months_Prior_Count",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "RETURN_VALUE",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "CTL_BATCH_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "CTL_LOAD_DM",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : true
+      }
+    },
+    "DUMMY_TARGET" : {
+      "id" : "DUMMY_TARGET",
+      "component" : "OrchestrationTarget",
+      "kind" : "SFTPTarget",
+      "metadata" : {
+        "label" : "DUMMY_TARGET",
+        "phase" : 1
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "sftp",
+          "id" : "transpiled_connection",
+          "properties" : {
+            "authMethod" : "password",
+            "username" : "transpiled_username",
+            "host" : "sftp.prophecy.io",
+            "id" : "transpiled_connection",
+            "port" : 22,
+            "password" : {
+              "kind" : "prophecy",
+              "properties" : {
+                "name" : "transpiled_secret",
+                "value" : "transpiled_secret"
+              },
+              "subKind" : "text",
+              "type" : "secret"
+            }
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "filePath" : {
+            "type" : "concat_operation",
+            "properties" : {
+              "elements" : [ {
+                "type" : "config",
+                "properties" : {
+                  "kind" : "prophecy",
+                  "name" : "PMTargetFileDir"
+                }
+              }, {
+                "type" : "literal",
+                "properties" : {
+                  "value" : "/dummy_target1.out.xlsx"
+                }
+              } ]
+            }
+          }
+        },
+        "format" : {
+          "kind" : "xlsx",
+          "properties" : { }
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "DUMMY_TARGET_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "gQI3RtLeUqAOPCp2fSZoN",
+          "slug" : "out0"
+        } ]
+      }
+    },
+    "DUMMY_TARGET_EXP" : {
+      "id" : "DUMMY_TARGET_EXP",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "DUMMY_TARGET_EXP",
+        "phase" : 1
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "RETURN_VALUE",
+            "_row_id" : null
+          },
+          "alias" : "NEWFIELD",
+          "description" : null,
+          "_row_id" : "h7mRa3zSvNSfDBJx7Zep2"
+        }, {
+          "expression" : {
+            "expression" : "CAST(NULL AS string)",
+            "_row_id" : null
+          },
+          "alias" : "NEWFIELD1",
+          "description" : null,
+          "_row_id" : "nxWQ7_7dAcJcm09MpSyQ1"
+        }, {
+          "expression" : {
+            "expression" : "CAST(NULL AS string)",
+            "_row_id" : null
+          },
+          "alias" : "NEWFIELD2",
+          "description" : null,
+          "_row_id" : "OBIAWVoXkI5kHbBctgsiV"
+        }, {
+          "expression" : {
+            "expression" : "CAST(NULL AS string)",
+            "_row_id" : null
+          },
+          "alias" : "NEWFIELD3",
+          "description" : null,
+          "_row_id" : "pFg0GnL2r1YzhI2pyrFBT"
+        }, {
+          "expression" : {
+            "expression" : "CAST(NULL AS string)",
+            "_row_id" : null
+          },
+          "alias" : "NEWFIELD4",
+          "description" : null,
+          "_row_id" : "h73CHLpBbXES4zlbiYb4R"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "DUMMY_TARGET_EXP_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "DUMMY_TARGET_EXP_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "edge_921",
+    "source" : "DUMMY_TARGET_EXP",
+    "sourcePort" : "DUMMY_TARGET_EXP_out0",
+    "target" : "DUMMY_TARGET",
+    "targetPort" : "DUMMY_TARGET_in0"
+  }, {
+    "id" : "edge_922",
+    "source" : "Sp_Insert_S_Premium_Tran",
+    "sourcePort" : "Sp_Insert_S_Premium_Tran_out0",
+    "target" : "DUMMY_TARGET_EXP",
+    "targetPort" : "DUMMY_TARGET_EXP_in0"
+  }, {
+    "id" : "edge_923",
+    "source" : "DUMMY_SOURCE",
+    "sourcePort" : "DUMMY_SOURCE_out0",
+    "target" : "Exp_Set_Parameters",
+    "targetPort" : "Exp_Set_Parameters_in0"
+  }, {
+    "id" : "edge_924",
+    "source" : "Exp_Set_Parameters",
+    "sourcePort" : "Exp_Set_Parameters_out0",
+    "target" : "Sp_Insert_S_Premium_Tran",
+    "targetPort" : "Sp_Insert_S_Premium_Tran_in0"
+  } ],
+  "component" : "Pipeline"
+}

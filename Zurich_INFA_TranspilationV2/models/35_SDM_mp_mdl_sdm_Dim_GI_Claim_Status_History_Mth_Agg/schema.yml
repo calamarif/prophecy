@@ -1,0 +1,6 @@
+---
+version: 2
+models:
+- name: "35_SDM_mp_mdl_sdm_Dim_GI_Claim_Status_History_Mth_Agg__sh_DIM_GI_CLAIM_STATUS_HISTORY_MTH_AGG"
+  tags:
+  - "prophecy_temp"

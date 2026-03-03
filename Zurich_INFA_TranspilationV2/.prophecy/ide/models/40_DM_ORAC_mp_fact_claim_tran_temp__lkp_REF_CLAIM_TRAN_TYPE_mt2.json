@@ -1,0 +1,131 @@
+{
+  "id" : "40_DM_ORAC_mp_fact_claim_tran_temp__lkp_REF_CLAIM_TRAN_TYPE_mt2",
+  "metainfo" : {
+    "label" : "40_DM_ORAC_mp_fact_claim_tran_temp__lkp_REF_CLAIM_TRAN_TYPE_mt2",
+    "autoLayout" : true,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "entityConfig" : {
+        "materialized" : "ephemeral",
+        "database" : "\"qa_team\"",
+        "schema" : "\"qa_orchestration\"",
+        "type" : "ModelConfig"
+      }
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "lkp_REF_CLAIM_TRAN_TYPE_mt2_OmAVLB7pAVi0R2MI06nLo" : {
+      "id" : "lkp_REF_CLAIM_TRAN_TYPE_mt2_OmAVLB7pAVi0R2MI06nLo",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "lkp_REF_CLAIM_TRAN_TYPE_mt2"
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "\nSELECT *\n\nFROM lkp_REF_CLAIM_TRAN_TYPE_mt2\n\n",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_1",
+          "slug" : "input_port_1"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_1",
+          "slug" : "output_port_1"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "lkp_REF_CLAIM_TRAN_TYPE_mt2" : {
+      "id" : "lkp_REF_CLAIM_TRAN_TYPE_mt2",
+      "component" : "ToDo",
+      "metadata" : {
+        "label" : "lkp_REF_CLAIM_TRAN_TYPE_mt2",
+        "x" : 320,
+        "y" : 20,
+        "phase" : 0
+      },
+      "properties" : {
+        "relation_name" : [ "40_DM_ORACmp_fact_claim_tran_temp_SOURCE_lkp_REF_CLAIM_TRAN_TYPE_mt2" ],
+        "_oldMacroProperties" : {
+          "macroName" : "ToDo",
+          "projectName" : "prophecy_basics",
+          "parameters" : [ {
+            "name" : "diag_message",
+            "value" : "Component not supported in sql: TLookup"
+          } ]
+        },
+        "code_string" : "Component not supported in sql: TLookup",
+        "diag_message" : "Component not supported in sql: TLookup",
+        "error_string" : "Component not supported in sql: TLookup"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "lkp_REF_CLAIM_TRAN_TYPE_mt2_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "OmAVLB7pAVi0R2MI06nLo",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "40_DM_ORACmp_fact_claim_tran_temp_SOURCE_lkp_REF_CLAIM_TRAN_TYPE_mt2_SOURCE_lkp_REF_CLAIM_TRAN_TYPE_mt2_out0" : {
+      "id" : "40_DM_ORACmp_fact_claim_tran_temp_SOURCE_lkp_REF_CLAIM_TRAN_TYPE_mt2_SOURCE_lkp_REF_CLAIM_TRAN_TYPE_mt2_out0",
+      "component" : "SQLStatement",
+      "metadata" : {
+        "label" : "40_DM_ORACmp_fact_claim_tran_temp_SOURCE_lkp_REF_CLAIM_TRAN_TYPE_mt2"
+      },
+      "properties" : {
+        "fileTabs" : [ {
+          "path" : "output_port_0",
+          "id" : "output_port_0",
+          "language" : "sql",
+          "content" : "\nSELECT *\n\nFROM {{ prophecy_tmp_source('40_DM_ORAC_mp_fact_claim_tran_temp', '40_DM_ORACmp_fact_claim_tran_temp_SOURCE_lkp_REF_CLAIM_TRAN_TYPE_mt2') }}\n\n"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_0",
+          "slug" : "input_port_0"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_0",
+          "slug" : "output_port_0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "conn_lkp_REF_CLAIM_TRAN_TYPE_mt2_OmAVLB7pAVi0R2MI06nLo_lkp_REF_CLAIM_TRAN_TYPE_mt2_OmAVLB7pAVi0R2MI06nLo",
+    "source" : "lkp_REF_CLAIM_TRAN_TYPE_mt2",
+    "sourcePort" : "OmAVLB7pAVi0R2MI06nLo",
+    "target" : "lkp_REF_CLAIM_TRAN_TYPE_mt2_OmAVLB7pAVi0R2MI06nLo",
+    "targetPort" : "input_port_1",
+    "isWireless" : false
+  }, {
+    "id" : "edge_893",
+    "source" : "40_DM_ORACmp_fact_claim_tran_temp_SOURCE_lkp_REF_CLAIM_TRAN_TYPE_mt2_SOURCE_lkp_REF_CLAIM_TRAN_TYPE_mt2_out0",
+    "sourcePort" : "output_port_0",
+    "target" : "lkp_REF_CLAIM_TRAN_TYPE_mt2",
+    "targetPort" : "lkp_REF_CLAIM_TRAN_TYPE_mt2_in0",
+    "isWireless" : false
+  } ],
+  "component" : "Model"
+}

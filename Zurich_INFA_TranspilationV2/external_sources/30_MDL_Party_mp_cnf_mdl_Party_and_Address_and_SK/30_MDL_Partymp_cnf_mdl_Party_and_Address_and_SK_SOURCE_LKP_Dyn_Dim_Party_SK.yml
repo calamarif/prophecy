@@ -1,0 +1,27 @@
+entityType: ""
+providerType: "Databricks"
+fields:
+- name: "INTL_REF_ID_TYPE"
+  dataType:
+    type: "String"
+- name: "GEO_SEGMENT_CODE"
+  dataType:
+    type: "String"
+- name: "PERS_CMPY_FLG"
+  dataType:
+    type: "String"
+- name: "PARTY_ID"
+  dataType:
+    type: "Integer"
+- name: "INTL_REF_NUM"
+  dataType:
+    type: "String"
+- name: "PARTY_NUM"
+  dataType:
+    type: "String"
+- name: "NewLookupRow"
+  dataType:
+    type: "Integer"
+- name: "PARTY_ID_TYPE"
+  dataType:
+    type: "String"

@@ -1,0 +1,30 @@
+entityType: ""
+providerType: "Databricks"
+fields:
+- name: "CTL_REC_CRTN_DATE"
+  dataType:
+    type: "Timestamp"
+- name: "METRICS_QUERY"
+  dataType:
+    type: "String"
+- name: "TASK_NAME"
+  dataType:
+    type: "String"
+- name: "CTL_INTRADAY_ID"
+  dataType:
+    type: "String"
+- name: "JOB_NAME"
+  dataType:
+    type: "String"
+- name: "CTL_JOB_RUN_ID"
+  dataType:
+    type: "Integer"
+- name: "CTL_BATCH_ID"
+  dataType:
+    type: "Integer"
+- name: "TARGET_OBJECT_NAME"
+  dataType:
+    type: "String"
+- name: "ACTIVE_FLAG"
+  dataType:
+    type: "Integer"

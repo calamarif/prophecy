@@ -1,0 +1,2007 @@
+{
+  "id" : "30_MDL_AUTHORITIES_mp_myauthorities_stg_mdl_dnm_AU_NZ_MyAuthority_Full_2",
+  "metainfo" : {
+    "label" : "30_MDL_AUTHORITIES_mp_myauthorities_stg_mdl_dnm_AU_NZ_MyAuthority_Full_2",
+    "autoLayout" : false,
+    "version" : 1,
+    "configuration" : {
+      "schema" : {
+        "type" : "record",
+        "fields" : [ {
+          "name" : "jdbcUrl",
+          "kind" : {
+            "type" : "string",
+            "value" : "''"
+          }
+        }, {
+          "name" : "username",
+          "kind" : {
+            "type" : "string",
+            "value" : "''"
+          }
+        }, {
+          "name" : "password",
+          "kind" : {
+            "type" : "string",
+            "value" : "''"
+          }
+        }, {
+          "name" : "SCHEMA",
+          "kind" : {
+            "type" : "string",
+            "value" : "'SCHEMA'"
+          }
+        } ]
+      }
+    },
+    "isTranspiledPipeline" : false,
+    "publishDiagnosticMetrics" : true,
+    "transpilerType" : "informatica",
+    "processesVsModelFiles" : {
+      "EXP_INIT" : "models/30_MDL_AUTHORITIES_mp_myauthorities_stg_mdl_dnm_AU_NZ_MyAuthority_Full_2/30_MDL_AUTHORITIES_mp_myauthorities_stg_mdl_dnm_AU_NZ_MyAuthority_Full_2__DNM_AUTH_AU_NZ_MYAUTHORITY_FULL.sql",
+      "DNM_AUTH_AU_NZ_MYAUTHORITY_FULL" : "models/30_MDL_AUTHORITIES_mp_myauthorities_stg_mdl_dnm_AU_NZ_MyAuthority_Full_2/30_MDL_AUTHORITIES_mp_myauthorities_stg_mdl_dnm_AU_NZ_MyAuthority_Full_2__DNM_AUTH_AU_NZ_MYAUTHORITY_FULL.sql",
+      "DNM_AUTH_AU_NZ_MYAUTHORITY_FULL_EXP" : "models/30_MDL_AUTHORITIES_mp_myauthorities_stg_mdl_dnm_AU_NZ_MyAuthority_Full_2/30_MDL_AUTHORITIES_mp_myauthorities_stg_mdl_dnm_AU_NZ_MyAuthority_Full_2__DNM_AUTH_AU_NZ_MYAUTHORITY_FULL.sql",
+      "DNM_AUTH_AU_NZ_MYAUTHORITY_FULL_EXP_JOIN" : "models/30_MDL_AUTHORITIES_mp_myauthorities_stg_mdl_dnm_AU_NZ_MyAuthority_Full_2/30_MDL_AUTHORITIES_mp_myauthorities_stg_mdl_dnm_AU_NZ_MyAuthority_Full_2__DNM_AUTH_AU_NZ_MYAUTHORITY_FULL.sql",
+      "EXP_AUTH_AUDIT_COLUMNS" : "models/30_MDL_AUTHORITIES_mp_myauthorities_stg_mdl_dnm_AU_NZ_MyAuthority_Full_2/30_MDL_AUTHORITIES_mp_myauthorities_stg_mdl_dnm_AU_NZ_MyAuthority_Full_2__DNM_AUTH_AU_NZ_MYAUTHORITY_FULL.sql",
+      "30_MDL_AUTHORITIESmp_myauthorities_stg_mdl_dnm_AU_NZ_MyAuthority_Full_2_SRC_AUTH_AU_NZ_MYAUTHORITY_FULL_SRC_AUTH_AU_NZ_MYAUTHORITY_FULL_out0" : "models/30_MDL_AUTHORITIES_mp_myauthorities_stg_mdl_dnm_AU_NZ_MyAuthority_Full_2/30_MDL_AUTHORITIES_mp_myauthorities_stg_mdl_dnm_AU_NZ_MyAuthority_Full_2__DNM_AUTH_AU_NZ_MYAUTHORITY_FULL.sql"
+    }
+  },
+  "processes" : {
+    "EXP_INIT" : {
+      "id" : "EXP_INIT",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "EXP_INIT",
+        "x" : 220,
+        "y" : 40,
+        "phase" : 1
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "USERID",
+            "_row_id" : null
+          },
+          "alias" : "USERID",
+          "description" : null,
+          "_row_id" : "dYGI4SGcaC65VCdmNZa0J"
+        }, {
+          "expression" : {
+            "expression" : "EMAILID",
+            "_row_id" : null
+          },
+          "alias" : "EMAILID",
+          "description" : null,
+          "_row_id" : "h8JSO6Xa1PwZ3EtJmd4R2"
+        }, {
+          "expression" : {
+            "expression" : "USERNAME",
+            "_row_id" : null
+          },
+          "alias" : "USERNAME",
+          "description" : null,
+          "_row_id" : "NKqK2yT5LLI_eEWKTUKkW"
+        }, {
+          "expression" : {
+            "expression" : "REGIONNAME",
+            "_row_id" : null
+          },
+          "alias" : "REGIONNAME",
+          "description" : null,
+          "_row_id" : "VFeOHFkx0lGTJIVx34EWi"
+        }, {
+          "expression" : {
+            "expression" : "COUNTRYNAME",
+            "_row_id" : null
+          },
+          "alias" : "COUNTRYNAME",
+          "description" : null,
+          "_row_id" : "EaqRP-DFarmczfP59yBIz"
+        }, {
+          "expression" : {
+            "expression" : "MYAUTHORITYCOUNTRY",
+            "_row_id" : null
+          },
+          "alias" : "MYAUTHORITYCOUNTRY",
+          "description" : null,
+          "_row_id" : "z54Usr61iPi8_Lq4vzbYN"
+        }, {
+          "expression" : {
+            "expression" : "ZURICHORG",
+            "_row_id" : null
+          },
+          "alias" : "ZURICHORG",
+          "description" : null,
+          "_row_id" : "mNrfOAnlCAPZZDq5heOlW"
+        }, {
+          "expression" : {
+            "expression" : "USERTYPE",
+            "_row_id" : null
+          },
+          "alias" : "USERTYPE",
+          "description" : null,
+          "_row_id" : "qAgu493H2zt60_S03DFZg"
+        }, {
+          "expression" : {
+            "expression" : "USERROLE",
+            "_row_id" : null
+          },
+          "alias" : "USERROLE",
+          "description" : null,
+          "_row_id" : "Pev15LF7Z57nfPSkPUlCs"
+        }, {
+          "expression" : {
+            "expression" : "MANAGER",
+            "_row_id" : null
+          },
+          "alias" : "MANAGER",
+          "description" : null,
+          "_row_id" : "KxfykumDQu03BJIvmcyuj"
+        }, {
+          "expression" : {
+            "expression" : "DEPARTMENT",
+            "_row_id" : null
+          },
+          "alias" : "DEPARTMENT",
+          "description" : null,
+          "_row_id" : "k700izqfKWBvQhM5ku6wo"
+        }, {
+          "expression" : {
+            "expression" : "TITLE",
+            "_row_id" : null
+          },
+          "alias" : "TITLE",
+          "description" : null,
+          "_row_id" : "pf5iQPONfGLt2gmPKt8Tl"
+        }, {
+          "expression" : {
+            "expression" : "ORGANIZATIONS",
+            "_row_id" : null
+          },
+          "alias" : "ORGANIZATIONS",
+          "description" : null,
+          "_row_id" : "MKJ0jBtyEQNjXleIxdvUF"
+        }, {
+          "expression" : {
+            "expression" : "ALLOWGRANTANDSIGNLOA",
+            "_row_id" : null
+          },
+          "alias" : "ALLOWGRANTANDSIGNLOA",
+          "description" : null,
+          "_row_id" : "C2gyB5NGq5eNYriUQigPd"
+        }, {
+          "expression" : {
+            "expression" : "STATUS",
+            "_row_id" : null
+          },
+          "alias" : "STATUS",
+          "description" : null,
+          "_row_id" : "CAbXdQa97DwJ1SC0eXZXE"
+        }, {
+          "expression" : {
+            "expression" : "STATUSLOG_UPDATEDDATE",
+            "_row_id" : null
+          },
+          "alias" : "STATUSLOG_UPDATEDDATE",
+          "description" : null,
+          "_row_id" : "lga9iUNijKgr0LDJFMIdp"
+        }, {
+          "expression" : {
+            "expression" : "LOAEFFECTIVEDATE",
+            "_row_id" : null
+          },
+          "alias" : "LOAEFFECTIVEDATE",
+          "description" : null,
+          "_row_id" : "YEeR2h_o_9Wq-Pl1xWVFZ"
+        }, {
+          "expression" : {
+            "expression" : "ACTION",
+            "_row_id" : null
+          },
+          "alias" : "ACTION",
+          "description" : null,
+          "_row_id" : "8u3ZgxsmpNPPtk7XR38vW"
+        }, {
+          "expression" : {
+            "expression" : "INACTIVE",
+            "_row_id" : null
+          },
+          "alias" : "INACTIVE",
+          "description" : null,
+          "_row_id" : "TV-2FBht5ZGZq23DEDyfY"
+        }, {
+          "expression" : {
+            "expression" : "ISREISSUED",
+            "_row_id" : null
+          },
+          "alias" : "ISREISSUED",
+          "description" : null,
+          "_row_id" : "GnqwBnSESN6jB6tHLUC4m"
+        }, {
+          "expression" : {
+            "expression" : "INREISSUEDFLOW",
+            "_row_id" : null
+          },
+          "alias" : "INREISSUEDFLOW",
+          "description" : null,
+          "_row_id" : "xGN3dWCSxOHNl3Mb4a8Uv"
+        }, {
+          "expression" : {
+            "expression" : "OLDLOAEFFECTIVEDATE",
+            "_row_id" : null
+          },
+          "alias" : "OLDLOAEFFECTIVEDATE",
+          "description" : null,
+          "_row_id" : "Fi0VZNPFHu6qQzHBenwMD"
+        }, {
+          "expression" : {
+            "expression" : "LOATERMINATEDEFFECTIVEDATE",
+            "_row_id" : null
+          },
+          "alias" : "LOATERMINATEDEFFECTIVEDATE",
+          "description" : null,
+          "_row_id" : "gdxQlJLcKKN8_p5Km8NOm"
+        }, {
+          "expression" : {
+            "expression" : "ALLVALUESIN",
+            "_row_id" : null
+          },
+          "alias" : "ALLVALUESIN",
+          "description" : null,
+          "_row_id" : "3riLTASLAGBAkLH7myd8f"
+        }, {
+          "expression" : {
+            "expression" : "LOBLIMITS_AUTOCONVERT",
+            "_row_id" : null
+          },
+          "alias" : "LOBLIMITS_AUTOCONVERT",
+          "description" : null,
+          "_row_id" : "60iBJ5Z_ALi4OtNkZJxq4"
+        }, {
+          "expression" : {
+            "expression" : "HIDEUSD",
+            "_row_id" : null
+          },
+          "alias" : "HIDEUSD",
+          "description" : null,
+          "_row_id" : "HqtxJIjUSKGC68Je61Ocd"
+        }, {
+          "expression" : {
+            "expression" : "ISBEHALFOFGRANTORSSIGNATORIES",
+            "_row_id" : null
+          },
+          "alias" : "ISBEHALFOFGRANTORSSIGNATORIES",
+          "description" : null,
+          "_row_id" : "kF9eYPGojuxt0zLG575lo"
+        }, {
+          "expression" : {
+            "expression" : "ACTIVEGRANTOR_EMAILID",
+            "_row_id" : null
+          },
+          "alias" : "ACTIVEGRANTOR_EMAILID",
+          "description" : null,
+          "_row_id" : "F9zp4fnk5VncPuCK8B2Ws"
+        }, {
+          "expression" : {
+            "expression" : "SELECTEDGRANTORFORLOA_MAILID",
+            "_row_id" : null
+          },
+          "alias" : "SELECTEDGRANTORFORLOA_MAILID",
+          "description" : null,
+          "_row_id" : "2SXCRBbBWdf50UrKz49Zk"
+        }, {
+          "expression" : {
+            "expression" : "ACTIVESIGNATOR_EMAILID",
+            "_row_id" : null
+          },
+          "alias" : "ACTIVESIGNATOR_EMAILID",
+          "description" : null,
+          "_row_id" : "YAykhaqcR6iS-_cmwvTVq"
+        }, {
+          "expression" : {
+            "expression" : "ACTIVESIGNATOR_APPROVALSTATUS",
+            "_row_id" : null
+          },
+          "alias" : "ACTIVESIGNATOR_APPROVALSTATUS",
+          "description" : null,
+          "_row_id" : "rhkPzdCFL-iJECQPzU8oS"
+        }, {
+          "expression" : {
+            "expression" : "SELECTEDSIGNATORFORLOA_EMAILID",
+            "_row_id" : null
+          },
+          "alias" : "SELECTEDSIGNATORFORLOA_EMAILID",
+          "description" : null,
+          "_row_id" : "USnN8H4qL5jxlwk32U-QJ"
+        }, {
+          "expression" : {
+            "expression" : "SELECTEDSIGNATORFORLOA_APPROVALSTATUS",
+            "_row_id" : null
+          },
+          "alias" : "SELECTEDSIGNATORFORLOA_APPROVALSTATUS",
+          "description" : null,
+          "_row_id" : "sFSIzjw0MoJMhzMjVMDC9"
+        }, {
+          "expression" : {
+            "expression" : "LOBLIMITS_LOBNAME",
+            "_row_id" : null
+          },
+          "alias" : "LOBLIMITS_LOBNAME",
+          "description" : null,
+          "_row_id" : "Q-qh0c-hzsBk2uminz6zT"
+        }, {
+          "expression" : {
+            "expression" : "LOBLIMITS_ACTION",
+            "_row_id" : null
+          },
+          "alias" : "LOBLIMITS_ACTION",
+          "description" : null,
+          "_row_id" : "c52oPW-ig9xhMsiUg7AUv"
+        }, {
+          "expression" : {
+            "expression" : "LOBLIMITS_ITEMLEVEL_TYPE",
+            "_row_id" : null
+          },
+          "alias" : "LOBLIMITS_ITEMLEVEL_TYPE",
+          "description" : null,
+          "_row_id" : "YpUtCPJPStynXuIOge9Xe"
+        }, {
+          "expression" : {
+            "expression" : "LOBLIMITS_ITEMLEVEL_ITEMNAME",
+            "_row_id" : null
+          },
+          "alias" : "LOBLIMITS_ITEMLEVEL_ITEMNAME",
+          "description" : null,
+          "_row_id" : "eXQDycw3UGhI3we1Q2Qv6"
+        }, {
+          "expression" : {
+            "expression" : "LOBLIMITS_ITEMLEVEL_LINEITEMS_NOLEVELS",
+            "_row_id" : null
+          },
+          "alias" : "LOBLIMITS_ITEMLEVEL_LINEITEMS_NOLEVELS",
+          "description" : null,
+          "_row_id" : "Dc-L2tBBFxK-lWcgzp-8U"
+        }, {
+          "expression" : {
+            "expression" : "LOBLIMITS_ITEMLEVEL_LINEITEMS_LEVELNAME",
+            "_row_id" : null
+          },
+          "alias" : "LOBLIMITS_ITEMLEVEL_LINEITEMS_LEVELNAME",
+          "description" : null,
+          "_row_id" : "jen8F0zuv9DqtI-t0yUy8"
+        }, {
+          "expression" : {
+            "expression" : "LOBLIMITS_ITEMLEVEL_LINEITEMS_CATEGORIES_FIELDNAME",
+            "_row_id" : null
+          },
+          "alias" : "LOBLIMITS_ITEMLEVEL_LINEITEMS_CATEGORIES_FIELDNAME",
+          "description" : null,
+          "_row_id" : "wtb13Xw1PEWg4Qx0LWxRL"
+        }, {
+          "expression" : {
+            "expression" : "LOBLIMITS_CONFIG_CATEGORIES_FIELDS_FIELDNAME",
+            "_row_id" : null
+          },
+          "alias" : "LOBLIMITS_CONFIG_CATEGORIES_FIELDS_FIELDNAME",
+          "description" : null,
+          "_row_id" : "FBsBDYSpqhFqNq23tEqjl"
+        }, {
+          "expression" : {
+            "expression" : "LOBLIMITS_CONFIG_CATEGORIES_FIELDS_COLUMNS_COLUMNNAME",
+            "_row_id" : null
+          },
+          "alias" : "LOBLIMITS_CONFIG_CATEGORIES_FIELDS_COLUMNS_COLUMNNAME",
+          "description" : null,
+          "_row_id" : "teiGfKMdGrlqu6RWjXMR2"
+        }, {
+          "expression" : {
+            "expression" : "LOBLIMITS_ITEMLEVEL_LINEITEMS_CATEGORIES_VALUES_VALUE",
+            "_row_id" : null
+          },
+          "alias" : "LOBLIMITS_ITEMLEVEL_LINEITEMS_CATEGORIES_VALUES_VALUE",
+          "description" : null,
+          "_row_id" : "kyJ7kj9w0vxQHYmoPVx56"
+        }, {
+          "expression" : {
+            "expression" : "LOBLIMITS_ITEMLEVEL_LINEITEMS_CATEGORIES_VALUES_COMMENTS",
+            "_row_id" : null
+          },
+          "alias" : "LOBLIMITS_ITEMLEVEL_LINEITEMS_CATEGORIES_VALUES_COMMENTS",
+          "description" : null,
+          "_row_id" : "GgtTW5LyPvr6k7fuEtlRA"
+        }, {
+          "expression" : {
+            "expression" : "FILE_NAME",
+            "_row_id" : null
+          },
+          "alias" : "FILE_NAME",
+          "description" : null,
+          "_row_id" : "E2dgB9dTNusXbBxJu_5z9"
+        }, {
+          "expression" : {
+            "expression" : "FILE_DATE",
+            "_row_id" : null
+          },
+          "alias" : "FILE_DATE",
+          "description" : null,
+          "_row_id" : "RmeK5QxXWmtrQkmtE2Ezt"
+        }, {
+          "expression" : {
+            "expression" : "'AUTHORITIES_MY_AUTHORITY_CLAIM_FULL'",
+            "_row_id" : null
+          },
+          "alias" : "CTL_SRC_SYS_SET_NAME",
+          "description" : null,
+          "_row_id" : "Xc3m10LXS0zan9FfNimwJ"
+        }, {
+          "expression" : {
+            "expression" : "(monotonically_increasing_id())",
+            "_row_id" : null
+          },
+          "alias" : "prophecy_sk",
+          "description" : null,
+          "_row_id" : "xio_OPuu39BmI2mdAySma"
+        }, {
+          "expression" : {
+            "expression" : "FILE_NAME",
+            "_row_id" : null
+          },
+          "alias" : "Input",
+          "description" : null,
+          "_row_id" : "j9yfe1ctv2meA6m2349kl"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "EXP_INIT_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "EXP_INIT_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "DNM_AUTH_AU_NZ_MYAUTHORITY_FULL" : {
+      "id" : "DNM_AUTH_AU_NZ_MYAUTHORITY_FULL",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "DNM_AUTH_AU_NZ_MYAUTHORITY_FULL",
+        "x" : 1020,
+        "y" : 40,
+        "phase" : 1
+      },
+      "properties" : {
+        "table" : {
+          "name" : "DNM_AUTH_AU_NZ_MYAUTHORITY_FULL",
+          "sourceType" : "Table",
+          "sourceName" : "transpiled_sources",
+          "alias" : ""
+        },
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "DNM_AUTH_AU_NZ_MYAUTHORITY_FULL_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "dcs0Em_5cZHNd_x7tyu8j",
+          "slug" : "out0"
+        } ]
+      }
+    },
+    "DNM_AUTH_AU_NZ_MYAUTHORITY_FULL_EXP" : {
+      "id" : "DNM_AUTH_AU_NZ_MYAUTHORITY_FULL_EXP",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "DNM_AUTH_AU_NZ_MYAUTHORITY_FULL_EXP",
+        "x" : 820,
+        "y" : 40,
+        "phase" : 1
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "USERID",
+            "_row_id" : null
+          },
+          "alias" : "USERID",
+          "description" : null,
+          "_row_id" : "zxtu9HtYMZMfI7FZLgewr"
+        }, {
+          "expression" : {
+            "expression" : "EMAILID",
+            "_row_id" : null
+          },
+          "alias" : "EMAILID",
+          "description" : null,
+          "_row_id" : "DM0s9fCFpEmQW47bP3KFf"
+        }, {
+          "expression" : {
+            "expression" : "USERNAME",
+            "_row_id" : null
+          },
+          "alias" : "USERNAME",
+          "description" : null,
+          "_row_id" : "nBZo4CvRDlAsA_4GckpEZ"
+        }, {
+          "expression" : {
+            "expression" : "REGIONNAME",
+            "_row_id" : null
+          },
+          "alias" : "REGIONNAME",
+          "description" : null,
+          "_row_id" : "33u5sGLM2U7PIgSes5e7b"
+        }, {
+          "expression" : {
+            "expression" : "COUNTRYNAME",
+            "_row_id" : null
+          },
+          "alias" : "COUNTRYNAME",
+          "description" : null,
+          "_row_id" : "-gS5pSCLcKwwwdhqQQ0P1"
+        }, {
+          "expression" : {
+            "expression" : "MYAUTHORITYCOUNTRY",
+            "_row_id" : null
+          },
+          "alias" : "MYAUTHORITYCOUNTRY",
+          "description" : null,
+          "_row_id" : "QfbHl_FemWULZTlFSopqT"
+        }, {
+          "expression" : {
+            "expression" : "ZURICHORG",
+            "_row_id" : null
+          },
+          "alias" : "ZURICHORG",
+          "description" : null,
+          "_row_id" : "9tTsLHi4rkyy8sHXtK4Pi"
+        }, {
+          "expression" : {
+            "expression" : "USERTYPE",
+            "_row_id" : null
+          },
+          "alias" : "USERTYPE",
+          "description" : null,
+          "_row_id" : "hOyno8QZcUGfHRN5jKRal"
+        }, {
+          "expression" : {
+            "expression" : "USERROLE",
+            "_row_id" : null
+          },
+          "alias" : "USERROLE",
+          "description" : null,
+          "_row_id" : "BFNNCQ67w79v6lDJMGd-f"
+        }, {
+          "expression" : {
+            "expression" : "MANAGER",
+            "_row_id" : null
+          },
+          "alias" : "MANAGER",
+          "description" : null,
+          "_row_id" : "yOmRBF6932TOFgbLR26KW"
+        }, {
+          "expression" : {
+            "expression" : "DEPARTMENT",
+            "_row_id" : null
+          },
+          "alias" : "DEPARTMENT",
+          "description" : null,
+          "_row_id" : "gFiJnuKIafKmEPZhlKu3I"
+        }, {
+          "expression" : {
+            "expression" : "TITLE",
+            "_row_id" : null
+          },
+          "alias" : "TITLE",
+          "description" : null,
+          "_row_id" : "K0BIdDkDGYcYzfJfbTWGj"
+        }, {
+          "expression" : {
+            "expression" : "ORGANIZATIONS",
+            "_row_id" : null
+          },
+          "alias" : "ORGANIZATIONS",
+          "description" : null,
+          "_row_id" : "0lPJoVgLD-Ll0Uuh1QbP3"
+        }, {
+          "expression" : {
+            "expression" : "ALLOWGRANTANDSIGNLOA",
+            "_row_id" : null
+          },
+          "alias" : "ALLOWGRANTANDSIGNLOA",
+          "description" : null,
+          "_row_id" : "nEn3R_dJ9YsGCZxpFqjse"
+        }, {
+          "expression" : {
+            "expression" : "STATUS",
+            "_row_id" : null
+          },
+          "alias" : "STATUS",
+          "description" : null,
+          "_row_id" : "fYH0jbdGZgHEX2S8Q0Hp2"
+        }, {
+          "expression" : {
+            "expression" : "STATUSLOG_UPDATEDDATE",
+            "_row_id" : null
+          },
+          "alias" : "STATUSLOG_UPDATEDDATE",
+          "description" : null,
+          "_row_id" : "7bw0zNndWQQ7S3uUCy9Ei"
+        }, {
+          "expression" : {
+            "expression" : "LOAEFFECTIVEDATE",
+            "_row_id" : null
+          },
+          "alias" : "LOAEFFECTIVEDATE",
+          "description" : null,
+          "_row_id" : "t8zkemnA3AQ2uJ2g5xy3x"
+        }, {
+          "expression" : {
+            "expression" : "ACTION",
+            "_row_id" : null
+          },
+          "alias" : "ACTION",
+          "description" : null,
+          "_row_id" : "W1tc-MRUYV3iMaviso8BY"
+        }, {
+          "expression" : {
+            "expression" : "INACTIVE",
+            "_row_id" : null
+          },
+          "alias" : "INACTIVE",
+          "description" : null,
+          "_row_id" : "JJAnlcJgG3WDXFcOUNWsY"
+        }, {
+          "expression" : {
+            "expression" : "ISREISSUED",
+            "_row_id" : null
+          },
+          "alias" : "ISREISSUED",
+          "description" : null,
+          "_row_id" : "Gcii5hiLcgaIDPruIHe9Y"
+        }, {
+          "expression" : {
+            "expression" : "INREISSUEDFLOW",
+            "_row_id" : null
+          },
+          "alias" : "INREISSUEDFLOW",
+          "description" : null,
+          "_row_id" : "4jElXrAm3CNEXLuvZ8pHk"
+        }, {
+          "expression" : {
+            "expression" : "OLDLOAEFFECTIVEDATE",
+            "_row_id" : null
+          },
+          "alias" : "OLDLOAEFFECTIVEDATE",
+          "description" : null,
+          "_row_id" : "QLudgQH9C1kaPiNb5KDtb"
+        }, {
+          "expression" : {
+            "expression" : "LOATERMINATEDEFFECTIVEDATE",
+            "_row_id" : null
+          },
+          "alias" : "LOATERMINATEDEFFECTIVEDATE",
+          "description" : null,
+          "_row_id" : "i53ALLAmmK9L07jQtZGwQ"
+        }, {
+          "expression" : {
+            "expression" : "ALLVALUESIN",
+            "_row_id" : null
+          },
+          "alias" : "ALLVALUESIN",
+          "description" : null,
+          "_row_id" : "fZ4KQyRaSAodKcGYnlLRy"
+        }, {
+          "expression" : {
+            "expression" : "LOBLIMITS_AUTOCONVERT",
+            "_row_id" : null
+          },
+          "alias" : "LOBLIMITS_AUTOCONVERT",
+          "description" : null,
+          "_row_id" : "h8zeozecPnSpJeOWm1BZF"
+        }, {
+          "expression" : {
+            "expression" : "HIDEUSD",
+            "_row_id" : null
+          },
+          "alias" : "HIDEUSD",
+          "description" : null,
+          "_row_id" : "CCOllQoDKpMWQ9thYzaFu"
+        }, {
+          "expression" : {
+            "expression" : "ISBEHALFOFGRANTORSSIGNATORIES",
+            "_row_id" : null
+          },
+          "alias" : "ISBEHALFOFGRANTORSSIGNATORIES",
+          "description" : null,
+          "_row_id" : "VLP7FqnXRybSyDp_M8Pm7"
+        }, {
+          "expression" : {
+            "expression" : "ACTIVEGRANTOR_EMAILID",
+            "_row_id" : null
+          },
+          "alias" : "ACTIVEGRANTOR_EMAILID",
+          "description" : null,
+          "_row_id" : "alRTBTwHi3uZmnBl1MGMv"
+        }, {
+          "expression" : {
+            "expression" : "SELECTEDGRANTORFORLOA_MAILID",
+            "_row_id" : null
+          },
+          "alias" : "SELECTEDGRANTORFORLOA_MAILID",
+          "description" : null,
+          "_row_id" : "Ax1SMOhE8KuCOHMJTJzLX"
+        }, {
+          "expression" : {
+            "expression" : "ACTIVESIGNATOR_EMAILID",
+            "_row_id" : null
+          },
+          "alias" : "ACTIVESIGNATOR_EMAILID",
+          "description" : null,
+          "_row_id" : "cCHVGjcEM6rbv9xKJ6IVx"
+        }, {
+          "expression" : {
+            "expression" : "ACTIVESIGNATOR_APPROVALSTATUS",
+            "_row_id" : null
+          },
+          "alias" : "ACTIVESIGNATOR_APPROVALSTATUS",
+          "description" : null,
+          "_row_id" : "9cFqCvBbfLZtYcyPegdOU"
+        }, {
+          "expression" : {
+            "expression" : "SELECTEDSIGNATORFORLOA_EMAILID",
+            "_row_id" : null
+          },
+          "alias" : "SELECTEDSIGNATORFORLOA_EMAILID",
+          "description" : null,
+          "_row_id" : "id_R4zPMNsUrJDg9jOYcV"
+        }, {
+          "expression" : {
+            "expression" : "SELECTEDSIGNATORFORLOA_APPROVALSTATUS",
+            "_row_id" : null
+          },
+          "alias" : "SELECTEDSIGNATORFORLOA_APPROVALSTATUS",
+          "description" : null,
+          "_row_id" : "07u5548yQ7eCIu0T5TDIt"
+        }, {
+          "expression" : {
+            "expression" : "LOBLIMITS_LOBNAME",
+            "_row_id" : null
+          },
+          "alias" : "LOBLIMITS_LOBNAME",
+          "description" : null,
+          "_row_id" : "DXOy-cBZAcYiFaUXusqS5"
+        }, {
+          "expression" : {
+            "expression" : "LOBLIMITS_ACTION",
+            "_row_id" : null
+          },
+          "alias" : "LOBLIMITS_ACTION",
+          "description" : null,
+          "_row_id" : "a9zBL5DTwruHtUwWS-8Hw"
+        }, {
+          "expression" : {
+            "expression" : "LOBLIMITS_ITEMLEVEL_TYPE",
+            "_row_id" : null
+          },
+          "alias" : "LOBLIMITS_ITEMLEVEL_TYPE",
+          "description" : null,
+          "_row_id" : "kEJnFDl6XcCnxv70KYeEm"
+        }, {
+          "expression" : {
+            "expression" : "LOBLIMITS_ITEMLEVEL_ITEMNAME",
+            "_row_id" : null
+          },
+          "alias" : "LOBLIMITS_ITEMLEVEL_ITEMNAME",
+          "description" : null,
+          "_row_id" : "7xGianwYdOYr6K5HgkGpX"
+        }, {
+          "expression" : {
+            "expression" : "LOBLIMITS_ITEMLEVEL_LINEITEMS_NOLEVELS",
+            "_row_id" : null
+          },
+          "alias" : "LOBLIMITS_ITEMLEVEL_LINEITEMS_NOLEVELS",
+          "description" : null,
+          "_row_id" : "mx6XEQ-xQ0T9IFU1WZJ05"
+        }, {
+          "expression" : {
+            "expression" : "LOBLIMITS_ITEMLEVEL_LINEITEMS_LEVELNAME",
+            "_row_id" : null
+          },
+          "alias" : "LOBLIMITS_ITEMLEVEL_LINEITEMS_LEVELNAME",
+          "description" : null,
+          "_row_id" : "0gqejfXL7OfOzFNjBtnF-"
+        }, {
+          "expression" : {
+            "expression" : "LOBLIMITS_ITEMLEVEL_LINEITEMS_CATEGORIES_FIELDNAME",
+            "_row_id" : null
+          },
+          "alias" : "LOBLIMITS_ITEMLEVEL_LINEITEMS_CATEGORIES_FIELDNAME",
+          "description" : null,
+          "_row_id" : "m1DL19rAhgVEK5zBkLyfw"
+        }, {
+          "expression" : {
+            "expression" : "LOBLIMITS_CONFIG_CATEGORIES_FIELDS_FIELDNAME",
+            "_row_id" : null
+          },
+          "alias" : "LOBLIMITS_CONFIG_CATEGORIES_FIELDS_FIELDNAME",
+          "description" : null,
+          "_row_id" : "0kfDhaNmqZ1Il6VtzS8Xr"
+        }, {
+          "expression" : {
+            "expression" : "LOBLIMITS_CONFIG_CATEGORIES_FIELDS_COLUMNS_COLUMNNAME",
+            "_row_id" : null
+          },
+          "alias" : "LOBLIMITS_CONFIG_CATEGORIES_FIELDS_COLUMNS_COLUMNNAME",
+          "description" : null,
+          "_row_id" : "XxWJZpM5_sXUNjT9Bc1XD"
+        }, {
+          "expression" : {
+            "expression" : "LOBLIMITS_ITEMLEVEL_LINEITEMS_CATEGORIES_VALUES_VALUE",
+            "_row_id" : null
+          },
+          "alias" : "LOBLIMITS_ITEMLEVEL_LINEITEMS_CATEGORIES_VALUES_VALUE",
+          "description" : null,
+          "_row_id" : "lXbFo2dB0n1LeUEsK-idD"
+        }, {
+          "expression" : {
+            "expression" : "LOBLIMITS_ITEMLEVEL_LINEITEMS_CATEGORIES_VALUES_COMMENTS",
+            "_row_id" : null
+          },
+          "alias" : "LOBLIMITS_ITEMLEVEL_LINEITEMS_CATEGORIES_VALUES_COMMENTS",
+          "description" : null,
+          "_row_id" : "XdhO6JYTSFQKr66FlbAmJ"
+        }, {
+          "expression" : {
+            "expression" : "FILE_NAME",
+            "_row_id" : null
+          },
+          "alias" : "FILE_NAME",
+          "description" : null,
+          "_row_id" : "FRB2QvSEyHqYISTRv6YPu"
+        }, {
+          "expression" : {
+            "expression" : "FILE_DATE",
+            "_row_id" : null
+          },
+          "alias" : "FILE_DATE",
+          "description" : null,
+          "_row_id" : "SHs25fKif99WzGb0i5Wzj"
+        }, {
+          "expression" : {
+            "expression" : "CTL_REC_INSERT_DATE",
+            "_row_id" : null
+          },
+          "alias" : "CTL_REC_INSERT_DATE",
+          "description" : null,
+          "_row_id" : "LUHpMmt6_T761jSYHnGvy"
+        }, {
+          "expression" : {
+            "expression" : "CAST(NULL AS string)",
+            "_row_id" : null
+          },
+          "alias" : "CTL_REC_UPDATE_DATE",
+          "description" : null,
+          "_row_id" : "hhMU8x9fmLtIjpM1SRnKl"
+        }, {
+          "expression" : {
+            "expression" : "CTL_SRC_SYS_SET_NAME",
+            "_row_id" : null
+          },
+          "alias" : "CTL_SRC_SYS_SET_NAME",
+          "description" : null,
+          "_row_id" : "bh-PdhdSqiANSJpMhLPyd"
+        }, {
+          "expression" : {
+            "expression" : "CTL_ACTIVE_STATUS",
+            "_row_id" : null
+          },
+          "alias" : "CTL_ACTIVE_STATUS",
+          "description" : null,
+          "_row_id" : "m8J4S6Z_jZvfvlvmClx2H"
+        }, {
+          "expression" : {
+            "expression" : "prophecy_sk",
+            "_row_id" : null
+          },
+          "alias" : "prophecy_sk",
+          "description" : null,
+          "_row_id" : "_enUk1OIA2hWrS_qRTx62"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "DNM_AUTH_AU_NZ_MYAUTHORITY_FULL_EXP_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "DNM_AUTH_AU_NZ_MYAUTHORITY_FULL_EXP_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "SRC_AUTH_AU_NZ_MYAUTHORITY_FULL" : {
+      "id" : "SRC_AUTH_AU_NZ_MYAUTHORITY_FULL",
+      "component" : "OrchestrationSource",
+      "kind" : "OracleSource",
+      "metadata" : {
+        "label" : "30_MDL_AUTHORITIESmp_myauthorities_stg_mdl_dnm_AU_NZ_MyAuthority_Full_2_SRC_AUTH_AU_NZ_MYAUTHORITY_FULL",
+        "x" : 20,
+        "y" : 40,
+        "phase" : 1
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "oracle",
+          "id" : "transpiled_connection",
+          "properties" : {
+            "database" : "dbName",
+            "server" : "$$jdbcUrl",
+            "username" : "$$username",
+            "id" : "transpiled_connection",
+            "port" : "1521",
+            "password" : {
+              "kind" : "prophecy",
+              "properties" : {
+                "name" : "transpiled_secret",
+                "value" : "transpiled_secret"
+              },
+              "subKind" : "text",
+              "type" : "secret"
+            }
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "pathSelection" : "tableFullName",
+          "tableFullName" : {
+            "schema" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "config",
+                  "properties" : {
+                    "kind" : "prophecy",
+                    "name" : "SCHEMA"
+                  }
+                } ]
+              }
+            },
+            "name" : "EBIDBD"
+          },
+          "warehouseQuery" : {
+            "query" : ""
+          }
+        },
+        "format" : {
+          "kind" : "oracle",
+          "category" : "table",
+          "properties" : {
+            "kind" : "oracle",
+            "schema" : {
+              "entityType" : "",
+              "providerType" : "Databricks",
+              "fields" : [ {
+                "name" : "LOBLIMITS_AUTOCONVERT",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "LOBLIMITS_ITEMLEVEL_LINEITEMS_CATEGORIES_FIELDNAME",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "LOATERMINATEDEFFECTIVEDATE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "LOBLIMITS_CONFIG_CATEGORIES_FIELDS_COLUMNS_COLUMNNAME",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "FILE_DATE",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "LOBLIMITS_ITEMLEVEL_LINEITEMS_CATEGORIES_VALUES_COMMENTS",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "COUNTRYNAME",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "LOBLIMITS_ITEMLEVEL_TYPE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "REGIONNAME",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "INREISSUEDFLOW",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "LOBLIMITS_ACTION",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "FILE_NAME",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "ACTIVESIGNATOR_APPROVALSTATUS",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "LOBLIMITS_LOBNAME",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "STATUS",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "ACTION",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "USERROLE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "ORGANIZATIONS",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "LOBLIMITS_ITEMLEVEL_LINEITEMS_LEVELNAME",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "TITLE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "USERID",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "ALLVALUESIN",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "ISBEHALFOFGRANTORSSIGNATORIES",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "OLDLOAEFFECTIVEDATE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "HIDEUSD",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "ISREISSUED",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "USERTYPE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "LOBLIMITS_ITEMLEVEL_LINEITEMS_CATEGORIES_VALUES_VALUE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "ALLOWGRANTANDSIGNLOA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "SELECTEDGRANTORFORLOA_MAILID",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "ZURICHORG",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "LOAEFFECTIVEDATE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "LOBLIMITS_ITEMLEVEL_ITEMNAME",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "LOBLIMITS_CONFIG_CATEGORIES_FIELDS_FIELDNAME",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "MYAUTHORITYCOUNTRY",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "STATUSLOG_UPDATEDDATE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "ACTIVEGRANTOR_EMAILID",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "SELECTEDSIGNATORFORLOA_EMAILID",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "USERNAME",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "ACTIVESIGNATOR_EMAILID",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EMAILID",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "MANAGER",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "DEPARTMENT",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "LOBLIMITS_ITEMLEVEL_LINEITEMS_NOLEVELS",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "INACTIVE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "SELECTEDSIGNATORFORLOA_APPROVALSTATUS",
+                "dataType" : {
+                  "type" : "String"
+                }
+              } ]
+            }
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "SRC_AUTH_AU_NZ_MYAUTHORITY_FULL_out0",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "LOBLIMITS_AUTOCONVERT",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LOBLIMITS_ITEMLEVEL_LINEITEMS_CATEGORIES_FIELDNAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LOATERMINATEDEFFECTIVEDATE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LOBLIMITS_CONFIG_CATEGORIES_FIELDS_COLUMNS_COLUMNNAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "FILE_DATE",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "LOBLIMITS_ITEMLEVEL_LINEITEMS_CATEGORIES_VALUES_COMMENTS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "COUNTRYNAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LOBLIMITS_ITEMLEVEL_TYPE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "REGIONNAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "INREISSUEDFLOW",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LOBLIMITS_ACTION",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "FILE_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ACTIVESIGNATOR_APPROVALSTATUS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LOBLIMITS_LOBNAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "STATUS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ACTION",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "USERROLE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ORGANIZATIONS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LOBLIMITS_ITEMLEVEL_LINEITEMS_LEVELNAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "TITLE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "USERID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ALLVALUESIN",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ISBEHALFOFGRANTORSSIGNATORIES",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "OLDLOAEFFECTIVEDATE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "HIDEUSD",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ISREISSUED",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "USERTYPE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LOBLIMITS_ITEMLEVEL_LINEITEMS_CATEGORIES_VALUES_VALUE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ALLOWGRANTANDSIGNLOA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "SELECTEDGRANTORFORLOA_MAILID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ZURICHORG",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LOAEFFECTIVEDATE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LOBLIMITS_ITEMLEVEL_ITEMNAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LOBLIMITS_CONFIG_CATEGORIES_FIELDS_FIELDNAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "MYAUTHORITYCOUNTRY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "STATUSLOG_UPDATEDDATE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ACTIVEGRANTOR_EMAILID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "SELECTEDSIGNATORFORLOA_EMAILID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "USERNAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ACTIVESIGNATOR_EMAILID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EMAILID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "MANAGER",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "DEPARTMENT",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LOBLIMITS_ITEMLEVEL_LINEITEMS_NOLEVELS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "INACTIVE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "SELECTEDSIGNATORFORLOA_APPROVALSTATUS",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : true
+      }
+    },
+    "DNM_AUTH_AU_NZ_MYAUTHORITY_FULL_EXP_JOIN" : {
+      "id" : "DNM_AUTH_AU_NZ_MYAUTHORITY_FULL_EXP_JOIN",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "DNM_AUTH_AU_NZ_MYAUTHORITY_FULL_EXP_JOIN",
+        "x" : 620,
+        "y" : 40,
+        "phase" : 1
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "expression" : "(in0.prophecy_sk = in1.prophecy_sk)",
+            "_row_id" : null
+          },
+          "joinType" : "inner",
+          "rightAlias" : null
+        } ],
+        "allowSelection" : false,
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "in1.ISBEHALFOFGRANTORSSIGNATORIES",
+            "_row_id" : null
+          },
+          "alias" : "ISBEHALFOFGRANTORSSIGNATORIES",
+          "description" : null,
+          "_row_id" : "jRQ59z0ALkO526beCtfe2"
+        }, {
+          "expression" : {
+            "expression" : "in1.ISREISSUED",
+            "_row_id" : null
+          },
+          "alias" : "ISREISSUED",
+          "description" : null,
+          "_row_id" : "X9COqD_wlMv9ayj1oXNWu"
+        }, {
+          "expression" : {
+            "expression" : "in1.ZURICHORG",
+            "_row_id" : null
+          },
+          "alias" : "ZURICHORG",
+          "description" : null,
+          "_row_id" : "6yZTk052Hjel_BBRWFtTB"
+        }, {
+          "expression" : {
+            "expression" : "in1.LOBLIMITS_CONFIG_CATEGORIES_FIELDS_COLUMNS_COLUMNNAME",
+            "_row_id" : null
+          },
+          "alias" : "LOBLIMITS_CONFIG_CATEGORIES_FIELDS_COLUMNS_COLUMNNAME",
+          "description" : null,
+          "_row_id" : "9YCuppuarL2nfQoNvuIQH"
+        }, {
+          "expression" : {
+            "expression" : "in1.LOBLIMITS_ACTION",
+            "_row_id" : null
+          },
+          "alias" : "LOBLIMITS_ACTION",
+          "description" : null,
+          "_row_id" : "SoxWrj5ZYmiPbxEenTwFp"
+        }, {
+          "expression" : {
+            "expression" : "in1.FILE_NAME",
+            "_row_id" : null
+          },
+          "alias" : "FILE_NAME",
+          "description" : null,
+          "_row_id" : "JniyhfWMX5OC_MFcZZ9zL"
+        }, {
+          "expression" : {
+            "expression" : "in1.CTL_SRC_SYS_SET_NAME",
+            "_row_id" : null
+          },
+          "alias" : "CTL_SRC_SYS_SET_NAME",
+          "description" : null,
+          "_row_id" : "hRTFF8iw5-HAhNRoW68kP"
+        }, {
+          "expression" : {
+            "expression" : "in1.USERROLE",
+            "_row_id" : null
+          },
+          "alias" : "USERROLE",
+          "description" : null,
+          "_row_id" : "MGNFCwzYuiJWbmQ0XXdgg"
+        }, {
+          "expression" : {
+            "expression" : "in1.USERNAME",
+            "_row_id" : null
+          },
+          "alias" : "USERNAME",
+          "description" : null,
+          "_row_id" : "LQ9KNOgWS-oEHjAELhDjt"
+        }, {
+          "expression" : {
+            "expression" : "in1.ACTIVEGRANTOR_EMAILID",
+            "_row_id" : null
+          },
+          "alias" : "ACTIVEGRANTOR_EMAILID",
+          "description" : null,
+          "_row_id" : "rzhg7OWv7QkTUM-cm1ww5"
+        }, {
+          "expression" : {
+            "expression" : "in1.LOBLIMITS_ITEMLEVEL_TYPE",
+            "_row_id" : null
+          },
+          "alias" : "LOBLIMITS_ITEMLEVEL_TYPE",
+          "description" : null,
+          "_row_id" : "Z-mGXd-uqAn8fvmd4waoD"
+        }, {
+          "expression" : {
+            "expression" : "in1.EMAILID",
+            "_row_id" : null
+          },
+          "alias" : "EMAILID",
+          "description" : null,
+          "_row_id" : "kXrIpG70jW_yfeQW_RsvJ"
+        }, {
+          "expression" : {
+            "expression" : "in1.STATUSLOG_UPDATEDDATE",
+            "_row_id" : null
+          },
+          "alias" : "STATUSLOG_UPDATEDDATE",
+          "description" : null,
+          "_row_id" : "dyaSOMW8mNtFb-g756Eif"
+        }, {
+          "expression" : {
+            "expression" : "in1.LOBLIMITS_ITEMLEVEL_LINEITEMS_NOLEVELS",
+            "_row_id" : null
+          },
+          "alias" : "LOBLIMITS_ITEMLEVEL_LINEITEMS_NOLEVELS",
+          "description" : null,
+          "_row_id" : "-jWL_7NNCHYsXlUDWAU81"
+        }, {
+          "expression" : {
+            "expression" : "in1.INREISSUEDFLOW",
+            "_row_id" : null
+          },
+          "alias" : "INREISSUEDFLOW",
+          "description" : null,
+          "_row_id" : "wLvIc4lCD0CsTwFoR2znP"
+        }, {
+          "expression" : {
+            "expression" : "in1.LOBLIMITS_ITEMLEVEL_ITEMNAME",
+            "_row_id" : null
+          },
+          "alias" : "LOBLIMITS_ITEMLEVEL_ITEMNAME",
+          "description" : null,
+          "_row_id" : "skKmUYRTPScC9t8878-yZ"
+        }, {
+          "expression" : {
+            "expression" : "in1.USERID",
+            "_row_id" : null
+          },
+          "alias" : "USERID",
+          "description" : null,
+          "_row_id" : "MQ7Ev_71Eefk9K_ll3m96"
+        }, {
+          "expression" : {
+            "expression" : "in1.SELECTEDGRANTORFORLOA_MAILID",
+            "_row_id" : null
+          },
+          "alias" : "SELECTEDGRANTORFORLOA_MAILID",
+          "description" : null,
+          "_row_id" : "N1heMoGz2wt9kIO4zG9AQ"
+        }, {
+          "expression" : {
+            "expression" : "in1.LOATERMINATEDEFFECTIVEDATE",
+            "_row_id" : null
+          },
+          "alias" : "LOATERMINATEDEFFECTIVEDATE",
+          "description" : null,
+          "_row_id" : "Qkmgz5BStUYvQaIc4JrSP"
+        }, {
+          "expression" : {
+            "expression" : "in1.HIDEUSD",
+            "_row_id" : null
+          },
+          "alias" : "HIDEUSD",
+          "description" : null,
+          "_row_id" : "XUy1DSTNEKZXCciNBDCdG"
+        }, {
+          "expression" : {
+            "expression" : "in0.CTL_REC_INSERT_DATE",
+            "_row_id" : null
+          },
+          "alias" : "CTL_REC_INSERT_DATE",
+          "description" : null,
+          "_row_id" : "-haRP0uAvwPXSQu4RHm-v"
+        }, {
+          "expression" : {
+            "expression" : "in1.SELECTEDSIGNATORFORLOA_APPROVALSTATUS",
+            "_row_id" : null
+          },
+          "alias" : "SELECTEDSIGNATORFORLOA_APPROVALSTATUS",
+          "description" : null,
+          "_row_id" : "drctCxTz3kvylzDZkbGpL"
+        }, {
+          "expression" : {
+            "expression" : "in1.DEPARTMENT",
+            "_row_id" : null
+          },
+          "alias" : "DEPARTMENT",
+          "description" : null,
+          "_row_id" : "Eb6BaZYsngzn1rYEjGnSF"
+        }, {
+          "expression" : {
+            "expression" : "in1.ACTIVESIGNATOR_EMAILID",
+            "_row_id" : null
+          },
+          "alias" : "ACTIVESIGNATOR_EMAILID",
+          "description" : null,
+          "_row_id" : "OOqbr8PNT-0KDapHo5oT4"
+        }, {
+          "expression" : {
+            "expression" : "in1.USERTYPE",
+            "_row_id" : null
+          },
+          "alias" : "USERTYPE",
+          "description" : null,
+          "_row_id" : "pSdgcbPnGcvhxiOl8JiBn"
+        }, {
+          "expression" : {
+            "expression" : "in1.FILE_DATE",
+            "_row_id" : null
+          },
+          "alias" : "FILE_DATE",
+          "description" : null,
+          "_row_id" : "o4gHdMiJgsmg2BTWY4Xyt"
+        }, {
+          "expression" : {
+            "expression" : "in1.COUNTRYNAME",
+            "_row_id" : null
+          },
+          "alias" : "COUNTRYNAME",
+          "description" : null,
+          "_row_id" : "VinkpImdbAbbeqEu2Zj69"
+        }, {
+          "expression" : {
+            "expression" : "in1.LOBLIMITS_ITEMLEVEL_LINEITEMS_CATEGORIES_VALUES_COMMENTS",
+            "_row_id" : null
+          },
+          "alias" : "LOBLIMITS_ITEMLEVEL_LINEITEMS_CATEGORIES_VALUES_COMMENTS",
+          "description" : null,
+          "_row_id" : "ikqzerXgwO-AO4SOovUiS"
+        }, {
+          "expression" : {
+            "expression" : "in1.LOBLIMITS_AUTOCONVERT",
+            "_row_id" : null
+          },
+          "alias" : "LOBLIMITS_AUTOCONVERT",
+          "description" : null,
+          "_row_id" : "btL292IF6NRZjugcNokeR"
+        }, {
+          "expression" : {
+            "expression" : "in1.LOBLIMITS_ITEMLEVEL_LINEITEMS_CATEGORIES_VALUES_VALUE",
+            "_row_id" : null
+          },
+          "alias" : "LOBLIMITS_ITEMLEVEL_LINEITEMS_CATEGORIES_VALUES_VALUE",
+          "description" : null,
+          "_row_id" : "ATaZbdvGrOkdaDAMrDeSk"
+        }, {
+          "expression" : {
+            "expression" : "in1.MANAGER",
+            "_row_id" : null
+          },
+          "alias" : "MANAGER",
+          "description" : null,
+          "_row_id" : "0jO-PL1M4QSGAR5X6R9nS"
+        }, {
+          "expression" : {
+            "expression" : "in1.STATUS",
+            "_row_id" : null
+          },
+          "alias" : "STATUS",
+          "description" : null,
+          "_row_id" : "4iVTQGxU3U_KHlUkl6F-R"
+        }, {
+          "expression" : {
+            "expression" : "in0.prophecy_sk",
+            "_row_id" : null
+          },
+          "alias" : "prophecy_sk",
+          "description" : null,
+          "_row_id" : "3WhNP3DtmNVdsFds9kDNJ"
+        }, {
+          "expression" : {
+            "expression" : "in1.MYAUTHORITYCOUNTRY",
+            "_row_id" : null
+          },
+          "alias" : "MYAUTHORITYCOUNTRY",
+          "description" : null,
+          "_row_id" : "NIXLe-hutj48UTcVB0XQF"
+        }, {
+          "expression" : {
+            "expression" : "in1.ACTIVESIGNATOR_APPROVALSTATUS",
+            "_row_id" : null
+          },
+          "alias" : "ACTIVESIGNATOR_APPROVALSTATUS",
+          "description" : null,
+          "_row_id" : "dGnsfEtHfxS-5XZPVWpUc"
+        }, {
+          "expression" : {
+            "expression" : "in1.INACTIVE",
+            "_row_id" : null
+          },
+          "alias" : "INACTIVE",
+          "description" : null,
+          "_row_id" : "bY7yI_hg5fNA2e6J_CGZV"
+        }, {
+          "expression" : {
+            "expression" : "in1.REGIONNAME",
+            "_row_id" : null
+          },
+          "alias" : "REGIONNAME",
+          "description" : null,
+          "_row_id" : "4_bqx813NjFHe_wVjULB2"
+        }, {
+          "expression" : {
+            "expression" : "in1.LOBLIMITS_CONFIG_CATEGORIES_FIELDS_FIELDNAME",
+            "_row_id" : null
+          },
+          "alias" : "LOBLIMITS_CONFIG_CATEGORIES_FIELDS_FIELDNAME",
+          "description" : null,
+          "_row_id" : "m5WXB7FsvR1fGo1qAKWe4"
+        }, {
+          "expression" : {
+            "expression" : "in1.OLDLOAEFFECTIVEDATE",
+            "_row_id" : null
+          },
+          "alias" : "OLDLOAEFFECTIVEDATE",
+          "description" : null,
+          "_row_id" : "QlS-VZrlQoQInu0UPIONw"
+        }, {
+          "expression" : {
+            "expression" : "in1.LOAEFFECTIVEDATE",
+            "_row_id" : null
+          },
+          "alias" : "LOAEFFECTIVEDATE",
+          "description" : null,
+          "_row_id" : "as9OWYjtPP2_eWSh6kImM"
+        }, {
+          "expression" : {
+            "expression" : "in1.TITLE",
+            "_row_id" : null
+          },
+          "alias" : "TITLE",
+          "description" : null,
+          "_row_id" : "roO7mk8jWV4g7tVsLWv2H"
+        }, {
+          "expression" : {
+            "expression" : "in1.LOBLIMITS_ITEMLEVEL_LINEITEMS_CATEGORIES_FIELDNAME",
+            "_row_id" : null
+          },
+          "alias" : "LOBLIMITS_ITEMLEVEL_LINEITEMS_CATEGORIES_FIELDNAME",
+          "description" : null,
+          "_row_id" : "wazRixpxWewW1nroyKQjP"
+        }, {
+          "expression" : {
+            "expression" : "in1.LOBLIMITS_LOBNAME",
+            "_row_id" : null
+          },
+          "alias" : "LOBLIMITS_LOBNAME",
+          "description" : null,
+          "_row_id" : "C6vBpOozDAOK2sUtpAzm4"
+        }, {
+          "expression" : {
+            "expression" : "in1.LOBLIMITS_ITEMLEVEL_LINEITEMS_LEVELNAME",
+            "_row_id" : null
+          },
+          "alias" : "LOBLIMITS_ITEMLEVEL_LINEITEMS_LEVELNAME",
+          "description" : null,
+          "_row_id" : "2P-TRZG8C1qeqPmdzJl0N"
+        }, {
+          "expression" : {
+            "expression" : "in1.ORGANIZATIONS",
+            "_row_id" : null
+          },
+          "alias" : "ORGANIZATIONS",
+          "description" : null,
+          "_row_id" : "hEL0Jv8CRiUiQo4wdjnOV"
+        }, {
+          "expression" : {
+            "expression" : "in1.SELECTEDSIGNATORFORLOA_EMAILID",
+            "_row_id" : null
+          },
+          "alias" : "SELECTEDSIGNATORFORLOA_EMAILID",
+          "description" : null,
+          "_row_id" : "WNh9wypKxVXlp7Sb7kDl3"
+        }, {
+          "expression" : {
+            "expression" : "in0.CTL_ACTIVE_STATUS",
+            "_row_id" : null
+          },
+          "alias" : "CTL_ACTIVE_STATUS",
+          "description" : null,
+          "_row_id" : "33JPQKmm-glHnOIURInde"
+        }, {
+          "expression" : {
+            "expression" : "in1.ACTION",
+            "_row_id" : null
+          },
+          "alias" : "ACTION",
+          "description" : null,
+          "_row_id" : "uES0YAwqDGGEZbGvoXe3K"
+        }, {
+          "expression" : {
+            "expression" : "in1.Input",
+            "_row_id" : null
+          },
+          "alias" : "Input",
+          "description" : null,
+          "_row_id" : "yqxXTvfxnczlk-1tAMkSU"
+        }, {
+          "expression" : {
+            "expression" : "in1.ALLOWGRANTANDSIGNLOA",
+            "_row_id" : null
+          },
+          "alias" : "ALLOWGRANTANDSIGNLOA",
+          "description" : null,
+          "_row_id" : "e29CN1SntO9IXGXO-3u5c"
+        }, {
+          "expression" : {
+            "expression" : "in1.ALLVALUESIN",
+            "_row_id" : null
+          },
+          "alias" : "ALLVALUESIN",
+          "description" : null,
+          "_row_id" : "Ki8LNqXoCfI-P4ST63iWq"
+        } ],
+        "activeTab" : "conditions",
+        "columnsSelector" : [ ],
+        "headAlias" : "in0"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "DNM_AUTH_AU_NZ_MYAUTHORITY_FULL_EXP_JOIN_in0",
+          "slug" : "in0"
+        }, {
+          "id" : "DNM_AUTH_AU_NZ_MYAUTHORITY_FULL_EXP_JOIN_in1",
+          "slug" : "in1"
+        } ],
+        "outputs" : [ {
+          "id" : "DNM_AUTH_AU_NZ_MYAUTHORITY_FULL_EXP_JOIN_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "EXP_AUTH_AUDIT_COLUMNS" : {
+      "id" : "EXP_AUTH_AUDIT_COLUMNS",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "EXP_AUTH_AUDIT_COLUMNS",
+        "x" : 420,
+        "y" : 20,
+        "phase" : 1
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "CURRENT_TIMESTAMP",
+            "_row_id" : null
+          },
+          "alias" : "CTL_REC_INSERT_DATE",
+          "description" : null,
+          "_row_id" : "Ox-1JAzgkBv5MOfZQK_0J"
+        }, {
+          "expression" : {
+            "expression" : "'Y'",
+            "_row_id" : null
+          },
+          "alias" : "CTL_ACTIVE_STATUS",
+          "description" : null,
+          "_row_id" : "IlNEA8pevCYdXyIgA-eVj"
+        }, {
+          "expression" : {
+            "expression" : "prophecy_sk",
+            "_row_id" : null
+          },
+          "alias" : "prophecy_sk",
+          "description" : null,
+          "_row_id" : "G2IjrEN6p0wuhz-zvtnib"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "EXP_AUTH_AUDIT_COLUMNS_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "EXP_AUTH_AUDIT_COLUMNS_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "edge_696",
+    "source" : "DNM_AUTH_AU_NZ_MYAUTHORITY_FULL_EXP_JOIN",
+    "sourcePort" : "DNM_AUTH_AU_NZ_MYAUTHORITY_FULL_EXP_JOIN_out0",
+    "target" : "DNM_AUTH_AU_NZ_MYAUTHORITY_FULL_EXP",
+    "targetPort" : "DNM_AUTH_AU_NZ_MYAUTHORITY_FULL_EXP_in0"
+  }, {
+    "id" : "edge_697",
+    "source" : "DNM_AUTH_AU_NZ_MYAUTHORITY_FULL_EXP",
+    "sourcePort" : "DNM_AUTH_AU_NZ_MYAUTHORITY_FULL_EXP_out0",
+    "target" : "DNM_AUTH_AU_NZ_MYAUTHORITY_FULL",
+    "targetPort" : "DNM_AUTH_AU_NZ_MYAUTHORITY_FULL_in0"
+  }, {
+    "id" : "edge_698",
+    "source" : "EXP_AUTH_AUDIT_COLUMNS",
+    "sourcePort" : "EXP_AUTH_AUDIT_COLUMNS_out0",
+    "target" : "DNM_AUTH_AU_NZ_MYAUTHORITY_FULL_EXP_JOIN",
+    "targetPort" : "DNM_AUTH_AU_NZ_MYAUTHORITY_FULL_EXP_JOIN_in0"
+  }, {
+    "id" : "edge_699",
+    "source" : "EXP_INIT",
+    "sourcePort" : "EXP_INIT_out0",
+    "target" : "EXP_AUTH_AUDIT_COLUMNS",
+    "targetPort" : "EXP_AUTH_AUDIT_COLUMNS_in0"
+  }, {
+    "id" : "edge_700",
+    "source" : "EXP_INIT",
+    "sourcePort" : "EXP_INIT_out0",
+    "target" : "DNM_AUTH_AU_NZ_MYAUTHORITY_FULL_EXP_JOIN",
+    "targetPort" : "DNM_AUTH_AU_NZ_MYAUTHORITY_FULL_EXP_JOIN_in1"
+  }, {
+    "id" : "edge_701",
+    "source" : "SRC_AUTH_AU_NZ_MYAUTHORITY_FULL",
+    "sourcePort" : "SRC_AUTH_AU_NZ_MYAUTHORITY_FULL_out0",
+    "target" : "EXP_INIT",
+    "targetPort" : "EXP_INIT_in0"
+  } ],
+  "component" : "Pipeline"
+}

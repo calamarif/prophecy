@@ -1,0 +1,2457 @@
+{
+  "id" : "35_SDM_mp_mdl_sdm_Dim_GI_Translation",
+  "metainfo" : {
+    "label" : "35_SDM_mp_mdl_sdm_Dim_GI_Translation",
+    "autoLayout" : false,
+    "version" : 1,
+    "configuration" : {
+      "schema" : {
+        "type" : "record",
+        "fields" : [ {
+          "name" : "jdbcUrl",
+          "kind" : {
+            "type" : "string",
+            "value" : "''"
+          }
+        }, {
+          "name" : "username",
+          "kind" : {
+            "type" : "string",
+            "value" : "''"
+          }
+        }, {
+          "name" : "password",
+          "kind" : {
+            "type" : "string",
+            "value" : "''"
+          }
+        }, {
+          "name" : "SCHEMA",
+          "kind" : {
+            "type" : "string",
+            "value" : "'SCHEMA'"
+          }
+        } ]
+      }
+    },
+    "isTranspiledPipeline" : false,
+    "publishDiagnosticMetrics" : true,
+    "transpilerType" : "informatica",
+    "processesVsModelFiles" : {
+      "35_SDMmp_mdl_sdm_Dim_GI_Translation_SQ_sh_DIM_CLAIM_SK_SQ_sh_DIM_CLAIM_SK_out0" : "models/35_SDM_mp_mdl_sdm_Dim_GI_Translation/35_SDM_mp_mdl_sdm_Dim_GI_Translation__sh_DIM_GI_TRANSLATION.sql",
+      "35_SDMmp_mdl_sdm_Dim_GI_Translation_SQ_sh_DIM_GI_POLICY_RISK_SK_SQ_sh_DIM_GI_POLICY_RISK_SK_out0" : "models/35_SDM_mp_mdl_sdm_Dim_GI_Translation/35_SDM_mp_mdl_sdm_Dim_GI_Translation__sh_DIM_GI_TRANSLATION.sql",
+      "UNI_Trans_Type_EXPR_CLAIM_ID" : "models/35_SDM_mp_mdl_sdm_Dim_GI_Translation/35_SDM_mp_mdl_sdm_Dim_GI_Translation__sh_DIM_GI_TRANSLATION.sql",
+      "sh_DIM_GI_TRANSLATION" : "models/35_SDM_mp_mdl_sdm_Dim_GI_Translation/35_SDM_mp_mdl_sdm_Dim_GI_Translation__sh_DIM_GI_TRANSLATION.sql",
+      "35_SDMmp_mdl_sdm_Dim_GI_Translation_SQ_sh_DIM_POLICY_SK_SQ_sh_DIM_POLICY_SK_out0" : "models/35_SDM_mp_mdl_sdm_Dim_GI_Translation/35_SDM_mp_mdl_sdm_Dim_GI_Translation__sh_DIM_GI_TRANSLATION.sql",
+      "JNR_Risk_ID" : "models/35_SDM_mp_mdl_sdm_Dim_GI_Translation/35_SDM_mp_mdl_sdm_Dim_GI_Translation__sh_DIM_GI_TRANSLATION.sql",
+      "JNR_Claim_ID" : "models/35_SDM_mp_mdl_sdm_Dim_GI_Translation/35_SDM_mp_mdl_sdm_Dim_GI_Translation__sh_DIM_GI_TRANSLATION.sql",
+      "UNI_Trans_Type" : "models/35_SDM_mp_mdl_sdm_Dim_GI_Translation/35_SDM_mp_mdl_sdm_Dim_GI_Translation__sh_DIM_GI_TRANSLATION.sql",
+      "SRT_EBIADM_Claim_EXPR_249" : "models/35_SDM_mp_mdl_sdm_Dim_GI_Translation/35_SDM_mp_mdl_sdm_Dim_GI_Translation__sh_DIM_GI_TRANSLATION.sql",
+      "EXP_Derived_Risk_ID" : "models/35_SDM_mp_mdl_sdm_Dim_GI_Translation/35_SDM_mp_mdl_sdm_Dim_GI_Translation__sh_DIM_GI_TRANSLATION.sql",
+      "EXP_Derived_MODEL_Rsk_Num" : "models/35_SDM_mp_mdl_sdm_Dim_GI_Translation/35_SDM_mp_mdl_sdm_Dim_GI_Translation__sh_DIM_GI_TRANSLATION.sql",
+      "35_SDMmp_mdl_sdm_Dim_GI_Translation_SQ_sh_DIM_GI_POLICY_SK_SQ_sh_DIM_GI_POLICY_SK_out0" : "models/35_SDM_mp_mdl_sdm_Dim_GI_Translation/35_SDM_mp_mdl_sdm_Dim_GI_Translation__sh_DIM_GI_TRANSLATION.sql",
+      "EXP_Hardcode_Values_EBIADM_Claim" : "models/35_SDM_mp_mdl_sdm_Dim_GI_Translation/35_SDM_mp_mdl_sdm_Dim_GI_Translation__sh_DIM_GI_TRANSLATION.sql",
+      "EXP_Hardcode_Values_EBIADM_Risk" : "models/35_SDM_mp_mdl_sdm_Dim_GI_Translation/35_SDM_mp_mdl_sdm_Dim_GI_Translation__sh_DIM_GI_TRANSLATION.sql",
+      "UNI_Trans_Type_EXPR_POL_ID" : "models/35_SDM_mp_mdl_sdm_Dim_GI_Translation/35_SDM_mp_mdl_sdm_Dim_GI_Translation__sh_DIM_GI_TRANSLATION.sql",
+      "JNR_Policy_ID" : "models/35_SDM_mp_mdl_sdm_Dim_GI_Translation/35_SDM_mp_mdl_sdm_Dim_GI_Translation__sh_DIM_GI_TRANSLATION.sql",
+      "35_SDMmp_mdl_sdm_Dim_GI_Translation_SQ_sh_DIM_GI_CLAIM_SK_SQ_sh_DIM_GI_CLAIM_SK_out0" : "models/35_SDM_mp_mdl_sdm_Dim_GI_Translation/35_SDM_mp_mdl_sdm_Dim_GI_Translation__sh_DIM_GI_TRANSLATION.sql",
+      "SRT_MODEL_Policy_EXPR_248" : "models/35_SDM_mp_mdl_sdm_Dim_GI_Translation/35_SDM_mp_mdl_sdm_Dim_GI_Translation__sh_DIM_GI_TRANSLATION.sql",
+      "EXP_Derived_Policy_ID" : "models/35_SDM_mp_mdl_sdm_Dim_GI_Translation/35_SDM_mp_mdl_sdm_Dim_GI_Translation__sh_DIM_GI_TRANSLATION.sql",
+      "EXP_Hardcode_Values_EBIADM_Policy" : "models/35_SDM_mp_mdl_sdm_Dim_GI_Translation/35_SDM_mp_mdl_sdm_Dim_GI_Translation__sh_DIM_GI_TRANSLATION.sql",
+      "UNI_Trans_Type_EXPR_RISK_ID" : "models/35_SDM_mp_mdl_sdm_Dim_GI_Translation/35_SDM_mp_mdl_sdm_Dim_GI_Translation__sh_DIM_GI_TRANSLATION.sql",
+      "35_SDMmp_mdl_sdm_Dim_GI_Translation_SQ_sh_DIM_POLICY_RISK_SK_SQ_sh_DIM_POLICY_RISK_SK_out0" : "models/35_SDM_mp_mdl_sdm_Dim_GI_Translation/35_SDM_mp_mdl_sdm_Dim_GI_Translation__sh_DIM_GI_TRANSLATION.sql",
+      "EXP_Derived_Claim_ID" : "models/35_SDM_mp_mdl_sdm_Dim_GI_Translation/35_SDM_mp_mdl_sdm_Dim_GI_Translation__sh_DIM_GI_TRANSLATION.sql",
+      "SRT_EBIADM_Risk_EXPR_253" : "models/35_SDM_mp_mdl_sdm_Dim_GI_Translation/35_SDM_mp_mdl_sdm_Dim_GI_Translation__sh_DIM_GI_TRANSLATION.sql"
+    }
+  },
+  "processes" : {
+    "UNI_Trans_Type_EXPR_CLAIM_ID" : {
+      "id" : "UNI_Trans_Type_EXPR_CLAIM_ID",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "UNI_Trans_Type_EXPR_CLAIM_ID",
+        "x" : 1020,
+        "y" : 120,
+        "phase" : 1
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "EBIADM_ID1",
+            "_row_id" : null
+          },
+          "alias" : "EBIADM_ID",
+          "description" : null,
+          "_row_id" : "2D0uZJicJlKaw48-ili3H"
+        }, {
+          "expression" : {
+            "expression" : "MODEL_ID1",
+            "_row_id" : null
+          },
+          "alias" : "MODEL_ID",
+          "description" : null,
+          "_row_id" : "_mq9ZJl9aTVidHV48bwvv"
+        }, {
+          "expression" : {
+            "expression" : "TRANS_TYPE1",
+            "_row_id" : null
+          },
+          "alias" : "TRANS_TYPE",
+          "description" : null,
+          "_row_id" : "XSDHgpvoItgNhv82lgcwD"
+        }, {
+          "expression" : {
+            "expression" : "CREATE_DATE1",
+            "_row_id" : null
+          },
+          "alias" : "CREATE_DATE",
+          "description" : null,
+          "_row_id" : "zuqnH_GyQUt7cKYZnhY4f"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "UNI_Trans_Type_EXPR_CLAIM_ID_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "UNI_Trans_Type_EXPR_CLAIM_ID_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "SQ_sh_DIM_POLICY_RISK_SK" : {
+      "id" : "SQ_sh_DIM_POLICY_RISK_SK",
+      "component" : "OrchestrationSource",
+      "kind" : "OracleSource",
+      "metadata" : {
+        "label" : "35_SDMmp_mdl_sdm_Dim_GI_Translation_SQ_sh_DIM_POLICY_RISK_SK",
+        "x" : 220,
+        "y" : 1020,
+        "phase" : 1
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "oracle",
+          "id" : "transpiled_connection",
+          "properties" : {
+            "database" : "dbName",
+            "server" : "$$jdbcUrl",
+            "username" : "$$username",
+            "id" : "transpiled_connection",
+            "port" : "1521",
+            "password" : {
+              "kind" : "prophecy",
+              "properties" : {
+                "name" : "transpiled_secret",
+                "value" : "transpiled_secret"
+              },
+              "subKind" : "text",
+              "type" : "secret"
+            }
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "pathSelection" : "warehouseQuery",
+          "tableFullName" : {
+            "schema" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "config",
+                  "properties" : {
+                    "kind" : "prophecy",
+                    "name" : "SCHEMA"
+                  }
+                } ]
+              }
+            },
+            "name" : "EBIDB_MODEL"
+          },
+          "warehouseQuery" : {
+            "query" : "SELECT \r MPRS.BUSN_AREA_NAME,\r MPRS.CMPY_CODE,\r MPRS.RSK_NUM,\r MPRS.RSK_ID,\r MPRS.POL_NUM,\r MPRS.PRD_CODE\r FROM MODEL.DIM_POLICY_RISK_SK MPRS\r LEFT OUTER JOIN (SELECT MODEL_ID FROM SDM.DIM_GI_TRANSLATION WHERE TRANS_TYPE = 'RISK_ID') ST\r ON MPRS.RSK_ID = ST.MODEL_ID\r WHERE ST.MODEL_ID IS NULL\r AND MPRS.PRD_CODE = 'GWC'"
+          }
+        },
+        "format" : {
+          "kind" : "oracle",
+          "category" : "table",
+          "properties" : {
+            "kind" : "oracle",
+            "schema" : {
+              "entityType" : "",
+              "providerType" : "Databricks",
+              "fields" : [ {
+                "name" : "PRD_CODE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "RSK_NUM",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "BUSN_AREA_NAME",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "RSK_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "CMPY_CODE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "POL_NUM",
+                "dataType" : {
+                  "type" : "String"
+                }
+              } ]
+            }
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "SQ_sh_DIM_POLICY_RISK_SK_out0",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "PRD_CODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "RSK_NUM",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "BUSN_AREA_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "RSK_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "CMPY_CODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "POL_NUM",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : true
+      }
+    },
+    "sh_DIM_GI_TRANSLATION" : {
+      "id" : "sh_DIM_GI_TRANSLATION",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "sh_DIM_GI_TRANSLATION",
+        "x" : 1420,
+        "y" : 520,
+        "phase" : 1
+      },
+      "properties" : {
+        "table" : {
+          "name" : "sh_DIM_GI_TRANSLATION",
+          "sourceType" : "Table",
+          "sourceName" : "transpiled_sources",
+          "alias" : ""
+        },
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "sh_DIM_GI_TRANSLATION_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "xVbiDTw20d4hVQ2I22eAQ",
+          "slug" : "out0"
+        } ]
+      }
+    },
+    "JNR_Risk_ID" : {
+      "id" : "JNR_Risk_ID",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "JNR_Risk_ID",
+        "x" : 620,
+        "y" : 920,
+        "phase" : 1
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "expression" : "(((((in1.RSK_NUM = in0.RISK_NUM_ebiadm) AND (in1.BUSN_AREA_NAME = in0.BUSN_AREA_NAME_ebiadm)) AND (in1.CMPY_CODE = in0.CMPY_NUM_ebiadm)) AND (in1.PRD_CODE = in0.PRD_CODE_ebiadm)) AND (in1.POL_NUM = in0.POL_NUM_ebiadm))",
+            "_row_id" : null
+          },
+          "joinType" : "inner",
+          "rightAlias" : null
+        } ],
+        "allowSelection" : false,
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "in0.PRD_CODE_ebiadm",
+            "_row_id" : null
+          },
+          "alias" : "PRD_CODE_ebiadm",
+          "description" : null,
+          "_row_id" : "7-BKhe3OFlnonMnpHjAI8"
+        }, {
+          "expression" : {
+            "expression" : "in0.RISK_NUM_ebiadm",
+            "_row_id" : null
+          },
+          "alias" : "RISK_NUM_ebiadm",
+          "description" : null,
+          "_row_id" : "ZmESQLVKv_zyrNbW_amA0"
+        }, {
+          "expression" : {
+            "expression" : "in0.RISK_ID_ebiadm",
+            "_row_id" : null
+          },
+          "alias" : "RISK_ID_ebiadm",
+          "description" : null,
+          "_row_id" : "p9XTTvCWUaqgj6vTsKuh6"
+        }, {
+          "expression" : {
+            "expression" : "in1.POL_NUM",
+            "_row_id" : null
+          },
+          "alias" : "POL_NUM",
+          "description" : null,
+          "_row_id" : "_jXAwiqSKPonUwBbzcQ3x"
+        }, {
+          "expression" : {
+            "expression" : "in0.POL_NUM_ebiadm",
+            "_row_id" : null
+          },
+          "alias" : "POL_NUM_ebiadm",
+          "description" : null,
+          "_row_id" : "PM-HFJFXFLqzF-R4jAweT"
+        }, {
+          "expression" : {
+            "expression" : "in0.BUSN_AREA_NAME_ebiadm",
+            "_row_id" : null
+          },
+          "alias" : "BUSN_AREA_NAME_ebiadm",
+          "description" : null,
+          "_row_id" : "jVkTGDe1niaYORDGZ7f2b"
+        }, {
+          "expression" : {
+            "expression" : "in1.BUSN_AREA_NAME",
+            "_row_id" : null
+          },
+          "alias" : "BUSN_AREA_NAME",
+          "description" : null,
+          "_row_id" : "p1e20BtVpG5ai0aqO-OJO"
+        }, {
+          "expression" : {
+            "expression" : "in1.RSK_ID",
+            "_row_id" : null
+          },
+          "alias" : "RSK_ID",
+          "description" : null,
+          "_row_id" : "dmNEDpv5SGVYMjJZoPe4p"
+        }, {
+          "expression" : {
+            "expression" : "in1.RSK_NUM",
+            "_row_id" : null
+          },
+          "alias" : "RSK_NUM",
+          "description" : null,
+          "_row_id" : "-yx1uOUKJ2FQ1YOH4YNPj"
+        }, {
+          "expression" : {
+            "expression" : "in0.CMPY_NUM_ebiadm",
+            "_row_id" : null
+          },
+          "alias" : "CMPY_NUM_ebiadm",
+          "description" : null,
+          "_row_id" : "OiH1QPXEpXvjRjGTvMvyB"
+        }, {
+          "expression" : {
+            "expression" : "in1.CMPY_CODE",
+            "_row_id" : null
+          },
+          "alias" : "CMPY_CODE",
+          "description" : null,
+          "_row_id" : "SM_DrnsJGeuZSurbF7mSM"
+        }, {
+          "expression" : {
+            "expression" : "in1.PRD_CODE",
+            "_row_id" : null
+          },
+          "alias" : "PRD_CODE",
+          "description" : null,
+          "_row_id" : "rA2DzDdojAn94BUtWwUSi"
+        } ],
+        "activeTab" : "conditions",
+        "columnsSelector" : [ ],
+        "headAlias" : "in0"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "JNR_Risk_ID_in0",
+          "slug" : "in0"
+        }, {
+          "id" : "JNR_Risk_ID_in1",
+          "slug" : "in1"
+        } ],
+        "outputs" : [ {
+          "id" : "JNR_Risk_ID_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "JNR_Claim_ID" : {
+      "id" : "JNR_Claim_ID",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "JNR_Claim_ID",
+        "x" : 620,
+        "y" : 120,
+        "phase" : 1
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "expression" : "(((in0.CLAIM_NUM1 = in1.CLAIM_NUM) AND (in0.CMPY_NUM1 = in1.CMPY_NUM)) AND (in0.BUSN_AREA_NAME1 = in1.BUSN_AREA_NAME))",
+            "_row_id" : null
+          },
+          "joinType" : "inner",
+          "rightAlias" : null
+        } ],
+        "allowSelection" : false,
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "in0.CMPY_NUM1",
+            "_row_id" : null
+          },
+          "alias" : "CMPY_NUM1",
+          "description" : null,
+          "_row_id" : "D-PoA8kWfHmEU0ldUouh5"
+        }, {
+          "expression" : {
+            "expression" : "in0.BUSN_AREA_NAME1",
+            "_row_id" : null
+          },
+          "alias" : "BUSN_AREA_NAME1",
+          "description" : null,
+          "_row_id" : "bQA-9MRTvPeqgMoiPQ-wX"
+        }, {
+          "expression" : {
+            "expression" : "in0.CLAIM_NUM1",
+            "_row_id" : null
+          },
+          "alias" : "CLAIM_NUM1",
+          "description" : null,
+          "_row_id" : "k-MGSnQenehz6V2KxsNDl"
+        }, {
+          "expression" : {
+            "expression" : "in1.CLAIM_ID",
+            "_row_id" : null
+          },
+          "alias" : "CLAIM_ID",
+          "description" : null,
+          "_row_id" : "oZLOiUtHi2sBoYPd98GK9"
+        }, {
+          "expression" : {
+            "expression" : "in1.CMPY_NUM",
+            "_row_id" : null
+          },
+          "alias" : "CMPY_NUM",
+          "description" : null,
+          "_row_id" : "7T2HvRKqaUT-7ZuMmbynq"
+        }, {
+          "expression" : {
+            "expression" : "in1.CLAIM_NUM",
+            "_row_id" : null
+          },
+          "alias" : "CLAIM_NUM",
+          "description" : null,
+          "_row_id" : "Fxzg8nctKtA1w0RsmSOS1"
+        }, {
+          "expression" : {
+            "expression" : "in1.BUSN_AREA_NAME",
+            "_row_id" : null
+          },
+          "alias" : "BUSN_AREA_NAME",
+          "description" : null,
+          "_row_id" : "6datLUp48vo8YIBpd6MVX"
+        }, {
+          "expression" : {
+            "expression" : "in0.CLAIM_ID1",
+            "_row_id" : null
+          },
+          "alias" : "CLAIM_ID1",
+          "description" : null,
+          "_row_id" : "fIFTOwVZro84G2ufO_RA_"
+        } ],
+        "activeTab" : "conditions",
+        "columnsSelector" : [ ],
+        "headAlias" : "in0"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "JNR_Claim_ID_in0",
+          "slug" : "in0"
+        }, {
+          "id" : "JNR_Claim_ID_in1",
+          "slug" : "in1"
+        } ],
+        "outputs" : [ {
+          "id" : "JNR_Claim_ID_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "SQ_sh_DIM_CLAIM_SK" : {
+      "id" : "SQ_sh_DIM_CLAIM_SK",
+      "component" : "OrchestrationSource",
+      "kind" : "OracleSource",
+      "metadata" : {
+        "label" : "35_SDMmp_mdl_sdm_Dim_GI_Translation_SQ_sh_DIM_CLAIM_SK",
+        "x" : 420,
+        "y" : 220,
+        "phase" : 1
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "oracle",
+          "id" : "transpiled_connection",
+          "properties" : {
+            "database" : "dbName",
+            "server" : "$$jdbcUrl",
+            "username" : "$$username",
+            "id" : "transpiled_connection",
+            "port" : "1521",
+            "password" : {
+              "kind" : "prophecy",
+              "properties" : {
+                "name" : "transpiled_secret",
+                "value" : "transpiled_secret"
+              },
+              "subKind" : "text",
+              "type" : "secret"
+            }
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "pathSelection" : "warehouseQuery",
+          "tableFullName" : {
+            "schema" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "config",
+                  "properties" : {
+                    "kind" : "prophecy",
+                    "name" : "SCHEMA"
+                  }
+                } ]
+              }
+            },
+            "name" : "EBIDB_MODEL"
+          },
+          "warehouseQuery" : {
+            "query" : "SELECT DIM_CLAIM_SK.BUSN_AREA_NAME, DIM_CLAIM_SK.CMPY_NUM, DIM_CLAIM_SK.CLAIM_NUM, DIM_CLAIM_SK.CLAIM_ID FROM MODEL.DIM_CLAIM_SK DIM_CLAIM_SK LEFT OUTER JOIN (SELECT MODEL_ID FROM SDM.DIM_GI_TRANSLATION WHERE TRANS_TYPE = 'CLAIM_ID') DIM_GI_TRANSLATION ON DIM_CLAIM_SK.CLAIM_ID = DIM_GI_TRANSLATION.MODEL_ID WHERE DIM_GI_TRANSLATION.MODEL_ID IS NULL ORDER BY CLAIM_NUM, CMPY_NUM, BUSN_AREA_NAME"
+          }
+        },
+        "format" : {
+          "kind" : "oracle",
+          "category" : "table",
+          "properties" : {
+            "kind" : "oracle",
+            "schema" : {
+              "entityType" : "",
+              "providerType" : "Databricks",
+              "fields" : [ {
+                "name" : "CTL_REC_CRTN_DATE",
+                "dataType" : {
+                  "type" : "Timestamp"
+                }
+              }, {
+                "name" : "CTL_SRC_ROW_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "CTL_JOB_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "CLAIM_NUM",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CTL_SRC_SYS_SET_NAME",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "BUSN_AREA_NAME",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CTL_BATCH_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "CMPY_NUM",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CLAIM_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "CTL_EXTRACT_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              } ]
+            }
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "SQ_sh_DIM_CLAIM_SK_out0",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "CTL_REC_CRTN_DATE",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "CTL_SRC_ROW_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "CTL_JOB_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "CLAIM_NUM",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CTL_SRC_SYS_SET_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "BUSN_AREA_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CTL_BATCH_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "CMPY_NUM",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CLAIM_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "CTL_EXTRACT_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : true
+      }
+    },
+    "UNI_Trans_Type" : {
+      "id" : "UNI_Trans_Type",
+      "component" : "UnionByName",
+      "metadata" : {
+        "label" : "UNI_Trans_Type",
+        "x" : 1220,
+        "y" : 520,
+        "phase" : 1
+      },
+      "properties" : {
+        "relation_name" : [ "UNI_Trans_Type_EXPR_CLAIM_ID", "UNI_Trans_Type_EXPR_POL_ID", "UNI_Trans_Type_EXPR_RISK_ID" ],
+        "schemas" : [ "[{\"name\": \"EBIADM_ID\", \"dataType\": \"Integer\"}, {\"name\": \"MODEL_ID\", \"dataType\": \"Integer\"}, {\"name\": \"TRANS_TYPE\", \"dataType\": \"String\"}, {\"name\": \"CREATE_DATE\", \"dataType\": \"Timestamp\"}]", "[{\"name\": \"EBIADM_ID\", \"dataType\": \"Integer\"}, {\"name\": \"MODEL_ID\", \"dataType\": \"Integer\"}, {\"name\": \"TRANS_TYPE\", \"dataType\": \"String\"}, {\"name\": \"CREATE_DATE\", \"dataType\": \"Timestamp\"}]", "[{\"name\": \"EBIADM_ID\", \"dataType\": \"Integer\"}, {\"name\": \"MODEL_ID\", \"dataType\": \"Integer\"}, {\"name\": \"TRANS_TYPE\", \"dataType\": \"String\"}, {\"name\": \"CREATE_DATE\", \"dataType\": \"Timestamp\"}]" ],
+        "missingColumnOps" : "allowMissingColumns",
+        "_oldMacroProperties" : {
+          "macroName" : "UnionByName",
+          "projectName" : "prophecy_basics",
+          "parameters" : [ {
+            "name" : "relation_name",
+            "value" : "[\"UNI_Trans_Type_EXPR_CLAIM_ID\", \"UNI_Trans_Type_EXPR_POL_ID\", \"UNI_Trans_Type_EXPR_RISK_ID\"]"
+          }, {
+            "name" : "schemas",
+            "value" : "[\"[{\\\"name\\\": \\\"EBIADM_ID\\\", \\\"dataType\\\": \\\"Integer\\\"}, {\\\"name\\\": \\\"MODEL_ID\\\", \\\"dataType\\\": \\\"Integer\\\"}, {\\\"name\\\": \\\"TRANS_TYPE\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"CREATE_DATE\\\", \\\"dataType\\\": \\\"Timestamp\\\"}]\", \"[{\\\"name\\\": \\\"EBIADM_ID\\\", \\\"dataType\\\": \\\"Integer\\\"}, {\\\"name\\\": \\\"MODEL_ID\\\", \\\"dataType\\\": \\\"Integer\\\"}, {\\\"name\\\": \\\"TRANS_TYPE\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"CREATE_DATE\\\", \\\"dataType\\\": \\\"Timestamp\\\"}]\", \"[{\\\"name\\\": \\\"EBIADM_ID\\\", \\\"dataType\\\": \\\"Integer\\\"}, {\\\"name\\\": \\\"MODEL_ID\\\", \\\"dataType\\\": \\\"Integer\\\"}, {\\\"name\\\": \\\"TRANS_TYPE\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"CREATE_DATE\\\", \\\"dataType\\\": \\\"Timestamp\\\"}]\"]"
+          }, {
+            "name" : "missingColumnOps",
+            "value" : "allowMissingColumns"
+          } ]
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "UNI_Trans_Type_in0",
+          "slug" : "in0"
+        }, {
+          "id" : "UNI_Trans_Type_in1",
+          "slug" : "in1"
+        }, {
+          "id" : "UNI_Trans_Type_in2",
+          "slug" : "in2"
+        } ],
+        "outputs" : [ {
+          "id" : "UNI_Trans_Type_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      },
+      "componentInfo" : {
+        "gemId" : "UnionByName_prophecy_basics",
+        "name" : "UnionByName",
+        "projectName" : "prophecy_basics",
+        "sourceProjectName" : "prophecy_basics"
+      }
+    },
+    "SRT_EBIADM_Claim_EXPR_249" : {
+      "id" : "SRT_EBIADM_Claim_EXPR_249",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "SRT_EBIADM_Claim_EXPR_249",
+        "x" : 420,
+        "y" : 20,
+        "phase" : 1
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "CLAIM_ID",
+            "_row_id" : null
+          },
+          "alias" : "CLAIM_ID1",
+          "description" : null,
+          "_row_id" : "8zbrSpeCU1Zg-cHBeQ9fo"
+        }, {
+          "expression" : {
+            "expression" : "CLAIM_NUM",
+            "_row_id" : null
+          },
+          "alias" : "CLAIM_NUM1",
+          "description" : null,
+          "_row_id" : "3SPYTgWY8NOUn9xt2RjUZ"
+        }, {
+          "expression" : {
+            "expression" : "CMPY_NUM",
+            "_row_id" : null
+          },
+          "alias" : "CMPY_NUM1",
+          "description" : null,
+          "_row_id" : "f1vOamRCZKJWpHqkRTzSS"
+        }, {
+          "expression" : {
+            "expression" : "BUSN_AREA_NAME",
+            "_row_id" : null
+          },
+          "alias" : "BUSN_AREA_NAME1",
+          "description" : null,
+          "_row_id" : "lwB1CofV7UHsqW1J3irss"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "SRT_EBIADM_Claim_EXPR_249_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "SRT_EBIADM_Claim_EXPR_249_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "EXP_Derived_Risk_ID" : {
+      "id" : "EXP_Derived_Risk_ID",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "EXP_Derived_Risk_ID",
+        "x" : 820,
+        "y" : 920,
+        "phase" : 1
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "RISK_ID_ebiadm",
+            "_row_id" : null
+          },
+          "alias" : "EBIADM_ID3",
+          "description" : null,
+          "_row_id" : "Z58SDbl9rNp0SXz52fWCd"
+        }, {
+          "expression" : {
+            "expression" : "RSK_ID",
+            "_row_id" : null
+          },
+          "alias" : "MODEL_ID3",
+          "description" : null,
+          "_row_id" : "cHG2eMkxwdY6w4UKAS7c4"
+        }, {
+          "expression" : {
+            "expression" : "'RISK_ID'",
+            "_row_id" : null
+          },
+          "alias" : "TRANS_TYPE3",
+          "description" : null,
+          "_row_id" : "GonJCS5OVyqGW4a5YIwY6"
+        }, {
+          "expression" : {
+            "expression" : "CURRENT_TIMESTAMP",
+            "_row_id" : null
+          },
+          "alias" : "CREATE_DATE3",
+          "description" : null,
+          "_row_id" : "2DzVoA6wMwaDB-oNwN7Bl"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "EXP_Derived_Risk_ID_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "EXP_Derived_Risk_ID_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "EXP_Derived_MODEL_Rsk_Num" : {
+      "id" : "EXP_Derived_MODEL_Rsk_Num",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "EXP_Derived_MODEL_Rsk_Num",
+        "x" : 420,
+        "y" : 1020,
+        "phase" : 1
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "BUSN_AREA_NAME",
+            "_row_id" : null
+          },
+          "alias" : "BUSN_AREA_NAME",
+          "description" : null,
+          "_row_id" : "8WsLtU1owKvB4g9HERcNE"
+        }, {
+          "expression" : {
+            "expression" : "CMPY_CODE",
+            "_row_id" : null
+          },
+          "alias" : "CMPY_CODE",
+          "description" : null,
+          "_row_id" : "cYY9RNmQevVO0SiJQh124"
+        }, {
+          "expression" : {
+            "expression" : "(CASE WHEN (RSK_NUM = -1) THEN ABS(RSK_NUM) WHEN (RSK_NUM = 0) THEN 1 ELSE RSK_NUM END)",
+            "_row_id" : null
+          },
+          "alias" : "RSK_NUM",
+          "description" : null,
+          "_row_id" : "dK2iJK9FAuNaGEfmAvdjd"
+        }, {
+          "expression" : {
+            "expression" : "RSK_ID",
+            "_row_id" : null
+          },
+          "alias" : "RSK_ID",
+          "description" : null,
+          "_row_id" : "BCPWwqqb9e4FNG9qQaMdh"
+        }, {
+          "expression" : {
+            "expression" : "POL_NUM",
+            "_row_id" : null
+          },
+          "alias" : "POL_NUM",
+          "description" : null,
+          "_row_id" : "2XZ_0sBcx9x5LAL_J5-4c"
+        }, {
+          "expression" : {
+            "expression" : "PRD_CODE",
+            "_row_id" : null
+          },
+          "alias" : "PRD_CODE",
+          "description" : null,
+          "_row_id" : "Q7QLbwti3oY4ZVSf0Bf24"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "EXP_Derived_MODEL_Rsk_Num_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "EXP_Derived_MODEL_Rsk_Num_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "SQ_sh_DIM_GI_POLICY_RISK_SK" : {
+      "id" : "SQ_sh_DIM_GI_POLICY_RISK_SK",
+      "component" : "OrchestrationSource",
+      "kind" : "OracleSource",
+      "metadata" : {
+        "label" : "35_SDMmp_mdl_sdm_Dim_GI_Translation_SQ_sh_DIM_GI_POLICY_RISK_SK",
+        "x" : 20,
+        "y" : 820,
+        "phase" : 1
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "oracle",
+          "id" : "transpiled_connection",
+          "properties" : {
+            "database" : "dbName",
+            "server" : "$$jdbcUrl",
+            "username" : "$$username",
+            "id" : "transpiled_connection",
+            "port" : "1521",
+            "password" : {
+              "kind" : "prophecy",
+              "properties" : {
+                "name" : "transpiled_secret",
+                "value" : "transpiled_secret"
+              },
+              "subKind" : "text",
+              "type" : "secret"
+            }
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "pathSelection" : "warehouseQuery",
+          "tableFullName" : {
+            "schema" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "config",
+                  "properties" : {
+                    "kind" : "prophecy",
+                    "name" : "SCHEMA"
+                  }
+                } ]
+              }
+            },
+            "name" : "EBI"
+          },
+          "warehouseQuery" : {
+            "query" : "SELECT \r EPRS.RISK_ID,\r EPRS.RISK_NUM,\r EPRS.BUSN_AREA_NAME,\r EPRS.CMPY_NUM,\r EPRS.POL_NUM,\r EPRS.PRD_CODE\r FROM EBIADM.DIM_GI_POLICY_RISK_SK EPRS\r LEFT OUTER JOIN (SELECT EBIADM_ID FROM SDM.DIM_GI_TRANSLATION WHERE TRANS_TYPE = 'RISK_ID') ST\r ON EPRS.RISK_ID = ST.EBIADM_ID\r WHERE ST.EBIADM_ID IS NULL\r and EPRS.PRD_CODE = 'GWC'"
+          }
+        },
+        "format" : {
+          "kind" : "oracle",
+          "category" : "table",
+          "properties" : {
+            "kind" : "oracle",
+            "schema" : {
+              "entityType" : "",
+              "providerType" : "Databricks",
+              "fields" : [ {
+                "name" : "PRD_CODE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "BUSN_AREA_NAME",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CMPY_NUM",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "RISK_NUM",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "RISK_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "POL_NUM",
+                "dataType" : {
+                  "type" : "String"
+                }
+              } ]
+            }
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "SQ_sh_DIM_GI_POLICY_RISK_SK_out0",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "PRD_CODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "BUSN_AREA_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CMPY_NUM",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "RISK_NUM",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "RISK_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "POL_NUM",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : true
+      }
+    },
+    "EXP_Hardcode_Values_EBIADM_Claim" : {
+      "id" : "EXP_Hardcode_Values_EBIADM_Claim",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "EXP_Hardcode_Values_EBIADM_Claim",
+        "x" : 220,
+        "y" : 20,
+        "phase" : 1
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "(CASE WHEN (BUSN_AREA_NAME = 'AMIA_NZ') THEN 'AMIA' ELSE BUSN_AREA_NAME END)",
+            "_row_id" : null
+          },
+          "alias" : "BUSN_AREA_NAME",
+          "description" : null,
+          "_row_id" : "HbdJaU81ITjIV8g_gNqL2"
+        }, {
+          "expression" : {
+            "expression" : "CLAIM_NUM",
+            "_row_id" : null
+          },
+          "alias" : "CLAIM_NUM",
+          "description" : null,
+          "_row_id" : "OukUBfhcLnxHfGAoFumq9"
+        }, {
+          "expression" : {
+            "expression" : "CLAIM_ID",
+            "_row_id" : null
+          },
+          "alias" : "CLAIM_ID",
+          "description" : null,
+          "_row_id" : "rEqucqWKGgK4yI9rr3CFx"
+        }, {
+          "expression" : {
+            "expression" : "(CASE WHEN ((BUSN_AREA_NAME IN ('AMIA_NZ', 'NZA')) = TRUE) THEN '5' WHEN (BUSN_AREA_NAME = 'AMIA') THEN '2' WHEN (BUSN_AREA_NAME = 'GI') THEN CMPY_NUM ELSE NULL END)",
+            "_row_id" : null
+          },
+          "alias" : "CMPY_NUM",
+          "description" : null,
+          "_row_id" : "K4vEEhl-_E_T33Ew9jSJE"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "EXP_Hardcode_Values_EBIADM_Claim_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "EXP_Hardcode_Values_EBIADM_Claim_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "EXP_Hardcode_Values_EBIADM_Risk" : {
+      "id" : "EXP_Hardcode_Values_EBIADM_Risk",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "EXP_Hardcode_Values_EBIADM_Risk",
+        "x" : 220,
+        "y" : 820,
+        "phase" : 1
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "RISK_ID",
+            "_row_id" : null
+          },
+          "alias" : "RISK_ID",
+          "description" : null,
+          "_row_id" : "UZQpwW0yHV2BdwpM9MyeC"
+        }, {
+          "expression" : {
+            "expression" : "RISK_NUM",
+            "_row_id" : null
+          },
+          "alias" : "RISK_NUM",
+          "description" : null,
+          "_row_id" : "-cRY3HnL-d-S_cPTqYCdK"
+        }, {
+          "expression" : {
+            "expression" : "(CASE WHEN (BUSN_AREA_NAME = 'AMIA_NZ') THEN 'AMIA' ELSE BUSN_AREA_NAME END)",
+            "_row_id" : null
+          },
+          "alias" : "BUSN_AREA_NAME",
+          "description" : null,
+          "_row_id" : "_EWzAkxPZFsqBUzqZuL6J"
+        }, {
+          "expression" : {
+            "expression" : "(CASE WHEN CAST((BUSN_AREA_NAME IN ('AMIA_NZ', 'NZA')) AS BOOLEAN) THEN '5' WHEN (BUSN_AREA_NAME = 'AMIA') THEN '2' WHEN (BUSN_AREA_NAME = 'GI') THEN CMPY_NUM ELSE NULL END)",
+            "_row_id" : null
+          },
+          "alias" : "CMPY_NUM",
+          "description" : null,
+          "_row_id" : "PlzdAcF--HlF4qjJikptV"
+        }, {
+          "expression" : {
+            "expression" : "POL_NUM",
+            "_row_id" : null
+          },
+          "alias" : "POL_NUM",
+          "description" : null,
+          "_row_id" : "OKheUAuiepY7UYaK5kVQT"
+        }, {
+          "expression" : {
+            "expression" : "PRD_CODE",
+            "_row_id" : null
+          },
+          "alias" : "PRD_CODE",
+          "description" : null,
+          "_row_id" : "Lb2kKCd6GfQrIUxa8fqOf"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "EXP_Hardcode_Values_EBIADM_Risk_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "EXP_Hardcode_Values_EBIADM_Risk_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "UNI_Trans_Type_EXPR_POL_ID" : {
+      "id" : "UNI_Trans_Type_EXPR_POL_ID",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "UNI_Trans_Type_EXPR_POL_ID",
+        "x" : 1020,
+        "y" : 520,
+        "phase" : 1
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "EBIADM_ID2",
+            "_row_id" : null
+          },
+          "alias" : "EBIADM_ID",
+          "description" : null,
+          "_row_id" : "Uj0XDehCpwjJ9bOI21mKz"
+        }, {
+          "expression" : {
+            "expression" : "MODEL_ID2",
+            "_row_id" : null
+          },
+          "alias" : "MODEL_ID",
+          "description" : null,
+          "_row_id" : "wnDyp8hvYYOVvB9aRRjxA"
+        }, {
+          "expression" : {
+            "expression" : "TRANS_TYPE2",
+            "_row_id" : null
+          },
+          "alias" : "TRANS_TYPE",
+          "description" : null,
+          "_row_id" : "ukfvWv3NQcL_aqi-BITnz"
+        }, {
+          "expression" : {
+            "expression" : "CREATE_DATE2",
+            "_row_id" : null
+          },
+          "alias" : "CREATE_DATE",
+          "description" : null,
+          "_row_id" : "KLC7mZgU6kBR2LDzc-FZW"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "UNI_Trans_Type_EXPR_POL_ID_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "UNI_Trans_Type_EXPR_POL_ID_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "JNR_Policy_ID" : {
+      "id" : "JNR_Policy_ID",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "JNR_Policy_ID",
+        "x" : 620,
+        "y" : 520,
+        "phase" : 1
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "expression" : "((((in0.POL_NUM1 = in1.POL_NUM) AND (in0.BUSN_AREA_NAME1 = in1.BUSN_AREA_NAME)) AND (in0.PRD_CODE1 = in1.PRD_CODE)) AND (in0.CMPY_NUM1 = in1.CMPY_NUM))",
+            "_row_id" : null
+          },
+          "joinType" : "inner",
+          "rightAlias" : null
+        } ],
+        "allowSelection" : false,
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "in0.CMPY_NUM1",
+            "_row_id" : null
+          },
+          "alias" : "CMPY_NUM1",
+          "description" : null,
+          "_row_id" : "q53C2YLBU22UygJlwcN-W"
+        }, {
+          "expression" : {
+            "expression" : "in0.BUSN_AREA_NAME1",
+            "_row_id" : null
+          },
+          "alias" : "BUSN_AREA_NAME1",
+          "description" : null,
+          "_row_id" : "aRs7CIxqiI-J4tm_UgyA1"
+        }, {
+          "expression" : {
+            "expression" : "in1.CMPY_NUM",
+            "_row_id" : null
+          },
+          "alias" : "CMPY_NUM",
+          "description" : null,
+          "_row_id" : "gOPyv7CRldrKEGFXZ0qC-"
+        }, {
+          "expression" : {
+            "expression" : "in1.POL_NUM",
+            "_row_id" : null
+          },
+          "alias" : "POL_NUM",
+          "description" : null,
+          "_row_id" : "ud-falswD4kXwXI4cgrLx"
+        }, {
+          "expression" : {
+            "expression" : "in0.POL_ID1",
+            "_row_id" : null
+          },
+          "alias" : "POL_ID1",
+          "description" : null,
+          "_row_id" : "sTK-8-rQnQ20Vfu8XwAQ0"
+        }, {
+          "expression" : {
+            "expression" : "in1.BUSN_AREA_NAME",
+            "_row_id" : null
+          },
+          "alias" : "BUSN_AREA_NAME",
+          "description" : null,
+          "_row_id" : "hwFGRtzl_67dmF0cwxTdm"
+        }, {
+          "expression" : {
+            "expression" : "in0.POL_NUM1",
+            "_row_id" : null
+          },
+          "alias" : "POL_NUM1",
+          "description" : null,
+          "_row_id" : "LCXbBlXvCdqwscvVpK4VU"
+        }, {
+          "expression" : {
+            "expression" : "in1.POL_ID",
+            "_row_id" : null
+          },
+          "alias" : "POL_ID",
+          "description" : null,
+          "_row_id" : "gCr3xjhuJS9vCN99NSSe1"
+        }, {
+          "expression" : {
+            "expression" : "in0.PRD_CODE1",
+            "_row_id" : null
+          },
+          "alias" : "PRD_CODE1",
+          "description" : null,
+          "_row_id" : "4e9y-LZAYsWL2K7i5yI_M"
+        }, {
+          "expression" : {
+            "expression" : "in1.PRD_CODE",
+            "_row_id" : null
+          },
+          "alias" : "PRD_CODE",
+          "description" : null,
+          "_row_id" : "PXgD-BRBcpKlhFfA5ZJBt"
+        } ],
+        "activeTab" : "conditions",
+        "columnsSelector" : [ ],
+        "headAlias" : "in0"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "JNR_Policy_ID_in0",
+          "slug" : "in0"
+        }, {
+          "id" : "JNR_Policy_ID_in1",
+          "slug" : "in1"
+        } ],
+        "outputs" : [ {
+          "id" : "JNR_Policy_ID_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "SQ_sh_DIM_POLICY_SK" : {
+      "id" : "SQ_sh_DIM_POLICY_SK",
+      "component" : "OrchestrationSource",
+      "kind" : "OracleSource",
+      "metadata" : {
+        "label" : "35_SDMmp_mdl_sdm_Dim_GI_Translation_SQ_sh_DIM_POLICY_SK",
+        "x" : 220,
+        "y" : 420,
+        "phase" : 1
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "oracle",
+          "id" : "transpiled_connection",
+          "properties" : {
+            "database" : "dbName",
+            "server" : "$$jdbcUrl",
+            "username" : "$$username",
+            "id" : "transpiled_connection",
+            "port" : "1521",
+            "password" : {
+              "kind" : "prophecy",
+              "properties" : {
+                "name" : "transpiled_secret",
+                "value" : "transpiled_secret"
+              },
+              "subKind" : "text",
+              "type" : "secret"
+            }
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "pathSelection" : "warehouseQuery",
+          "tableFullName" : {
+            "schema" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "config",
+                  "properties" : {
+                    "kind" : "prophecy",
+                    "name" : "SCHEMA"
+                  }
+                } ]
+              }
+            },
+            "name" : "EBIDB_MODEL"
+          },
+          "warehouseQuery" : {
+            "query" : "SELECT DIM_POLICY_SK.POL_ID, DIM_POLICY_SK.POL_NUM, DIM_POLICY_SK.BUSN_AREA_NAME, DIM_POLICY_SK.PRD_CODE, DIM_POLICY_SK.CMPY_NUM FROM MODEL.DIM_POLICY_SK DIM_POLICY_SK LEFT OUTER JOIN (SELECT MODEL_ID FROM SDM.DIM_GI_TRANSLATION WHERE TRANS_TYPE = 'POL_ID') DIM_GI_TRANSLATION ON DIM_POLICY_SK.POL_ID = DIM_GI_TRANSLATION.MODEL_ID WHERE DIM_GI_TRANSLATION.MODEL_ID IS NULL ORDER BY POL_NUM, BUSN_AREA_NAME, PRD_CODE, CMPY_NUM"
+          }
+        },
+        "format" : {
+          "kind" : "oracle",
+          "category" : "table",
+          "properties" : {
+            "kind" : "oracle",
+            "schema" : {
+              "entityType" : "",
+              "providerType" : "Databricks",
+              "fields" : [ {
+                "name" : "CTL_REC_CRTN_DATE",
+                "dataType" : {
+                  "type" : "Timestamp"
+                }
+              }, {
+                "name" : "POL_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "CTL_JOB_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "PRD_CODE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CTL_SRC_SYS_SET_NAME",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "BUSN_AREA_NAME",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CTL_BATCH_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "CMPY_NUM",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CTL_EXTRACT_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "POL_NUM",
+                "dataType" : {
+                  "type" : "String"
+                }
+              } ]
+            }
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "SQ_sh_DIM_POLICY_SK_out0",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "CTL_REC_CRTN_DATE",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "POL_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "CTL_JOB_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "PRD_CODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CTL_SRC_SYS_SET_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "BUSN_AREA_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CTL_BATCH_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "CMPY_NUM",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CTL_EXTRACT_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "POL_NUM",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : true
+      }
+    },
+    "SRT_MODEL_Policy_EXPR_248" : {
+      "id" : "SRT_MODEL_Policy_EXPR_248",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "SRT_MODEL_Policy_EXPR_248",
+        "x" : 420,
+        "y" : 420,
+        "phase" : 1
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "POL_ID",
+            "_row_id" : null
+          },
+          "alias" : "POL_ID1",
+          "description" : null,
+          "_row_id" : "Uv89536qVyjTKukm_37i9"
+        }, {
+          "expression" : {
+            "expression" : "POL_NUM",
+            "_row_id" : null
+          },
+          "alias" : "POL_NUM1",
+          "description" : null,
+          "_row_id" : "SBxxn_PruAl6QFcbomeH-"
+        }, {
+          "expression" : {
+            "expression" : "BUSN_AREA_NAME",
+            "_row_id" : null
+          },
+          "alias" : "BUSN_AREA_NAME1",
+          "description" : null,
+          "_row_id" : "71Y-Zc7XOkimbcHNDdWW2"
+        }, {
+          "expression" : {
+            "expression" : "PRD_CODE",
+            "_row_id" : null
+          },
+          "alias" : "PRD_CODE1",
+          "description" : null,
+          "_row_id" : "zdgTeEHieWFFKEewB1mI3"
+        }, {
+          "expression" : {
+            "expression" : "CMPY_NUM",
+            "_row_id" : null
+          },
+          "alias" : "CMPY_NUM1",
+          "description" : null,
+          "_row_id" : "1D6ex2MaFz2zPMawKuO_K"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "SRT_MODEL_Policy_EXPR_248_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "SRT_MODEL_Policy_EXPR_248_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "SQ_sh_DIM_GI_CLAIM_SK" : {
+      "id" : "SQ_sh_DIM_GI_CLAIM_SK",
+      "component" : "OrchestrationSource",
+      "kind" : "OracleSource",
+      "metadata" : {
+        "label" : "35_SDMmp_mdl_sdm_Dim_GI_Translation_SQ_sh_DIM_GI_CLAIM_SK",
+        "x" : 20,
+        "y" : 20,
+        "phase" : 1
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "oracle",
+          "id" : "transpiled_connection",
+          "properties" : {
+            "database" : "dbName",
+            "server" : "$$jdbcUrl",
+            "username" : "$$username",
+            "id" : "transpiled_connection",
+            "port" : "1521",
+            "password" : {
+              "kind" : "prophecy",
+              "properties" : {
+                "name" : "transpiled_secret",
+                "value" : "transpiled_secret"
+              },
+              "subKind" : "text",
+              "type" : "secret"
+            }
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "pathSelection" : "warehouseQuery",
+          "tableFullName" : {
+            "schema" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "config",
+                  "properties" : {
+                    "kind" : "prophecy",
+                    "name" : "SCHEMA"
+                  }
+                } ]
+              }
+            },
+            "name" : "EBI"
+          },
+          "warehouseQuery" : {
+            "query" : "SELECT DIM_GI_CLAIM_SK.CLAIM_ID, DIM_GI_CLAIM_SK.BUSN_AREA_NAME, DIM_GI_CLAIM_SK.CMPY_NUM, DIM_GI_CLAIM_SK.CLAIM_NUM \r FROM\r  EBIADM.DIM_GI_CLAIM_SK DIM_GI_CLAIM_SK\r  LEFT OUTER JOIN (SELECT EBIADM_ID FROM SDM.DIM_GI_TRANSLATION WHERE TRANS_TYPE='CLAIM_ID') DIM_GI_TRANSLATION ON\r DIM_GI_CLAIM_SK.CLAIM_ID=DIM_GI_TRANSLATION.EBIADM_ID \r WHERE \r DIM_GI_TRANSLATION.EBIADM_ID IS NULL"
+          }
+        },
+        "format" : {
+          "kind" : "oracle",
+          "category" : "table",
+          "properties" : {
+            "kind" : "oracle",
+            "schema" : {
+              "entityType" : "",
+              "providerType" : "Databricks",
+              "fields" : [ {
+                "name" : "BTCH_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "REC_CRTN_DATE",
+                "dataType" : {
+                  "type" : "Timestamp"
+                }
+              }, {
+                "name" : "PROC_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "DATA_SRC_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "CLAIM_NUM",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "BUSN_AREA_NAME",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CMPY_NUM",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "RUN_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "CLAIM_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "CLAIM_PREFIX",
+                "dataType" : {
+                  "type" : "String"
+                }
+              } ]
+            }
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "SQ_sh_DIM_GI_CLAIM_SK_out0",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "BTCH_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "REC_CRTN_DATE",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "PROC_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "DATA_SRC_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "CLAIM_NUM",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "BUSN_AREA_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CMPY_NUM",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "RUN_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "CLAIM_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "CLAIM_PREFIX",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : true
+      }
+    },
+    "EXP_Derived_Policy_ID" : {
+      "id" : "EXP_Derived_Policy_ID",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "EXP_Derived_Policy_ID",
+        "x" : 820,
+        "y" : 520,
+        "phase" : 1
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "POL_ID",
+            "_row_id" : null
+          },
+          "alias" : "EBIADM_ID2",
+          "description" : null,
+          "_row_id" : "oH6RQhUuTG-aQby-7wKtj"
+        }, {
+          "expression" : {
+            "expression" : "POL_ID1",
+            "_row_id" : null
+          },
+          "alias" : "MODEL_ID2",
+          "description" : null,
+          "_row_id" : "KGX3OlMaoOTpSwjox9i91"
+        }, {
+          "expression" : {
+            "expression" : "'POL_ID'",
+            "_row_id" : null
+          },
+          "alias" : "TRANS_TYPE2",
+          "description" : null,
+          "_row_id" : "p85j2VRvhVHx4jtTZnVrO"
+        }, {
+          "expression" : {
+            "expression" : "CURRENT_TIMESTAMP",
+            "_row_id" : null
+          },
+          "alias" : "CREATE_DATE2",
+          "description" : null,
+          "_row_id" : "0igq2lIzS7dyAFO6LeSJo"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "EXP_Derived_Policy_ID_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "EXP_Derived_Policy_ID_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "EXP_Hardcode_Values_EBIADM_Policy" : {
+      "id" : "EXP_Hardcode_Values_EBIADM_Policy",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "EXP_Hardcode_Values_EBIADM_Policy",
+        "x" : 420,
+        "y" : 620,
+        "phase" : 1
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "(CASE WHEN (BUSN_AREA_NAME = 'AMIA_NZ') THEN 'AMIA' ELSE BUSN_AREA_NAME END)",
+            "_row_id" : null
+          },
+          "alias" : "BUSN_AREA_NAME",
+          "description" : null,
+          "_row_id" : "5ggEPu0U-DCYmGUByYVLF"
+        }, {
+          "expression" : {
+            "expression" : "(CASE WHEN ((BUSN_AREA_NAME IN ('AMIA_NZ', 'NZA')) = TRUE) THEN '5' WHEN (BUSN_AREA_NAME = 'AMIA') THEN '2' WHEN (BUSN_AREA_NAME = 'GI') THEN CMPY_NUM ELSE NULL END)",
+            "_row_id" : null
+          },
+          "alias" : "CMPY_NUM",
+          "description" : null,
+          "_row_id" : "Z5467NLsqw-iFh-uKyuZy"
+        }, {
+          "expression" : {
+            "expression" : "POL_NUM",
+            "_row_id" : null
+          },
+          "alias" : "POL_NUM",
+          "description" : null,
+          "_row_id" : "HcLmoaOecK_ENhO_kprQh"
+        }, {
+          "expression" : {
+            "expression" : "PRD_CODE",
+            "_row_id" : null
+          },
+          "alias" : "PRD_CODE",
+          "description" : null,
+          "_row_id" : "cmz-0CZaJ1BeOYa-e5ADx"
+        }, {
+          "expression" : {
+            "expression" : "POL_ID",
+            "_row_id" : null
+          },
+          "alias" : "POL_ID",
+          "description" : null,
+          "_row_id" : "crMHwLBxt9NlrHAYt_vK5"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "EXP_Hardcode_Values_EBIADM_Policy_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "EXP_Hardcode_Values_EBIADM_Policy_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "UNI_Trans_Type_EXPR_RISK_ID" : {
+      "id" : "UNI_Trans_Type_EXPR_RISK_ID",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "UNI_Trans_Type_EXPR_RISK_ID",
+        "x" : 1020,
+        "y" : 920,
+        "phase" : 1
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "EBIADM_ID3",
+            "_row_id" : null
+          },
+          "alias" : "EBIADM_ID",
+          "description" : null,
+          "_row_id" : "fydmDMoI-rb-3TKrHYkgj"
+        }, {
+          "expression" : {
+            "expression" : "MODEL_ID3",
+            "_row_id" : null
+          },
+          "alias" : "MODEL_ID",
+          "description" : null,
+          "_row_id" : "rwYuE-9WqAuaVNoaqMPM9"
+        }, {
+          "expression" : {
+            "expression" : "TRANS_TYPE3",
+            "_row_id" : null
+          },
+          "alias" : "TRANS_TYPE",
+          "description" : null,
+          "_row_id" : "A7uY2CJ8bBLGpVVlvfW32"
+        }, {
+          "expression" : {
+            "expression" : "CREATE_DATE3",
+            "_row_id" : null
+          },
+          "alias" : "CREATE_DATE",
+          "description" : null,
+          "_row_id" : "IxI53Xs1GMIKl59OQehtD"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "UNI_Trans_Type_EXPR_RISK_ID_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "UNI_Trans_Type_EXPR_RISK_ID_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "EXP_Derived_Claim_ID" : {
+      "id" : "EXP_Derived_Claim_ID",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "EXP_Derived_Claim_ID",
+        "x" : 820,
+        "y" : 120,
+        "phase" : 1
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "CLAIM_ID1",
+            "_row_id" : null
+          },
+          "alias" : "EBIADM_ID1",
+          "description" : null,
+          "_row_id" : "5_GOsV9IB1i6g5BsVS-ch"
+        }, {
+          "expression" : {
+            "expression" : "CLAIM_ID",
+            "_row_id" : null
+          },
+          "alias" : "MODEL_ID1",
+          "description" : null,
+          "_row_id" : "OdZYJJ-8G660J0ovNU0fa"
+        }, {
+          "expression" : {
+            "expression" : "'CLAIM_ID'",
+            "_row_id" : null
+          },
+          "alias" : "TRANS_TYPE1",
+          "description" : null,
+          "_row_id" : "Lcr4Fj3Wzb7xOm0L8BOS2"
+        }, {
+          "expression" : {
+            "expression" : "CURRENT_TIMESTAMP",
+            "_row_id" : null
+          },
+          "alias" : "CREATE_DATE1",
+          "description" : null,
+          "_row_id" : "8W6qYEJT9q1NKx6ip46LL"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "EXP_Derived_Claim_ID_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "EXP_Derived_Claim_ID_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "SRT_EBIADM_Risk_EXPR_253" : {
+      "id" : "SRT_EBIADM_Risk_EXPR_253",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "SRT_EBIADM_Risk_EXPR_253",
+        "x" : 420,
+        "y" : 820,
+        "phase" : 1
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "CMPY_NUM",
+            "_row_id" : null
+          },
+          "alias" : "CMPY_NUM_ebiadm",
+          "description" : null,
+          "_row_id" : "xHdQu_A4adHs01Xiwpt5_"
+        }, {
+          "expression" : {
+            "expression" : "POL_NUM",
+            "_row_id" : null
+          },
+          "alias" : "POL_NUM_ebiadm",
+          "description" : null,
+          "_row_id" : "dtgGaRSrQf2pgWzuac-3f"
+        }, {
+          "expression" : {
+            "expression" : "PRD_CODE",
+            "_row_id" : null
+          },
+          "alias" : "PRD_CODE_ebiadm",
+          "description" : null,
+          "_row_id" : "3TUV7JoUZhRZcYmy-gL7N"
+        }, {
+          "expression" : {
+            "expression" : "RISK_ID",
+            "_row_id" : null
+          },
+          "alias" : "RISK_ID_ebiadm",
+          "description" : null,
+          "_row_id" : "v_AHLy1oRbh3FeMBKwMR2"
+        }, {
+          "expression" : {
+            "expression" : "RISK_NUM",
+            "_row_id" : null
+          },
+          "alias" : "RISK_NUM_ebiadm",
+          "description" : null,
+          "_row_id" : "KrptC7bycNhNldrCSNBmP"
+        }, {
+          "expression" : {
+            "expression" : "BUSN_AREA_NAME",
+            "_row_id" : null
+          },
+          "alias" : "BUSN_AREA_NAME_ebiadm",
+          "description" : null,
+          "_row_id" : "Ts5UatP9LG71RGZoPUHpw"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "SRT_EBIADM_Risk_EXPR_253_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "SRT_EBIADM_Risk_EXPR_253_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "SQ_sh_DIM_GI_POLICY_SK" : {
+      "id" : "SQ_sh_DIM_GI_POLICY_SK",
+      "component" : "OrchestrationSource",
+      "kind" : "OracleSource",
+      "metadata" : {
+        "label" : "35_SDMmp_mdl_sdm_Dim_GI_Translation_SQ_sh_DIM_GI_POLICY_SK",
+        "x" : 220,
+        "y" : 620,
+        "phase" : 1
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "oracle",
+          "id" : "transpiled_connection",
+          "properties" : {
+            "database" : "dbName",
+            "server" : "$$jdbcUrl",
+            "username" : "$$username",
+            "id" : "transpiled_connection",
+            "port" : "1521",
+            "password" : {
+              "kind" : "prophecy",
+              "properties" : {
+                "name" : "transpiled_secret",
+                "value" : "transpiled_secret"
+              },
+              "subKind" : "text",
+              "type" : "secret"
+            }
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "pathSelection" : "warehouseQuery",
+          "tableFullName" : {
+            "schema" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "config",
+                  "properties" : {
+                    "kind" : "prophecy",
+                    "name" : "SCHEMA"
+                  }
+                } ]
+              }
+            },
+            "name" : "EBI"
+          },
+          "warehouseQuery" : {
+            "query" : "SELECT DIM_GI_POLICY_SK.POL_ID, DIM_GI_POLICY_SK.BUSN_AREA_NAME, DIM_GI_POLICY_SK.CMPY_NUM, DIM_GI_POLICY_SK.POL_NUM, DIM_GI_POLICY_SK.PRD_CODE \r FROM\r  EBIADM.DIM_GI_POLICY_SK DIM_GI_POLICY_SK\r  LEFT OUTER JOIN (SELECT EBIADM_ID FROM SDM.DIM_GI_TRANSLATION WHERE TRANS_TYPE='POL_ID') DIM_GI_TRANSLATION ON\r DIM_GI_POLICY_SK.POL_ID=DIM_GI_TRANSLATION.EBIADM_ID \r WHERE \r DIM_GI_TRANSLATION.EBIADM_ID IS NULL"
+          }
+        },
+        "format" : {
+          "kind" : "oracle",
+          "category" : "table",
+          "properties" : {
+            "kind" : "oracle",
+            "schema" : {
+              "entityType" : "",
+              "providerType" : "Databricks",
+              "fields" : [ {
+                "name" : "BTCH_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "POL_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "REC_CRTN_DATE",
+                "dataType" : {
+                  "type" : "Timestamp"
+                }
+              }, {
+                "name" : "PROC_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "PRD_CODE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "DATA_SRC_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "BUSN_AREA_NAME",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CMPY_NUM",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "RUN_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "POL_NUM",
+                "dataType" : {
+                  "type" : "String"
+                }
+              } ]
+            }
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "SQ_sh_DIM_GI_POLICY_SK_out0",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "BTCH_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "POL_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "REC_CRTN_DATE",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "PROC_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "PRD_CODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "DATA_SRC_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "BUSN_AREA_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CMPY_NUM",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "RUN_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "POL_NUM",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : true
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "edge_722",
+    "source" : "UNI_Trans_Type",
+    "sourcePort" : "UNI_Trans_Type_out0",
+    "target" : "sh_DIM_GI_TRANSLATION",
+    "targetPort" : "sh_DIM_GI_TRANSLATION_in0"
+  }, {
+    "id" : "edge_723",
+    "source" : "SQ_sh_DIM_POLICY_RISK_SK",
+    "sourcePort" : "SQ_sh_DIM_POLICY_RISK_SK_out0",
+    "target" : "EXP_Derived_MODEL_Rsk_Num",
+    "targetPort" : "EXP_Derived_MODEL_Rsk_Num_in0"
+  }, {
+    "id" : "edge_724",
+    "source" : "SQ_sh_DIM_GI_POLICY_RISK_SK",
+    "sourcePort" : "SQ_sh_DIM_GI_POLICY_RISK_SK_out0",
+    "target" : "EXP_Hardcode_Values_EBIADM_Risk",
+    "targetPort" : "EXP_Hardcode_Values_EBIADM_Risk_in0"
+  }, {
+    "id" : "edge_725",
+    "source" : "SQ_sh_DIM_POLICY_SK",
+    "sourcePort" : "SQ_sh_DIM_POLICY_SK_out0",
+    "target" : "SRT_MODEL_Policy_EXPR_248",
+    "targetPort" : "SRT_MODEL_Policy_EXPR_248_in0"
+  }, {
+    "id" : "edge_726",
+    "source" : "SRT_MODEL_Policy_EXPR_248",
+    "sourcePort" : "SRT_MODEL_Policy_EXPR_248_out0",
+    "target" : "JNR_Policy_ID",
+    "targetPort" : "JNR_Policy_ID_in0"
+  }, {
+    "id" : "edge_727",
+    "source" : "SRT_EBIADM_Claim_EXPR_249",
+    "sourcePort" : "SRT_EBIADM_Claim_EXPR_249_out0",
+    "target" : "JNR_Claim_ID",
+    "targetPort" : "JNR_Claim_ID_in0"
+  }, {
+    "id" : "edge_728",
+    "source" : "SQ_sh_DIM_GI_POLICY_SK",
+    "sourcePort" : "SQ_sh_DIM_GI_POLICY_SK_out0",
+    "target" : "EXP_Hardcode_Values_EBIADM_Policy",
+    "targetPort" : "EXP_Hardcode_Values_EBIADM_Policy_in0"
+  }, {
+    "id" : "edge_729",
+    "source" : "SQ_sh_DIM_GI_CLAIM_SK",
+    "sourcePort" : "SQ_sh_DIM_GI_CLAIM_SK_out0",
+    "target" : "EXP_Hardcode_Values_EBIADM_Claim",
+    "targetPort" : "EXP_Hardcode_Values_EBIADM_Claim_in0"
+  }, {
+    "id" : "edge_730",
+    "source" : "SRT_EBIADM_Risk_EXPR_253",
+    "sourcePort" : "SRT_EBIADM_Risk_EXPR_253_out0",
+    "target" : "JNR_Risk_ID",
+    "targetPort" : "JNR_Risk_ID_in0"
+  }, {
+    "id" : "edge_731",
+    "source" : "SQ_sh_DIM_CLAIM_SK",
+    "sourcePort" : "SQ_sh_DIM_CLAIM_SK_out0",
+    "target" : "JNR_Claim_ID",
+    "targetPort" : "JNR_Claim_ID_in1"
+  }, {
+    "id" : "edge_732",
+    "source" : "JNR_Risk_ID",
+    "sourcePort" : "JNR_Risk_ID_out0",
+    "target" : "EXP_Derived_Risk_ID",
+    "targetPort" : "EXP_Derived_Risk_ID_in0"
+  }, {
+    "id" : "edge_733",
+    "source" : "JNR_Policy_ID",
+    "sourcePort" : "JNR_Policy_ID_out0",
+    "target" : "EXP_Derived_Policy_ID",
+    "targetPort" : "EXP_Derived_Policy_ID_in0"
+  }, {
+    "id" : "edge_734",
+    "source" : "JNR_Claim_ID",
+    "sourcePort" : "JNR_Claim_ID_out0",
+    "target" : "EXP_Derived_Claim_ID",
+    "targetPort" : "EXP_Derived_Claim_ID_in0"
+  }, {
+    "id" : "edge_735",
+    "source" : "UNI_Trans_Type_EXPR_CLAIM_ID",
+    "sourcePort" : "UNI_Trans_Type_EXPR_CLAIM_ID_out0",
+    "target" : "UNI_Trans_Type",
+    "targetPort" : "UNI_Trans_Type_in0"
+  }, {
+    "id" : "edge_736",
+    "source" : "UNI_Trans_Type_EXPR_POL_ID",
+    "sourcePort" : "UNI_Trans_Type_EXPR_POL_ID_out0",
+    "target" : "UNI_Trans_Type",
+    "targetPort" : "UNI_Trans_Type_in1"
+  }, {
+    "id" : "edge_737",
+    "source" : "UNI_Trans_Type_EXPR_RISK_ID",
+    "sourcePort" : "UNI_Trans_Type_EXPR_RISK_ID_out0",
+    "target" : "UNI_Trans_Type",
+    "targetPort" : "UNI_Trans_Type_in2"
+  }, {
+    "id" : "edge_738",
+    "source" : "EXP_Derived_Claim_ID",
+    "sourcePort" : "EXP_Derived_Claim_ID_out0",
+    "target" : "UNI_Trans_Type_EXPR_CLAIM_ID",
+    "targetPort" : "UNI_Trans_Type_EXPR_CLAIM_ID_in0"
+  }, {
+    "id" : "edge_739",
+    "source" : "EXP_Derived_Policy_ID",
+    "sourcePort" : "EXP_Derived_Policy_ID_out0",
+    "target" : "UNI_Trans_Type_EXPR_POL_ID",
+    "targetPort" : "UNI_Trans_Type_EXPR_POL_ID_in0"
+  }, {
+    "id" : "edge_740",
+    "source" : "EXP_Derived_Risk_ID",
+    "sourcePort" : "EXP_Derived_Risk_ID_out0",
+    "target" : "UNI_Trans_Type_EXPR_RISK_ID",
+    "targetPort" : "UNI_Trans_Type_EXPR_RISK_ID_in0"
+  }, {
+    "id" : "edge_741",
+    "source" : "EXP_Hardcode_Values_EBIADM_Risk",
+    "sourcePort" : "EXP_Hardcode_Values_EBIADM_Risk_out0",
+    "target" : "SRT_EBIADM_Risk_EXPR_253",
+    "targetPort" : "SRT_EBIADM_Risk_EXPR_253_in0"
+  }, {
+    "id" : "edge_742",
+    "source" : "EXP_Derived_MODEL_Rsk_Num",
+    "sourcePort" : "EXP_Derived_MODEL_Rsk_Num_out0",
+    "target" : "JNR_Risk_ID",
+    "targetPort" : "JNR_Risk_ID_in1"
+  }, {
+    "id" : "edge_743",
+    "source" : "EXP_Hardcode_Values_EBIADM_Claim",
+    "sourcePort" : "EXP_Hardcode_Values_EBIADM_Claim_out0",
+    "target" : "SRT_EBIADM_Claim_EXPR_249",
+    "targetPort" : "SRT_EBIADM_Claim_EXPR_249_in0"
+  }, {
+    "id" : "edge_744",
+    "source" : "EXP_Hardcode_Values_EBIADM_Policy",
+    "sourcePort" : "EXP_Hardcode_Values_EBIADM_Policy_out0",
+    "target" : "JNR_Policy_ID",
+    "targetPort" : "JNR_Policy_ID_in1"
+  } ],
+  "component" : "Pipeline"
+}

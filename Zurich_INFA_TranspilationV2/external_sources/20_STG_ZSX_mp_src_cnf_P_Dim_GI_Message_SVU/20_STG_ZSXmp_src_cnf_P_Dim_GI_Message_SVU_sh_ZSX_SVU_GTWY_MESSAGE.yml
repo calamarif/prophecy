@@ -1,0 +1,30 @@
+entityType: ""
+providerType: "Databricks"
+fields:
+- name: "CTL_REC_CRTN_DATE"
+  dataType:
+    type: "Timestamp"
+- name: "CTL_SRC_ROW_ID"
+  dataType:
+    type: "Integer"
+- name: "CREATED"
+  dataType:
+    type: "Timestamp"
+- name: "CTL_JOB_ID"
+  dataType:
+    type: "Integer"
+- name: "INTERNAL_ID"
+  dataType:
+    type: "String"
+- name: "CTL_SRC_SYS_SET_NAME"
+  dataType:
+    type: "String"
+- name: "CTL_BATCH_ID"
+  dataType:
+    type: "Integer"
+- name: "LAST_UPDATED"
+  dataType:
+    type: "Timestamp"
+- name: "CTL_EXTRACT_ID"
+  dataType:
+    type: "Integer"

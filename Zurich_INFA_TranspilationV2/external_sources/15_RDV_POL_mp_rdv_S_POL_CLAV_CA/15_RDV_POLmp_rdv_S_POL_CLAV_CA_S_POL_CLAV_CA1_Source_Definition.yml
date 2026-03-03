@@ -1,0 +1,291 @@
+entityType: ""
+providerType: "Databricks"
+fields:
+- name: "EXT_CLAV_CYCL_FLAG_CA"
+  dataType:
+    type: "String"
+- name: "EXT_CLAV_ARRANGE_UX_CA"
+  dataType:
+    type: "String"
+- name: "EXT_CLAV_BAL_OUTS_CA"
+  dataType:
+    type: "Double"
+- name: "EXT_CLAV_DATE_REJECT_CA"
+  dataType:
+    type: "Double"
+- name: "EXT_CLAV_DATE_EXP_CA"
+  dataType:
+    type: "Double"
+- name: "CTL_REC_MD5_HA"
+  dataType:
+    type: "String"
+- name: "EXT_CLAV_CLAM_KEY_CA"
+  dataType:
+    type: "String"
+- name: "EXT_CLAV_PAID_CA"
+  dataType:
+    type: "Double"
+- name: "EXT_CLAV_OTHER_PARTY"
+  dataType:
+    type: "String"
+- name: "EXT_CLAV_HANDLER_CA"
+  dataType:
+    type: "String"
+- name: "EXT_CLAV_TYPE_UX_CA"
+  dataType:
+    type: "String"
+- name: "EXT_CLAV_SALVAGE_CA"
+  dataType:
+    type: "String"
+- name: "EXT_CLAV_INCURRED_YTD_CA"
+  dataType:
+    type: "Double"
+- name: "EXT_CLAV_PAID_SH_CA"
+  dataType:
+    type: "Double"
+- name: "CTL_JOB_ID"
+  dataType:
+    type: "Integer"
+- name: "EXT_CLAV_DESC2_CA"
+  dataType:
+    type: "String"
+- name: "EXT_CLAV_CLM_DESC1_CA"
+  dataType:
+    type: "String"
+- name: "EXT_CLAV_SOURCE_CO_CA"
+  dataType:
+    type: "String"
+- name: "CTL_LOAD_END_DM"
+  dataType:
+    type: "Timestamp"
+- name: "EXT_CLAV_DIV_11_DATE_CA"
+  dataType:
+    type: "Double"
+- name: "CLAIM_HK"
+  dataType:
+    type: "String"
+- name: "EXT_CLAV_MAA_SENT_CA"
+  dataType:
+    type: "Double"
+- name: "EXT_CLAV_TERM_ID"
+  dataType:
+    type: "String"
+- name: "EXT_CLAV_MULT_UNIT_CA"
+  dataType:
+    type: "String"
+- name: "EXT_CLAV_LIAB_DATE_CA"
+  dataType:
+    type: "Double"
+- name: "EXT_CLAV_PAID_TU_CA"
+  dataType:
+    type: "Double"
+- name: "EXT_CLAV_RECOVERY_AMT_CA"
+  dataType:
+    type: "Double"
+- name: "EXT_CLAV_ACCT_KEY_CA"
+  dataType:
+    type: "String"
+- name: "EXT_CLAV_SUB_CLASS_CA"
+  dataType:
+    type: "String"
+- name: "CTL_SRC_CD"
+  dataType:
+    type: "String"
+- name: "EXT_CLAV_REOPEN_CA"
+  dataType:
+    type: "String"
+- name: "EXT_CLAV_DATE_OCC_CA"
+  dataType:
+    type: "Double"
+- name: "EXT_CLAV_INVESTGAT_CA"
+  dataType:
+    type: "String"
+- name: "EXT_CLAV_CLNT_KEY_CA"
+  dataType:
+    type: "String"
+- name: "EXT_CLAV_VIP_CLAIM_CA"
+  dataType:
+    type: "String"
+- name: "EXT_CLAV_DATE_NOTIFIED_CA"
+  dataType:
+    type: "Double"
+- name: "EXT_CLAV_CLMT_TYPE_CA"
+  dataType:
+    type: "String"
+- name: "EXT_CLAV_GST_CAT_CA"
+  dataType:
+    type: "String"
+- name: "EXT_CLAV_DIV_78_XS_CA"
+  dataType:
+    type: "String"
+- name: "EXT_CLAV_INC_TU_CA"
+  dataType:
+    type: "Double"
+- name: "EXT_CLAV_SOLICTOR_A_CA"
+  dataType:
+    type: "String"
+- name: "EXT_CLAV_ASSESSR_A_CA"
+  dataType:
+    type: "String"
+- name: "EXT_CLAV_VALID_FLAG"
+  dataType:
+    type: "Double"
+- name: "EXT_CLAV_DATE_REPT_CA"
+  dataType:
+    type: "Double"
+- name: "EXT_CLAV_DUPL_STS_CA"
+  dataType:
+    type: "String"
+- name: "CTL_BATCH_ID"
+  dataType:
+    type: "Integer"
+- name: "EXT_CLAV_DIV_78_DATE_CA"
+  dataType:
+    type: "Double"
+- name: "EXT_CLAV_RATE_NCB_CA"
+  dataType:
+    type: "String"
+- name: "EXT_CLAV_CLAIMANT_CA"
+  dataType:
+    type: "String"
+- name: "EXT_CLAV_STATUS_DATE_CA"
+  dataType:
+    type: "Double"
+- name: "EXT_CLAV_ESTIMATE_CA"
+  dataType:
+    type: "Double"
+- name: "EXT_CLAV_CODE"
+  dataType:
+    type: "String"
+- name: "EXT_CLAV_RECOVERY_CA"
+  dataType:
+    type: "String"
+- name: "EXT_CLAV_CHANGE_DATE_CA"
+  dataType:
+    type: "Double"
+- name: "EXT_CLAV_FRAUD_FLG_CA"
+  dataType:
+    type: "String"
+- name: "EXT_CLAV_PERIOD_TU_CA"
+  dataType:
+    type: "Double"
+- name: "EXT_CLAV_CLM_INITIAL"
+  dataType:
+    type: "String"
+- name: "EXT_CLAV_RISK_KEY_CA"
+  dataType:
+    type: "String"
+- name: "EXT_CLAV_RSK_CLASS_CA"
+  dataType:
+    type: "String"
+- name: "EXT_CLAV_CLAIM_STATUS_CA"
+  dataType:
+    type: "String"
+- name: "EXT_CLAV_DATE_ACCEPT_CA"
+  dataType:
+    type: "Double"
+- name: "EXT_CLAV_ICA_CAT_CA"
+  dataType:
+    type: "String"
+- name: "EXT_CLAV_PAY_BLOCK_CA"
+  dataType:
+    type: "String"
+- name: "EXT_CLAV_NON_STD_CA"
+  dataType:
+    type: "String"
+- name: "EXT_CLAV_RI_METHOD_CA"
+  dataType:
+    type: "String"
+- name: "EXT_CLAV_GCLM_KEY_CA"
+  dataType:
+    type: "String"
+- name: "EXT_CLAV_CLIENT_CLAM_NO_CA"
+  dataType:
+    type: "String"
+- name: "EXT_CLAV_RI_BO_TU_CA"
+  dataType:
+    type: "Double"
+- name: "EXT_CLAV_LAST_EXT_CA"
+  dataType:
+    type: "Double"
+- name: "CLAIM_BK"
+  dataType:
+    type: "String"
+- name: "EXT_CLAV_RI_INC_TU_CA"
+  dataType:
+    type: "Double"
+- name: "EXT_CLAV_DAM_PERC_CA"
+  dataType:
+    type: "Double"
+- name: "CTL_DEL_YN"
+  dataType:
+    type: "String"
+- name: "EXT_CLAV_RI_TRNO_CA"
+  dataType:
+    type: "Double"
+- name: "EXT_CLAV_INCURRED_SH_CA"
+  dataType:
+    type: "Double"
+- name: "EXT_CLAV_CLAM_BRCH_CA"
+  dataType:
+    type: "String"
+- name: "EXT_CLAV_LIAB_STATUS_CA"
+  dataType:
+    type: "String"
+- name: "EXT_CLAV_HANDLG_BR_CA"
+  dataType:
+    type: "String"
+- name: "EXT_CLAV_SECT155D_CA"
+  dataType:
+    type: "String"
+- name: "EXT_CLAV_INCURRED_CA"
+  dataType:
+    type: "Double"
+- name: "EXT_CLAV_TRAN_NO"
+  dataType:
+    type: "Double"
+- name: "EXT_CLAV_DATE_INC_CA"
+  dataType:
+    type: "Double"
+- name: "EXT_CLAV_RI_PAID_TU_CA"
+  dataType:
+    type: "Double"
+- name: "EXT_CLAV_PCODE_L_CA"
+  dataType:
+    type: "String"
+- name: "CTL_LOAD_DM"
+  dataType:
+    type: "Timestamp"
+- name: "EXT_CLAV_CCC_NO_CA"
+  dataType:
+    type: "String"
+- name: "EXT_CLAV_SALVAGE_AMT_CA"
+  dataType:
+    type: "Double"
+- name: "EXT_CLAV_PORTFOLIO_CA"
+  dataType:
+    type: "String"
+- name: "EXT_CLAV_DIV_11_XS_CA"
+  dataType:
+    type: "String"
+- name: "EXT_CLAV_TIME_OCC_CA"
+  dataType:
+    type: "Double"
+- name: "EXT_CLAV_PREV_LAST_EXT_CA"
+  dataType:
+    type: "Double"
+- name: "EXT_CLAV_VULN_FLAG_CA"
+  dataType:
+    type: "String"
+- name: "EXT_CLAV_BAL_OUTS_SH_CA"
+  dataType:
+    type: "Double"
+- name: "EXT_CLAV_INCURRED_PR_CA"
+  dataType:
+    type: "Double"
+- name: "EXT_CLAV_BR_TFR_FLG_CA"
+  dataType:
+    type: "String"
+- name: "EXT_CLAV_BO_TU_CA"
+  dataType:
+    type: "Double"

@@ -1,0 +1,6 @@
+---
+version: 2
+models:
+- name: "35_SDM_mp_mdl_sdm_Data_GI_Claim_Movement__sh_DATA_GI_CLAIM_MOVEMENT"
+  tags:
+  - "prophecy_temp"

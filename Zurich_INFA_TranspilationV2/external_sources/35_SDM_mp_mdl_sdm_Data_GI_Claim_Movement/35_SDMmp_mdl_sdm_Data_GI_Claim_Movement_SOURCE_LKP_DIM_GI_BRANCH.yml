@@ -1,0 +1,9 @@
+entityType: ""
+providerType: "Databricks"
+fields:
+- name: "BRANCH_ID"
+  dataType:
+    type: "Integer"
+- name: "STATE_ID"
+  dataType:
+    type: "Integer"

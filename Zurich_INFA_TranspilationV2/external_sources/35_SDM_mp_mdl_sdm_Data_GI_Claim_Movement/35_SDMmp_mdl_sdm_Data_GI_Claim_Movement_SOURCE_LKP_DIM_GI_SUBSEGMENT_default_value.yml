@@ -1,0 +1,9 @@
+entityType: ""
+providerType: "Databricks"
+fields:
+- name: "SUBSEGMENT_ID"
+  dataType:
+    type: "Integer"
+- name: "SUBSEGMENT_CODE"
+  dataType:
+    type: "String"

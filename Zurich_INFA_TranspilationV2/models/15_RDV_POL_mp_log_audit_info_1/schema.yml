@@ -1,0 +1,15 @@
+---
+version: 2
+models:
+- name: "15_RDV_POL_mp_log_audit_info_1__AUDIT_TASK_RUN"
+  tags:
+  - "prophecy_temp"
+- name: "15_RDV_POL_mp_log_audit_info_1__DUMMY_EXP"
+  tags:
+  - "prophecy_temp"
+- name: "15_RDV_POL_mp_log_audit_info_1__EXPTRANS"
+  tags:
+  - "prophecy_temp"
+- name: "15_RDV_POL_mp_log_audit_info_1__EXPTRANS1"
+  tags:
+  - "prophecy_temp"

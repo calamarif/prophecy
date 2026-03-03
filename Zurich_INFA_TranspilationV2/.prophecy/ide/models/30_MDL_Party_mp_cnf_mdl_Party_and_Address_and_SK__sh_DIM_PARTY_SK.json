@@ -1,0 +1,1392 @@
+{
+  "id" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_SK",
+  "metainfo" : {
+    "label" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_SK",
+    "autoLayout" : true,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "entityConfig" : {
+        "alias" : "\"sh_DIM_PARTY_SK\"",
+        "materialized" : "table",
+        "database" : "\"qa_team\"",
+        "schema" : "\"qa_orchestration\"",
+        "type" : "ModelConfig"
+      }
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "UNI_Ins_Upd_SK" : {
+      "id" : "UNI_Ins_Upd_SK",
+      "component" : "UnionByName",
+      "metadata" : {
+        "label" : "UNI_Ins_Upd_SK",
+        "x" : 1820,
+        "y" : 320,
+        "phase" : 1
+      },
+      "properties" : {
+        "relation_name" : [ "UNI_Ins_Upd_SK_EXPR_New_SK", "UNI_Ins_Upd_SK_EXPR_Existing_SK" ],
+        "schemas" : [ "[{\"name\": \"NewLookupRow_SK\", \"dataType\": \"Integer\"}, {\"name\": \"GEO_SEGMENT_CODE\", \"dataType\": \"String\"}, {\"name\": \"PARTY_NUM\", \"dataType\": \"String\"}, {\"name\": \"INTL_REF_NUM\", \"dataType\": \"String\"}, {\"name\": \"PARTY_ID_TYPE\", \"dataType\": \"String\"}, {\"name\": \"INTL_REF_ID_TYPE\", \"dataType\": \"String\"}, {\"name\": \"PARTY_TYPE_CODE\", \"dataType\": \"String\"}, {\"name\": \"PERS_CMPY_FLG\", \"dataType\": \"String\"}, {\"name\": \"CTL_SRC_SYS_SET_NAME\", \"dataType\": \"String\"}, {\"name\": \"REC_START_DATE\", \"dataType\": \"Timestamp\"}, {\"name\": \"CTL_REC_CRTN_DATE\", \"dataType\": \"Timestamp\"}, {\"name\": \"CTL_JOB_ID\", \"dataType\": \"Integer\"}, {\"name\": \"CTL_BATCH_ID\", \"dataType\": \"Integer\"}, {\"name\": \"CTL_SRC_ROW_ID\", \"dataType\": \"Integer\"}, {\"name\": \"CTL_EXTRACT_ID\", \"dataType\": \"Integer\"}, {\"name\": \"PARTY_ID\", \"dataType\": \"Integer\"}]", "[{\"name\": \"NewLookupRow_SK\", \"dataType\": \"Integer\"}, {\"name\": \"GEO_SEGMENT_CODE\", \"dataType\": \"String\"}, {\"name\": \"PARTY_NUM\", \"dataType\": \"String\"}, {\"name\": \"INTL_REF_NUM\", \"dataType\": \"String\"}, {\"name\": \"PARTY_ID_TYPE\", \"dataType\": \"String\"}, {\"name\": \"INTL_REF_ID_TYPE\", \"dataType\": \"String\"}, {\"name\": \"PARTY_TYPE_CODE\", \"dataType\": \"String\"}, {\"name\": \"PERS_CMPY_FLG\", \"dataType\": \"String\"}, {\"name\": \"CTL_SRC_SYS_SET_NAME\", \"dataType\": \"String\"}, {\"name\": \"REC_START_DATE\", \"dataType\": \"String\"}, {\"name\": \"CTL_REC_CRTN_DATE\", \"dataType\": \"String\"}, {\"name\": \"CTL_JOB_ID\", \"dataType\": \"Integer\"}, {\"name\": \"CTL_BATCH_ID\", \"dataType\": \"Integer\"}, {\"name\": \"CTL_SRC_ROW_ID\", \"dataType\": \"Integer\"}, {\"name\": \"CTL_EXTRACT_ID\", \"dataType\": \"Integer\"}, {\"name\": \"PARTY_ID\", \"dataType\": \"Integer\"}]" ],
+        "missingColumnOps" : "allowMissingColumns",
+        "_oldMacroProperties" : {
+          "macroName" : "UnionByName",
+          "projectName" : "prophecy_basics",
+          "parameters" : [ {
+            "name" : "relation_name",
+            "value" : "[\"UNI_Ins_Upd_SK_EXPR_New_SK\", \"UNI_Ins_Upd_SK_EXPR_Existing_SK\"]"
+          }, {
+            "name" : "schemas",
+            "value" : "[\"[{\\\"name\\\": \\\"NewLookupRow_SK\\\", \\\"dataType\\\": \\\"Integer\\\"}, {\\\"name\\\": \\\"GEO_SEGMENT_CODE\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"PARTY_NUM\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"INTL_REF_NUM\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"PARTY_ID_TYPE\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"INTL_REF_ID_TYPE\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"PARTY_TYPE_CODE\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"PERS_CMPY_FLG\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"CTL_SRC_SYS_SET_NAME\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"REC_START_DATE\\\", \\\"dataType\\\": \\\"Timestamp\\\"}, {\\\"name\\\": \\\"CTL_REC_CRTN_DATE\\\", \\\"dataType\\\": \\\"Timestamp\\\"}, {\\\"name\\\": \\\"CTL_JOB_ID\\\", \\\"dataType\\\": \\\"Integer\\\"}, {\\\"name\\\": \\\"CTL_BATCH_ID\\\", \\\"dataType\\\": \\\"Integer\\\"}, {\\\"name\\\": \\\"CTL_SRC_ROW_ID\\\", \\\"dataType\\\": \\\"Integer\\\"}, {\\\"name\\\": \\\"CTL_EXTRACT_ID\\\", \\\"dataType\\\": \\\"Integer\\\"}, {\\\"name\\\": \\\"PARTY_ID\\\", \\\"dataType\\\": \\\"Integer\\\"}]\", \"[{\\\"name\\\": \\\"NewLookupRow_SK\\\", \\\"dataType\\\": \\\"Integer\\\"}, {\\\"name\\\": \\\"GEO_SEGMENT_CODE\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"PARTY_NUM\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"INTL_REF_NUM\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"PARTY_ID_TYPE\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"INTL_REF_ID_TYPE\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"PARTY_TYPE_CODE\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"PERS_CMPY_FLG\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"CTL_SRC_SYS_SET_NAME\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"REC_START_DATE\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"CTL_REC_CRTN_DATE\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"CTL_JOB_ID\\\", \\\"dataType\\\": \\\"Integer\\\"}, {\\\"name\\\": \\\"CTL_BATCH_ID\\\", \\\"dataType\\\": \\\"Integer\\\"}, {\\\"name\\\": \\\"CTL_SRC_ROW_ID\\\", \\\"dataType\\\": \\\"Integer\\\"}, {\\\"name\\\": \\\"CTL_EXTRACT_ID\\\", \\\"dataType\\\": \\\"Integer\\\"}, {\\\"name\\\": \\\"PARTY_ID\\\", \\\"dataType\\\": \\\"Integer\\\"}]\"]"
+          }, {
+            "name" : "missingColumnOps",
+            "value" : "allowMissingColumns"
+          } ]
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "UNI_Ins_Upd_SK_in0",
+          "slug" : "in0"
+        }, {
+          "id" : "UNI_Ins_Upd_SK_in1",
+          "slug" : "in1"
+        } ],
+        "outputs" : [ {
+          "id" : "UNI_Ins_Upd_SK_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "QvK502OoTvnZbvT5dzZNn" : {
+      "id" : "QvK502OoTvnZbvT5dzZNn",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "RTR_New_Existing_SK_out1",
+        "x" : 1220,
+        "y" : 420,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "condition" : {
+          "expression" : "(NewLookupRow_SK = 2)",
+          "_row_id" : null
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "JQ8FqFRiNmvAG95zFggl7",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "Qb680L0Qnr6lxSc1cNFZQ",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "UNI_Ins_Upd_SK_EXPR_Existing_SK" : {
+      "id" : "UNI_Ins_Upd_SK_EXPR_Existing_SK",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "UNI_Ins_Upd_SK_EXPR_Existing_SK",
+        "x" : 1620,
+        "y" : 420,
+        "phase" : 1
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "CAST(NULL AS INTEGER)",
+            "_row_id" : null
+          },
+          "alias" : "NewLookupRow_SK",
+          "description" : null,
+          "_row_id" : "C-20BtTC5EuViKLZ_lA6A"
+        }, {
+          "expression" : {
+            "expression" : "CAST(NULL AS string)",
+            "_row_id" : null
+          },
+          "alias" : "GEO_SEGMENT_CODE",
+          "description" : null,
+          "_row_id" : "n1WFc1-pRruVxN7bZVZdv"
+        }, {
+          "expression" : {
+            "expression" : "CAST(NULL AS string)",
+            "_row_id" : null
+          },
+          "alias" : "PARTY_NUM",
+          "description" : null,
+          "_row_id" : "tNpo_EjYvR0FOvfP4rQWG"
+        }, {
+          "expression" : {
+            "expression" : "INTL_REF_NUM2",
+            "_row_id" : null
+          },
+          "alias" : "INTL_REF_NUM",
+          "description" : null,
+          "_row_id" : "jfjlHfpMpZqTGDIIGks2U"
+        }, {
+          "expression" : {
+            "expression" : "CAST(NULL AS string)",
+            "_row_id" : null
+          },
+          "alias" : "PARTY_ID_TYPE",
+          "description" : null,
+          "_row_id" : "q39du4BSzL1cVSX4793HI"
+        }, {
+          "expression" : {
+            "expression" : "INTL_REF_ID_TYPE2",
+            "_row_id" : null
+          },
+          "alias" : "INTL_REF_ID_TYPE",
+          "description" : null,
+          "_row_id" : "1pJx8M66N6y0TE3EfPlkp"
+        }, {
+          "expression" : {
+            "expression" : "CAST(NULL AS string)",
+            "_row_id" : null
+          },
+          "alias" : "PARTY_TYPE_CODE",
+          "description" : null,
+          "_row_id" : "OKAfsyuDDGfGRdK3F-AHX"
+        }, {
+          "expression" : {
+            "expression" : "PERS_CMPY_FLG2",
+            "_row_id" : null
+          },
+          "alias" : "PERS_CMPY_FLG",
+          "description" : null,
+          "_row_id" : "ZG3rsJliv8E4L70eFJQex"
+        }, {
+          "expression" : {
+            "expression" : "CAST(NULL AS string)",
+            "_row_id" : null
+          },
+          "alias" : "CTL_SRC_SYS_SET_NAME",
+          "description" : null,
+          "_row_id" : "Z9S6zk47wPNXfeYzWha-H"
+        }, {
+          "expression" : {
+            "expression" : "CAST(NULL AS string)",
+            "_row_id" : null
+          },
+          "alias" : "REC_START_DATE",
+          "description" : null,
+          "_row_id" : "G_gSS3vY0d-jMKmQpKGK2"
+        }, {
+          "expression" : {
+            "expression" : "CAST(NULL AS string)",
+            "_row_id" : null
+          },
+          "alias" : "CTL_REC_CRTN_DATE",
+          "description" : null,
+          "_row_id" : "Jbyp1_jokRbO7c5_J-yfW"
+        }, {
+          "expression" : {
+            "expression" : "CAST(NULL AS INTEGER)",
+            "_row_id" : null
+          },
+          "alias" : "CTL_JOB_ID",
+          "description" : null,
+          "_row_id" : "dUdUs_0c0BqilHA_9mZdg"
+        }, {
+          "expression" : {
+            "expression" : "CAST(NULL AS INTEGER)",
+            "_row_id" : null
+          },
+          "alias" : "CTL_BATCH_ID",
+          "description" : null,
+          "_row_id" : "zuYHAUP5NBkTlRvMnUN6F"
+        }, {
+          "expression" : {
+            "expression" : "CAST(NULL AS INTEGER)",
+            "_row_id" : null
+          },
+          "alias" : "CTL_SRC_ROW_ID",
+          "description" : null,
+          "_row_id" : "ClaxYgCXb8qSLD39LpSlJ"
+        }, {
+          "expression" : {
+            "expression" : "CAST(NULL AS INTEGER)",
+            "_row_id" : null
+          },
+          "alias" : "CTL_EXTRACT_ID",
+          "description" : null,
+          "_row_id" : "RNBjaKBMZyLmmzEPJLSSw"
+        }, {
+          "expression" : {
+            "expression" : "PARTY_ID2",
+            "_row_id" : null
+          },
+          "alias" : "PARTY_ID",
+          "description" : null,
+          "_row_id" : "F8iG8SymkXIZh2HkNfoqG"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "UNI_Ins_Upd_SK_EXPR_Existing_SK_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "UNI_Ins_Upd_SK_EXPR_Existing_SK_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "EiOZcl2ZAfSQDN1C9mIpu" : {
+      "id" : "EiOZcl2ZAfSQDN1C9mIpu",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "RTR_New_Existing_SK_out0",
+        "x" : 1220,
+        "y" : 220,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "condition" : {
+          "expression" : "(NewLookupRow_SK = 1)",
+          "_row_id" : null
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "akVcMkCxEW8M97pB8FXeI",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "rBblPHKNKQmSHU7kwiKH6",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "RTR_New_Existing_SK_EXPR_New_SK" : {
+      "id" : "RTR_New_Existing_SK_EXPR_New_SK",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "RTR_New_Existing_SK_EXPR_New_SK",
+        "x" : 1420,
+        "y" : 220,
+        "phase" : 1
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "REC_STRT_DATE",
+            "_row_id" : null
+          },
+          "alias" : "REC_START_DATE2",
+          "description" : null,
+          "_row_id" : "ZhZeP_VmPaU2MrRRviYUy"
+        }, {
+          "expression" : {
+            "expression" : "REC_END_DATE_CLOSED",
+            "_row_id" : null
+          },
+          "alias" : "REC_END_DATE_CLOSED1",
+          "description" : null,
+          "_row_id" : "fDePLKD56XsgzIW5_Qrvx"
+        }, {
+          "expression" : {
+            "expression" : "REC_END_DATE_HIGH",
+            "_row_id" : null
+          },
+          "alias" : "REC_END_DATE_HIGH1",
+          "description" : null,
+          "_row_id" : "D4veck70dpK1j-oL-ClLd"
+        }, {
+          "expression" : {
+            "expression" : "CTL_REC_CRTN_DATE",
+            "_row_id" : null
+          },
+          "alias" : "CTL_REC_CRTN_DATE1",
+          "description" : null,
+          "_row_id" : "gTQamAKrv6_8refMmLZ8h"
+        }, {
+          "expression" : {
+            "expression" : "CTL_JOB_ID",
+            "_row_id" : null
+          },
+          "alias" : "CTL_JOB_ID1",
+          "description" : null,
+          "_row_id" : "ta8eT2TGeKwOZT9zpBav_"
+        }, {
+          "expression" : {
+            "expression" : "NewLookupRow_SK",
+            "_row_id" : null
+          },
+          "alias" : "NewLookupRow_SK2",
+          "description" : null,
+          "_row_id" : "2IPcVJZ23pFx7O_dafr3_"
+        }, {
+          "expression" : {
+            "expression" : "GEO_SEGMENT_CODE",
+            "_row_id" : null
+          },
+          "alias" : "GEO_SEGMENT_CODE1",
+          "description" : null,
+          "_row_id" : "ZZYktGsc4fWYGYwtu76op"
+        }, {
+          "expression" : {
+            "expression" : "PARTY_NUM",
+            "_row_id" : null
+          },
+          "alias" : "PARTY_NUM1",
+          "description" : null,
+          "_row_id" : "Qewos6ec88p0kCZ4hOdDI"
+        }, {
+          "expression" : {
+            "expression" : "INTNL_REF_NUM",
+            "_row_id" : null
+          },
+          "alias" : "INTL_REF_NUM1",
+          "description" : null,
+          "_row_id" : "-2joxjWJtAiFyhg_ozRs-"
+        }, {
+          "expression" : {
+            "expression" : "PARTY_ID_TYPE",
+            "_row_id" : null
+          },
+          "alias" : "PARTY_ID_TYPE1",
+          "description" : null,
+          "_row_id" : "7IITXLX1952uHa7On5Vqy"
+        }, {
+          "expression" : {
+            "expression" : "INTN_REF_ID_TYPE",
+            "_row_id" : null
+          },
+          "alias" : "INTL_REF_ID_TYPE1",
+          "description" : null,
+          "_row_id" : "PpArRtSr-wyYQsaD57k-N"
+        }, {
+          "expression" : {
+            "expression" : "PERS_CMPY_FLG",
+            "_row_id" : null
+          },
+          "alias" : "PERS_CMPY_FLG1",
+          "description" : null,
+          "_row_id" : "6fCDiZxx9bbIFHfZO7JxB"
+        }, {
+          "expression" : {
+            "expression" : "PARTY_ID",
+            "_row_id" : null
+          },
+          "alias" : "PARTY_ID1",
+          "description" : null,
+          "_row_id" : "5MT1vayWdaJfDFWBYNYFX"
+        }, {
+          "expression" : {
+            "expression" : "PARTY_TYPE_CODE",
+            "_row_id" : null
+          },
+          "alias" : "PARTY_TYPE_CODE1",
+          "description" : null,
+          "_row_id" : "g5ufQXeiBPeOPPRMCvbA7"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME",
+            "_row_id" : null
+          },
+          "alias" : "FIRST_NAME1",
+          "description" : null,
+          "_row_id" : "CrAtRNw1SVYSHbYfpQIcw"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME",
+            "_row_id" : null
+          },
+          "alias" : "LAST_NAME1",
+          "description" : null,
+          "_row_id" : "iug0kIhgElaLTlMem8tDQ"
+        }, {
+          "expression" : {
+            "expression" : "EMAIL_ADDR",
+            "_row_id" : null
+          },
+          "alias" : "EMAIL_ADDR1",
+          "description" : null,
+          "_row_id" : "3y4Uf6G-3uwI7WizUbfmd"
+        }, {
+          "expression" : {
+            "expression" : "TITLE",
+            "_row_id" : null
+          },
+          "alias" : "TITLE1",
+          "description" : null,
+          "_row_id" : "CTyHyWu40WBfujZRyn0-L"
+        }, {
+          "expression" : {
+            "expression" : "JOB_TITLE",
+            "_row_id" : null
+          },
+          "alias" : "JOB_TITLE1",
+          "description" : null,
+          "_row_id" : "ZUm85M8v4UxEtOShbGZ8H"
+        }, {
+          "expression" : {
+            "expression" : "OTHER_NAME",
+            "_row_id" : null
+          },
+          "alias" : "OTHER_NAME1",
+          "description" : null,
+          "_row_id" : "dHH9I6lcBmtvNM1tTsvGs"
+        }, {
+          "expression" : {
+            "expression" : "GENDER_FLG",
+            "_row_id" : null
+          },
+          "alias" : "GENDER_FLG1",
+          "description" : null,
+          "_row_id" : "YksdS1P83tMc182OkZBT7"
+        }, {
+          "expression" : {
+            "expression" : "DOB",
+            "_row_id" : null
+          },
+          "alias" : "DOB1",
+          "description" : null,
+          "_row_id" : "vSMNEUTmNDHqafxerSc-2"
+        }, {
+          "expression" : {
+            "expression" : "ABN_LICENCE_NUM",
+            "_row_id" : null
+          },
+          "alias" : "ABN_LICENCE_NUM1",
+          "description" : null,
+          "_row_id" : "cifmAhs2IJuCA4-M_D-Jx"
+        }, {
+          "expression" : {
+            "expression" : "BUSN_PHONE_NUM",
+            "_row_id" : null
+          },
+          "alias" : "BUSN_PHONE_NUM1",
+          "description" : null,
+          "_row_id" : "HVzdfhOhQSNb0_aB3D0eP"
+        }, {
+          "expression" : {
+            "expression" : "PRIVATE_PHONE_NUM",
+            "_row_id" : null
+          },
+          "alias" : "PRIVATE_PHONE_NUM1",
+          "description" : null,
+          "_row_id" : "IW_NNRD8e-wGPCKWQ_YHG"
+        }, {
+          "expression" : {
+            "expression" : "FAX_NUM",
+            "_row_id" : null
+          },
+          "alias" : "FAX_NUM1",
+          "description" : null,
+          "_row_id" : "kJp-NmwyjBsWR3-WOX0TS"
+        }, {
+          "expression" : {
+            "expression" : "MOBILE_PHONE_NUM",
+            "_row_id" : null
+          },
+          "alias" : "MOBILE_PHONE_NUM1",
+          "description" : null,
+          "_row_id" : "SBO8XqhTpe8ylWVtCbr0O"
+        }, {
+          "expression" : {
+            "expression" : "WEB_SITE",
+            "_row_id" : null
+          },
+          "alias" : "WEB_SITE1",
+          "description" : null,
+          "_row_id" : "R081Cp3uJ23HGl4vLfoDE"
+        }, {
+          "expression" : {
+            "expression" : "OUT_VALID_ADDRESS_FLAG",
+            "_row_id" : null
+          },
+          "alias" : "OUT_VALID_ADDRESS_FLAG1",
+          "description" : null,
+          "_row_id" : "7eqRH_4Vb_2sE-3MoGLLo"
+        }, {
+          "expression" : {
+            "expression" : "LCTN",
+            "_row_id" : null
+          },
+          "alias" : "LCTN1",
+          "description" : null,
+          "_row_id" : "hMb0j7rZqi556OvUmSBHM"
+        }, {
+          "expression" : {
+            "expression" : "DELIVERY_POINT",
+            "_row_id" : null
+          },
+          "alias" : "DELIVERY_POINT1",
+          "description" : null,
+          "_row_id" : "iiarPeqpCpKpTXW5N-Lj-"
+        }, {
+          "expression" : {
+            "expression" : "STREET_NO",
+            "_row_id" : null
+          },
+          "alias" : "STREET_NO1",
+          "description" : null,
+          "_row_id" : "qhMIgDgN2woMSvJVdXqV-"
+        }, {
+          "expression" : {
+            "expression" : "STREET_NAME",
+            "_row_id" : null
+          },
+          "alias" : "STREET_NAME1",
+          "description" : null,
+          "_row_id" : "1ozKgOdoEaqiNMHAACj39"
+        }, {
+          "expression" : {
+            "expression" : "SUBURB",
+            "_row_id" : null
+          },
+          "alias" : "SUBURB1",
+          "description" : null,
+          "_row_id" : "e4boS3Wgxqt_coqMKx5nG"
+        }, {
+          "expression" : {
+            "expression" : "PCODE",
+            "_row_id" : null
+          },
+          "alias" : "PCODE1",
+          "description" : null,
+          "_row_id" : "hzjB8eLbvPblSrg8FlalN"
+        }, {
+          "expression" : {
+            "expression" : "STATE",
+            "_row_id" : null
+          },
+          "alias" : "STATE1",
+          "description" : null,
+          "_row_id" : "57QDCDVGM7xGeDDFr4nvw"
+        }, {
+          "expression" : {
+            "expression" : "DELIVERY_CODE",
+            "_row_id" : null
+          },
+          "alias" : "DELIVERY_CODE1",
+          "description" : null,
+          "_row_id" : "f8hk0B0P2bpSOm7YyDyvY"
+        }, {
+          "expression" : {
+            "expression" : "GEO_CODE",
+            "_row_id" : null
+          },
+          "alias" : "GEO_CODE1",
+          "description" : null,
+          "_row_id" : "uXtUTnI_7nL37MZxnmJZm"
+        }, {
+          "expression" : {
+            "expression" : "ADDR_ROLE_CODE",
+            "_row_id" : null
+          },
+          "alias" : "ADDR_ROLE_CODE1",
+          "description" : null,
+          "_row_id" : "uKn6tIHI7UPBouZ3qfbae"
+        }, {
+          "expression" : {
+            "expression" : "CTL_BATCH_ID",
+            "_row_id" : null
+          },
+          "alias" : "CTL_BATCH_ID1",
+          "description" : null,
+          "_row_id" : "Lwum_BanVIrrBh8Cti5Ph"
+        }, {
+          "expression" : {
+            "expression" : "CTL_SRC_ROW_ID",
+            "_row_id" : null
+          },
+          "alias" : "CTL_SRC_ROW_ID1",
+          "description" : null,
+          "_row_id" : "JinB7cBE4qlY_ksw6P0OM"
+        }, {
+          "expression" : {
+            "expression" : "CTL_SRC_SYS_SET_NAME",
+            "_row_id" : null
+          },
+          "alias" : "CTL_SRC_SYS_SET_NAME1",
+          "description" : null,
+          "_row_id" : "CulX8DS4XCIpCVOLgu3g1"
+        }, {
+          "expression" : {
+            "expression" : "CTL_EXTRACT_ID",
+            "_row_id" : null
+          },
+          "alias" : "CTL_EXTRACT_ID1",
+          "description" : null,
+          "_row_id" : "6YtZhkr2rhnPLbDfNJKO9"
+        }, {
+          "expression" : {
+            "expression" : "TAX_FILE_NUM",
+            "_row_id" : null
+          },
+          "alias" : "TAX_FILE_NUM1",
+          "description" : null,
+          "_row_id" : "S49vPWkXgss4qvRJKhTi0"
+        }, {
+          "expression" : {
+            "expression" : "IS_PREF_PARTY_DATA",
+            "_row_id" : null
+          },
+          "alias" : "IS_PREF_PARTY_DATA1",
+          "description" : null,
+          "_row_id" : "xqI-dCWRchM2BNfZO8kik"
+        }, {
+          "expression" : {
+            "expression" : "ANZSIC_CODE",
+            "_row_id" : null
+          },
+          "alias" : "ANZSIC_CODE1",
+          "description" : null,
+          "_row_id" : "fZGbqtJ6kLFfgGZKPlWcW"
+        }, {
+          "expression" : {
+            "expression" : "ACN",
+            "_row_id" : null
+          },
+          "alias" : "ACN1",
+          "description" : null,
+          "_row_id" : "qv8OigzjmcxefJr4BHUtp"
+        }, {
+          "expression" : {
+            "expression" : "LOCATION_CODE",
+            "_row_id" : null
+          },
+          "alias" : "LOCATION_CODE1",
+          "description" : null,
+          "_row_id" : "JvAOAmGKmGWztLyYiN6v6"
+        }, {
+          "expression" : {
+            "expression" : "GEO_SOURCE",
+            "_row_id" : null
+          },
+          "alias" : "GEO_SOURCE1",
+          "description" : null,
+          "_row_id" : "-L1N9VujjnxVcplcX3C-X"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "RTR_New_Existing_SK_EXPR_New_SK_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "RTR_New_Existing_SK_EXPR_New_SK_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "sh_DIM_PARTY_SK" : {
+      "id" : "sh_DIM_PARTY_SK",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "sh_DIM_PARTY_SK",
+        "phase" : 1
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "\nSELECT *\n\nFROM UNI_Ins_Upd_SK\n\n",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "sh_DIM_PARTY_SK_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "-0GZC2szwL3Jb_TzM7Ozi",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "RTR_New_Existing_SK_JOIN_EXPR_191_RTR_New_Existing_SK_JOIN_EXPR_191_out0" : {
+      "id" : "RTR_New_Existing_SK_JOIN_EXPR_191_RTR_New_Existing_SK_JOIN_EXPR_191_out0",
+      "component" : "SQLStatement",
+      "metadata" : {
+        "label" : "RTR_New_Existing_SK_JOIN_EXPR_191"
+      },
+      "properties" : {
+        "fileTabs" : [ {
+          "path" : "output_port_6",
+          "id" : "output_port_6",
+          "language" : "sql",
+          "content" : "\nSELECT *\n\nFROM {{ ref('30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__RTR_New_Existing_SK_JOIN_EXPR_191') }}\n\n"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_6",
+          "slug" : "input_port_6"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_6",
+          "slug" : "output_port_6"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "UNI_Ins_Upd_SK_EXPR_New_SK" : {
+      "id" : "UNI_Ins_Upd_SK_EXPR_New_SK",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "UNI_Ins_Upd_SK_EXPR_New_SK",
+        "x" : 1620,
+        "y" : 220,
+        "phase" : 1
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "NewLookupRow_SK2",
+            "_row_id" : null
+          },
+          "alias" : "NewLookupRow_SK",
+          "description" : null,
+          "_row_id" : "CqKrh4i2niMmE7h58vz4u"
+        }, {
+          "expression" : {
+            "expression" : "GEO_SEGMENT_CODE1",
+            "_row_id" : null
+          },
+          "alias" : "GEO_SEGMENT_CODE",
+          "description" : null,
+          "_row_id" : "hvQssN2Dfh2bFfpVNACcv"
+        }, {
+          "expression" : {
+            "expression" : "PARTY_NUM1",
+            "_row_id" : null
+          },
+          "alias" : "PARTY_NUM",
+          "description" : null,
+          "_row_id" : "9oz1PJN-24fe0ORTy2LQ0"
+        }, {
+          "expression" : {
+            "expression" : "INTL_REF_NUM1",
+            "_row_id" : null
+          },
+          "alias" : "INTL_REF_NUM",
+          "description" : null,
+          "_row_id" : "mHCIeuLHM0Z6UOAyC_Fm0"
+        }, {
+          "expression" : {
+            "expression" : "PARTY_ID_TYPE1",
+            "_row_id" : null
+          },
+          "alias" : "PARTY_ID_TYPE",
+          "description" : null,
+          "_row_id" : "T0UBbgwe9oQfiBKxYmVon"
+        }, {
+          "expression" : {
+            "expression" : "INTL_REF_ID_TYPE1",
+            "_row_id" : null
+          },
+          "alias" : "INTL_REF_ID_TYPE",
+          "description" : null,
+          "_row_id" : "PPfLD0spetC65VSRM6dw3"
+        }, {
+          "expression" : {
+            "expression" : "PARTY_TYPE_CODE1",
+            "_row_id" : null
+          },
+          "alias" : "PARTY_TYPE_CODE",
+          "description" : null,
+          "_row_id" : "uTJoXlDeJLfCqJl1JIQXw"
+        }, {
+          "expression" : {
+            "expression" : "PERS_CMPY_FLG1",
+            "_row_id" : null
+          },
+          "alias" : "PERS_CMPY_FLG",
+          "description" : null,
+          "_row_id" : "sw6zuzEi3bmkzZJnAxgAJ"
+        }, {
+          "expression" : {
+            "expression" : "CTL_SRC_SYS_SET_NAME1",
+            "_row_id" : null
+          },
+          "alias" : "CTL_SRC_SYS_SET_NAME",
+          "description" : null,
+          "_row_id" : "0azi89jHD1DOBDn7n3oDZ"
+        }, {
+          "expression" : {
+            "expression" : "REC_START_DATE2",
+            "_row_id" : null
+          },
+          "alias" : "REC_START_DATE",
+          "description" : null,
+          "_row_id" : "dK-mIY1ba22uQuD7Uv5tX"
+        }, {
+          "expression" : {
+            "expression" : "CTL_REC_CRTN_DATE1",
+            "_row_id" : null
+          },
+          "alias" : "CTL_REC_CRTN_DATE",
+          "description" : null,
+          "_row_id" : "rXDbwGSnI1Ihgvk9GELoH"
+        }, {
+          "expression" : {
+            "expression" : "CTL_JOB_ID1",
+            "_row_id" : null
+          },
+          "alias" : "CTL_JOB_ID",
+          "description" : null,
+          "_row_id" : "nfXI_i001CpD1WCe_vmB7"
+        }, {
+          "expression" : {
+            "expression" : "CTL_BATCH_ID1",
+            "_row_id" : null
+          },
+          "alias" : "CTL_BATCH_ID",
+          "description" : null,
+          "_row_id" : "WsrPcJTkYpS_LZumJrETM"
+        }, {
+          "expression" : {
+            "expression" : "CTL_SRC_ROW_ID1",
+            "_row_id" : null
+          },
+          "alias" : "CTL_SRC_ROW_ID",
+          "description" : null,
+          "_row_id" : "UF0t9yxWlfHpl33LiyJE8"
+        }, {
+          "expression" : {
+            "expression" : "CTL_EXTRACT_ID1",
+            "_row_id" : null
+          },
+          "alias" : "CTL_EXTRACT_ID",
+          "description" : null,
+          "_row_id" : "bcWjN6nqQUQcr1-D8i2vG"
+        }, {
+          "expression" : {
+            "expression" : "PARTY_ID1",
+            "_row_id" : null
+          },
+          "alias" : "PARTY_ID",
+          "description" : null,
+          "_row_id" : "AvTHhOar9MdEGQm832e9Q"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "UNI_Ins_Upd_SK_EXPR_New_SK_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "UNI_Ins_Upd_SK_EXPR_New_SK_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "RTR_New_Existing_SK_EXPR_Existing_SK" : {
+      "id" : "RTR_New_Existing_SK_EXPR_Existing_SK",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "RTR_New_Existing_SK_EXPR_Existing_SK",
+        "x" : 1420,
+        "y" : 420,
+        "phase" : 1
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "REC_STRT_DATE",
+            "_row_id" : null
+          },
+          "alias" : "REC_STRT_DATE3",
+          "description" : null,
+          "_row_id" : "tqPCMu8awuXPip_kNvR6P"
+        }, {
+          "expression" : {
+            "expression" : "REC_END_DATE_CLOSED",
+            "_row_id" : null
+          },
+          "alias" : "REC_END_DATE_CLOSED3",
+          "description" : null,
+          "_row_id" : "maeAPOGTrWaJC1B720uEL"
+        }, {
+          "expression" : {
+            "expression" : "REC_END_DATE_HIGH",
+            "_row_id" : null
+          },
+          "alias" : "REC_END_DATE_HIGH3",
+          "description" : null,
+          "_row_id" : "tfbCOUH6Skyp9gNCgH0yH"
+        }, {
+          "expression" : {
+            "expression" : "CTL_REC_CRTN_DATE",
+            "_row_id" : null
+          },
+          "alias" : "CTL_REC_CRTN_DATE3",
+          "description" : null,
+          "_row_id" : "8WDqnS45WZoau8FiSX1sZ"
+        }, {
+          "expression" : {
+            "expression" : "CTL_JOB_ID",
+            "_row_id" : null
+          },
+          "alias" : "CTL_JOB_ID3",
+          "description" : null,
+          "_row_id" : "wboLqbaY-71k9k8KRIpAk"
+        }, {
+          "expression" : {
+            "expression" : "NewLookupRow_SK",
+            "_row_id" : null
+          },
+          "alias" : "NewLookupRow_SK3",
+          "description" : null,
+          "_row_id" : "48VVs-UmFraaJ7ceVVD-3"
+        }, {
+          "expression" : {
+            "expression" : "GEO_SEGMENT_CODE",
+            "_row_id" : null
+          },
+          "alias" : "GEO_SEGMENT_CODE3",
+          "description" : null,
+          "_row_id" : "xmxeaawiDPrBHm_QbZx_V"
+        }, {
+          "expression" : {
+            "expression" : "PARTY_NUM",
+            "_row_id" : null
+          },
+          "alias" : "PARTY_NUM3",
+          "description" : null,
+          "_row_id" : "o5KE9fi1C7K9__6-ZX3py"
+        }, {
+          "expression" : {
+            "expression" : "INTNL_REF_NUM",
+            "_row_id" : null
+          },
+          "alias" : "INTL_REF_NUM2",
+          "description" : null,
+          "_row_id" : "tBisVPBD6-G4D8CZaJoY2"
+        }, {
+          "expression" : {
+            "expression" : "PARTY_ID_TYPE",
+            "_row_id" : null
+          },
+          "alias" : "PARTY_ID_TYPE3",
+          "description" : null,
+          "_row_id" : "7HcebprlkcmPuKRLlj_oC"
+        }, {
+          "expression" : {
+            "expression" : "INTN_REF_ID_TYPE",
+            "_row_id" : null
+          },
+          "alias" : "INTL_REF_ID_TYPE2",
+          "description" : null,
+          "_row_id" : "-zk4lAjnP-QRLt7XGKvi2"
+        }, {
+          "expression" : {
+            "expression" : "PERS_CMPY_FLG",
+            "_row_id" : null
+          },
+          "alias" : "PERS_CMPY_FLG2",
+          "description" : null,
+          "_row_id" : "KKvt2H5bSjonWzdKcOWOr"
+        }, {
+          "expression" : {
+            "expression" : "PARTY_ID",
+            "_row_id" : null
+          },
+          "alias" : "PARTY_ID2",
+          "description" : null,
+          "_row_id" : "CK6Jz9dUv6Gt7IBdK99Eu"
+        }, {
+          "expression" : {
+            "expression" : "PARTY_TYPE_CODE",
+            "_row_id" : null
+          },
+          "alias" : "PARTY_TYPE_CODE3",
+          "description" : null,
+          "_row_id" : "3z2pC_j78-fVAkv9HZ7gf"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME",
+            "_row_id" : null
+          },
+          "alias" : "FIRST_NAME3",
+          "description" : null,
+          "_row_id" : "wBcMsbjV3g5HJ4rqR4orY"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME",
+            "_row_id" : null
+          },
+          "alias" : "LAST_NAME3",
+          "description" : null,
+          "_row_id" : "04kOSI23lOb0U5TRL69iE"
+        }, {
+          "expression" : {
+            "expression" : "EMAIL_ADDR",
+            "_row_id" : null
+          },
+          "alias" : "EMAIL_ADDR3",
+          "description" : null,
+          "_row_id" : "aWH9BOycz0RLq_On8rLam"
+        }, {
+          "expression" : {
+            "expression" : "TITLE",
+            "_row_id" : null
+          },
+          "alias" : "TITLE3",
+          "description" : null,
+          "_row_id" : "S0fs3wAWJQtQqOTH2y-gH"
+        }, {
+          "expression" : {
+            "expression" : "JOB_TITLE",
+            "_row_id" : null
+          },
+          "alias" : "JOB_TITLE3",
+          "description" : null,
+          "_row_id" : "KSVEeJQ6S4X4mn2uOGViS"
+        }, {
+          "expression" : {
+            "expression" : "OTHER_NAME",
+            "_row_id" : null
+          },
+          "alias" : "OTHER_NAME3",
+          "description" : null,
+          "_row_id" : "l3DjpmcaK0-CDO3SQz5kJ"
+        }, {
+          "expression" : {
+            "expression" : "GENDER_FLG",
+            "_row_id" : null
+          },
+          "alias" : "GENDER_FLG3",
+          "description" : null,
+          "_row_id" : "ysC8TpuYTDyf_lC8D7uLk"
+        }, {
+          "expression" : {
+            "expression" : "DOB",
+            "_row_id" : null
+          },
+          "alias" : "DOB3",
+          "description" : null,
+          "_row_id" : "O1jZjFw4-pcJcRDT6FzH5"
+        }, {
+          "expression" : {
+            "expression" : "ABN_LICENCE_NUM",
+            "_row_id" : null
+          },
+          "alias" : "ABN_LICENCE_NUM3",
+          "description" : null,
+          "_row_id" : "NUtJmk96BQWEG1yGb_7BO"
+        }, {
+          "expression" : {
+            "expression" : "BUSN_PHONE_NUM",
+            "_row_id" : null
+          },
+          "alias" : "BUSN_PHONE_NUM3",
+          "description" : null,
+          "_row_id" : "lNygwvsWADZHy5F222e4Q"
+        }, {
+          "expression" : {
+            "expression" : "PRIVATE_PHONE_NUM",
+            "_row_id" : null
+          },
+          "alias" : "PRIVATE_PHONE_NUM3",
+          "description" : null,
+          "_row_id" : "fSFXI848Uok6h843b3zFN"
+        }, {
+          "expression" : {
+            "expression" : "FAX_NUM",
+            "_row_id" : null
+          },
+          "alias" : "FAX_NUM3",
+          "description" : null,
+          "_row_id" : "dsOs2wVGyuqOZhE1Y_z0C"
+        }, {
+          "expression" : {
+            "expression" : "MOBILE_PHONE_NUM",
+            "_row_id" : null
+          },
+          "alias" : "MOBILE_PHONE_NUM3",
+          "description" : null,
+          "_row_id" : "RB45JUt7Cy22D_SeP3omN"
+        }, {
+          "expression" : {
+            "expression" : "WEB_SITE",
+            "_row_id" : null
+          },
+          "alias" : "WEB_SITE3",
+          "description" : null,
+          "_row_id" : "wX147m6i0-N9kpJHHQ3kN"
+        }, {
+          "expression" : {
+            "expression" : "OUT_VALID_ADDRESS_FLAG",
+            "_row_id" : null
+          },
+          "alias" : "OUT_VALID_ADDRESS_FLAG3",
+          "description" : null,
+          "_row_id" : "3dwXE9_EqpLO21Ebzm65M"
+        }, {
+          "expression" : {
+            "expression" : "LCTN",
+            "_row_id" : null
+          },
+          "alias" : "LCTN3",
+          "description" : null,
+          "_row_id" : "lKEirg4fPq3gGr3OUsoX_"
+        }, {
+          "expression" : {
+            "expression" : "DELIVERY_POINT",
+            "_row_id" : null
+          },
+          "alias" : "DELIVERY_POINT3",
+          "description" : null,
+          "_row_id" : "LF0lNfMqkNmh4K-CaIP_e"
+        }, {
+          "expression" : {
+            "expression" : "STREET_NO",
+            "_row_id" : null
+          },
+          "alias" : "STREET_NO3",
+          "description" : null,
+          "_row_id" : "z00Lk6OlHYkatmxC0Y6h6"
+        }, {
+          "expression" : {
+            "expression" : "STREET_NAME",
+            "_row_id" : null
+          },
+          "alias" : "STREET_NAME3",
+          "description" : null,
+          "_row_id" : "0-fqn4xad57UE5JImgQ9E"
+        }, {
+          "expression" : {
+            "expression" : "SUBURB",
+            "_row_id" : null
+          },
+          "alias" : "SUBURB3",
+          "description" : null,
+          "_row_id" : "9oTuMsXPxmMpenP7eir54"
+        }, {
+          "expression" : {
+            "expression" : "PCODE",
+            "_row_id" : null
+          },
+          "alias" : "PCODE3",
+          "description" : null,
+          "_row_id" : "wGPIRzJmfGDMvaBD_pARg"
+        }, {
+          "expression" : {
+            "expression" : "STATE",
+            "_row_id" : null
+          },
+          "alias" : "STATE3",
+          "description" : null,
+          "_row_id" : "D-yPsUyYsIFOS6wpAjbu8"
+        }, {
+          "expression" : {
+            "expression" : "DELIVERY_CODE",
+            "_row_id" : null
+          },
+          "alias" : "DELIVERY_CODE3",
+          "description" : null,
+          "_row_id" : "tavDr7NzxOk1nfm853tU0"
+        }, {
+          "expression" : {
+            "expression" : "GEO_CODE",
+            "_row_id" : null
+          },
+          "alias" : "GEO_CODE3",
+          "description" : null,
+          "_row_id" : "6ApFVpXeYevhDnLN6G2jp"
+        }, {
+          "expression" : {
+            "expression" : "ADDR_ROLE_CODE",
+            "_row_id" : null
+          },
+          "alias" : "ADDR_ROLE_CODE3",
+          "description" : null,
+          "_row_id" : "XCUNr8Rp-8PUPFh4PBW2W"
+        }, {
+          "expression" : {
+            "expression" : "CTL_BATCH_ID",
+            "_row_id" : null
+          },
+          "alias" : "CTL_BATCH_ID3",
+          "description" : null,
+          "_row_id" : "Iq5l4c9Cjso9hUhEyFNi1"
+        }, {
+          "expression" : {
+            "expression" : "CTL_SRC_ROW_ID",
+            "_row_id" : null
+          },
+          "alias" : "CTL_SRC_ROW_ID3",
+          "description" : null,
+          "_row_id" : "fWYS6LGVHge5McfXgVAnx"
+        }, {
+          "expression" : {
+            "expression" : "CTL_SRC_SYS_SET_NAME",
+            "_row_id" : null
+          },
+          "alias" : "CTL_SRC_SYS_SET_NAME3",
+          "description" : null,
+          "_row_id" : "-_EpYrwUeWqOUAt7jPecP"
+        }, {
+          "expression" : {
+            "expression" : "CTL_EXTRACT_ID",
+            "_row_id" : null
+          },
+          "alias" : "CTL_EXTRACT_ID3",
+          "description" : null,
+          "_row_id" : "47mSv8JJusxKda-uBZTcB"
+        }, {
+          "expression" : {
+            "expression" : "TAX_FILE_NUM",
+            "_row_id" : null
+          },
+          "alias" : "TAX_FILE_NUM3",
+          "description" : null,
+          "_row_id" : "SG8vavf_6ZyR4Rq62KjiT"
+        }, {
+          "expression" : {
+            "expression" : "IS_PREF_PARTY_DATA",
+            "_row_id" : null
+          },
+          "alias" : "IS_PREF_PARTY_DATA3",
+          "description" : null,
+          "_row_id" : "DKoY8F49E0u0TgdroX0DE"
+        }, {
+          "expression" : {
+            "expression" : "ANZSIC_CODE",
+            "_row_id" : null
+          },
+          "alias" : "ANZSIC_CODE3",
+          "description" : null,
+          "_row_id" : "MzhxLrldGVomgIgW4oGGV"
+        }, {
+          "expression" : {
+            "expression" : "ACN",
+            "_row_id" : null
+          },
+          "alias" : "ACN3",
+          "description" : null,
+          "_row_id" : "VqI5RhlASaoi0nBtdb2Sf"
+        }, {
+          "expression" : {
+            "expression" : "LOCATION_CODE",
+            "_row_id" : null
+          },
+          "alias" : "LOCATION_CODE3",
+          "description" : null,
+          "_row_id" : "DeVg4ysVrvNTDr9eq7U7I"
+        }, {
+          "expression" : {
+            "expression" : "GEO_SOURCE",
+            "_row_id" : null
+          },
+          "alias" : "GEO_SOURCE3",
+          "description" : null,
+          "_row_id" : "ohREGTRbxHFpGmvx4h2as"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "RTR_New_Existing_SK_EXPR_Existing_SK_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "RTR_New_Existing_SK_EXPR_Existing_SK_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "edge_824",
+    "source" : "UNI_Ins_Upd_SK",
+    "sourcePort" : "UNI_Ins_Upd_SK_out0",
+    "target" : "sh_DIM_PARTY_SK",
+    "targetPort" : "sh_DIM_PARTY_SK_in0",
+    "isWireless" : false
+  }, {
+    "id" : "edge_784",
+    "source" : "UNI_Ins_Upd_SK_EXPR_New_SK",
+    "sourcePort" : "UNI_Ins_Upd_SK_EXPR_New_SK_out0",
+    "target" : "UNI_Ins_Upd_SK",
+    "targetPort" : "UNI_Ins_Upd_SK_in0",
+    "isWireless" : false
+  }, {
+    "id" : "edge_785",
+    "source" : "UNI_Ins_Upd_SK_EXPR_Existing_SK",
+    "sourcePort" : "UNI_Ins_Upd_SK_EXPR_Existing_SK_out0",
+    "target" : "UNI_Ins_Upd_SK",
+    "targetPort" : "UNI_Ins_Upd_SK_in1",
+    "isWireless" : false
+  }, {
+    "id" : "edge_795",
+    "source" : "RTR_New_Existing_SK_EXPR_New_SK",
+    "sourcePort" : "RTR_New_Existing_SK_EXPR_New_SK_out0",
+    "target" : "UNI_Ins_Upd_SK_EXPR_New_SK",
+    "targetPort" : "UNI_Ins_Upd_SK_EXPR_New_SK_in0",
+    "isWireless" : false
+  }, {
+    "id" : "edge_796",
+    "source" : "RTR_New_Existing_SK_EXPR_Existing_SK",
+    "sourcePort" : "RTR_New_Existing_SK_EXPR_Existing_SK_out0",
+    "target" : "UNI_Ins_Upd_SK_EXPR_Existing_SK",
+    "targetPort" : "UNI_Ins_Upd_SK_EXPR_Existing_SK_in0",
+    "isWireless" : false
+  }, {
+    "id" : "edge_825",
+    "source" : "EiOZcl2ZAfSQDN1C9mIpu",
+    "sourcePort" : "rBblPHKNKQmSHU7kwiKH6",
+    "target" : "RTR_New_Existing_SK_EXPR_New_SK",
+    "targetPort" : "RTR_New_Existing_SK_EXPR_New_SK_in0",
+    "isWireless" : false
+  }, {
+    "id" : "edge_827",
+    "source" : "QvK502OoTvnZbvT5dzZNn",
+    "sourcePort" : "Qb680L0Qnr6lxSc1cNFZQ",
+    "target" : "RTR_New_Existing_SK_EXPR_Existing_SK",
+    "targetPort" : "RTR_New_Existing_SK_EXPR_Existing_SK_in0",
+    "isWireless" : false
+  }, {
+    "id" : "edge_826",
+    "source" : "RTR_New_Existing_SK_JOIN_EXPR_191_RTR_New_Existing_SK_JOIN_EXPR_191_out0",
+    "sourcePort" : "output_port_6",
+    "target" : "EiOZcl2ZAfSQDN1C9mIpu",
+    "targetPort" : "akVcMkCxEW8M97pB8FXeI",
+    "isWireless" : false
+  }, {
+    "id" : "edge_828",
+    "source" : "RTR_New_Existing_SK_JOIN_EXPR_191_RTR_New_Existing_SK_JOIN_EXPR_191_out0",
+    "sourcePort" : "output_port_6",
+    "target" : "QvK502OoTvnZbvT5dzZNn",
+    "targetPort" : "JQ8FqFRiNmvAG95zFggl7",
+    "isWireless" : false
+  } ],
+  "component" : "Model"
+}
