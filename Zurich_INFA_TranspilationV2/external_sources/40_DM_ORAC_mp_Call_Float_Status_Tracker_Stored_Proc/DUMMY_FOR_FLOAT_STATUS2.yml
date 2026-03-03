@@ -1,0 +1,6 @@
+entityType: ""
+providerType: "Databricks"
+fields:
+- name: "DUMMY"
+  dataType:
+    type: "Integer"

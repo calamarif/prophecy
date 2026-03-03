@@ -1,0 +1,15 @@
+entityType: ""
+providerType: "Databricks"
+fields:
+- name: "REF_HK"
+  dataType:
+    type: "String"
+- name: "REF_BK"
+  dataType:
+    type: "String"
+- name: "Payment_Type_Code"
+  dataType:
+    type: "String"
+- name: "Payment_Type_Description"
+  dataType:
+    type: "String"

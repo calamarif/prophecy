@@ -1,0 +1,207 @@
+entityType: ""
+providerType: "Databricks"
+fields:
+- name: "Claim_WC_Medical_Certificate_Last_Date_Key"
+  dataType:
+    type: "Double"
+- name: "Claim_Liability_Other_Damages_YN"
+  dataType:
+    type: "String"
+- name: "Claim_WC_Estimated_Return_Date_Key"
+  dataType:
+    type: "Double"
+- name: "Claim_Motor_Vehicle_Rego_Code"
+  dataType:
+    type: "String"
+- name: "Claim_WC_Fitness_Level_Code"
+  dataType:
+    type: "String"
+- name: "Claim_WC_Classification_Code"
+  dataType:
+    type: "String"
+- name: "Claim_WC_Worker_Weekly_Hours_Rate"
+  dataType:
+    type: "Double"
+- name: "Claim_WC_Received_Date_by_Employer"
+  dataType:
+    type: "Integer"
+- name: "Claim_WC_Worker_Weekly_Hours_Time"
+  dataType:
+    type: "String"
+- name: "Claim_WC_Occupation_Name"
+  dataType:
+    type: "String"
+- name: "Claim_Liability_Law_Costs_YN"
+  dataType:
+    type: "String"
+- name: "Claim_WC_Injury_Object_Involved_Name"
+  dataType:
+    type: "String"
+- name: "ASCO_Key"
+  dataType:
+    type: "String"
+- name: "Claim_Motor_Vehicle_Class_Key"
+  dataType:
+    type: "String"
+- name: "Claim_WC_Body_Location_Key"
+  dataType:
+    type: "Double"
+- name: "Claim_WC_Work_Status"
+  dataType:
+    type: "String"
+- name: "Claim_Liability_Cause_Code"
+  dataType:
+    type: "String"
+- name: "Claim_Liability_Financial_Loss_YN"
+  dataType:
+    type: "String"
+- name: "Claim_WC_Department_Name"
+  dataType:
+    type: "String"
+- name: "Claim_WC_IMA_Date_Key"
+  dataType:
+    type: "Double"
+- name: "Claim_WC_Loss_Time_Number"
+  dataType:
+    type: "Double"
+- name: "Claim_Motor_Vehicle_Loss_Time_Number"
+  dataType:
+    type: "Double"
+- name: "Claim_Motor_Driver_Gender_Code"
+  dataType:
+    type: "String"
+- name: "Claim_Motor_Fault_Key"
+  dataType:
+    type: "Double"
+- name: "Claim_Motor_Bodily_Injury_YN"
+  dataType:
+    type: "String"
+- name: "Claim_WC_Agency_of_Accident_Key"
+  dataType:
+    type: "Double"
+- name: "Claim_Motor_Vehicle_Description"
+  dataType:
+    type: "String"
+- name: "Claim_Liability_Litigation_Status_Code"
+  dataType:
+    type: "String"
+- name: "Claim_WC_Worker_Postcode"
+  dataType:
+    type: "String"
+- name: "Claim_WC_Ceased_Work_Date_Key"
+  dataType:
+    type: "Double"
+- name: "Claim_WC_Birth_Date_Key"
+  dataType:
+    type: "Double"
+- name: "Claim_WC_Injury_Mechanism_Key"
+  dataType:
+    type: "String"
+- name: "Claim_WC_IMA_Reviewed_YN"
+  dataType:
+    type: "String"
+- name: "Claim_WC_Worker_State_Code"
+  dataType:
+    type: "String"
+- name: "Claim_Liability_Property_Damage_YN"
+  dataType:
+    type: "String"
+- name: "Claim_Motor_Driver_Licensed_Years_Number"
+  dataType:
+    type: "Double"
+- name: "Claim_Motor_Driver_Age_Years_Number"
+  dataType:
+    type: "Double"
+- name: "Claim_WC_Marital_Status_Code"
+  dataType:
+    type: "String"
+- name: "Claim_Liability_Severity_Code"
+  dataType:
+    type: "String"
+- name: "Claim_WC_Full_Time_Part_Time_Code"
+  dataType:
+    type: "String"
+- name: "Claim_WC_Injury_Most_Serious_Description"
+  dataType:
+    type: "String"
+- name: "Industry_Class_ANZSIC_2006_Key"
+  dataType:
+    type: "String"
+- name: "Claim_Motor_Vehicle_Loss_Day_of_Week_Code"
+  dataType:
+    type: "String"
+- name: "Claim_Motor_Cost_Centre_Name"
+  dataType:
+    type: "String"
+- name: "Claim_WC_Worker_RTW_Goals"
+  dataType:
+    type: "String"
+- name: "Claim_Key"
+  dataType:
+    type: "String"
+- name: "Claim_WC_Lost_Minutes_Number"
+  dataType:
+    type: "Double"
+- name: "Claim_WC_Worker_Suburb_Name"
+  dataType:
+    type: "String"
+- name: "Claim_WC_Worker_RTW_Program"
+  dataType:
+    type: "String"
+- name: "Claim_Motor_Vehicle_Usage_Code"
+  dataType:
+    type: "String"
+- name: "Claim_Liability_Personal_Injury_YN"
+  dataType:
+    type: "String"
+- name: "Claim_Motor_Vehicle_Finance_YN"
+  dataType:
+    type: "String"
+- name: "Claim_WC_Lost_Hours_Number"
+  dataType:
+    type: "Double"
+- name: "Claim_WC_Hourly_Rate_First_13_Weeks_Amount"
+  dataType:
+    type: "Double"
+- name: "Claim_WC_Common_Law_Raised_Date_Key"
+  dataType:
+    type: "Double"
+- name: "Claim_WC_Common_Law_Severity_Code"
+  dataType:
+    type: "String"
+- name: "Claim_WC_Work_Resumed_Date_Key"
+  dataType:
+    type: "Double"
+- name: "Claim_WC_Hourly_Rate_Thereafter_Amount"
+  dataType:
+    type: "Double"
+- name: "Claim_Division_Name"
+  dataType:
+    type: "String"
+- name: "Claim_WC_Loss_Day_of_Week_Code"
+  dataType:
+    type: "String"
+- name: "Claim_WC_Common_Law_Outcome_Code"
+  dataType:
+    type: "String"
+- name: "Claim_WC_Worker_Name"
+  dataType:
+    type: "String"
+- name: "Claim_Duty_Status"
+  dataType:
+    type: "String"
+- name: "Claim_WC_Injury_Nature_Key"
+  dataType:
+    type: "String"
+- name: "Claim_Motor_Vehicle_Manufactured_Year_Number"
+  dataType:
+    type: "Double"
+- name: "Claim_WC_Breakdown_Agency_Key"
+  dataType:
+    type: "Double"
+- name: "Claim_Motor_Vehicle_Total_Loss_YN"
+  dataType:
+    type: "String"
+- name: "Claim_WC_Gender_Code"
+  dataType:
+    type: "String"

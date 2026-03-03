@@ -1,0 +1,6 @@
+entityType: ""
+providerType: "Databricks"
+fields:
+- name: "CLAIM_ID"
+  dataType:
+    type: "Integer"

@@ -1,0 +1,27 @@
+entityType: ""
+providerType: "Databricks"
+fields:
+- name: "Country_GST_From_Date_Key"
+  dataType:
+    type: "Double"
+- name: "Country_GST_Rate"
+  dataType:
+    type: "Double"
+- name: "Country_GST_To_Date_Key"
+  dataType:
+    type: "Double"
+- name: "REF_HK"
+  dataType:
+    type: "String"
+- name: "Company_Code"
+  dataType:
+    type: "String"
+- name: "Country_Code"
+  dataType:
+    type: "String"
+- name: "REF_BK"
+  dataType:
+    type: "String"
+- name: "Company_Description"
+  dataType:
+    type: "String"

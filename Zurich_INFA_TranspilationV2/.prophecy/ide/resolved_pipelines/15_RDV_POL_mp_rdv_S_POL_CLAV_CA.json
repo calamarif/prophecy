@@ -1,0 +1,3288 @@
+{
+  "id" : "15_RDV_POL_mp_rdv_S_POL_CLAV_CA",
+  "metainfo" : {
+    "label" : "15_RDV_POL_mp_rdv_S_POL_CLAV_CA",
+    "autoLayout" : false,
+    "version" : 1,
+    "configuration" : {
+      "schema" : {
+        "type" : "record",
+        "fields" : [ {
+          "name" : "CTL_BATCH_ID",
+          "kind" : {
+            "type" : "string",
+            "value" : "''"
+          }
+        }, {
+          "name" : "CTL_LOAD_DM",
+          "kind" : {
+            "type" : "string",
+            "value" : "''"
+          }
+        }, {
+          "name" : "username",
+          "kind" : {
+            "type" : "string",
+            "value" : "''"
+          }
+        }, {
+          "name" : "SCHEMA",
+          "kind" : {
+            "type" : "string",
+            "value" : "'SCHEMA'"
+          }
+        }, {
+          "name" : "PMWorkflowRunId",
+          "kind" : {
+            "type" : "string",
+            "value" : "''"
+          }
+        }, {
+          "name" : "jdbcUrl",
+          "kind" : {
+            "type" : "string",
+            "value" : "''"
+          }
+        }, {
+          "name" : "password",
+          "kind" : {
+            "type" : "string",
+            "value" : "''"
+          }
+        } ]
+      }
+    },
+    "isTranspiledPipeline" : false,
+    "publishDiagnosticMetrics" : true,
+    "transpilerType" : "informatica",
+    "processesVsModelFiles" : {
+      "Union_EXPR_INSERT_DEL" : "models/15_RDV_POL_mp_rdv_S_POL_CLAV_CA/15_RDV_POL_mp_rdv_S_POL_CLAV_CA__S_POL_CLAV_CA1_Target_Definition.sql",
+      "Full_Outer_Join_by_HashDiff_EXPR_222" : "models/15_RDV_POL_mp_rdv_S_POL_CLAV_CA/15_RDV_POL_mp_rdv_S_POL_CLAV_CA__S_POL_CLAV_CA1_Target_Definition.sql",
+      "Classify_New_Obsolete_Records_EXPR_OBSOLETE_OR_REINSTATED" : "models/15_RDV_POL_mp_rdv_S_POL_CLAV_CA/15_RDV_POL_mp_rdv_S_POL_CLAV_CA__S_POL_CLAV_CA1_Target_Definition.sql",
+      "Get_SRC_Sort_by_HashDiff_EXPR_221" : "models/15_RDV_POL_mp_rdv_S_POL_CLAV_CA/15_RDV_POL_mp_rdv_S_POL_CLAV_CA__S_POL_CLAV_CA1_Target_Definition.sql",
+      "S_POL_CLAV_CA1_Target_Definition" : "models/15_RDV_POL_mp_rdv_S_POL_CLAV_CA/15_RDV_POL_mp_rdv_S_POL_CLAV_CA__S_POL_CLAV_CA1_Target_Definition.sql",
+      "Classify_New_Obsolete_Records_EXPR_NEWLY_DELETED" : "models/15_RDV_POL_mp_rdv_S_POL_CLAV_CA/15_RDV_POL_mp_rdv_S_POL_CLAV_CA__S_POL_CLAV_CA1_Target_Definition.sql",
+      "Union_EXPR_INSERT_NEW" : "models/15_RDV_POL_mp_rdv_S_POL_CLAV_CA/15_RDV_POL_mp_rdv_S_POL_CLAV_CA__S_POL_CLAV_CA1_Target_Definition.sql",
+      "Union_EXPR_UPDATE" : "models/15_RDV_POL_mp_rdv_S_POL_CLAV_CA/15_RDV_POL_mp_rdv_S_POL_CLAV_CA__S_POL_CLAV_CA1_Target_Definition.sql",
+      "RDV_with_Deleted_Info_JOIN_merged" : "models/15_RDV_POL_mp_rdv_S_POL_CLAV_CA/15_RDV_POL_mp_rdv_S_POL_CLAV_CA__S_POL_CLAV_CA1_Target_Definition.sql",
+      "15_RDV_POLmp_rdv_S_POL_CLAV_CA_V_POL_CLAV_CA2_V_POL_CLAV_CA2_out0" : "models/15_RDV_POL_mp_rdv_S_POL_CLAV_CA/15_RDV_POL_mp_rdv_S_POL_CLAV_CA__S_POL_CLAV_CA1_Target_Definition.sql",
+      "L2en3J0q50pKmeR8sUM_n" : "models/15_RDV_POL_mp_rdv_S_POL_CLAV_CA/15_RDV_POL_mp_rdv_S_POL_CLAV_CA__S_POL_CLAV_CA1_Target_Definition.sql",
+      "PA0RftSNKAbZ4KD0xiAGW" : "models/15_RDV_POL_mp_rdv_S_POL_CLAV_CA/15_RDV_POL_mp_rdv_S_POL_CLAV_CA__S_POL_CLAV_CA1_Target_Definition.sql",
+      "Full_Outer_Join_by_HashDiff" : "models/15_RDV_POL_mp_rdv_S_POL_CLAV_CA/15_RDV_POL_mp_rdv_S_POL_CLAV_CA__S_POL_CLAV_CA1_Target_Definition.sql",
+      "Get_RDV_Current_Sort_by_HashDiff_GENERATE_SK_EXPR_223" : "models/15_RDV_POL_mp_rdv_S_POL_CLAV_CA/15_RDV_POL_mp_rdv_S_POL_CLAV_CA__S_POL_CLAV_CA1_Target_Definition.sql",
+      "Add_Fields_Brand_New_or_Reinstated" : "models/15_RDV_POL_mp_rdv_S_POL_CLAV_CA/15_RDV_POL_mp_rdv_S_POL_CLAV_CA__S_POL_CLAV_CA1_Target_Definition.sql",
+      "Ogl1MJS9s5b7AiMaaXzE4" : "models/15_RDV_POL_mp_rdv_S_POL_CLAV_CA/15_RDV_POL_mp_rdv_S_POL_CLAV_CA__S_POL_CLAV_CA1_Target_Definition.sql",
+      "ZM9Um0wpA-iWxlZD1iiVw" : "models/15_RDV_POL_mp_rdv_S_POL_CLAV_CA/15_RDV_POL_mp_rdv_S_POL_CLAV_CA__S_POL_CLAV_CA1_Target_Definition.sql",
+      "15_RDV_POLmp_rdv_S_POL_CLAV_CA_SOURCE_Lookup_SRC_Hub_HK_SOURCE_Lookup_SRC_Hub_HK_out0" : "models/15_RDV_POL_mp_rdv_S_POL_CLAV_CA/15_RDV_POL_mp_rdv_S_POL_CLAV_CA__S_POL_CLAV_CA1_Target_Definition.sql",
+      "Union" : "models/15_RDV_POL_mp_rdv_S_POL_CLAV_CA/15_RDV_POL_mp_rdv_S_POL_CLAV_CA__S_POL_CLAV_CA1_Target_Definition.sql",
+      "Add_Fields_Newly_Deleted" : "models/15_RDV_POL_mp_rdv_S_POL_CLAV_CA/15_RDV_POL_mp_rdv_S_POL_CLAV_CA__S_POL_CLAV_CA1_Target_Definition.sql",
+      "RDV_with_Deleted_Info_JOIN_EXPR_219" : "models/15_RDV_POL_mp_rdv_S_POL_CLAV_CA/15_RDV_POL_mp_rdv_S_POL_CLAV_CA__S_POL_CLAV_CA1_Target_Definition.sql",
+      "15_RDV_POLmp_rdv_S_POL_CLAV_CA_S_POL_CLAV_CA1_Source_Definition_S_POL_CLAV_CA1_Source_Definition_out0" : "models/15_RDV_POL_mp_rdv_S_POL_CLAV_CA/15_RDV_POL_mp_rdv_S_POL_CLAV_CA__S_POL_CLAV_CA1_Target_Definition.sql",
+      "Sort_Updates_First_EXPR_220" : "models/15_RDV_POL_mp_rdv_S_POL_CLAV_CA/15_RDV_POL_mp_rdv_S_POL_CLAV_CA__S_POL_CLAV_CA1_Target_Definition.sql",
+      "Classify_New_Obsolete_Records_EXPR_BRAND_NEW_OR_REINSTATED" : "models/15_RDV_POL_mp_rdv_S_POL_CLAV_CA/15_RDV_POL_mp_rdv_S_POL_CLAV_CA__S_POL_CLAV_CA1_Target_Definition.sql",
+      "Expire_Obsolete_or_Reinstated" : "models/15_RDV_POL_mp_rdv_S_POL_CLAV_CA/15_RDV_POL_mp_rdv_S_POL_CLAV_CA__S_POL_CLAV_CA1_Target_Definition.sql"
+    }
+  },
+  "processes" : {
+    "SOURCE_Lookup_SRC_Hub_HK" : {
+      "id" : "SOURCE_Lookup_SRC_Hub_HK",
+      "component" : "OrchestrationSource",
+      "kind" : "OracleSource",
+      "metadata" : {
+        "label" : "15_RDV_POLmp_rdv_S_POL_CLAV_CA_SOURCE_Lookup_SRC_Hub_HK",
+        "x" : 420,
+        "y" : 420,
+        "phase" : 1
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "oracle",
+          "id" : "transpiled_connection",
+          "properties" : {
+            "database" : "dbName",
+            "server" : "$$jdbcUrl",
+            "username" : "$$username",
+            "id" : "transpiled_connection",
+            "port" : "1521",
+            "password" : {
+              "kind" : "prophecy",
+              "properties" : {
+                "name" : "transpiled_secret",
+                "value" : "transpiled_secret"
+              },
+              "subKind" : "text",
+              "type" : "secret"
+            }
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "pathSelection" : "tableFullName",
+          "tableFullName" : {
+            "schema" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "config",
+                  "properties" : {
+                    "kind" : "prophecy",
+                    "name" : "SCHEMA"
+                  }
+                } ]
+              }
+            },
+            "name" : "V_POL_CLAV_CA"
+          },
+          "warehouseQuery" : {
+            "query" : ""
+          }
+        },
+        "format" : {
+          "kind" : "oracle",
+          "category" : "table",
+          "properties" : {
+            "kind" : "oracle",
+            "schema" : {
+              "entityType" : "",
+              "providerType" : "Databricks",
+              "fields" : [ {
+                "name" : "EXT_CLAV_CYCL_FLAG_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_ARRANGE_UX_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CTL_SRC_ROW_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "EXT_CLAV_BAL_OUTS_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "EXT_CLAV_DATE_REJECT_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_DATE_EXP_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "CTL_REC_MD5_HA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_CLAM_KEY_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_PAID_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_OTHER_PARTY",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_HANDLER_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_TYPE_UX_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_SALVAGE_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_INCURRED_YTD_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_PAID_SH_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "CTL_JOB_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "EXT_CLAV_DESC2_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_CLM_DESC1_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_SOURCE_CO_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_DIV_11_DATE_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "CLAIM_HK",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_MAA_SENT_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_TERM_ID",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_MULT_UNIT_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_LIAB_DATE_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_PAID_TU_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_RECOVERY_AMT_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_ACCT_KEY_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CTL_INTRADAY_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "EXT_CLAV_SUB_CLASS_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CTL_SRC_CD",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_REOPEN_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_DATE_OCC_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_INVESTGAT_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_CLNT_KEY_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_VIP_CLAIM_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_DATE_NOTIFIED_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_CLMT_TYPE_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_GST_CAT_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_DIV_78_XS_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_INC_TU_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_SOLICTOR_A_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_ASSESSR_A_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_VALID_FLAG",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_DATE_REPT_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_DUPL_STS_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CTL_BATCH_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "EXT_CLAV_DIV_78_DATE_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_RATE_NCB_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_CLAIMANT_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_STATUS_DATE_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_ESTIMATE_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_CODE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_RECOVERY_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_CHANGE_DATE_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_FRAUD_FLG_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_PERIOD_TU_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_CLM_INITIAL",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_RISK_KEY_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_RSK_CLASS_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_CLAIM_STATUS_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_DATE_ACCEPT_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_ICA_CAT_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_PAY_BLOCK_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_NON_STD_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_RI_METHOD_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_GCLM_KEY_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_CLIENT_CLAM_NO_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_RI_BO_TU_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_LAST_EXT_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "CLAIM_BK",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_RI_INC_TU_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_DAM_PERC_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_RI_TRNO_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_INCURRED_SH_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_CLAM_BRCH_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_LIAB_STATUS_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_HANDLG_BR_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_SECT155D_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_INCURRED_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_TRAN_NO",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_DATE_INC_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_RI_PAID_TU_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_PCODE_L_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CTL_LOAD_DM",
+                "dataType" : {
+                  "type" : "Timestamp"
+                }
+              }, {
+                "name" : "EXT_CLAV_CCC_NO_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_SALVAGE_AMT_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_PORTFOLIO_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_DIV_11_XS_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_TIME_OCC_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_PREV_LAST_EXT_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_VULN_FLAG_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_BAL_OUTS_SH_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_INCURRED_PR_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_BR_TFR_FLG_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_BO_TU_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              } ]
+            }
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "SOURCE_Lookup_SRC_Hub_HK_out0",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "EXT_CLAV_CYCL_FLAG_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_ARRANGE_UX_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CTL_SRC_ROW_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "EXT_CLAV_BAL_OUTS_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "EXT_CLAV_DATE_REJECT_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_DATE_EXP_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "CTL_REC_MD5_HA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_CLAM_KEY_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_PAID_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_OTHER_PARTY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_HANDLER_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_TYPE_UX_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_SALVAGE_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_INCURRED_YTD_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_PAID_SH_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "CTL_JOB_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "EXT_CLAV_DESC2_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_CLM_DESC1_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_SOURCE_CO_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_DIV_11_DATE_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "CLAIM_HK",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_MAA_SENT_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_TERM_ID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_MULT_UNIT_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_LIAB_DATE_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_PAID_TU_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_RECOVERY_AMT_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_ACCT_KEY_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CTL_INTRADAY_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "EXT_CLAV_SUB_CLASS_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CTL_SRC_CD",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_REOPEN_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_DATE_OCC_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_INVESTGAT_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_CLNT_KEY_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_VIP_CLAIM_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_DATE_NOTIFIED_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_CLMT_TYPE_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_GST_CAT_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_DIV_78_XS_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_INC_TU_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_SOLICTOR_A_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_ASSESSR_A_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_VALID_FLAG",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_DATE_REPT_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_DUPL_STS_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CTL_BATCH_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "EXT_CLAV_DIV_78_DATE_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_RATE_NCB_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_CLAIMANT_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_STATUS_DATE_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_ESTIMATE_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_CODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_RECOVERY_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_CHANGE_DATE_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_FRAUD_FLG_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_PERIOD_TU_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_CLM_INITIAL",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_RISK_KEY_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_RSK_CLASS_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_CLAIM_STATUS_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_DATE_ACCEPT_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_ICA_CAT_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_PAY_BLOCK_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_NON_STD_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_RI_METHOD_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_GCLM_KEY_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_CLIENT_CLAM_NO_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_RI_BO_TU_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_LAST_EXT_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "CLAIM_BK",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_RI_INC_TU_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_DAM_PERC_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_RI_TRNO_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_INCURRED_SH_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_CLAM_BRCH_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_LIAB_STATUS_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_HANDLG_BR_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_SECT155D_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_INCURRED_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_TRAN_NO",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_DATE_INC_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_RI_PAID_TU_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_PCODE_L_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CTL_LOAD_DM",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "EXT_CLAV_CCC_NO_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_SALVAGE_AMT_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_PORTFOLIO_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_DIV_11_XS_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_TIME_OCC_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_PREV_LAST_EXT_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_VULN_FLAG_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_BAL_OUTS_SH_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_INCURRED_PR_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_BR_TFR_FLG_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_BO_TU_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : true
+      }
+    },
+    "V_POL_CLAV_CA2" : {
+      "id" : "V_POL_CLAV_CA2",
+      "component" : "OrchestrationSource",
+      "kind" : "OracleSource",
+      "metadata" : {
+        "label" : "15_RDV_POLmp_rdv_S_POL_CLAV_CA_V_POL_CLAV_CA2",
+        "x" : 620,
+        "y" : 20,
+        "phase" : 1
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "oracle",
+          "id" : "transpiled_connection",
+          "properties" : {
+            "database" : "dbName",
+            "server" : "$$jdbcUrl",
+            "username" : "$$username",
+            "id" : "transpiled_connection",
+            "port" : "1521",
+            "password" : {
+              "kind" : "prophecy",
+              "properties" : {
+                "name" : "transpiled_secret",
+                "value" : "transpiled_secret"
+              },
+              "subKind" : "text",
+              "type" : "secret"
+            }
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "pathSelection" : "tableFullName",
+          "tableFullName" : {
+            "schema" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "config",
+                  "properties" : {
+                    "kind" : "prophecy",
+                    "name" : "SCHEMA"
+                  }
+                } ]
+              }
+            },
+            "name" : "ORAC"
+          },
+          "warehouseQuery" : {
+            "query" : ""
+          }
+        },
+        "format" : {
+          "kind" : "oracle",
+          "category" : "table",
+          "properties" : {
+            "kind" : "oracle",
+            "schema" : {
+              "entityType" : "",
+              "providerType" : "Databricks",
+              "fields" : [ {
+                "name" : "EXT_CLAV_CYCL_FLAG_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_ARRANGE_UX_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CTL_SRC_ROW_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "EXT_CLAV_BAL_OUTS_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "EXT_CLAV_DATE_REJECT_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_DATE_EXP_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "CTL_REC_MD5_HA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_CLAM_KEY_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_PAID_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_OTHER_PARTY",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_HANDLER_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_TYPE_UX_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_SALVAGE_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_INCURRED_YTD_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_PAID_SH_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "CTL_JOB_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "EXT_CLAV_DESC2_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_CLM_DESC1_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_SOURCE_CO_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_DIV_11_DATE_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "CLAIM_HK",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_MAA_SENT_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_TERM_ID",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_MULT_UNIT_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_LIAB_DATE_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_PAID_TU_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_RECOVERY_AMT_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_ACCT_KEY_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CTL_INTRADAY_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "EXT_CLAV_SUB_CLASS_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CTL_SRC_CD",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_REOPEN_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_DATE_OCC_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_INVESTGAT_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_CLNT_KEY_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_VIP_CLAIM_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_DATE_NOTIFIED_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_CLMT_TYPE_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_GST_CAT_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_DIV_78_XS_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_INC_TU_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_SOLICTOR_A_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_ASSESSR_A_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_VALID_FLAG",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_DATE_REPT_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_DUPL_STS_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CTL_BATCH_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "EXT_CLAV_DIV_78_DATE_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_RATE_NCB_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_CLAIMANT_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_STATUS_DATE_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_ESTIMATE_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_CODE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_RECOVERY_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_CHANGE_DATE_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_FRAUD_FLG_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_PERIOD_TU_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_CLM_INITIAL",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_RISK_KEY_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_RSK_CLASS_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_CLAIM_STATUS_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_DATE_ACCEPT_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_ICA_CAT_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_PAY_BLOCK_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_NON_STD_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_RI_METHOD_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_GCLM_KEY_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_CLIENT_CLAM_NO_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_RI_BO_TU_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_LAST_EXT_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "CLAIM_BK",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_RI_INC_TU_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_DAM_PERC_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_RI_TRNO_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_INCURRED_SH_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_CLAM_BRCH_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_LIAB_STATUS_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_HANDLG_BR_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_SECT155D_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_INCURRED_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_TRAN_NO",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_DATE_INC_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_RI_PAID_TU_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_PCODE_L_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CTL_LOAD_DM",
+                "dataType" : {
+                  "type" : "Timestamp"
+                }
+              }, {
+                "name" : "EXT_CLAV_CCC_NO_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_SALVAGE_AMT_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_PORTFOLIO_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_DIV_11_XS_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_TIME_OCC_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_PREV_LAST_EXT_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_VULN_FLAG_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_BAL_OUTS_SH_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_INCURRED_PR_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_BR_TFR_FLG_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_BO_TU_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              } ]
+            }
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "V_POL_CLAV_CA2_out0",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "EXT_CLAV_CYCL_FLAG_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_ARRANGE_UX_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CTL_SRC_ROW_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "EXT_CLAV_BAL_OUTS_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "EXT_CLAV_DATE_REJECT_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_DATE_EXP_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "CTL_REC_MD5_HA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_CLAM_KEY_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_PAID_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_OTHER_PARTY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_HANDLER_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_TYPE_UX_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_SALVAGE_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_INCURRED_YTD_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_PAID_SH_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "CTL_JOB_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "EXT_CLAV_DESC2_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_CLM_DESC1_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_SOURCE_CO_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_DIV_11_DATE_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "CLAIM_HK",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_MAA_SENT_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_TERM_ID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_MULT_UNIT_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_LIAB_DATE_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_PAID_TU_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_RECOVERY_AMT_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_ACCT_KEY_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CTL_INTRADAY_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "EXT_CLAV_SUB_CLASS_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CTL_SRC_CD",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_REOPEN_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_DATE_OCC_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_INVESTGAT_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_CLNT_KEY_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_VIP_CLAIM_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_DATE_NOTIFIED_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_CLMT_TYPE_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_GST_CAT_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_DIV_78_XS_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_INC_TU_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_SOLICTOR_A_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_ASSESSR_A_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_VALID_FLAG",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_DATE_REPT_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_DUPL_STS_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CTL_BATCH_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "EXT_CLAV_DIV_78_DATE_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_RATE_NCB_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_CLAIMANT_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_STATUS_DATE_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_ESTIMATE_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_CODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_RECOVERY_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_CHANGE_DATE_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_FRAUD_FLG_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_PERIOD_TU_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_CLM_INITIAL",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_RISK_KEY_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_RSK_CLASS_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_CLAIM_STATUS_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_DATE_ACCEPT_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_ICA_CAT_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_PAY_BLOCK_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_NON_STD_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_RI_METHOD_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_GCLM_KEY_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_CLIENT_CLAM_NO_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_RI_BO_TU_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_LAST_EXT_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "CLAIM_BK",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_RI_INC_TU_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_DAM_PERC_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_RI_TRNO_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_INCURRED_SH_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_CLAM_BRCH_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_LIAB_STATUS_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_HANDLG_BR_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_SECT155D_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_INCURRED_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_TRAN_NO",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_DATE_INC_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_RI_PAID_TU_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_PCODE_L_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CTL_LOAD_DM",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "EXT_CLAV_CCC_NO_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_SALVAGE_AMT_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_PORTFOLIO_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_DIV_11_XS_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_TIME_OCC_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_PREV_LAST_EXT_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_VULN_FLAG_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_BAL_OUTS_SH_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_INCURRED_PR_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_BR_TFR_FLG_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_BO_TU_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : true
+      }
+    },
+    "S_POL_CLAV_CA1_Source_Definition" : {
+      "id" : "S_POL_CLAV_CA1_Source_Definition",
+      "component" : "OrchestrationSource",
+      "kind" : "OracleSource",
+      "metadata" : {
+        "label" : "15_RDV_POLmp_rdv_S_POL_CLAV_CA_S_POL_CLAV_CA1_Source_Definition",
+        "x" : 20,
+        "y" : 180,
+        "phase" : 1
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "oracle",
+          "id" : "transpiled_connection",
+          "properties" : {
+            "database" : "dbName",
+            "server" : "$$jdbcUrl",
+            "username" : "$$username",
+            "id" : "transpiled_connection",
+            "port" : "1521",
+            "password" : {
+              "kind" : "prophecy",
+              "properties" : {
+                "name" : "transpiled_secret",
+                "value" : "transpiled_secret"
+              },
+              "subKind" : "text",
+              "type" : "secret"
+            }
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "pathSelection" : "warehouseQuery",
+          "tableFullName" : {
+            "schema" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "config",
+                  "properties" : {
+                    "kind" : "prophecy",
+                    "name" : "SCHEMA"
+                  }
+                } ]
+              }
+            },
+            "name" : "ORAC"
+          },
+          "warehouseQuery" : {
+            "query" : "SELECT * FROM ORAC WHERE CTL_LOAD_END_DM = '9999-12-31 23:59:59'"
+          }
+        },
+        "format" : {
+          "kind" : "oracle",
+          "category" : "table",
+          "properties" : {
+            "kind" : "oracle",
+            "schema" : {
+              "entityType" : "",
+              "providerType" : "Databricks",
+              "fields" : [ {
+                "name" : "EXT_CLAV_CYCL_FLAG_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_ARRANGE_UX_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_BAL_OUTS_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_DATE_REJECT_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_DATE_EXP_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "CTL_REC_MD5_HA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_CLAM_KEY_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_PAID_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_OTHER_PARTY",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_HANDLER_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_TYPE_UX_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_SALVAGE_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_INCURRED_YTD_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_PAID_SH_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "CTL_JOB_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "EXT_CLAV_DESC2_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_CLM_DESC1_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_SOURCE_CO_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CTL_LOAD_END_DM",
+                "dataType" : {
+                  "type" : "Timestamp"
+                }
+              }, {
+                "name" : "EXT_CLAV_DIV_11_DATE_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "CLAIM_HK",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_MAA_SENT_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_TERM_ID",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_MULT_UNIT_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_LIAB_DATE_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_PAID_TU_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_RECOVERY_AMT_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_ACCT_KEY_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_SUB_CLASS_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CTL_SRC_CD",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_REOPEN_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_DATE_OCC_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_INVESTGAT_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_CLNT_KEY_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_VIP_CLAIM_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_DATE_NOTIFIED_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_CLMT_TYPE_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_GST_CAT_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_DIV_78_XS_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_INC_TU_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_SOLICTOR_A_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_ASSESSR_A_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_VALID_FLAG",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_DATE_REPT_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_DUPL_STS_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CTL_BATCH_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "EXT_CLAV_DIV_78_DATE_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_RATE_NCB_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_CLAIMANT_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_STATUS_DATE_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_ESTIMATE_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_CODE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_RECOVERY_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_CHANGE_DATE_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_FRAUD_FLG_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_PERIOD_TU_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_CLM_INITIAL",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_RISK_KEY_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_RSK_CLASS_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_CLAIM_STATUS_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_DATE_ACCEPT_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_ICA_CAT_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_PAY_BLOCK_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_NON_STD_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_RI_METHOD_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_GCLM_KEY_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_CLIENT_CLAM_NO_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_RI_BO_TU_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_LAST_EXT_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "CLAIM_BK",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_RI_INC_TU_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_DAM_PERC_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "CTL_DEL_YN",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_RI_TRNO_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_INCURRED_SH_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_CLAM_BRCH_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_LIAB_STATUS_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_HANDLG_BR_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_SECT155D_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_INCURRED_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_TRAN_NO",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_DATE_INC_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_RI_PAID_TU_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_PCODE_L_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CTL_LOAD_DM",
+                "dataType" : {
+                  "type" : "Timestamp"
+                }
+              }, {
+                "name" : "EXT_CLAV_CCC_NO_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_SALVAGE_AMT_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_PORTFOLIO_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_DIV_11_XS_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_TIME_OCC_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_PREV_LAST_EXT_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_VULN_FLAG_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_BAL_OUTS_SH_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_INCURRED_PR_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_BR_TFR_FLG_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_BO_TU_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              } ]
+            }
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "S_POL_CLAV_CA1_Source_Definition_out0",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "EXT_CLAV_CYCL_FLAG_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_ARRANGE_UX_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_BAL_OUTS_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_DATE_REJECT_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_DATE_EXP_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "CTL_REC_MD5_HA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_CLAM_KEY_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_PAID_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_OTHER_PARTY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_HANDLER_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_TYPE_UX_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_SALVAGE_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_INCURRED_YTD_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_PAID_SH_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "CTL_JOB_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "EXT_CLAV_DESC2_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_CLM_DESC1_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_SOURCE_CO_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CTL_LOAD_END_DM",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "EXT_CLAV_DIV_11_DATE_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "CLAIM_HK",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_MAA_SENT_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_TERM_ID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_MULT_UNIT_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_LIAB_DATE_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_PAID_TU_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_RECOVERY_AMT_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_ACCT_KEY_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_SUB_CLASS_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CTL_SRC_CD",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_REOPEN_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_DATE_OCC_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_INVESTGAT_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_CLNT_KEY_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_VIP_CLAIM_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_DATE_NOTIFIED_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_CLMT_TYPE_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_GST_CAT_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_DIV_78_XS_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_INC_TU_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_SOLICTOR_A_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_ASSESSR_A_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_VALID_FLAG",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_DATE_REPT_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_DUPL_STS_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CTL_BATCH_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "EXT_CLAV_DIV_78_DATE_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_RATE_NCB_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_CLAIMANT_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_STATUS_DATE_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_ESTIMATE_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_CODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_RECOVERY_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_CHANGE_DATE_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_FRAUD_FLG_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_PERIOD_TU_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_CLM_INITIAL",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_RISK_KEY_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_RSK_CLASS_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_CLAIM_STATUS_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_DATE_ACCEPT_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_ICA_CAT_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_PAY_BLOCK_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_NON_STD_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_RI_METHOD_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_GCLM_KEY_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_CLIENT_CLAM_NO_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_RI_BO_TU_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_LAST_EXT_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "CLAIM_BK",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_RI_INC_TU_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_DAM_PERC_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "CTL_DEL_YN",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_RI_TRNO_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_INCURRED_SH_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_CLAM_BRCH_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_LIAB_STATUS_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_HANDLG_BR_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_SECT155D_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_INCURRED_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_TRAN_NO",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_DATE_INC_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_RI_PAID_TU_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_PCODE_L_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CTL_LOAD_DM",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "EXT_CLAV_CCC_NO_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_SALVAGE_AMT_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_PORTFOLIO_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_DIV_11_XS_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_TIME_OCC_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_PREV_LAST_EXT_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_VULN_FLAG_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_BAL_OUTS_SH_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_INCURRED_PR_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_BR_TFR_FLG_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_BO_TU_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : true
+      }
+    },
+    "S_POL_CLAV_CA1_Target_Definition" : {
+      "id" : "S_POL_CLAV_CA1_Target_Definition",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "15_RDV_POL_mp_rdv_S_POL_CLAV_CA__S_POL_CLAV_CA1_Target_Definition",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "15_RDV_POL_mp_rdv_S_POL_CLAV_CA__S_POL_CLAV_CA1_Target_Definition"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "S_POL_CLAV_CA1_Target_Definition", "Sort_Updates_First_EXPR_220", "Union", "Union_EXPR_UPDATE", "Union_EXPR_INSERT_DEL", "Union_EXPR_INSERT_NEW", "Expire_Obsolete_or_Reinstated", "Add_Fields_Newly_Deleted", "Add_Fields_Brand_New_or_Reinstated", "Classify_New_Obsolete_Records_EXPR_OBSOLETE_OR_REINSTATED", "Classify_New_Obsolete_Records_EXPR_NEWLY_DELETED", "Classify_New_Obsolete_Records_EXPR_BRAND_NEW_OR_REINSTATED", "L2en3J0q50pKmeR8sUM_n", "PA0RftSNKAbZ4KD0xiAGW", "Ogl1MJS9s5b7AiMaaXzE4", "Full_Outer_Join_by_HashDiff_EXPR_222", "Full_Outer_Join_by_HashDiff", "Get_SRC_Sort_by_HashDiff_EXPR_221", "15_RDV_POLmp_rdv_S_POL_CLAV_CA_V_POL_CLAV_CA2_V_POL_CLAV_CA2_out0", "RDV_with_Deleted_Info_JOIN_EXPR_219", "RDV_with_Deleted_Info_JOIN_merged", "15_RDV_POLmp_rdv_S_POL_CLAV_CA_SOURCE_Lookup_SRC_Hub_HK_SOURCE_Lookup_SRC_Hub_HK_out0", "Get_RDV_Current_Sort_by_HashDiff_GENERATE_SK_EXPR_223", "ZM9Um0wpA-iWxlZD1iiVw", "15_RDV_POLmp_rdv_S_POL_CLAV_CA_S_POL_CLAV_CA1_Source_Definition_S_POL_CLAV_CA1_Source_Definition_out0" ],
+        "type" : "table",
+        "isTemporaryTable" : false,
+        "lastNodeProcessIds" : [ "S_POL_CLAV_CA1_Target_Definition" ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "15_RDV_POL_mp_rdv_S_POL_CLAV_CA__S_POL_CLAV_CA1_Target_Definition_in_0",
+          "slug" : "in_0"
+        }, {
+          "id" : "15_RDV_POL_mp_rdv_S_POL_CLAV_CA__S_POL_CLAV_CA1_Target_Definition_in_1",
+          "slug" : "in_1"
+        }, {
+          "id" : "15_RDV_POL_mp_rdv_S_POL_CLAV_CA__S_POL_CLAV_CA1_Target_Definition_in_2",
+          "slug" : "in_2"
+        }, {
+          "id" : "15_RDV_POL_mp_rdv_S_POL_CLAV_CA__S_POL_CLAV_CA1_Target_Definition_in_3",
+          "slug" : "in_3"
+        }, {
+          "id" : "15_RDV_POL_mp_rdv_S_POL_CLAV_CA__S_POL_CLAV_CA1_Target_Definition_in_4",
+          "slug" : "in_4"
+        } ],
+        "outputs" : [ {
+          "id" : "15_RDV_POL_mp_rdv_S_POL_CLAV_CA__S_POL_CLAV_CA1_Target_Definition_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "edge_947",
+    "source" : "V_POL_CLAV_CA2",
+    "sourcePort" : "V_POL_CLAV_CA2_out0",
+    "target" : "S_POL_CLAV_CA1_Target_Definition",
+    "targetPort" : "15_RDV_POL_mp_rdv_S_POL_CLAV_CA__S_POL_CLAV_CA1_Target_Definition_in_0"
+  }, {
+    "id" : "edge_961",
+    "source" : "SOURCE_Lookup_SRC_Hub_HK",
+    "sourcePort" : "SOURCE_Lookup_SRC_Hub_HK_out0",
+    "target" : "S_POL_CLAV_CA1_Target_Definition",
+    "targetPort" : "15_RDV_POL_mp_rdv_S_POL_CLAV_CA__S_POL_CLAV_CA1_Target_Definition_in_2"
+  }, {
+    "id" : "edge_964",
+    "source" : "S_POL_CLAV_CA1_Source_Definition",
+    "sourcePort" : "S_POL_CLAV_CA1_Source_Definition_out0",
+    "target" : "S_POL_CLAV_CA1_Target_Definition",
+    "targetPort" : "15_RDV_POL_mp_rdv_S_POL_CLAV_CA__S_POL_CLAV_CA1_Target_Definition_in_4"
+  } ],
+  "component" : "Pipeline"
+}

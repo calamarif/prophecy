@@ -1,0 +1,496 @@
+{
+  "id" : "15_RDV_POL_mp_rdv_H_REF_S_POL_MISS",
+  "metainfo" : {
+    "label" : "15_RDV_POL_mp_rdv_H_REF_S_POL_MISS",
+    "autoLayout" : false,
+    "version" : 1,
+    "configuration" : {
+      "schema" : {
+        "type" : "record",
+        "fields" : [ {
+          "name" : "CTL_BATCH_ID",
+          "kind" : {
+            "type" : "string",
+            "value" : "''"
+          }
+        }, {
+          "name" : "CTL_LOAD_DM",
+          "kind" : {
+            "type" : "string",
+            "value" : "''"
+          }
+        }, {
+          "name" : "username",
+          "kind" : {
+            "type" : "string",
+            "value" : "''"
+          }
+        }, {
+          "name" : "SCHEMA",
+          "kind" : {
+            "type" : "string",
+            "value" : "'SCHEMA'"
+          }
+        }, {
+          "name" : "PMWorkflowRunId",
+          "kind" : {
+            "type" : "string",
+            "value" : "''"
+          }
+        }, {
+          "name" : "jdbcUrl",
+          "kind" : {
+            "type" : "string",
+            "value" : "''"
+          }
+        }, {
+          "name" : "password",
+          "kind" : {
+            "type" : "string",
+            "value" : "''"
+          }
+        } ]
+      }
+    },
+    "isTranspiledPipeline" : false,
+    "publishDiagnosticMetrics" : true,
+    "transpilerType" : "informatica",
+    "processesVsModelFiles" : {
+      "H_REF17" : "models/15_RDV_POL_mp_rdv_H_REF_S_POL_MISS/15_RDV_POL_mp_rdv_H_REF_S_POL_MISS__H_REF17.sql",
+      "Filter_New" : "models/15_RDV_POL_mp_rdv_H_REF_S_POL_MISS/15_RDV_POL_mp_rdv_H_REF_S_POL_MISS__H_REF17.sql",
+      "Remove_Duplicates_EXPR_244" : "models/15_RDV_POL_mp_rdv_H_REF_S_POL_MISS/15_RDV_POL_mp_rdv_H_REF_S_POL_MISS__H_REF17.sql",
+      "Get_RDV_Sort_by_Hash_EXPR_245" : "models/15_RDV_POL_mp_rdv_H_REF_S_POL_MISS/15_RDV_POL_mp_rdv_H_REF_S_POL_MISS__H_REF17.sql",
+      "Left_Outer_Join_by_Hash_Source_On_Left" : "models/15_RDV_POL_mp_rdv_H_REF_S_POL_MISS/15_RDV_POL_mp_rdv_H_REF_S_POL_MISS__H_REF17.sql",
+      "15_RDV_POLmp_rdv_H_REF_S_POL_MISS_v_POL_MISS34_v_POL_MISS34_out0" : "models/15_RDV_POL_mp_rdv_H_REF_S_POL_MISS/15_RDV_POL_mp_rdv_H_REF_S_POL_MISS__H_REF17.sql",
+      "Add_Control_Fields" : "models/15_RDV_POL_mp_rdv_H_REF_S_POL_MISS/15_RDV_POL_mp_rdv_H_REF_S_POL_MISS__H_REF17.sql",
+      "15_RDV_POLmp_rdv_H_REF_S_POL_MISS_H_REF33_H_REF33_out0" : "models/15_RDV_POL_mp_rdv_H_REF_S_POL_MISS/15_RDV_POL_mp_rdv_H_REF_S_POL_MISS__H_REF17.sql"
+    }
+  },
+  "processes" : {
+    "v_POL_MISS34" : {
+      "id" : "v_POL_MISS34",
+      "component" : "OrchestrationSource",
+      "kind" : "OracleSource",
+      "metadata" : {
+        "label" : "15_RDV_POLmp_rdv_H_REF_S_POL_MISS_v_POL_MISS34",
+        "x" : 20,
+        "y" : 20,
+        "phase" : 1
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "oracle",
+          "id" : "transpiled_connection",
+          "properties" : {
+            "database" : "dbName",
+            "server" : "$$jdbcUrl",
+            "username" : "$$username",
+            "id" : "transpiled_connection",
+            "port" : "1521",
+            "password" : {
+              "kind" : "prophecy",
+              "properties" : {
+                "name" : "transpiled_secret",
+                "value" : "transpiled_secret"
+              },
+              "subKind" : "text",
+              "type" : "secret"
+            }
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "pathSelection" : "warehouseQuery",
+          "tableFullName" : {
+            "schema" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "config",
+                  "properties" : {
+                    "kind" : "prophecy",
+                    "name" : "SCHEMA"
+                  }
+                } ]
+              }
+            },
+            "name" : "ORAC"
+          },
+          "warehouseQuery" : {
+            "query" : "SELECT REF_HK, first(REF_BK) AS REF_BK, first(CTL_SRC_CD) AS CTL_SRC_CD FROM ORAC GROUP BY REF_HK"
+          }
+        },
+        "format" : {
+          "kind" : "oracle",
+          "category" : "table",
+          "properties" : {
+            "kind" : "oracle",
+            "schema" : {
+              "entityType" : "",
+              "providerType" : "Databricks",
+              "fields" : [ {
+                "name" : "CTL_SRC_ROW_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "CTL_REC_MD5_HA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CTL_JOB_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "EXT_MISS_VALID_FLAG",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_MISS_TRAN_NO",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_MISS_ITEM_KEY",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CTL_INTRADAY_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "EXT_MISS_TERM_ID",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CTL_SRC_CD",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "REF_HK",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CTL_BATCH_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "EXT_MISS_MIS_SCREEN",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "REF_BK",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_MISS_REC_TYPE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CTL_LOAD_DM",
+                "dataType" : {
+                  "type" : "Timestamp"
+                }
+              } ]
+            }
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "v_POL_MISS34_out0",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "CTL_SRC_ROW_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "CTL_REC_MD5_HA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CTL_JOB_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "EXT_MISS_VALID_FLAG",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_MISS_TRAN_NO",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_MISS_ITEM_KEY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CTL_INTRADAY_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "EXT_MISS_TERM_ID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CTL_SRC_CD",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "REF_HK",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CTL_BATCH_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "EXT_MISS_MIS_SCREEN",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "REF_BK",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_MISS_REC_TYPE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CTL_LOAD_DM",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : true
+      }
+    },
+    "H_REF33" : {
+      "id" : "H_REF33",
+      "component" : "OrchestrationSource",
+      "kind" : "OracleSource",
+      "metadata" : {
+        "label" : "15_RDV_POLmp_rdv_H_REF_S_POL_MISS_H_REF33",
+        "x" : 20,
+        "y" : 220,
+        "phase" : 1
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "oracle",
+          "id" : "transpiled_connection",
+          "properties" : {
+            "database" : "dbName",
+            "server" : "$$jdbcUrl",
+            "username" : "$$username",
+            "id" : "transpiled_connection",
+            "port" : "1521",
+            "password" : {
+              "kind" : "prophecy",
+              "properties" : {
+                "name" : "transpiled_secret",
+                "value" : "transpiled_secret"
+              },
+              "subKind" : "text",
+              "type" : "secret"
+            }
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "pathSelection" : "tableFullName",
+          "tableFullName" : {
+            "schema" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "config",
+                  "properties" : {
+                    "kind" : "prophecy",
+                    "name" : "SCHEMA"
+                  }
+                } ]
+              }
+            },
+            "name" : "ORAC"
+          },
+          "warehouseQuery" : {
+            "query" : ""
+          }
+        },
+        "format" : {
+          "kind" : "oracle",
+          "category" : "table",
+          "properties" : {
+            "kind" : "oracle",
+            "schema" : {
+              "entityType" : "",
+              "providerType" : "Databricks",
+              "fields" : [ {
+                "name" : "CTL_JOB_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "CTL_SRC_CD",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "REF_HK",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CTL_BATCH_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "REF_BK",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CTL_LOAD_DM",
+                "dataType" : {
+                  "type" : "Timestamp"
+                }
+              } ]
+            }
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "H_REF33_out0",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "CTL_JOB_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "CTL_SRC_CD",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "REF_HK",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CTL_BATCH_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "REF_BK",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CTL_LOAD_DM",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : true
+      }
+    },
+    "H_REF17" : {
+      "id" : "H_REF17",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "15_RDV_POL_mp_rdv_H_REF_S_POL_MISS__H_REF17",
+        "phase" : 1
+      },
+      "properties" : {
+        "modelName" : "15_RDV_POL_mp_rdv_H_REF_S_POL_MISS__H_REF17"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "H_REF17", "Add_Control_Fields", "Filter_New", "Left_Outer_Join_by_Hash_Source_On_Left", "Remove_Duplicates_EXPR_244", "15_RDV_POLmp_rdv_H_REF_S_POL_MISS_v_POL_MISS34_v_POL_MISS34_out0", "Get_RDV_Sort_by_Hash_EXPR_245", "15_RDV_POLmp_rdv_H_REF_S_POL_MISS_H_REF33_H_REF33_out0" ],
+        "type" : "table",
+        "isTemporaryTable" : false,
+        "lastNodeProcessIds" : [ "H_REF17" ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "15_RDV_POL_mp_rdv_H_REF_S_POL_MISS__H_REF17_in_0",
+          "slug" : "in_0"
+        }, {
+          "id" : "15_RDV_POL_mp_rdv_H_REF_S_POL_MISS__H_REF17_in_1",
+          "slug" : "in_1"
+        } ],
+        "outputs" : [ {
+          "id" : "15_RDV_POL_mp_rdv_H_REF_S_POL_MISS__H_REF17_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "edge_717",
+    "source" : "v_POL_MISS34",
+    "sourcePort" : "v_POL_MISS34_out0",
+    "target" : "H_REF17",
+    "targetPort" : "15_RDV_POL_mp_rdv_H_REF_S_POL_MISS__H_REF17_in_0"
+  }, {
+    "id" : "edge_720",
+    "source" : "H_REF33",
+    "sourcePort" : "H_REF33_out0",
+    "target" : "H_REF17",
+    "targetPort" : "15_RDV_POL_mp_rdv_H_REF_S_POL_MISS__H_REF17_in_1"
+  } ],
+  "component" : "Pipeline"
+}

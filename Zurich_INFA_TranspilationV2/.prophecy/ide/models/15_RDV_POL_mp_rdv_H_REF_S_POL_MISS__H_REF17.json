@@ -1,0 +1,419 @@
+{
+  "id" : "15_RDV_POL_mp_rdv_H_REF_S_POL_MISS__H_REF17",
+  "metainfo" : {
+    "label" : "15_RDV_POL_mp_rdv_H_REF_S_POL_MISS__H_REF17",
+    "autoLayout" : true,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "entityConfig" : {
+        "alias" : "\"H_REF17\"",
+        "materialized" : "table",
+        "database" : "\"qa_team\"",
+        "schema" : "\"qa_orchestration\"",
+        "type" : "ModelConfig"
+      }
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "H_REF17" : {
+      "id" : "H_REF17",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "H_REF17",
+        "phase" : 1
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "\nSELECT *\n\nFROM Add_Control_Fields\n\n",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "H_REF17_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "cl82KjS66PsQMeYcSjnsr",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "Filter_New" : {
+      "id" : "Filter_New",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "Filter_New",
+        "x" : 620,
+        "y" : 120,
+        "phase" : 1
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "condition" : {
+          "expression" : "CAST((RDV_REF_HK IS NULL) AS BOOLEAN)",
+          "_row_id" : null
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Filter_New_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "Filter_New_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "Remove_Duplicates_EXPR_244" : {
+      "id" : "Remove_Duplicates_EXPR_244",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Remove_Duplicates_EXPR_244",
+        "x" : 220,
+        "y" : 20,
+        "phase" : 1
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "REF_HK",
+            "_row_id" : null
+          },
+          "alias" : "SRC_REF_HK",
+          "description" : null,
+          "_row_id" : "MTkJg-rd_RTI4OaMpUwG6"
+        }, {
+          "expression" : {
+            "expression" : "REF_BK",
+            "_row_id" : null
+          },
+          "alias" : "SRC_REF_BK",
+          "description" : null,
+          "_row_id" : "ESJL5jNWlgdiH_LC4Tyn4"
+        }, {
+          "expression" : {
+            "expression" : "CTL_SRC_CD",
+            "_row_id" : null
+          },
+          "alias" : "SRC_CTL_SRC_CD",
+          "description" : null,
+          "_row_id" : "6iisrxaBZpBbk86QwPnaE"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Remove_Duplicates_EXPR_244_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "Remove_Duplicates_EXPR_244_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "Get_RDV_Sort_by_Hash_EXPR_245" : {
+      "id" : "Get_RDV_Sort_by_Hash_EXPR_245",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Get_RDV_Sort_by_Hash_EXPR_245",
+        "x" : 220,
+        "y" : 220,
+        "phase" : 1
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "REF_HK",
+            "_row_id" : null
+          },
+          "alias" : "RDV_REF_HK",
+          "description" : null,
+          "_row_id" : "9tUyHXY10JoqTXBgj5NHe"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Get_RDV_Sort_by_Hash_EXPR_245_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "Get_RDV_Sort_by_Hash_EXPR_245_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "Left_Outer_Join_by_Hash_Source_On_Left" : {
+      "id" : "Left_Outer_Join_by_Hash_Source_On_Left",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "Left_Outer_Join_by_Hash_Source_On_Left",
+        "x" : 420,
+        "y" : 120,
+        "phase" : 1
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "expression" : "(in0.SRC_REF_HK = in1.RDV_REF_HK)",
+            "_row_id" : null
+          },
+          "joinType" : "left",
+          "rightAlias" : null
+        } ],
+        "allowSelection" : false,
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "in0.SRC_REF_HK",
+            "_row_id" : null
+          },
+          "alias" : "SRC_REF_HK",
+          "description" : null,
+          "_row_id" : "a2QJSscQH59mTQgp30Sc7"
+        }, {
+          "expression" : {
+            "expression" : "in0.SRC_REF_BK",
+            "_row_id" : null
+          },
+          "alias" : "SRC_REF_BK",
+          "description" : null,
+          "_row_id" : "9kkpRTvL3a9N_mwXRr-dL"
+        }, {
+          "expression" : {
+            "expression" : "in0.SRC_CTL_SRC_CD",
+            "_row_id" : null
+          },
+          "alias" : "SRC_CTL_SRC_CD",
+          "description" : null,
+          "_row_id" : "wycgFm3q36HrCcSxE2Nkk"
+        }, {
+          "expression" : {
+            "expression" : "in1.RDV_REF_HK",
+            "_row_id" : null
+          },
+          "alias" : "RDV_REF_HK",
+          "description" : null,
+          "_row_id" : "yDBwbAzsTMtOa-tFWAYYU"
+        } ],
+        "activeTab" : "conditions",
+        "columnsSelector" : [ ],
+        "headAlias" : "in0"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Left_Outer_Join_by_Hash_Source_On_Left_in0",
+          "slug" : "in0"
+        }, {
+          "id" : "Left_Outer_Join_by_Hash_Source_On_Left_in1",
+          "slug" : "in1"
+        } ],
+        "outputs" : [ {
+          "id" : "Left_Outer_Join_by_Hash_Source_On_Left_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "15_RDV_POLmp_rdv_H_REF_S_POL_MISS_v_POL_MISS34_v_POL_MISS34_out0" : {
+      "id" : "15_RDV_POLmp_rdv_H_REF_S_POL_MISS_v_POL_MISS34_v_POL_MISS34_out0",
+      "component" : "SQLStatement",
+      "metadata" : {
+        "label" : "15_RDV_POLmp_rdv_H_REF_S_POL_MISS_v_POL_MISS34"
+      },
+      "properties" : {
+        "fileTabs" : [ {
+          "path" : "output_port_0",
+          "id" : "output_port_0",
+          "language" : "sql",
+          "content" : "\nSELECT *\n\nFROM {{ prophecy_tmp_source('15_RDV_POL_mp_rdv_H_REF_S_POL_MISS', '15_RDV_POLmp_rdv_H_REF_S_POL_MISS_v_POL_MISS34') }}\n\n"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_0",
+          "slug" : "input_port_0"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_0",
+          "slug" : "output_port_0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "Add_Control_Fields" : {
+      "id" : "Add_Control_Fields",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Add_Control_Fields",
+        "x" : 820,
+        "y" : 120,
+        "phase" : 1
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "SRC_REF_HK",
+            "_row_id" : null
+          },
+          "alias" : "REF_HK",
+          "description" : null,
+          "_row_id" : "2nkNDmGdxdYtsCAmWS4l8"
+        }, {
+          "expression" : {
+            "expression" : "SRC_REF_BK",
+            "_row_id" : null
+          },
+          "alias" : "REF_BK",
+          "description" : null,
+          "_row_id" : "rFDNf-whcyUzx3JIBkGvY"
+        }, {
+          "expression" : {
+            "expression" : "SRC_CTL_SRC_CD",
+            "_row_id" : null
+          },
+          "alias" : "CTL_SRC_CD",
+          "description" : null,
+          "_row_id" : "adybtoRBGSeX-AKPTq0vg"
+        }, {
+          "expression" : {
+            "expression" : "CAST({{ var('CTL_BATCH_ID') }} AS INTEGER)",
+            "_row_id" : null
+          },
+          "alias" : "CTL_BATCH_ID",
+          "description" : null,
+          "_row_id" : "H9HO9grJBckeZRsRFSCMh"
+        }, {
+          "expression" : {
+            "expression" : "{{ var('PMWorkflowRunId') }}",
+            "_row_id" : null
+          },
+          "alias" : "CTL_JOB_ID",
+          "description" : null,
+          "_row_id" : "z1VC8SEtC0mxOW29LMzpa"
+        }, {
+          "expression" : {
+            "expression" : "(TO_TIMESTAMP({{ var('CTL_LOAD_DM') }}, 'yyyy-MM-dd HH:mm:ss'))",
+            "_row_id" : null
+          },
+          "alias" : "CTL_LOAD_DM",
+          "description" : null,
+          "_row_id" : "_CVntjwm-Jxcc12Sp0X9B"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Add_Control_Fields_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "Add_Control_Fields_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "15_RDV_POLmp_rdv_H_REF_S_POL_MISS_H_REF33_H_REF33_out0" : {
+      "id" : "15_RDV_POLmp_rdv_H_REF_S_POL_MISS_H_REF33_H_REF33_out0",
+      "component" : "SQLStatement",
+      "metadata" : {
+        "label" : "15_RDV_POLmp_rdv_H_REF_S_POL_MISS_H_REF33"
+      },
+      "properties" : {
+        "fileTabs" : [ {
+          "path" : "output_port_1",
+          "id" : "output_port_1",
+          "language" : "sql",
+          "content" : "\nSELECT *\n\nFROM {{ prophecy_tmp_source('15_RDV_POL_mp_rdv_H_REF_S_POL_MISS', '15_RDV_POLmp_rdv_H_REF_S_POL_MISS_H_REF33') }}\n\n"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_1",
+          "slug" : "input_port_1"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_1",
+          "slug" : "output_port_1"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "edge_715",
+    "source" : "Add_Control_Fields",
+    "sourcePort" : "Add_Control_Fields_out0",
+    "target" : "H_REF17",
+    "targetPort" : "H_REF17_in0",
+    "isWireless" : false
+  }, {
+    "id" : "edge_716",
+    "source" : "Filter_New",
+    "sourcePort" : "Filter_New_out0",
+    "target" : "Add_Control_Fields",
+    "targetPort" : "Add_Control_Fields_in0",
+    "isWireless" : false
+  }, {
+    "id" : "edge_719",
+    "source" : "Left_Outer_Join_by_Hash_Source_On_Left",
+    "sourcePort" : "Left_Outer_Join_by_Hash_Source_On_Left_out0",
+    "target" : "Filter_New",
+    "targetPort" : "Filter_New_in0",
+    "isWireless" : false
+  }, {
+    "id" : "edge_718",
+    "source" : "Remove_Duplicates_EXPR_244",
+    "sourcePort" : "Remove_Duplicates_EXPR_244_out0",
+    "target" : "Left_Outer_Join_by_Hash_Source_On_Left",
+    "targetPort" : "Left_Outer_Join_by_Hash_Source_On_Left_in0",
+    "isWireless" : false
+  }, {
+    "id" : "edge_721",
+    "source" : "Get_RDV_Sort_by_Hash_EXPR_245",
+    "sourcePort" : "Get_RDV_Sort_by_Hash_EXPR_245_out0",
+    "target" : "Left_Outer_Join_by_Hash_Source_On_Left",
+    "targetPort" : "Left_Outer_Join_by_Hash_Source_On_Left_in1",
+    "isWireless" : false
+  }, {
+    "id" : "edge_717",
+    "source" : "15_RDV_POLmp_rdv_H_REF_S_POL_MISS_v_POL_MISS34_v_POL_MISS34_out0",
+    "sourcePort" : "output_port_0",
+    "target" : "Remove_Duplicates_EXPR_244",
+    "targetPort" : "Remove_Duplicates_EXPR_244_in0",
+    "isWireless" : false
+  }, {
+    "id" : "edge_720",
+    "source" : "15_RDV_POLmp_rdv_H_REF_S_POL_MISS_H_REF33_H_REF33_out0",
+    "sourcePort" : "output_port_1",
+    "target" : "Get_RDV_Sort_by_Hash_EXPR_245",
+    "targetPort" : "Get_RDV_Sort_by_Hash_EXPR_245_in0",
+    "isWireless" : false
+  } ],
+  "component" : "Model"
+}

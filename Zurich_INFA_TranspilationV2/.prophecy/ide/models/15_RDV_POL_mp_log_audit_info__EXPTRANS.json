@@ -1,0 +1,201 @@
+{
+  "id" : "15_RDV_POL_mp_log_audit_info__EXPTRANS",
+  "metainfo" : {
+    "label" : "15_RDV_POL_mp_log_audit_info__EXPTRANS",
+    "autoLayout" : true,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "entityConfig" : {
+        "materialized" : "ephemeral",
+        "database" : "\"qa_team\"",
+        "schema" : "\"qa_orchestration\"",
+        "type" : "ModelConfig"
+      }
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "EXPTRANS_EXPTRANS_out0" : {
+      "id" : "EXPTRANS_EXPTRANS_out0",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "EXPTRANS"
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "\nSELECT *\n\nFROM EXPTRANS\n\n",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_1",
+          "slug" : "input_port_1"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_1",
+          "slug" : "output_port_1"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "EXPTRANS" : {
+      "id" : "EXPTRANS",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "EXPTRANS",
+        "x" : 220,
+        "y" : 120,
+        "phase" : 1
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "JOB_NAME",
+            "_row_id" : null
+          },
+          "alias" : "JOB_NAME",
+          "description" : null,
+          "_row_id" : "iIq0f_IOKO7AU_dntwcQU"
+        }, {
+          "expression" : {
+            "expression" : "TASK_NAME",
+            "_row_id" : null
+          },
+          "alias" : "TASK_NAME",
+          "description" : null,
+          "_row_id" : "EkvuJA2MIqhKHpF7xczeG"
+        }, {
+          "expression" : {
+            "expression" : "TARGET_OBJECT_NAME",
+            "_row_id" : null
+          },
+          "alias" : "TARGET_OBJECT_NAME",
+          "description" : null,
+          "_row_id" : "ZJsx-xhPX-BJAiaN56OqR"
+        }, {
+          "expression" : {
+            "expression" : "METRICS_QUERY",
+            "_row_id" : null
+          },
+          "alias" : "METRICS_QUERY1",
+          "description" : null,
+          "_row_id" : "KpHRsZajtev2iNsjJ2fkm"
+        }, {
+          "expression" : {
+            "expression" : "ACTIVE_FLAG",
+            "_row_id" : null
+          },
+          "alias" : "ACTIVE_FLAG",
+          "description" : null,
+          "_row_id" : "41kTZjRAPN_ac_MASV3aP"
+        }, {
+          "expression" : {
+            "expression" : "CTL_BATCH_ID",
+            "_row_id" : null
+          },
+          "alias" : "CTL_BATCH_ID",
+          "description" : null,
+          "_row_id" : "bYQecM2hztAjeBU37qGyV"
+        }, {
+          "expression" : {
+            "expression" : "CTL_INTRADAY_ID",
+            "_row_id" : null
+          },
+          "alias" : "CTL_INTRADAY_ID",
+          "description" : null,
+          "_row_id" : "8ko7PRJAZ0QzuTT1h_tJr"
+        }, {
+          "expression" : {
+            "expression" : "CTL_JOB_RUN_ID",
+            "_row_id" : null
+          },
+          "alias" : "CTL_JOB_RUN_ID",
+          "description" : null,
+          "_row_id" : "P14h32sexw9zU7v5-A4Ou"
+        }, {
+          "expression" : {
+            "expression" : "CTL_REC_CRTN_DATE",
+            "_row_id" : null
+          },
+          "alias" : "CTL_REC_CRTN_DATE",
+          "description" : null,
+          "_row_id" : "78a4atXiibpuLxr7t49mS"
+        }, {
+          "expression" : {
+            "expression" : "CASE\n  WHEN ((isnull({{ var('METRICS_QUERY') }}) OR ({{ var('METRICS_QUERY') }} = 'NA')) OR ({{ var('METRICS_QUERY') }} = ''))\n    THEN concat(\n      'SELECT  SRC.SUBJECT_AREA,SRC.WORKFLOW_ID,SRC.WORKFLOW_NAME ,SRC.SESSION_ID,SRC.SESSION_NAME ,', \n      'coalesce(TGT.TABLE_NAME,', \n      '\\'', \n      'NA', \n      '\\'', \n      ') ', \n      ',SRC.WORKFLOW_RUN_ID ,SUCCESSFUL_SOURCE_ROWS ,FAILED_SOURCE_ROWS ', \n      ', FILTERED_SOURCE_ROWS ', \n      ',coalesce(TGT.SUCCESSFUL_ROWS,src.SUCCESSFUL_ROWS) SUCCESSFUL_ROWS ', \n      ',coalesce(TGT.FAILED_ROWS,src.FAILED_ROWS) FAILED_ROWS ', \n      ',coalesce(TGT.FILTERED_ROWS,src.tgt_FILTERED_ROWS) FILTERED_ROWS ', \n      ',SRC.ACTUAL_START,SRC.SESSION_TIMESTAMP,THROUGHPUT,SRC.FIRST_ERROR_MSG ', \n      ' from ', \n      '(SELECT  SUBJECT_AREA,WORKFLOW_NAME ,session_id,SESSION_NAME , workflow_id,WORKFLOW_RUN_ID ,SUCCESSFUL_SOURCE_ROWS ,FAILED_SOURCE_ROWS , ', \n      {{ var('FILTERED_SOURCE_ROWS') }}, \n      ' AS FILTERED_SOURCE_ROWS ', \n      ' ,SUCCESSFUL_ROWS ,FAILED_ROWS, ', \n      {{ var('FILTERED_SOURCE_ROWS') }}, \n      ' as tgt_FILTERED_ROWS ', \n      ' ,ACTUAL_START,SESSION_TIMESTAMP,FIRST_ERROR_MSG ', \n      ' from (select  a.*,row_number() over (partition by SUBJECT_id,workflow_id, SESSION_ID order by actual_start desc) as id ', \n      ' from REP_SESS_LOG a where subject_area== ', \n      '\\'', \n      {{ var('PMFolderName') }}, \n      '\\'', \n      ' and WORKFLOW_NAME ==  ', \n      '\\'', \n      {{ var('PMWorkflowName') }}, \n      '\\'', \n      ') B where id==1) src ', \n      ' left join', \n      '(SELECT  SUBJECT_AREA, workflow_id,session_id, TABLE_NAME,SUM(SUCCESSFUL_ROWS) SUCCESSFUL_ROWS ,SUM(FAILED_ROWS) FAILED_ROWS , ', \n      {{ var('FILTERED_SOURCE_ROWS') }}, \n      ' AS FILTERED_ROWS', \n      ',avg(THROUGHPUT) THROUGHPUT', \n      ' from ', \n      '( select  a.*,row_number() over (partition by SUBJECT_id,workflow_id, SESSION_ID order by START_TIME desc) as id ', \n      ' from REP_SESS_tbl_LOG a where subject_area==', \n      '\\'', \n      {{ var('PMFolderName') }}, \n      '\\'', \n      ') B where id==1', \n      ' GROUP BY SUBJECT_AREA,workflow_id ,session_id , TABLE_NAME', \n      ' ) as TGT', \n      ' on SRC.WORKFLOW_ID==TGT.WORKFLOW_ID', \n      ' and  SRC.session_id==TGT.session_id', \n      ' where session_name not in (', \n      {{ var('exclude_sessions') }}, \n      ' )')\n  ELSE {{ var('METRICS_QUERY') }}\nEND",
+            "_row_id" : null
+          },
+          "alias" : "metrics_query",
+          "description" : null,
+          "_row_id" : "FIZb5tVWj7mZg-TwTVg-c"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "EXPTRANS_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "EXPTRANS_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "15_RDV_POLmp_log_audit_info_AUDIT_TASK_PARAM_AUDIT_TASK_PARAM_out0" : {
+      "id" : "15_RDV_POLmp_log_audit_info_AUDIT_TASK_PARAM_AUDIT_TASK_PARAM_out0",
+      "component" : "SQLStatement",
+      "metadata" : {
+        "label" : "15_RDV_POLmp_log_audit_info_AUDIT_TASK_PARAM"
+      },
+      "properties" : {
+        "fileTabs" : [ {
+          "path" : "output_port_0",
+          "id" : "output_port_0",
+          "language" : "sql",
+          "content" : "\nSELECT *\n\nFROM {{ prophecy_tmp_source('15_RDV_POL_mp_log_audit_info', '15_RDV_POLmp_log_audit_info_AUDIT_TASK_PARAM') }}\n\n"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_0",
+          "slug" : "input_port_0"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_0",
+          "slug" : "output_port_0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "conn_EXPTRANS_EXPTRANS_out0_EXPTRANS_EXPTRANS_out0",
+    "source" : "EXPTRANS",
+    "sourcePort" : "EXPTRANS_out0",
+    "target" : "EXPTRANS_EXPTRANS_out0",
+    "targetPort" : "input_port_1",
+    "isWireless" : false
+  }, {
+    "id" : "edge_672",
+    "source" : "15_RDV_POLmp_log_audit_info_AUDIT_TASK_PARAM_AUDIT_TASK_PARAM_out0",
+    "sourcePort" : "output_port_0",
+    "target" : "EXPTRANS",
+    "targetPort" : "EXPTRANS_in0",
+    "isWireless" : false
+  } ],
+  "component" : "Model"
+}

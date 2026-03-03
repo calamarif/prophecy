@@ -1,0 +1,30 @@
+entityType: ""
+providerType: "Databricks"
+fields:
+- name: "ITEM_SHORT_DESC"
+  dataType:
+    type: "String"
+- name: "DISP_ITEM_DESC"
+  dataType:
+    type: "String"
+- name: "ITEM_LONG_DESC"
+  dataType:
+    type: "String"
+- name: "BUSN_AREA_NAME"
+  dataType:
+    type: "String"
+- name: "ITEM_TABLE"
+  dataType:
+    type: "String"
+- name: "REFERENCE_ID"
+  dataType:
+    type: "Integer"
+- name: "ITEM_CODE"
+  dataType:
+    type: "String"
+- name: "CMPY_CODE"
+  dataType:
+    type: "String"
+- name: "VALID_FLG"
+  dataType:
+    type: "String"

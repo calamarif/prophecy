@@ -1,0 +1,51 @@
+entityType: ""
+providerType: "Databricks"
+fields:
+- name: "AGE_ADMSSN_FLG"
+  dataType:
+    type: "String"
+- name: "RNWL_INVITATION_DELIVERY_EMAIL_ADDR"
+  dataType:
+    type: "String"
+- name: "INPUT_TAX_CREDIT"
+  dataType:
+    type: "Double"
+- name: "LAST_KNOWN_ADDR_FLG"
+  dataType:
+    type: "String"
+- name: "STATE_OF_REGISTRY"
+  dataType:
+    type: "String"
+- name: "CLIENT_DEATH_FLG"
+  dataType:
+    type: "String"
+- name: "EXTNL_REFERENCE"
+  dataType:
+    type: "String"
+- name: "MLNG_SUPRS_FLG"
+  dataType:
+    type: "String"
+- name: "RNWL_INVITATION_DELIVERY_METHOD"
+  dataType:
+    type: "String"
+- name: "OVERSEAS_FLG"
+  dataType:
+    type: "String"
+- name: "TAX_FILE_NUM_SUPRS_DISP_FLG"
+  dataType:
+    type: "String"
+- name: "STATE_REGTRN_NUM"
+  dataType:
+    type: "String"
+- name: "CLIENT_PARTY_ID"
+  dataType:
+    type: "Integer"
+- name: "RSDNCY_CNTRY_CODE"
+  dataType:
+    type: "String"
+- name: "CLIENT_GROUP_CODE"
+  dataType:
+    type: "String"
+- name: "STAFF_FLG"
+  dataType:
+    type: "String"

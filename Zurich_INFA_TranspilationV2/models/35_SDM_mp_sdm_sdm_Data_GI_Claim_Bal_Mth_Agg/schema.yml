@@ -1,0 +1,6 @@
+---
+version: 2
+models:
+- name: "35_SDM_mp_sdm_sdm_Data_GI_Claim_Bal_Mth_Agg__sh_DATA_GI_CLAIM_BAL_MTH_AGG"
+  tags:
+  - "prophecy_temp"

@@ -1,0 +1,372 @@
+name: zurich
+description: ''
+version: 0.0.1
+author: avpreet@prophecy.io
+language: sql
+buildSystem: ''
+buildSystemDetails: null
+pipelines: {}
+datasets: {}
+templates: {}
+jobs: {}
+gemContainer:
+  languageVersion: ''
+  gemLibsVersion: ''
+  gems: {}
+  dependencies: null
+functions:
+  author: null
+  createdAt: '2026-02-26 05:37:26'
+  udfs: {}
+  udafs: {}
+  expressions: {}
+  airflowFunctions: {}
+  businessRules: {}
+subgraphs: {}
+sqlModels: {}
+sqlSnapshots: {}
+sqlTests: {}
+sqlMacros:
+  .prophecy/metadata/sqlmacros/generate_schema_name:
+    name: generate_schema_name
+    macroType: expression
+    description: null
+    author: avpreet@prophecy.io
+    files:
+    - macros/generate_schema_name.sql
+    - .prophecy/ide/macros/generate_schema_name.json
+    createdAt: '2026-02-26 05:38:29'
+  .prophecy/metadata/sqlmacros/prophecy_tmp_source:
+    name: prophecy_tmp_source
+    macroType: expression
+    description: null
+    author: avpreet@prophecy.io
+    files:
+    - macros/prophecy_tmp_source.sql
+    - .prophecy/ide/macros/prophecy_tmp_source.json
+    createdAt: '2026-02-26 05:38:29'
+sqlSeeds: {}
+sqlSources: {}
+sqlUnreferencedSources: {}
+sqlPipeline:
+  name: sqlPipeline
+  description: null
+  author: avpreet@prophecy.io
+  createdAt: '2026-02-26 05:37:26'
+dependencies: []
+projectDependencies:
+  '64560':
+    projectUID: 64560
+    projectName: prophecy_basics
+    repositoryPath: gitUri=https://github.com/prophecy-io/prophecy-basics&subPath=
+    version: 1.0.8.dev3
+    isDefault: true
+    author: null
+    createdAt: '2026-02-26 05:36:54'
+flags:
+  shouldAddDefaultDependenciesIfAbsent: true
+pipelineConfigurations: {}
+projectConfigurations: {}
+sqlOrchestratorPipelines:
+  .prophecy/metadata/sqlorchestratorpipeline/35_SDM_mp_mdl_sdm_Data_GI_Claim_Movement:
+    name: 35_SDM_mp_mdl_sdm_Data_GI_Claim_Movement
+    schema: null
+    description: null
+    author: avpreet@prophecy.io
+    files:
+    - .prophecy/ide/pipelines/35_SDM_mp_mdl_sdm_Data_GI_Claim_Movement.json
+    - pipelines/35_SDM_mp_mdl_sdm_Data_GI_Claim_Movement.py
+    - models/35_SDM_mp_mdl_sdm_Data_GI_Claim_Movement/35_SDM_mp_mdl_sdm_Data_GI_Claim_Movement__sh_DATA_GI_CLAIM_MOVEMENT.sql
+    - models/35_SDM_mp_mdl_sdm_Data_GI_Claim_Movement/schema.yml
+    createdAt: '2026-02-26 05:38:29'
+  .prophecy/metadata/sqlorchestratorpipeline/40_DM_ORAC_mp_data_refresh_master_bdv:
+    name: 40_DM_ORAC_mp_data_refresh_master_bdv
+    schema: null
+    description: null
+    author: avpreet@prophecy.io
+    files:
+    - .prophecy/ide/pipelines/40_DM_ORAC_mp_data_refresh_master_bdv.json
+    - pipelines/40_DM_ORAC_mp_data_refresh_master_bdv.py
+    - models/40_DM_ORAC_mp_data_refresh_master_bdv_Claim_Payee_Tran/40_DM_ORAC_mp_data_refresh_master_bdv_Claim_Payee_Tran__DUMMY_TARGET_EXP.sql
+    - models/40_DM_ORAC_mp_data_refresh_master_bdv_Claim_Payee_Tran/40_DM_ORAC_mp_data_refresh_master_bdv_Claim_Payee_Tran__Exp_Set_Parameters.sql
+    - models/40_DM_ORAC_mp_data_refresh_master_bdv_Claim_Payee_Tran/schema.yml
+    - models/40_DM_ORAC_mp_data_refresh_master_bdv/40_DM_ORAC_mp_data_refresh_master_bdv__DUMMY_TARGET_EXP.sql
+    - models/40_DM_ORAC_mp_data_refresh_master_bdv/40_DM_ORAC_mp_data_refresh_master_bdv__EXP_set_parameters.sql
+    - models/40_DM_ORAC_mp_data_refresh_master_bdv/schema.yml
+    - models/40_DM_ORAC_mp_data_refresh_master_bdv_Claim_Tran/schema.yml
+    - models/40_DM_ORAC_mp_data_refresh_master_bdv_Claim_Tran/40_DM_ORAC_mp_data_refresh_master_bdv_Claim_Tran__Exp_Set_Parameters.sql
+    - models/40_DM_ORAC_mp_data_refresh_master_bdv_Claim_Tran/40_DM_ORAC_mp_data_refresh_master_bdv_Claim_Tran__DUMMY_TARGET_EXP.sql
+    createdAt: '2026-02-26 05:38:29'
+  .prophecy/metadata/sqlorchestratorpipeline/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK:
+    name: 30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK
+    schema: null
+    description: null
+    author: avpreet@prophecy.io
+    files:
+    - .prophecy/ide/pipelines/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK.json
+    - pipelines/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK.py
+    - models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__SQL_Truncate_EXPR_201.sql
+    - models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/schema.yml
+    - models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__EXP_collect_source.sql
+    - models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY.sql
+    - models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_ADDRESS.sql
+    - models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__EXP_Flag_New_Batch.sql
+    - models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_SK.sql
+    - models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__RTR_New_Existing_SK_EXPR_All.sql
+    - models/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK/30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__RTR_New_Existing_SK_JOIN_EXPR_191.sql
+    createdAt: '2026-02-26 05:38:29'
+  .prophecy/metadata/sqlorchestratorpipeline/15_RDV_POL_mp_log_audit_info_1:
+    name: 15_RDV_POL_mp_log_audit_info_1
+    schema: null
+    description: null
+    author: avpreet@prophecy.io
+    files:
+    - .prophecy/ide/pipelines/15_RDV_POL_mp_log_audit_info_1.json
+    - pipelines/15_RDV_POL_mp_log_audit_info_1.py
+    - models/15_RDV_POL_mp_log_audit_info_1/15_RDV_POL_mp_log_audit_info_1__EXPTRANS1.sql
+    - models/15_RDV_POL_mp_log_audit_info_1/schema.yml
+    - models/15_RDV_POL_mp_log_audit_info_1/15_RDV_POL_mp_log_audit_info_1__AUDIT_TASK_RUN.sql
+    - models/15_RDV_POL_mp_log_audit_info_1/15_RDV_POL_mp_log_audit_info_1__DUMMY_EXP.sql
+    - models/15_RDV_POL_mp_log_audit_info_1/15_RDV_POL_mp_log_audit_info_1__EXPTRANS.sql
+    createdAt: '2026-02-26 05:38:29'
+  .prophecy/metadata/sqlorchestratorpipeline/40_DM_ORAC_mp_data_refresh_master_bdv_Premium_Trans:
+    name: 40_DM_ORAC_mp_data_refresh_master_bdv_Premium_Trans
+    schema: null
+    description: null
+    author: avpreet@prophecy.io
+    files:
+    - .prophecy/ide/pipelines/40_DM_ORAC_mp_data_refresh_master_bdv_Premium_Trans.json
+    - pipelines/40_DM_ORAC_mp_data_refresh_master_bdv_Premium_Trans.py
+    createdAt: '2026-02-26 05:38:29'
+  .prophecy/metadata/sqlorchestratorpipeline/40_DM_ORAC_mp_data_refresh_master_bdv_Premium_Split_Trans:
+    name: 40_DM_ORAC_mp_data_refresh_master_bdv_Premium_Split_Trans
+    schema: null
+    description: null
+    author: avpreet@prophecy.io
+    files:
+    - .prophecy/ide/pipelines/40_DM_ORAC_mp_data_refresh_master_bdv_Premium_Split_Trans.json
+    - pipelines/40_DM_ORAC_mp_data_refresh_master_bdv_Premium_Split_Trans.py
+    createdAt: '2026-02-26 05:38:29'
+  .prophecy/metadata/sqlorchestratorpipeline/35_SDM_mp_mdl_sdm_Dim_GI_Translation:
+    name: 35_SDM_mp_mdl_sdm_Dim_GI_Translation
+    schema: null
+    description: null
+    author: avpreet@prophecy.io
+    files:
+    - .prophecy/ide/pipelines/35_SDM_mp_mdl_sdm_Dim_GI_Translation.json
+    - pipelines/35_SDM_mp_mdl_sdm_Dim_GI_Translation.py
+    - models/35_SDM_mp_mdl_sdm_Dim_GI_Translation/35_SDM_mp_mdl_sdm_Dim_GI_Translation__sh_DIM_GI_TRANSLATION.sql
+    - models/35_SDM_mp_mdl_sdm_Dim_GI_Translation/schema.yml
+    createdAt: '2026-02-26 05:38:29'
+  .prophecy/metadata/sqlorchestratorpipeline/35_SDM_mp_sdm_sdm_Data_GI_Claim_Bal_Mth_Agg:
+    name: 35_SDM_mp_sdm_sdm_Data_GI_Claim_Bal_Mth_Agg
+    schema: null
+    description: null
+    author: avpreet@prophecy.io
+    files:
+    - .prophecy/ide/pipelines/35_SDM_mp_sdm_sdm_Data_GI_Claim_Bal_Mth_Agg.json
+    - pipelines/35_SDM_mp_sdm_sdm_Data_GI_Claim_Bal_Mth_Agg.py
+    - models/35_SDM_mp_sdm_sdm_Data_GI_Claim_Bal_Mth_Agg/35_SDM_mp_sdm_sdm_Data_GI_Claim_Bal_Mth_Agg__sh_DATA_GI_CLAIM_BAL_MTH_AGG.sql
+    - models/35_SDM_mp_sdm_sdm_Data_GI_Claim_Bal_Mth_Agg/schema.yml
+    createdAt: '2026-02-26 05:38:29'
+  .prophecy/metadata/sqlorchestratorpipeline/15_RDV_POL_mp_log_audit_info:
+    name: 15_RDV_POL_mp_log_audit_info
+    schema: null
+    description: null
+    author: avpreet@prophecy.io
+    files:
+    - .prophecy/ide/pipelines/15_RDV_POL_mp_log_audit_info.json
+    - pipelines/15_RDV_POL_mp_log_audit_info.py
+    - models/15_RDV_POL_mp_log_audit_info/15_RDV_POL_mp_log_audit_info__DUMMY_EXP.sql
+    - models/15_RDV_POL_mp_log_audit_info/15_RDV_POL_mp_log_audit_info__AUDIT_TASK_RUN.sql
+    - models/15_RDV_POL_mp_log_audit_info/15_RDV_POL_mp_log_audit_info__EXPTRANS.sql
+    - models/15_RDV_POL_mp_log_audit_info/15_RDV_POL_mp_log_audit_info__EXPTRANS1.sql
+    - models/15_RDV_POL_mp_log_audit_info/schema.yml
+    - models/15_RDV_POL_mp_log_audit_info_1/15_RDV_POL_mp_log_audit_info_1__EXPTRANS1.sql
+    - models/15_RDV_POL_mp_log_audit_info_1/schema.yml
+    - models/15_RDV_POL_mp_log_audit_info_1/15_RDV_POL_mp_log_audit_info_1__AUDIT_TASK_RUN.sql
+    - models/15_RDV_POL_mp_log_audit_info_1/15_RDV_POL_mp_log_audit_info_1__DUMMY_EXP.sql
+    - models/15_RDV_POL_mp_log_audit_info_1/15_RDV_POL_mp_log_audit_info_1__EXPTRANS.sql
+    createdAt: '2026-02-26 05:38:29'
+  .prophecy/metadata/sqlorchestratorpipeline/35_SDM_mp_mdl_sdm_Lkp_GI_Claim_Reopen_Cnt_Mth_Agg:
+    name: 35_SDM_mp_mdl_sdm_Lkp_GI_Claim_Reopen_Cnt_Mth_Agg
+    schema: null
+    description: null
+    author: avpreet@prophecy.io
+    files:
+    - .prophecy/ide/pipelines/35_SDM_mp_mdl_sdm_Lkp_GI_Claim_Reopen_Cnt_Mth_Agg.json
+    - pipelines/35_SDM_mp_mdl_sdm_Lkp_GI_Claim_Reopen_Cnt_Mth_Agg.py
+    - models/35_SDM_mp_mdl_sdm_Lkp_GI_Claim_Reopen_Cnt_Mth_Agg/35_SDM_mp_mdl_sdm_Lkp_GI_Claim_Reopen_Cnt_Mth_Agg__sh_DATA_GI_CLAIM_REOPEN_CNT_MTH_AGG.sql
+    - models/35_SDM_mp_mdl_sdm_Lkp_GI_Claim_Reopen_Cnt_Mth_Agg/schema.yml
+    createdAt: '2026-02-26 05:38:29'
+  .prophecy/metadata/sqlorchestratorpipeline/20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_Exchange_Status_SVU:
+    name: 20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_Exchange_Status_SVU
+    schema: null
+    description: null
+    author: avpreet@prophecy.io
+    files:
+    - .prophecy/ide/pipelines/20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_Exchange_Status_SVU.json
+    - pipelines/20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_Exchange_Status_SVU.py
+    - models/20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_Exchange_Status_SVU/20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_Exchange_Status_SVU__sh_P_DIM_GI_MESSAGE_EXCHANGE_STATUS.sql
+    - models/20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_Exchange_Status_SVU/20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_Exchange_Status_SVU__SQL_Delete_Failed_EXPR_188.sql
+    - models/20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_Exchange_Status_SVU/schema.yml
+    createdAt: '2026-02-26 05:38:29'
+  .prophecy/metadata/sqlorchestratorpipeline/15_RDV_POL_mp_rdv_H_REF_S_POL_MISS:
+    name: 15_RDV_POL_mp_rdv_H_REF_S_POL_MISS
+    schema: null
+    description: null
+    author: avpreet@prophecy.io
+    files:
+    - .prophecy/ide/pipelines/15_RDV_POL_mp_rdv_H_REF_S_POL_MISS.json
+    - pipelines/15_RDV_POL_mp_rdv_H_REF_S_POL_MISS.py
+    - models/15_RDV_POL_mp_rdv_H_REF_S_POL_MISS/15_RDV_POL_mp_rdv_H_REF_S_POL_MISS__H_REF17.sql
+    - models/15_RDV_POL_mp_rdv_H_REF_S_POL_MISS/schema.yml
+    createdAt: '2026-02-26 05:38:29'
+  .prophecy/metadata/sqlorchestratorpipeline/15_RDV_POL_mp_rdv_S_POL_CLAV_CA:
+    name: 15_RDV_POL_mp_rdv_S_POL_CLAV_CA
+    schema: null
+    description: null
+    author: avpreet@prophecy.io
+    files:
+    - .prophecy/ide/pipelines/15_RDV_POL_mp_rdv_S_POL_CLAV_CA.json
+    - pipelines/15_RDV_POL_mp_rdv_S_POL_CLAV_CA.py
+    - models/15_RDV_POL_mp_rdv_S_POL_CLAV_CA/schema.yml
+    createdAt: '2026-02-26 05:38:29'
+  .prophecy/metadata/sqlorchestratorpipeline/40_DM_ORAC_mp_data_refresh_master_bdv_Claim_Payee_Tran:
+    name: 40_DM_ORAC_mp_data_refresh_master_bdv_Claim_Payee_Tran
+    schema: null
+    description: null
+    author: avpreet@prophecy.io
+    files:
+    - .prophecy/ide/pipelines/40_DM_ORAC_mp_data_refresh_master_bdv_Claim_Payee_Tran.json
+    - pipelines/40_DM_ORAC_mp_data_refresh_master_bdv_Claim_Payee_Tran.py
+    - models/40_DM_ORAC_mp_data_refresh_master_bdv_Claim_Payee_Tran/40_DM_ORAC_mp_data_refresh_master_bdv_Claim_Payee_Tran__DUMMY_TARGET_EXP.sql
+    - models/40_DM_ORAC_mp_data_refresh_master_bdv_Claim_Payee_Tran/40_DM_ORAC_mp_data_refresh_master_bdv_Claim_Payee_Tran__Exp_Set_Parameters.sql
+    - models/40_DM_ORAC_mp_data_refresh_master_bdv_Claim_Payee_Tran/schema.yml
+    createdAt: '2026-02-26 05:38:29'
+  .prophecy/metadata/sqlorchestratorpipeline/40_DM_ORAC_mp_fact_claim_tran_temp:
+    name: 40_DM_ORAC_mp_fact_claim_tran_temp
+    schema: null
+    description: null
+    author: avpreet@prophecy.io
+    files:
+    - .prophecy/ide/pipelines/40_DM_ORAC_mp_fact_claim_tran_temp.json
+    - pipelines/40_DM_ORAC_mp_fact_claim_tran_temp.py
+    - models/40_DM_ORAC_mp_fact_claim_tran_temp/40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp.sql
+    - models/40_DM_ORAC_mp_fact_claim_tran_temp/40_DM_ORAC_mp_fact_claim_tran_temp__lkp_REF_CLAIM_TRAN_TYPE_mt2.sql
+    - models/40_DM_ORAC_mp_fact_claim_tran_temp/schema.yml
+    createdAt: '2026-02-26 05:38:29'
+  .prophecy/metadata/sqlorchestratorpipeline/40_DM_ORAC_mp_data_refresh_master:
+    name: 40_DM_ORAC_mp_data_refresh_master
+    schema: null
+    description: null
+    author: avpreet@prophecy.io
+    files:
+    - .prophecy/ide/pipelines/40_DM_ORAC_mp_data_refresh_master.json
+    - pipelines/40_DM_ORAC_mp_data_refresh_master.py
+    - models/40_DM_ORAC_mp_data_refresh_master_bdv_Claim_Payee_Tran/40_DM_ORAC_mp_data_refresh_master_bdv_Claim_Payee_Tran__DUMMY_TARGET_EXP.sql
+    - models/40_DM_ORAC_mp_data_refresh_master_bdv_Claim_Payee_Tran/40_DM_ORAC_mp_data_refresh_master_bdv_Claim_Payee_Tran__Exp_Set_Parameters.sql
+    - models/40_DM_ORAC_mp_data_refresh_master_bdv_Claim_Payee_Tran/schema.yml
+    - models/40_DM_ORAC_mp_data_refresh_master/schema.yml
+    - models/40_DM_ORAC_mp_data_refresh_master/40_DM_ORAC_mp_data_refresh_master__DUMMY_TARGET_EXP.sql
+    - models/40_DM_ORAC_mp_data_refresh_master/40_DM_ORAC_mp_data_refresh_master__EXP_set_parameters.sql
+    - models/40_DM_ORAC_mp_data_refresh_master_bdv/40_DM_ORAC_mp_data_refresh_master_bdv__DUMMY_TARGET_EXP.sql
+    - models/40_DM_ORAC_mp_data_refresh_master_bdv/40_DM_ORAC_mp_data_refresh_master_bdv__EXP_set_parameters.sql
+    - models/40_DM_ORAC_mp_data_refresh_master_bdv/schema.yml
+    - models/40_DM_ORAC_mp_data_refresh_master_bdv_Claim_Tran/schema.yml
+    - models/40_DM_ORAC_mp_data_refresh_master_bdv_Claim_Tran/40_DM_ORAC_mp_data_refresh_master_bdv_Claim_Tran__Exp_Set_Parameters.sql
+    - models/40_DM_ORAC_mp_data_refresh_master_bdv_Claim_Tran/40_DM_ORAC_mp_data_refresh_master_bdv_Claim_Tran__DUMMY_TARGET_EXP.sql
+    createdAt: '2026-02-26 05:38:29'
+  .prophecy/metadata/sqlorchestratorpipeline/30_MDL_AUTHORITIES_mp_myauthorities_stg_mdl_dnm_AU_NZ_MyAuthority_Delta:
+    name: 30_MDL_AUTHORITIES_mp_myauthorities_stg_mdl_dnm_AU_NZ_MyAuthority_Delta
+    schema: null
+    description: null
+    author: avpreet@prophecy.io
+    files:
+    - .prophecy/ide/pipelines/30_MDL_AUTHORITIES_mp_myauthorities_stg_mdl_dnm_AU_NZ_MyAuthority_Delta.json
+    - pipelines/30_MDL_AUTHORITIES_mp_myauthorities_stg_mdl_dnm_AU_NZ_MyAuthority_Delta.py
+    - models/30_MDL_AUTHORITIES_mp_myauthorities_stg_mdl_dnm_AU_NZ_MyAuthority_Delta/30_MDL_AUTHORITIES_mp_myauthorities_stg_mdl_dnm_AU_NZ_MyAuthority_Delta__DNM_AUTH_AU_NZ_MYAUTHORITY_ALLUSERS_DELTA.sql
+    - models/30_MDL_AUTHORITIES_mp_myauthorities_stg_mdl_dnm_AU_NZ_MyAuthority_Delta/schema.yml
+    createdAt: '2026-02-26 05:38:29'
+  .prophecy/metadata/sqlorchestratorpipeline/40_DM_ORAC_mp_Call_Float_Status_Tracker_Stored_Proc:
+    name: 40_DM_ORAC_mp_Call_Float_Status_Tracker_Stored_Proc
+    schema: null
+    description: null
+    author: avpreet@prophecy.io
+    files:
+    - .prophecy/ide/pipelines/40_DM_ORAC_mp_Call_Float_Status_Tracker_Stored_Proc.json
+    - pipelines/40_DM_ORAC_mp_Call_Float_Status_Tracker_Stored_Proc.py
+    - models/40_DM_ORAC_mp_Call_Float_Status_Tracker_Stored_Proc/40_DM_ORAC_mp_Call_Float_Status_Tracker_Stored_Proc__INSERT_BROKER_ACCOUNT_FLOAT_STATUS_TRACKER_EXPR_356.sql
+    - models/40_DM_ORAC_mp_Call_Float_Status_Tracker_Stored_Proc/schema.yml
+    createdAt: '2026-02-26 05:38:29'
+  .prophecy/metadata/sqlorchestratorpipeline/30_MDL_AUTHORITIES_mp_myauthorities_stg_mdl_dnm_AU_NZ_MyAuthority_Full_2:
+    name: 30_MDL_AUTHORITIES_mp_myauthorities_stg_mdl_dnm_AU_NZ_MyAuthority_Full_2
+    schema: null
+    description: null
+    author: avpreet@prophecy.io
+    files:
+    - .prophecy/ide/pipelines/30_MDL_AUTHORITIES_mp_myauthorities_stg_mdl_dnm_AU_NZ_MyAuthority_Full_2.json
+    - pipelines/30_MDL_AUTHORITIES_mp_myauthorities_stg_mdl_dnm_AU_NZ_MyAuthority_Full_2.py
+    - models/30_MDL_AUTHORITIES_mp_myauthorities_stg_mdl_dnm_AU_NZ_MyAuthority_Full_2/30_MDL_AUTHORITIES_mp_myauthorities_stg_mdl_dnm_AU_NZ_MyAuthority_Full_2__DNM_AUTH_AU_NZ_MYAUTHORITY_FULL.sql
+    - models/30_MDL_AUTHORITIES_mp_myauthorities_stg_mdl_dnm_AU_NZ_MyAuthority_Full_2/schema.yml
+    createdAt: '2026-02-26 05:38:29'
+  .prophecy/metadata/sqlorchestratorpipeline/20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_SVU:
+    name: 20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_SVU
+    schema: null
+    description: null
+    author: avpreet@prophecy.io
+    files:
+    - .prophecy/ide/pipelines/20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_SVU.json
+    - pipelines/20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_SVU.py
+    - models/20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_SVU/20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_SVU__sh_P_DIM_GI_MESSAGE_from_Message_Document.sql
+    - models/20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_SVU/20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_SVU__sh_P_DIM_GI_MESSAGE_from_Request_Response.sql
+    - models/20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_SVU/20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_SVU__SQL_Delete_Failed_EXPR_232.sql
+    - models/20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_SVU/schema.yml
+    createdAt: '2026-02-26 05:38:29'
+  .prophecy/metadata/sqlorchestratorpipeline/40_DM_ORAC_mp_s_dim_claim_temp:
+    name: 40_DM_ORAC_mp_s_dim_claim_temp
+    schema: null
+    description: null
+    author: avpreet@prophecy.io
+    files:
+    - .prophecy/ide/pipelines/40_DM_ORAC_mp_s_dim_claim_temp.json
+    - pipelines/40_DM_ORAC_mp_s_dim_claim_temp.py
+    - models/40_DM_ORAC_mp_s_dim_claim_temp/40_DM_ORAC_mp_s_dim_claim_temp__Dim_Claim_Temp.sql
+    - models/40_DM_ORAC_mp_s_dim_claim_temp/schema.yml
+    createdAt: '2026-02-26 05:38:29'
+  .prophecy/metadata/sqlorchestratorpipeline/35_SDM_mp_mdl_sdm_Dim_GI_Claim_Status_History_Mth_Agg:
+    name: 35_SDM_mp_mdl_sdm_Dim_GI_Claim_Status_History_Mth_Agg
+    schema: null
+    description: null
+    author: avpreet@prophecy.io
+    files:
+    - .prophecy/ide/pipelines/35_SDM_mp_mdl_sdm_Dim_GI_Claim_Status_History_Mth_Agg.json
+    - pipelines/35_SDM_mp_mdl_sdm_Dim_GI_Claim_Status_History_Mth_Agg.py
+    - models/35_SDM_mp_mdl_sdm_Dim_GI_Claim_Status_History_Mth_Agg/35_SDM_mp_mdl_sdm_Dim_GI_Claim_Status_History_Mth_Agg__sh_DIM_GI_CLAIM_STATUS_HISTORY_MTH_AGG.sql
+    - models/35_SDM_mp_mdl_sdm_Dim_GI_Claim_Status_History_Mth_Agg/schema.yml
+    createdAt: '2026-02-26 05:38:29'
+  .prophecy/metadata/sqlorchestratorpipeline/40_DM_ORAC_mp_date_refresh_event_wait:
+    name: 40_DM_ORAC_mp_date_refresh_event_wait
+    schema: null
+    description: null
+    author: avpreet@prophecy.io
+    files:
+    - .prophecy/ide/pipelines/40_DM_ORAC_mp_date_refresh_event_wait.json
+    - pipelines/40_DM_ORAC_mp_date_refresh_event_wait.py
+    - models/40_DM_ORAC_mp_date_refresh_event_wait/40_DM_ORAC_mp_date_refresh_event_wait__DUMMY_TARGET_EXP.sql
+    - models/40_DM_ORAC_mp_date_refresh_event_wait/40_DM_ORAC_mp_date_refresh_event_wait__EXP_set_parameters.sql
+    - models/40_DM_ORAC_mp_date_refresh_event_wait/schema.yml
+    createdAt: '2026-02-26 05:38:29'
+  .prophecy/metadata/sqlorchestratorpipeline/40_DM_ORAC_mp_data_refresh_master_bdv_Claim_Tran:
+    name: 40_DM_ORAC_mp_data_refresh_master_bdv_Claim_Tran
+    schema: null
+    description: null
+    author: avpreet@prophecy.io
+    files:
+    - .prophecy/ide/pipelines/40_DM_ORAC_mp_data_refresh_master_bdv_Claim_Tran.json
+    - pipelines/40_DM_ORAC_mp_data_refresh_master_bdv_Claim_Tran.py
+    - models/40_DM_ORAC_mp_data_refresh_master_bdv_Claim_Tran/40_DM_ORAC_mp_data_refresh_master_bdv_Claim_Tran__DUMMY_TARGET_EXP.sql
+    - models/40_DM_ORAC_mp_data_refresh_master_bdv_Claim_Tran/40_DM_ORAC_mp_data_refresh_master_bdv_Claim_Tran__Exp_Set_Parameters.sql
+    - models/40_DM_ORAC_mp_data_refresh_master_bdv_Claim_Tran/schema.yml
+    createdAt: '2026-02-26 05:38:29'
+sqlBusinessApps: {}

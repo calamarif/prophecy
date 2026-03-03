@@ -1,0 +1,51 @@
+{{
+  config({    
+    "materialized": "ephemeral",
+    "database": "qa_team",
+    "schema": "qa_orchestration"
+  })
+}}
+
+WITH SQL AS (
+
+  SELECT *
+  
+  FROM {{ prophecy_tmp_source('15_RDV_POL_mp_log_audit_info_1', 'SQL') }}
+
+),
+
+EXPTRANS1 AS (
+
+  SELECT 
+    SUBJECT_AREA AS SUBJECT_AREA,
+    JOB_ID AS JOB_ID,
+    JOB_NAME AS JOB_NAME,
+    TASK_ID AS TASK_ID,
+    TASK_NAME AS TASK_NAME,
+    TARGET_OBJECT_NAME AS TARGET_OBJECT_NAME,
+    JOB_RUN_ID AS JOB_RUN_ID,
+    SOURCE_AFFECTED_ROWS AS SOURCE_AFFECTED_ROWS,
+    SOURCE_REJECTED_ROWS AS SOURCE_REJECTED_ROWS,
+    SOURCE_FILTERED_ROWS AS SOURCE_FILTERED_ROWS,
+    TARGET_AFFECTED_ROWS AS TARGET_AFFECTED_ROWS,
+    TARGET_REJECTED_ROWS AS TARGET_REJECTED_ROWS,
+    TARGET_FILTERED_ROWS AS TARGET_FILTERED_ROWS,
+    Job_START_DT AS task_start_time,
+    Job_END_DT AS task_end_time,
+    Throughput AS Throughput,
+    ERROR_MSG AS error_msg,
+    metrics_query_output AS EXECUTED_QUERY,
+    SQLError AS ERROR_LOG,
+    {{ var('CTL_BATCH_ID') }} AS CTL_BATCH_ID,
+    {{ var('CTL_INTRADAY_ID') }} AS CTL_INTRADAY_ID,
+    {{ var('PMWorkflowRunId') }} AS CTL_JOB_RUN_ID,
+    CURRENT_TIMESTAMP AS CTL_REC_CRTN_DATE,
+    SQLError AS EXECUTED_QUERY_ERROR_LOG
+  
+  FROM SQL AS in0
+
+)
+
+SELECT *
+
+FROM EXPTRANS1

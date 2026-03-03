@@ -1,0 +1,914 @@
+{
+  "id" : "20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_SVU__sh_P_DIM_GI_MESSAGE_from_Request_Response",
+  "metainfo" : {
+    "label" : "20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_SVU__sh_P_DIM_GI_MESSAGE_from_Request_Response",
+    "autoLayout" : true,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "entityConfig" : {
+        "alias" : "\"sh_P_DIM_GI_MESSAGE_from_Request_Response\"",
+        "materialized" : "table",
+        "database" : "\"qa_team\"",
+        "schema" : "\"qa_orchestration\"",
+        "type" : "ModelConfig"
+      }
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "sh_P_DIM_GI_MESSAGE_from_Request_Response_EXP_JOIN" : {
+      "id" : "sh_P_DIM_GI_MESSAGE_from_Request_Response_EXP_JOIN",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "sh_P_DIM_GI_MESSAGE_from_Request_Response_EXP_JOIN",
+        "x" : 680,
+        "y" : 760,
+        "phase" : 3
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "expression" : "(in0.prophecy_sk = in1.prophecy_sk)",
+            "_row_id" : null
+          },
+          "joinType" : "inner",
+          "rightAlias" : null
+        }, {
+          "alias" : "in2",
+          "expression" : {
+            "expression" : "(in1.prophecy_sk = in2.prophecy_sk)",
+            "_row_id" : null
+          },
+          "joinType" : "inner",
+          "rightAlias" : null
+        }, {
+          "alias" : "in3",
+          "expression" : {
+            "expression" : "(in2.prophecy_sk = in3.prophecy_sk)",
+            "_row_id" : null
+          },
+          "joinType" : "inner",
+          "rightAlias" : null
+        } ],
+        "allowSelection" : false,
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "in2.MESSAGE_PACKET_DOC_TYPE",
+            "_row_id" : null
+          },
+          "alias" : "MESSAGE_PACKET_DOC_TYPE",
+          "description" : null,
+          "_row_id" : "TnZrcRobFldqGK8CR4nzr"
+        }, {
+          "expression" : {
+            "expression" : "in2.APPLCN_NAME",
+            "_row_id" : null
+          },
+          "alias" : "APPLCN_NAME",
+          "description" : null,
+          "_row_id" : "At3LjDl9N6x_BpNzYipIr"
+        }, {
+          "expression" : {
+            "expression" : "in3.CTL_BATCH_ID",
+            "_row_id" : null
+          },
+          "alias" : "CTL_BATCH_ID",
+          "description" : null,
+          "_row_id" : "fmxy5GWIE0im1UqgvhGAu"
+        }, {
+          "expression" : {
+            "expression" : "in3.CTL_SRC_SYS_SET_NAME",
+            "_row_id" : null
+          },
+          "alias" : "CTL_SRC_SYS_SET_NAME",
+          "description" : null,
+          "_row_id" : "-GVitMt8y14EDvQNcFLYv"
+        }, {
+          "expression" : {
+            "expression" : "in0.INTERNAL_ID",
+            "_row_id" : null
+          },
+          "alias" : "INTERNAL_ID",
+          "description" : null,
+          "_row_id" : "Wg4UqU75xrjmPO6czz3DV"
+        }, {
+          "expression" : {
+            "expression" : "in2.SCHEMA_VERS",
+            "_row_id" : null
+          },
+          "alias" : "SCHEMA_VERS",
+          "description" : null,
+          "_row_id" : "FAkWJ7ZLU27ngzF3y42WQ"
+        }, {
+          "expression" : {
+            "expression" : "in1.out_CONVERSATION_NUM",
+            "_row_id" : null
+          },
+          "alias" : "out_CONVERSATION_NUM",
+          "description" : null,
+          "_row_id" : "v5EYyiPTt2ZunjGbszPGz"
+        }, {
+          "expression" : {
+            "expression" : "in2.MESSAGE_STATUS_CODE",
+            "_row_id" : null
+          },
+          "alias" : "MESSAGE_STATUS_CODE",
+          "description" : null,
+          "_row_id" : "vuGliFHzO-g8YCAdjPaPL"
+        }, {
+          "expression" : {
+            "expression" : "in2.EXCHANGE_REFERENCE",
+            "_row_id" : null
+          },
+          "alias" : "EXCHANGE_REFERENCE",
+          "description" : null,
+          "_row_id" : "dWnQgB98WFQ9WjdreaTyV"
+        }, {
+          "expression" : {
+            "expression" : "in2.MESSAGE_TYPE",
+            "_row_id" : null
+          },
+          "alias" : "MESSAGE_TYPE",
+          "description" : null,
+          "_row_id" : "hNr5M2r0LUT2Jnp7R8S6A"
+        }, {
+          "expression" : {
+            "expression" : "in3.CTL_REC_CRTN_DATE",
+            "_row_id" : null
+          },
+          "alias" : "CTL_REC_CRTN_DATE",
+          "description" : null,
+          "_row_id" : "JisvIE3wbTAtmES9FTJqw"
+        }, {
+          "expression" : {
+            "expression" : "in3.CTL_EXTRACT_ID",
+            "_row_id" : null
+          },
+          "alias" : "CTL_EXTRACT_ID",
+          "description" : null,
+          "_row_id" : "f08WZYXgTyj1lDlYT48j4"
+        }, {
+          "expression" : {
+            "expression" : "in2.MESSAGE_TYPE_CODE",
+            "_row_id" : null
+          },
+          "alias" : "MESSAGE_TYPE_CODE",
+          "description" : null,
+          "_row_id" : "GnFXSAPFElnBtf0-m9LIu"
+        }, {
+          "expression" : {
+            "expression" : "in2.MESSAGE_TS",
+            "_row_id" : null
+          },
+          "alias" : "MESSAGE_TS",
+          "description" : null,
+          "_row_id" : "U4Xtmn_NVWpX5nlIeoG8D"
+        }, {
+          "expression" : {
+            "expression" : "in0.MESSAGE_NUM",
+            "_row_id" : null
+          },
+          "alias" : "MESSAGE_NUM",
+          "description" : null,
+          "_row_id" : "8PrtorT0VDX2ZnsI_Pyyq"
+        }, {
+          "expression" : {
+            "expression" : "in0.prophecy_sk",
+            "_row_id" : null
+          },
+          "alias" : "prophecy_sk",
+          "description" : null,
+          "_row_id" : "Gb1hM2cIEXjuUTKSGHzY0"
+        }, {
+          "expression" : {
+            "expression" : "in2.MESSAGE_PACKET",
+            "_row_id" : null
+          },
+          "alias" : "MESSAGE_PACKET",
+          "description" : null,
+          "_row_id" : "Y1oPf7-tgQXF8DY3ztioy"
+        }, {
+          "expression" : {
+            "expression" : "in2.MESSAGE_DIRECTION",
+            "_row_id" : null
+          },
+          "alias" : "MESSAGE_DIRECTION",
+          "description" : null,
+          "_row_id" : "U1g4PdpDfEkYi9PCaUdc7"
+        }, {
+          "expression" : {
+            "expression" : "in0.PARTNER_GATEWAY",
+            "_row_id" : null
+          },
+          "alias" : "PARTNER_GATEWAY",
+          "description" : null,
+          "_row_id" : "5BEXZzND25uur5NTcBwBt"
+        }, {
+          "expression" : {
+            "expression" : "in2.EXCHANGE_STRT_DATE",
+            "_row_id" : null
+          },
+          "alias" : "EXCHANGE_STRT_DATE",
+          "description" : null,
+          "_row_id" : "QAKIV2VkkuNleqxZIRuaq"
+        }, {
+          "expression" : {
+            "expression" : "in2.EXCHANGE_PATTERN",
+            "_row_id" : null
+          },
+          "alias" : "EXCHANGE_PATTERN",
+          "description" : null,
+          "_row_id" : "k5OSV-GXwzSZ2mJ9jL71y"
+        }, {
+          "expression" : {
+            "expression" : "in3.CTL_JOB_ID",
+            "_row_id" : null
+          },
+          "alias" : "CTL_JOB_ID",
+          "description" : null,
+          "_row_id" : "g9mbbLP6c0CCK0I_Jr7hM"
+        }, {
+          "expression" : {
+            "expression" : "in3.CTL_SRC_ROW_ID",
+            "_row_id" : null
+          },
+          "alias" : "CTL_SRC_ROW_ID",
+          "description" : null,
+          "_row_id" : "dV0_p8ed9231I5VyeoQw0"
+        } ],
+        "activeTab" : "conditions",
+        "columnsSelector" : [ ],
+        "headAlias" : "in0"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "sh_P_DIM_GI_MESSAGE_from_Request_Response_EXP_JOIN_in0",
+          "slug" : "in0"
+        }, {
+          "id" : "sh_P_DIM_GI_MESSAGE_from_Request_Response_EXP_JOIN_in1",
+          "slug" : "in1"
+        }, {
+          "id" : "sh_P_DIM_GI_MESSAGE_from_Request_Response_EXP_JOIN_in2",
+          "slug" : "in2"
+        }, {
+          "id" : "sh_P_DIM_GI_MESSAGE_from_Request_Response_EXP_JOIN_in3",
+          "slug" : "in3"
+        } ],
+        "outputs" : [ {
+          "id" : "sh_P_DIM_GI_MESSAGE_from_Request_Response_EXP_JOIN_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "EXP_Set_Defaults_2" : {
+      "id" : "EXP_Set_Defaults_2",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "EXP_Set_Defaults_2",
+        "x" : 420,
+        "y" : 840,
+        "phase" : 3
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "(CASE WHEN ((EXCHANGE_STRT_DATE IS NULL) OR (CAST((RTRIM((LTRIM(EXCHANGE_STRT_DATE)))) AS string) = '')) THEN (MAKE_DATE_TIME(9999, 12, 31, 23, 59, 59, 0)) ELSE EXCHANGE_STRT_DATE END)",
+            "_row_id" : null
+          },
+          "alias" : "EXCHANGE_STRT_DATE",
+          "description" : null,
+          "_row_id" : "vidvn9tG2qO2LuoDfMEMa"
+        }, {
+          "expression" : {
+            "expression" : "(CASE WHEN ((SCHEMA_VERSION IS NULL) OR (CAST((RTRIM((LTRIM(SCHEMA_VERSION)))) AS string) = '')) THEN '-' ELSE SCHEMA_VERSION END)",
+            "_row_id" : null
+          },
+          "alias" : "SCHEMA_VERS",
+          "description" : null,
+          "_row_id" : "rnieiWkexMDJEFGNO12O_"
+        }, {
+          "expression" : {
+            "expression" : "(CASE WHEN ((EXCHANGE_REFERENCE IS NULL) OR (CAST((RTRIM((LTRIM(EXCHANGE_REFERENCE)))) AS string) = '')) THEN '-' ELSE EXCHANGE_REFERENCE END)",
+            "_row_id" : null
+          },
+          "alias" : "EXCHANGE_REFERENCE",
+          "description" : null,
+          "_row_id" : "691qCCjKGpMB7KL884kD7"
+        }, {
+          "expression" : {
+            "expression" : "'REQUEST_RESPONSE'",
+            "_row_id" : null
+          },
+          "alias" : "EXCHANGE_PATTERN",
+          "description" : null,
+          "_row_id" : "SynClaYmOsNY3X2xvj5YB"
+        }, {
+          "expression" : {
+            "expression" : "SUBSTRING(MESSAGE_TYPE_DIRECTION, ((LOCATE('_', MESSAGE_TYPE_DIRECTION, 0)) + 1), 2147483647)",
+            "_row_id" : null
+          },
+          "alias" : "MESSAGE_TYPE",
+          "description" : null,
+          "_row_id" : "gN8PJAFEiTEkZdd4Z3Ui5"
+        }, {
+          "expression" : {
+            "expression" : "MESSAGE_PACKET",
+            "_row_id" : null
+          },
+          "alias" : "MESSAGE_PACKET",
+          "description" : null,
+          "_row_id" : "80uhs3aTahjoVN95Mzp30"
+        }, {
+          "expression" : {
+            "expression" : "(CASE WHEN ((IN_MESSAGE_TS IS NULL) OR (CAST((RTRIM((LTRIM(IN_MESSAGE_TS)))) AS string) = '')) THEN (MAKE_DATE_TIME(9999, 12, 31, 23, 59, 59, 0)) ELSE IN_MESSAGE_TS END)",
+            "_row_id" : null
+          },
+          "alias" : "MESSAGE_TS",
+          "description" : null,
+          "_row_id" : "dmWYxS7gb7cgnhN9tH3bX"
+        }, {
+          "expression" : {
+            "expression" : "(CASE WHEN ((MESSAGE_STATUS_CODE IS NULL) OR (CAST((RTRIM((LTRIM(MESSAGE_STATUS_CODE)))) AS string) = '')) THEN '-' ELSE UPPER(MESSAGE_STATUS_CODE) END)",
+            "_row_id" : null
+          },
+          "alias" : "MESSAGE_STATUS_CODE",
+          "description" : null,
+          "_row_id" : "kiUn670Hea76EpWcdMY24"
+        }, {
+          "expression" : {
+            "expression" : "(CASE WHEN (CAST(SUBSTRING(MESSAGE_TYPE_DIRECTION, 1, ((LOCATE('_', MESSAGE_TYPE_DIRECTION, 0)) - 1)) AS string) = 'POST_RS') THEN RS_MESSAGE_TYPE_CODE ELSE RQ_MESSAGE_TYPE_CODE END)",
+            "_row_id" : null
+          },
+          "alias" : "MESSAGE_TYPE_CODE",
+          "description" : null,
+          "_row_id" : "xxmuVu1GDhRYRjR7UGtLI"
+        }, {
+          "expression" : {
+            "expression" : "(CASE WHEN (CAST(SUBSTRING(MESSAGE_TYPE_DIRECTION, 1, ((LOCATE('_', MESSAGE_TYPE_DIRECTION, 0)) - 1)) AS string) = 'INBOUND') THEN 'IN' ELSE 'OUT' END)",
+            "_row_id" : null
+          },
+          "alias" : "MESSAGE_DIRECTION",
+          "description" : null,
+          "_row_id" : "i2VNzkCVmJphkEkreX66Z"
+        }, {
+          "expression" : {
+            "expression" : "(CASE WHEN ((MESSAGE_PACKET_DOC_TYPE IS NULL) OR (CAST((RTRIM((LTRIM(MESSAGE_PACKET_DOC_TYPE)))) AS string) = '')) THEN '-' ELSE MESSAGE_PACKET_DOC_TYPE END)",
+            "_row_id" : null
+          },
+          "alias" : "MESSAGE_PACKET_DOC_TYPE",
+          "description" : null,
+          "_row_id" : "GVWa65TvYIwxjgU21DOos"
+        }, {
+          "expression" : {
+            "expression" : "'SVU_GTWY'",
+            "_row_id" : null
+          },
+          "alias" : "APPLCN_NAME",
+          "description" : null,
+          "_row_id" : "g70PQd7bm9os3w3gKX8sG"
+        }, {
+          "expression" : {
+            "expression" : "prophecy_sk",
+            "_row_id" : null
+          },
+          "alias" : "prophecy_sk",
+          "description" : null,
+          "_row_id" : "ENHo69V891pD3BvpyjgY-"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "EXP_Set_Defaults_2_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "EXP_Set_Defaults_2_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "CZnZZvqufrGDbnWtlXqCo" : {
+      "id" : "CZnZZvqufrGDbnWtlXqCo",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "SQ_sh_V_ZSX_XML_SVU_MESSAGE_REQUEST_RESPONSE_GENERATE_SK_0",
+        "x" : 220,
+        "y" : 740,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "(monotonically_increasing_id())",
+            "_row_id" : null
+          },
+          "alias" : "prophecy_sk",
+          "description" : null,
+          "_row_id" : "VkPuAZSP6h8IZ5EXK6sU-"
+        }, {
+          "expression" : {
+            "expression" : "*",
+            "_row_id" : null
+          },
+          "alias" : null,
+          "description" : null,
+          "_row_id" : null
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "4xkgtlVdWix-3xBKlTqvK",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "cKRg6KNLIKcNMKndt_iOp",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "sh_P_DIM_GI_MESSAGE_from_Request_Response_EXP" : {
+      "id" : "sh_P_DIM_GI_MESSAGE_from_Request_Response_EXP",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "sh_P_DIM_GI_MESSAGE_from_Request_Response_EXP",
+        "x" : 880,
+        "y" : 760,
+        "phase" : 3
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "out_CONVERSATION_NUM",
+            "_row_id" : null
+          },
+          "alias" : "CONVERSATION_NUM",
+          "description" : null,
+          "_row_id" : "CH9juO3XojOB-PrOr5kpW"
+        }, {
+          "expression" : {
+            "expression" : "INTERNAL_ID",
+            "_row_id" : null
+          },
+          "alias" : "INTERNAL_ID",
+          "description" : null,
+          "_row_id" : "jpWwuF6YS0Fsy1053PnWH"
+        }, {
+          "expression" : {
+            "expression" : "EXCHANGE_STRT_DATE",
+            "_row_id" : null
+          },
+          "alias" : "EXCHANGE_STRT_DATE",
+          "description" : null,
+          "_row_id" : "V64vwLQyrPXfVZ0XNidz_"
+        }, {
+          "expression" : {
+            "expression" : "SCHEMA_VERS",
+            "_row_id" : null
+          },
+          "alias" : "SCHEMA_VERS",
+          "description" : null,
+          "_row_id" : "TbnMwNDS5L81mY8vZpgHn"
+        }, {
+          "expression" : {
+            "expression" : "EXCHANGE_REFERENCE",
+            "_row_id" : null
+          },
+          "alias" : "EXCHANGE_REFERENCE",
+          "description" : null,
+          "_row_id" : "sV4ql2P1eIRNFpYpuaMog"
+        }, {
+          "expression" : {
+            "expression" : "EXCHANGE_PATTERN",
+            "_row_id" : null
+          },
+          "alias" : "EXCHANGE_PATTERN",
+          "description" : null,
+          "_row_id" : "oyEg5CCCD8wPh8iacGBZO"
+        }, {
+          "expression" : {
+            "expression" : "MESSAGE_NUM",
+            "_row_id" : null
+          },
+          "alias" : "MESSAGE_NUM",
+          "description" : null,
+          "_row_id" : "qSgi1ibKZk37mYhmUWGf4"
+        }, {
+          "expression" : {
+            "expression" : "PARTNER_GATEWAY",
+            "_row_id" : null
+          },
+          "alias" : "PARTNER_GATEWAY",
+          "description" : null,
+          "_row_id" : "BDq777G7oSI0P3ytRU-gj"
+        }, {
+          "expression" : {
+            "expression" : "CTL_SRC_ROW_ID",
+            "_row_id" : null
+          },
+          "alias" : "CTL_SRC_ROW_ID",
+          "description" : null,
+          "_row_id" : "Du4i1Sf-Q5bPNN6DkMy7i"
+        }, {
+          "expression" : {
+            "expression" : "CTL_BATCH_ID",
+            "_row_id" : null
+          },
+          "alias" : "CTL_BATCH_ID",
+          "description" : null,
+          "_row_id" : "62Er-AFSMcU93ZXJ7Q5Yl"
+        }, {
+          "expression" : {
+            "expression" : "CTL_JOB_ID",
+            "_row_id" : null
+          },
+          "alias" : "CTL_JOB_ID",
+          "description" : null,
+          "_row_id" : "cctcfZKXrVq5HoRGAlKiB"
+        }, {
+          "expression" : {
+            "expression" : "CTL_REC_CRTN_DATE",
+            "_row_id" : null
+          },
+          "alias" : "CTL_REC_CRTN_DATE",
+          "description" : null,
+          "_row_id" : "c-90VRJQq0OIEUG3sQjHK"
+        }, {
+          "expression" : {
+            "expression" : "CTL_EXTRACT_ID",
+            "_row_id" : null
+          },
+          "alias" : "CTL_EXTRACT_ID",
+          "description" : null,
+          "_row_id" : "9V_i9TzxMb5RKtJ13KzOE"
+        }, {
+          "expression" : {
+            "expression" : "CTL_SRC_SYS_SET_NAME",
+            "_row_id" : null
+          },
+          "alias" : "CTL_SRC_SYS_SET_NAME",
+          "description" : null,
+          "_row_id" : "lsRX8tDmxzF6l4orSd5vz"
+        }, {
+          "expression" : {
+            "expression" : "MESSAGE_TYPE",
+            "_row_id" : null
+          },
+          "alias" : "MESSAGE_TYPE",
+          "description" : null,
+          "_row_id" : "lMvtcyElTW7MjPNDNAnzi"
+        }, {
+          "expression" : {
+            "expression" : "MESSAGE_PACKET",
+            "_row_id" : null
+          },
+          "alias" : "MESSAGE_PACKET",
+          "description" : null,
+          "_row_id" : "hOruuvfi8HPHfNb83BQrm"
+        }, {
+          "expression" : {
+            "expression" : "MESSAGE_TS",
+            "_row_id" : null
+          },
+          "alias" : "MESSAGE_TS",
+          "description" : null,
+          "_row_id" : "5thfFGjK-aBJR-BgnvR7g"
+        }, {
+          "expression" : {
+            "expression" : "MESSAGE_STATUS_CODE",
+            "_row_id" : null
+          },
+          "alias" : "MESSAGE_STATUS_CODE",
+          "description" : null,
+          "_row_id" : "nB6yGF0IO6HyMFfr14Yq6"
+        }, {
+          "expression" : {
+            "expression" : "MESSAGE_TYPE_CODE",
+            "_row_id" : null
+          },
+          "alias" : "MESSAGE_TYPE_CODE",
+          "description" : null,
+          "_row_id" : "eklq7SlXPpFvdLt3peYW4"
+        }, {
+          "expression" : {
+            "expression" : "MESSAGE_DIRECTION",
+            "_row_id" : null
+          },
+          "alias" : "MESSAGE_DIRECTION",
+          "description" : null,
+          "_row_id" : "-AbwZjoHRheGUsy9xJC5k"
+        }, {
+          "expression" : {
+            "expression" : "MESSAGE_PACKET_DOC_TYPE",
+            "_row_id" : null
+          },
+          "alias" : "MESSAGE_PACKET_DOC_TYPE",
+          "description" : null,
+          "_row_id" : "0y2Q1OjcUWLYrGYlOZiUR"
+        }, {
+          "expression" : {
+            "expression" : "APPLCN_NAME",
+            "_row_id" : null
+          },
+          "alias" : "APPLCN_NAME",
+          "description" : null,
+          "_row_id" : "DLkXV_DJBiDiCA-jMl0BU"
+        }, {
+          "expression" : {
+            "expression" : "CAST(NULL AS string)",
+            "_row_id" : null
+          },
+          "alias" : "MESSAGE_REPLY_TS",
+          "description" : null,
+          "_row_id" : "50Yy2TTIGadREjFj9qiSX"
+        }, {
+          "expression" : {
+            "expression" : "prophecy_sk",
+            "_row_id" : null
+          },
+          "alias" : "prophecy_sk",
+          "description" : null,
+          "_row_id" : "1OZQ-gvF5xRf-04W19_Q3"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "sh_P_DIM_GI_MESSAGE_from_Request_Response_EXP_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "sh_P_DIM_GI_MESSAGE_from_Request_Response_EXP_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "EXP_Ctl_Fields_STG_2" : {
+      "id" : "EXP_Ctl_Fields_STG_2",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "EXP_Ctl_Fields_STG_2",
+        "x" : 420,
+        "y" : 1040,
+        "phase" : 3
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "CTL_SRC_ROW_ID",
+            "_row_id" : null
+          },
+          "alias" : "CTL_SRC_ROW_ID",
+          "description" : null,
+          "_row_id" : "aPjixoFjNHp568BFy3OJw"
+        }, {
+          "expression" : {
+            "expression" : "CTL_BATCH_ID",
+            "_row_id" : null
+          },
+          "alias" : "CTL_BATCH_ID",
+          "description" : null,
+          "_row_id" : "G97j8t4rmKdIPgG3612-P"
+        }, {
+          "expression" : {
+            "expression" : "CTL_EXTRACT_ID",
+            "_row_id" : null
+          },
+          "alias" : "CTL_EXTRACT_ID",
+          "description" : null,
+          "_row_id" : "0FyseqSNkVdUlBV9ik1Y8"
+        }, {
+          "expression" : {
+            "expression" : "CTL_SRC_SYS_SET_NAME",
+            "_row_id" : null
+          },
+          "alias" : "CTL_SRC_SYS_SET_NAME",
+          "description" : null,
+          "_row_id" : "UQ-fq5rONVAd-wgfvfHqI"
+        }, {
+          "expression" : {
+            "expression" : "{{ var('PMWorkflowRunId') }}",
+            "_row_id" : null
+          },
+          "alias" : "CTL_JOB_ID",
+          "description" : null,
+          "_row_id" : "4NxcJhdGd4-O8EfwPTH9l"
+        }, {
+          "expression" : {
+            "expression" : "CURRENT_TIMESTAMP",
+            "_row_id" : null
+          },
+          "alias" : "CTL_REC_CRTN_DATE",
+          "description" : null,
+          "_row_id" : "i7_TfotIz51knu9Rgix-X"
+        }, {
+          "expression" : {
+            "expression" : "prophecy_sk",
+            "_row_id" : null
+          },
+          "alias" : "prophecy_sk",
+          "description" : null,
+          "_row_id" : "rhjz1WIttxLKDIAQpqcg6"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "EXP_Ctl_Fields_STG_2_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "EXP_Ctl_Fields_STG_2_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "20_STG_ZSXmp_src_cnf_P_Dim_GI_Message_SVU_sh_V_ZSX_XML_SVU_MESSAGE_REQUEST_RESPONSE_sh_V_ZSX_XML_SVU_MESSAGE_REQUEST_RESPONSE_out0" : {
+      "id" : "20_STG_ZSXmp_src_cnf_P_Dim_GI_Message_SVU_sh_V_ZSX_XML_SVU_MESSAGE_REQUEST_RESPONSE_sh_V_ZSX_XML_SVU_MESSAGE_REQUEST_RESPONSE_out0",
+      "component" : "SQLStatement",
+      "metadata" : {
+        "label" : "20_STG_ZSXmp_src_cnf_P_Dim_GI_Message_SVU_sh_V_ZSX_XML_SVU_MESSAGE_REQUEST_RESPONSE"
+      },
+      "properties" : {
+        "fileTabs" : [ {
+          "path" : "output_port_3",
+          "id" : "output_port_3",
+          "language" : "sql",
+          "content" : "\nSELECT *\n\nFROM {{ prophecy_tmp_source('20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_SVU', '20_STG_ZSXmp_src_cnf_P_Dim_GI_Message_SVU_sh_V_ZSX_XML_SVU_MESSAGE_REQUEST_RESPONSE') }}\n\n"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_3",
+          "slug" : "input_port_3"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_3",
+          "slug" : "output_port_3"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "sh_P_DIM_GI_MESSAGE_from_Request_Response" : {
+      "id" : "sh_P_DIM_GI_MESSAGE_from_Request_Response",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "sh_P_DIM_GI_MESSAGE_from_Request_Response",
+        "phase" : 3
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "\nSELECT *\n\nFROM sh_P_DIM_GI_MESSAGE_from_Request_Response_EXP\n\n",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "sh_P_DIM_GI_MESSAGE_from_Request_Response_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "b6RXuU3z6VDYYfx9g5u6m",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "EXP_Set_Conv_Num" : {
+      "id" : "EXP_Set_Conv_Num",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "EXP_Set_Conv_Num",
+        "x" : 420,
+        "y" : 640,
+        "phase" : 3
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "(CASE WHEN (MESSAGE_TYPE_DIRECTION = 'INBOUND_POST_RQ') THEN IN_RQ_CONVERSATION_NUM WHEN CAST((MESSAGE_TYPE_DIRECTION IN ('INBOUND_POST_RS', 'OUTBOUND_POST_RS')) AS BOOLEAN) THEN IN_RS_CONVERSATION_NUM ELSE OUT_RQ_CONVERSATION_NUM END)",
+            "_row_id" : null
+          },
+          "alias" : "out_CONVERSATION_NUM",
+          "description" : null,
+          "_row_id" : "Detl9lQ0lFTYzlPIItS1V"
+        }, {
+          "expression" : {
+            "expression" : "prophecy_sk",
+            "_row_id" : null
+          },
+          "alias" : "prophecy_sk",
+          "description" : null,
+          "_row_id" : "6ED7n7x1sLeiz-BH2tGzu"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "EXP_Set_Conv_Num_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "EXP_Set_Conv_Num_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "edge_677",
+    "source" : "sh_P_DIM_GI_MESSAGE_from_Request_Response_EXP",
+    "sourcePort" : "sh_P_DIM_GI_MESSAGE_from_Request_Response_EXP_out0",
+    "target" : "sh_P_DIM_GI_MESSAGE_from_Request_Response",
+    "targetPort" : "sh_P_DIM_GI_MESSAGE_from_Request_Response_in0",
+    "isWireless" : false
+  }, {
+    "id" : "edge_675",
+    "source" : "sh_P_DIM_GI_MESSAGE_from_Request_Response_EXP_JOIN",
+    "sourcePort" : "sh_P_DIM_GI_MESSAGE_from_Request_Response_EXP_JOIN_out0",
+    "target" : "sh_P_DIM_GI_MESSAGE_from_Request_Response_EXP",
+    "targetPort" : "sh_P_DIM_GI_MESSAGE_from_Request_Response_EXP_in0",
+    "isWireless" : false
+  }, {
+    "id" : "edge_681",
+    "source" : "EXP_Set_Conv_Num",
+    "sourcePort" : "EXP_Set_Conv_Num_out0",
+    "target" : "sh_P_DIM_GI_MESSAGE_from_Request_Response_EXP_JOIN",
+    "targetPort" : "sh_P_DIM_GI_MESSAGE_from_Request_Response_EXP_JOIN_in1",
+    "isWireless" : false
+  }, {
+    "id" : "edge_684",
+    "source" : "EXP_Set_Defaults_2",
+    "sourcePort" : "EXP_Set_Defaults_2_out0",
+    "target" : "sh_P_DIM_GI_MESSAGE_from_Request_Response_EXP_JOIN",
+    "targetPort" : "sh_P_DIM_GI_MESSAGE_from_Request_Response_EXP_JOIN_in2",
+    "isWireless" : false
+  }, {
+    "id" : "edge_690",
+    "source" : "EXP_Ctl_Fields_STG_2",
+    "sourcePort" : "EXP_Ctl_Fields_STG_2_out0",
+    "target" : "sh_P_DIM_GI_MESSAGE_from_Request_Response_EXP_JOIN",
+    "targetPort" : "sh_P_DIM_GI_MESSAGE_from_Request_Response_EXP_JOIN_in3",
+    "isWireless" : false
+  }, {
+    "id" : "edge_691",
+    "source" : "CZnZZvqufrGDbnWtlXqCo",
+    "sourcePort" : "cKRg6KNLIKcNMKndt_iOp",
+    "target" : "sh_P_DIM_GI_MESSAGE_from_Request_Response_EXP_JOIN",
+    "targetPort" : "sh_P_DIM_GI_MESSAGE_from_Request_Response_EXP_JOIN_in0",
+    "isWireless" : false
+  }, {
+    "id" : "edge_693",
+    "source" : "CZnZZvqufrGDbnWtlXqCo",
+    "sourcePort" : "cKRg6KNLIKcNMKndt_iOp",
+    "target" : "EXP_Set_Conv_Num",
+    "targetPort" : "EXP_Set_Conv_Num_in0",
+    "isWireless" : false
+  }, {
+    "id" : "edge_692",
+    "source" : "CZnZZvqufrGDbnWtlXqCo",
+    "sourcePort" : "cKRg6KNLIKcNMKndt_iOp",
+    "target" : "EXP_Set_Defaults_2",
+    "targetPort" : "EXP_Set_Defaults_2_in0",
+    "isWireless" : false
+  }, {
+    "id" : "edge_694",
+    "source" : "CZnZZvqufrGDbnWtlXqCo",
+    "sourcePort" : "cKRg6KNLIKcNMKndt_iOp",
+    "target" : "EXP_Ctl_Fields_STG_2",
+    "targetPort" : "EXP_Ctl_Fields_STG_2_in0",
+    "isWireless" : false
+  }, {
+    "id" : "edge_695",
+    "source" : "20_STG_ZSXmp_src_cnf_P_Dim_GI_Message_SVU_sh_V_ZSX_XML_SVU_MESSAGE_REQUEST_RESPONSE_sh_V_ZSX_XML_SVU_MESSAGE_REQUEST_RESPONSE_out0",
+    "sourcePort" : "output_port_3",
+    "target" : "CZnZZvqufrGDbnWtlXqCo",
+    "targetPort" : "4xkgtlVdWix-3xBKlTqvK",
+    "isWireless" : false
+  } ],
+  "component" : "Model"
+}

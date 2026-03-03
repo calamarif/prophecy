@@ -1,0 +1,4378 @@
+{
+  "id" : "40_DM_ORAC_mp_fact_claim_tran_temp",
+  "metainfo" : {
+    "label" : "40_DM_ORAC_mp_fact_claim_tran_temp",
+    "autoLayout" : false,
+    "version" : 1,
+    "configuration" : {
+      "schema" : {
+        "type" : "record",
+        "fields" : [ {
+          "name" : "jdbcUrl",
+          "kind" : {
+            "type" : "string",
+            "value" : "''"
+          }
+        }, {
+          "name" : "username",
+          "kind" : {
+            "type" : "string",
+            "value" : "''"
+          }
+        }, {
+          "name" : "password",
+          "kind" : {
+            "type" : "string",
+            "value" : "''"
+          }
+        }, {
+          "name" : "SCHEMA",
+          "kind" : {
+            "type" : "string",
+            "value" : "'SCHEMA'"
+          }
+        } ]
+      }
+    },
+    "isTranspiledPipeline" : false,
+    "publishDiagnosticMetrics" : true,
+    "transpilerType" : "informatica",
+    "processesVsModelFiles" : {
+      "Fact_Claim_Tran_Temp" : "models/40_DM_ORAC_mp_fact_claim_tran_temp/40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp.sql",
+      "40_DM_ORACmp_fact_claim_tran_temp_SOURCE_LKP_gst_tolerance_SOURCE_LKP_gst_tolerance_out0" : "models/40_DM_ORAC_mp_fact_claim_tran_temp/40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp.sql",
+      "EXPTRANS1_EXPR_326" : "models/40_DM_ORAC_mp_fact_claim_tran_temp/40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp.sql",
+      "EXPTRANS5_LOOKUP_merged" : "models/40_DM_ORAC_mp_fact_claim_tran_temp/40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp.sql",
+      "JNRTRANS" : "models/40_DM_ORAC_mp_fact_claim_tran_temp/40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp.sql",
+      "EXPTRANS2" : "models/40_DM_ORAC_mp_fact_claim_tran_temp/40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp.sql",
+      "EXPTRANS_LOOKUP_341_LOOKUP_342" : "models/40_DM_ORAC_mp_fact_claim_tran_temp/40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp.sql",
+      "EXPTRANS" : "models/40_DM_ORAC_mp_fact_claim_tran_temp/40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp.sql",
+      "40_DM_ORACmp_fact_claim_tran_temp_SOURCE_LKP_V_S_CHEQ_REQN_TYPE_SOURCE_LKP_V_S_CHEQ_REQN_TYPE_out0" : "models/40_DM_ORAC_mp_fact_claim_tran_temp/40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp.sql",
+      "EXPTRANS_LOOKUP_341" : "models/40_DM_ORAC_mp_fact_claim_tran_temp/40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp.sql",
+      "40_DM_ORACmp_fact_claim_tran_temp_SOURCE_LKP_V_S_PAYMENT_TYPE_SOURCE_LKP_V_S_PAYMENT_TYPE_out0" : "models/40_DM_ORAC_mp_fact_claim_tran_temp/40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp.sql",
+      "lkp_REF_CLAIM_TRAN_TYPE_mt2" : "models/40_DM_ORAC_mp_fact_claim_tran_temp/40_DM_ORAC_mp_fact_claim_tran_temp__lkp_REF_CLAIM_TRAN_TYPE_mt2.sql",
+      "40_DM_ORACmp_fact_claim_tran_temp_SOURCE_lkp_REF_CLAIM_TRAN_TYPE_rt_SOURCE_lkp_REF_CLAIM_TRAN_TYPE_rt_out0" : "models/40_DM_ORAC_mp_fact_claim_tran_temp/40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp.sql",
+      "FILTRANS_mt" : "models/40_DM_ORAC_mp_fact_claim_tran_temp/40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp.sql",
+      "40_DM_ORACmp_fact_claim_tran_temp_SOURCE_LKP_ref_payment_type_group_SOURCE_LKP_ref_payment_type_group_out0" : "models/40_DM_ORAC_mp_fact_claim_tran_temp/40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp.sql",
+      "40_DM_ORACmp_fact_claim_tran_temp_SQ_S_CLAIM_TRAN_SQ_S_CLAIM_TRAN_out0" : "models/40_DM_ORAC_mp_fact_claim_tran_temp/40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp.sql",
+      "EXPTRANS1_LOOKUP_350" : "models/40_DM_ORAC_mp_fact_claim_tran_temp/40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp.sql",
+      "JNRTRANS1_GENERATE_SK_EXPR_325" : "models/40_DM_ORAC_mp_fact_claim_tran_temp/40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp.sql",
+      "EXPTRANS1" : "models/40_DM_ORAC_mp_fact_claim_tran_temp/40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp.sql",
+      "40_DM_ORACmp_fact_claim_tran_temp_SOURCE_LKP_V_S_CLAIM_SOURCE_LKP_V_S_CLAIM_out0" : "models/40_DM_ORAC_mp_fact_claim_tran_temp/40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp.sql",
+      "40_DM_ORACmp_fact_claim_tran_temp_SOURCE_lkp_REF_CLAIM_TRAN_TYPE_mt2_SOURCE_lkp_REF_CLAIM_TRAN_TYPE_mt2_out0" : "models/40_DM_ORAC_mp_fact_claim_tran_temp/40_DM_ORAC_mp_fact_claim_tran_temp__lkp_REF_CLAIM_TRAN_TYPE_mt2.sql",
+      "EXPTRANS5" : "models/40_DM_ORAC_mp_fact_claim_tran_temp/40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp.sql",
+      "40_DM_ORACmp_fact_claim_tran_temp_SOURCE_lkp_REF_CLAIM_TRAN_TYPE_mt_SOURCE_lkp_REF_CLAIM_TRAN_TYPE_mt_out0" : "models/40_DM_ORAC_mp_fact_claim_tran_temp/40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp.sql",
+      "EXPTRANS5_EXPR_328" : "models/40_DM_ORAC_mp_fact_claim_tran_temp/40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp.sql",
+      "40_DM_ORACmp_fact_claim_tran_temp_SOURCE_LKP_H_PARTY_SOURCE_LKP_H_PARTY_out0" : "models/40_DM_ORAC_mp_fact_claim_tran_temp/40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp.sql",
+      "JNRTRANS1" : "models/40_DM_ORAC_mp_fact_claim_tran_temp/40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp.sql",
+      "40_DM_ORACmp_fact_claim_tran_temp_SOURCE_LKP_payment_type_group_SOURCE_LKP_payment_type_group_out0" : "models/40_DM_ORAC_mp_fact_claim_tran_temp/40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp.sql",
+      "lkp_REF_CLAIM_TRAN_TYPE_mt2_OmAVLB7pAVi0R2MI06nLo" : "models/40_DM_ORAC_mp_fact_claim_tran_temp/40_DM_ORAC_mp_fact_claim_tran_temp__lkp_REF_CLAIM_TRAN_TYPE_mt2.sql",
+      "40_DM_ORACmp_fact_claim_tran_temp_SOURCE_LKP_company_SOURCE_LKP_company_out0" : "models/40_DM_ORAC_mp_fact_claim_tran_temp/40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp.sql",
+      "EXPTRANS_LOOKUP_341_LOOKUP_342_LOOKUP_merged" : "models/40_DM_ORAC_mp_fact_claim_tran_temp/40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp.sql",
+      "JNRTRANS_EXPR_329" : "models/40_DM_ORAC_mp_fact_claim_tran_temp/40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp.sql",
+      "M2aWVXZm6jTardvP2sUhr" : "models/40_DM_ORAC_mp_fact_claim_tran_temp/40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp.sql",
+      "FILTRANS_rt" : "models/40_DM_ORAC_mp_fact_claim_tran_temp/40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp.sql",
+      "40_DM_ORACmp_fact_claim_tran_temp_SOURCE_lkp_POL_CLAV_CA_SOURCE_lkp_POL_CLAV_CA_out0" : "models/40_DM_ORAC_mp_fact_claim_tran_temp/40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp.sql",
+      "EXPTRANS2_LOOKUP_merged" : "models/40_DM_ORAC_mp_fact_claim_tran_temp/40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp.sql",
+      "EXPTRANS3_JOIN_merged" : "models/40_DM_ORAC_mp_fact_claim_tran_temp/40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp.sql",
+      "40_DM_ORACmp_fact_claim_tran_temp_SOURCE_lkp_REF_CLAIM_TRAN_TYPE_tt_SOURCE_lkp_REF_CLAIM_TRAN_TYPE_tt_out0" : "models/40_DM_ORAC_mp_fact_claim_tran_temp/40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp.sql",
+      "40_DM_ORACmp_fact_claim_tran_temp_SOURCE_LKP_L_CLAIM_PAYEE_TRAN_SOURCE_LKP_L_CLAIM_PAYEE_TRAN_out0" : "models/40_DM_ORAC_mp_fact_claim_tran_temp/40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp.sql",
+      "EXPTRANS4" : "models/40_DM_ORAC_mp_fact_claim_tran_temp/40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp.sql",
+      "40_DM_ORACmp_fact_claim_tran_temp_SOURCE_LKP_gst_tolerance_2_SOURCE_LKP_gst_tolerance_2_out0" : "models/40_DM_ORAC_mp_fact_claim_tran_temp/40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp.sql"
+    }
+  },
+  "processes" : {
+    "Fact_Claim_Tran_Temp" : {
+      "id" : "Fact_Claim_Tran_Temp",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "Fact_Claim_Tran_Temp", "EXPTRANS5_EXPR_328", "EXPTRANS5", "EXPTRANS5_LOOKUP_merged", "40_DM_ORACmp_fact_claim_tran_temp_SOURCE_LKP_H_PARTY_SOURCE_LKP_H_PARTY_out0", "40_DM_ORACmp_fact_claim_tran_temp_SOURCE_LKP_V_S_PAYMENT_TYPE_SOURCE_LKP_V_S_PAYMENT_TYPE_out0", "40_DM_ORACmp_fact_claim_tran_temp_SOURCE_LKP_V_S_CLAIM_SOURCE_LKP_V_S_CLAIM_out0", "40_DM_ORACmp_fact_claim_tran_temp_SOURCE_LKP_V_S_CHEQ_REQN_TYPE_SOURCE_LKP_V_S_CHEQ_REQN_TYPE_out0", "40_DM_ORACmp_fact_claim_tran_temp_SOURCE_LKP_L_CLAIM_PAYEE_TRAN_SOURCE_LKP_L_CLAIM_PAYEE_TRAN_out0", "EXPTRANS4", "EXPTRANS3_JOIN_merged", "40_DM_ORACmp_fact_claim_tran_temp_SOURCE_lkp_POL_CLAV_CA_SOURCE_lkp_POL_CLAV_CA_out0", "JNRTRANS1_GENERATE_SK_EXPR_325", "M2aWVXZm6jTardvP2sUhr", "JNRTRANS1", "EXPTRANS2", "JNRTRANS", "EXPTRANS2_LOOKUP_merged", "40_DM_ORACmp_fact_claim_tran_temp_SOURCE_lkp_REF_CLAIM_TRAN_TYPE_mt_SOURCE_lkp_REF_CLAIM_TRAN_TYPE_mt_out0", "EXPTRANS", "EXPTRANS1_EXPR_326", "FILTRANS_mt", "EXPTRANS_LOOKUP_341", "40_DM_ORACmp_fact_claim_tran_temp_SOURCE_LKP_payment_type_group_SOURCE_LKP_payment_type_group_out0", "EXPTRANS1", "JNRTRANS_EXPR_329", "EXPTRANS_LOOKUP_341_LOOKUP_342", "40_DM_ORACmp_fact_claim_tran_temp_SOURCE_LKP_ref_payment_type_group_SOURCE_LKP_ref_payment_type_group_out0", "EXPTRANS1_LOOKUP_350", "40_DM_ORACmp_fact_claim_tran_temp_SOURCE_lkp_REF_CLAIM_TRAN_TYPE_rt_SOURCE_lkp_REF_CLAIM_TRAN_TYPE_rt_out0", "EXPTRANS_LOOKUP_341_LOOKUP_342_LOOKUP_merged", "40_DM_ORACmp_fact_claim_tran_temp_SOURCE_LKP_company_SOURCE_LKP_company_out0", "40_DM_ORACmp_fact_claim_tran_temp_SOURCE_LKP_gst_tolerance_SOURCE_LKP_gst_tolerance_out0", "40_DM_ORACmp_fact_claim_tran_temp_SOURCE_lkp_REF_CLAIM_TRAN_TYPE_tt_SOURCE_lkp_REF_CLAIM_TRAN_TYPE_tt_out0", "40_DM_ORACmp_fact_claim_tran_temp_SQ_S_CLAIM_TRAN_SQ_S_CLAIM_TRAN_out0", "40_DM_ORACmp_fact_claim_tran_temp_SOURCE_LKP_gst_tolerance_2_SOURCE_LKP_gst_tolerance_2_out0", "FILTRANS_rt" ],
+        "type" : "table",
+        "isTemporaryTable" : false,
+        "lastNodeProcessIds" : [ "Fact_Claim_Tran_Temp" ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp_in_0",
+          "slug" : "in_0"
+        }, {
+          "id" : "40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp_in_1",
+          "slug" : "in_1"
+        }, {
+          "id" : "40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp_in_2",
+          "slug" : "in_2"
+        }, {
+          "id" : "40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp_in_3",
+          "slug" : "in_3"
+        }, {
+          "id" : "40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp_in_4",
+          "slug" : "in_4"
+        }, {
+          "id" : "40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp_in_5",
+          "slug" : "in_5"
+        }, {
+          "id" : "40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp_in_6",
+          "slug" : "in_6"
+        }, {
+          "id" : "40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp_in_7",
+          "slug" : "in_7"
+        }, {
+          "id" : "40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp_in_8",
+          "slug" : "in_8"
+        }, {
+          "id" : "40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp_in_9",
+          "slug" : "in_9"
+        }, {
+          "id" : "40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp_in_10",
+          "slug" : "in_10"
+        }, {
+          "id" : "40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp_in_11",
+          "slug" : "in_11"
+        }, {
+          "id" : "40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp_in_12",
+          "slug" : "in_12"
+        }, {
+          "id" : "40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp_in_13",
+          "slug" : "in_13"
+        }, {
+          "id" : "40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp_in_14",
+          "slug" : "in_14"
+        }, {
+          "id" : "40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp_in_15",
+          "slug" : "in_15"
+        }, {
+          "id" : "40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp_in_16",
+          "slug" : "in_16"
+        }, {
+          "id" : "40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp_in_17",
+          "slug" : "in_17"
+        }, {
+          "id" : "40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp_in_18",
+          "slug" : "in_18"
+        }, {
+          "id" : "40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp_in_19",
+          "slug" : "in_19"
+        }, {
+          "id" : "40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp_in_20",
+          "slug" : "in_20"
+        }, {
+          "id" : "40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp_in_21",
+          "slug" : "in_21"
+        }, {
+          "id" : "40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp_in_22",
+          "slug" : "in_22"
+        }, {
+          "id" : "40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp_in_23",
+          "slug" : "in_23"
+        }, {
+          "id" : "40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp_in_24",
+          "slug" : "in_24"
+        }, {
+          "id" : "40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp_in_25",
+          "slug" : "in_25"
+        } ],
+        "outputs" : [ {
+          "id" : "40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "SOURCE_LKP_V_S_PAYMENT_TYPE" : {
+      "id" : "SOURCE_LKP_V_S_PAYMENT_TYPE",
+      "component" : "OrchestrationSource",
+      "kind" : "OracleSource",
+      "metadata" : {
+        "label" : "40_DM_ORACmp_fact_claim_tran_temp_SOURCE_LKP_V_S_PAYMENT_TYPE",
+        "x" : 3780,
+        "y" : 1100,
+        "phase" : 1
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "oracle",
+          "id" : "transpiled_connection",
+          "properties" : {
+            "database" : "dbName",
+            "server" : "$$jdbcUrl",
+            "username" : "$$username",
+            "id" : "transpiled_connection",
+            "port" : "1521",
+            "password" : {
+              "kind" : "prophecy",
+              "properties" : {
+                "name" : "transpiled_secret",
+                "value" : "transpiled_secret"
+              },
+              "subKind" : "text",
+              "type" : "secret"
+            }
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "pathSelection" : "tableFullName",
+          "tableFullName" : {
+            "schema" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "config",
+                  "properties" : {
+                    "kind" : "prophecy",
+                    "name" : "SCHEMA"
+                  }
+                } ]
+              }
+            },
+            "name" : "V_S_PAYMENT_TYPE"
+          },
+          "warehouseQuery" : {
+            "query" : ""
+          }
+        },
+        "format" : {
+          "kind" : "oracle",
+          "category" : "table",
+          "properties" : {
+            "kind" : "oracle",
+            "schema" : {
+              "entityType" : "",
+              "providerType" : "Databricks",
+              "fields" : [ {
+                "name" : "REF_HK",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "REF_BK",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Payment_Type_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Payment_Type_Description",
+                "dataType" : {
+                  "type" : "String"
+                }
+              } ]
+            }
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "SOURCE_LKP_V_S_PAYMENT_TYPE_out0",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "REF_HK",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "REF_BK",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Payment_Type_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Payment_Type_Description",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : true
+      }
+    },
+    "SOURCE_lkp_REF_CLAIM_TRAN_TYPE_tt" : {
+      "id" : "SOURCE_lkp_REF_CLAIM_TRAN_TYPE_tt",
+      "component" : "OrchestrationSource",
+      "kind" : "OracleSource",
+      "metadata" : {
+        "label" : "40_DM_ORACmp_fact_claim_tran_temp_SOURCE_lkp_REF_CLAIM_TRAN_TYPE_tt",
+        "x" : 20,
+        "y" : 620,
+        "phase" : 1
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "oracle",
+          "id" : "transpiled_connection",
+          "properties" : {
+            "database" : "dbName",
+            "server" : "$$jdbcUrl",
+            "username" : "$$username",
+            "id" : "transpiled_connection",
+            "port" : "1521",
+            "password" : {
+              "kind" : "prophecy",
+              "properties" : {
+                "name" : "transpiled_secret",
+                "value" : "transpiled_secret"
+              },
+              "subKind" : "text",
+              "type" : "secret"
+            }
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "pathSelection" : "warehouseQuery",
+          "tableFullName" : {
+            "schema" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "config",
+                  "properties" : {
+                    "kind" : "prophecy",
+                    "name" : "SCHEMA"
+                  }
+                } ]
+              }
+            },
+            "name" : "V_S_REF_CLAIM_TRAN_TYPE"
+          },
+          "warehouseQuery" : {
+            "query" : "SELECT V_S_REF_CLAIM_TRAN_TYPE.REF_HK+'~'+V_S_REF_CLAIM_TRAN_TYPE.CLAIM_TRAN_TYPE_CODE as REF_HK, \r  V_S_REF_CLAIM_TRAN_TYPE.REF_BK as REF_BK, \r  V_S_REF_CLAIM_TRAN_TYPE.CLAIM_TRAN_TYPE_CODE as CLAIM_TRAN_TYPE_CODE, \r  V_S_REF_CLAIM_TRAN_TYPE.CLAIM_TRAN_TYPE_DESCRIPTION as CLAIM_TRAN_TYPE_DESCRIPTION, \r  V_S_REF_CLAIM_TRAN_TYPE.CLAIM_TRAN_RECORD_CODE as CLAIM_TRAN_RECORD_CODE, \r  CASE WHEN V_S_REF_CLAIM_TRAN_TYPE.CLAIM_RI_TYPE_CODE IS NULL THEN '~' ELSE V_S_REF_CLAIM_TRAN_TYPE.CLAIM_RI_TYPE_CODE END as CLAIM_RI_TYPE_CODE ,\r CASE WHEN V_S_REF_CLAIM_TRAN_TYPE.CLAIM_TRAN_MODIFY_TYPE_CODE IS NULL THEN '~' ELSE V_S_REF_CLAIM_TRAN_TYPE.CLAIM_TRAN_MODIFY_TYPE_CODE END as CLAIM_TRAN_MODIFY_TYPE_CODE,\r  V_S_REF_CLAIM_TRAN_TYPE.TRAN_TYPE_CODE as TRAN_TYPE_CODE\r  FROM rdv.V_S_REF_CLAIM_TRAN_TYPE\r ORDER BY V_S_REF_CLAIM_TRAN_TYPE.CLAIM_TRAN_RECORD_CODE,V_S_REF_CLAIM_TRAN_TYPE.CLAIM_TRAN_MODIFY_TYPE_CODE,V_S_REF_CLAIM_TRAN_TYPE.CLAIM_RI_TYPE_CODE --"
+          }
+        },
+        "format" : {
+          "kind" : "oracle",
+          "category" : "table",
+          "properties" : {
+            "kind" : "oracle",
+            "schema" : {
+              "entityType" : "",
+              "providerType" : "Databricks",
+              "fields" : [ {
+                "name" : "CLAIM_TRAN_TYPE_CODE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CLAIM_RI_TYPE_CODE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "REF_HK",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CLAIM_TRAN_TYPE_DESCRIPTION",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "REF_BK",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CLAIM_TRAN_MODIFY_TYPE_CODE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "TRAN_TYPE_CODE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CLAIM_TRAN_RECORD_CODE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              } ]
+            }
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "SOURCE_lkp_REF_CLAIM_TRAN_TYPE_tt_out0",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "CLAIM_TRAN_TYPE_CODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CLAIM_RI_TYPE_CODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "REF_HK",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CLAIM_TRAN_TYPE_DESCRIPTION",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "REF_BK",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CLAIM_TRAN_MODIFY_TYPE_CODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "TRAN_TYPE_CODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CLAIM_TRAN_RECORD_CODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : true
+      }
+    },
+    "lkp_REF_CLAIM_TRAN_TYPE_mt2" : {
+      "id" : "lkp_REF_CLAIM_TRAN_TYPE_mt2",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "40_DM_ORAC_mp_fact_claim_tran_temp__lkp_REF_CLAIM_TRAN_TYPE_mt2",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "40_DM_ORAC_mp_fact_claim_tran_temp__lkp_REF_CLAIM_TRAN_TYPE_mt2"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "lkp_REF_CLAIM_TRAN_TYPE_mt2_OmAVLB7pAVi0R2MI06nLo", "lkp_REF_CLAIM_TRAN_TYPE_mt2", "40_DM_ORACmp_fact_claim_tran_temp_SOURCE_lkp_REF_CLAIM_TRAN_TYPE_mt2_SOURCE_lkp_REF_CLAIM_TRAN_TYPE_mt2_out0" ],
+        "type" : "ephemeral",
+        "isTemporaryTable" : true,
+        "lastNodeProcessIds" : [ "lkp_REF_CLAIM_TRAN_TYPE_mt2_OmAVLB7pAVi0R2MI06nLo" ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "40_DM_ORAC_mp_fact_claim_tran_temp__lkp_REF_CLAIM_TRAN_TYPE_mt2_in_0",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "40_DM_ORAC_mp_fact_claim_tran_temp__lkp_REF_CLAIM_TRAN_TYPE_mt2_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "SOURCE_LKP_H_PARTY" : {
+      "id" : "SOURCE_LKP_H_PARTY",
+      "component" : "OrchestrationSource",
+      "kind" : "OracleSource",
+      "metadata" : {
+        "label" : "40_DM_ORACmp_fact_claim_tran_temp_SOURCE_LKP_H_PARTY",
+        "x" : 3780,
+        "y" : 900,
+        "phase" : 1
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "oracle",
+          "id" : "transpiled_connection",
+          "properties" : {
+            "database" : "dbName",
+            "server" : "$$jdbcUrl",
+            "username" : "$$username",
+            "id" : "transpiled_connection",
+            "port" : "1521",
+            "password" : {
+              "kind" : "prophecy",
+              "properties" : {
+                "name" : "transpiled_secret",
+                "value" : "transpiled_secret"
+              },
+              "subKind" : "text",
+              "type" : "secret"
+            }
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "pathSelection" : "tableFullName",
+          "tableFullName" : {
+            "schema" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "config",
+                  "properties" : {
+                    "kind" : "prophecy",
+                    "name" : "SCHEMA"
+                  }
+                } ]
+              }
+            },
+            "name" : "H_PARTY"
+          },
+          "warehouseQuery" : {
+            "query" : ""
+          }
+        },
+        "format" : {
+          "kind" : "oracle",
+          "category" : "table",
+          "properties" : {
+            "kind" : "oracle",
+            "schema" : {
+              "entityType" : "",
+              "providerType" : "Databricks",
+              "fields" : [ {
+                "name" : "CTL_JOB_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "CTL_SRC_CD",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "PARTY_BK",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CTL_BATCH_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "PARTY_HK",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CTL_LOAD_DM",
+                "dataType" : {
+                  "type" : "Timestamp"
+                }
+              } ]
+            }
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "SOURCE_LKP_H_PARTY_out0",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "CTL_JOB_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "CTL_SRC_CD",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "PARTY_BK",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CTL_BATCH_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "PARTY_HK",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CTL_LOAD_DM",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : true
+      }
+    },
+    "SOURCE_lkp_POL_CLAV_CA" : {
+      "id" : "SOURCE_lkp_POL_CLAV_CA",
+      "component" : "OrchestrationSource",
+      "kind" : "OracleSource",
+      "metadata" : {
+        "label" : "40_DM_ORACmp_fact_claim_tran_temp_SOURCE_lkp_POL_CLAV_CA",
+        "x" : 3380,
+        "y" : 460,
+        "phase" : 1
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "oracle",
+          "id" : "transpiled_connection",
+          "properties" : {
+            "database" : "dbName",
+            "server" : "$$jdbcUrl",
+            "username" : "$$username",
+            "id" : "transpiled_connection",
+            "port" : "1521",
+            "password" : {
+              "kind" : "prophecy",
+              "properties" : {
+                "name" : "transpiled_secret",
+                "value" : "transpiled_secret"
+              },
+              "subKind" : "text",
+              "type" : "secret"
+            }
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "pathSelection" : "tableFullName",
+          "tableFullName" : {
+            "schema" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "config",
+                  "properties" : {
+                    "kind" : "prophecy",
+                    "name" : "SCHEMA"
+                  }
+                } ]
+              }
+            },
+            "name" : "V_S_POL_CLAV_CA"
+          },
+          "warehouseQuery" : {
+            "query" : ""
+          }
+        },
+        "format" : {
+          "kind" : "oracle",
+          "category" : "table",
+          "properties" : {
+            "kind" : "oracle",
+            "schema" : {
+              "entityType" : "",
+              "providerType" : "Databricks",
+              "fields" : [ {
+                "name" : "EXT_CLAV_CYCL_FLAG_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_ARRANGE_UX_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_BAL_OUTS_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_DATE_REJECT_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_DATE_EXP_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_CLAM_KEY_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_PAID_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_OTHER_PARTY",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_HANDLER_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_TYPE_UX_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_SALVAGE_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_INCURRED_YTD_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_PAID_SH_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_DESC2_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_CLM_DESC1_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_SOURCE_CO_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_DIV_11_DATE_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "CLAIM_HK",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_MAA_SENT_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_TERM_ID",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_MULT_UNIT_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_LIAB_DATE_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_PAID_TU_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_RECOVERY_AMT_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_ACCT_KEY_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_SUB_CLASS_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_REOPEN_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_DATE_OCC_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_INVESTGAT_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_CLNT_KEY_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_VIP_CLAIM_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_DATE_NOTIFIED_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_CLMT_TYPE_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_GST_CAT_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_DIV_78_XS_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_INC_TU_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_SOLICTOR_A_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_ASSESSR_A_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_VALID_FLAG",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_DATE_REPT_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_DUPL_STS_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_DIV_78_DATE_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_RATE_NCB_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_CLAIMANT_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_STATUS_DATE_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_ESTIMATE_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_CODE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_RECOVERY_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_CHANGE_DATE_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_FRAUD_FLG_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_PERIOD_TU_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_CLM_INITIAL",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_RISK_KEY_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_RSK_CLASS_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_CLAIM_STATUS_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_DATE_ACCEPT_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_ICA_CAT_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_PAY_BLOCK_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_NON_STD_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_RI_METHOD_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_GCLM_KEY_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_CLIENT_CLAM_NO_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_RI_BO_TU_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_LAST_EXT_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "CLAIM_BK",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_RI_INC_TU_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_DAM_PERC_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_RI_TRNO_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_INCURRED_SH_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_CLAM_BRCH_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_LIAB_STATUS_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_HANDLG_BR_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_SECT155D_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_INCURRED_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_TRAN_NO",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_DATE_INC_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_RI_PAID_TU_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_PCODE_L_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_CCC_NO_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_SALVAGE_AMT_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_PORTFOLIO_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_DIV_11_XS_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_TIME_OCC_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_PREV_LAST_EXT_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_VULN_FLAG_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_BAL_OUTS_SH_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_INCURRED_PR_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "EXT_CLAV_BR_TFR_FLG_CA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "EXT_CLAV_BO_TU_CA",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              } ]
+            }
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "SOURCE_lkp_POL_CLAV_CA_out0",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "EXT_CLAV_CYCL_FLAG_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_ARRANGE_UX_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_BAL_OUTS_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_DATE_REJECT_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_DATE_EXP_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_CLAM_KEY_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_PAID_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_OTHER_PARTY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_HANDLER_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_TYPE_UX_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_SALVAGE_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_INCURRED_YTD_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_PAID_SH_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_DESC2_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_CLM_DESC1_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_SOURCE_CO_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_DIV_11_DATE_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "CLAIM_HK",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_MAA_SENT_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_TERM_ID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_MULT_UNIT_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_LIAB_DATE_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_PAID_TU_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_RECOVERY_AMT_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_ACCT_KEY_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_SUB_CLASS_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_REOPEN_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_DATE_OCC_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_INVESTGAT_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_CLNT_KEY_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_VIP_CLAIM_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_DATE_NOTIFIED_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_CLMT_TYPE_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_GST_CAT_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_DIV_78_XS_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_INC_TU_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_SOLICTOR_A_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_ASSESSR_A_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_VALID_FLAG",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_DATE_REPT_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_DUPL_STS_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_DIV_78_DATE_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_RATE_NCB_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_CLAIMANT_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_STATUS_DATE_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_ESTIMATE_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_CODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_RECOVERY_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_CHANGE_DATE_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_FRAUD_FLG_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_PERIOD_TU_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_CLM_INITIAL",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_RISK_KEY_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_RSK_CLASS_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_CLAIM_STATUS_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_DATE_ACCEPT_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_ICA_CAT_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_PAY_BLOCK_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_NON_STD_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_RI_METHOD_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_GCLM_KEY_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_CLIENT_CLAM_NO_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_RI_BO_TU_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_LAST_EXT_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "CLAIM_BK",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_RI_INC_TU_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_DAM_PERC_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_RI_TRNO_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_INCURRED_SH_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_CLAM_BRCH_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_LIAB_STATUS_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_HANDLG_BR_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_SECT155D_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_INCURRED_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_TRAN_NO",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_DATE_INC_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_RI_PAID_TU_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_PCODE_L_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_CCC_NO_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_SALVAGE_AMT_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_PORTFOLIO_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_DIV_11_XS_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_TIME_OCC_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_PREV_LAST_EXT_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_VULN_FLAG_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_BAL_OUTS_SH_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_INCURRED_PR_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "EXT_CLAV_BR_TFR_FLG_CA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EXT_CLAV_BO_TU_CA",
+              "dataType" : {
+                "type" : "Double"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : true
+      }
+    },
+    "SOURCE_LKP_gst_tolerance_2" : {
+      "id" : "SOURCE_LKP_gst_tolerance_2",
+      "component" : "OrchestrationSource",
+      "kind" : "OracleSource",
+      "metadata" : {
+        "label" : "40_DM_ORACmp_fact_claim_tran_temp_SOURCE_LKP_gst_tolerance_2",
+        "x" : 20,
+        "y" : 1020,
+        "phase" : 1
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "oracle",
+          "id" : "transpiled_connection",
+          "properties" : {
+            "database" : "dbName",
+            "server" : "$$jdbcUrl",
+            "username" : "$$username",
+            "id" : "transpiled_connection",
+            "port" : "1521",
+            "password" : {
+              "kind" : "prophecy",
+              "properties" : {
+                "name" : "transpiled_secret",
+                "value" : "transpiled_secret"
+              },
+              "subKind" : "text",
+              "type" : "secret"
+            }
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "pathSelection" : "warehouseQuery",
+          "tableFullName" : {
+            "schema" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "config",
+                  "properties" : {
+                    "kind" : "prophecy",
+                    "name" : "SCHEMA"
+                  }
+                } ]
+              }
+            },
+            "name" : "V_S_REF_GST_TOLERANCE"
+          },
+          "warehouseQuery" : {
+            "query" : "SELECT V_S_REF_GST_TOLERANCE.GST_TOLERANCE_LOW_AMOUNT as GST_TOLERANCE_LOW_AMOUNT, V_S_REF_GST_TOLERANCE.GST_TOLERANCE_HIGH_AMOUNT as GST_TOLERANCE_HIGH_AMOUNT FROM rdv.V_S_REF_GST_TOLERANCE\r WHERE V_S_REF_GST_TOLERANCE.GST_TOLERANCE_HIGH_AMOUNT IS NULL\r ORDER BY GST_TOLERANCE_LOW_AMOUNT --"
+          }
+        },
+        "format" : {
+          "kind" : "oracle",
+          "category" : "table",
+          "properties" : {
+            "kind" : "oracle",
+            "schema" : {
+              "entityType" : "",
+              "providerType" : "Databricks",
+              "fields" : [ {
+                "name" : "GST_TOLERANCE_LOW_AMOUNT",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "GST_TOLERANCE_HIGH_AMOUNT",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              } ]
+            }
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "SOURCE_LKP_gst_tolerance_2_out0",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "GST_TOLERANCE_LOW_AMOUNT",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "GST_TOLERANCE_HIGH_AMOUNT",
+              "dataType" : {
+                "type" : "Double"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : true
+      }
+    },
+    "SOURCE_LKP_company" : {
+      "id" : "SOURCE_LKP_company",
+      "component" : "OrchestrationSource",
+      "kind" : "OracleSource",
+      "metadata" : {
+        "label" : "40_DM_ORACmp_fact_claim_tran_temp_SOURCE_LKP_company",
+        "x" : 20,
+        "y" : 820,
+        "phase" : 1
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "oracle",
+          "id" : "transpiled_connection",
+          "properties" : {
+            "database" : "dbName",
+            "server" : "$$jdbcUrl",
+            "username" : "$$username",
+            "id" : "transpiled_connection",
+            "port" : "1521",
+            "password" : {
+              "kind" : "prophecy",
+              "properties" : {
+                "name" : "transpiled_secret",
+                "value" : "transpiled_secret"
+              },
+              "subKind" : "text",
+              "type" : "secret"
+            }
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "pathSelection" : "tableFullName",
+          "tableFullName" : {
+            "schema" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "config",
+                  "properties" : {
+                    "kind" : "prophecy",
+                    "name" : "SCHEMA"
+                  }
+                } ]
+              }
+            },
+            "name" : "V_S_COMPANY"
+          },
+          "warehouseQuery" : {
+            "query" : ""
+          }
+        },
+        "format" : {
+          "kind" : "oracle",
+          "category" : "table",
+          "properties" : {
+            "kind" : "oracle",
+            "schema" : {
+              "entityType" : "",
+              "providerType" : "Databricks",
+              "fields" : [ {
+                "name" : "Country_GST_From_Date_Key",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Country_GST_Rate",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Country_GST_To_Date_Key",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "REF_HK",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Company_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Country_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "REF_BK",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Company_Description",
+                "dataType" : {
+                  "type" : "String"
+                }
+              } ]
+            }
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "SOURCE_LKP_company_out0",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "Country_GST_From_Date_Key",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Country_GST_Rate",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Country_GST_To_Date_Key",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "REF_HK",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Company_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Country_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "REF_BK",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Company_Description",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : true
+      }
+    },
+    "SOURCE_lkp_REF_CLAIM_TRAN_TYPE_mt" : {
+      "id" : "SOURCE_lkp_REF_CLAIM_TRAN_TYPE_mt",
+      "component" : "OrchestrationSource",
+      "kind" : "OracleSource",
+      "metadata" : {
+        "label" : "40_DM_ORACmp_fact_claim_tran_temp_SOURCE_lkp_REF_CLAIM_TRAN_TYPE_mt",
+        "x" : 2380,
+        "y" : 420,
+        "phase" : 1
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "oracle",
+          "id" : "transpiled_connection",
+          "properties" : {
+            "database" : "dbName",
+            "server" : "$$jdbcUrl",
+            "username" : "$$username",
+            "id" : "transpiled_connection",
+            "port" : "1521",
+            "password" : {
+              "kind" : "prophecy",
+              "properties" : {
+                "name" : "transpiled_secret",
+                "value" : "transpiled_secret"
+              },
+              "subKind" : "text",
+              "type" : "secret"
+            }
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "pathSelection" : "warehouseQuery",
+          "tableFullName" : {
+            "schema" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "config",
+                  "properties" : {
+                    "kind" : "prophecy",
+                    "name" : "SCHEMA"
+                  }
+                } ]
+              }
+            },
+            "name" : "V_S_REF_CLAIM_TRAN_TYPE"
+          },
+          "warehouseQuery" : {
+            "query" : "SELECT \r V_S_REF_CLAIM_TRAN_TYPE.REF_HK as REF_HK, \r V_S_REF_CLAIM_TRAN_TYPE.REF_BK as REF_BK, \r V_S_REF_CLAIM_TRAN_TYPE.CLAIM_TRAN_TYPE_CODE as CLAIM_TRAN_TYPE_CODE, \r V_S_REF_CLAIM_TRAN_TYPE.CLAIM_TRAN_TYPE_DESCRIPTION as CLAIM_TRAN_TYPE_DESCRIPTION, \r V_S_REF_CLAIM_TRAN_TYPE.CLAIM_TRAN_RECORD_CODE as CLAIM_TRAN_RECORD_CODE,\r V_S_REF_CLAIM_TRAN_TYPE.CLAIM_RI_TYPE_CODE as CLAIM_RI_TYPE_CODE,\r V_S_REF_CLAIM_TRAN_TYPE.CLAIM_TRAN_MODIFY_TYPE_CODE as CLAIM_TRAN_MODIFY_TYPE_CODE, \r V_S_REF_CLAIM_TRAN_TYPE.TRAN_TYPE_CODE as TRAN_TYPE_CODE\r FROM rdv.V_S_REF_CLAIM_TRAN_TYPE\r WHERE V_S_REF_CLAIM_TRAN_TYPE.CLAIM_TRAN_MODIFY_TYPE_CODE = 'OTHER'\r ORDER BY CLAIM_TRAN_RECORD_CODE, TRAN_TYPE_CODE--"
+          }
+        },
+        "format" : {
+          "kind" : "oracle",
+          "category" : "table",
+          "properties" : {
+            "kind" : "oracle",
+            "schema" : {
+              "entityType" : "",
+              "providerType" : "Databricks",
+              "fields" : [ {
+                "name" : "CLAIM_TRAN_TYPE_CODE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CLAIM_RI_TYPE_CODE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "REF_HK",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CLAIM_TRAN_TYPE_DESCRIPTION",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "REF_BK",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CLAIM_TRAN_MODIFY_TYPE_CODE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "TRAN_TYPE_CODE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CLAIM_TRAN_RECORD_CODE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              } ]
+            }
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "SOURCE_lkp_REF_CLAIM_TRAN_TYPE_mt_out0",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "CLAIM_TRAN_TYPE_CODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CLAIM_RI_TYPE_CODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "REF_HK",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CLAIM_TRAN_TYPE_DESCRIPTION",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "REF_BK",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CLAIM_TRAN_MODIFY_TYPE_CODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "TRAN_TYPE_CODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CLAIM_TRAN_RECORD_CODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : true
+      }
+    },
+    "SOURCE_lkp_REF_CLAIM_TRAN_TYPE_mt2" : {
+      "id" : "SOURCE_lkp_REF_CLAIM_TRAN_TYPE_mt2",
+      "component" : "OrchestrationSource",
+      "kind" : "OracleSource",
+      "metadata" : {
+        "label" : "40_DM_ORACmp_fact_claim_tran_temp_SOURCE_lkp_REF_CLAIM_TRAN_TYPE_mt2",
+        "x" : 20,
+        "y" : 20,
+        "phase" : 0
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "oracle",
+          "id" : "transpiled_connection",
+          "properties" : {
+            "database" : "dbName",
+            "server" : "$$jdbcUrl",
+            "username" : "$$username",
+            "id" : "transpiled_connection",
+            "port" : "1521",
+            "password" : {
+              "kind" : "prophecy",
+              "properties" : {
+                "name" : "transpiled_secret",
+                "value" : "transpiled_secret"
+              },
+              "subKind" : "text",
+              "type" : "secret"
+            }
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "pathSelection" : "warehouseQuery",
+          "tableFullName" : {
+            "schema" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "config",
+                  "properties" : {
+                    "kind" : "prophecy",
+                    "name" : "SCHEMA"
+                  }
+                } ]
+              }
+            },
+            "name" : "V_S_REF_CLAIM_TRAN_TYPE"
+          },
+          "warehouseQuery" : {
+            "query" : "SELECT \r V_S_REF_CLAIM_TRAN_TYPE.REF_HK as REF_HK, \r V_S_REF_CLAIM_TRAN_TYPE.REF_BK as REF_BK, \r V_S_REF_CLAIM_TRAN_TYPE.CLAIM_TRAN_TYPE_CODE as CLAIM_TRAN_TYPE_CODE, \r V_S_REF_CLAIM_TRAN_TYPE.CLAIM_TRAN_TYPE_DESCRIPTION as CLAIM_TRAN_TYPE_DESCRIPTION, \r V_S_REF_CLAIM_TRAN_TYPE.CLAIM_TRAN_RECORD_CODE as CLAIM_TRAN_RECORD_CODE,\r V_S_REF_CLAIM_TRAN_TYPE.CLAIM_RI_TYPE_CODE as CLAIM_RI_TYPE_CODE,\r V_S_REF_CLAIM_TRAN_TYPE.CLAIM_TRAN_MODIFY_TYPE_CODE as CLAIM_TRAN_MODIFY_TYPE_CODE, \r '~' as TRAN_TYPE_CODE\r FROM rdv.V_S_REF_CLAIM_TRAN_TYPE\r WHERE V_S_REF_CLAIM_TRAN_TYPE.CLAIM_TRAN_MODIFY_TYPE_CODE = 'OTHER'\r ORDER BY CLAIM_TRAN_RECORD_CODE, TRAN_TYPE_CODE--"
+          }
+        },
+        "format" : {
+          "kind" : "oracle",
+          "category" : "table",
+          "properties" : {
+            "kind" : "oracle",
+            "schema" : {
+              "entityType" : "",
+              "providerType" : "Databricks",
+              "fields" : [ {
+                "name" : "CLAIM_TRAN_TYPE_CODE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CLAIM_RI_TYPE_CODE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "REF_HK",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CLAIM_TRAN_TYPE_DESCRIPTION",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "REF_BK",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CLAIM_TRAN_MODIFY_TYPE_CODE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "TRAN_TYPE_CODE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CLAIM_TRAN_RECORD_CODE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              } ]
+            }
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "SOURCE_lkp_REF_CLAIM_TRAN_TYPE_mt2_out0",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "CLAIM_TRAN_TYPE_CODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CLAIM_RI_TYPE_CODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "REF_HK",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CLAIM_TRAN_TYPE_DESCRIPTION",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "REF_BK",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CLAIM_TRAN_MODIFY_TYPE_CODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "TRAN_TYPE_CODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CLAIM_TRAN_RECORD_CODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : true
+      }
+    },
+    "SOURCE_LKP_V_S_CLAIM" : {
+      "id" : "SOURCE_LKP_V_S_CLAIM",
+      "component" : "OrchestrationSource",
+      "kind" : "OracleSource",
+      "metadata" : {
+        "label" : "40_DM_ORACmp_fact_claim_tran_temp_SOURCE_LKP_V_S_CLAIM",
+        "x" : 3780,
+        "y" : 300,
+        "phase" : 1
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "oracle",
+          "id" : "transpiled_connection",
+          "properties" : {
+            "database" : "dbName",
+            "server" : "$$jdbcUrl",
+            "username" : "$$username",
+            "id" : "transpiled_connection",
+            "port" : "1521",
+            "password" : {
+              "kind" : "prophecy",
+              "properties" : {
+                "name" : "transpiled_secret",
+                "value" : "transpiled_secret"
+              },
+              "subKind" : "text",
+              "type" : "secret"
+            }
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "pathSelection" : "tableFullName",
+          "tableFullName" : {
+            "schema" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "config",
+                  "properties" : {
+                    "kind" : "prophecy",
+                    "name" : "SCHEMA"
+                  }
+                } ]
+              }
+            },
+            "name" : "V_S_CLAIM"
+          },
+          "warehouseQuery" : {
+            "query" : ""
+          }
+        },
+        "format" : {
+          "kind" : "oracle",
+          "category" : "table",
+          "properties" : {
+            "kind" : "oracle",
+            "schema" : {
+              "entityType" : "",
+              "providerType" : "Databricks",
+              "fields" : [ {
+                "name" : "Claim_Status_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Recovery_YN",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Time_Occurence",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_UX_Type_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Updated_Date_Key",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Indemnity_Decision_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Branch_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Handler_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Assessor_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Portfolio_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Liability_Date_Key",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "CLAIM_HK",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Date_Accepted_Key",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_Recovery_Potential_Amount",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_Agg_Arrangement_Type_Key",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Product_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Salvage_Amount",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_Reopened_YN",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_BGC_Status_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Reported_Date_Key",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Policy_Period_Name",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Policy_Incep_Date_Key",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_Notify_Days_Count",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "Claim_Number",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Gross_Outs_Amount",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_Status_Date_Key",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_Date_Rejected_Key",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_Indemnity_Decision_Date_Key",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_Non_Standard_Type_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Company_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Expiry_Date_Key",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_GROSS_INCURRED_Loss_Type_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Solicitor_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Liability_Status_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "ARPC_Incident_Number",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Notified_Date_Key",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_Updated_User_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CLAIM_BK",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Updated_Datetime",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_CITCE_Percent",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_UX_Arrangement_Description",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Salvage_YN",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Cyclone_Flag",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Gross_Paid_Amount",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Client_Claim_Number",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Premium_Class_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Postcode",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Fraud_Type_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Vulnerable_Flag",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Duplicate_Status_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Risk_Class_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Gross_Incurred_Amount",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_Cause_of_Loss_Description",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Closed_Date_Key",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_Agg_Arrangement_Key",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Loss_Date_Key",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_Investigator_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              } ]
+            }
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "SOURCE_LKP_V_S_CLAIM_out0",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "Claim_Status_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Recovery_YN",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Time_Occurence",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_UX_Type_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Updated_Date_Key",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Indemnity_Decision_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Branch_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Handler_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Assessor_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Portfolio_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Liability_Date_Key",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "CLAIM_HK",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Date_Accepted_Key",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_Recovery_Potential_Amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_Agg_Arrangement_Type_Key",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Product_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Salvage_Amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_Reopened_YN",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_BGC_Status_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Reported_Date_Key",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Policy_Period_Name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Policy_Incep_Date_Key",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_Notify_Days_Count",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "Claim_Number",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Gross_Outs_Amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_Status_Date_Key",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_Date_Rejected_Key",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_Indemnity_Decision_Date_Key",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_Non_Standard_Type_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Company_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Expiry_Date_Key",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_GROSS_INCURRED_Loss_Type_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Solicitor_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Liability_Status_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ARPC_Incident_Number",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Notified_Date_Key",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_Updated_User_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CLAIM_BK",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Updated_Datetime",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_CITCE_Percent",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_UX_Arrangement_Description",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Salvage_YN",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Cyclone_Flag",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Gross_Paid_Amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Client_Claim_Number",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Premium_Class_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Postcode",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Fraud_Type_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Vulnerable_Flag",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Duplicate_Status_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Risk_Class_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Gross_Incurred_Amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_Cause_of_Loss_Description",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Closed_Date_Key",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_Agg_Arrangement_Key",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Loss_Date_Key",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_Investigator_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : true
+      }
+    },
+    "SOURCE_LKP_payment_type_group" : {
+      "id" : "SOURCE_LKP_payment_type_group",
+      "component" : "OrchestrationSource",
+      "kind" : "OracleSource",
+      "metadata" : {
+        "label" : "40_DM_ORACmp_fact_claim_tran_temp_SOURCE_LKP_payment_type_group",
+        "x" : 580,
+        "y" : 260,
+        "phase" : 1
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "oracle",
+          "id" : "transpiled_connection",
+          "properties" : {
+            "database" : "dbName",
+            "server" : "$$jdbcUrl",
+            "username" : "$$username",
+            "id" : "transpiled_connection",
+            "port" : "1521",
+            "password" : {
+              "kind" : "prophecy",
+              "properties" : {
+                "name" : "transpiled_secret",
+                "value" : "transpiled_secret"
+              },
+              "subKind" : "text",
+              "type" : "secret"
+            }
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "pathSelection" : "tableFullName",
+          "tableFullName" : {
+            "schema" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "config",
+                  "properties" : {
+                    "kind" : "prophecy",
+                    "name" : "SCHEMA"
+                  }
+                } ]
+              }
+            },
+            "name" : "V_S_PAYMENT_TYPE_GROUP"
+          },
+          "warehouseQuery" : {
+            "query" : ""
+          }
+        },
+        "format" : {
+          "kind" : "oracle",
+          "category" : "table",
+          "properties" : {
+            "kind" : "oracle",
+            "schema" : {
+              "entityType" : "",
+              "providerType" : "Databricks",
+              "fields" : [ {
+                "name" : "REF_HK",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "REF_BK",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Payment_Type_Group_Name",
+                "dataType" : {
+                  "type" : "String"
+                }
+              } ]
+            }
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "SOURCE_LKP_payment_type_group_out0",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "REF_HK",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "REF_BK",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Payment_Type_Group_Name",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : true
+      }
+    },
+    "SOURCE_lkp_REF_CLAIM_TRAN_TYPE_rt" : {
+      "id" : "SOURCE_lkp_REF_CLAIM_TRAN_TYPE_rt",
+      "component" : "OrchestrationSource",
+      "kind" : "OracleSource",
+      "metadata" : {
+        "label" : "40_DM_ORACmp_fact_claim_tran_temp_SOURCE_lkp_REF_CLAIM_TRAN_TYPE_rt",
+        "x" : 1180,
+        "y" : 300,
+        "phase" : 1
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "oracle",
+          "id" : "transpiled_connection",
+          "properties" : {
+            "database" : "dbName",
+            "server" : "$$jdbcUrl",
+            "username" : "$$username",
+            "id" : "transpiled_connection",
+            "port" : "1521",
+            "password" : {
+              "kind" : "prophecy",
+              "properties" : {
+                "name" : "transpiled_secret",
+                "value" : "transpiled_secret"
+              },
+              "subKind" : "text",
+              "type" : "secret"
+            }
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "pathSelection" : "warehouseQuery",
+          "tableFullName" : {
+            "schema" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "config",
+                  "properties" : {
+                    "kind" : "prophecy",
+                    "name" : "SCHEMA"
+                  }
+                } ]
+              }
+            },
+            "name" : "V_S_REF_CLAIM_TRAN_TYPE"
+          },
+          "warehouseQuery" : {
+            "query" : "SELECT \r V_S_REF_CLAIM_TRAN_TYPE.REF_HK as REF_HK, \r V_S_REF_CLAIM_TRAN_TYPE.REF_BK as REF_BK, \r V_S_REF_CLAIM_TRAN_TYPE.CLAIM_TRAN_TYPE_CODE as CLAIM_TRAN_TYPE_CODE, \r V_S_REF_CLAIM_TRAN_TYPE.CLAIM_TRAN_TYPE_DESCRIPTION as CLAIM_TRAN_TYPE_DESCRIPTION, \r V_S_REF_CLAIM_TRAN_TYPE.CLAIM_TRAN_RECORD_CODE as CLAIM_TRAN_RECORD_CODE,\r V_S_REF_CLAIM_TRAN_TYPE.CLAIM_RI_TYPE_CODE as CLAIM_RI_TYPE_CODE,\r V_S_REF_CLAIM_TRAN_TYPE.CLAIM_TRAN_MODIFY_TYPE_CODE as CLAIM_TRAN_MODIFY_TYPE_CODE, \r V_S_REF_CLAIM_TRAN_TYPE.TRAN_TYPE_CODE as TRAN_TYPE_CODE\r FROM rdv.V_S_REF_CLAIM_TRAN_TYPE\r WHERE V_S_REF_CLAIM_TRAN_TYPE.CLAIM_RI_TYPE_CODE = 'OTHER'\r ORDER BY CLAIM_TRAN_RECORD_CODE --"
+          }
+        },
+        "format" : {
+          "kind" : "oracle",
+          "category" : "table",
+          "properties" : {
+            "kind" : "oracle",
+            "schema" : {
+              "entityType" : "",
+              "providerType" : "Databricks",
+              "fields" : [ {
+                "name" : "CLAIM_TRAN_TYPE_CODE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CLAIM_RI_TYPE_CODE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "REF_HK",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CLAIM_TRAN_TYPE_DESCRIPTION",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "REF_BK",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CLAIM_TRAN_MODIFY_TYPE_CODE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "TRAN_TYPE_CODE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CLAIM_TRAN_RECORD_CODE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              } ]
+            }
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "SOURCE_lkp_REF_CLAIM_TRAN_TYPE_rt_out0",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "CLAIM_TRAN_TYPE_CODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CLAIM_RI_TYPE_CODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "REF_HK",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CLAIM_TRAN_TYPE_DESCRIPTION",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "REF_BK",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CLAIM_TRAN_MODIFY_TYPE_CODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "TRAN_TYPE_CODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CLAIM_TRAN_RECORD_CODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : true
+      }
+    },
+    "SOURCE_LKP_V_S_CHEQ_REQN_TYPE" : {
+      "id" : "SOURCE_LKP_V_S_CHEQ_REQN_TYPE",
+      "component" : "OrchestrationSource",
+      "kind" : "OracleSource",
+      "metadata" : {
+        "label" : "40_DM_ORACmp_fact_claim_tran_temp_SOURCE_LKP_V_S_CHEQ_REQN_TYPE",
+        "x" : 3780,
+        "y" : 700,
+        "phase" : 1
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "oracle",
+          "id" : "transpiled_connection",
+          "properties" : {
+            "database" : "dbName",
+            "server" : "$$jdbcUrl",
+            "username" : "$$username",
+            "id" : "transpiled_connection",
+            "port" : "1521",
+            "password" : {
+              "kind" : "prophecy",
+              "properties" : {
+                "name" : "transpiled_secret",
+                "value" : "transpiled_secret"
+              },
+              "subKind" : "text",
+              "type" : "secret"
+            }
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "pathSelection" : "tableFullName",
+          "tableFullName" : {
+            "schema" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "config",
+                  "properties" : {
+                    "kind" : "prophecy",
+                    "name" : "SCHEMA"
+                  }
+                } ]
+              }
+            },
+            "name" : "V_S_CHEQ_REQN_TYPE"
+          },
+          "warehouseQuery" : {
+            "query" : ""
+          }
+        },
+        "format" : {
+          "kind" : "oracle",
+          "category" : "table",
+          "properties" : {
+            "kind" : "oracle",
+            "schema" : {
+              "entityType" : "",
+              "providerType" : "Databricks",
+              "fields" : [ {
+                "name" : "REF_HK",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "REF_BK",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Cheq_Reqn_Type_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Cheq_Reqn_Type_Description",
+                "dataType" : {
+                  "type" : "String"
+                }
+              } ]
+            }
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "SOURCE_LKP_V_S_CHEQ_REQN_TYPE_out0",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "REF_HK",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "REF_BK",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Cheq_Reqn_Type_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Cheq_Reqn_Type_Description",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : true
+      }
+    },
+    "SOURCE_LKP_gst_tolerance" : {
+      "id" : "SOURCE_LKP_gst_tolerance",
+      "component" : "OrchestrationSource",
+      "kind" : "OracleSource",
+      "metadata" : {
+        "label" : "40_DM_ORACmp_fact_claim_tran_temp_SOURCE_LKP_gst_tolerance",
+        "x" : 20,
+        "y" : 220,
+        "phase" : 1
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "oracle",
+          "id" : "transpiled_connection",
+          "properties" : {
+            "database" : "dbName",
+            "server" : "$$jdbcUrl",
+            "username" : "$$username",
+            "id" : "transpiled_connection",
+            "port" : "1521",
+            "password" : {
+              "kind" : "prophecy",
+              "properties" : {
+                "name" : "transpiled_secret",
+                "value" : "transpiled_secret"
+              },
+              "subKind" : "text",
+              "type" : "secret"
+            }
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "pathSelection" : "tableFullName",
+          "tableFullName" : {
+            "schema" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "config",
+                  "properties" : {
+                    "kind" : "prophecy",
+                    "name" : "SCHEMA"
+                  }
+                } ]
+              }
+            },
+            "name" : "V_S_REF_GST_TOLERANCE"
+          },
+          "warehouseQuery" : {
+            "query" : ""
+          }
+        },
+        "format" : {
+          "kind" : "oracle",
+          "category" : "table",
+          "properties" : {
+            "kind" : "oracle",
+            "schema" : {
+              "entityType" : "",
+              "providerType" : "Databricks",
+              "fields" : [ {
+                "name" : "GST_TOLERANCE_LOW_AMOUNT",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "GST_TOLERANCE_HIGH_AMOUNT",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              } ]
+            }
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "SOURCE_LKP_gst_tolerance_out0",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "GST_TOLERANCE_LOW_AMOUNT",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "GST_TOLERANCE_HIGH_AMOUNT",
+              "dataType" : {
+                "type" : "Double"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : true
+      }
+    },
+    "SOURCE_LKP_ref_payment_type_group" : {
+      "id" : "SOURCE_LKP_ref_payment_type_group",
+      "component" : "OrchestrationSource",
+      "kind" : "OracleSource",
+      "metadata" : {
+        "label" : "40_DM_ORACmp_fact_claim_tran_temp_SOURCE_LKP_ref_payment_type_group",
+        "x" : 320,
+        "y" : 340,
+        "phase" : 1
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "oracle",
+          "id" : "transpiled_connection",
+          "properties" : {
+            "database" : "dbName",
+            "server" : "$$jdbcUrl",
+            "username" : "$$username",
+            "id" : "transpiled_connection",
+            "port" : "1521",
+            "password" : {
+              "kind" : "prophecy",
+              "properties" : {
+                "name" : "transpiled_secret",
+                "value" : "transpiled_secret"
+              },
+              "subKind" : "text",
+              "type" : "secret"
+            }
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "pathSelection" : "tableFullName",
+          "tableFullName" : {
+            "schema" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "config",
+                  "properties" : {
+                    "kind" : "prophecy",
+                    "name" : "SCHEMA"
+                  }
+                } ]
+              }
+            },
+            "name" : "V_S_REF_PAYMENT_TYPE_GROUP"
+          },
+          "warehouseQuery" : {
+            "query" : ""
+          }
+        },
+        "format" : {
+          "kind" : "oracle",
+          "category" : "table",
+          "properties" : {
+            "kind" : "oracle",
+            "schema" : {
+              "entityType" : "",
+              "providerType" : "Databricks",
+              "fields" : [ {
+                "name" : "CTL_REC_MD5_HA",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CTL_JOB_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "CTL_LOAD_END_DM",
+                "dataType" : {
+                  "type" : "Timestamp"
+                }
+              }, {
+                "name" : "COUNTRY_CODE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CTL_SRC_CD",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "PAYMENT_TYPE_DESCRIPTION",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "REF_HK",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CTL_BATCH_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "REF_BK",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "PAYMENT_TYPE_GROUP_NAME",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CTL_DEL_YN",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CTL_LOAD_DM",
+                "dataType" : {
+                  "type" : "Timestamp"
+                }
+              }, {
+                "name" : "PAYMENT_TYPE_CODE",
+                "dataType" : {
+                  "type" : "String"
+                }
+              } ]
+            }
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "SOURCE_LKP_ref_payment_type_group_out0",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "CTL_REC_MD5_HA",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CTL_JOB_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "CTL_LOAD_END_DM",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "COUNTRY_CODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CTL_SRC_CD",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "PAYMENT_TYPE_DESCRIPTION",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "REF_HK",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CTL_BATCH_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "REF_BK",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "PAYMENT_TYPE_GROUP_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CTL_DEL_YN",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CTL_LOAD_DM",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "PAYMENT_TYPE_CODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : true
+      }
+    },
+    "SOURCE_LKP_L_CLAIM_PAYEE_TRAN" : {
+      "id" : "SOURCE_LKP_L_CLAIM_PAYEE_TRAN",
+      "component" : "OrchestrationSource",
+      "kind" : "OracleSource",
+      "metadata" : {
+        "label" : "40_DM_ORACmp_fact_claim_tran_temp_SOURCE_LKP_L_CLAIM_PAYEE_TRAN",
+        "x" : 3780,
+        "y" : 1300,
+        "phase" : 1
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "oracle",
+          "id" : "transpiled_connection",
+          "properties" : {
+            "database" : "dbName",
+            "server" : "$$jdbcUrl",
+            "username" : "$$username",
+            "id" : "transpiled_connection",
+            "port" : "1521",
+            "password" : {
+              "kind" : "prophecy",
+              "properties" : {
+                "name" : "transpiled_secret",
+                "value" : "transpiled_secret"
+              },
+              "subKind" : "text",
+              "type" : "secret"
+            }
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "pathSelection" : "tableFullName",
+          "tableFullName" : {
+            "schema" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "config",
+                  "properties" : {
+                    "kind" : "prophecy",
+                    "name" : "SCHEMA"
+                  }
+                } ]
+              }
+            },
+            "name" : "L_CLAIM_PAYEE_TRAN"
+          },
+          "warehouseQuery" : {
+            "query" : ""
+          }
+        },
+        "format" : {
+          "kind" : "oracle",
+          "category" : "table",
+          "properties" : {
+            "kind" : "oracle",
+            "schema" : {
+              "entityType" : "",
+              "providerType" : "Databricks",
+              "fields" : [ {
+                "name" : "CLAIM_PAYEE_TRAN_BK",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CTL_JOB_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "CLAIM_PAYEE_BK",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CLAIM_PAYEE_TRAN_HK",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CTL_BATCH_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "CLAIM_PAYEE_HK",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CTL_LOAD_DM",
+                "dataType" : {
+                  "type" : "Timestamp"
+                }
+              } ]
+            }
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "SOURCE_LKP_L_CLAIM_PAYEE_TRAN_out0",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "CLAIM_PAYEE_TRAN_BK",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CTL_JOB_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "CLAIM_PAYEE_BK",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CLAIM_PAYEE_TRAN_HK",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CTL_BATCH_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "CLAIM_PAYEE_HK",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CTL_LOAD_DM",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : true
+      }
+    },
+    "SQ_S_CLAIM_TRAN" : {
+      "id" : "SQ_S_CLAIM_TRAN",
+      "component" : "OrchestrationSource",
+      "kind" : "OracleSource",
+      "metadata" : {
+        "label" : "40_DM_ORACmp_fact_claim_tran_temp_SQ_S_CLAIM_TRAN",
+        "x" : 20,
+        "y" : 420,
+        "phase" : 1
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "oracle",
+          "id" : "transpiled_connection",
+          "properties" : {
+            "database" : "dbName",
+            "server" : "$$jdbcUrl",
+            "username" : "$$username",
+            "id" : "transpiled_connection",
+            "port" : "1521",
+            "password" : {
+              "kind" : "prophecy",
+              "properties" : {
+                "name" : "transpiled_secret",
+                "value" : "transpiled_secret"
+              },
+              "subKind" : "text",
+              "type" : "secret"
+            }
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "pathSelection" : "warehouseQuery",
+          "tableFullName" : {
+            "schema" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "config",
+                  "properties" : {
+                    "kind" : "prophecy",
+                    "name" : "SCHEMA"
+                  }
+                } ]
+              }
+            },
+            "name" : "SQL_SERVER_Dev"
+          },
+          "warehouseQuery" : {
+            "query" : "SELECT S_CLAIM_TRAN.TRAN_HK, S_CLAIM_TRAN.TRAN_BK, S_CLAIM_TRAN.Claim_Tran_Id, S_CLAIM_TRAN.CLAIM_HK, S_CLAIM_TRAN.CLAIM_BK, S_CLAIM_TRAN.Company_Code, S_CLAIM_TRAN.Claim_Number, S_CLAIM_TRAN.Claim_Tran_Record_Code, S_CLAIM_TRAN.Payment_Type_Code, S_CLAIM_TRAN.Tran_Type_Code, S_CLAIM_TRAN.Claim_Tran_Batch_ID, S_CLAIM_TRAN.Claim_RI_Type_Code, S_CLAIM_TRAN.Claim_Tran_Modify_Type_Code, S_CLAIM_TRAN.Claim_Tran_RI_Broker_Account_Code, S_CLAIM_TRAN.Claim_Tran_Date_Key, S_CLAIM_TRAN.Claim_Tran_Last_Modified_Datetime, S_CLAIM_TRAN.Acct_Period_Code, S_CLAIM_TRAN.Claim_Tran_Payment_Single_Stage_YN, S_CLAIM_TRAN.Claim_Tran_Ground_Up_Outs_Amount, S_CLAIM_TRAN.Claim_Tran_Ground_Up_Paid_Amount, S_CLAIM_TRAN.Claim_Tran_RI_Paid_Amount, S_CLAIM_TRAN.Claim_Tran_RI_Outs_Amount, S_CLAIM_TRAN.Claim_Tran_UX_Paid_Amount, S_CLAIM_TRAN.Claim_Tran_UX_Outs_Amount, S_CLAIM_TRAN.Claim_Tran_Recovery_Amount, S_CLAIM_TRAN.GST_Division_Code, S_CLAIM_TRAN.Cheq_Reqn_Type_Code, S_CLAIM_TRAN.CLAIM_PAYEE_TRAN_BK, S_CLAIM_TRAN.Claim_Payment_Description, S_CLAIM_TRAN.Claim_Payment_GST_Rate, S_CLAIM_TRAN.Claim_Payment_CITCE_Percent, S_CLAIM_TRAN.Claim_Payment_GST_Expected_Amount, S_CLAIM_TRAN.Claim_Payment_GST_Claimed_Amount, S_CLAIM_TRAN.Claim_Payment_GST_Difference_Amount, S_CLAIM_TRAN.Claim_Payment_Country_Code, S_CLAIM_TRAN.Claim_Tran_Ground_Up_Incurred_Amount, S_CLAIM_TRAN.Claim_Tran_RI_Incurred_Amount, S_CLAIM_TRAN.Claim_Tran_UX_Incurred_Amount, S_CLAIM_TRAN.Claim_Tran_Gross_Outs_Amount, S_CLAIM_TRAN.Claim_Tran_Gross_Paid_Amount, S_CLAIM_TRAN.Claim_Tran_Net_Incurred_Amount, S_CLAIM_TRAN.Claim_Tran_Net_Outs_Amount, S_CLAIM_TRAN.Claim_Tran_Net_Paid_Amount, S_CLAIM_TRAN.Claim_Payment_Amount, S_CLAIM_TRAN.Claim_Payment_Incl_GST_Amount, S_CLAIM_TRAN.Claim_Tran_Gross_Incurred_Amount, S_CLAIM_TRAN.CTL_BATCH_ID, S_CLAIM_TRAN.CTL_JOB_ID, S_CLAIM_TRAN.CTL_LOAD_DM \r FROM\r  bdv.S_CLAIM_TRAN\r order by S_CLAIM_TRAN.Claim_Tran_Id"
+          }
+        },
+        "format" : {
+          "kind" : "oracle",
+          "category" : "table",
+          "properties" : {
+            "kind" : "oracle",
+            "schema" : {
+              "entityType" : "",
+              "providerType" : "Databricks",
+              "fields" : [ {
+                "name" : "Claim_Tran_Record_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Payment_Amount",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_Tran_Last_Modified_Datetime",
+                "dataType" : {
+                  "type" : "Timestamp"
+                }
+              }, {
+                "name" : "Claim_Tran_Net_Incurred_Amount",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "TRAN_HK",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Cheq_Reqn_Type_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Acct_Period_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CLAIM_PAYEE_TRAN_BK",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Tran_UX_Paid_Amount",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "CTL_JOB_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "Claim_Payment_Description",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Tran_RI_Paid_Amount",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_Tran_UX_Outs_Amount",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_Tran_Ground_Up_Paid_Amount",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "CLAIM_HK",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Payment_GST_Claimed_Amount",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_Tran_Ground_Up_Incurred_Amount",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_Tran_Net_Outs_Amount",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_Number",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CTL_BATCH_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "Tran_Type_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Company_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Tran_Modify_Type_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_RI_Type_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Tran_RI_Broker_Account_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Tran_RI_Incurred_Amount",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "TRAN_BK",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Tran_Date_Key",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "Claim_Tran_Gross_Outs_Amount",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_Payment_GST_Expected_Amount",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_Tran_Gross_Incurred_Amount",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_Tran_Batch_ID",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Tran_RI_Outs_Amount",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "GST_Division_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Tran_Gross_Paid_Amount",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "CLAIM_BK",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Payment_GST_Rate",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_Tran_Recovery_Amount",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_Tran_Ground_Up_Outs_Amount",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_Payment_CITCE_Percent",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_Tran_UX_Incurred_Amount",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_Payment_GST_Difference_Amount",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_Tran_Id",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CTL_LOAD_DM",
+                "dataType" : {
+                  "type" : "Timestamp"
+                }
+              }, {
+                "name" : "Claim_Tran_Net_Paid_Amount",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_Payment_Country_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Payment_Incl_GST_Amount",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Payment_Type_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Tran_Payment_Single_Stage_YN",
+                "dataType" : {
+                  "type" : "String"
+                }
+              } ]
+            }
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "SQ_S_CLAIM_TRAN_out0",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "Claim_Tran_Record_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Payment_Amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_Tran_Last_Modified_Datetime",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "Claim_Tran_Net_Incurred_Amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "TRAN_HK",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Cheq_Reqn_Type_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Acct_Period_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CLAIM_PAYEE_TRAN_BK",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Tran_UX_Paid_Amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "CTL_JOB_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "Claim_Payment_Description",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Tran_RI_Paid_Amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_Tran_UX_Outs_Amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_Tran_Ground_Up_Paid_Amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "CLAIM_HK",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Payment_GST_Claimed_Amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_Tran_Ground_Up_Incurred_Amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_Tran_Net_Outs_Amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_Number",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CTL_BATCH_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "Tran_Type_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Company_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Tran_Modify_Type_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_RI_Type_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Tran_RI_Broker_Account_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Tran_RI_Incurred_Amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "TRAN_BK",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Tran_Date_Key",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "Claim_Tran_Gross_Outs_Amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_Payment_GST_Expected_Amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_Tran_Gross_Incurred_Amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_Tran_Batch_ID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Tran_RI_Outs_Amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "GST_Division_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Tran_Gross_Paid_Amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "CLAIM_BK",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Payment_GST_Rate",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_Tran_Recovery_Amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_Tran_Ground_Up_Outs_Amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_Payment_CITCE_Percent",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_Tran_UX_Incurred_Amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_Payment_GST_Difference_Amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_Tran_Id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CTL_LOAD_DM",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "Claim_Tran_Net_Paid_Amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_Payment_Country_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Payment_Incl_GST_Amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Payment_Type_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Tran_Payment_Single_Stage_YN",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : true
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "edge_873",
+    "source" : "SOURCE_lkp_REF_CLAIM_TRAN_TYPE_mt",
+    "sourcePort" : "SOURCE_lkp_REF_CLAIM_TRAN_TYPE_mt_out0",
+    "target" : "Fact_Claim_Tran_Temp",
+    "targetPort" : "40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp_in_0"
+  }, {
+    "id" : "edge_875",
+    "source" : "SOURCE_lkp_REF_CLAIM_TRAN_TYPE_mt",
+    "sourcePort" : "SOURCE_lkp_REF_CLAIM_TRAN_TYPE_mt_out0",
+    "target" : "Fact_Claim_Tran_Temp",
+    "targetPort" : "40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp_in_2"
+  }, {
+    "id" : "edge_876",
+    "source" : "SOURCE_LKP_V_S_CLAIM",
+    "sourcePort" : "SOURCE_LKP_V_S_CLAIM_out0",
+    "target" : "Fact_Claim_Tran_Temp",
+    "targetPort" : "40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp_in_3"
+  }, {
+    "id" : "edge_878",
+    "source" : "SOURCE_LKP_V_S_CHEQ_REQN_TYPE",
+    "sourcePort" : "SOURCE_LKP_V_S_CHEQ_REQN_TYPE_out0",
+    "target" : "Fact_Claim_Tran_Temp",
+    "targetPort" : "40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp_in_5"
+  }, {
+    "id" : "edge_879",
+    "source" : "SOURCE_LKP_H_PARTY",
+    "sourcePort" : "SOURCE_LKP_H_PARTY_out0",
+    "target" : "Fact_Claim_Tran_Temp",
+    "targetPort" : "40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp_in_6"
+  }, {
+    "id" : "edge_880",
+    "source" : "SOURCE_LKP_V_S_PAYMENT_TYPE",
+    "sourcePort" : "SOURCE_LKP_V_S_PAYMENT_TYPE_out0",
+    "target" : "Fact_Claim_Tran_Temp",
+    "targetPort" : "40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp_in_7"
+  }, {
+    "id" : "edge_881",
+    "source" : "SOURCE_LKP_L_CLAIM_PAYEE_TRAN",
+    "sourcePort" : "SOURCE_LKP_L_CLAIM_PAYEE_TRAN_out0",
+    "target" : "Fact_Claim_Tran_Temp",
+    "targetPort" : "40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp_in_8"
+  }, {
+    "id" : "edge_882",
+    "source" : "SOURCE_LKP_gst_tolerance",
+    "sourcePort" : "SOURCE_LKP_gst_tolerance_out0",
+    "target" : "Fact_Claim_Tran_Temp",
+    "targetPort" : "40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp_in_9"
+  }, {
+    "id" : "edge_883",
+    "source" : "SQ_S_CLAIM_TRAN",
+    "sourcePort" : "SQ_S_CLAIM_TRAN_out0",
+    "target" : "Fact_Claim_Tran_Temp",
+    "targetPort" : "40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp_in_10"
+  }, {
+    "id" : "edge_884",
+    "source" : "SOURCE_lkp_REF_CLAIM_TRAN_TYPE_tt",
+    "sourcePort" : "SOURCE_lkp_REF_CLAIM_TRAN_TYPE_tt_out0",
+    "target" : "Fact_Claim_Tran_Temp",
+    "targetPort" : "40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp_in_11"
+  }, {
+    "id" : "edge_885",
+    "source" : "SOURCE_lkp_REF_CLAIM_TRAN_TYPE_tt",
+    "sourcePort" : "SOURCE_lkp_REF_CLAIM_TRAN_TYPE_tt_out0",
+    "target" : "Fact_Claim_Tran_Temp",
+    "targetPort" : "40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp_in_12"
+  }, {
+    "id" : "edge_886",
+    "source" : "SOURCE_lkp_REF_CLAIM_TRAN_TYPE_tt",
+    "sourcePort" : "SOURCE_lkp_REF_CLAIM_TRAN_TYPE_tt_out0",
+    "target" : "Fact_Claim_Tran_Temp",
+    "targetPort" : "40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp_in_13"
+  }, {
+    "id" : "edge_887",
+    "source" : "SOURCE_LKP_company",
+    "sourcePort" : "SOURCE_LKP_company_out0",
+    "target" : "Fact_Claim_Tran_Temp",
+    "targetPort" : "40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp_in_14"
+  }, {
+    "id" : "edge_888",
+    "source" : "SOURCE_lkp_REF_CLAIM_TRAN_TYPE_tt",
+    "sourcePort" : "SOURCE_lkp_REF_CLAIM_TRAN_TYPE_tt_out0",
+    "target" : "Fact_Claim_Tran_Temp",
+    "targetPort" : "40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp_in_15"
+  }, {
+    "id" : "edge_889",
+    "source" : "SOURCE_LKP_gst_tolerance_2",
+    "sourcePort" : "SOURCE_LKP_gst_tolerance_2_out0",
+    "target" : "Fact_Claim_Tran_Temp",
+    "targetPort" : "40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp_in_16"
+  }, {
+    "id" : "edge_890",
+    "source" : "SOURCE_lkp_REF_CLAIM_TRAN_TYPE_rt",
+    "sourcePort" : "SOURCE_lkp_REF_CLAIM_TRAN_TYPE_rt_out0",
+    "target" : "Fact_Claim_Tran_Temp",
+    "targetPort" : "40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp_in_17"
+  }, {
+    "id" : "edge_891",
+    "source" : "SOURCE_LKP_ref_payment_type_group",
+    "sourcePort" : "SOURCE_LKP_ref_payment_type_group_out0",
+    "target" : "Fact_Claim_Tran_Temp",
+    "targetPort" : "40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp_in_18"
+  }, {
+    "id" : "edge_892",
+    "source" : "SOURCE_LKP_payment_type_group",
+    "sourcePort" : "SOURCE_LKP_payment_type_group_out0",
+    "target" : "Fact_Claim_Tran_Temp",
+    "targetPort" : "40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp_in_19"
+  }, {
+    "id" : "edge_913",
+    "source" : "SOURCE_lkp_POL_CLAV_CA",
+    "sourcePort" : "SOURCE_lkp_POL_CLAV_CA_out0",
+    "target" : "Fact_Claim_Tran_Temp",
+    "targetPort" : "40_DM_ORAC_mp_fact_claim_tran_temp__Fact_Claim_Tran_Temp_in_24"
+  }, {
+    "id" : "edge_893",
+    "source" : "SOURCE_lkp_REF_CLAIM_TRAN_TYPE_mt2",
+    "sourcePort" : "SOURCE_lkp_REF_CLAIM_TRAN_TYPE_mt2_out0",
+    "target" : "lkp_REF_CLAIM_TRAN_TYPE_mt2",
+    "targetPort" : "40_DM_ORAC_mp_fact_claim_tran_temp__lkp_REF_CLAIM_TRAN_TYPE_mt2_in_0"
+  } ],
+  "component" : "Pipeline"
+}

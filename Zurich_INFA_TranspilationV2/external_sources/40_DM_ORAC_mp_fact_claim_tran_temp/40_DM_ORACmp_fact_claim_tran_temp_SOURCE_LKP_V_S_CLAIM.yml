@@ -1,0 +1,174 @@
+entityType: ""
+providerType: "Databricks"
+fields:
+- name: "Claim_Status_Code"
+  dataType:
+    type: "String"
+- name: "Claim_Recovery_YN"
+  dataType:
+    type: "String"
+- name: "Claim_Time_Occurence"
+  dataType:
+    type: "Double"
+- name: "Claim_UX_Type_Code"
+  dataType:
+    type: "String"
+- name: "Claim_Updated_Date_Key"
+  dataType:
+    type: "String"
+- name: "Claim_Indemnity_Decision_Code"
+  dataType:
+    type: "String"
+- name: "Claim_Branch_Code"
+  dataType:
+    type: "String"
+- name: "Claim_Handler_Code"
+  dataType:
+    type: "String"
+- name: "Claim_Assessor_Code"
+  dataType:
+    type: "String"
+- name: "Claim_Portfolio_Code"
+  dataType:
+    type: "String"
+- name: "Claim_Liability_Date_Key"
+  dataType:
+    type: "Double"
+- name: "CLAIM_HK"
+  dataType:
+    type: "String"
+- name: "Claim_Date_Accepted_Key"
+  dataType:
+    type: "Double"
+- name: "Claim_Recovery_Potential_Amount"
+  dataType:
+    type: "Double"
+- name: "Claim_Agg_Arrangement_Type_Key"
+  dataType:
+    type: "String"
+- name: "Product_Code"
+  dataType:
+    type: "String"
+- name: "Claim_Salvage_Amount"
+  dataType:
+    type: "Double"
+- name: "Claim_Reopened_YN"
+  dataType:
+    type: "String"
+- name: "Claim_BGC_Status_Code"
+  dataType:
+    type: "String"
+- name: "Claim_Reported_Date_Key"
+  dataType:
+    type: "Double"
+- name: "Policy_Period_Name"
+  dataType:
+    type: "String"
+- name: "Policy_Incep_Date_Key"
+  dataType:
+    type: "Double"
+- name: "Claim_Notify_Days_Count"
+  dataType:
+    type: "Integer"
+- name: "Claim_Number"
+  dataType:
+    type: "String"
+- name: "Claim_Gross_Outs_Amount"
+  dataType:
+    type: "Double"
+- name: "Claim_Status_Date_Key"
+  dataType:
+    type: "Double"
+- name: "Claim_Date_Rejected_Key"
+  dataType:
+    type: "Double"
+- name: "Claim_Indemnity_Decision_Date_Key"
+  dataType:
+    type: "Double"
+- name: "Claim_Non_Standard_Type_Code"
+  dataType:
+    type: "String"
+- name: "Company_Code"
+  dataType:
+    type: "String"
+- name: "Claim_Expiry_Date_Key"
+  dataType:
+    type: "Double"
+- name: "Claim_GROSS_INCURRED_Loss_Type_Code"
+  dataType:
+    type: "String"
+- name: "Claim_Solicitor_Code"
+  dataType:
+    type: "String"
+- name: "Claim_Liability_Status_Code"
+  dataType:
+    type: "String"
+- name: "ARPC_Incident_Number"
+  dataType:
+    type: "String"
+- name: "Claim_Notified_Date_Key"
+  dataType:
+    type: "Double"
+- name: "Claim_Updated_User_Code"
+  dataType:
+    type: "String"
+- name: "CLAIM_BK"
+  dataType:
+    type: "String"
+- name: "Claim_Updated_Datetime"
+  dataType:
+    type: "String"
+- name: "Claim_CITCE_Percent"
+  dataType:
+    type: "Double"
+- name: "Claim_UX_Arrangement_Description"
+  dataType:
+    type: "String"
+- name: "Claim_Salvage_YN"
+  dataType:
+    type: "String"
+- name: "Claim_Cyclone_Flag"
+  dataType:
+    type: "String"
+- name: "Claim_Gross_Paid_Amount"
+  dataType:
+    type: "Double"
+- name: "Client_Claim_Number"
+  dataType:
+    type: "String"
+- name: "Premium_Class_Code"
+  dataType:
+    type: "String"
+- name: "Claim_Postcode"
+  dataType:
+    type: "String"
+- name: "Claim_Fraud_Type_Code"
+  dataType:
+    type: "String"
+- name: "Claim_Vulnerable_Flag"
+  dataType:
+    type: "String"
+- name: "Claim_Duplicate_Status_Code"
+  dataType:
+    type: "String"
+- name: "Risk_Class_Code"
+  dataType:
+    type: "String"
+- name: "Claim_Gross_Incurred_Amount"
+  dataType:
+    type: "Double"
+- name: "Claim_Cause_of_Loss_Description"
+  dataType:
+    type: "String"
+- name: "Claim_Closed_Date_Key"
+  dataType:
+    type: "Double"
+- name: "Claim_Agg_Arrangement_Key"
+  dataType:
+    type: "String"
+- name: "Claim_Loss_Date_Key"
+  dataType:
+    type: "Double"
+- name: "Claim_Investigator_Code"
+  dataType:
+    type: "String"

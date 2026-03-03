@@ -1,0 +1,1339 @@
+{
+  "id" : "20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_Exchange_Status_SVU",
+  "metainfo" : {
+    "label" : "20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_Exchange_Status_SVU",
+    "autoLayout" : false,
+    "version" : 1,
+    "configuration" : {
+      "schema" : {
+        "type" : "record",
+        "fields" : [ {
+          "name" : "username",
+          "kind" : {
+            "type" : "string",
+            "value" : "''"
+          }
+        }, {
+          "name" : "SCHEMA",
+          "kind" : {
+            "type" : "string",
+            "value" : "'SCHEMA'"
+          }
+        }, {
+          "name" : "PMWorkflowRunId",
+          "kind" : {
+            "type" : "string",
+            "value" : "''"
+          }
+        }, {
+          "name" : "jdbcUrl",
+          "kind" : {
+            "type" : "string",
+            "value" : "''"
+          }
+        }, {
+          "name" : "PMTargetFileDir",
+          "kind" : {
+            "type" : "string",
+            "value" : "''"
+          }
+        }, {
+          "name" : "password",
+          "kind" : {
+            "type" : "string",
+            "value" : "''"
+          }
+        } ]
+      }
+    },
+    "isTranspiledPipeline" : false,
+    "publishDiagnosticMetrics" : true,
+    "transpilerType" : "informatica",
+    "processesVsModelFiles" : {
+      "SQ_sh_ZSX_SVU_GTWY_MESSAGE_STATUS" : "models/20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_Exchange_Status_SVU/20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_Exchange_Status_SVU__sh_P_DIM_GI_MESSAGE_EXCHANGE_STATUS.sql",
+      "FIL_Only_With_Attachments_JOIN_EXPR_187" : "models/20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_Exchange_Status_SVU/20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_Exchange_Status_SVU__sh_P_DIM_GI_MESSAGE_EXCHANGE_STATUS.sql",
+      "EXP_Set_Defaults" : "models/20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_Exchange_Status_SVU/20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_Exchange_Status_SVU__sh_P_DIM_GI_MESSAGE_EXCHANGE_STATUS.sql",
+      "EXP_Ctl_Fields_STG31" : "models/20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_Exchange_Status_SVU/20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_Exchange_Status_SVU__sh_P_DIM_GI_MESSAGE_EXCHANGE_STATUS.sql",
+      "20_STG_ZSXmp_src_cnf_P_Dim_GI_Message_Exchange_Status_SVU_sh_ZSX_SVU_GTWY_MESSAGE_STATUS_sh_ZSX_SVU_GTWY_MESSAGE_STATUS_out0" : "models/20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_Exchange_Status_SVU/20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_Exchange_Status_SVU__sh_P_DIM_GI_MESSAGE_EXCHANGE_STATUS.sql",
+      "SQL_Delete_Failed_SQL_Delete_Failed_out0" : "models/20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_Exchange_Status_SVU/20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_Exchange_Status_SVU__SQL_Delete_Failed_EXPR_188.sql",
+      "FIL_Only_With_Attachments" : "models/20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_Exchange_Status_SVU/20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_Exchange_Status_SVU__sh_P_DIM_GI_MESSAGE_EXCHANGE_STATUS.sql",
+      "sh_P_DIM_GI_MESSAGE_EXCHANGE_STATUS" : "models/20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_Exchange_Status_SVU/20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_Exchange_Status_SVU__sh_P_DIM_GI_MESSAGE_EXCHANGE_STATUS.sql",
+      "SQL_Delete_Failed_EXPR_188_SQL_Delete_Failed_EXPR_188_out0" : "models/20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_Exchange_Status_SVU/20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_Exchange_Status_SVU__SQL_Delete_Failed_EXPR_188.sql",
+      "SQL_Delete_Failed_EXPR_188" : "models/20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_Exchange_Status_SVU/20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_Exchange_Status_SVU__SQL_Delete_Failed_EXPR_188.sql",
+      "FIL_Only_With_Attachments_JOIN_merged" : "models/20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_Exchange_Status_SVU/20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_Exchange_Status_SVU__sh_P_DIM_GI_MESSAGE_EXCHANGE_STATUS.sql",
+      "20_STG_ZSXmp_src_cnf_P_Dim_GI_Message_Exchange_Status_SVU_SOURCE_LKP_Zsx_Svu_Gtwy_Attachment_SOURCE_LKP_Zsx_Svu_Gtwy_Attachment_out0" : "models/20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_Exchange_Status_SVU/20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_Exchange_Status_SVU__sh_P_DIM_GI_MESSAGE_EXCHANGE_STATUS.sql"
+    }
+  },
+  "processes" : {
+    "SQ_sh_ZSX_SVU_GTWY_MESSAGE_STATUS" : {
+      "id" : "SQ_sh_ZSX_SVU_GTWY_MESSAGE_STATUS",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "SQ_sh_ZSX_SVU_GTWY_MESSAGE_STATUS",
+        "x" : 220,
+        "y" : 440,
+        "phase" : 2
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "ID",
+            "_row_id" : null
+          },
+          "alias" : "ID",
+          "description" : null,
+          "_row_id" : "WnhV7vfXLVHkkswnNC_O3"
+        }, {
+          "expression" : {
+            "expression" : "INTERNAL_ID",
+            "_row_id" : null
+          },
+          "alias" : "INTERNAL_ID",
+          "description" : null,
+          "_row_id" : "nkYTFNhDweh2mETgP5AB8"
+        }, {
+          "expression" : {
+            "expression" : "STATUS",
+            "_row_id" : null
+          },
+          "alias" : "STATUS",
+          "description" : null,
+          "_row_id" : "zAtPW37zdAHoM_Nt4fK-e"
+        }, {
+          "expression" : {
+            "expression" : "CREATED",
+            "_row_id" : null
+          },
+          "alias" : "CREATED",
+          "description" : null,
+          "_row_id" : "6PXJ0eagmuzdruM_2xDpt"
+        }, {
+          "expression" : {
+            "expression" : "CTL_EXTRACT_ID",
+            "_row_id" : null
+          },
+          "alias" : "CTL_EXTRACT_ID",
+          "description" : null,
+          "_row_id" : "veoZRc8QxqmeipNxjYMv4"
+        }, {
+          "expression" : {
+            "expression" : "CTL_SRC_SYS_SET_NAME",
+            "_row_id" : null
+          },
+          "alias" : "CTL_SRC_SYS_SET_NAME",
+          "description" : null,
+          "_row_id" : "jhiTfbNYBAglQroXKRX65"
+        }, {
+          "expression" : {
+            "expression" : "CTL_SRC_ROW_ID",
+            "_row_id" : null
+          },
+          "alias" : "CTL_SRC_ROW_ID",
+          "description" : null,
+          "_row_id" : "-DQSQicX7SuFeBKy42K4J"
+        }, {
+          "expression" : {
+            "expression" : "CTL_REC_CRTN_DATE",
+            "_row_id" : null
+          },
+          "alias" : "CTL_REC_CRTN_DATE",
+          "description" : null,
+          "_row_id" : "dsBgqcNaXbOuQT_A5axz9"
+        }, {
+          "expression" : {
+            "expression" : "CTL_BATCH_ID",
+            "_row_id" : null
+          },
+          "alias" : "CTL_BATCH_ID",
+          "description" : null,
+          "_row_id" : "-6f31yrsr0Ke90SnhVVmL"
+        }, {
+          "expression" : {
+            "expression" : "CTL_JOB_ID",
+            "_row_id" : null
+          },
+          "alias" : "CTL_JOB_ID",
+          "description" : null,
+          "_row_id" : "sgJOzFz8D8j7PazJBURN2"
+        }, {
+          "expression" : {
+            "expression" : "(monotonically_increasing_id())",
+            "_row_id" : null
+          },
+          "alias" : "prophecy_sk",
+          "description" : null,
+          "_row_id" : "rlb_BVcXXoPpVHZLlof9t"
+        }, {
+          "expression" : {
+            "expression" : "INTERNAL_ID",
+            "_row_id" : null
+          },
+          "alias" : "in_INTERNAL_ID",
+          "description" : null,
+          "_row_id" : "peR6TvfJrKCL8cytKZxGw"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "SQ_sh_ZSX_SVU_GTWY_MESSAGE_STATUS_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "SQ_sh_ZSX_SVU_GTWY_MESSAGE_STATUS_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "FIL_Only_With_Attachments_JOIN_EXPR_187" : {
+      "id" : "FIL_Only_With_Attachments_JOIN_EXPR_187",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "FIL_Only_With_Attachments_JOIN_EXPR_187",
+        "x" : 900,
+        "y" : 480,
+        "phase" : 2
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "PARTNER_GATEWAY",
+            "_row_id" : null
+          },
+          "alias" : "PARTNER_GATEWAY",
+          "description" : null,
+          "_row_id" : "XXo_NJMyPPuF-DlODh4mJ"
+        }, {
+          "expression" : {
+            "expression" : "EXCHANGE_STATUS_CODE",
+            "_row_id" : null
+          },
+          "alias" : "EXCHANGE_STATUS_CODE",
+          "description" : null,
+          "_row_id" : "i2D7ic7cGKcjW_If1VGRq"
+        }, {
+          "expression" : {
+            "expression" : "prophecy_sk",
+            "_row_id" : null
+          },
+          "alias" : "prophecy_sk",
+          "description" : null,
+          "_row_id" : "6W0GqAoS7b1oD93u-qnwv"
+        }, {
+          "expression" : {
+            "expression" : "CTL_SRC_ROW_ID",
+            "_row_id" : null
+          },
+          "alias" : "CTL_SRC_ROW_ID",
+          "description" : null,
+          "_row_id" : "jjFCZCIR9q-yrSG93mk1z"
+        }, {
+          "expression" : {
+            "expression" : "CTL_BATCH_ID",
+            "_row_id" : null
+          },
+          "alias" : "CTL_BATCH_ID",
+          "description" : null,
+          "_row_id" : "jmFZ81ANWxT6ecVUV3Gnl"
+        }, {
+          "expression" : {
+            "expression" : "CTL_JOB_ID",
+            "_row_id" : null
+          },
+          "alias" : "CTL_JOB_ID",
+          "description" : null,
+          "_row_id" : "QSze99PCBbHOtgo7-AXPg"
+        }, {
+          "expression" : {
+            "expression" : "CTL_REC_CRTN_DATE",
+            "_row_id" : null
+          },
+          "alias" : "CTL_REC_CRTN_DATE",
+          "description" : null,
+          "_row_id" : "qUsS02JL-HZJcsv_UDKxE"
+        }, {
+          "expression" : {
+            "expression" : "CTL_EXTRACT_ID",
+            "_row_id" : null
+          },
+          "alias" : "CTL_EXTRACT_ID",
+          "description" : null,
+          "_row_id" : "G1lhi7OY1RYpFcV3vzBFn"
+        }, {
+          "expression" : {
+            "expression" : "CTL_SRC_SYS_SET_NAME",
+            "_row_id" : null
+          },
+          "alias" : "CTL_SRC_SYS_SET_NAME",
+          "description" : null,
+          "_row_id" : "cKTFowVU-1ICcnYWO2UW3"
+        }, {
+          "expression" : {
+            "expression" : "INTERNAL_ID",
+            "_row_id" : null
+          },
+          "alias" : "lk_INTERNAL_ID",
+          "description" : null,
+          "_row_id" : "XoGnXprGZfU5-qQn92JEg"
+        }, {
+          "expression" : {
+            "expression" : "CREATED",
+            "_row_id" : null
+          },
+          "alias" : "REC_STRT_DATE",
+          "description" : null,
+          "_row_id" : "0rf1j2rBgIaVNcTrFI4Be"
+        }, {
+          "expression" : {
+            "expression" : "INTERNAL_ID",
+            "_row_id" : null
+          },
+          "alias" : "INTERNAL_ID",
+          "description" : null,
+          "_row_id" : "56pMV9usWVjJCI0RK8hVw"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "FIL_Only_With_Attachments_JOIN_EXPR_187_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "FIL_Only_With_Attachments_JOIN_EXPR_187_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "sh_Flat_File_SQL_Out" : {
+      "id" : "sh_Flat_File_SQL_Out",
+      "component" : "OrchestrationTarget",
+      "kind" : "SFTPTarget",
+      "metadata" : {
+        "label" : "sh_Flat_File_SQL_Out",
+        "x" : 680,
+        "y" : 20,
+        "phase" : 1
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "sftp",
+          "id" : "transpiled_connection",
+          "properties" : {
+            "authMethod" : "password",
+            "username" : "transpiled_username",
+            "host" : "sftp.prophecy.io",
+            "id" : "transpiled_connection",
+            "port" : 22,
+            "password" : {
+              "kind" : "prophecy",
+              "properties" : {
+                "name" : "transpiled_secret",
+                "value" : "transpiled_secret"
+              },
+              "subKind" : "text",
+              "type" : "secret"
+            }
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "filePath" : {
+            "type" : "concat_operation",
+            "properties" : {
+              "elements" : [ {
+                "type" : "config",
+                "properties" : {
+                  "kind" : "prophecy",
+                  "name" : "PMTargetFileDir"
+                }
+              }, {
+                "type" : "literal",
+                "properties" : {
+                  "value" : "/sh_flat_file_sql_out1.out.xlsx"
+                }
+              } ]
+            }
+          }
+        },
+        "format" : {
+          "kind" : "xlsx",
+          "properties" : { }
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "sh_Flat_File_SQL_Out_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "LqArTNm36gQvJa7y9olG0",
+          "slug" : "out0"
+        } ]
+      }
+    },
+    "EXP_Set_Defaults" : {
+      "id" : "EXP_Set_Defaults",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "EXP_Set_Defaults",
+        "x" : 420,
+        "y" : 220,
+        "phase" : 2
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "'SVU'",
+            "_row_id" : null
+          },
+          "alias" : "PARTNER_GATEWAY",
+          "description" : null,
+          "_row_id" : "jr1bmzPOlcZi7dkdFVjnE"
+        }, {
+          "expression" : {
+            "expression" : "(CASE WHEN ((STATUS IS NULL) OR (CAST((RTRIM((LTRIM(STATUS)))) AS string) = '')) THEN '-' ELSE STATUS END)",
+            "_row_id" : null
+          },
+          "alias" : "EXCHANGE_STATUS_CODE",
+          "description" : null,
+          "_row_id" : "HeIQC5uqNL9hUYDs8RmNP"
+        }, {
+          "expression" : {
+            "expression" : "prophecy_sk",
+            "_row_id" : null
+          },
+          "alias" : "prophecy_sk",
+          "description" : null,
+          "_row_id" : "O0j0m7Ypx_WN6JFaNheA4"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "EXP_Set_Defaults_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "EXP_Set_Defaults_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "SOURCE_LKP_Zsx_Svu_Gtwy_Attachment" : {
+      "id" : "SOURCE_LKP_Zsx_Svu_Gtwy_Attachment",
+      "component" : "OrchestrationSource",
+      "kind" : "OracleSource",
+      "metadata" : {
+        "label" : "20_STG_ZSXmp_src_cnf_P_Dim_GI_Message_Exchange_Status_SVU_SOURCE_LKP_Zsx_Svu_Gtwy_Attachment",
+        "x" : 420,
+        "y" : 560,
+        "phase" : 2
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "oracle",
+          "id" : "transpiled_connection",
+          "properties" : {
+            "database" : "dbName",
+            "server" : "$$jdbcUrl",
+            "username" : "$$username",
+            "id" : "transpiled_connection",
+            "port" : "1521",
+            "password" : {
+              "kind" : "prophecy",
+              "properties" : {
+                "name" : "transpiled_secret",
+                "value" : "transpiled_secret"
+              },
+              "subKind" : "text",
+              "type" : "secret"
+            }
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "pathSelection" : "tableFullName",
+          "tableFullName" : {
+            "schema" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "config",
+                  "properties" : {
+                    "kind" : "prophecy",
+                    "name" : "SCHEMA"
+                  }
+                } ]
+              }
+            },
+            "name" : "ZSX_SVU_GTWY_ATTACHMENT"
+          },
+          "warehouseQuery" : {
+            "query" : ""
+          }
+        },
+        "format" : {
+          "kind" : "oracle",
+          "category" : "table",
+          "properties" : {
+            "kind" : "oracle",
+            "schema" : {
+              "entityType" : "",
+              "providerType" : "Databricks",
+              "fields" : [ {
+                "name" : "INTERNAL_ID",
+                "dataType" : {
+                  "type" : "String"
+                }
+              } ]
+            }
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "SOURCE_LKP_Zsx_Svu_Gtwy_Attachment_out0",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "INTERNAL_ID",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : true
+      }
+    },
+    "sh_ZSX_SVU_GTWY_MESSAGE_STATUS1" : {
+      "id" : "sh_ZSX_SVU_GTWY_MESSAGE_STATUS1",
+      "component" : "OrchestrationSource",
+      "kind" : "OracleSource",
+      "metadata" : {
+        "label" : "20_STG_ZSXmp_src_cnf_P_Dim_GI_Message_Exchange_Status_SVU_sh_ZSX_SVU_GTWY_MESSAGE_STATUS1",
+        "x" : 20,
+        "y" : 20,
+        "phase" : 1
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "oracle",
+          "id" : "transpiled_connection",
+          "properties" : {
+            "database" : "dbName",
+            "server" : "$$jdbcUrl",
+            "username" : "$$username",
+            "id" : "transpiled_connection",
+            "port" : "1521",
+            "password" : {
+              "kind" : "prophecy",
+              "properties" : {
+                "name" : "transpiled_secret",
+                "value" : "transpiled_secret"
+              },
+              "subKind" : "text",
+              "type" : "secret"
+            }
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "pathSelection" : "tableFullName",
+          "tableFullName" : {
+            "schema" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "config",
+                  "properties" : {
+                    "kind" : "prophecy",
+                    "name" : "SCHEMA"
+                  }
+                } ]
+              }
+            },
+            "name" : "EBIDB_SRC"
+          },
+          "warehouseQuery" : {
+            "query" : ""
+          }
+        },
+        "format" : {
+          "kind" : "oracle",
+          "category" : "table",
+          "properties" : {
+            "kind" : "oracle",
+            "schema" : {
+              "entityType" : "",
+              "providerType" : "Databricks",
+              "fields" : [ {
+                "name" : "CTL_REC_CRTN_DATE",
+                "dataType" : {
+                  "type" : "Timestamp"
+                }
+              }, {
+                "name" : "CTL_SRC_ROW_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "ID",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CREATED",
+                "dataType" : {
+                  "type" : "Timestamp"
+                }
+              }, {
+                "name" : "CTL_JOB_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "STATUS",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "INTERNAL_ID",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CTL_SRC_SYS_SET_NAME",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CTL_BATCH_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "CTL_EXTRACT_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              } ]
+            }
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "sh_ZSX_SVU_GTWY_MESSAGE_STATUS1_out0",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "CTL_REC_CRTN_DATE",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "CTL_SRC_ROW_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "ID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CREATED",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "CTL_JOB_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "STATUS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "INTERNAL_ID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CTL_SRC_SYS_SET_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CTL_BATCH_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "CTL_EXTRACT_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : true
+      }
+    },
+    "EXP_Ctl_Fields_STG31" : {
+      "id" : "EXP_Ctl_Fields_STG31",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "EXP_Ctl_Fields_STG31",
+        "x" : 420,
+        "y" : 420,
+        "phase" : 2
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "CTL_SRC_ROW_ID",
+            "_row_id" : null
+          },
+          "alias" : "CTL_SRC_ROW_ID",
+          "description" : null,
+          "_row_id" : "Umi1XAIdVhNW6b4Ksr6vK"
+        }, {
+          "expression" : {
+            "expression" : "CTL_BATCH_ID",
+            "_row_id" : null
+          },
+          "alias" : "CTL_BATCH_ID",
+          "description" : null,
+          "_row_id" : "xSj2KH3PiLrNRmwP4-blz"
+        }, {
+          "expression" : {
+            "expression" : "CTL_EXTRACT_ID",
+            "_row_id" : null
+          },
+          "alias" : "CTL_EXTRACT_ID",
+          "description" : null,
+          "_row_id" : "D__coieihPBATBmQVbzs6"
+        }, {
+          "expression" : {
+            "expression" : "CTL_SRC_SYS_SET_NAME",
+            "_row_id" : null
+          },
+          "alias" : "CTL_SRC_SYS_SET_NAME",
+          "description" : null,
+          "_row_id" : "1tDN44X6XKm-QOXrFHx-7"
+        }, {
+          "expression" : {
+            "expression" : "{{ var('PMWorkflowRunId') }}",
+            "_row_id" : null
+          },
+          "alias" : "CTL_JOB_ID",
+          "description" : null,
+          "_row_id" : "VL5o9hojDQt6-7eXawWrs"
+        }, {
+          "expression" : {
+            "expression" : "CURRENT_TIMESTAMP",
+            "_row_id" : null
+          },
+          "alias" : "CTL_REC_CRTN_DATE",
+          "description" : null,
+          "_row_id" : "vNPWpGs3pngmGyAaxu9Tg"
+        }, {
+          "expression" : {
+            "expression" : "prophecy_sk",
+            "_row_id" : null
+          },
+          "alias" : "prophecy_sk",
+          "description" : null,
+          "_row_id" : "4IKmKnaxPWGoFOrmZre9c"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "EXP_Ctl_Fields_STG31_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "EXP_Ctl_Fields_STG31_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "FIL_Only_With_Attachments" : {
+      "id" : "FIL_Only_With_Attachments",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "FIL_Only_With_Attachments",
+        "x" : 1100,
+        "y" : 480,
+        "phase" : 2
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "condition" : {
+          "expression" : "CAST(((lk_INTERNAL_ID IS NULL) = FALSE) AS BOOLEAN)",
+          "_row_id" : null
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "FIL_Only_With_Attachments_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "FIL_Only_With_Attachments_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "sh_P_DIM_GI_MESSAGE_EXCHANGE_STATUS" : {
+      "id" : "sh_P_DIM_GI_MESSAGE_EXCHANGE_STATUS",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "sh_P_DIM_GI_MESSAGE_EXCHANGE_STATUS",
+        "x" : 1300,
+        "y" : 480,
+        "phase" : 2
+      },
+      "properties" : {
+        "table" : {
+          "name" : "sh_P_DIM_GI_MESSAGE_EXCHANGE_STATUS",
+          "sourceType" : "Table",
+          "sourceName" : "transpiled_sources",
+          "alias" : ""
+        },
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "sh_P_DIM_GI_MESSAGE_EXCHANGE_STATUS_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "IOkHoHmoGVS6Hnan7QBaS",
+          "slug" : "out0"
+        } ]
+      }
+    },
+    "SQL_Delete_Failed_EXPR_188" : {
+      "id" : "SQL_Delete_Failed_EXPR_188",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "SQL_Delete_Failed_EXPR_188",
+        "x" : 420,
+        "y" : 20,
+        "phase" : 1
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "SQLError",
+            "_row_id" : null
+          },
+          "alias" : "ERROR_STRING",
+          "description" : null,
+          "_row_id" : "nq4N54NEGSFtR33WEKJXp"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "SQL_Delete_Failed_EXPR_188_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "SQL_Delete_Failed_EXPR_188_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "FIL_Only_With_Attachments_JOIN_merged" : {
+      "id" : "FIL_Only_With_Attachments_JOIN_merged",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "FIL_Only_With_Attachments_JOIN_merged",
+        "x" : 680,
+        "y" : 460,
+        "phase" : 0
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "expression" : "(in0.prophecy_sk = in1.prophecy_sk)",
+            "_row_id" : null
+          },
+          "joinType" : "inner",
+          "rightAlias" : null
+        }, {
+          "alias" : "in2",
+          "expression" : {
+            "expression" : "(in1.prophecy_sk = in2.prophecy_sk)",
+            "_row_id" : null
+          },
+          "joinType" : "inner",
+          "rightAlias" : null
+        }, {
+          "alias" : "in3",
+          "expression" : {
+            "expression" : "(in3.INTERNAL_ID = in2.in_INTERNAL_ID)",
+            "_row_id" : null
+          },
+          "joinType" : "inner",
+          "rightAlias" : null
+        }, {
+          "alias" : "in4",
+          "expression" : {
+            "expression" : "in2.prophecy_sk = in4.prophecy_sk",
+            "_row_id" : null
+          },
+          "joinType" : "inner",
+          "rightAlias" : null
+        } ],
+        "allowSelection" : false,
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "in0.EXCHANGE_STATUS_CODE",
+            "_row_id" : null
+          },
+          "alias" : "EXCHANGE_STATUS_CODE",
+          "description" : null,
+          "_row_id" : "kA9gxhMCA6Sab6qk2Nnml"
+        }, {
+          "expression" : {
+            "expression" : "in1.CTL_BATCH_ID",
+            "_row_id" : null
+          },
+          "alias" : "CTL_BATCH_ID",
+          "description" : null,
+          "_row_id" : "bxU5IFisqdsIb4lhOwmLv"
+        }, {
+          "expression" : {
+            "expression" : "in1.CTL_SRC_SYS_SET_NAME",
+            "_row_id" : null
+          },
+          "alias" : "CTL_SRC_SYS_SET_NAME",
+          "description" : null,
+          "_row_id" : "wDlpsxCmFRnOpqjmRCqa2"
+        }, {
+          "expression" : {
+            "expression" : "in2.INTERNAL_ID",
+            "_row_id" : null
+          },
+          "alias" : "INTERNAL_ID",
+          "description" : null,
+          "_row_id" : "-scFBYX4AmzLD8rt7zeqK"
+        }, {
+          "expression" : {
+            "expression" : "in2.in_INTERNAL_ID",
+            "_row_id" : null
+          },
+          "alias" : "in_INTERNAL_ID",
+          "description" : null,
+          "_row_id" : "tBDbL6r7tw--Ovn3JCTVW"
+        }, {
+          "expression" : {
+            "expression" : "in1.CTL_REC_CRTN_DATE",
+            "_row_id" : null
+          },
+          "alias" : "CTL_REC_CRTN_DATE",
+          "description" : null,
+          "_row_id" : "rI71Oi5Koz_62eCTESYNE"
+        }, {
+          "expression" : {
+            "expression" : "in1.CTL_EXTRACT_ID",
+            "_row_id" : null
+          },
+          "alias" : "CTL_EXTRACT_ID",
+          "description" : null,
+          "_row_id" : "QDUPPS4wJTdEp-z3dAPeA"
+        }, {
+          "expression" : {
+            "expression" : "in2.STATUS",
+            "_row_id" : null
+          },
+          "alias" : "STATUS",
+          "description" : null,
+          "_row_id" : "zHqn1NrJEpt4u0hfDHW6B"
+        }, {
+          "expression" : {
+            "expression" : "in0.prophecy_sk",
+            "_row_id" : null
+          },
+          "alias" : "prophecy_sk",
+          "description" : null,
+          "_row_id" : "C1-sR9i_s-A06xva3k9V2"
+        }, {
+          "expression" : {
+            "expression" : "in0.PARTNER_GATEWAY",
+            "_row_id" : null
+          },
+          "alias" : "PARTNER_GATEWAY",
+          "description" : null,
+          "_row_id" : "xOHsYjUkG1rlOw84kBPZZ"
+        }, {
+          "expression" : {
+            "expression" : "in1.CTL_JOB_ID",
+            "_row_id" : null
+          },
+          "alias" : "CTL_JOB_ID",
+          "description" : null,
+          "_row_id" : "DPG5v0DGuz5iy8LBn1d2K"
+        }, {
+          "expression" : {
+            "expression" : "in2.CREATED",
+            "_row_id" : null
+          },
+          "alias" : "CREATED",
+          "description" : null,
+          "_row_id" : "l8na2fABGWnQVWKIMez5V"
+        }, {
+          "expression" : {
+            "expression" : "in1.CTL_SRC_ROW_ID",
+            "_row_id" : null
+          },
+          "alias" : "CTL_SRC_ROW_ID",
+          "description" : null,
+          "_row_id" : "NZIvJgI8v8s8MrQz2SXrw"
+        } ],
+        "activeTab" : "conditions",
+        "columnsSelector" : [ ],
+        "headAlias" : "in0"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "FIL_Only_With_Attachments_JOIN_merged_in0",
+          "slug" : "in0"
+        }, {
+          "id" : "FIL_Only_With_Attachments_JOIN_merged_in1",
+          "slug" : "in1"
+        }, {
+          "id" : "FIL_Only_With_Attachments_JOIN_merged_in2",
+          "slug" : "in2"
+        }, {
+          "id" : "FIL_Only_With_Attachments_JOIN_merged_in3",
+          "slug" : "in3"
+        }, {
+          "id" : "FIL_Only_With_Attachments_JOIN_merged_in4",
+          "slug" : "in4"
+        } ],
+        "outputs" : [ {
+          "id" : "FIL_Only_With_Attachments_JOIN_merged_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "sh_ZSX_SVU_GTWY_MESSAGE_STATUS" : {
+      "id" : "sh_ZSX_SVU_GTWY_MESSAGE_STATUS",
+      "component" : "OrchestrationSource",
+      "kind" : "OracleSource",
+      "metadata" : {
+        "label" : "20_STG_ZSXmp_src_cnf_P_Dim_GI_Message_Exchange_Status_SVU_sh_ZSX_SVU_GTWY_MESSAGE_STATUS",
+        "x" : 20,
+        "y" : 440,
+        "phase" : 2
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "oracle",
+          "id" : "transpiled_connection",
+          "properties" : {
+            "database" : "dbName",
+            "server" : "$$jdbcUrl",
+            "username" : "$$username",
+            "id" : "transpiled_connection",
+            "port" : "1521",
+            "password" : {
+              "kind" : "prophecy",
+              "properties" : {
+                "name" : "transpiled_secret",
+                "value" : "transpiled_secret"
+              },
+              "subKind" : "text",
+              "type" : "secret"
+            }
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "pathSelection" : "tableFullName",
+          "tableFullName" : {
+            "schema" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "config",
+                  "properties" : {
+                    "kind" : "prophecy",
+                    "name" : "SCHEMA"
+                  }
+                } ]
+              }
+            },
+            "name" : "EBIDB_SRC"
+          },
+          "warehouseQuery" : {
+            "query" : ""
+          }
+        },
+        "format" : {
+          "kind" : "oracle",
+          "category" : "table",
+          "properties" : {
+            "kind" : "oracle",
+            "schema" : {
+              "entityType" : "",
+              "providerType" : "Databricks",
+              "fields" : [ {
+                "name" : "CTL_REC_CRTN_DATE",
+                "dataType" : {
+                  "type" : "Timestamp"
+                }
+              }, {
+                "name" : "CTL_SRC_ROW_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "ID",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CREATED",
+                "dataType" : {
+                  "type" : "Timestamp"
+                }
+              }, {
+                "name" : "CTL_JOB_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "STATUS",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "INTERNAL_ID",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CTL_SRC_SYS_SET_NAME",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "CTL_BATCH_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "CTL_EXTRACT_ID",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              } ]
+            }
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "sh_ZSX_SVU_GTWY_MESSAGE_STATUS_out0",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "CTL_REC_CRTN_DATE",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "CTL_SRC_ROW_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "ID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CREATED",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "CTL_JOB_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "STATUS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "INTERNAL_ID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CTL_SRC_SYS_SET_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CTL_BATCH_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "CTL_EXTRACT_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : true
+      }
+    },
+    "SQL_Delete_Failed" : {
+      "id" : "SQL_Delete_Failed",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "SQL_Delete_Failed",
+        "x" : 220,
+        "y" : 20,
+        "phase" : 1
+      },
+      "properties" : {
+        "ports" : null,
+        "scriptMethodHeader" : "def Script(spark: SparkSession, in0: DataFrame) -> DataFrame:",
+        "scriptMethodFooter" : "return out0",
+        "script" : "\n# Couldn't handle this component please fill.\n# <TRANSFORMATION DESCRIPTION=\"\" NAME=\"SQL_Delete_Failed\" OBJECTVERSION=\"1\" REUSABLE=\"NO\" TYPE=\"Custom Transformation\" VERSIONNUMBER=\"1\">\n#       <TRANSFORMFIELD DATATYPE=\"integer\" DEFAULTVALUE=\"\" DESCRIPTION=\"\" NAME=\"CTL_EXTRACT_ID\" PICTURETEXT=\"\" PORTTYPE=\"INPUT\" PRECISION=\"10\" SCALE=\"0\"/><TRANSFORMFIELD DATATYPE=\"string\" DEFAULTVALUE=\"\" DESCRIPTION=\"\" NAME=\"SQLError\" PICTURETEXT=\"\" PORTTYPE=\"OUTPUT\" PRECISION=\"4096\" SCALE=\"0\"/><TRANSFORMFIELD DATATYPE=\"integer\" DEFAULTVALUE=\"\" DESCRIPTION=\"\" NAME=\"CTL_EXTRACT_ID_output\" PICTURETEXT=\"\" PORTTYPE=\"OUTPUT\" PRECISION=\"10\" SCALE=\"0\"/>\n#       <TABLEATTRIBUTE NAME=\"Language\" VALUE=\"C++\"/><TABLEATTRIBUTE NAME=\"Module Identifier\" VALUE=\"sqltransform\"/><TABLEATTRIBUTE NAME=\"Class Name\" VALUE=\"SQLPluginDriver\"/><TABLEATTRIBUTE NAME=\"Function Identifier\" VALUE=\"\"/><TABLEATTRIBUTE NAME=\"Runtime Location\" VALUE=\"\"/><TABLEATTRIBUTE NAME=\"Tracing Level\" VALUE=\"Normal\"/><TABLEATTRIBUTE NAME=\"Is Partitionable\" VALUE=\"Across Grid\"/><TABLEATTRIBUTE NAME=\"Inputs Must Block\" VALUE=\"NO\"/><TABLEATTRIBUTE NAME=\"Is Active\" VALUE=\"YES\"/><TABLEATTRIBUTE NAME=\"Update Strategy Transformation\" VALUE=\"NO\"/><TABLEATTRIBUTE NAME=\"Transformation Scope\" VALUE=\"Row\"/><TABLEATTRIBUTE NAME=\"Generate Transaction\" VALUE=\"NO\"/><TABLEATTRIBUTE NAME=\"Output Is Repeatable\" VALUE=\"Never\"/><TABLEATTRIBUTE NAME=\"Requires Single Thread Per Partition\" VALUE=\"NO\"/><TABLEATTRIBUTE NAME=\"Output Is Deterministic\" VALUE=\"YES\"/><TABLEATTRIBUTE NAME=\"Preserves Data Set Boundary\" VALUE=\"No\"/>\n#     </TRANSFORMATION>\nout0 = in0\n"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "SQL_Delete_Failed_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "SQL_Delete_Failed_out0",
+          "slug" : "out0"
+        } ]
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "edge_654",
+    "source" : "FIL_Only_With_Attachments_JOIN_merged",
+    "sourcePort" : "FIL_Only_With_Attachments_JOIN_merged_out0",
+    "target" : "FIL_Only_With_Attachments_JOIN_EXPR_187",
+    "targetPort" : "FIL_Only_With_Attachments_JOIN_EXPR_187_in0"
+  }, {
+    "id" : "edge_655",
+    "source" : "FIL_Only_With_Attachments_JOIN_EXPR_187",
+    "sourcePort" : "FIL_Only_With_Attachments_JOIN_EXPR_187_out0",
+    "target" : "FIL_Only_With_Attachments",
+    "targetPort" : "FIL_Only_With_Attachments_in0"
+  }, {
+    "id" : "edge_656",
+    "source" : "SQL_Delete_Failed_EXPR_188",
+    "sourcePort" : "SQL_Delete_Failed_EXPR_188_out0",
+    "target" : "sh_Flat_File_SQL_Out",
+    "targetPort" : "sh_Flat_File_SQL_Out_in0"
+  }, {
+    "id" : "edge_657",
+    "source" : "FIL_Only_With_Attachments",
+    "sourcePort" : "FIL_Only_With_Attachments_out0",
+    "target" : "sh_P_DIM_GI_MESSAGE_EXCHANGE_STATUS",
+    "targetPort" : "sh_P_DIM_GI_MESSAGE_EXCHANGE_STATUS_in0"
+  }, {
+    "id" : "edge_658",
+    "source" : "SQL_Delete_Failed",
+    "sourcePort" : "SQL_Delete_Failed_out0",
+    "target" : "SQL_Delete_Failed_EXPR_188",
+    "targetPort" : "SQL_Delete_Failed_EXPR_188_in0"
+  }, {
+    "id" : "edge_659",
+    "source" : "SQ_sh_ZSX_SVU_GTWY_MESSAGE_STATUS",
+    "sourcePort" : "SQ_sh_ZSX_SVU_GTWY_MESSAGE_STATUS_out0",
+    "target" : "EXP_Ctl_Fields_STG31",
+    "targetPort" : "EXP_Ctl_Fields_STG31_in0"
+  }, {
+    "id" : "edge_660",
+    "source" : "sh_ZSX_SVU_GTWY_MESSAGE_STATUS",
+    "sourcePort" : "sh_ZSX_SVU_GTWY_MESSAGE_STATUS_out0",
+    "target" : "SQ_sh_ZSX_SVU_GTWY_MESSAGE_STATUS",
+    "targetPort" : "SQ_sh_ZSX_SVU_GTWY_MESSAGE_STATUS_in0"
+  }, {
+    "id" : "edge_661",
+    "source" : "SQ_sh_ZSX_SVU_GTWY_MESSAGE_STATUS",
+    "sourcePort" : "SQ_sh_ZSX_SVU_GTWY_MESSAGE_STATUS_out0",
+    "target" : "EXP_Set_Defaults",
+    "targetPort" : "EXP_Set_Defaults_in0"
+  }, {
+    "id" : "edge_662",
+    "source" : "sh_ZSX_SVU_GTWY_MESSAGE_STATUS1",
+    "sourcePort" : "sh_ZSX_SVU_GTWY_MESSAGE_STATUS1_out0",
+    "target" : "SQL_Delete_Failed",
+    "targetPort" : "SQL_Delete_Failed_in0"
+  }, {
+    "id" : "edge_663",
+    "source" : "EXP_Set_Defaults",
+    "sourcePort" : "EXP_Set_Defaults_out0",
+    "target" : "FIL_Only_With_Attachments_JOIN_merged",
+    "targetPort" : "FIL_Only_With_Attachments_JOIN_merged_in0"
+  }, {
+    "id" : "edge_664",
+    "source" : "EXP_Ctl_Fields_STG31",
+    "sourcePort" : "EXP_Ctl_Fields_STG31_out0",
+    "target" : "FIL_Only_With_Attachments_JOIN_merged",
+    "targetPort" : "FIL_Only_With_Attachments_JOIN_merged_in1"
+  }, {
+    "id" : "edge_665",
+    "source" : "SQ_sh_ZSX_SVU_GTWY_MESSAGE_STATUS",
+    "sourcePort" : "SQ_sh_ZSX_SVU_GTWY_MESSAGE_STATUS_out0",
+    "target" : "FIL_Only_With_Attachments_JOIN_merged",
+    "targetPort" : "FIL_Only_With_Attachments_JOIN_merged_in2"
+  }, {
+    "id" : "edge_666",
+    "source" : "SOURCE_LKP_Zsx_Svu_Gtwy_Attachment",
+    "sourcePort" : "SOURCE_LKP_Zsx_Svu_Gtwy_Attachment_out0",
+    "target" : "FIL_Only_With_Attachments_JOIN_merged",
+    "targetPort" : "FIL_Only_With_Attachments_JOIN_merged_in3"
+  }, {
+    "id" : "edge_667",
+    "source" : "SQ_sh_ZSX_SVU_GTWY_MESSAGE_STATUS",
+    "sourcePort" : "SQ_sh_ZSX_SVU_GTWY_MESSAGE_STATUS_out0",
+    "target" : "FIL_Only_With_Attachments_JOIN_merged",
+    "targetPort" : "FIL_Only_With_Attachments_JOIN_merged_in4"
+  } ],
+  "component" : "Pipeline"
+}

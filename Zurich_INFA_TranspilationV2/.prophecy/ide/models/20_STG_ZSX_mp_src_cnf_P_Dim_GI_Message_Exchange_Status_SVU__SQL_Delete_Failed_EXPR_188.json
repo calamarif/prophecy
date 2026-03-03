@@ -1,0 +1,129 @@
+{
+  "id" : "20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_Exchange_Status_SVU__SQL_Delete_Failed_EXPR_188",
+  "metainfo" : {
+    "label" : "20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_Exchange_Status_SVU__SQL_Delete_Failed_EXPR_188",
+    "autoLayout" : true,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "entityConfig" : {
+        "materialized" : "ephemeral",
+        "database" : "\"qa_team\"",
+        "schema" : "\"qa_orchestration\"",
+        "type" : "ModelConfig"
+      }
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "SQL_Delete_Failed_EXPR_188_SQL_Delete_Failed_EXPR_188_out0" : {
+      "id" : "SQL_Delete_Failed_EXPR_188_SQL_Delete_Failed_EXPR_188_out0",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "SQL_Delete_Failed_EXPR_188"
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "\nSELECT *\n\nFROM SQL_Delete_Failed_EXPR_188\n\n",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_2",
+          "slug" : "input_port_2"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_2",
+          "slug" : "output_port_2"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "SQL_Delete_Failed_EXPR_188" : {
+      "id" : "SQL_Delete_Failed_EXPR_188",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "SQL_Delete_Failed_EXPR_188",
+        "x" : 420,
+        "y" : 20,
+        "phase" : 1
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "SQLError",
+            "_row_id" : null
+          },
+          "alias" : "ERROR_STRING",
+          "description" : null,
+          "_row_id" : "nq4N54NEGSFtR33WEKJXp"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "SQL_Delete_Failed_EXPR_188_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "SQL_Delete_Failed_EXPR_188_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "SQL_Delete_Failed_SQL_Delete_Failed_out0" : {
+      "id" : "SQL_Delete_Failed_SQL_Delete_Failed_out0",
+      "component" : "SQLStatement",
+      "metadata" : {
+        "label" : "SQL_Delete_Failed"
+      },
+      "properties" : {
+        "fileTabs" : [ {
+          "path" : "output_port_1",
+          "id" : "output_port_1",
+          "language" : "sql",
+          "content" : "\nSELECT *\n\nFROM {{ prophecy_tmp_source('20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_Exchange_Status_SVU', 'SQL_Delete_Failed') }}\n\n"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_1",
+          "slug" : "input_port_1"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_1",
+          "slug" : "output_port_1"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "conn_SQL_Delete_Failed_EXPR_188_SQL_Delete_Failed_EXPR_188_out0_SQL_Delete_Failed_EXPR_188_SQL_Delete_Failed_EXPR_188_out0",
+    "source" : "SQL_Delete_Failed_EXPR_188",
+    "sourcePort" : "SQL_Delete_Failed_EXPR_188_out0",
+    "target" : "SQL_Delete_Failed_EXPR_188_SQL_Delete_Failed_EXPR_188_out0",
+    "targetPort" : "input_port_2",
+    "isWireless" : false
+  }, {
+    "id" : "edge_658",
+    "source" : "SQL_Delete_Failed_SQL_Delete_Failed_out0",
+    "sourcePort" : "output_port_1",
+    "target" : "SQL_Delete_Failed_EXPR_188",
+    "targetPort" : "SQL_Delete_Failed_EXPR_188_in0",
+    "isWireless" : false
+  } ],
+  "component" : "Model"
+}

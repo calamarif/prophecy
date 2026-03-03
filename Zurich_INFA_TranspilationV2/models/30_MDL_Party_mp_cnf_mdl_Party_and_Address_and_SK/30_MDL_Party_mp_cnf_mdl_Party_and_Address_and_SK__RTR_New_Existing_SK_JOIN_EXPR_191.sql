@@ -1,0 +1,236 @@
+{{
+  config({    
+    "materialized": "ephemeral",
+    "database": "qa_team",
+    "schema": "qa_orchestration"
+  })
+}}
+
+WITH EXP_collect_source AS (
+
+  SELECT *
+  
+  FROM {{ ref('30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__EXP_collect_source')}}
+
+),
+
+`30_MDL_Partymp_cnf_mdl_Party_and_Address_and_SK_SOURCE_LKP_Dyn_Dim_Party_SK` AS (
+
+  SELECT *
+  
+  FROM {{
+    prophecy_tmp_source(
+      '30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK', 
+      '30_MDL_Partymp_cnf_mdl_Party_and_Address_and_SK_SOURCE_LKP_Dyn_Dim_Party_SK'
+    )
+  }}
+
+),
+
+EXP_CTL_Columns AS (
+
+  SELECT 
+    CAST(NULL AS string) AS CTL_SRC_SYS_SET_NAME,
+    IN_TRANSACTION_DATE AS IN_TRANSACTION_DATE,
+    CURRENT_TIMESTAMP AS REC_START_DATE_SESSION,
+    IN_TRANSACTION_DATE - INTERVAL -1 MICROSECOND AS REC_END_DATE_CLOSED,
+    current_timestamp() - INTERVAL -1 MICROSECOND AS REC_END_DATE_CLOSED_SESSION,
+    (TO_TIMESTAMP('9999-12-31 23:59:59 ', 'yyyy-MM-dd HH:mm:ss')) AS REC_END_DATE_HIGH,
+    {{ var('PMWorkflowRunId') }} AS CTL_Job_ID,
+    prophecy_sk AS prophecy_sk
+  
+  FROM EXP_collect_source AS in0
+
+),
+
+EXP_Is_Valid_Address AS (
+
+  SELECT 
+    (
+      (DELIVERY_POINT <> '-')
+      OR (
+           ((STREET_NO <> '-') OR (STREET_NAME <> '-'))
+           AND (((SUBURB <> '-') OR (PCODE <> '-')) OR (STATE <> '-'))
+         )
+    ) AS OUT_VALID_ADDRESS_FLAG,
+    prophecy_sk AS prophecy_sk
+  
+  FROM EXP_collect_source AS in0
+
+),
+
+EXP_Set_Default_TFN AS (
+
+  SELECT 
+    (
+      CASE
+        WHEN ((TAX_FILE_NUM IS NULL) OR (CAST((LTRIM((RTRIM(TAX_FILE_NUM)))) AS string) = ''))
+          THEN '-'
+        ELSE TAX_FILE_NUM
+      END
+    ) AS TAX_FILE_NUM_OUT,
+    prophecy_sk AS prophecy_sk
+  
+  FROM EXP_collect_source AS in0
+
+),
+
+EXP_Is_Pref_Party_Data AS (
+
+  SELECT 
+    (
+      CASE
+        WHEN CAST((RLIKE(ADDR_ROLE_CODE, 'PREF\d')) AS BOOLEAN)
+          THEN 1
+        ELSE 0
+      END
+    ) AS IS_PREF_PARTY_DATA,
+    prophecy_sk AS prophecy_sk
+  
+  FROM EXP_collect_source AS in0
+
+),
+
+RTR_New_Existing_SK_JOIN_merged AS (
+
+  SELECT 
+    in1.EMAIL_ADDR AS EMAIL_ADDR,
+    in1.PARTY_ID_TYPE AS PARTY_ID_TYPE,
+    in1.IN_GEO_SEGMENT_CODE AS IN_GEO_SEGMENT_CODE,
+    in1.DELIVERY_CODE AS DELIVERY_CODE,
+    in1.ADDR_ROLE_CODE AS ADDR_ROLE_CODE,
+    in1.FIRST_NAME AS FIRST_NAME,
+    in1.GEO_SOURCE AS GEO_SOURCE,
+    in1.TAX_FILE_NUM AS TAX_FILE_NUM,
+    in5.NewLookupRow AS NewLookupRow,
+    in1.STREET_NO AS STREET_NO,
+    in1.WEB_SITE AS WEB_SITE,
+    in1.STATE AS STATE,
+    in1.CTL_BATCH_ID AS CTL_BATCH_ID,
+    in1.CTL_SRC_SYS_SET_NAME AS CTL_SRC_SYS_SET_NAME,
+    in1.DOB AS DOB,
+    in1.REC_STRT_DATE AS REC_STRT_DATE,
+    in1.JOB_TITLE AS JOB_TITLE,
+    in6.REC_START_DATE_SESSION AS REC_START_DATE_SESSION,
+    in1.IN_PERS_CMPY_FLG AS IN_PERS_CMPY_FLG,
+    in1.INTL_REF_NUM AS INTL_REF_NUM,
+    in1.PARTY_TYPE_CODE AS PARTY_TYPE_CODE,
+    in1.GENDER_FLG AS GENDER_FLG,
+    in1.LCTN AS LCTN,
+    in1.CTL_REC_CRTN_DATE AS CTL_REC_CRTN_DATE,
+    in1.CTL_EXTRACT_ID AS CTL_EXTRACT_ID,
+    in6.REC_END_DATE_HIGH AS REC_END_DATE_HIGH,
+    in1.MOBILE_PHONE_NUM AS MOBILE_PHONE_NUM,
+    in1.STREET_NAME AS STREET_NAME,
+    in0.OUT_VALID_ADDRESS_FLAG AS OUT_VALID_ADDRESS_FLAG,
+    in1.SUBURB AS SUBURB,
+    in1.DELIVERY_POINT AS DELIVERY_POINT,
+    in1.IN_INTL_REF_ID_TYPE AS IN_INTL_REF_ID_TYPE,
+    in1.ACN AS ACN,
+    in6.REC_END_DATE_CLOSED AS REC_END_DATE_CLOSED,
+    in1.PARTY_NUM AS PARTY_NUM,
+    in1.LAST_NAME AS LAST_NAME,
+    in1.IN_INTL_REF_NUM AS IN_INTL_REF_NUM,
+    in1.LOCATION_CODE AS LOCATION_CODE,
+    in0.prophecy_sk AS prophecy_sk,
+    in1.OTHER_NAME AS OTHER_NAME,
+    in1.FAX_NUM AS FAX_NUM,
+    in5.PARTY_ID AS PARTY_ID,
+    in1.ABN_LICENCE_NUM AS ABN_LICENCE_NUM,
+    in1.TITLE AS TITLE,
+    in1.GEO_CODE AS GEO_CODE,
+    in1.INTL_REF_ID_TYPE AS INTL_REF_ID_TYPE,
+    in1.IN_PARTY_NUM AS IN_PARTY_NUM,
+    in1.PERS_CMPY_FLG AS PERS_CMPY_FLG,
+    in1.GEO_SEGMENT_CODE AS GEO_SEGMENT_CODE,
+    in1.ANZSIC_CODE AS ANZSIC_CODE,
+    in3.IS_PREF_PARTY_DATA AS IS_PREF_PARTY_DATA,
+    in2.TAX_FILE_NUM_OUT AS TAX_FILE_NUM_OUT,
+    in1.PRIVATE_PHONE_NUM AS PRIVATE_PHONE_NUM,
+    in1.IN_PARTY_ID_TYPE AS IN_PARTY_ID_TYPE,
+    in1.BUSN_PHONE_NUM AS BUSN_PHONE_NUM,
+    in1.IN_TRANSACTION_DATE AS IN_TRANSACTION_DATE,
+    in1.CTL_JOB_ID AS CTL_JOB_ID,
+    in1.PCODE AS PCODE,
+    in1.CTL_SRC_ROW_ID AS CTL_SRC_ROW_ID
+  
+  FROM EXP_Is_Valid_Address AS in0
+  INNER JOIN EXP_collect_source AS in1
+     ON (in0.prophecy_sk = in1.prophecy_sk)
+  INNER JOIN EXP_Set_Default_TFN AS in2
+     ON (in1.prophecy_sk = in2.prophecy_sk)
+  INNER JOIN EXP_Is_Pref_Party_Data AS in3
+     ON (in2.prophecy_sk = in3.prophecy_sk)
+  INNER JOIN EXP_collect_source AS in4
+     ON (in3.prophecy_sk = in4.prophecy_sk)
+  INNER JOIN `30_MDL_Partymp_cnf_mdl_Party_and_Address_and_SK_SOURCE_LKP_Dyn_Dim_Party_SK` AS in5
+     ON (
+      ((in5.GEO_SEGMENT_CODE = in4.IN_GEO_SEGMENT_CODE) AND (in5.PARTY_NUM = in4.IN_PARTY_NUM))
+      AND (in5.PARTY_ID_TYPE = in4.IN_PARTY_ID_TYPE)
+    )
+  INNER JOIN EXP_CTL_Columns AS in6
+     ON in4.prophecy_sk = in6.prophecy_sk
+
+),
+
+RTR_New_Existing_SK_JOIN_EXPR_191 AS (
+
+  SELECT 
+    OUT_VALID_ADDRESS_FLAG AS OUT_VALID_ADDRESS_FLAG,
+    prophecy_sk AS prophecy_sk,
+    PARTY_TYPE_CODE AS PARTY_TYPE_CODE,
+    STREET_NO AS STREET_NO,
+    ANZSIC_CODE AS ANZSIC_CODE,
+    LCTN AS LCTN,
+    DELIVERY_POINT AS DELIVERY_POINT,
+    CTL_SRC_SYS_SET_NAME AS CTL_SRC_SYS_SET_NAME,
+    EMAIL_ADDR AS EMAIL_ADDR,
+    LOCATION_CODE AS LOCATION_CODE,
+    WEB_SITE AS WEB_SITE,
+    LAST_NAME AS LAST_NAME,
+    TITLE AS TITLE,
+    BUSN_PHONE_NUM AS BUSN_PHONE_NUM,
+    STATE AS STATE,
+    GENDER_FLG AS GENDER_FLG,
+    MOBILE_PHONE_NUM AS MOBILE_PHONE_NUM,
+    CTL_EXTRACT_ID AS CTL_EXTRACT_ID,
+    REC_STRT_DATE AS REC_STRT_DATE,
+    CTL_BATCH_ID AS CTL_BATCH_ID,
+    CTL_SRC_ROW_ID AS CTL_SRC_ROW_ID,
+    GEO_SOURCE AS GEO_SOURCE,
+    PRIVATE_PHONE_NUM AS PRIVATE_PHONE_NUM,
+    DOB AS DOB,
+    FIRST_NAME AS FIRST_NAME,
+    OTHER_NAME AS OTHER_NAME,
+    ACN AS ACN,
+    GEO_CODE AS GEO_CODE,
+    FAX_NUM AS FAX_NUM,
+    STREET_NAME AS STREET_NAME,
+    ABN_LICENCE_NUM AS ABN_LICENCE_NUM,
+    PCODE AS PCODE,
+    SUBURB AS SUBURB,
+    DELIVERY_CODE AS DELIVERY_CODE,
+    ADDR_ROLE_CODE AS ADDR_ROLE_CODE,
+    JOB_TITLE AS JOB_TITLE,
+    TAX_FILE_NUM_OUT AS TAX_FILE_NUM,
+    IS_PREF_PARTY_DATA AS IS_PREF_PARTY_DATA,
+    IN_PARTY_ID_TYPE AS PARTY_ID_TYPE,
+    IN_GEO_SEGMENT_CODE AS GEO_SEGMENT_CODE,
+    IN_PARTY_NUM AS PARTY_NUM,
+    IN_INTL_REF_ID_TYPE AS INTN_REF_ID_TYPE,
+    PARTY_ID AS PARTY_ID,
+    IN_PERS_CMPY_FLG AS PERS_CMPY_FLG,
+    NewLookupRow AS NewLookupRow_SK,
+    IN_INTL_REF_NUM AS INTNL_REF_NUM,
+    REC_END_DATE_HIGH AS REC_END_DATE_HIGH,
+    REC_END_DATE_CLOSED AS REC_END_DATE_CLOSED,
+    CTL_Job_ID AS CTL_JOB_ID,
+    REC_START_DATE_SESSION AS CTL_REC_CRTN_DATE
+  
+  FROM RTR_New_Existing_SK_JOIN_merged AS in0
+
+)
+
+SELECT *
+
+FROM RTR_New_Existing_SK_JOIN_EXPR_191

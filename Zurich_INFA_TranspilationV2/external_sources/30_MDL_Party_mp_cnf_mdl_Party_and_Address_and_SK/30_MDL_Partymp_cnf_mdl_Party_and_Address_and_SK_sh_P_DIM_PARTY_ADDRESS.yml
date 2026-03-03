@@ -1,0 +1,132 @@
+entityType: ""
+providerType: "Databricks"
+fields:
+- name: "CTL_REC_CRTN_DATE"
+  dataType:
+    type: "Timestamp"
+- name: "DOB"
+  dataType:
+    type: "Timestamp"
+- name: "CTL_SRC_ROW_ID"
+  dataType:
+    type: "Integer"
+- name: "JOB_TITLE"
+  dataType:
+    type: "String"
+- name: "GEO_SOURCE"
+  dataType:
+    type: "String"
+- name: "STREET_NO"
+  dataType:
+    type: "String"
+- name: "STREET_NAME"
+  dataType:
+    type: "String"
+- name: "ADDR_ROLE_CODE"
+  dataType:
+    type: "String"
+- name: "INTL_REF_ID_TYPE"
+  dataType:
+    type: "String"
+- name: "OTHER_NAME"
+  dataType:
+    type: "String"
+- name: "PRIVATE_PHONE_NUM"
+  dataType:
+    type: "String"
+- name: "CTL_JOB_ID"
+  dataType:
+    type: "Integer"
+- name: "LCTN"
+  dataType:
+    type: "String"
+- name: "SUBURB"
+  dataType:
+    type: "String"
+- name: "FIRST_NAME"
+  dataType:
+    type: "String"
+- name: "LOCATION_CODE"
+  dataType:
+    type: "String"
+- name: "GENDER_FLG"
+  dataType:
+    type: "String"
+- name: "GEO_SEGMENT_CODE"
+  dataType:
+    type: "String"
+- name: "FAX_NUM"
+  dataType:
+    type: "String"
+- name: "LAST_NAME"
+  dataType:
+    type: "String"
+- name: "DELIVERY_POINT"
+  dataType:
+    type: "String"
+- name: "TITLE"
+  dataType:
+    type: "String"
+- name: "CTL_SRC_SYS_SET_NAME"
+  dataType:
+    type: "String"
+- name: "WEB_SITE"
+  dataType:
+    type: "String"
+- name: "PERS_CMPY_FLG"
+  dataType:
+    type: "String"
+- name: "MOBILE_PHONE_NUM"
+  dataType:
+    type: "String"
+- name: "DELIVERY_CODE"
+  dataType:
+    type: "String"
+- name: "ANZSIC_CODE"
+  dataType:
+    type: "String"
+- name: "CTL_BATCH_ID"
+  dataType:
+    type: "Integer"
+- name: "ACN"
+  dataType:
+    type: "String"
+- name: "EMAIL_ADDR"
+  dataType:
+    type: "String"
+- name: "TAX_FILE_NUM"
+  dataType:
+    type: "String"
+- name: "BUSN_PHONE_NUM"
+  dataType:
+    type: "String"
+- name: "REC_STRT_DATE"
+  dataType:
+    type: "Timestamp"
+- name: "ABN_LICENCE_NUM"
+  dataType:
+    type: "String"
+- name: "PCODE"
+  dataType:
+    type: "String"
+- name: "INTL_REF_NUM"
+  dataType:
+    type: "String"
+- name: "PARTY_NUM"
+  dataType:
+    type: "String"
+- name: "PARTY_TYPE_CODE"
+  dataType:
+    type: "String"
+- name: "GEO_CODE"
+  dataType:
+    type: "String"
+- name: "PARTY_ID_TYPE"
+  dataType:
+    type: "String"
+- name: "CTL_EXTRACT_ID"
+  dataType:
+    type: "Integer"
+- name: "STATE"
+  dataType:
+    type: "String"

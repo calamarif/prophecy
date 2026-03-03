@@ -1,0 +1,161 @@
+{
+  "id" : "40_DM_ORAC_mp_data_refresh_master__DUMMY_TARGET_EXP",
+  "metainfo" : {
+    "label" : "40_DM_ORAC_mp_data_refresh_master__DUMMY_TARGET_EXP",
+    "autoLayout" : true,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "entityConfig" : {
+        "materialized" : "ephemeral",
+        "database" : "\"qa_team\"",
+        "schema" : "\"qa_orchestration\"",
+        "type" : "ModelConfig"
+      }
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "DUMMY_TARGET_EXP_DUMMY_TARGET_EXP_out0" : {
+      "id" : "DUMMY_TARGET_EXP_DUMMY_TARGET_EXP_out0",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "DUMMY_TARGET_EXP"
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "\nSELECT *\n\nFROM DUMMY_TARGET_EXP\n\n",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_3",
+          "slug" : "input_port_3"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_3",
+          "slug" : "output_port_3"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "DUMMY_TARGET_EXP" : {
+      "id" : "DUMMY_TARGET_EXP",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "DUMMY_TARGET_EXP",
+        "x" : 620,
+        "y" : 20,
+        "phase" : 1
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "RETURN_VALUE",
+            "_row_id" : null
+          },
+          "alias" : "NEWFIELD",
+          "description" : null,
+          "_row_id" : "3dq5qGSAn63hQAjgz_QfE"
+        }, {
+          "expression" : {
+            "expression" : "CAST(NULL AS string)",
+            "_row_id" : null
+          },
+          "alias" : "NEWFIELD1",
+          "description" : null,
+          "_row_id" : "KjP7FwFdFppmZeEGjUjls"
+        }, {
+          "expression" : {
+            "expression" : "CAST(NULL AS string)",
+            "_row_id" : null
+          },
+          "alias" : "NEWFIELD2",
+          "description" : null,
+          "_row_id" : "IM7gQMcmZWafHNFVdJMzE"
+        }, {
+          "expression" : {
+            "expression" : "CAST(NULL AS string)",
+            "_row_id" : null
+          },
+          "alias" : "NEWFIELD3",
+          "description" : null,
+          "_row_id" : "O_ymU1foXLC3q70s6atXC"
+        }, {
+          "expression" : {
+            "expression" : "CAST(NULL AS string)",
+            "_row_id" : null
+          },
+          "alias" : "NEWFIELD4",
+          "description" : null,
+          "_row_id" : "cAa7siUDGxDtsFLYC2V4s"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "DUMMY_TARGET_EXP_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "DUMMY_TARGET_EXP_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "execute_data_refresh_event_execute_data_refresh_event_out0" : {
+      "id" : "execute_data_refresh_event_execute_data_refresh_event_out0",
+      "component" : "SQLStatement",
+      "metadata" : {
+        "label" : "execute_data_refresh_event"
+      },
+      "properties" : {
+        "fileTabs" : [ {
+          "path" : "output_port_2",
+          "id" : "output_port_2",
+          "language" : "sql",
+          "content" : "\nSELECT *\n\nFROM {{ prophecy_tmp_source('40_DM_ORAC_mp_data_refresh_master', 'execute_data_refresh_event') }}\n\n"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_2",
+          "slug" : "input_port_2"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_2",
+          "slug" : "output_port_2"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "conn_DUMMY_TARGET_EXP_DUMMY_TARGET_EXP_out0_DUMMY_TARGET_EXP_DUMMY_TARGET_EXP_out0",
+    "source" : "DUMMY_TARGET_EXP",
+    "sourcePort" : "DUMMY_TARGET_EXP_out0",
+    "target" : "DUMMY_TARGET_EXP_DUMMY_TARGET_EXP_out0",
+    "targetPort" : "input_port_3",
+    "isWireless" : false
+  }, {
+    "id" : "edge_942",
+    "source" : "execute_data_refresh_event_execute_data_refresh_event_out0",
+    "sourcePort" : "output_port_2",
+    "target" : "DUMMY_TARGET_EXP",
+    "targetPort" : "DUMMY_TARGET_EXP_in0",
+    "isWireless" : false
+  } ],
+  "component" : "Model"
+}

@@ -1,0 +1,9 @@
+---
+version: 2
+models:
+- name: "20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_Exchange_Status_SVU__SQL_Delete_Failed_EXPR_188"
+  tags:
+  - "prophecy_temp"
+- name: "20_STG_ZSX_mp_src_cnf_P_Dim_GI_Message_Exchange_Status_SVU__sh_P_DIM_GI_MESSAGE_EXCHANGE_STATUS"
+  tags:
+  - "prophecy_temp"

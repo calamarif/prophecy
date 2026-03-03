@@ -1,0 +1,27 @@
+---
+version: 2
+models:
+- name: "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__EXP_Flag_New_Batch"
+  tags:
+  - "prophecy_temp"
+- name: "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__EXP_collect_source"
+  tags:
+  - "prophecy_temp"
+- name: "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__RTR_New_Existing_SK_EXPR_All"
+  tags:
+  - "prophecy_temp"
+- name: "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__RTR_New_Existing_SK_JOIN_EXPR_191"
+  tags:
+  - "prophecy_temp"
+- name: "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__SQL_Truncate_EXPR_201"
+  tags:
+  - "prophecy_temp"
+- name: "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY"
+  tags:
+  - "prophecy_temp"
+- name: "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_ADDRESS"
+  tags:
+  - "prophecy_temp"
+- name: "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__sh_DIM_PARTY_SK"
+  tags:
+  - "prophecy_temp"

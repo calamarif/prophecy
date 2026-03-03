@@ -1,0 +1,6 @@
+---
+version: 2
+models:
+- name: "35_SDM_mp_mdl_sdm_Dim_GI_Translation__sh_DIM_GI_TRANSLATION"
+  tags:
+  - "prophecy_temp"

@@ -1,0 +1,12 @@
+entityType: ""
+providerType: "Databricks"
+fields:
+- name: "BRANCH_ID"
+  dataType:
+    type: "Integer"
+- name: "SUBSEGMENT_ID"
+  dataType:
+    type: "Integer"
+- name: "_ORDER"
+  dataType:
+    type: "Integer"
