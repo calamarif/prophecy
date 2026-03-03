@@ -1,6 +1,6 @@
 name: zurich
 description: ''
-version: 0.0.1
+version: 0.0.2
 author: avpreet@prophecy.io
 language: sql
 buildSystem: ''
