@@ -1,0 +1,1799 @@
+{
+  "id" : "40_DM_ORAC_mp_s_dim_claim_temp",
+  "metainfo" : {
+    "label" : "40_DM_ORAC_mp_s_dim_claim_temp",
+    "autoLayout" : false,
+    "version" : 1,
+    "configuration" : {
+      "schema" : {
+        "type" : "record",
+        "fields" : [ {
+          "name" : "jdbcUrl",
+          "kind" : {
+            "type" : "string",
+            "value" : "''"
+          }
+        }, {
+          "name" : "username",
+          "kind" : {
+            "type" : "string",
+            "value" : "''"
+          }
+        }, {
+          "name" : "password",
+          "kind" : {
+            "type" : "string",
+            "value" : "''"
+          }
+        }, {
+          "name" : "SCHEMA",
+          "kind" : {
+            "type" : "string",
+            "value" : "'SCHEMA'"
+          }
+        } ]
+      }
+    },
+    "isTranspiledPipeline" : false,
+    "publishDiagnosticMetrics" : true,
+    "transpilerType" : "informatica",
+    "processesVsModelFiles" : {
+      "Srt_Claimant_EXPR_357" : "models/40_DM_ORAC_mp_s_dim_claim_temp/40_DM_ORAC_mp_s_dim_claim_temp__Dim_Claim_Temp.sql",
+      "40_DM_ORACmp_s_dim_claim_temp_SQ_V_Dim_Claim_Temp_Claimant_SQ_V_Dim_Claim_Temp_Claimant_out0" : "models/40_DM_ORAC_mp_s_dim_claim_temp/40_DM_ORAC_mp_s_dim_claim_temp__Dim_Claim_Temp.sql",
+      "EXP_DATATYPE_CONVERSION1" : "models/40_DM_ORAC_mp_s_dim_claim_temp/40_DM_ORAC_mp_s_dim_claim_temp__Dim_Claim_Temp.sql",
+      "40_DM_ORACmp_s_dim_claim_temp_SQ_V_Dim_Claim_Temp_CA_SQ_V_Dim_Claim_Temp_CA_out0" : "models/40_DM_ORAC_mp_s_dim_claim_temp/40_DM_ORAC_mp_s_dim_claim_temp__Dim_Claim_Temp.sql",
+      "SQ_V_Dim_Claim_Temp_WC_MT_LIA_EXPR_358" : "models/40_DM_ORAC_mp_s_dim_claim_temp/40_DM_ORAC_mp_s_dim_claim_temp__Dim_Claim_Temp.sql",
+      "40_DM_ORACmp_s_dim_claim_temp_SQ_V_Dim_Claim_Temp_WC_MT_LIA_SQ_V_Dim_Claim_Temp_WC_MT_LIA_out0" : "models/40_DM_ORAC_mp_s_dim_claim_temp/40_DM_ORAC_mp_s_dim_claim_temp__Dim_Claim_Temp.sql",
+      "SQ_V_Dim_Claim_Temp_CA_EXPR_360" : "models/40_DM_ORAC_mp_s_dim_claim_temp/40_DM_ORAC_mp_s_dim_claim_temp__Dim_Claim_Temp.sql",
+      "Dim_Claim_Temp" : "models/40_DM_ORAC_mp_s_dim_claim_temp/40_DM_ORAC_mp_s_dim_claim_temp__Dim_Claim_Temp.sql",
+      "Jnr_Claim_CA_WC_LIA_Claimant" : "models/40_DM_ORAC_mp_s_dim_claim_temp/40_DM_ORAC_mp_s_dim_claim_temp__Dim_Claim_Temp.sql",
+      "Jnr_Claim_CA_WC_LIA" : "models/40_DM_ORAC_mp_s_dim_claim_temp/40_DM_ORAC_mp_s_dim_claim_temp__Dim_Claim_Temp.sql"
+    }
+  },
+  "processes" : {
+    "Dim_Claim_Temp" : {
+      "id" : "Dim_Claim_Temp",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "40_DM_ORAC_mp_s_dim_claim_temp__Dim_Claim_Temp",
+        "phase" : 1
+      },
+      "properties" : {
+        "modelName" : "40_DM_ORAC_mp_s_dim_claim_temp__Dim_Claim_Temp"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "Dim_Claim_Temp", "EXP_DATATYPE_CONVERSION1", "Jnr_Claim_CA_WC_LIA_Claimant", "Srt_Claimant_EXPR_357", "40_DM_ORACmp_s_dim_claim_temp_SQ_V_Dim_Claim_Temp_Claimant_SQ_V_Dim_Claim_Temp_Claimant_out0", "Jnr_Claim_CA_WC_LIA", "SQ_V_Dim_Claim_Temp_WC_MT_LIA_EXPR_358", "40_DM_ORACmp_s_dim_claim_temp_SQ_V_Dim_Claim_Temp_WC_MT_LIA_SQ_V_Dim_Claim_Temp_WC_MT_LIA_out0", "SQ_V_Dim_Claim_Temp_CA_EXPR_360", "40_DM_ORACmp_s_dim_claim_temp_SQ_V_Dim_Claim_Temp_CA_SQ_V_Dim_Claim_Temp_CA_out0" ],
+        "type" : "table",
+        "isTemporaryTable" : false,
+        "lastNodeProcessIds" : [ "Dim_Claim_Temp" ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "40_DM_ORAC_mp_s_dim_claim_temp__Dim_Claim_Temp_in_0",
+          "slug" : "in_0"
+        }, {
+          "id" : "40_DM_ORAC_mp_s_dim_claim_temp__Dim_Claim_Temp_in_1",
+          "slug" : "in_1"
+        }, {
+          "id" : "40_DM_ORAC_mp_s_dim_claim_temp__Dim_Claim_Temp_in_2",
+          "slug" : "in_2"
+        } ],
+        "outputs" : [ {
+          "id" : "40_DM_ORAC_mp_s_dim_claim_temp__Dim_Claim_Temp_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "SQ_V_Dim_Claim_Temp_WC_MT_LIA" : {
+      "id" : "SQ_V_Dim_Claim_Temp_WC_MT_LIA",
+      "component" : "OrchestrationSource",
+      "kind" : "OracleSource",
+      "metadata" : {
+        "label" : "40_DM_ORACmp_s_dim_claim_temp_SQ_V_Dim_Claim_Temp_WC_MT_LIA",
+        "x" : 20,
+        "y" : 220,
+        "phase" : 1
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "oracle",
+          "id" : "transpiled_connection",
+          "properties" : {
+            "database" : "dbName",
+            "server" : "$$jdbcUrl",
+            "username" : "$$username",
+            "id" : "transpiled_connection",
+            "port" : "1521",
+            "password" : {
+              "kind" : "prophecy",
+              "properties" : {
+                "name" : "transpiled_secret",
+                "value" : "transpiled_secret"
+              },
+              "subKind" : "text",
+              "type" : "secret"
+            }
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "pathSelection" : "warehouseQuery",
+          "tableFullName" : {
+            "schema" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "config",
+                  "properties" : {
+                    "kind" : "prophecy",
+                    "name" : "SCHEMA"
+                  }
+                } ]
+              }
+            },
+            "name" : "DEV_ORAC"
+          },
+          "warehouseQuery" : {
+            "query" : "SELECT \r \t   ca.CLAIM_HK AS                                               Claim_Key\r \t , lia.Claim_Liability_Personal_Injury_YN\r \t , isnull(mot.Claim_Motor_Division_Name, wc.Claim_WC_Division_Name) AS Claim_Division_Name\r \t , mot.Claim_Motor_Fault_Code AS                                    Claim_Motor_Fault_Key\r \t , mot.Claim_Motor_Vehicle_Class_Code AS                            Claim_Motor_Vehicle_Class_Key\r \t , mot.Claim_Motor_Bodily_Injury_YN\r \t , mot.Claim_Motor_Vehicle_Loss_Day_of_Week_Code\r \t , mot.Claim_Motor_Vehicle_Loss_Time_Number\r \t , mot.Claim_Motor_Cost_Centre_Name\r \t , mot.Claim_Motor_Driver_Age_Years_Number\r \t , mot.Claim_Motor_Vehicle_Finance_YN\r \t , mot.Claim_Motor_Vehicle_Rego_Code\r \t , mot.Claim_Motor_Vehicle_Total_Loss_YN\r \t , mot.Claim_Motor_Vehicle_Description\r \t , mot.Claim_Motor_Vehicle_Usage_Code\r \t , mot.Claim_Motor_Driver_Licensed_Years_Number\r \t , mot.Claim_Motor_Vehicle_Manufactured_Year_Number\r \t , mot.Claim_Motor_Driver_Gender_Code\r \t , wc.Claim_WC_Worker_Suburb_Name\r \t , wc.Claim_WC_Worker_State_Code\r \t , wc.Claim_WC_Worker_Postcode\r \t , wc.Claim_WC_Gender_Code\r \t , wc.Claim_WC_Birth_Date_Key\r \t , wc.Claim_WC_Marital_Status_Code\r \t , wc.Claim_WC_Full_Time_Part_Time_Code\r \t , wc.Claim_WC_Hourly_Rate_First_13_Weeks_Amount\r \t , wc.Claim_WC_Hourly_Rate_Thereafter_Amount\r \t , wc.Claim_WC_Worker_Weekly_Hours_Rate\r \t , wc.Claim_WC_Worker_Weekly_Hours_Time\r \t , wc.Claim_WC_Occupation_Name\r \t , wc.Claim_WC_Classification_Code\r \t , wc.Claim_WC_Body_Location_Code AS                               Claim_WC_Body_Location_Key\r \t , wc.Claim_WC_Agency_of_Accident_Code AS                          Claim_WC_Agency_of_Accident_Key\r \t , wc.Claim_WC_Breakdown_Agency_Code AS                            Claim_WC_Breakdown_Agency_Key\r \t , wc.Claim_WC_Ceased_Work_Date_Key\r \t , wc.Claim_WC_Common_Law_Raised_Date_Key\r \t , wc.Claim_WC_Common_Law_Outcome_Code\r \t , wc.Claim_WC_Common_Law_Severity_Code\r \t , wc.Claim_WC_Medical_Certificate_Last_Date_Key\r \t , wc.Claim_WC_Loss_Day_of_Week_Code\r \t , wc.Claim_WC_Estimated_Return_Date_Key\r \t , wc.Claim_WC_IMA_Date_Key\r \t , wc.Claim_WC_IMA_Reviewed_YN\r \t , wc.Claim_WC_Injury_Mechanism_Code AS                            Claim_WC_Injury_Mechanism_Key\r \t , wc.Claim_WC_Injury_Nature_Code AS                               Claim_WC_Injury_Nature_Key\r \t , wc.Claim_WC_Fitness_Level_Code\r \t , wc.Claim_WC_Lost_Hours_Number\r \t , wc.Claim_WC_Lost_Minutes_Number\r \t , wc.Claim_WC_Injury_Most_Serious_Description\r \t , wc.Claim_WC_Injury_Object_Involved_Name\r \t , wc.Claim_WC_Work_Resumed_Date_Key\r \t , wc.Claim_WC_Loss_Time_Number\r \t , wc.Claim_WC_Department_Name\r \t , wc.Claim_WC_Worker_Name\r \t , wc.Claim_WC_ASCO_Code AS                                        ASCO_Key\r \t , wc.Industry_Class_ANZSIC_2006_Code AS                        Industry_Class_ANZSIC_2006_Key\r \t , lia.Claim_Liability_Law_Costs_YN\r \t , lia.Claim_Liability_Other_Damages_YN\r \t , lia.Claim_Liability_Cause_Code\r \t , lia.Claim_Liability_Severity_Code\r \t , lia.Claim_Liability_Litigation_Status_Code\r \t , lia.Claim_Liability_Property_Damage_YN\r \t , lia.Claim_Liability_Financial_Loss_YN\r \t , wc.Claim_WC_Received_Date_by_Employer /*BI-1517*/\r \t , wc.Claim_WC_Work_Status /*BI-1517*/\r \t , wc.Claim_WC_Worker_RTW_Program\r \t , wc.Claim_WC_Worker_RTW_Goals\r \t , wc.DUTY_STATUS_WM /*GBR-1201*/ as                            Claim_Duty_Status\r    FROM \r \t   BDV.V_S_CLAIM AS ca\r \t   LEFT JOIN\r \t\t  BDV.V_S_CLAIM_MOTOR AS mot\r \t   ON mot.CLAIM_HK = ca.CLAIM_HK\r \t   LEFT JOIN\r \t\t   BDV.V_S_CLAIM_WC AS wc\r \t   ON wc.CLAIM_HK = ca.CLAIM_HK\r \t   LEFT JOIN\r \t\t   BDV.V_S_CLAIM_LIABILITY AS lia\r \t   ON lia.CLAIM_HK = ca.CLAIM_HK\r order by 1"
+          }
+        },
+        "format" : {
+          "kind" : "oracle",
+          "category" : "table",
+          "properties" : {
+            "kind" : "oracle",
+            "schema" : {
+              "entityType" : "",
+              "providerType" : "Databricks",
+              "fields" : [ {
+                "name" : "Claim_WC_Medical_Certificate_Last_Date_Key",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_Liability_Other_Damages_YN",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_WC_Estimated_Return_Date_Key",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_Motor_Vehicle_Rego_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_WC_Fitness_Level_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_WC_Classification_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_WC_Worker_Weekly_Hours_Rate",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_WC_Received_Date_by_Employer",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "Claim_WC_Worker_Weekly_Hours_Time",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_WC_Occupation_Name",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Liability_Law_Costs_YN",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_WC_Injury_Object_Involved_Name",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "ASCO_Key",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Motor_Vehicle_Class_Key",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_WC_Body_Location_Key",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_WC_Work_Status",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Liability_Cause_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Liability_Financial_Loss_YN",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_WC_Department_Name",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_WC_IMA_Date_Key",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_WC_Loss_Time_Number",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_Motor_Vehicle_Loss_Time_Number",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_Motor_Driver_Gender_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Motor_Fault_Key",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_Motor_Bodily_Injury_YN",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_WC_Agency_of_Accident_Key",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_Motor_Vehicle_Description",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Liability_Litigation_Status_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_WC_Worker_Postcode",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_WC_Ceased_Work_Date_Key",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_WC_Birth_Date_Key",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_WC_Injury_Mechanism_Key",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_WC_IMA_Reviewed_YN",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_WC_Worker_State_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Liability_Property_Damage_YN",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Motor_Driver_Licensed_Years_Number",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_Motor_Driver_Age_Years_Number",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_WC_Marital_Status_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Liability_Severity_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_WC_Full_Time_Part_Time_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_WC_Injury_Most_Serious_Description",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Industry_Class_ANZSIC_2006_Key",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Motor_Vehicle_Loss_Day_of_Week_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Motor_Cost_Centre_Name",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_WC_Worker_RTW_Goals",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Key",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_WC_Lost_Minutes_Number",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_WC_Worker_Suburb_Name",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_WC_Worker_RTW_Program",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Motor_Vehicle_Usage_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Liability_Personal_Injury_YN",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Motor_Vehicle_Finance_YN",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_WC_Lost_Hours_Number",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_WC_Hourly_Rate_First_13_Weeks_Amount",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_WC_Common_Law_Raised_Date_Key",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_WC_Common_Law_Severity_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_WC_Work_Resumed_Date_Key",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_WC_Hourly_Rate_Thereafter_Amount",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_Division_Name",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_WC_Loss_Day_of_Week_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_WC_Common_Law_Outcome_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_WC_Worker_Name",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Duty_Status",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_WC_Injury_Nature_Key",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Motor_Vehicle_Manufactured_Year_Number",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_WC_Breakdown_Agency_Key",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_Motor_Vehicle_Total_Loss_YN",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_WC_Gender_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              } ]
+            }
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "SQ_V_Dim_Claim_Temp_WC_MT_LIA_out0",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "Claim_WC_Medical_Certificate_Last_Date_Key",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_Liability_Other_Damages_YN",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_WC_Estimated_Return_Date_Key",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_Motor_Vehicle_Rego_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_WC_Fitness_Level_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_WC_Classification_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_WC_Worker_Weekly_Hours_Rate",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_WC_Received_Date_by_Employer",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "Claim_WC_Worker_Weekly_Hours_Time",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_WC_Occupation_Name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Liability_Law_Costs_YN",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_WC_Injury_Object_Involved_Name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ASCO_Key",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Motor_Vehicle_Class_Key",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_WC_Body_Location_Key",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_WC_Work_Status",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Liability_Cause_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Liability_Financial_Loss_YN",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_WC_Department_Name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_WC_IMA_Date_Key",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_WC_Loss_Time_Number",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_Motor_Vehicle_Loss_Time_Number",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_Motor_Driver_Gender_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Motor_Fault_Key",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_Motor_Bodily_Injury_YN",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_WC_Agency_of_Accident_Key",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_Motor_Vehicle_Description",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Liability_Litigation_Status_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_WC_Worker_Postcode",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_WC_Ceased_Work_Date_Key",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_WC_Birth_Date_Key",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_WC_Injury_Mechanism_Key",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_WC_IMA_Reviewed_YN",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_WC_Worker_State_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Liability_Property_Damage_YN",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Motor_Driver_Licensed_Years_Number",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_Motor_Driver_Age_Years_Number",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_WC_Marital_Status_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Liability_Severity_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_WC_Full_Time_Part_Time_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_WC_Injury_Most_Serious_Description",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Industry_Class_ANZSIC_2006_Key",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Motor_Vehicle_Loss_Day_of_Week_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Motor_Cost_Centre_Name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_WC_Worker_RTW_Goals",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Key",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_WC_Lost_Minutes_Number",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_WC_Worker_Suburb_Name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_WC_Worker_RTW_Program",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Motor_Vehicle_Usage_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Liability_Personal_Injury_YN",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Motor_Vehicle_Finance_YN",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_WC_Lost_Hours_Number",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_WC_Hourly_Rate_First_13_Weeks_Amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_WC_Common_Law_Raised_Date_Key",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_WC_Common_Law_Severity_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_WC_Work_Resumed_Date_Key",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_WC_Hourly_Rate_Thereafter_Amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_Division_Name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_WC_Loss_Day_of_Week_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_WC_Common_Law_Outcome_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_WC_Worker_Name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Duty_Status",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_WC_Injury_Nature_Key",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Motor_Vehicle_Manufactured_Year_Number",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_WC_Breakdown_Agency_Key",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_Motor_Vehicle_Total_Loss_YN",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_WC_Gender_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : true
+      }
+    },
+    "SQ_V_Dim_Claim_Temp_Claimant" : {
+      "id" : "SQ_V_Dim_Claim_Temp_Claimant",
+      "component" : "OrchestrationSource",
+      "kind" : "OracleSource",
+      "metadata" : {
+        "label" : "40_DM_ORACmp_s_dim_claim_temp_SQ_V_Dim_Claim_Temp_Claimant",
+        "x" : 220,
+        "y" : 20,
+        "phase" : 1
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "oracle",
+          "id" : "transpiled_connection",
+          "properties" : {
+            "database" : "dbName",
+            "server" : "$$jdbcUrl",
+            "username" : "$$username",
+            "id" : "transpiled_connection",
+            "port" : "1521",
+            "password" : {
+              "kind" : "prophecy",
+              "properties" : {
+                "name" : "transpiled_secret",
+                "value" : "transpiled_secret"
+              },
+              "subKind" : "text",
+              "type" : "secret"
+            }
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "pathSelection" : "warehouseQuery",
+          "tableFullName" : {
+            "schema" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "config",
+                  "properties" : {
+                    "kind" : "prophecy",
+                    "name" : "SCHEMA"
+                  }
+                } ]
+              }
+            },
+            "name" : "DEV_ORAC"
+          },
+          "warehouseQuery" : {
+            "query" : "SELECT CLAIM_HK AS Claim_Key, Claimant_Name, Claim_Motor_Driver_Name, Claim_Motor_Driver_Names_Text FROM BDV.V_S_CLAIMANT ORDER BY Claim_Key"
+          }
+        },
+        "format" : {
+          "kind" : "oracle",
+          "category" : "table",
+          "properties" : {
+            "kind" : "oracle",
+            "schema" : {
+              "entityType" : "",
+              "providerType" : "Databricks",
+              "fields" : [ {
+                "name" : "Claim_Key",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claimant_Name",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Motor_Driver_Name",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Motor_Driver_Names_Text",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              } ]
+            }
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "SQ_V_Dim_Claim_Temp_Claimant_out0",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "Claim_Key",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claimant_Name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Motor_Driver_Name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Motor_Driver_Names_Text",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : true
+      }
+    },
+    "SQ_V_Dim_Claim_Temp_CA" : {
+      "id" : "SQ_V_Dim_Claim_Temp_CA",
+      "component" : "OrchestrationSource",
+      "kind" : "OracleSource",
+      "metadata" : {
+        "label" : "40_DM_ORACmp_s_dim_claim_temp_SQ_V_Dim_Claim_Temp_CA",
+        "x" : 20,
+        "y" : 420,
+        "phase" : 1
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "oracle",
+          "id" : "transpiled_connection",
+          "properties" : {
+            "database" : "dbName",
+            "server" : "$$jdbcUrl",
+            "username" : "$$username",
+            "id" : "transpiled_connection",
+            "port" : "1521",
+            "password" : {
+              "kind" : "prophecy",
+              "properties" : {
+                "name" : "transpiled_secret",
+                "value" : "transpiled_secret"
+              },
+              "subKind" : "text",
+              "type" : "secret"
+            }
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "pathSelection" : "warehouseQuery",
+          "tableFullName" : {
+            "schema" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "config",
+                  "properties" : {
+                    "kind" : "prophecy",
+                    "name" : "SCHEMA"
+                  }
+                } ]
+              }
+            },
+            "name" : "DEV_ORAC"
+          },
+          "warehouseQuery" : {
+            "query" : "SELECT \r   ca.CLAIM_HK AS Claim_Key, \r   ca.Claim_Number, \r   ca.Claim_Cause_of_Loss_Description, \r   ca.Claim_Postcode, \r   ca.Claim_UX_Type_Code, \r   ca.Claim_UX_Arrangement_Description, \r   ca.Claim_Salvage_YN, \r   ca.Claim_Recovery_YN, \r   ca.Company_Code AS Company_Key, \r   ca.Claim_Branch_Code AS Claim_Branch_Key, \r   ca.Premium_Class_Code AS Premium_Class_Key, \r   ca.Product_Code AS Product_Key, \r   glob.Global_LoB_Code AS Global_LoB_Key, \r   ca.Claim_Reported_Date_Key, \r   ca.Claim_Expiry_Date_Key, \r   ca.Claim_Loss_Date_Key, \r   ca.Claim_Indemnity_Decision_Code AS Claim_Indemnity_Decision_Key, \r   ca.Claim_Indemnity_Decision_Date_Key, \r   ca.Claim_Status_Date_Key, \r   ca.Claim_Solicitor_Code AS Claim_Solicitor_Key, \r   ca.Claim_Assessor_Code AS Claim_Assessor_Key, \r   ca.Claim_Investigator_Code AS Claim_Investigator_Key, \r   ica.Catastrophe_Event_ICA_Code AS Catastrophe_Event_ICA_Key, \r   ca.Claim_Handler_Code AS Claim_Handler_Key, \r   pol.POLICY_HK AS Policy_Key, \r   ca.Claim_Portfolio_Code AS Claim_Portfolio_Key, \r   rsk.Risk_Id AS Risk_Key, \r   ca.Claim_Reopened_YN, \r   ca.Claim_Notified_Date_Key, \r   lreg.Location_State_Code AS Claim_State_Code, \r   cty.Claim_Type_Code AS Claim_Type_Key, \r   ca.Claim_Status_Code AS Claim_Status_Key, \r   ca.Risk_Class_Code AS Risk_Class_Key, \r   pol.PARTY_BROKER_HK AS Broker_Account_Key, \r   pol.PARTY_CLIENT_HK AS Client_Key, \r   ca.Policy_Incep_Date_Key, \r   ca.Policy_Period_Name, \r   ca.Claim_Closed_Date_Key, \r   ca.Claim_Non_Standard_Type_Code AS Claim_Non_Standard_Type_Key, \r   trn.Claim_Transaction_Date_Key AS Claim_Reopened_Last_Date_Key, \r   ca.Claim_Date_Accepted_Key, \r   ca.Claim_Date_Rejected_Key, \r   wcanz.Industry_Class_ANZSIC_93_Code AS Industry_Class_ANZSIC_93_Key, \r   ca.Claim_Liability_Status_Code, \r   ca.Claim_Liability_Date_Key, \r   ca.Claim_Agg_Arrangement_Type_Key, \r   ca.Claim_Agg_Arrangement_Key, \r   lreg.REF_HK AS Claim_Loss_Location_Key, \r   ca.Claim_BGC_Status_Code, \r   cld.Claim_Loss_Date_Difference_Days_Number, \r   cld.Claim_Loss_Date_Modified_Date_Key, \r   clds.EXT_SANC_SANC_KEY AS Claim_Loss_Date_Modified_User_Key, \r   cld.Claim_Loss_Date_Modified_YN, \r   cld.Claim_Loss_Orig_Date_Key, \r   rar.Claim_Recovery_Abandonment_Reason_Code AS Claim_Recovery_Abandonment_Reason_Key, \r   rar.Claim_Recovery_Changed_YN, \r   rar.Claim_Recovery_Changed_Date_Key, \r   ca.Claim_Updated_Datetime, \r   ca.Claim_Updated_Date_Key, \r   ca.Claim_Updated_User_Code AS Claim_Updated_User_Key, \r   ca.Claim_Duplicate_Status_Code AS Claim_Duplicate_Status_Key, \r   ca.Claim_Fraud_Type_Code AS Claim_Fraud_Type_Key, \r   cldt.Claim_Duplicate_Loss_Date_Tolerance_Number AS Claim_Duplicate_Loss_Days_Tolerance_Key, \r   cldt.Claim_Duplicate_Loss_Days_Number AS Claim_Duplicate_Loss_Days_Number, \r   cldt.Claim_Duplicate_Potential_YN AS Claim_Duplicate_Potential_YN, \r   cldt.Claim_Duplicate_Potential_Key, \r   ca.Claim_Gross_Incurred_Loss_Type_Code AS Claim_Gross_Incurred_Loss_Type_Key, \r   ca.Client_Claim_Number, \r   ca.Claim_Vulnerable_Flag,\r   ca.Claim_Time_Occurence, \r   ca.Claim_Cyclone_Flag, \r   ca.ARPC_Incident_Number   \r FROM \r   BDV.V_S_CLAIM AS ca \r   LEFT JOIN RDV.V_L_POL_CLAIM_POLICY_CLIENT_BROKER AS pol ON pol.CLAIM_HK = ca.CLAIM_HK \r   LEFT JOIN BDV.V_L_CLAIM_RISK AS rsk ON rsk.CLAIM_HK = ca.CLAIM_HK \r   LEFT JOIN BDV.V_L_CLAIM_REGION AS lreg ON ca.CLAIM_HK = lreg.CLAIM_HK \r   LEFT JOIN BDV.V_S_CLAIM_REOPENED AS trn ON trn.CLAIM_HK = ca.CLAIM_HK \r   LEFT JOIN BDV.V_L_CLAIM_WC_ANZSIC_93 AS wcanz ON wcanz.CLAIM_HK = ca.CLAIM_HK \r   LEFT JOIN BDV.V_L_CLAIM_GLOBAL_LOB AS glob ON glob.CLAIM_HK = ca.CLAIM_HK \r   LEFT JOIN BDV.V_L_CLAIM_TYPE AS cty ON cty.CLAIM_HK = ca.CLAIM_HK \r   LEFT JOIN BDV.V_L_CLAIM_CATASTROPHE_EVENT_ICA AS ica ON ica.CLAIM_HK = ca.CLAIM_HK \r   LEFT JOIN BDV.V_S_CLAIM_LOSS_DATE AS cld ON cld.CLAIM_HK = ca.CLAIM_HK \r   LEFT JOIN RDV.V_S_POL_SANC AS clds ON clds.EXT_SANC_SANC_KEY = cld.Claim_Loss_Date_Modified_User_Code \r   LEFT JOIN BDV.V_S_CLAIM_RECOVERY_ABANDONMENT_REASON AS rar ON rar.CLAIM_HK = ca.CLAIM_HK \r   LEFT JOIN BDV.V_S_CLAIM_DUPLICATE_LOSS_DAYS AS cldt ON cldt.CLAIM_HK = ca.CLAIM_HK \r order by \r   1"
+          }
+        },
+        "format" : {
+          "kind" : "oracle",
+          "category" : "table",
+          "properties" : {
+            "kind" : "oracle",
+            "schema" : {
+              "entityType" : "",
+              "providerType" : "Databricks",
+              "fields" : [ {
+                "name" : "Claim_Loss_Location_Key",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Recovery_YN",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Time_Occurence",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_Recovery_Changed_YN",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Fraud_Type_Key",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_UX_Type_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Loss_Date_Modified_YN",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Investigator_Key",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Updated_Date_Key",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Loss_Date_Difference_Days_Number",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "Claim_Status_Key",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Type_Key",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Liability_Date_Key",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Catastrophe_Event_ICA_Key",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Date_Accepted_Key",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_Duplicate_Potential_YN",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Agg_Arrangement_Type_Key",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Gross_Incurred_Loss_Type_Key",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Handler_Key",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Non_Standard_Type_Key",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Updated_User_Key",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Risk_Class_Key",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Reopened_YN",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_BGC_Status_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Duplicate_Status_Key",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Reported_Date_Key",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Policy_Period_Name",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Premium_Class_Key",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Policy_Incep_Date_Key",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_Branch_Key",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Assessor_Key",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Number",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_State_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Client_Key",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Status_Date_Key",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_Date_Rejected_Key",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Global_LoB_Key",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Duplicate_Potential_Key",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Recovery_Changed_Date_Key",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Indemnity_Decision_Date_Key",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Policy_Key",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Key",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Expiry_Date_Key",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_Solicitor_Key",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Product_Key",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Indemnity_Decision_Key",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Loss_Date_Modified_User_Key",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Loss_Date_Modified_Date_Key",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Liability_Status_Code",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "ARPC_Incident_Number",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Company_Key",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Notified_Date_Key",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_Reopened_Last_Date_Key",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Portfolio_Key",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Loss_Orig_Date_Key",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Broker_Account_Key",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Updated_Datetime",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_UX_Arrangement_Description",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Industry_Class_ANZSIC_93_Key",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Risk_Key",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Division_Name",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Salvage_YN",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Duplicate_Loss_Days_Number",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              }, {
+                "name" : "Claim_Cyclone_Flag",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Client_Claim_Number",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Recovery_Abandonment_Reason_Key",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Postcode",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Vulnerable_Flag",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Cause_of_Loss_Description",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Closed_Date_Key",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_Agg_Arrangement_Key",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }, {
+                "name" : "Claim_Loss_Date_Key",
+                "dataType" : {
+                  "type" : "Double"
+                }
+              }, {
+                "name" : "Claim_Duplicate_Loss_Days_Tolerance_Key",
+                "dataType" : {
+                  "type" : "Integer"
+                }
+              } ]
+            }
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "SQ_V_Dim_Claim_Temp_CA_out0",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "Claim_Loss_Location_Key",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Recovery_YN",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Time_Occurence",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_Recovery_Changed_YN",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Fraud_Type_Key",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_UX_Type_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Loss_Date_Modified_YN",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Investigator_Key",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Updated_Date_Key",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Loss_Date_Difference_Days_Number",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "Claim_Status_Key",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Type_Key",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Liability_Date_Key",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Catastrophe_Event_ICA_Key",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Date_Accepted_Key",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_Duplicate_Potential_YN",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Agg_Arrangement_Type_Key",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Gross_Incurred_Loss_Type_Key",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Handler_Key",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Non_Standard_Type_Key",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Updated_User_Key",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Risk_Class_Key",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Reopened_YN",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_BGC_Status_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Duplicate_Status_Key",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Reported_Date_Key",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Policy_Period_Name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Premium_Class_Key",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Policy_Incep_Date_Key",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_Branch_Key",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Assessor_Key",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Number",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_State_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Client_Key",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Status_Date_Key",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_Date_Rejected_Key",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Global_LoB_Key",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Duplicate_Potential_Key",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Recovery_Changed_Date_Key",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Indemnity_Decision_Date_Key",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Policy_Key",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Key",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Expiry_Date_Key",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_Solicitor_Key",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Product_Key",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Indemnity_Decision_Key",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Loss_Date_Modified_User_Key",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Loss_Date_Modified_Date_Key",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Liability_Status_Code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ARPC_Incident_Number",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Company_Key",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Notified_Date_Key",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_Reopened_Last_Date_Key",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Portfolio_Key",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Loss_Orig_Date_Key",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Broker_Account_Key",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Updated_Datetime",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_UX_Arrangement_Description",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Industry_Class_ANZSIC_93_Key",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Risk_Key",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Division_Name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Salvage_YN",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Duplicate_Loss_Days_Number",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "Claim_Cyclone_Flag",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Client_Claim_Number",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Recovery_Abandonment_Reason_Key",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Postcode",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Vulnerable_Flag",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Cause_of_Loss_Description",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Closed_Date_Key",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_Agg_Arrangement_Key",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Claim_Loss_Date_Key",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Claim_Duplicate_Loss_Days_Tolerance_Key",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : true
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "edge_866",
+    "source" : "SQ_V_Dim_Claim_Temp_Claimant",
+    "sourcePort" : "SQ_V_Dim_Claim_Temp_Claimant_out0",
+    "target" : "Dim_Claim_Temp",
+    "targetPort" : "40_DM_ORAC_mp_s_dim_claim_temp__Dim_Claim_Temp_in_0"
+  }, {
+    "id" : "edge_868",
+    "source" : "SQ_V_Dim_Claim_Temp_WC_MT_LIA",
+    "sourcePort" : "SQ_V_Dim_Claim_Temp_WC_MT_LIA_out0",
+    "target" : "Dim_Claim_Temp",
+    "targetPort" : "40_DM_ORAC_mp_s_dim_claim_temp__Dim_Claim_Temp_in_1"
+  }, {
+    "id" : "edge_871",
+    "source" : "SQ_V_Dim_Claim_Temp_CA",
+    "sourcePort" : "SQ_V_Dim_Claim_Temp_CA_out0",
+    "target" : "Dim_Claim_Temp",
+    "targetPort" : "40_DM_ORAC_mp_s_dim_claim_temp__Dim_Claim_Temp_in_2"
+  } ],
+  "component" : "Pipeline"
+}

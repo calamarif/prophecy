@@ -1,0 +1,33 @@
+entityType: ""
+providerType: "Databricks"
+fields:
+- name: "BTCH_ID"
+  dataType:
+    type: "Integer"
+- name: "POL_ID"
+  dataType:
+    type: "Integer"
+- name: "REC_CRTN_DATE"
+  dataType:
+    type: "Timestamp"
+- name: "PROC_ID"
+  dataType:
+    type: "Integer"
+- name: "PRD_CODE"
+  dataType:
+    type: "String"
+- name: "DATA_SRC_ID"
+  dataType:
+    type: "Integer"
+- name: "BUSN_AREA_NAME"
+  dataType:
+    type: "String"
+- name: "CMPY_NUM"
+  dataType:
+    type: "String"
+- name: "RUN_ID"
+  dataType:
+    type: "Integer"
+- name: "POL_NUM"
+  dataType:
+    type: "String"

@@ -1,0 +1,72 @@
+entityType: ""
+providerType: "Databricks"
+fields:
+- name: "CTL_SRC_ROW_ID"
+  dataType:
+    type: "Integer"
+- name: "CREATED"
+  dataType:
+    type: "Timestamp"
+- name: "MESSAGE_TS"
+  dataType:
+    type: "String"
+- name: "CTL_JOB_ID"
+  dataType:
+    type: "Integer"
+- name: "_TYPE"
+  dataType:
+    type: "String"
+- name: "EXCHANGE_STRT_DATE"
+  dataType:
+    type: "Timestamp"
+- name: "MESSAGE_STATUS_CODE"
+  dataType:
+    type: "String"
+- name: "OUT_RQ_CONVERSATION_NUM"
+  dataType:
+    type: "String"
+- name: "RS_MESSAGE_TYPE_CODE"
+  dataType:
+    type: "String"
+- name: "INTERNAL_ID"
+  dataType:
+    type: "String"
+- name: "CTL_SRC_SYS_SET_NAME"
+  dataType:
+    type: "String"
+- name: "CTL_BATCH_ID"
+  dataType:
+    type: "Integer"
+- name: "RQ_MESSAGE_TYPE_CODE"
+  dataType:
+    type: "String"
+- name: "MESSAGE_PACKET"
+  dataType:
+    type: "Integer"
+- name: "IN_RQ_CONVERSATION_NUM"
+  dataType:
+    type: "String"
+- name: "MESSAGE_NUM"
+  dataType:
+    type: "String"
+- name: "MESSAGE_PACKET_DOC_TYPE"
+  dataType:
+    type: "String"
+- name: "PARTNER_GATEWAY"
+  dataType:
+    type: "String"
+- name: "SCHEMA_VERSION"
+  dataType:
+    type: "String"
+- name: "MESSAGE_TYPE_DIRECTION"
+  dataType:
+    type: "String"
+- name: "EXCHANGE_REFERENCE"
+  dataType:
+    type: "String"
+- name: "CTL_EXTRACT_ID"
+  dataType:
+    type: "Integer"
+- name: "IN_RS_CONVERSATION_NUM"
+  dataType:
+    type: "String"

@@ -1,0 +1,6 @@
+entityType: ""
+providerType: "Databricks"
+fields:
+- name: "INTERNAL_ID"
+  dataType:
+    type: "String"

@@ -1,0 +1,51 @@
+entityType: ""
+providerType: "Databricks"
+fields:
+- name: "CTL_SRC_ROW_ID"
+  dataType:
+    type: "Integer"
+- name: "ID"
+  dataType:
+    type: "Integer"
+- name: "CTL_REC_MD5_HA"
+  dataType:
+    type: "String"
+- name: "CTL_JOB_ID"
+  dataType:
+    type: "Integer"
+- name: "EXT_MISS_VALID_FLAG"
+  dataType:
+    type: "Double"
+- name: "EXT_MISS_TRAN_NO"
+  dataType:
+    type: "Double"
+- name: "EXT_MISS_ITEM_KEY"
+  dataType:
+    type: "String"
+- name: "CTL_INTRADAY_ID"
+  dataType:
+    type: "Integer"
+- name: "EXT_MISS_TERM_ID"
+  dataType:
+    type: "String"
+- name: "CTL_SRC_CD"
+  dataType:
+    type: "String"
+- name: "REF_HK"
+  dataType:
+    type: "String"
+- name: "CTL_BATCH_ID"
+  dataType:
+    type: "Integer"
+- name: "EXT_MISS_MIS_SCREEN"
+  dataType:
+    type: "String"
+- name: "REF_BK"
+  dataType:
+    type: "String"
+- name: "EXT_MISS_REC_TYPE"
+  dataType:
+    type: "String"
+- name: "CTL_LOAD_DM"
+  dataType:
+    type: "Timestamp"

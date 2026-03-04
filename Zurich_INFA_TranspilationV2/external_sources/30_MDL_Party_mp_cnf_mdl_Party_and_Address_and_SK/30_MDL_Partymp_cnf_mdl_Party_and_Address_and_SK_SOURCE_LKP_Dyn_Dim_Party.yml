@@ -1,0 +1,63 @@
+entityType: ""
+providerType: "Databricks"
+fields:
+- name: "DOB"
+  dataType:
+    type: "Timestamp"
+- name: "JOB_TITLE"
+  dataType:
+    type: "String"
+- name: "OTHER_NAME"
+  dataType:
+    type: "String"
+- name: "PRIVATE_PHONE_NUM"
+  dataType:
+    type: "String"
+- name: "FIRST_NAME"
+  dataType:
+    type: "String"
+- name: "GENDER_FLG"
+  dataType:
+    type: "String"
+- name: "FAX_NUM"
+  dataType:
+    type: "String"
+- name: "LAST_NAME"
+  dataType:
+    type: "String"
+- name: "TITLE"
+  dataType:
+    type: "String"
+- name: "WEB_SITE"
+  dataType:
+    type: "String"
+- name: "MOBILE_PHONE_NUM"
+  dataType:
+    type: "String"
+- name: "ANZSIC_CODE"
+  dataType:
+    type: "String"
+- name: "ACN"
+  dataType:
+    type: "String"
+- name: "EMAIL_ADDR"
+  dataType:
+    type: "String"
+- name: "TAX_FILE_NUM"
+  dataType:
+    type: "String"
+- name: "BUSN_PHONE_NUM"
+  dataType:
+    type: "String"
+- name: "PARTY_ID"
+  dataType:
+    type: "Integer"
+- name: "REC_STRT_DATE"
+  dataType:
+    type: "Timestamp"
+- name: "ABN_LICENCE_NUM"
+  dataType:
+    type: "String"
+- name: "NewLookupRow"
+  dataType:
+    type: "Integer"

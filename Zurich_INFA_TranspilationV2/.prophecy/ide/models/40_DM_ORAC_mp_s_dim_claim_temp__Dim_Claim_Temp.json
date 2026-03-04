@@ -1,0 +1,4946 @@
+{
+  "id" : "40_DM_ORAC_mp_s_dim_claim_temp__Dim_Claim_Temp",
+  "metainfo" : {
+    "label" : "40_DM_ORAC_mp_s_dim_claim_temp__Dim_Claim_Temp",
+    "autoLayout" : true,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "entityConfig" : {
+        "alias" : "\"Dim_Claim_Temp\"",
+        "materialized" : "table",
+        "database" : "\"qa_team\"",
+        "schema" : "\"qa_orchestration\"",
+        "type" : "ModelConfig"
+      }
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "Srt_Claimant_EXPR_357" : {
+      "id" : "Srt_Claimant_EXPR_357",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Srt_Claimant_EXPR_357",
+        "x" : 420,
+        "y" : 20,
+        "phase" : 1
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "Claim_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Key2",
+          "description" : null,
+          "_row_id" : "tJGlp95zZ5M7bvvrY84Zz"
+        }, {
+          "expression" : {
+            "expression" : "Claimant_Name",
+            "_row_id" : null
+          },
+          "alias" : "Claimant_Name",
+          "description" : null,
+          "_row_id" : "T1pfSynp1Sk04-WTJBkfW"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Motor_Driver_Name",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Driver_Name",
+          "description" : null,
+          "_row_id" : "t4dXX_x-taPUwK9twW8jD"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Motor_Driver_Names_Text",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Driver_Names_Text",
+          "description" : null,
+          "_row_id" : "N1b9OfpgsFcdGb9enkG1z"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Srt_Claimant_EXPR_357_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "Srt_Claimant_EXPR_357_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "40_DM_ORACmp_s_dim_claim_temp_SQ_V_Dim_Claim_Temp_Claimant_SQ_V_Dim_Claim_Temp_Claimant_out0" : {
+      "id" : "40_DM_ORACmp_s_dim_claim_temp_SQ_V_Dim_Claim_Temp_Claimant_SQ_V_Dim_Claim_Temp_Claimant_out0",
+      "component" : "SQLStatement",
+      "metadata" : {
+        "label" : "40_DM_ORACmp_s_dim_claim_temp_SQ_V_Dim_Claim_Temp_Claimant"
+      },
+      "properties" : {
+        "fileTabs" : [ {
+          "path" : "output_port_1",
+          "id" : "output_port_1",
+          "language" : "sql",
+          "content" : "\nSELECT *\n\nFROM {{ prophecy_tmp_source('40_DM_ORAC_mp_s_dim_claim_temp', '40_DM_ORACmp_s_dim_claim_temp_SQ_V_Dim_Claim_Temp_Claimant') }}\n\n"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_1",
+          "slug" : "input_port_1"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_1",
+          "slug" : "output_port_1"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "EXP_DATATYPE_CONVERSION1" : {
+      "id" : "EXP_DATATYPE_CONVERSION1",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "EXP_DATATYPE_CONVERSION1",
+        "x" : 820,
+        "y" : 200,
+        "phase" : 1
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "Claim_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Key",
+          "description" : null,
+          "_row_id" : "gktFrNhidoewIXTm8Ub2-"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Number",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Number",
+          "description" : null,
+          "_row_id" : "Cgwj-ue5w8hcsI1LmKiTx"
+        }, {
+          "expression" : {
+            "expression" : "Claimant_Name",
+            "_row_id" : null
+          },
+          "alias" : "Claimant_Name",
+          "description" : null,
+          "_row_id" : "hOv99f6pZMn7guSt8bO1l"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Cause_of_Loss_Description",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Cause_of_Loss_Description",
+          "description" : null,
+          "_row_id" : "1FzQHhnoJ36x4LzHxZcuU"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Postcode",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Postcode",
+          "description" : null,
+          "_row_id" : "XC7jqdkmfb3pb5Bl_QU5L"
+        }, {
+          "expression" : {
+            "expression" : "Claim_UX_Type_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_UX_Type_Code",
+          "description" : null,
+          "_row_id" : "-QnNcTa2j64LovEiGuzrE"
+        }, {
+          "expression" : {
+            "expression" : "Claim_UX_Arrangement_Description",
+            "_row_id" : null
+          },
+          "alias" : "Claim_UX_Arrangement_Description",
+          "description" : null,
+          "_row_id" : "lP4ZC3ngfPXzrpEdjyt3c"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Salvage_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Salvage_YN",
+          "description" : null,
+          "_row_id" : "J3Pc2UgO7tc4y3SWNHBcA"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Recovery_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Recovery_YN",
+          "description" : null,
+          "_row_id" : "zKVuYalti5Kwz9GTusMoa"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Liability_Personal_Injury_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Liability_Personal_Injury_YN",
+          "description" : null,
+          "_row_id" : "UlQewgyJ-3Dcnif_GoOCl"
+        }, {
+          "expression" : {
+            "expression" : "Company_Key",
+            "_row_id" : null
+          },
+          "alias" : "Company_Key",
+          "description" : null,
+          "_row_id" : "pDFQs-IznqjYmnoWL_e21"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Branch_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Branch_Key",
+          "description" : null,
+          "_row_id" : "n_Ct2qJRBLzF-WqFCfvbR"
+        }, {
+          "expression" : {
+            "expression" : "Premium_Class_Key",
+            "_row_id" : null
+          },
+          "alias" : "Premium_Class_Key",
+          "description" : null,
+          "_row_id" : "4579QCzERNVmEdpweLtQc"
+        }, {
+          "expression" : {
+            "expression" : "Product_Key",
+            "_row_id" : null
+          },
+          "alias" : "Product_Key",
+          "description" : null,
+          "_row_id" : "xXVOyBkJLEd6kkzHV9MN2"
+        }, {
+          "expression" : {
+            "expression" : "Global_LoB_Key",
+            "_row_id" : null
+          },
+          "alias" : "Global_LoB_Key",
+          "description" : null,
+          "_row_id" : "cCneU5Hm7mq08DG8Lwlzq"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Reported_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Reported_Date_Key",
+          "description" : null,
+          "_row_id" : "EdITXSwn5tVALhOy66qYd"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Expiry_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Expiry_Date_Key",
+          "description" : null,
+          "_row_id" : "oWajGGzqUCbQLOvKoV1-X"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Loss_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Loss_Date_Key",
+          "description" : null,
+          "_row_id" : "wAIHJRACwG8s81wUoy7Ha"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Indemnity_Decision_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Indemnity_Decision_Key",
+          "description" : null,
+          "_row_id" : "V0MpS2wp7swSh91je67ko"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Indemnity_Decision_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Indemnity_Decision_Date_Key",
+          "description" : null,
+          "_row_id" : "sbkXJ4KAN51jaIQ6MDFEo"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Status_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Status_Date_Key",
+          "description" : null,
+          "_row_id" : "zEHVTh6Y-5pYv2LIj7RSp"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Solicitor_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Solicitor_Key",
+          "description" : null,
+          "_row_id" : "XPTNPnXt4BTRrmMyEGRMx"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Assessor_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Assessor_Key",
+          "description" : null,
+          "_row_id" : "6bzEx1AOCQrHUvKcjLfBe"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Investigator_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Investigator_Key",
+          "description" : null,
+          "_row_id" : "BZMLgBU2Oa2Jm4gCjzUE7"
+        }, {
+          "expression" : {
+            "expression" : "Catastrophe_Event_ICA_Key",
+            "_row_id" : null
+          },
+          "alias" : "Catastrophe_Event_ICA_Key",
+          "description" : null,
+          "_row_id" : "V8WXMT4R9UhBsOQHch_Qm"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Handler_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Handler_Key",
+          "description" : null,
+          "_row_id" : "t4RzffljD60kzrS3RWWM2"
+        }, {
+          "expression" : {
+            "expression" : "Policy_Key",
+            "_row_id" : null
+          },
+          "alias" : "Policy_Key",
+          "description" : null,
+          "_row_id" : "VX6hrIajuqaxkAtob0t79"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Portfolio_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Portfolio_Key",
+          "description" : null,
+          "_row_id" : "GW4k-7GPl38guIVxPy_Wz"
+        }, {
+          "expression" : {
+            "expression" : "Risk_Key",
+            "_row_id" : null
+          },
+          "alias" : "Risk_Key",
+          "description" : null,
+          "_row_id" : "S7Sg_us-fT0RQgceDRh64"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Reopened_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Reopened_YN",
+          "description" : null,
+          "_row_id" : "WNxMUhTwQTsUpGkh9lCGa"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Notified_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Notified_Date_Key",
+          "description" : null,
+          "_row_id" : "siT8HaX1bV18uFChALevY"
+        }, {
+          "expression" : {
+            "expression" : "Claim_State_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_State_Code",
+          "description" : null,
+          "_row_id" : "D6RI3pqT4Q0SggGMKmDHv"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Type_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Type_Key",
+          "description" : null,
+          "_row_id" : "xKUB8dN4QloWl8r1y0k8O"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Status_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Status_Key",
+          "description" : null,
+          "_row_id" : "bRXIjozkkpKqW1jKGkKQv"
+        }, {
+          "expression" : {
+            "expression" : "Risk_Class_Key",
+            "_row_id" : null
+          },
+          "alias" : "Risk_Class_Key",
+          "description" : null,
+          "_row_id" : "1c33YVZo9yRFZ9Wj8gjFL"
+        }, {
+          "expression" : {
+            "expression" : "Broker_Account_Key",
+            "_row_id" : null
+          },
+          "alias" : "Broker_Account_Key",
+          "description" : null,
+          "_row_id" : "bnG56aghSbMB-gvp8HAA4"
+        }, {
+          "expression" : {
+            "expression" : "Client_Key",
+            "_row_id" : null
+          },
+          "alias" : "Client_Key",
+          "description" : null,
+          "_row_id" : "d4oHzQE9IRPLBFyndnR7U"
+        }, {
+          "expression" : {
+            "expression" : "Policy_Incep_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Policy_Incep_Date_Key",
+          "description" : null,
+          "_row_id" : "X4FRGPqTSxM5WcFUe6elc"
+        }, {
+          "expression" : {
+            "expression" : "Policy_Period_Name",
+            "_row_id" : null
+          },
+          "alias" : "Policy_Period_Name",
+          "description" : null,
+          "_row_id" : "NOdXYtCy-lv52YohooYvb"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Closed_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Closed_Date_Key",
+          "description" : null,
+          "_row_id" : "gg_xQPxepNhODe3KvZ4k3"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Non_Standard_Type_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Non_Standard_Type_Key",
+          "description" : null,
+          "_row_id" : "xS1DEZOuxvq4RFsTtRNO_"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Reopened_Last_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Reopened_Last_Date_Key",
+          "description" : null,
+          "_row_id" : "ywaEHHaUF8PldvxxKPU6-"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Date_Accepted_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Date_Accepted_Key",
+          "description" : null,
+          "_row_id" : "oMsl5GHiWMDUK1_79It49"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Date_Rejected_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Date_Rejected_Key",
+          "description" : null,
+          "_row_id" : "bMsMUlp5S0KmqHxNpK7IG"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Division_Name",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Division_Name",
+          "description" : null,
+          "_row_id" : "kiPWrzhF92uH7407AvQLk"
+        }, {
+          "expression" : {
+            "expression" : "CAST(Claim_Motor_Fault_Key AS string)",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Fault_Key",
+          "description" : null,
+          "_row_id" : "rxoJK-96MAE4Zk7XHPh6y"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Motor_Vehicle_Class_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Vehicle_Class_Key",
+          "description" : null,
+          "_row_id" : "y5kqJ5JC3fsqESUj0y7w9"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Motor_Bodily_Injury_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Bodily_Injury_YN",
+          "description" : null,
+          "_row_id" : "S9OS47dCT7M1ONZc2DxjO"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Motor_Vehicle_Loss_Day_of_Week_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Vehicle_Loss_Day_of_Week_Code",
+          "description" : null,
+          "_row_id" : "PRxdj-B90FBUjh8TR0ZlO"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Motor_Vehicle_Loss_Time_Number",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Vehicle_Loss_Time_Number",
+          "description" : null,
+          "_row_id" : "2_EeqZXMQ9Gs23_oNy5Sg"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Motor_Cost_Centre_Name",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Cost_Centre_Name",
+          "description" : null,
+          "_row_id" : "4QnibIwSyFD5ebFVslTiB"
+        }, {
+          "expression" : {
+            "expression" : "CAST(Claim_Motor_Driver_Age_Years_Number AS string)",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Driver_Age_Years_Number",
+          "description" : null,
+          "_row_id" : "0RqzLl9a-B6thcdKAOIQu"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Motor_Vehicle_Finance_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Vehicle_Finance_YN",
+          "description" : null,
+          "_row_id" : "nrMjxTmw28iYaX-NIP1rX"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Motor_Vehicle_Rego_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Vehicle_Rego_Code",
+          "description" : null,
+          "_row_id" : "FFPJHdu7rlHuWhsZOc2FF"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Motor_Vehicle_Total_Loss_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Vehicle_Total_Loss_YN",
+          "description" : null,
+          "_row_id" : "JzcJYuPHyJn9IPHKIWRre"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Motor_Vehicle_Description",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Vehicle_Description",
+          "description" : null,
+          "_row_id" : "zMLrpUWSiEYCCNxrz5BaX"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Motor_Vehicle_Usage_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Vehicle_Usage_Code",
+          "description" : null,
+          "_row_id" : "1UhZFHRlNj-aDkD_cADvz"
+        }, {
+          "expression" : {
+            "expression" : "CAST(Claim_Motor_Driver_Licensed_Years_Number AS string)",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Driver_Licensed_Years_Number",
+          "description" : null,
+          "_row_id" : "0iBfmPWf1i9QKk-YqYYnX"
+        }, {
+          "expression" : {
+            "expression" : "CAST(Claim_Motor_Vehicle_Manufactured_Year_Number AS string)",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Vehicle_Manufactured_Year_Number",
+          "description" : null,
+          "_row_id" : "67V94C_QkoZ4a-QgTk8l1"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Motor_Driver_Gender_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Driver_Gender_Code",
+          "description" : null,
+          "_row_id" : "BBTwxmkgppJznPwzXkfmi"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Motor_Driver_Name",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Driver_Name",
+          "description" : null,
+          "_row_id" : "_0penYnEhdhvaInaSgJPL"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Worker_Suburb_Name",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Worker_Suburb_Name",
+          "description" : null,
+          "_row_id" : "shqoygdNbxRVvY3gnyvgP"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Worker_State_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Worker_State_Code",
+          "description" : null,
+          "_row_id" : "llKDYALvtcxOlFhjveheL"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Worker_Postcode",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Worker_Postcode",
+          "description" : null,
+          "_row_id" : "bAGZe_uGB10DlmlCDkvKt"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Gender_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Gender_Code",
+          "description" : null,
+          "_row_id" : "Nx5su8Sey2WRtHG2qlR_W"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Birth_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Birth_Date_Key",
+          "description" : null,
+          "_row_id" : "ghQezmp6qwYdSx2qIeIXb"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Marital_Status_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Marital_Status_Code",
+          "description" : null,
+          "_row_id" : "LbEnQdJ9h9oLNH6GU8wrS"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Full_Time_Part_Time_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Full_Time_Part_Time_Code",
+          "description" : null,
+          "_row_id" : "v2poLW5MB6uzIBua1rtu6"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Hourly_Rate_First_13_Weeks_Amount",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Hourly_Rate_First_13_Weeks_Amount",
+          "description" : null,
+          "_row_id" : "9pY9rkRIk0bJaBhvVHnHq"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Hourly_Rate_Thereafter_Amount",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Hourly_Rate_Thereafter_Amount",
+          "description" : null,
+          "_row_id" : "pKDe3h9tcm3CdO8w-vWPV"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Worker_Weekly_Hours_Rate",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Worker_Weekly_Hours_Rate",
+          "description" : null,
+          "_row_id" : "KaW6h2mkSj0ewEldZannK"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Worker_Weekly_Hours_Time",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Worker_Weekly_Hours_Time",
+          "description" : null,
+          "_row_id" : "U6nUGUdzRUKvGYGvQvppi"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Occupation_Name",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Occupation_Name",
+          "description" : null,
+          "_row_id" : "CohEJPtp1pq8OSqd0g1sc"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Classification_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Classification_Code",
+          "description" : null,
+          "_row_id" : "CMpKBq-_88Pul0K1SmJMw"
+        }, {
+          "expression" : {
+            "expression" : "CAST(Claim_WC_Body_Location_Key AS string)",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Body_Location_Key",
+          "description" : null,
+          "_row_id" : "vn55Km35CPjBkRnOiNlwC"
+        }, {
+          "expression" : {
+            "expression" : "CAST(Claim_WC_Agency_of_Accident_Key AS string)",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Agency_of_Accident_Key",
+          "description" : null,
+          "_row_id" : "JdZncZffpHS8VjashBVF5"
+        }, {
+          "expression" : {
+            "expression" : "CAST(Claim_WC_Breakdown_Agency_Key AS string)",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Breakdown_Agency_Key",
+          "description" : null,
+          "_row_id" : "B6LWI8bA8vvd1rMMCo-h8"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Ceased_Work_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Ceased_Work_Date_Key",
+          "description" : null,
+          "_row_id" : "EoxDlZ3RyaeF6OQNhPmjK"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Common_Law_Raised_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Common_Law_Raised_Date_Key",
+          "description" : null,
+          "_row_id" : "pPHoOb0JWI1KAl8NWqjxp"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Common_Law_Outcome_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Common_Law_Outcome_Code",
+          "description" : null,
+          "_row_id" : "5nfdu175d_qq1yPQvAOKm"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Common_Law_Severity_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Common_Law_Severity_Code",
+          "description" : null,
+          "_row_id" : "haTndCwe6ahhrxdxJ3__q"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Medical_Certificate_Last_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Medical_Certificate_Last_Date_Key",
+          "description" : null,
+          "_row_id" : "pY_aO_Lszi0jVnpmbGETe"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Loss_Day_of_Week_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Loss_Day_of_Week_Code",
+          "description" : null,
+          "_row_id" : "h1_1ppQxnVdXPkfp0NeoM"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Estimated_Return_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Estimated_Return_Date_Key",
+          "description" : null,
+          "_row_id" : "IPeMQLFPFJi-AJAueTeAR"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_IMA_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_IMA_Date_Key",
+          "description" : null,
+          "_row_id" : "d4lAU67r47B1a75wJ8owB"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_IMA_Reviewed_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_IMA_Reviewed_YN",
+          "description" : null,
+          "_row_id" : "tkCxm7LZvuTcM7Zjz_Wpx"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Injury_Mechanism_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Injury_Mechanism_Key",
+          "description" : null,
+          "_row_id" : "v2xabtVWvvUDhLgpGTJlp"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Injury_Nature_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Injury_Nature_Key",
+          "description" : null,
+          "_row_id" : "kLXwfl63TQm7Y_SeEYVk9"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Fitness_Level_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Fitness_Level_Code",
+          "description" : null,
+          "_row_id" : "8Ics0ZmQxG9m_2igBhn_u"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Lost_Hours_Number",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Lost_Hours_Number",
+          "description" : null,
+          "_row_id" : "ZZKRSfliWtybp9bA5w608"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Lost_Minutes_Number",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Lost_Minutes_Number",
+          "description" : null,
+          "_row_id" : "J6o_WosE-aYYIi3Tntk6f"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Injury_Most_Serious_Description",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Injury_Most_Serious_Description",
+          "description" : null,
+          "_row_id" : "CwOEC95PdTy1NmdWqw-Th"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Injury_Object_Involved_Name",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Injury_Object_Involved_Name",
+          "description" : null,
+          "_row_id" : "hmfH6ZpeD4UVDiLtmzeOE"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Work_Resumed_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Work_Resumed_Date_Key",
+          "description" : null,
+          "_row_id" : "oHctztAwmgZGspTu6tXkT"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Loss_Time_Number",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Loss_Time_Number",
+          "description" : null,
+          "_row_id" : "C2diOMVFGMFhLOHlKuS0N"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Department_Name",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Department_Name",
+          "description" : null,
+          "_row_id" : "7epfHVkWgo3Q6UtaO2FKZ"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Worker_Name",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Worker_Name",
+          "description" : null,
+          "_row_id" : "5jDJM7alZAcr9oeOtB4yY"
+        }, {
+          "expression" : {
+            "expression" : "ASCO_Key",
+            "_row_id" : null
+          },
+          "alias" : "ASCO_Key",
+          "description" : null,
+          "_row_id" : "QlNqoctCDrXnp5iRSiImH"
+        }, {
+          "expression" : {
+            "expression" : "Industry_Class_ANZSIC_93_Key",
+            "_row_id" : null
+          },
+          "alias" : "Industry_Class_ANZSIC_93_Key",
+          "description" : null,
+          "_row_id" : "v_mzJJYcIroIWgfPU0bS0"
+        }, {
+          "expression" : {
+            "expression" : "Industry_Class_ANZSIC_2006_Key",
+            "_row_id" : null
+          },
+          "alias" : "Industry_Class_ANZSIC_2006_Key",
+          "description" : null,
+          "_row_id" : "Sh5OLwNxnQDqeMt8avzr2"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Liability_Status_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Liability_Status_Code",
+          "description" : null,
+          "_row_id" : "u5NpOgwvhHUgQ7UKjdapZ"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Liability_Law_Costs_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Liability_Law_Costs_YN",
+          "description" : null,
+          "_row_id" : "NOEytxclpo2uhUhIfLHni"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Liability_Other_Damages_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Liability_Other_Damages_YN",
+          "description" : null,
+          "_row_id" : "zEg9WQjyr7S4XZf3ARRRP"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Liability_Cause_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Liability_Cause_Code",
+          "description" : null,
+          "_row_id" : "Bu-NtiOMNUW_dV4QAThJA"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Liability_Severity_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Liability_Severity_Code",
+          "description" : null,
+          "_row_id" : "lr4eUJfOveFxjortRrlCA"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Liability_Litigation_Status_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Liability_Litigation_Status_Code",
+          "description" : null,
+          "_row_id" : "k0c2A_9BT3FlPmthURO4D"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Liability_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Liability_Date_Key",
+          "description" : null,
+          "_row_id" : "iPpEQILkravJrPPn1mUwu"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Liability_Property_Damage_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Liability_Property_Damage_YN",
+          "description" : null,
+          "_row_id" : "4hSkIKaRmiqZg3T1mbM2l"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Liability_Financial_Loss_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Liability_Financial_Loss_YN",
+          "description" : null,
+          "_row_id" : "gkE0HhzxqqYyQp1naIyvh"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Agg_Arrangement_Type_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Agg_Arrangement_Type_Key",
+          "description" : null,
+          "_row_id" : "Yd93HHli8oaLIV_VaW0AH"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Agg_Arrangement_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Agg_Arrangement_Key",
+          "description" : null,
+          "_row_id" : "rbbMWKesxkXs4vyWRhO6y"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Loss_Location_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Loss_Location_Key",
+          "description" : null,
+          "_row_id" : "LLjVxHanbNO2eIIfM-HLS"
+        }, {
+          "expression" : {
+            "expression" : "Claim_BGC_Status_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_BGC_Status_Code",
+          "description" : null,
+          "_row_id" : "bh2ldnWzbxrl35X1rVlBn"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Loss_Date_Difference_Days_Number",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Loss_Date_Difference_Days_Number",
+          "description" : null,
+          "_row_id" : "XM3pRumbxBgaQy2kfUUMo"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Loss_Date_Modified_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Loss_Date_Modified_Date_Key",
+          "description" : null,
+          "_row_id" : "cB_k1JQDFG0zJlKYtgig-"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Loss_Date_Modified_User_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Loss_Date_Modified_User_Key",
+          "description" : null,
+          "_row_id" : "pxT2_vcd95Pj584qxoNj3"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Loss_Date_Modified_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Loss_Date_Modified_YN",
+          "description" : null,
+          "_row_id" : "pIHt4LagtDRFmzluCiiN5"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Loss_Orig_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Loss_Orig_Date_Key",
+          "description" : null,
+          "_row_id" : "U5ysgAeAzSiAXoPBefgox"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Motor_Driver_Names_Text",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Driver_Names_Text",
+          "description" : null,
+          "_row_id" : "7mbhcbGT-Yd167zbMLix2"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Recovery_Abandonment_Reason_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Recovery_Abandonment_Reason_Key",
+          "description" : null,
+          "_row_id" : "QkMyKA_G6Sh6qNPlZW_5i"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Recovery_Changed_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Recovery_Changed_YN",
+          "description" : null,
+          "_row_id" : "qBUFRYY_Hi_9QlksjPeE5"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Recovery_Changed_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Recovery_Changed_Date_Key",
+          "description" : null,
+          "_row_id" : "b8PqzGJXmbw7-MRhtR8KN"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Updated_Datetime",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Updated_Datetime",
+          "description" : null,
+          "_row_id" : "oCKXoGdTTyTcLleN87KcY"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Updated_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Updated_Date_Key",
+          "description" : null,
+          "_row_id" : "FNg8u83RzJ89_vnVtGHkL"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Updated_User_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Updated_User_Key",
+          "description" : null,
+          "_row_id" : "taX8OtT7lJaCKAviTrNWB"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Duplicate_Status_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Duplicate_Status_Key",
+          "description" : null,
+          "_row_id" : "RpvWcTq6dVhFvHQfjAhmJ"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Fraud_Type_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Fraud_Type_Key",
+          "description" : null,
+          "_row_id" : "ZSmdoydUwG3v1WBWU-RpM"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Duplicate_Loss_Days_Tolerance_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Duplicate_Loss_Days_Tolerance_Key",
+          "description" : null,
+          "_row_id" : "8HP_OFxl3GB85mIVWofYL"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Duplicate_Loss_Days_Number",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Duplicate_Loss_Days_Number",
+          "description" : null,
+          "_row_id" : "aCLcgG8uIIUvW0NWdiz-L"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Duplicate_Potential_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Duplicate_Potential_YN",
+          "description" : null,
+          "_row_id" : "MzipZ4jDed-9oDZGwUJoM"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Duplicate_Potential_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Duplicate_Potential_Key",
+          "description" : null,
+          "_row_id" : "NlQfrDJrLuRj6bE5528WG"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Gross_Incurred_Loss_Type_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Gross_Incurred_Loss_Type_Key",
+          "description" : null,
+          "_row_id" : "e7Vq9d3qeNpNgNZp_H-UE"
+        }, {
+          "expression" : {
+            "expression" : "Client_Claim_Number",
+            "_row_id" : null
+          },
+          "alias" : "Client_Claim_Number",
+          "description" : null,
+          "_row_id" : "diTNuKtVve90erLBRqVz0"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Received_Date_by_Employer",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Received_Date_by_Employer",
+          "description" : null,
+          "_row_id" : "ifoINnEhvc-4S4-IGo7WU"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Work_Status",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Work_Status",
+          "description" : null,
+          "_row_id" : "7EMzvdCUnjUc1eUme_UIj"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Worker_RTW_Program",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Worker_RTW_Program",
+          "description" : null,
+          "_row_id" : "co5le7EFc2drpaz9GD8K4"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Worker_RTW_Goals",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Worker_RTW_Goals",
+          "description" : null,
+          "_row_id" : "gZM0bXLRpl9w6CnL_qba3"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Duty_Status",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Duty_Status",
+          "description" : null,
+          "_row_id" : "mQPJVr6My4FG-zT96YwwC"
+        }, {
+          "expression" : {
+            "expression" : "Claim_vulnerable_flag",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Vulnerable_Flag",
+          "description" : null,
+          "_row_id" : "fndXUs6vslPNvqpV7WbR7"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Time_Occurence",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Time_Occurence",
+          "description" : null,
+          "_row_id" : "j8N1ACMGZlgcwXVXF4jiD"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Cyclone_Flag",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Cyclone_Flag",
+          "description" : null,
+          "_row_id" : "JSgP1TkvziFGnTWGFsOX1"
+        }, {
+          "expression" : {
+            "expression" : "ARPC_Incident_Number",
+            "_row_id" : null
+          },
+          "alias" : "ARPC_Incident_Number",
+          "description" : null,
+          "_row_id" : "n_Fy-TIiM5EqNuG_fuuK7"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "EXP_DATATYPE_CONVERSION1_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "EXP_DATATYPE_CONVERSION1_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "40_DM_ORACmp_s_dim_claim_temp_SQ_V_Dim_Claim_Temp_CA_SQ_V_Dim_Claim_Temp_CA_out0" : {
+      "id" : "40_DM_ORACmp_s_dim_claim_temp_SQ_V_Dim_Claim_Temp_CA_SQ_V_Dim_Claim_Temp_CA_out0",
+      "component" : "SQLStatement",
+      "metadata" : {
+        "label" : "40_DM_ORACmp_s_dim_claim_temp_SQ_V_Dim_Claim_Temp_CA"
+      },
+      "properties" : {
+        "fileTabs" : [ {
+          "path" : "output_port_2",
+          "id" : "output_port_2",
+          "language" : "sql",
+          "content" : "\nSELECT *\n\nFROM {{ prophecy_tmp_source('40_DM_ORAC_mp_s_dim_claim_temp', '40_DM_ORACmp_s_dim_claim_temp_SQ_V_Dim_Claim_Temp_CA') }}\n\n"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_2",
+          "slug" : "input_port_2"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_2",
+          "slug" : "output_port_2"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "SQ_V_Dim_Claim_Temp_WC_MT_LIA_EXPR_358" : {
+      "id" : "SQ_V_Dim_Claim_Temp_WC_MT_LIA_EXPR_358",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "SQ_V_Dim_Claim_Temp_WC_MT_LIA_EXPR_358",
+        "x" : 220,
+        "y" : 220,
+        "phase" : 1
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "Claim_WC_IMA_Reviewed_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_IMA_Reviewed_YN",
+          "description" : null,
+          "_row_id" : "OD78GE0VfB0Nty_3i6MWl"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Injury_Mechanism_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Injury_Mechanism_Key",
+          "description" : null,
+          "_row_id" : "BXWS21DH1-ZWyDnexbOP_"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Injury_Nature_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Injury_Nature_Key",
+          "description" : null,
+          "_row_id" : "ouhZYTi4jIQTNdKMvJItr"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Fitness_Level_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Fitness_Level_Code",
+          "description" : null,
+          "_row_id" : "7TIwOrLKTDe1SOSsvPWiw"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Lost_Hours_Number",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Lost_Hours_Number",
+          "description" : null,
+          "_row_id" : "tKghHup0YhK--d7rnQlR4"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Lost_Minutes_Number",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Lost_Minutes_Number",
+          "description" : null,
+          "_row_id" : "8ar5u3xxWphff3qwsf0oI"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Injury_Most_Serious_Description",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Injury_Most_Serious_Description",
+          "description" : null,
+          "_row_id" : "YrNiQAYZHYxOtbpMLpv1E"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Injury_Object_Involved_Name",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Injury_Object_Involved_Name",
+          "description" : null,
+          "_row_id" : "SxdXvEcItIAi1UlsjEWH_"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Work_Resumed_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Work_Resumed_Date_Key",
+          "description" : null,
+          "_row_id" : "TxXiQBCCk2Ai6Al0-KjE2"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Loss_Time_Number",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Loss_Time_Number",
+          "description" : null,
+          "_row_id" : "05JqeijQOjEyLORuLgZ6P"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Department_Name",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Department_Name",
+          "description" : null,
+          "_row_id" : "bALiJl0wVsG1YzLR2xbbp"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Worker_Name",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Worker_Name",
+          "description" : null,
+          "_row_id" : "PLw_ts6V-xLhl3FzEDwkG"
+        }, {
+          "expression" : {
+            "expression" : "ASCO_Key",
+            "_row_id" : null
+          },
+          "alias" : "ASCO_Key",
+          "description" : null,
+          "_row_id" : "KMgjlBo9UtA6y8NyXjjte"
+        }, {
+          "expression" : {
+            "expression" : "Industry_Class_ANZSIC_2006_Key",
+            "_row_id" : null
+          },
+          "alias" : "Industry_Class_ANZSIC_2006_Key",
+          "description" : null,
+          "_row_id" : "sRxPJCpcdCuAbhmZyN6o6"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Liability_Law_Costs_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Liability_Law_Costs_YN",
+          "description" : null,
+          "_row_id" : "DLsqh9tNOjpAIIzGWmErw"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Liability_Other_Damages_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Liability_Other_Damages_YN",
+          "description" : null,
+          "_row_id" : "WawFpEkTEWwWkw5tGmmq_"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Liability_Cause_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Liability_Cause_Code",
+          "description" : null,
+          "_row_id" : "YSptgtkVr2pLeXJpkmnZt"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Liability_Severity_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Liability_Severity_Code",
+          "description" : null,
+          "_row_id" : "dUk1yOuoSI_lkzrM9V0WH"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Liability_Litigation_Status_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Liability_Litigation_Status_Code",
+          "description" : null,
+          "_row_id" : "mpmdX9Koa2hqhaGgFly9W"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Liability_Property_Damage_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Liability_Property_Damage_YN",
+          "description" : null,
+          "_row_id" : "FwSu2jyE88vp-oAa4_JGH"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Liability_Financial_Loss_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Liability_Financial_Loss_YN",
+          "description" : null,
+          "_row_id" : "zelEyGz-7vF96vBnsMnaK"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Received_Date_by_Employer",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Received_Date_by_Employer",
+          "description" : null,
+          "_row_id" : "FLmrQZlj_P7J7mXrTsQuq"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Work_Status",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Work_Status",
+          "description" : null,
+          "_row_id" : "LRNPO2X8rKqouqGH87XFw"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Duty_Status",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Duty_Status",
+          "description" : null,
+          "_row_id" : "l_AMx3Y_UYO_SlVfX-i9U"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Key1",
+          "description" : null,
+          "_row_id" : "w5Y0j_KBJuLVAtDxRtVI_"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Liability_Personal_Injury_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Liability_Personal_Injury_YN",
+          "description" : null,
+          "_row_id" : "tuoEvc8ClW9FECZ-5zLan"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Division_Name",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Division_Name",
+          "description" : null,
+          "_row_id" : "EV7AkyO6e8k71DUcejQer"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Motor_Fault_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Fault_Key",
+          "description" : null,
+          "_row_id" : "n-Q_PtHqW2SC6y50b2W2d"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Motor_Vehicle_Class_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Vehicle_Class_Key",
+          "description" : null,
+          "_row_id" : "Ut8-J37mZwe4nET1S6EKq"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Motor_Bodily_Injury_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Bodily_Injury_YN",
+          "description" : null,
+          "_row_id" : "YKYTdEUemoK01y36iv1Rr"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Motor_Vehicle_Loss_Day_of_Week_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Vehicle_Loss_Day_of_Week_Code",
+          "description" : null,
+          "_row_id" : "iDkcP8yfVWepjKiBU3Wwz"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Motor_Vehicle_Loss_Time_Number",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Vehicle_Loss_Time_Number",
+          "description" : null,
+          "_row_id" : "p5yw514wo0UKdhVitC1aQ"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Motor_Cost_Centre_Name",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Cost_Centre_Name",
+          "description" : null,
+          "_row_id" : "M0U4OxFT2C3zpeH1UX2hB"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Motor_Driver_Age_Years_Number",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Driver_Age_Years_Number",
+          "description" : null,
+          "_row_id" : "4PLh1FsAQrq5kkmp9kgXd"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Motor_Vehicle_Finance_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Vehicle_Finance_YN",
+          "description" : null,
+          "_row_id" : "VJ9e-mSKu1zkMK4mcuBUX"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Motor_Vehicle_Rego_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Vehicle_Rego_Code",
+          "description" : null,
+          "_row_id" : "ZdlaOE18su06zKaZ4U41_"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Motor_Vehicle_Total_Loss_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Vehicle_Total_Loss_YN",
+          "description" : null,
+          "_row_id" : "EyrycFhG2dzEDFso-5AVW"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Motor_Vehicle_Description",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Vehicle_Description",
+          "description" : null,
+          "_row_id" : "yxPWFBaVjy2HoJQUNzTJ2"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Motor_Vehicle_Usage_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Vehicle_Usage_Code",
+          "description" : null,
+          "_row_id" : "o04wpMMjmj8MoiCuqU73o"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Motor_Driver_Licensed_Years_Number",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Driver_Licensed_Years_Number",
+          "description" : null,
+          "_row_id" : "BVD_3Jatk9lmLZ_A0Nkp6"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Motor_Vehicle_Manufactured_Year_Number",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Vehicle_Manufactured_Year_Number",
+          "description" : null,
+          "_row_id" : "mX3aB02GvtaaeTXO6p0r9"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Motor_Driver_Gender_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Driver_Gender_Code",
+          "description" : null,
+          "_row_id" : "UncpXOOyLBSIdJxmw8mth"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Worker_Suburb_Name",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Worker_Suburb_Name",
+          "description" : null,
+          "_row_id" : "htvn4B4CLihlKjbpRMmVB"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Worker_State_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Worker_State_Code",
+          "description" : null,
+          "_row_id" : "dqzbZPsn_ska6ro22zb2I"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Worker_Postcode",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Worker_Postcode",
+          "description" : null,
+          "_row_id" : "9iSSMLTklni5BLpND-P1b"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Gender_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Gender_Code",
+          "description" : null,
+          "_row_id" : "17rG0szxrBTfFKS9CXyIG"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Birth_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Birth_Date_Key",
+          "description" : null,
+          "_row_id" : "CU7GyuY8an2VlufEWdygn"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Marital_Status_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Marital_Status_Code",
+          "description" : null,
+          "_row_id" : "HVpQGaqQL8MDv0XPyUzgx"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Full_Time_Part_Time_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Full_Time_Part_Time_Code",
+          "description" : null,
+          "_row_id" : "dcWQ9jeAKH6DutCfxUKDg"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Hourly_Rate_First_13_Weeks_Amount",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Hourly_Rate_First_13_Weeks_Amount",
+          "description" : null,
+          "_row_id" : "5Ug4s6VWZFLj8QV4upuxX"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Hourly_Rate_Thereafter_Amount",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Hourly_Rate_Thereafter_Amount",
+          "description" : null,
+          "_row_id" : "xOu7J_KdBLNu9aPuKthWo"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Worker_Weekly_Hours_Rate",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Worker_Weekly_Hours_Rate",
+          "description" : null,
+          "_row_id" : "XB8MXoc-Vzr2k8uO_A_eX"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Worker_Weekly_Hours_Time",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Worker_Weekly_Hours_Time",
+          "description" : null,
+          "_row_id" : "NwBpquKiEdx-LC4y37q0U"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Occupation_Name",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Occupation_Name",
+          "description" : null,
+          "_row_id" : "QG2bv9MNmGxPDL-ZYQlz8"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Classification_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Classification_Code",
+          "description" : null,
+          "_row_id" : "i8fppECAzM7fp13W0hJbW"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Body_Location_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Body_Location_Key",
+          "description" : null,
+          "_row_id" : "ZnVlJmXOqvKqQn4YjUDO_"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Agency_of_Accident_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Agency_of_Accident_Key",
+          "description" : null,
+          "_row_id" : "BuECLamiIVcxLQKVpYcH4"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Breakdown_Agency_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Breakdown_Agency_Key",
+          "description" : null,
+          "_row_id" : "VEcR8DLP5uP2QCQa0w3pe"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Ceased_Work_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Ceased_Work_Date_Key",
+          "description" : null,
+          "_row_id" : "YS1lcuJKBIt8xJr-K3bBG"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Common_Law_Raised_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Common_Law_Raised_Date_Key",
+          "description" : null,
+          "_row_id" : "Pft4SX46xGcE2rr_PsuRR"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Common_Law_Outcome_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Common_Law_Outcome_Code",
+          "description" : null,
+          "_row_id" : "Db9iF8FR0cFnMYBssl5Rv"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Common_Law_Severity_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Common_Law_Severity_Code",
+          "description" : null,
+          "_row_id" : "nDALehR9OpaEKYzAEtP4t"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Medical_Certificate_Last_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Medical_Certificate_Last_Date_Key",
+          "description" : null,
+          "_row_id" : "kmPG91u8MrsrFJnogRlC6"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Loss_Day_of_Week_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Loss_Day_of_Week_Code",
+          "description" : null,
+          "_row_id" : "HJjKEY4acgqDXdUxHMvgt"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Estimated_Return_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Estimated_Return_Date_Key",
+          "description" : null,
+          "_row_id" : "-h6DKTDV4GYlAbf8C2KUK"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_IMA_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_IMA_Date_Key",
+          "description" : null,
+          "_row_id" : "VC8XOpmxXKmVvJ9fiXHAc"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Worker_RTW_Program",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Worker_RTW_Program",
+          "description" : null,
+          "_row_id" : "8gcdhpYjhlPdYF6fAi5_p"
+        }, {
+          "expression" : {
+            "expression" : "Claim_WC_Worker_RTW_Goals",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Worker_RTW_Goals",
+          "description" : null,
+          "_row_id" : "UCFLPSGPWOesYYRBsJaIf"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "SQ_V_Dim_Claim_Temp_WC_MT_LIA_EXPR_358_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "SQ_V_Dim_Claim_Temp_WC_MT_LIA_EXPR_358_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "40_DM_ORACmp_s_dim_claim_temp_SQ_V_Dim_Claim_Temp_WC_MT_LIA_SQ_V_Dim_Claim_Temp_WC_MT_LIA_out0" : {
+      "id" : "40_DM_ORACmp_s_dim_claim_temp_SQ_V_Dim_Claim_Temp_WC_MT_LIA_SQ_V_Dim_Claim_Temp_WC_MT_LIA_out0",
+      "component" : "SQLStatement",
+      "metadata" : {
+        "label" : "40_DM_ORACmp_s_dim_claim_temp_SQ_V_Dim_Claim_Temp_WC_MT_LIA"
+      },
+      "properties" : {
+        "fileTabs" : [ {
+          "path" : "output_port_0",
+          "id" : "output_port_0",
+          "language" : "sql",
+          "content" : "\nSELECT *\n\nFROM {{ prophecy_tmp_source('40_DM_ORAC_mp_s_dim_claim_temp', '40_DM_ORACmp_s_dim_claim_temp_SQ_V_Dim_Claim_Temp_WC_MT_LIA') }}\n\n"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_0",
+          "slug" : "input_port_0"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_0",
+          "slug" : "output_port_0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "SQ_V_Dim_Claim_Temp_CA_EXPR_360" : {
+      "id" : "SQ_V_Dim_Claim_Temp_CA_EXPR_360",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "SQ_V_Dim_Claim_Temp_CA_EXPR_360",
+        "x" : 220,
+        "y" : 420,
+        "phase" : 1
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "Claim_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Key",
+          "description" : null,
+          "_row_id" : "XHl9dKWnM9uxGHt02vDTy"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Number",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Number",
+          "description" : null,
+          "_row_id" : "Hf2A1ABniw6XmEPxLxt8k"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Cause_of_Loss_Description",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Cause_of_Loss_Description",
+          "description" : null,
+          "_row_id" : "jdEkmFsfNh4cjm16mmY3e"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Postcode",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Postcode",
+          "description" : null,
+          "_row_id" : "KQPTmXLmI7sMM8vn5yRcD"
+        }, {
+          "expression" : {
+            "expression" : "Claim_UX_Type_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_UX_Type_Code",
+          "description" : null,
+          "_row_id" : "5Z5QbbRH9qVbiJj7rQXnp"
+        }, {
+          "expression" : {
+            "expression" : "Claim_UX_Arrangement_Description",
+            "_row_id" : null
+          },
+          "alias" : "Claim_UX_Arrangement_Description",
+          "description" : null,
+          "_row_id" : "wgX8TLIBdV7SpksunNfC9"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Salvage_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Salvage_YN",
+          "description" : null,
+          "_row_id" : "glsTZVM10ax-EEnHNV3jq"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Recovery_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Recovery_YN",
+          "description" : null,
+          "_row_id" : "iVpFVoGD7Z37wXzd5PK7r"
+        }, {
+          "expression" : {
+            "expression" : "Company_Key",
+            "_row_id" : null
+          },
+          "alias" : "Company_Key",
+          "description" : null,
+          "_row_id" : "2yvnKqapYRfUKHgunVxwe"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Branch_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Branch_Key",
+          "description" : null,
+          "_row_id" : "rd6MF9p5TDAlHcKYBrxhk"
+        }, {
+          "expression" : {
+            "expression" : "Premium_Class_Key",
+            "_row_id" : null
+          },
+          "alias" : "Premium_Class_Key",
+          "description" : null,
+          "_row_id" : "rq8WtVq6Zl4rTe4Oly3im"
+        }, {
+          "expression" : {
+            "expression" : "Product_Key",
+            "_row_id" : null
+          },
+          "alias" : "Product_Key",
+          "description" : null,
+          "_row_id" : "FGKmCYOXCGISUfLHps__R"
+        }, {
+          "expression" : {
+            "expression" : "Global_LoB_Key",
+            "_row_id" : null
+          },
+          "alias" : "Global_LoB_Key",
+          "description" : null,
+          "_row_id" : "xXAATdMES9u5fduhXBQQ-"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Reported_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Reported_Date_Key",
+          "description" : null,
+          "_row_id" : "Tvt_ZO3p0Fhyd8Rq_b7Um"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Expiry_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Expiry_Date_Key",
+          "description" : null,
+          "_row_id" : "euI6YnWxif227iySSjNyW"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Loss_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Loss_Date_Key",
+          "description" : null,
+          "_row_id" : "CHOJS3UalRg5rlI2_uSkb"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Indemnity_Decision_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Indemnity_Decision_Key",
+          "description" : null,
+          "_row_id" : "XM4qfdDlCuhTz6JhgRn-u"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Indemnity_Decision_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Indemnity_Decision_Date_Key",
+          "description" : null,
+          "_row_id" : "SQBU_PxBmZpE4Rkre_Ry0"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Status_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Status_Date_Key",
+          "description" : null,
+          "_row_id" : "U_AWa2VaedZi1IdCUA8L-"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Solicitor_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Solicitor_Key",
+          "description" : null,
+          "_row_id" : "sYAnmeEcZVD2K0phwYC-n"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Assessor_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Assessor_Key",
+          "description" : null,
+          "_row_id" : "4slAHMbrBK12l42bkLdZG"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Investigator_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Investigator_Key",
+          "description" : null,
+          "_row_id" : "3r22XcV5N5vXaiMDKHj3Z"
+        }, {
+          "expression" : {
+            "expression" : "Catastrophe_Event_ICA_Key",
+            "_row_id" : null
+          },
+          "alias" : "Catastrophe_Event_ICA_Key",
+          "description" : null,
+          "_row_id" : "7v4hZAggQaRTxDORM9a12"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Handler_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Handler_Key",
+          "description" : null,
+          "_row_id" : "vRSfHMGRswAuFJk3SJrB_"
+        }, {
+          "expression" : {
+            "expression" : "Policy_Key",
+            "_row_id" : null
+          },
+          "alias" : "Policy_Key",
+          "description" : null,
+          "_row_id" : "VOxD7qp9oeZHvyQiGt-9y"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Portfolio_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Portfolio_Key",
+          "description" : null,
+          "_row_id" : "7Yp_-mcp7JetbNV6r3wC7"
+        }, {
+          "expression" : {
+            "expression" : "Risk_Key",
+            "_row_id" : null
+          },
+          "alias" : "Risk_Key",
+          "description" : null,
+          "_row_id" : "71dygda0jpfTFXtWjce3k"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Reopened_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Reopened_YN",
+          "description" : null,
+          "_row_id" : "GKwvTpq221qyer75yWLSq"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Notified_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Notified_Date_Key",
+          "description" : null,
+          "_row_id" : "nQKYo_FQOy9giyElpqkRC"
+        }, {
+          "expression" : {
+            "expression" : "Claim_State_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_State_Code",
+          "description" : null,
+          "_row_id" : "u6J-tMr6Rwi5c56UXEubl"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Type_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Type_Key",
+          "description" : null,
+          "_row_id" : "_MmSJ-B9SyAMPI9mB8fdG"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Status_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Status_Key",
+          "description" : null,
+          "_row_id" : "JH8SwVWJYsVWTOAuYRHzs"
+        }, {
+          "expression" : {
+            "expression" : "Risk_Class_Key",
+            "_row_id" : null
+          },
+          "alias" : "Risk_Class_Key",
+          "description" : null,
+          "_row_id" : "9x-fr-vgdwrznNNsrsd2D"
+        }, {
+          "expression" : {
+            "expression" : "Broker_Account_Key",
+            "_row_id" : null
+          },
+          "alias" : "Broker_Account_Key",
+          "description" : null,
+          "_row_id" : "uK4nMRRHV6xV0bHrtuVdJ"
+        }, {
+          "expression" : {
+            "expression" : "Client_Key",
+            "_row_id" : null
+          },
+          "alias" : "Client_Key",
+          "description" : null,
+          "_row_id" : "sThm29ernAKoLdfaTLd0G"
+        }, {
+          "expression" : {
+            "expression" : "Policy_Incep_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Policy_Incep_Date_Key",
+          "description" : null,
+          "_row_id" : "ywE7eeksZmNa-94dfFqEj"
+        }, {
+          "expression" : {
+            "expression" : "Policy_Period_Name",
+            "_row_id" : null
+          },
+          "alias" : "Policy_Period_Name",
+          "description" : null,
+          "_row_id" : "ilCfZS0T2QoqpoBZLeSP-"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Closed_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Closed_Date_Key",
+          "description" : null,
+          "_row_id" : "yL0n74F87nJrzMR25ePAS"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Non_Standard_Type_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Non_Standard_Type_Key",
+          "description" : null,
+          "_row_id" : "WDCgkuBGrjepIH981oUnk"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Reopened_Last_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Reopened_Last_Date_Key",
+          "description" : null,
+          "_row_id" : "-6DTBB7p216jGlwyX83XB"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Date_Accepted_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Date_Accepted_Key",
+          "description" : null,
+          "_row_id" : "aWFFkXkRSV7H0XcbYMi4J"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Date_Rejected_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Date_Rejected_Key",
+          "description" : null,
+          "_row_id" : "FZ1s_caE528GHZWN_FcQJ"
+        }, {
+          "expression" : {
+            "expression" : "Industry_Class_ANZSIC_93_Key",
+            "_row_id" : null
+          },
+          "alias" : "Industry_Class_ANZSIC_93_Key",
+          "description" : null,
+          "_row_id" : "QVRMul2OcSwhdN3z2ZRhq"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Liability_Status_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Liability_Status_Code",
+          "description" : null,
+          "_row_id" : "cSQ-38CylqezT2eH2HTb0"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Liability_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Liability_Date_Key",
+          "description" : null,
+          "_row_id" : "MUcSueoDSeUT91eAUW--V"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Agg_Arrangement_Type_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Agg_Arrangement_Type_Key",
+          "description" : null,
+          "_row_id" : "TJztKasCWKFgV8wGzVSTu"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Agg_Arrangement_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Agg_Arrangement_Key",
+          "description" : null,
+          "_row_id" : "FKrRdXCqmT6g7tHTXC2WC"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Loss_Location_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Loss_Location_Key",
+          "description" : null,
+          "_row_id" : "n2fyGgX30rtLG3-AS7E_5"
+        }, {
+          "expression" : {
+            "expression" : "Claim_BGC_Status_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_BGC_Status_Code",
+          "description" : null,
+          "_row_id" : "s6OY0vjfrCo1KrUs-aneg"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Loss_Date_Difference_Days_Number",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Loss_Date_Difference_Days_Number",
+          "description" : null,
+          "_row_id" : "PUlD-3vVse9zD1UPmbTQI"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Loss_Date_Modified_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Loss_Date_Modified_Date_Key",
+          "description" : null,
+          "_row_id" : "jxx8-AuKJEiery3MZ-Gy_"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Loss_Date_Modified_User_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Loss_Date_Modified_User_Key",
+          "description" : null,
+          "_row_id" : "Jy_fNvRII8MhkTWF2d13X"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Loss_Date_Modified_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Loss_Date_Modified_YN",
+          "description" : null,
+          "_row_id" : "l-cOw5WekqUg6-gzjE8y9"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Loss_Orig_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Loss_Orig_Date_Key",
+          "description" : null,
+          "_row_id" : "ud1vY8bxH6oSK1d12ekuo"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Recovery_Abandonment_Reason_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Recovery_Abandonment_Reason_Key",
+          "description" : null,
+          "_row_id" : "-2-iiFoTnrqKcj91-LrKI"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Recovery_Changed_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Recovery_Changed_YN",
+          "description" : null,
+          "_row_id" : "TEWkrwOcfdF36WoMwAR-J"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Recovery_Changed_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Recovery_Changed_Date_Key",
+          "description" : null,
+          "_row_id" : "gc-eabmROP8Ywo-8kfluS"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Updated_Datetime",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Updated_Datetime",
+          "description" : null,
+          "_row_id" : "T1dqB6KRVjmyOy6Z-8AVi"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Updated_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Updated_Date_Key",
+          "description" : null,
+          "_row_id" : "VHcaFvcHwZCYdA7q7Clz3"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Updated_User_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Updated_User_Key",
+          "description" : null,
+          "_row_id" : "LDirkEi0WWw9EoQSB4mk8"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Duplicate_Status_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Duplicate_Status_Key",
+          "description" : null,
+          "_row_id" : "Whz-ifxHGZsF8yOZZZsje"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Fraud_Type_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Fraud_Type_Key",
+          "description" : null,
+          "_row_id" : "AhSezq8OIhkOTD6UjAlvR"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Duplicate_Loss_Days_Tolerance_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Duplicate_Loss_Days_Tolerance_Key",
+          "description" : null,
+          "_row_id" : "XEUz3KsVEb3643Jc4Ezby"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Duplicate_Loss_Days_Number",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Duplicate_Loss_Days_Number",
+          "description" : null,
+          "_row_id" : "Ufx4wDgm1U1yJ61aKbKhy"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Duplicate_Potential_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Duplicate_Potential_YN",
+          "description" : null,
+          "_row_id" : "AiW9FbZeJumJc2nhk8ZYY"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Duplicate_Potential_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Duplicate_Potential_Key",
+          "description" : null,
+          "_row_id" : "P-4RiP2O5Nhaz7QUl4ra5"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Gross_Incurred_Loss_Type_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Gross_Incurred_Loss_Type_Key",
+          "description" : null,
+          "_row_id" : "2pLrweZhGFUwXyj6gS7Vl"
+        }, {
+          "expression" : {
+            "expression" : "Client_Claim_Number",
+            "_row_id" : null
+          },
+          "alias" : "Client_Claim_Number",
+          "description" : null,
+          "_row_id" : "qlY1jj3YhZZwoFj9Figlq"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Vulnerable_Flag",
+            "_row_id" : null
+          },
+          "alias" : "Claim_vulnerable_flag",
+          "description" : null,
+          "_row_id" : "GrEbEJxFBZCptcEq4ZbWx"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Time_Occurence",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Time_Occurence",
+          "description" : null,
+          "_row_id" : "i9o_XSccWQOimOMnNsI6c"
+        }, {
+          "expression" : {
+            "expression" : "Claim_Cyclone_Flag",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Cyclone_Flag",
+          "description" : null,
+          "_row_id" : "WhKxxq79lLdUVxLnFEeY9"
+        }, {
+          "expression" : {
+            "expression" : "ARPC_Incident_Number",
+            "_row_id" : null
+          },
+          "alias" : "ARPC_Incident_Number",
+          "description" : null,
+          "_row_id" : "3-9yLz5xkQZkEPbvY2K5b"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "SQ_V_Dim_Claim_Temp_CA_EXPR_360_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "SQ_V_Dim_Claim_Temp_CA_EXPR_360_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "Dim_Claim_Temp" : {
+      "id" : "Dim_Claim_Temp",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "Dim_Claim_Temp",
+        "phase" : 1
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "\nSELECT *\n\nFROM EXP_DATATYPE_CONVERSION1\n\n",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Dim_Claim_Temp_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "4BVLsGK2c-Fn6PChMGw5s",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "Jnr_Claim_CA_WC_LIA_Claimant" : {
+      "id" : "Jnr_Claim_CA_WC_LIA_Claimant",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "Jnr_Claim_CA_WC_LIA_Claimant",
+        "x" : 620,
+        "y" : 200,
+        "phase" : 1
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "expression" : "(in0.Claim_Key2 = in1.Claim_Key)",
+            "_row_id" : null
+          },
+          "joinType" : "inner",
+          "rightAlias" : null
+        } ],
+        "allowSelection" : false,
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "in1.Claim_Loss_Date_Modified_User_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Loss_Date_Modified_User_Key",
+          "description" : null,
+          "_row_id" : "6zCuwTih1pubjZDRHgJMa"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_WC_Department_Name",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Department_Name",
+          "description" : null,
+          "_row_id" : "L6W2NjCDfMHwy8v9i755d"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Notified_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Notified_Date_Key",
+          "description" : null,
+          "_row_id" : "TUyXWonPErZJXuNRX7PeX"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_WC_Injury_Object_Involved_Name",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Injury_Object_Involved_Name",
+          "description" : null,
+          "_row_id" : "ACstAlqG7hsaYtlNL_VS5"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_WC_Worker_Postcode",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Worker_Postcode",
+          "description" : null,
+          "_row_id" : "UqIloRxIPaGEkyIjv0vg6"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_WC_Medical_Certificate_Last_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Medical_Certificate_Last_Date_Key",
+          "description" : null,
+          "_row_id" : "mrhEO9GaV8Bkr_xSUfB3x"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Duplicate_Loss_Days_Tolerance_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Duplicate_Loss_Days_Tolerance_Key",
+          "description" : null,
+          "_row_id" : "5lf_x4TrVCAYSG_GY6KqB"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Reopened_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Reopened_YN",
+          "description" : null,
+          "_row_id" : "vBnnlbgAZ52ulNT4AugE-"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Liability_Other_Damages_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Liability_Other_Damages_YN",
+          "description" : null,
+          "_row_id" : "1Q4tHlcVFpmirnlcgaTia"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Solicitor_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Solicitor_Key",
+          "description" : null,
+          "_row_id" : "ehsUnz1IVn27aXR5gLhmZ"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Indemnity_Decision_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Indemnity_Decision_Key",
+          "description" : null,
+          "_row_id" : "__1reGvcteOcvnok8OuwJ"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Reported_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Reported_Date_Key",
+          "description" : null,
+          "_row_id" : "Jepll3zdPBno0522FllhF"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Liability_Litigation_Status_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Liability_Litigation_Status_Code",
+          "description" : null,
+          "_row_id" : "6_PID8XI2T6YBm84deALf"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_WC_Loss_Time_Number",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Loss_Time_Number",
+          "description" : null,
+          "_row_id" : "8A8crhrG3N1x3utIDVyJH"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Key",
+          "description" : null,
+          "_row_id" : "jYU5kW1LqGrBqFZ_0OK-F"
+        }, {
+          "expression" : {
+            "expression" : "in1.Company_Key",
+            "_row_id" : null
+          },
+          "alias" : "Company_Key",
+          "description" : null,
+          "_row_id" : "xtCvg6WWUFvGWNqwoPqd0"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_WC_IMA_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_IMA_Date_Key",
+          "description" : null,
+          "_row_id" : "JmjTSBsZhlZc42q2BB9N2"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_WC_Breakdown_Agency_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Breakdown_Agency_Key",
+          "description" : null,
+          "_row_id" : "jtEy3QHG8sUribhSWwByp"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Motor_Vehicle_Usage_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Vehicle_Usage_Code",
+          "description" : null,
+          "_row_id" : "GSpPQmkHQfSG3Anlaaxux"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_WC_Classification_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Classification_Code",
+          "description" : null,
+          "_row_id" : "0a-v3BLB1VjzfaBA54KWj"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Key1",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Key1",
+          "description" : null,
+          "_row_id" : "HhaBj21xCxqatfOtY1Xmd"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Indemnity_Decision_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Indemnity_Decision_Date_Key",
+          "description" : null,
+          "_row_id" : "OwqQ5oX-RYl0da3mvUiST"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Motor_Fault_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Fault_Key",
+          "description" : null,
+          "_row_id" : "slvEiLRImi_ZHvyMtGhmU"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Liability_Cause_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Liability_Cause_Code",
+          "description" : null,
+          "_row_id" : "xCeCj4wuxaVkvO9sanezL"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Cause_of_Loss_Description",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Cause_of_Loss_Description",
+          "description" : null,
+          "_row_id" : "ZJpFLxxtQEYnASEdI2wE1"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Liability_Law_Costs_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Liability_Law_Costs_YN",
+          "description" : null,
+          "_row_id" : "o77HjR5x8Q_NMoUJAgHCp"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Updated_User_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Updated_User_Key",
+          "description" : null,
+          "_row_id" : "Q5419BnOYl_Q1rYRpWj5j"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Loss_Date_Modified_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Loss_Date_Modified_Date_Key",
+          "description" : null,
+          "_row_id" : "ePMzbNe9Ih8yoSVjknkIK"
+        }, {
+          "expression" : {
+            "expression" : "in1.Risk_Class_Key",
+            "_row_id" : null
+          },
+          "alias" : "Risk_Class_Key",
+          "description" : null,
+          "_row_id" : "WyKeyq9Wrz9m7UkBL9TO2"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Number",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Number",
+          "description" : null,
+          "_row_id" : "hP1EFTub0WkPxKJfkHu6Y"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_WC_Gender_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Gender_Code",
+          "description" : null,
+          "_row_id" : "KMwSvpF_Qrowix0psqAfT"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Motor_Vehicle_Class_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Vehicle_Class_Key",
+          "description" : null,
+          "_row_id" : "2MZcFyF7uMeeITU4v75bJ"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Postcode",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Postcode",
+          "description" : null,
+          "_row_id" : "2BqT6k4tLSKop0sa5cSf7"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_WC_Injury_Mechanism_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Injury_Mechanism_Key",
+          "description" : null,
+          "_row_id" : "XfEkVkVLhpKFSdZTAyFve"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Recovery_Changed_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Recovery_Changed_Date_Key",
+          "description" : null,
+          "_row_id" : "9PY1MkIANvovIwRNXtO98"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Loss_Location_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Loss_Location_Key",
+          "description" : null,
+          "_row_id" : "Jck4b5xA6t2kQhGN8bVN5"
+        }, {
+          "expression" : {
+            "expression" : "in1.ASCO_Key",
+            "_row_id" : null
+          },
+          "alias" : "ASCO_Key",
+          "description" : null,
+          "_row_id" : "JQeRM-bBCUKU5Ecse5pqU"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_WC_Fitness_Level_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Fitness_Level_Code",
+          "description" : null,
+          "_row_id" : "6HDQ-yz06MRwWkvbKlIuF"
+        }, {
+          "expression" : {
+            "expression" : "in1.Industry_Class_ANZSIC_93_Key",
+            "_row_id" : null
+          },
+          "alias" : "Industry_Class_ANZSIC_93_Key",
+          "description" : null,
+          "_row_id" : "r0Gk3Mf_EavnVGdj4EyAj"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_WC_Injury_Nature_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Injury_Nature_Key",
+          "description" : null,
+          "_row_id" : "xJ_EJTud5R-gXunVag6GM"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Duplicate_Status_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Duplicate_Status_Key",
+          "description" : null,
+          "_row_id" : "hLYXUfsKhTT1HLJ67lQft"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Liability_Property_Damage_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Liability_Property_Damage_YN",
+          "description" : null,
+          "_row_id" : "20WpZ-edr9G1qLk4lA8i1"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Loss_Date_Difference_Days_Number",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Loss_Date_Difference_Days_Number",
+          "description" : null,
+          "_row_id" : "yZy7uTSSyGJ0rviL-3poo"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Date_Accepted_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Date_Accepted_Key",
+          "description" : null,
+          "_row_id" : "drcdTtAlWCWs9TxspvPw5"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Liability_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Liability_Date_Key",
+          "description" : null,
+          "_row_id" : "4ISwgugp3f69LO8ei_5pi"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Liability_Personal_Injury_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Liability_Personal_Injury_YN",
+          "description" : null,
+          "_row_id" : "FeI_bU0-LDmb2pmDdLsbL"
+        }, {
+          "expression" : {
+            "expression" : "in1.Catastrophe_Event_ICA_Key",
+            "_row_id" : null
+          },
+          "alias" : "Catastrophe_Event_ICA_Key",
+          "description" : null,
+          "_row_id" : "jq-6R1eGwrjXv6zJZ21ws"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_WC_Common_Law_Outcome_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Common_Law_Outcome_Code",
+          "description" : null,
+          "_row_id" : "LDmnMpoDDooSW34wP5uDd"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_WC_Worker_Weekly_Hours_Time",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Worker_Weekly_Hours_Time",
+          "description" : null,
+          "_row_id" : "AjT_ytAFyutjso0gn6HJe"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_WC_Received_Date_by_Employer",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Received_Date_by_Employer",
+          "description" : null,
+          "_row_id" : "Z69c6fT2-DCNCVDEfBqwH"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Motor_Vehicle_Manufactured_Year_Number",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Vehicle_Manufactured_Year_Number",
+          "description" : null,
+          "_row_id" : "nR53SUaox5R861rwEaFeZ"
+        }, {
+          "expression" : {
+            "expression" : "in1.Broker_Account_Key",
+            "_row_id" : null
+          },
+          "alias" : "Broker_Account_Key",
+          "description" : null,
+          "_row_id" : "DK76kM5ul7DXhj8Zt1-rJ"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_WC_Work_Resumed_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Work_Resumed_Date_Key",
+          "description" : null,
+          "_row_id" : "c3p4K1KvMGlyUl1PlHhIw"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_WC_Occupation_Name",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Occupation_Name",
+          "description" : null,
+          "_row_id" : "DaSyvWSbnNVzi5u-KS9ZU"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claimant_Name",
+            "_row_id" : null
+          },
+          "alias" : "Claimant_Name",
+          "description" : null,
+          "_row_id" : "TeHaolFkl4xzKKI4NPhnv"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Updated_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Updated_Date_Key",
+          "description" : null,
+          "_row_id" : "4fdqQ5iuL9Yg3XsivgTJv"
+        }, {
+          "expression" : {
+            "expression" : "in1.Policy_Key",
+            "_row_id" : null
+          },
+          "alias" : "Policy_Key",
+          "description" : null,
+          "_row_id" : "PqYaj55iFZuTL6jBvgqEy"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Type_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Type_Key",
+          "description" : null,
+          "_row_id" : "Uc8TfTP_47TTkDyQYdQvo"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Liability_Severity_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Liability_Severity_Code",
+          "description" : null,
+          "_row_id" : "qmqKT5g2tePW1fOwLjJ1n"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Motor_Cost_Centre_Name",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Cost_Centre_Name",
+          "description" : null,
+          "_row_id" : "6OZFVWW14yac0WL-01XNU"
+        }, {
+          "expression" : {
+            "expression" : "in1.Premium_Class_Key",
+            "_row_id" : null
+          },
+          "alias" : "Premium_Class_Key",
+          "description" : null,
+          "_row_id" : "Sxvtw5pwsNghu7kKuquS1"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Agg_Arrangement_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Agg_Arrangement_Key",
+          "description" : null,
+          "_row_id" : "x5ngomAjCLUOrEC2Kd5_y"
+        }, {
+          "expression" : {
+            "expression" : "in1.ARPC_Incident_Number",
+            "_row_id" : null
+          },
+          "alias" : "ARPC_Incident_Number",
+          "description" : null,
+          "_row_id" : "q4YrgV7GsH0asfXzr3fab"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Motor_Driver_Gender_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Driver_Gender_Code",
+          "description" : null,
+          "_row_id" : "-is1r4NaPrT3loWgedgvc"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Liability_Status_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Liability_Status_Code",
+          "description" : null,
+          "_row_id" : "BfrnY13iFsXHJXYJF_x5F"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Recovery_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Recovery_YN",
+          "description" : null,
+          "_row_id" : "xrq0ZZU_DSrBKx1YDbI_e"
+        }, {
+          "expression" : {
+            "expression" : "in1.Product_Key",
+            "_row_id" : null
+          },
+          "alias" : "Product_Key",
+          "description" : null,
+          "_row_id" : "krvhGVVomKU60HoOK2vpW"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Salvage_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Salvage_YN",
+          "description" : null,
+          "_row_id" : "ZjoLxQAp7p_N6wNJ_vZVk"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Duplicate_Loss_Days_Number",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Duplicate_Loss_Days_Number",
+          "description" : null,
+          "_row_id" : "pYwnW_VoQpztXm78NyIO5"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Duplicate_Potential_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Duplicate_Potential_YN",
+          "description" : null,
+          "_row_id" : "8KeIwxb0se_7DZf56MlQE"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_WC_Injury_Most_Serious_Description",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Injury_Most_Serious_Description",
+          "description" : null,
+          "_row_id" : "6x6oj3Yuy4ySEV4QuKnek"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Liability_Financial_Loss_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Liability_Financial_Loss_YN",
+          "description" : null,
+          "_row_id" : "ml29w0TiWJod5YbETDAwr"
+        }, {
+          "expression" : {
+            "expression" : "in1.Industry_Class_ANZSIC_2006_Key",
+            "_row_id" : null
+          },
+          "alias" : "Industry_Class_ANZSIC_2006_Key",
+          "description" : null,
+          "_row_id" : "h5cWh18e9_dXlaC9fj6o5"
+        }, {
+          "expression" : {
+            "expression" : "in1.Risk_Key",
+            "_row_id" : null
+          },
+          "alias" : "Risk_Key",
+          "description" : null,
+          "_row_id" : "lnsU0okoByqVTW2xK6Hhy"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Investigator_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Investigator_Key",
+          "description" : null,
+          "_row_id" : "TwQLurZbSP7woa3c5jIiX"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Agg_Arrangement_Type_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Agg_Arrangement_Type_Key",
+          "description" : null,
+          "_row_id" : "0-Qm6TIh-7FXe7UwmCJQc"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Motor_Vehicle_Description",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Vehicle_Description",
+          "description" : null,
+          "_row_id" : "sZIeXMhQR6YJj7DdfPeba"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_WC_Marital_Status_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Marital_Status_Code",
+          "description" : null,
+          "_row_id" : "tZDJoo1hak3No1FRbEfzi"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_WC_Worker_Name",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Worker_Name",
+          "description" : null,
+          "_row_id" : "dm8fxZThIGl5j6PeLj1Ku"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Duty_Status",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Duty_Status",
+          "description" : null,
+          "_row_id" : "bkXPXNXTdY7w1K8uDlefN"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_WC_Worker_Weekly_Hours_Rate",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Worker_Weekly_Hours_Rate",
+          "description" : null,
+          "_row_id" : "1kN-QgPU-zWRepus8OmP7"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Branch_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Branch_Key",
+          "description" : null,
+          "_row_id" : "tJ-0jhnUkvUn6YfSb6vxI"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_WC_Hourly_Rate_Thereafter_Amount",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Hourly_Rate_Thereafter_Amount",
+          "description" : null,
+          "_row_id" : "JzdOrck7fG0JcwQ8Ap9jx"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Fraud_Type_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Fraud_Type_Key",
+          "description" : null,
+          "_row_id" : "QC6MDamTtZ-DIEB5Nec1s"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Motor_Vehicle_Rego_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Vehicle_Rego_Code",
+          "description" : null,
+          "_row_id" : "ItSSJxqUOq1iqbNJh9UEG"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Portfolio_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Portfolio_Key",
+          "description" : null,
+          "_row_id" : "FfWWXLr5J_lao-uJS3_Gu"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Motor_Bodily_Injury_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Bodily_Injury_YN",
+          "description" : null,
+          "_row_id" : "XAcWzxOqsLkq4XQRqHEOs"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Loss_Date_Modified_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Loss_Date_Modified_YN",
+          "description" : null,
+          "_row_id" : "a-6FtvXcd4TiGAZpQCAIe"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_WC_Lost_Minutes_Number",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Lost_Minutes_Number",
+          "description" : null,
+          "_row_id" : "sJFLbQ19lyvpRNmxrapjD"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Gross_Incurred_Loss_Type_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Gross_Incurred_Loss_Type_Key",
+          "description" : null,
+          "_row_id" : "a7t1ZGnloEeFx2h-Fg6_a"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_WC_Lost_Hours_Number",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Lost_Hours_Number",
+          "description" : null,
+          "_row_id" : "6BkKgG65NdIi0vSXLaj4H"
+        }, {
+          "expression" : {
+            "expression" : "in1.Client_Claim_Number",
+            "_row_id" : null
+          },
+          "alias" : "Client_Claim_Number",
+          "description" : null,
+          "_row_id" : "lt4aFlVy2bUYUv2saIY5I"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_WC_Work_Status",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Work_Status",
+          "description" : null,
+          "_row_id" : "AqyTq0RoHeBqgWtBR7Smc"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_WC_Estimated_Return_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Estimated_Return_Date_Key",
+          "description" : null,
+          "_row_id" : "Z43cOPS1jPb-1fYnXB3AM"
+        }, {
+          "expression" : {
+            "expression" : "in1.Global_LoB_Key",
+            "_row_id" : null
+          },
+          "alias" : "Global_LoB_Key",
+          "description" : null,
+          "_row_id" : "7n_lBHSyDSfn4FjACb9WY"
+        }, {
+          "expression" : {
+            "expression" : "in1.Policy_Period_Name",
+            "_row_id" : null
+          },
+          "alias" : "Policy_Period_Name",
+          "description" : null,
+          "_row_id" : "FCLvXdlj4fcW6vDGdkLzo"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Recovery_Abandonment_Reason_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Recovery_Abandonment_Reason_Key",
+          "description" : null,
+          "_row_id" : "miCM7Q4yCO1xI5TQarHGn"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Handler_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Handler_Key",
+          "description" : null,
+          "_row_id" : "LsXG0f5X-4fnkpSOhGpxt"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Updated_Datetime",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Updated_Datetime",
+          "description" : null,
+          "_row_id" : "PQTV3dmQ_nUBippxu6yl2"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_Motor_Driver_Name",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Driver_Name",
+          "description" : null,
+          "_row_id" : "8L0Bd5JuJc9E8UgnfIhZd"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_BGC_Status_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_BGC_Status_Code",
+          "description" : null,
+          "_row_id" : "sBzCLTQ5ZbdiyHlDSLmS7"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_WC_Common_Law_Raised_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Common_Law_Raised_Date_Key",
+          "description" : null,
+          "_row_id" : "FW1vHAitKWYGiK4j6YZG1"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Reopened_Last_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Reopened_Last_Date_Key",
+          "description" : null,
+          "_row_id" : "HlDzYJpZG1fPrrRXXpdcl"
+        }, {
+          "expression" : {
+            "expression" : "in1.Client_Key",
+            "_row_id" : null
+          },
+          "alias" : "Client_Key",
+          "description" : null,
+          "_row_id" : "nWUGKYbi0vTsKT08MXjnT"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Date_Rejected_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Date_Rejected_Key",
+          "description" : null,
+          "_row_id" : "sDfkd2k0bwD9fuKpDP4GP"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_WC_Full_Time_Part_Time_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Full_Time_Part_Time_Code",
+          "description" : null,
+          "_row_id" : "YOs6W5VGPKJl16XHLdVCm"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_WC_Worker_State_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Worker_State_Code",
+          "description" : null,
+          "_row_id" : "97hyaHWZd4LD1C4DcpYE3"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Motor_Vehicle_Finance_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Vehicle_Finance_YN",
+          "description" : null,
+          "_row_id" : "6XEwWSFm-4vsemFYvMlPr"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_WC_Worker_Suburb_Name",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Worker_Suburb_Name",
+          "description" : null,
+          "_row_id" : "GePbilAH8eNDoOk4ag09Y"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Motor_Vehicle_Loss_Day_of_Week_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Vehicle_Loss_Day_of_Week_Code",
+          "description" : null,
+          "_row_id" : "9gf1IxUvAtTTsU0DZWO4c"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Cyclone_Flag",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Cyclone_Flag",
+          "description" : null,
+          "_row_id" : "8BcrLvsZiCe8-MhsSAByv"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_UX_Type_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_UX_Type_Code",
+          "description" : null,
+          "_row_id" : "z0lNK1mqt2FAmwZJHL2c4"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Motor_Driver_Licensed_Years_Number",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Driver_Licensed_Years_Number",
+          "description" : null,
+          "_row_id" : "rQVrCwUEDrp7zSllQ6QiX"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Division_Name",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Division_Name",
+          "description" : null,
+          "_row_id" : "i9QH5hsCkQsOAqXsbQW22"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_Motor_Driver_Names_Text",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Driver_Names_Text",
+          "description" : null,
+          "_row_id" : "Y-6vebAAgraysDhkzKY7J"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Expiry_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Expiry_Date_Key",
+          "description" : null,
+          "_row_id" : "0OMOafMBaYrbbS-GOy4PT"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Status_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Status_Key",
+          "description" : null,
+          "_row_id" : "pHytOKTSyz47Q6t1NUdBB"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Time_Occurence",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Time_Occurence",
+          "description" : null,
+          "_row_id" : "stSgdWP73On8fqasfPZnL"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_WC_IMA_Reviewed_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_IMA_Reviewed_YN",
+          "description" : null,
+          "_row_id" : "6g5jPjOJNL-XQQwBptTMh"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_WC_Worker_RTW_Program",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Worker_RTW_Program",
+          "description" : null,
+          "_row_id" : "o9fbf__ecZ97vnb4fy_tU"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Loss_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Loss_Date_Key",
+          "description" : null,
+          "_row_id" : "PqgZrNRmFAiY2FYmH-3-T"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Closed_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Closed_Date_Key",
+          "description" : null,
+          "_row_id" : "F6bHI2FJPzo3eZWbAoq4f"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_WC_Birth_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Birth_Date_Key",
+          "description" : null,
+          "_row_id" : "mhEz6ra3qsnOvLBCZDq5C"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_WC_Hourly_Rate_First_13_Weeks_Amount",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Hourly_Rate_First_13_Weeks_Amount",
+          "description" : null,
+          "_row_id" : "ob6z9wV8NJMgrA8zIG-U3"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_Key2",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Key2",
+          "description" : null,
+          "_row_id" : "48_MLWdGDa8S-EqTzAy-q"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Non_Standard_Type_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Non_Standard_Type_Key",
+          "description" : null,
+          "_row_id" : "K3apvS0-WxNqYztiH1j6X"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Motor_Vehicle_Total_Loss_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Vehicle_Total_Loss_YN",
+          "description" : null,
+          "_row_id" : "2UKF9BcMD9DbPvaLA_Hvp"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_WC_Ceased_Work_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Ceased_Work_Date_Key",
+          "description" : null,
+          "_row_id" : "ZMNd5Nd9nTXBTwpYnF3uL"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_WC_Common_Law_Severity_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Common_Law_Severity_Code",
+          "description" : null,
+          "_row_id" : "gRz7twfy_DPbjToJaZYEv"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_WC_Agency_of_Accident_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Agency_of_Accident_Key",
+          "description" : null,
+          "_row_id" : "oxeOHK9_GH0a_OIlFg_o0"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_WC_Worker_RTW_Goals",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Worker_RTW_Goals",
+          "description" : null,
+          "_row_id" : "NuSIg7olBR6T1EhL1P7-U"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Loss_Orig_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Loss_Orig_Date_Key",
+          "description" : null,
+          "_row_id" : "qCoaIKVT3GRi9nU6VL0yy"
+        }, {
+          "expression" : {
+            "expression" : "in1.Policy_Incep_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Policy_Incep_Date_Key",
+          "description" : null,
+          "_row_id" : "iU9bCna7h0k9CGUornC_Y"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Duplicate_Potential_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Duplicate_Potential_Key",
+          "description" : null,
+          "_row_id" : "70CjxOhgmwcGbwrfoCG_b"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Motor_Vehicle_Loss_Time_Number",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Vehicle_Loss_Time_Number",
+          "description" : null,
+          "_row_id" : "_lfBV6FhBf1hrAzClUY_0"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_vulnerable_flag",
+            "_row_id" : null
+          },
+          "alias" : "Claim_vulnerable_flag",
+          "description" : null,
+          "_row_id" : "FA2GUzTdeShKtDCQdY2Kk"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Status_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Status_Date_Key",
+          "description" : null,
+          "_row_id" : "OukIcZ39y0Dz82qnqPDiK"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Motor_Driver_Age_Years_Number",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Driver_Age_Years_Number",
+          "description" : null,
+          "_row_id" : "LVE2SJPabsGl0Zy-xL_u0"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_WC_Loss_Day_of_Week_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Loss_Day_of_Week_Code",
+          "description" : null,
+          "_row_id" : "2TIe9jKF5YJNI87t3gkIQ"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_WC_Body_Location_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Body_Location_Key",
+          "description" : null,
+          "_row_id" : "8HNA7x1rWQ2kPPYQBGQkk"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_State_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_State_Code",
+          "description" : null,
+          "_row_id" : "3dN-jg-F9Meg7z-ogJoZd"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Recovery_Changed_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Recovery_Changed_YN",
+          "description" : null,
+          "_row_id" : "DcwD9mOIBBoPWrT30fkq2"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Assessor_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Assessor_Key",
+          "description" : null,
+          "_row_id" : "rJkboN1RekDQnPA4NBQQF"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_UX_Arrangement_Description",
+            "_row_id" : null
+          },
+          "alias" : "Claim_UX_Arrangement_Description",
+          "description" : null,
+          "_row_id" : "7-alE2CRz211hhobkSG5K"
+        } ],
+        "activeTab" : "conditions",
+        "columnsSelector" : [ ],
+        "headAlias" : "in0"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Jnr_Claim_CA_WC_LIA_Claimant_in0",
+          "slug" : "in0"
+        }, {
+          "id" : "Jnr_Claim_CA_WC_LIA_Claimant_in1",
+          "slug" : "in1"
+        } ],
+        "outputs" : [ {
+          "id" : "Jnr_Claim_CA_WC_LIA_Claimant_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "Jnr_Claim_CA_WC_LIA" : {
+      "id" : "Jnr_Claim_CA_WC_LIA",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "Jnr_Claim_CA_WC_LIA",
+        "x" : 420,
+        "y" : 320,
+        "phase" : 1
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "expression" : "(in0.Claim_Key1 = in1.Claim_Key)",
+            "_row_id" : null
+          },
+          "joinType" : "inner",
+          "rightAlias" : null
+        } ],
+        "allowSelection" : false,
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "in1.Claim_Loss_Date_Modified_User_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Loss_Date_Modified_User_Key",
+          "description" : null,
+          "_row_id" : "QS3ccdr7u56F0eBbxxWoQ"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_WC_Department_Name",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Department_Name",
+          "description" : null,
+          "_row_id" : "rvDFDUP-j2eH_0-cwhYKx"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Notified_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Notified_Date_Key",
+          "description" : null,
+          "_row_id" : "gsSIU0vwy6BHJjfkgpA0W"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_WC_Injury_Object_Involved_Name",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Injury_Object_Involved_Name",
+          "description" : null,
+          "_row_id" : "v75DuP96LFBhH2udc_OHW"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_WC_Worker_Postcode",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Worker_Postcode",
+          "description" : null,
+          "_row_id" : "SrqiuSpClyFp_g0llrW6b"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_WC_Medical_Certificate_Last_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Medical_Certificate_Last_Date_Key",
+          "description" : null,
+          "_row_id" : "myPAaDOHoCDJBh2ps0wCT"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Duplicate_Loss_Days_Tolerance_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Duplicate_Loss_Days_Tolerance_Key",
+          "description" : null,
+          "_row_id" : "ntwuFCJ50h7A5hTAi0XH6"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Reopened_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Reopened_YN",
+          "description" : null,
+          "_row_id" : "0WMINEgTbPo_7WYe4GtJE"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_Liability_Other_Damages_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Liability_Other_Damages_YN",
+          "description" : null,
+          "_row_id" : "S7Q8ooBX4yXxOyhKLh82P"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Solicitor_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Solicitor_Key",
+          "description" : null,
+          "_row_id" : "XzM5f566sW3bNDZLIVmk3"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Indemnity_Decision_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Indemnity_Decision_Key",
+          "description" : null,
+          "_row_id" : "_fHfh483vOUoayyjejhZa"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Reported_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Reported_Date_Key",
+          "description" : null,
+          "_row_id" : "z7FUvJp-DSJHD3jmibFQo"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_Liability_Litigation_Status_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Liability_Litigation_Status_Code",
+          "description" : null,
+          "_row_id" : "9Sni_Cz4Dhewt5xebljFw"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_WC_Loss_Time_Number",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Loss_Time_Number",
+          "description" : null,
+          "_row_id" : "MxQdYvhvnQ1-f2IhKvMnY"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Key",
+          "description" : null,
+          "_row_id" : "D64uM8sBd4Y2pbur0vr0w"
+        }, {
+          "expression" : {
+            "expression" : "in1.Company_Key",
+            "_row_id" : null
+          },
+          "alias" : "Company_Key",
+          "description" : null,
+          "_row_id" : "vwHQBWp0I_8yr5W6OGT2q"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_WC_IMA_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_IMA_Date_Key",
+          "description" : null,
+          "_row_id" : "EuUfmC9qLBZ2FEuXybE2J"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_WC_Breakdown_Agency_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Breakdown_Agency_Key",
+          "description" : null,
+          "_row_id" : "EAPvRtVjPMlCI6BvMRQ0f"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_Motor_Vehicle_Usage_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Vehicle_Usage_Code",
+          "description" : null,
+          "_row_id" : "TBU-4BY8Yyqk38Nu_xaKA"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_WC_Classification_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Classification_Code",
+          "description" : null,
+          "_row_id" : "iliwanTF1cWsNWMWCdj-1"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_Key1",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Key1",
+          "description" : null,
+          "_row_id" : "4vzoGuonSF9RhMgjl_t2s"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Indemnity_Decision_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Indemnity_Decision_Date_Key",
+          "description" : null,
+          "_row_id" : "zDt0KLvbRaoF8qwPRHesb"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_Motor_Fault_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Fault_Key",
+          "description" : null,
+          "_row_id" : "fB_1D4MJqBG3mMf8GsMyi"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_Liability_Cause_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Liability_Cause_Code",
+          "description" : null,
+          "_row_id" : "0V7H_XGJfyolMvN4tb9_T"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Cause_of_Loss_Description",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Cause_of_Loss_Description",
+          "description" : null,
+          "_row_id" : "ppd_iiULQ0mp5oC34c5Hx"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_Liability_Law_Costs_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Liability_Law_Costs_YN",
+          "description" : null,
+          "_row_id" : "QorHzYNzsk70b0jENEMSq"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Updated_User_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Updated_User_Key",
+          "description" : null,
+          "_row_id" : "XSoYWH_oDQQhuo7_FOypP"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Loss_Date_Modified_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Loss_Date_Modified_Date_Key",
+          "description" : null,
+          "_row_id" : "X0B_zMyH7jbP6ONunvTxi"
+        }, {
+          "expression" : {
+            "expression" : "in1.Risk_Class_Key",
+            "_row_id" : null
+          },
+          "alias" : "Risk_Class_Key",
+          "description" : null,
+          "_row_id" : "0LdOMh4QPIt1dcr9zYEdv"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Number",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Number",
+          "description" : null,
+          "_row_id" : "3SNB6WGcandno0CmngMbP"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_WC_Gender_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Gender_Code",
+          "description" : null,
+          "_row_id" : "FYwu8DTu2q6wD07TioFxW"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_Motor_Vehicle_Class_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Vehicle_Class_Key",
+          "description" : null,
+          "_row_id" : "3GjzGuzDywxK_5BI75CSD"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Postcode",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Postcode",
+          "description" : null,
+          "_row_id" : "8nF1ZpcL0bsiJCkoeawAN"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_WC_Injury_Mechanism_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Injury_Mechanism_Key",
+          "description" : null,
+          "_row_id" : "j4hGVDEXzO1QvURjlfljd"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Recovery_Changed_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Recovery_Changed_Date_Key",
+          "description" : null,
+          "_row_id" : "smCIAJ_F5yPT6a7oGNxjG"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Loss_Location_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Loss_Location_Key",
+          "description" : null,
+          "_row_id" : "LGJxx2vdEM1SRt9PWuPwt"
+        }, {
+          "expression" : {
+            "expression" : "in0.ASCO_Key",
+            "_row_id" : null
+          },
+          "alias" : "ASCO_Key",
+          "description" : null,
+          "_row_id" : "71-H4o5Ky5oUaLZ0s56VJ"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_WC_Fitness_Level_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Fitness_Level_Code",
+          "description" : null,
+          "_row_id" : "6JjlYqhkPiIDStNatE36m"
+        }, {
+          "expression" : {
+            "expression" : "in1.Industry_Class_ANZSIC_93_Key",
+            "_row_id" : null
+          },
+          "alias" : "Industry_Class_ANZSIC_93_Key",
+          "description" : null,
+          "_row_id" : "xts5k6deiej7oYaWgRDFW"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_WC_Injury_Nature_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Injury_Nature_Key",
+          "description" : null,
+          "_row_id" : "cGlpaLbsQnRfe6S5SJFh5"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Duplicate_Status_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Duplicate_Status_Key",
+          "description" : null,
+          "_row_id" : "JNt9J7edfqehc6A9OjN0C"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_Liability_Property_Damage_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Liability_Property_Damage_YN",
+          "description" : null,
+          "_row_id" : "v_3aEqBslelZGa5dDi9PA"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Loss_Date_Difference_Days_Number",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Loss_Date_Difference_Days_Number",
+          "description" : null,
+          "_row_id" : "0pgfN_C1I86Yap7jQy20X"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Date_Accepted_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Date_Accepted_Key",
+          "description" : null,
+          "_row_id" : "48HBLJ7kUSUGAdjpCypZE"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Liability_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Liability_Date_Key",
+          "description" : null,
+          "_row_id" : "qmThYKMlt6I53os7pASsN"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_Liability_Personal_Injury_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Liability_Personal_Injury_YN",
+          "description" : null,
+          "_row_id" : "8pgGtOHJhuvdhOjyQpnLH"
+        }, {
+          "expression" : {
+            "expression" : "in1.Catastrophe_Event_ICA_Key",
+            "_row_id" : null
+          },
+          "alias" : "Catastrophe_Event_ICA_Key",
+          "description" : null,
+          "_row_id" : "23OTQ4l3Z1z9-FhOR-Nvw"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_WC_Common_Law_Outcome_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Common_Law_Outcome_Code",
+          "description" : null,
+          "_row_id" : "M0cDq4kESH-Ce5TBiZ0tG"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_WC_Worker_Weekly_Hours_Time",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Worker_Weekly_Hours_Time",
+          "description" : null,
+          "_row_id" : "zllYqCdeGHq7uKGGaqv-u"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_WC_Received_Date_by_Employer",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Received_Date_by_Employer",
+          "description" : null,
+          "_row_id" : "HYiwk2ZQf_DAWmmKEhzaT"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_Motor_Vehicle_Manufactured_Year_Number",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Vehicle_Manufactured_Year_Number",
+          "description" : null,
+          "_row_id" : "8eiKacaU6OPzb_feKKKhZ"
+        }, {
+          "expression" : {
+            "expression" : "in1.Broker_Account_Key",
+            "_row_id" : null
+          },
+          "alias" : "Broker_Account_Key",
+          "description" : null,
+          "_row_id" : "jvQsO8-ikNNz5ef2gQYhZ"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_WC_Work_Resumed_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Work_Resumed_Date_Key",
+          "description" : null,
+          "_row_id" : "lITF4Oxu7uvQUxQPSrj7m"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_WC_Occupation_Name",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Occupation_Name",
+          "description" : null,
+          "_row_id" : "0VINMjqEziK8SrIQfnJ3m"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Updated_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Updated_Date_Key",
+          "description" : null,
+          "_row_id" : "zkNpHcIwWsAhNRxDanRXM"
+        }, {
+          "expression" : {
+            "expression" : "in1.Policy_Key",
+            "_row_id" : null
+          },
+          "alias" : "Policy_Key",
+          "description" : null,
+          "_row_id" : "AYE-SUaG3xXBcd82l57-q"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Type_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Type_Key",
+          "description" : null,
+          "_row_id" : "_RBf72VhT64KdzizqQry0"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_Liability_Severity_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Liability_Severity_Code",
+          "description" : null,
+          "_row_id" : "CWyvWPz2UAlE7qVIZjnRe"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_Motor_Cost_Centre_Name",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Cost_Centre_Name",
+          "description" : null,
+          "_row_id" : "DrSx-Ho1piym75Enhunu9"
+        }, {
+          "expression" : {
+            "expression" : "in1.Premium_Class_Key",
+            "_row_id" : null
+          },
+          "alias" : "Premium_Class_Key",
+          "description" : null,
+          "_row_id" : "NLzwHc25tKJCAb_g2vFLC"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Agg_Arrangement_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Agg_Arrangement_Key",
+          "description" : null,
+          "_row_id" : "9aglk8L16blMWBI_IERVf"
+        }, {
+          "expression" : {
+            "expression" : "in1.ARPC_Incident_Number",
+            "_row_id" : null
+          },
+          "alias" : "ARPC_Incident_Number",
+          "description" : null,
+          "_row_id" : "vBP-IdGvqS1xWvGydhwts"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_Motor_Driver_Gender_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Driver_Gender_Code",
+          "description" : null,
+          "_row_id" : "S5C4b_rdB0tYhl1VO5V9B"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Liability_Status_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Liability_Status_Code",
+          "description" : null,
+          "_row_id" : "Ga786Zpqvmh2800vk79rS"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Recovery_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Recovery_YN",
+          "description" : null,
+          "_row_id" : "ee6O5TYZrr-wa-oyNjzlS"
+        }, {
+          "expression" : {
+            "expression" : "in1.Product_Key",
+            "_row_id" : null
+          },
+          "alias" : "Product_Key",
+          "description" : null,
+          "_row_id" : "pdKQfn9s8MMpP9SmsdSce"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Salvage_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Salvage_YN",
+          "description" : null,
+          "_row_id" : "0WOj0G_yvLq8nOKsj92GW"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Duplicate_Loss_Days_Number",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Duplicate_Loss_Days_Number",
+          "description" : null,
+          "_row_id" : "IVQzbRLS_YoIOwBBV-RDk"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Duplicate_Potential_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Duplicate_Potential_YN",
+          "description" : null,
+          "_row_id" : "c7BzYQSC-ZSL37Bg2ubSo"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_WC_Injury_Most_Serious_Description",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Injury_Most_Serious_Description",
+          "description" : null,
+          "_row_id" : "Wu8UvWd-63c5W1Yi6BVcu"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_Liability_Financial_Loss_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Liability_Financial_Loss_YN",
+          "description" : null,
+          "_row_id" : "S1Xz2ae_j9XdzS2vks_dv"
+        }, {
+          "expression" : {
+            "expression" : "in0.Industry_Class_ANZSIC_2006_Key",
+            "_row_id" : null
+          },
+          "alias" : "Industry_Class_ANZSIC_2006_Key",
+          "description" : null,
+          "_row_id" : "86Akj3BquMnOrJxv4mgM4"
+        }, {
+          "expression" : {
+            "expression" : "in1.Risk_Key",
+            "_row_id" : null
+          },
+          "alias" : "Risk_Key",
+          "description" : null,
+          "_row_id" : "lrG08WiZd0jGdQJtUwTEM"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Investigator_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Investigator_Key",
+          "description" : null,
+          "_row_id" : "wSAT0vjD0uo64zgc3xi5i"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Agg_Arrangement_Type_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Agg_Arrangement_Type_Key",
+          "description" : null,
+          "_row_id" : "PtdxGvO1V4CYdFZxxLc9h"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_Motor_Vehicle_Description",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Vehicle_Description",
+          "description" : null,
+          "_row_id" : "YSAINs1rHiQiFOYdHWzwE"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_WC_Marital_Status_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Marital_Status_Code",
+          "description" : null,
+          "_row_id" : "U-0f8IZW7d1v0_f_NiGzV"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_WC_Worker_Name",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Worker_Name",
+          "description" : null,
+          "_row_id" : "yp1iBPOYHneO_fH5aNyVy"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_Duty_Status",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Duty_Status",
+          "description" : null,
+          "_row_id" : "wSYz_kx6sZihmuIEjZyfg"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_WC_Worker_Weekly_Hours_Rate",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Worker_Weekly_Hours_Rate",
+          "description" : null,
+          "_row_id" : "0dvlT2Ct9Hz4QrfHId47L"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Branch_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Branch_Key",
+          "description" : null,
+          "_row_id" : "RltZfSnS3AU19kh4lVvJH"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_WC_Hourly_Rate_Thereafter_Amount",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Hourly_Rate_Thereafter_Amount",
+          "description" : null,
+          "_row_id" : "7fB1CzVFOKSpD9otN39ti"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Fraud_Type_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Fraud_Type_Key",
+          "description" : null,
+          "_row_id" : "yhe5zCr_l1_UO6LizEoqT"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_Motor_Vehicle_Rego_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Vehicle_Rego_Code",
+          "description" : null,
+          "_row_id" : "-fXZpJHwNoAYfGqqKgFzE"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Portfolio_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Portfolio_Key",
+          "description" : null,
+          "_row_id" : "I5zIs_4CmvkovKeMMHp_c"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_Motor_Bodily_Injury_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Bodily_Injury_YN",
+          "description" : null,
+          "_row_id" : "OjOqP89nb9QzKr7eMIMJk"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Loss_Date_Modified_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Loss_Date_Modified_YN",
+          "description" : null,
+          "_row_id" : "G-oUcSpQw9-_WjlAJohtu"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_WC_Lost_Minutes_Number",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Lost_Minutes_Number",
+          "description" : null,
+          "_row_id" : "eFOpFOR2Ip1JRuo2bdAO8"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Gross_Incurred_Loss_Type_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Gross_Incurred_Loss_Type_Key",
+          "description" : null,
+          "_row_id" : "j286UFrk88aj0b9cms6Vy"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_WC_Lost_Hours_Number",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Lost_Hours_Number",
+          "description" : null,
+          "_row_id" : "ilG0TTzLDPbercX3AZR_d"
+        }, {
+          "expression" : {
+            "expression" : "in1.Client_Claim_Number",
+            "_row_id" : null
+          },
+          "alias" : "Client_Claim_Number",
+          "description" : null,
+          "_row_id" : "0yCAhTQ3cyGxPp9UotFja"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_WC_Work_Status",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Work_Status",
+          "description" : null,
+          "_row_id" : "NUp2cViGyqzazA41FoImh"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_WC_Estimated_Return_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Estimated_Return_Date_Key",
+          "description" : null,
+          "_row_id" : "T6GYmUEt41vk6UKK6m_FF"
+        }, {
+          "expression" : {
+            "expression" : "in1.Global_LoB_Key",
+            "_row_id" : null
+          },
+          "alias" : "Global_LoB_Key",
+          "description" : null,
+          "_row_id" : "HQnF4vQ44wp773OLGLsqO"
+        }, {
+          "expression" : {
+            "expression" : "in1.Policy_Period_Name",
+            "_row_id" : null
+          },
+          "alias" : "Policy_Period_Name",
+          "description" : null,
+          "_row_id" : "oKE2h0tjSr1hNOqEKi__E"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Recovery_Abandonment_Reason_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Recovery_Abandonment_Reason_Key",
+          "description" : null,
+          "_row_id" : "ZvwSNFJyTNA7T8Uu14c74"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Handler_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Handler_Key",
+          "description" : null,
+          "_row_id" : "Aaz_RErKgeDynIrNJ4U1s"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Updated_Datetime",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Updated_Datetime",
+          "description" : null,
+          "_row_id" : "VJJAquMb4T08z0ZD0n28c"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_BGC_Status_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_BGC_Status_Code",
+          "description" : null,
+          "_row_id" : "UMuhJdGL9U2e-dappghNv"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_WC_Common_Law_Raised_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Common_Law_Raised_Date_Key",
+          "description" : null,
+          "_row_id" : "9k8c16mv2JVwD-s08mer6"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Reopened_Last_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Reopened_Last_Date_Key",
+          "description" : null,
+          "_row_id" : "1LKc8uXS-y2v1IH2MWmUZ"
+        }, {
+          "expression" : {
+            "expression" : "in1.Client_Key",
+            "_row_id" : null
+          },
+          "alias" : "Client_Key",
+          "description" : null,
+          "_row_id" : "83Cwmf6EFER3iQ7LjIMrh"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Date_Rejected_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Date_Rejected_Key",
+          "description" : null,
+          "_row_id" : "BQGWPaEgzulgGdvxH0oo2"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_WC_Full_Time_Part_Time_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Full_Time_Part_Time_Code",
+          "description" : null,
+          "_row_id" : "STPqu7xGTJ_cD_zgtdqjm"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_WC_Worker_State_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Worker_State_Code",
+          "description" : null,
+          "_row_id" : "r2evAuw01snzmWflGX3sf"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_Motor_Vehicle_Finance_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Vehicle_Finance_YN",
+          "description" : null,
+          "_row_id" : "jgFhuagK6z-lnAqNKLQ4l"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_WC_Worker_Suburb_Name",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Worker_Suburb_Name",
+          "description" : null,
+          "_row_id" : "NAuudnjRdO8HX4ZYP0HdX"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_Motor_Vehicle_Loss_Day_of_Week_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Vehicle_Loss_Day_of_Week_Code",
+          "description" : null,
+          "_row_id" : "_JKooHk5HkVSyrgttq5no"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Cyclone_Flag",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Cyclone_Flag",
+          "description" : null,
+          "_row_id" : "bbz0QgZaFyoKfYaMVS1ra"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_UX_Type_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_UX_Type_Code",
+          "description" : null,
+          "_row_id" : "BSnepmytNojybV3NAxCbp"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_Motor_Driver_Licensed_Years_Number",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Driver_Licensed_Years_Number",
+          "description" : null,
+          "_row_id" : "LBF95GSaAkOx5gjdQyGwB"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_Division_Name",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Division_Name",
+          "description" : null,
+          "_row_id" : "P_Fz7C4bHOFDNcq2-lGeC"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Expiry_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Expiry_Date_Key",
+          "description" : null,
+          "_row_id" : "fHN-EtF9Co2e03MtXqUMq"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Status_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Status_Key",
+          "description" : null,
+          "_row_id" : "n1CMgV999Zv_1dOlAvmkh"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Time_Occurence",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Time_Occurence",
+          "description" : null,
+          "_row_id" : "FZmDMDmBZdZlGaEiscs_e"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_WC_IMA_Reviewed_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_IMA_Reviewed_YN",
+          "description" : null,
+          "_row_id" : "ZBOJDjsd-iPnL0fPK27Rg"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_WC_Worker_RTW_Program",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Worker_RTW_Program",
+          "description" : null,
+          "_row_id" : "BtbXVrL25jlCjcFHZsNhB"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Loss_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Loss_Date_Key",
+          "description" : null,
+          "_row_id" : "sc6Z_MUsD_l0zrlAf62Ai"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Closed_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Closed_Date_Key",
+          "description" : null,
+          "_row_id" : "GgDtUjid-9NLqIZKwrVGg"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_WC_Birth_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Birth_Date_Key",
+          "description" : null,
+          "_row_id" : "0PZkPljHGw_1fEkB1UhLa"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_WC_Hourly_Rate_First_13_Weeks_Amount",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Hourly_Rate_First_13_Weeks_Amount",
+          "description" : null,
+          "_row_id" : "CDvpLUE2p6vAXffi1-zXm"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Non_Standard_Type_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Non_Standard_Type_Key",
+          "description" : null,
+          "_row_id" : "97AVWbnFSe6XE1pTE356q"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_Motor_Vehicle_Total_Loss_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Vehicle_Total_Loss_YN",
+          "description" : null,
+          "_row_id" : "P2qKFoH91zSjsVnWrAGg5"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_WC_Ceased_Work_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Ceased_Work_Date_Key",
+          "description" : null,
+          "_row_id" : "pAE_Q-yozyOqL-kB8V8CQ"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_WC_Common_Law_Severity_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Common_Law_Severity_Code",
+          "description" : null,
+          "_row_id" : "TmqCxE-DwGlOMHlJbJV0K"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_WC_Agency_of_Accident_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Agency_of_Accident_Key",
+          "description" : null,
+          "_row_id" : "Og_H8Yzm2mkiZ6U1l0jqn"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_WC_Worker_RTW_Goals",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Worker_RTW_Goals",
+          "description" : null,
+          "_row_id" : "i7Fyuf8NP44ZmGSFUnaOd"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Loss_Orig_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Loss_Orig_Date_Key",
+          "description" : null,
+          "_row_id" : "YryIo0riIfbc9xs5xndyp"
+        }, {
+          "expression" : {
+            "expression" : "in1.Policy_Incep_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Policy_Incep_Date_Key",
+          "description" : null,
+          "_row_id" : "-1j8cjVQo5fHUc_kZb0qQ"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Duplicate_Potential_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Duplicate_Potential_Key",
+          "description" : null,
+          "_row_id" : "Hfk-Yo57EYnPcNGZck_Fh"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_Motor_Vehicle_Loss_Time_Number",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Vehicle_Loss_Time_Number",
+          "description" : null,
+          "_row_id" : "XkV63OY-7zAgJ6zViBeXb"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_vulnerable_flag",
+            "_row_id" : null
+          },
+          "alias" : "Claim_vulnerable_flag",
+          "description" : null,
+          "_row_id" : "3pYUTRBpXkoWBdQTzFx20"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Status_Date_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Status_Date_Key",
+          "description" : null,
+          "_row_id" : "jspKzeAmCx7gcQl5UVFQ0"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_Motor_Driver_Age_Years_Number",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Motor_Driver_Age_Years_Number",
+          "description" : null,
+          "_row_id" : "jcvAw6sTLFbcrKAZzAv_P"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_WC_Loss_Day_of_Week_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Loss_Day_of_Week_Code",
+          "description" : null,
+          "_row_id" : "iTmM4a2c45wU1sw20glvx"
+        }, {
+          "expression" : {
+            "expression" : "in0.Claim_WC_Body_Location_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_WC_Body_Location_Key",
+          "description" : null,
+          "_row_id" : "h2Al4Jmrq_GK1jywxD1-Q"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_State_Code",
+            "_row_id" : null
+          },
+          "alias" : "Claim_State_Code",
+          "description" : null,
+          "_row_id" : "LpZEcI2rvaj2ojga_Yc-R"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Recovery_Changed_YN",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Recovery_Changed_YN",
+          "description" : null,
+          "_row_id" : "a7Bq0SFn3aPiDRcet9NiT"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_Assessor_Key",
+            "_row_id" : null
+          },
+          "alias" : "Claim_Assessor_Key",
+          "description" : null,
+          "_row_id" : "G-RTBCdJIX1QiniZddIkH"
+        }, {
+          "expression" : {
+            "expression" : "in1.Claim_UX_Arrangement_Description",
+            "_row_id" : null
+          },
+          "alias" : "Claim_UX_Arrangement_Description",
+          "description" : null,
+          "_row_id" : "MmWpt2RqCN0iBU72HPkDv"
+        } ],
+        "activeTab" : "conditions",
+        "columnsSelector" : [ ],
+        "headAlias" : "in0"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Jnr_Claim_CA_WC_LIA_in0",
+          "slug" : "in0"
+        }, {
+          "id" : "Jnr_Claim_CA_WC_LIA_in1",
+          "slug" : "in1"
+        } ],
+        "outputs" : [ {
+          "id" : "Jnr_Claim_CA_WC_LIA_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "edge_864",
+    "source" : "EXP_DATATYPE_CONVERSION1",
+    "sourcePort" : "EXP_DATATYPE_CONVERSION1_out0",
+    "target" : "Dim_Claim_Temp",
+    "targetPort" : "Dim_Claim_Temp_in0",
+    "isWireless" : false
+  }, {
+    "id" : "edge_865",
+    "source" : "Jnr_Claim_CA_WC_LIA_Claimant",
+    "sourcePort" : "Jnr_Claim_CA_WC_LIA_Claimant_out0",
+    "target" : "EXP_DATATYPE_CONVERSION1",
+    "targetPort" : "EXP_DATATYPE_CONVERSION1_in0",
+    "isWireless" : false
+  }, {
+    "id" : "edge_867",
+    "source" : "Srt_Claimant_EXPR_357",
+    "sourcePort" : "Srt_Claimant_EXPR_357_out0",
+    "target" : "Jnr_Claim_CA_WC_LIA_Claimant",
+    "targetPort" : "Jnr_Claim_CA_WC_LIA_Claimant_in0",
+    "isWireless" : false
+  }, {
+    "id" : "edge_870",
+    "source" : "Jnr_Claim_CA_WC_LIA",
+    "sourcePort" : "Jnr_Claim_CA_WC_LIA_out0",
+    "target" : "Jnr_Claim_CA_WC_LIA_Claimant",
+    "targetPort" : "Jnr_Claim_CA_WC_LIA_Claimant_in1",
+    "isWireless" : false
+  }, {
+    "id" : "edge_866",
+    "source" : "40_DM_ORACmp_s_dim_claim_temp_SQ_V_Dim_Claim_Temp_Claimant_SQ_V_Dim_Claim_Temp_Claimant_out0",
+    "sourcePort" : "output_port_1",
+    "target" : "Srt_Claimant_EXPR_357",
+    "targetPort" : "Srt_Claimant_EXPR_357_in0",
+    "isWireless" : false
+  }, {
+    "id" : "edge_869",
+    "source" : "SQ_V_Dim_Claim_Temp_WC_MT_LIA_EXPR_358",
+    "sourcePort" : "SQ_V_Dim_Claim_Temp_WC_MT_LIA_EXPR_358_out0",
+    "target" : "Jnr_Claim_CA_WC_LIA",
+    "targetPort" : "Jnr_Claim_CA_WC_LIA_in0",
+    "isWireless" : false
+  }, {
+    "id" : "edge_872",
+    "source" : "SQ_V_Dim_Claim_Temp_CA_EXPR_360",
+    "sourcePort" : "SQ_V_Dim_Claim_Temp_CA_EXPR_360_out0",
+    "target" : "Jnr_Claim_CA_WC_LIA",
+    "targetPort" : "Jnr_Claim_CA_WC_LIA_in1",
+    "isWireless" : false
+  }, {
+    "id" : "edge_868",
+    "source" : "40_DM_ORACmp_s_dim_claim_temp_SQ_V_Dim_Claim_Temp_WC_MT_LIA_SQ_V_Dim_Claim_Temp_WC_MT_LIA_out0",
+    "sourcePort" : "output_port_0",
+    "target" : "SQ_V_Dim_Claim_Temp_WC_MT_LIA_EXPR_358",
+    "targetPort" : "SQ_V_Dim_Claim_Temp_WC_MT_LIA_EXPR_358_in0",
+    "isWireless" : false
+  }, {
+    "id" : "edge_871",
+    "source" : "40_DM_ORACmp_s_dim_claim_temp_SQ_V_Dim_Claim_Temp_CA_SQ_V_Dim_Claim_Temp_CA_out0",
+    "sourcePort" : "output_port_2",
+    "target" : "SQ_V_Dim_Claim_Temp_CA_EXPR_360",
+    "targetPort" : "SQ_V_Dim_Claim_Temp_CA_EXPR_360_in0",
+    "isWireless" : false
+  } ],
+  "component" : "Model"
+}

@@ -1,0 +1,796 @@
+{
+  "id" : "35_SDM_mp_sdm_sdm_Data_GI_Claim_Bal_Mth_Agg__sh_DATA_GI_CLAIM_BAL_MTH_AGG",
+  "metainfo" : {
+    "label" : "35_SDM_mp_sdm_sdm_Data_GI_Claim_Bal_Mth_Agg__sh_DATA_GI_CLAIM_BAL_MTH_AGG",
+    "autoLayout" : true,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "entityConfig" : {
+        "alias" : "\"sh_DATA_GI_CLAIM_BAL_MTH_AGG\"",
+        "materialized" : "table",
+        "database" : "\"qa_team\"",
+        "schema" : "\"qa_orchestration\"",
+        "type" : "ModelConfig"
+      }
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "sh_DATA_GI_CLAIM_BAL_MTH_AGG" : {
+      "id" : "sh_DATA_GI_CLAIM_BAL_MTH_AGG",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "sh_DATA_GI_CLAIM_BAL_MTH_AGG",
+        "phase" : 1
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "\nSELECT *\n\nFROM EXP_Calculate_End_Acct_Mth_Id\n\n",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "sh_DATA_GI_CLAIM_BAL_MTH_AGG_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "XENWBghYPdF3M8agVaNCG",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "EXP_Calculate_End_Acct_Mth_Id" : {
+      "id" : "EXP_Calculate_End_Acct_Mth_Id",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "EXP_Calculate_End_Acct_Mth_Id",
+        "x" : 420,
+        "y" : 20,
+        "phase" : 1
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "CLAIM_ID",
+            "_row_id" : null
+          },
+          "alias" : "CLAIM_ID",
+          "description" : null,
+          "_row_id" : "UovhKyWAae1Pj3o1EI3lW"
+        }, {
+          "expression" : {
+            "expression" : "PRD_ID",
+            "_row_id" : null
+          },
+          "alias" : "PRD_ID",
+          "description" : null,
+          "_row_id" : "04RzLnwlVdhgD78Li-ONx"
+        }, {
+          "expression" : {
+            "expression" : "RSK_CLASS_ID",
+            "_row_id" : null
+          },
+          "alias" : "RSK_CLASS_ID",
+          "description" : null,
+          "_row_id" : "65qLtaBkXNomilGRw25Qg"
+        }, {
+          "expression" : {
+            "expression" : "PREM_CLASS_ID",
+            "_row_id" : null
+          },
+          "alias" : "PREM_CLASS_ID",
+          "description" : null,
+          "_row_id" : "Q4R3_Rx9RvLhG6JK65o3B"
+        }, {
+          "expression" : {
+            "expression" : "CLAIM_PAYMT_TYPE_ID",
+            "_row_id" : null
+          },
+          "alias" : "CLAIM_PAYMT_TYPE_ID",
+          "description" : null,
+          "_row_id" : "cD2aQaZGctr3_tINLjsS2"
+        }, {
+          "expression" : {
+            "expression" : "MTRN_TYPE_CODE",
+            "_row_id" : null
+          },
+          "alias" : "MTRN_TYPE_CODE",
+          "description" : null,
+          "_row_id" : "G4GZlqE1pD04dFJLLNZX4"
+        }, {
+          "expression" : {
+            "expression" : "ACCT_MTH_ID",
+            "_row_id" : null
+          },
+          "alias" : "ACCT_MTH_ID",
+          "description" : null,
+          "_row_id" : "EDZCekZTF0b6dkM3HTjv1"
+        }, {
+          "expression" : {
+            "expression" : "POLICY_ID",
+            "_row_id" : null
+          },
+          "alias" : "POLICY_ID",
+          "description" : null,
+          "_row_id" : "lTs2C985tx8vnox14KvSI"
+        }, {
+          "expression" : {
+            "expression" : "POL_BRANCH_ID",
+            "_row_id" : null
+          },
+          "alias" : "POL_BRANCH_ID",
+          "description" : null,
+          "_row_id" : "qgKdZs9W75sqSuTVcj7ny"
+        }, {
+          "expression" : {
+            "expression" : "CCY_CODE",
+            "_row_id" : null
+          },
+          "alias" : "CCY_CODE",
+          "description" : null,
+          "_row_id" : "pTaC2haQOVnPUR4dVnQPc"
+        }, {
+          "expression" : {
+            "expression" : "APC_AMT",
+            "_row_id" : null
+          },
+          "alias" : "APC_AMT",
+          "description" : null,
+          "_row_id" : "Px7-9MLqchy9q7KcdWicu"
+        }, {
+          "expression" : {
+            "expression" : "GOL_AMT",
+            "_row_id" : null
+          },
+          "alias" : "GOL_AMT",
+          "description" : null,
+          "_row_id" : "BM-5VmGBAvI4l8aIJcCSF"
+        }, {
+          "expression" : {
+            "expression" : "GPC_AMT",
+            "_row_id" : null
+          },
+          "alias" : "GPC_AMT",
+          "description" : null,
+          "_row_id" : "qRy7ibJZdOxxFKjLSrgzt"
+        }, {
+          "expression" : {
+            "expression" : "RPC_AMT",
+            "_row_id" : null
+          },
+          "alias" : "RPC_AMT",
+          "description" : null,
+          "_row_id" : "s42RkFTdGb8c7MS0pMMa8"
+        }, {
+          "expression" : {
+            "expression" : "ROL_AMT",
+            "_row_id" : null
+          },
+          "alias" : "ROL_AMT",
+          "description" : null,
+          "_row_id" : "qfqx5NG2_W9fXrYnoRXZr"
+        }, {
+          "expression" : {
+            "expression" : "AOL_AMT",
+            "_row_id" : null
+          },
+          "alias" : "AOL_AMT",
+          "description" : null,
+          "_row_id" : "6TRoouTuDzqZ6HOo0p8Xn"
+        }, {
+          "expression" : {
+            "expression" : "SPC_AMT",
+            "_row_id" : null
+          },
+          "alias" : "SPC_AMT",
+          "description" : null,
+          "_row_id" : "z-TF2mU_eDOZnjbJv1qEZ"
+        }, {
+          "expression" : {
+            "expression" : "SOL_AMT",
+            "_row_id" : null
+          },
+          "alias" : "SOL_AMT",
+          "description" : null,
+          "_row_id" : "nGl5BtDjMP-GOS08vWCh8"
+        }, {
+          "expression" : {
+            "expression" : "TPC_AMT",
+            "_row_id" : null
+          },
+          "alias" : "TPC_AMT",
+          "description" : null,
+          "_row_id" : "Wq29mGtqNVarPl7E6A1ZL"
+        }, {
+          "expression" : {
+            "expression" : "TOL_AMT",
+            "_row_id" : null
+          },
+          "alias" : "TOL_AMT",
+          "description" : null,
+          "_row_id" : "9rsTgRyTuAf2Hx3yRcv7b"
+        }, {
+          "expression" : {
+            "expression" : "UPC_AMT",
+            "_row_id" : null
+          },
+          "alias" : "UPC_AMT",
+          "description" : null,
+          "_row_id" : "sn95Wo1-kLmRNrj5rcBVe"
+        }, {
+          "expression" : {
+            "expression" : "UOL_AMT",
+            "_row_id" : null
+          },
+          "alias" : "UOL_AMT",
+          "description" : null,
+          "_row_id" : "StR656wMq4LYzSGYxtis-"
+        }, {
+          "expression" : {
+            "expression" : "CLAIM_OWNR_CODE",
+            "_row_id" : null
+          },
+          "alias" : "CLAIM_OWNR_CODE",
+          "description" : null,
+          "_row_id" : "4km54xRu874vTlnTEt42H"
+        }, {
+          "expression" : {
+            "expression" : "CLAIM_SEGMENT_ID",
+            "_row_id" : null
+          },
+          "alias" : "CLAIM_SEGMENT_ID",
+          "description" : null,
+          "_row_id" : "3QTD7dIO5-mhuyXrx6Utd"
+        }, {
+          "expression" : {
+            "expression" : "CLAIM_SUBSEG_ID",
+            "_row_id" : null
+          },
+          "alias" : "CLAIM_SUBSEG_ID",
+          "description" : null,
+          "_row_id" : "6fI9I24yUplXn4Bajwd-o"
+        }, {
+          "expression" : {
+            "expression" : "CLAIM_CATASTROPHE_CODE",
+            "_row_id" : null
+          },
+          "alias" : "CLAIM_CATASTROPHE_CODE",
+          "description" : null,
+          "_row_id" : "mvbAX8oiTZ2vYwRsYLwIi"
+        }, {
+          "expression" : {
+            "expression" : "INTERMEDIARY_ID",
+            "_row_id" : null
+          },
+          "alias" : "INTERMEDIARY_ID",
+          "description" : null,
+          "_row_id" : "-u0MZrkIiK8OCZ0Z20BdZ"
+        }, {
+          "expression" : {
+            "expression" : "CLIENT_ID",
+            "_row_id" : null
+          },
+          "alias" : "CLIENT_ID",
+          "description" : null,
+          "_row_id" : "82cLDm7nEd-Fy9lFe0THB"
+        }, {
+          "expression" : {
+            "expression" : "ASSESSOR_ID",
+            "_row_id" : null
+          },
+          "alias" : "ASSESSOR_ID",
+          "description" : null,
+          "_row_id" : "yRoFQv2pj20N92Pgsd-js"
+        }, {
+          "expression" : {
+            "expression" : "LOSS_DATE_ID",
+            "_row_id" : null
+          },
+          "alias" : "LOSS_DATE_ID",
+          "description" : null,
+          "_row_id" : "xtezMr_t4kpwzyhsn_Q9o"
+        }, {
+          "expression" : {
+            "expression" : "CLAIM_OFFICER_PARTY_NUM",
+            "_row_id" : null
+          },
+          "alias" : "CLAIM_OFFICER_PARTY_NUM",
+          "description" : null,
+          "_row_id" : "nQ9CNa2DV7euQoPAQdxHw"
+        }, {
+          "expression" : {
+            "expression" : "BODILY_INJURY_CODE",
+            "_row_id" : null
+          },
+          "alias" : "BODILY_INJURY_CODE",
+          "description" : null,
+          "_row_id" : "MA5HQmmRDJrhigiaPIDNT"
+        }, {
+          "expression" : {
+            "expression" : "CLAIM_OFFICER_PARTY_ID",
+            "_row_id" : null
+          },
+          "alias" : "CLAIM_OFFICER_PARTY_ID",
+          "description" : null,
+          "_row_id" : "DNpQe_QI-QqxI6MFeX1h3"
+        }, {
+          "expression" : {
+            "expression" : "UNDER_EXCESS_TYPE",
+            "_row_id" : null
+          },
+          "alias" : "UNDER_EXCESS_TYPE",
+          "description" : null,
+          "_row_id" : "Ck_r2GfIHFLGcP0hgZNnA"
+        }, {
+          "expression" : {
+            "expression" : "MARKET_SEGMENT_ID",
+            "_row_id" : null
+          },
+          "alias" : "MARKET_SEGMENT_ID",
+          "description" : null,
+          "_row_id" : "ku9N733KF_YH501Qkdse2"
+        }, {
+          "expression" : {
+            "expression" : "ACDNT_MTH_ID",
+            "_row_id" : null
+          },
+          "alias" : "ACDNT_MTH_ID",
+          "description" : null,
+          "_row_id" : "jF0v2pI3K0uMU_6DlNQrn"
+        }, {
+          "expression" : {
+            "expression" : "RPTED_MTH_ID",
+            "_row_id" : null
+          },
+          "alias" : "RPTED_MTH_ID",
+          "description" : null,
+          "_row_id" : "M0gVK1CXhV0paIOUK65Dh"
+        }, {
+          "expression" : {
+            "expression" : "RPTED_DATE_ID",
+            "_row_id" : null
+          },
+          "alias" : "RPTED_DATE_ID",
+          "description" : null,
+          "_row_id" : "zJrXImcMKbNcJKHd8GsET"
+        }, {
+          "expression" : {
+            "expression" : "(CASE WHEN ((((((((LAG(CLAIM_ID) OVER (PARTITION BY 1 ORDER BY 1 NULLS FIRST)) = CLAIM_ID) AND ((LAG(PRD_ID) OVER (PARTITION BY 1 ORDER BY 1 NULLS FIRST)) = PRD_ID)) AND ((LAG(RSK_CLASS_ID) OVER (PARTITION BY 1 ORDER BY 1 NULLS FIRST)) = RSK_CLASS_ID)) AND ((LAG(PREM_CLASS_ID) OVER (PARTITION BY 1 ORDER BY 1 NULLS FIRST)) = PREM_CLASS_ID)) AND ((LAG(CLAIM_PAYMT_TYPE_ID) OVER (PARTITION BY 1 ORDER BY 1 NULLS FIRST)) = CLAIM_PAYMT_TYPE_ID)) AND ((LAG(MTRN_TYPE_CODE) OVER (PARTITION BY 1 ORDER BY 1 NULLS FIRST)) = MTRN_TYPE_CODE)) AND ((LAG(ACCT_MTH_ID) OVER (PARTITION BY 1 ORDER BY 1 NULLS FIRST)) <> ACCT_MTH_ID)) THEN (CASE WHEN (CAST(SUBSTRING(CAST((LAG(ACCT_MTH_ID) OVER (PARTITION BY 1 ORDER BY 1 NULLS FIRST)) AS string), 5, 2) AS string) = '01') THEN (((CAST(SUBSTRING(CAST((LAG(ACCT_MTH_ID) OVER (PARTITION BY 1 ORDER BY 1 NULLS FIRST)) AS string), 1, 4) AS INTEGER) - 1) * 100) + 12) ELSE ((LAG(ACCT_MTH_ID) OVER (PARTITION BY 1 ORDER BY 1 NULLS FIRST)) - 1) END) ELSE 999912 END)",
+            "_row_id" : null
+          },
+          "alias" : "END_ACCT_MTH_ID",
+          "description" : null,
+          "_row_id" : "UvGzD62FGMGUIIFYbRJha"
+        }, {
+          "expression" : {
+            "expression" : "{{ var('PMWorkflowRunId') }}",
+            "_row_id" : null
+          },
+          "alias" : "CTL_JOB_ID",
+          "description" : null,
+          "_row_id" : "nv7NuAGOzgSUKVoWsrFCc"
+        }, {
+          "expression" : {
+            "expression" : "CURRENT_TIMESTAMP",
+            "_row_id" : null
+          },
+          "alias" : "CTL_REC_CRTN_DATE",
+          "description" : null,
+          "_row_id" : "DmrpQB9W2_KRSNd7aJXX6"
+        }, {
+          "expression" : {
+            "expression" : "'-'",
+            "_row_id" : null
+          },
+          "alias" : "TAKEUP_RANK",
+          "description" : null,
+          "_row_id" : "NE2nZdBNZpfPTxnFjVkSF"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "EXP_Calculate_End_Acct_Mth_Id_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "EXP_Calculate_End_Acct_Mth_Id_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "EXP_Cal_Cummulative_Bal_Mth" : {
+      "id" : "EXP_Cal_Cummulative_Bal_Mth",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "EXP_Cal_Cummulative_Bal_Mth",
+        "x" : 220,
+        "y" : 20,
+        "phase" : 1
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "CLAIM_ID",
+            "_row_id" : null
+          },
+          "alias" : "CLAIM_ID",
+          "description" : null,
+          "_row_id" : "vaQFcW8IMec2o6OQJi7nM"
+        }, {
+          "expression" : {
+            "expression" : "PRD_ID",
+            "_row_id" : null
+          },
+          "alias" : "PRD_ID",
+          "description" : null,
+          "_row_id" : "Z59tqt9hPxUAzOyJyjeaA"
+        }, {
+          "expression" : {
+            "expression" : "RSK_CLASS_ID",
+            "_row_id" : null
+          },
+          "alias" : "RSK_CLASS_ID",
+          "description" : null,
+          "_row_id" : "9vOFDcVm-qvpFKcZuRTGB"
+        }, {
+          "expression" : {
+            "expression" : "PREM_CLASS_ID",
+            "_row_id" : null
+          },
+          "alias" : "PREM_CLASS_ID",
+          "description" : null,
+          "_row_id" : "_hwoO5BFZhgXAdlRi2sMl"
+        }, {
+          "expression" : {
+            "expression" : "CLAIM_PAYMT_TYPE_ID",
+            "_row_id" : null
+          },
+          "alias" : "CLAIM_PAYMT_TYPE_ID",
+          "description" : null,
+          "_row_id" : "zMCf0u9rOpxwFylY3R4cb"
+        }, {
+          "expression" : {
+            "expression" : "MTRN_TYPE_CODE",
+            "_row_id" : null
+          },
+          "alias" : "MTRN_TYPE_CODE",
+          "description" : null,
+          "_row_id" : "0HtdycSyfHg1fE1H2E0vv"
+        }, {
+          "expression" : {
+            "expression" : "ACCTING_MTH_ID",
+            "_row_id" : null
+          },
+          "alias" : "ACCT_MTH_ID",
+          "description" : null,
+          "_row_id" : "GVvQCflp5GjX1MMmzEl5Q"
+        }, {
+          "expression" : {
+            "expression" : "POLICY_ID",
+            "_row_id" : null
+          },
+          "alias" : "POLICY_ID",
+          "description" : null,
+          "_row_id" : "PHFvQtmo5Hs2R-MZi-esp"
+        }, {
+          "expression" : {
+            "expression" : "POL_BRANCH_ID",
+            "_row_id" : null
+          },
+          "alias" : "POL_BRANCH_ID",
+          "description" : null,
+          "_row_id" : "e5M6iZRh_clgxV_rc9KjX"
+        }, {
+          "expression" : {
+            "expression" : "TRANS_CCY_CODE",
+            "_row_id" : null
+          },
+          "alias" : "CCY_CODE",
+          "description" : null,
+          "_row_id" : "2z0DZCqjKT9lgqso_S8C0"
+        }, {
+          "expression" : {
+            "expression" : "APC_AMT_SUM",
+            "_row_id" : null
+          },
+          "alias" : "APC_AMT",
+          "description" : null,
+          "_row_id" : "4LqqZ4FeEb6UhQ5b5cXGy"
+        }, {
+          "expression" : {
+            "expression" : "GOL_AMT_SUM",
+            "_row_id" : null
+          },
+          "alias" : "GOL_AMT",
+          "description" : null,
+          "_row_id" : "XgQFhP8-m5dZn4kXZsiD0"
+        }, {
+          "expression" : {
+            "expression" : "GPC_AMT_SUM",
+            "_row_id" : null
+          },
+          "alias" : "GPC_AMT",
+          "description" : null,
+          "_row_id" : "DXeFL6Hw99eowQvRhf1YH"
+        }, {
+          "expression" : {
+            "expression" : "RPC_AMT_SUM",
+            "_row_id" : null
+          },
+          "alias" : "RPC_AMT",
+          "description" : null,
+          "_row_id" : "oH2nGeW5jj3nMbbZcpRdz"
+        }, {
+          "expression" : {
+            "expression" : "ROL_AMT_SUM",
+            "_row_id" : null
+          },
+          "alias" : "ROL_AMT",
+          "description" : null,
+          "_row_id" : "KQTeS_GMAIsEVo_qC0RgI"
+        }, {
+          "expression" : {
+            "expression" : "AOL_AMT_SUM",
+            "_row_id" : null
+          },
+          "alias" : "AOL_AMT",
+          "description" : null,
+          "_row_id" : "3drF_iM4vSYDNHbNsst-n"
+        }, {
+          "expression" : {
+            "expression" : "SPC_AMT_SUM",
+            "_row_id" : null
+          },
+          "alias" : "SPC_AMT",
+          "description" : null,
+          "_row_id" : "EwcFqPZVjX09y3uCnQawe"
+        }, {
+          "expression" : {
+            "expression" : "SOL_AMT_SUM",
+            "_row_id" : null
+          },
+          "alias" : "SOL_AMT",
+          "description" : null,
+          "_row_id" : "SNRcTT0ezADbEErB046J_"
+        }, {
+          "expression" : {
+            "expression" : "TPC_AMT_SUM",
+            "_row_id" : null
+          },
+          "alias" : "TPC_AMT",
+          "description" : null,
+          "_row_id" : "0ouCjso1b3SbWGqIFW7Qr"
+        }, {
+          "expression" : {
+            "expression" : "TOL_AMT_SUM",
+            "_row_id" : null
+          },
+          "alias" : "TOL_AMT",
+          "description" : null,
+          "_row_id" : "epI7CIJ4Ls09vCmV4w3bk"
+        }, {
+          "expression" : {
+            "expression" : "UPC_AMT_SUM",
+            "_row_id" : null
+          },
+          "alias" : "UPC_AMT",
+          "description" : null,
+          "_row_id" : "EgcUDqXdlUQdWS0ltStYz"
+        }, {
+          "expression" : {
+            "expression" : "UOL_AMT_SUM",
+            "_row_id" : null
+          },
+          "alias" : "UOL_AMT",
+          "description" : null,
+          "_row_id" : "nH0pv50-4ZbaSUhuKRxTJ"
+        }, {
+          "expression" : {
+            "expression" : "CLAIM_OWNR_CODE",
+            "_row_id" : null
+          },
+          "alias" : "CLAIM_OWNR_CODE",
+          "description" : null,
+          "_row_id" : "Cd-2gWj36P4c5u_X-vLjT"
+        }, {
+          "expression" : {
+            "expression" : "CLAIM_SEGMENT_ID",
+            "_row_id" : null
+          },
+          "alias" : "CLAIM_SEGMENT_ID",
+          "description" : null,
+          "_row_id" : "AmYnXqtv9dqSfDFYhUHQg"
+        }, {
+          "expression" : {
+            "expression" : "CLAIM_SUBSEG_ID",
+            "_row_id" : null
+          },
+          "alias" : "CLAIM_SUBSEG_ID",
+          "description" : null,
+          "_row_id" : "DH5Nuv2TCz13pJGYAfPEW"
+        }, {
+          "expression" : {
+            "expression" : "CLAIM_CATASTROPHE_CODE",
+            "_row_id" : null
+          },
+          "alias" : "CLAIM_CATASTROPHE_CODE",
+          "description" : null,
+          "_row_id" : "rrWOb14SAe6s2bh5ttbL7"
+        }, {
+          "expression" : {
+            "expression" : "INTERMEDIARY_ID",
+            "_row_id" : null
+          },
+          "alias" : "INTERMEDIARY_ID",
+          "description" : null,
+          "_row_id" : "nELJYheCrPpY6FP2AHIfP"
+        }, {
+          "expression" : {
+            "expression" : "CLIENT_ID",
+            "_row_id" : null
+          },
+          "alias" : "CLIENT_ID",
+          "description" : null,
+          "_row_id" : "YzGz9QcSsx4BHwIctF1cP"
+        }, {
+          "expression" : {
+            "expression" : "ASSESSOR_ID",
+            "_row_id" : null
+          },
+          "alias" : "ASSESSOR_ID",
+          "description" : null,
+          "_row_id" : "QEKlbcvwhubSD0bQBQxBh"
+        }, {
+          "expression" : {
+            "expression" : "LOSS_DATE_ID",
+            "_row_id" : null
+          },
+          "alias" : "LOSS_DATE_ID",
+          "description" : null,
+          "_row_id" : "1bqpP85jK4YaJ1LMSIPad"
+        }, {
+          "expression" : {
+            "expression" : "CLAIM_OFFICER_PARTY_NUM",
+            "_row_id" : null
+          },
+          "alias" : "CLAIM_OFFICER_PARTY_NUM",
+          "description" : null,
+          "_row_id" : "Pg2TzuB7e7uSwD8zjH-fC"
+        }, {
+          "expression" : {
+            "expression" : "BODILY_INJURY_CODE",
+            "_row_id" : null
+          },
+          "alias" : "BODILY_INJURY_CODE",
+          "description" : null,
+          "_row_id" : "5ttuW-sXbcDWOq6zdnw1p"
+        }, {
+          "expression" : {
+            "expression" : "CLAIM_OFFICER_PARTY_ID",
+            "_row_id" : null
+          },
+          "alias" : "CLAIM_OFFICER_PARTY_ID",
+          "description" : null,
+          "_row_id" : "qc7p17cs_LAV3mKzFPt5V"
+        }, {
+          "expression" : {
+            "expression" : "UNDER_EXCESS_TYPE",
+            "_row_id" : null
+          },
+          "alias" : "UNDER_EXCESS_TYPE",
+          "description" : null,
+          "_row_id" : "hfkrJgw1nV1I_iyKgOpvr"
+        }, {
+          "expression" : {
+            "expression" : "MARKET_SEGMENT_ID",
+            "_row_id" : null
+          },
+          "alias" : "MARKET_SEGMENT_ID",
+          "description" : null,
+          "_row_id" : "_aOda6XAgAMr5L9hg3mfO"
+        }, {
+          "expression" : {
+            "expression" : "ACDNT_MTH_ID",
+            "_row_id" : null
+          },
+          "alias" : "ACDNT_MTH_ID",
+          "description" : null,
+          "_row_id" : "0fK-yJnE1dFAHvOmYR15J"
+        }, {
+          "expression" : {
+            "expression" : "RPTED_MTH_ID",
+            "_row_id" : null
+          },
+          "alias" : "RPTED_MTH_ID",
+          "description" : null,
+          "_row_id" : "0dNcP-0PiYra1lkPPflTI"
+        }, {
+          "expression" : {
+            "expression" : "RPTED_DATE_ID",
+            "_row_id" : null
+          },
+          "alias" : "RPTED_DATE_ID",
+          "description" : null,
+          "_row_id" : "ES0I9HGhCihkdTa6DVAV7"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "EXP_Cal_Cummulative_Bal_Mth_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "EXP_Cal_Cummulative_Bal_Mth_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "35_SDMmp_sdm_sdm_Data_GI_Claim_Bal_Mth_Agg_sh_DATA_GI_CLAIM_MOVEMENT_sh_DATA_GI_CLAIM_MOVEMENT_out0" : {
+      "id" : "35_SDMmp_sdm_sdm_Data_GI_Claim_Bal_Mth_Agg_sh_DATA_GI_CLAIM_MOVEMENT_sh_DATA_GI_CLAIM_MOVEMENT_out0",
+      "component" : "SQLStatement",
+      "metadata" : {
+        "label" : "35_SDMmp_sdm_sdm_Data_GI_Claim_Bal_Mth_Agg_sh_DATA_GI_CLAIM_MOVEMENT"
+      },
+      "properties" : {
+        "fileTabs" : [ {
+          "path" : "output_port_0",
+          "id" : "output_port_0",
+          "language" : "sql",
+          "content" : "\nSELECT *\n\nFROM {{ prophecy_tmp_source('35_SDM_mp_sdm_sdm_Data_GI_Claim_Bal_Mth_Agg', '35_SDMmp_sdm_sdm_Data_GI_Claim_Bal_Mth_Agg_sh_DATA_GI_CLAIM_MOVEMENT') }}\n\n"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_0",
+          "slug" : "input_port_0"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_0",
+          "slug" : "output_port_0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "edge_763",
+    "source" : "EXP_Calculate_End_Acct_Mth_Id",
+    "sourcePort" : "EXP_Calculate_End_Acct_Mth_Id_out0",
+    "target" : "sh_DATA_GI_CLAIM_BAL_MTH_AGG",
+    "targetPort" : "sh_DATA_GI_CLAIM_BAL_MTH_AGG_in0",
+    "isWireless" : false
+  }, {
+    "id" : "edge_765",
+    "source" : "EXP_Cal_Cummulative_Bal_Mth",
+    "sourcePort" : "EXP_Cal_Cummulative_Bal_Mth_out0",
+    "target" : "EXP_Calculate_End_Acct_Mth_Id",
+    "targetPort" : "EXP_Calculate_End_Acct_Mth_Id_in0",
+    "isWireless" : false
+  }, {
+    "id" : "edge_764",
+    "source" : "35_SDMmp_sdm_sdm_Data_GI_Claim_Bal_Mth_Agg_sh_DATA_GI_CLAIM_MOVEMENT_sh_DATA_GI_CLAIM_MOVEMENT_out0",
+    "sourcePort" : "output_port_0",
+    "target" : "EXP_Cal_Cummulative_Bal_Mth",
+    "targetPort" : "EXP_Cal_Cummulative_Bal_Mth_in0",
+    "isWireless" : false
+  } ],
+  "component" : "Model"
+}

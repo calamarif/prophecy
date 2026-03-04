@@ -1,0 +1,105 @@
+entityType: ""
+providerType: "Databricks"
+fields:
+- name: "CTL_REC_CRTN_DATE"
+  dataType:
+    type: "Timestamp"
+- name: "CLAIM_CMPY_CODE"
+  dataType:
+    type: "String"
+- name: "TRANS_BATCH_TYPE"
+  dataType:
+    type: "String"
+- name: "CTL_SRC_ROW_ID"
+  dataType:
+    type: "Integer"
+- name: "TRANS_TS"
+  dataType:
+    type: "Timestamp"
+- name: "TRANS_USER_PARTY_ID"
+  dataType:
+    type: "Integer"
+- name: "CLAIM_BRANCH_CODE"
+  dataType:
+    type: "String"
+- name: "TRANS_DESC"
+  dataType:
+    type: "String"
+- name: "TRANS_BATCH_NO"
+  dataType:
+    type: "String"
+- name: "TRANS_AMT"
+  dataType:
+    type: "Double"
+- name: "CTL_JOB_ID"
+  dataType:
+    type: "Integer"
+- name: "TRANS_CCY_CODE"
+  dataType:
+    type: "String"
+- name: "PRD_CODE"
+  dataType:
+    type: "String"
+- name: "ACCTING_MTH_ID"
+  dataType:
+    type: "Integer"
+- name: "CLAIM_NUM"
+  dataType:
+    type: "String"
+- name: "CTL_SRC_SYS_SET_NAME"
+  dataType:
+    type: "String"
+- name: "BUSN_AREA_NAME"
+  dataType:
+    type: "String"
+- name: "TRANS_EFFT_DATE"
+  dataType:
+    type: "Timestamp"
+- name: "CTL_BATCH_ID"
+  dataType:
+    type: "Integer"
+- name: "PREM_CLASS_CODE"
+  dataType:
+    type: "String"
+- name: "CLAIM_ID"
+  dataType:
+    type: "Integer"
+- name: "CLAIM_PAYMT_TYPE_CODE"
+  dataType:
+    type: "String"
+- name: "TRANS_USER_PARTY_NUM"
+  dataType:
+    type: "String"
+- name: "TRANS_ID"
+  dataType:
+    type: "Integer"
+- name: "RI_METHOD_CODE"
+  dataType:
+    type: "String"
+- name: "UW_YR"
+  dataType:
+    type: "Integer"
+- name: "RSK_CLASS_ID"
+  dataType:
+    type: "Integer"
+- name: "TRANS_BATCH_CMPY_CODE"
+  dataType:
+    type: "String"
+- name: "CTL_EXTRACT_ID"
+  dataType:
+    type: "Integer"
+- name: "AMT_TYPE_CODE"
+  dataType:
+    type: "String"
+- name: "TRANS_REC_TYPE"
+  dataType:
+    type: "String"
+- name: "TRANS_BATCH_BRANCH"
+  dataType:
+    type: "String"
+- name: "TRANS_TYPE_CODE"
+  dataType:
+    type: "String"
+- name: "POL_NUM"
+  dataType:
+    type: "String"

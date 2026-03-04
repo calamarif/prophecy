@@ -1,0 +1,406 @@
+{{
+  config({    
+    "materialized": "table",
+    "alias": "sh_DATA_GI_CLAIM_REOPEN_CNT_MTH_AGG",
+    "database": "qa_team",
+    "schema": "qa_orchestration"
+  })
+}}
+
+WITH `35_SDMmp_mdl_sdm_Lkp_GI_Claim_Reopen_Cnt_Mth_Agg_sh_DIM_GI_CLAIM` AS (
+
+  SELECT *
+  
+  FROM {{
+    prophecy_tmp_source(
+      '35_SDM_mp_mdl_sdm_Lkp_GI_Claim_Reopen_Cnt_Mth_Agg', 
+      '35_SDMmp_mdl_sdm_Lkp_GI_Claim_Reopen_Cnt_Mth_Agg_sh_DIM_GI_CLAIM'
+    )
+  }}
+
+),
+
+SQ_sh_DIM_GI_CLAIM AS (
+
+  SELECT 
+    CLAIM_ID AS CLAIM_ID,
+    CTL_SRC_SYS_SET_NAME AS CTL_SRC_SYS_SET_NAME,
+    REC_STRT_DATE AS REC_STRT_DATE,
+    BUSN_AREA_NAME AS BUSN_AREA_NAME,
+    RSK_ID AS RSK_ID,
+    RI_METHOD_CODE AS RI_METHOD_CODE,
+    DATE_OF_STATUS AS DATE_OF_STATUS,
+    DATE_NOTIFIED AS DATE_NOTIFIED,
+    DATE_RJCTED AS DATE_RJCTED,
+    DATE_ACPTED AS DATE_ACPTED,
+    LOSS_PRD_CODE AS LOSS_PRD_CODE,
+    CLAIM_STATUS_CODE AS CLAIM_STATUS_CODE,
+    CLAIM_TYPE_CODE AS CLAIM_TYPE_CODE,
+    INVESTIGATOR_CODE AS INVESTIGATOR_CODE,
+    ASSESSOR_CODE AS ASSESSOR_CODE,
+    SOLICITOR_CODE AS SOLICITOR_CODE,
+    MAA_SENT_MTH_ID AS MAA_SENT_MTH_ID,
+    CLAIM_FRAUD_CODE AS CLAIM_FRAUD_CODE,
+    SUBROGATION_FLG AS SUBROGATION_FLG,
+    REOPENED_FLG AS REOPENED_FLG,
+    PMT_BLOCK_FLG AS PMT_BLOCK_FLG,
+    BRANCH_TRANF_FLG AS BRANCH_TRANF_FLG,
+    DATE_RPTED AS DATE_RPTED,
+    CLSD_DATE AS CLSD_DATE,
+    DATE_OF_LOSS AS DATE_OF_LOSS,
+    TRANS_TS AS TRANS_TS,
+    REC_END_DATE AS REC_END_DATE,
+    CLAIM_NUM AS CLAIM_NUM,
+    CMPY_NUM AS CMPY_NUM,
+    DISP_CLAIM_NUM AS DISP_CLAIM_NUM,
+    CLAIMANT_NAME AS CLAIMANT_NAME,
+    CLIENT_CLAIM_NUM AS CLIENT_CLAIM_NUM,
+    ICA_CAT_CODE AS ICA_CAT_CODE,
+    CAUSE_OF_LOSS AS CAUSE_OF_LOSS,
+    BODILY_INJURY_FLG AS BODILY_INJURY_FLG,
+    CAST(NULL AS string) AS CLAIM_OFFICER_CODE,
+    UW_CODE AS UW_CODE,
+    RATE_NSB_FLG AS RATE_NSB_FLG,
+    OTHER_PARTY_FLG AS OTHER_PARTY_FLG,
+    MUTI_UNIT_FLG AS MUTI_UNIT_FLG,
+    VIP_CLAIM_FLG AS VIP_CLAIM_FLG,
+    DAMAGE_PERC AS DAMAGE_PERC,
+    CLAIM_SRC_CODE AS CLAIM_SRC_CODE,
+    UNDER_EXCESS_TYPE AS UNDER_EXCESS_TYPE,
+    GST_CAT AS GST_CAT,
+    DVSN_11_EXCESS_FLG AS DVSN_11_EXCESS_FLG,
+    DVSN_78_FLG AS DVSN_78_FLG,
+    DVSN_11_EXCESS_DATE AS DVSN_11_EXCESS_DATE,
+    DVSN_78_EXCESS_DATE AS DVSN_78_EXCESS_DATE,
+    MSTR_CLAIM_NUM AS MSTR_CLAIM_NUM,
+    CLAIM_CAUSE_CODE AS CLAIM_CAUSE_CODE,
+    CTL_SRC_ROW_ID AS CTL_SRC_ROW_ID,
+    CTL_BATCH_ID AS CTL_BATCH_ID,
+    CTL_JOB_ID AS CTL_JOB_ID,
+    CTL_EXTRACT_ID AS CTL_EXTRACT_ID,
+    CTL_REC_CRTN_DATE AS CTL_REC_CRTN_DATE,
+    DEFAULT_PREM_CLASS_CODE AS DEFAULT_PREM_CLASS_CODE,
+    COVR_INCEPTION_DATE AS COVR_INCEPTION_DATE,
+    COVR_EXPIRY_DATE AS COVR_EXPIRY_DATE,
+    POL_ID AS POL_ID,
+    CLAIM_BRANCH_CODE AS CLAIM_BRANCH_CODE,
+    CTL_REC_UPDATE_DATE AS CTL_REC_UPDATE_DATE,
+    (monotonically_increasing_id()) AS prophecy_sk
+  
+  FROM `35_SDMmp_mdl_sdm_Lkp_GI_Claim_Reopen_Cnt_Mth_Agg_sh_DIM_GI_CLAIM` AS in0
+
+),
+
+`35_SDMmp_mdl_sdm_Lkp_GI_Claim_Reopen_Cnt_Mth_Agg_SOURCE_LKP_DATA_GI_CLAIM_TRANSACTION` AS (
+
+  SELECT *
+  
+  FROM {{
+    prophecy_tmp_source(
+      '35_SDM_mp_mdl_sdm_Lkp_GI_Claim_Reopen_Cnt_Mth_Agg', 
+      '35_SDMmp_mdl_sdm_Lkp_GI_Claim_Reopen_Cnt_Mth_Agg_SOURCE_LKP_DATA_GI_CLAIM_TRANSACTION'
+    )
+  }}
+
+),
+
+EXP_Standardize_Claim_Status_Code AS (
+
+  SELECT 
+    (
+      CASE
+        WHEN (CTL_SRC_SYS_SET_NAME = 'NZA')
+          THEN (
+            CASE
+              WHEN (CAST((LTRIM((RTRIM(CLAIM_STATUS_CODE)))) AS VARCHAR (1000)) = 'Y')
+                THEN 'C'
+              WHEN (CAST((LTRIM((RTRIM(CLAIM_STATUS_CODE)))) AS VARCHAR (1000)) = 'FA')
+                THEN 'C'
+              WHEN (CAST((LTRIM((RTRIM(CLAIM_STATUS_CODE)))) AS VARCHAR (1000)) = 'FD')
+                THEN 'C'
+              WHEN (CAST((LTRIM((RTRIM(CLAIM_STATUS_CODE)))) AS VARCHAR (1000)) = 'FP')
+                THEN 'C'
+              WHEN (CAST((LTRIM((RTRIM(CLAIM_STATUS_CODE)))) AS VARCHAR (1000)) = 'FW')
+                THEN 'C'
+              WHEN (CAST((LTRIM((RTRIM(CLAIM_STATUS_CODE)))) AS VARCHAR (1000)) = 'RA')
+                THEN 'A'
+              WHEN (CAST((LTRIM((RTRIM(CLAIM_STATUS_CODE)))) AS VARCHAR (1000)) = 'RC')
+                THEN 'A'
+              WHEN (CAST((LTRIM((RTRIM(CLAIM_STATUS_CODE)))) AS VARCHAR (1000)) = 'RD')
+                THEN 'A'
+              WHEN (CAST((LTRIM((RTRIM(CLAIM_STATUS_CODE)))) AS VARCHAR (1000)) = 'RW')
+                THEN 'A'
+              WHEN (CAST((LTRIM((RTRIM(CLAIM_STATUS_CODE)))) AS VARCHAR (1000)) = 'Ne')
+                THEN 'A'
+              WHEN (CAST((LTRIM((RTRIM(CLAIM_STATUS_CODE)))) AS VARCHAR (1000)) = 'No')
+                THEN 'A'
+              WHEN (CAST((LTRIM((RTRIM(CLAIM_STATUS_CODE)))) AS VARCHAR (1000)) = 'RG')
+                THEN 'A'
+              WHEN (CAST((LTRIM((RTRIM(CLAIM_STATUS_CODE)))) AS VARCHAR (1000)) = 'A')
+                THEN 'A'
+              WHEN (CAST((LTRIM((RTRIM(CLAIM_STATUS_CODE)))) AS VARCHAR (1000)) = 'C')
+                THEN 'C'
+              ELSE CAST((CONCAT('Strange Claim Status Code :', CLAIM_STATUS_CODE, ' for source system NZA')) AS string)
+            END
+          )
+        WHEN CAST((CTL_SRC_SYS_SET_NAME IN ('POLISY_S3', 'POLISY_S2', 'POLISY_S1')) AS BOOLEAN)
+          THEN (
+            CASE
+              WHEN (CAST((SUBSTRING((LTRIM((RTRIM(CLAIM_STATUS_CODE)))), 1, 1)) AS VARCHAR (1000)) = 'A')
+                THEN 'A'
+              WHEN (CAST((SUBSTRING((LTRIM((RTRIM(CLAIM_STATUS_CODE)))), 1, 1)) AS VARCHAR (1000)) = 'C')
+                THEN 'C'
+              WHEN (CAST((SUBSTRING((LTRIM((RTRIM(CLAIM_STATUS_CODE)))), 1, 1)) AS VARCHAR (1000)) = 'F')
+                THEN 'C'
+              WHEN (CAST((SUBSTRING((LTRIM((RTRIM(CLAIM_STATUS_CODE)))), 1, 1)) AS VARCHAR (1000)) = 'O')
+                THEN 'A'
+              WHEN (CAST((SUBSTRING((LTRIM((RTRIM(CLAIM_STATUS_CODE)))), 1, 1)) AS VARCHAR (1000)) = 'R')
+                THEN 'A'
+              WHEN (CAST((SUBSTRING((LTRIM((RTRIM(CLAIM_STATUS_CODE)))), 1, 1)) AS VARCHAR (1000)) = 'N')
+                THEN 'A'
+              WHEN (CAST((SUBSTRING((LTRIM((RTRIM(CLAIM_STATUS_CODE)))), 1, 1)) AS VARCHAR (1000)) = 'D')
+                THEN 'C'
+              WHEN (CAST((SUBSTRING((LTRIM((RTRIM(CLAIM_STATUS_CODE)))), 1, 1)) AS VARCHAR (1000)) = 'P')
+                THEN 'A'
+              WHEN (CAST((SUBSTRING((LTRIM((RTRIM(CLAIM_STATUS_CODE)))), 1, 1)) AS VARCHAR (1000)) = 'Y')
+                THEN 'C'
+              ELSE CAST((CONCAT('Strange Claim Status Code :', CLAIM_STATUS_CODE, ' for source system ', CTL_SRC_SYS_SET_NAME)) AS string)
+            END
+          )
+        WHEN CAST((CTL_SRC_SYS_SET_NAME IN ('AMIA_AUS', 'AMIA_NZ')) AS BOOLEAN)
+          THEN CLAIM_STATUS_CODE
+        ELSE CAST((CONCAT('Strange source system ', CTL_SRC_SYS_SET_NAME)) AS string)
+      END
+    ) AS CLAIM_STATUS_CODE,
+    prophecy_sk AS prophecy_sk
+  
+  FROM SQ_sh_DIM_GI_CLAIM AS in0
+
+),
+
+EXP_Calculates_Reopen_Count_JOIN AS (
+
+  SELECT 
+    in0.CTL_SRC_SYS_SET_NAME AS CTL_SRC_SYS_SET_NAME,
+    in0.REC_STRT_DATE AS REC_STRT_DATE,
+    in0.CLAIM_ID AS CLAIM_ID,
+    in0.CLSD_DATE AS CLSD_DATE,
+    in0.prophecy_sk AS prophecy_sk,
+    in0.REOPENED_FLG AS REOPENED_FLG,
+    in0.REC_END_DATE AS REC_END_DATE,
+    in0.CLAIM_STATUS_CODE AS CLAIM_STATUS_CODE
+  
+  FROM SQ_sh_DIM_GI_CLAIM AS in0
+  INNER JOIN EXP_Standardize_Claim_Status_Code AS in1
+     ON (in0.prophecy_sk = in1.prophecy_sk)
+
+),
+
+EXP_Calculates_Reopen_Count_LOOKUP_264 AS (
+
+  SELECT 
+    in1.CLAIM_ID AS LOOKUP_VARIABLE_1,
+    in0.CLAIM_ID AS CLAIM_ID,
+    in0.CTL_SRC_SYS_SET_NAME AS CTL_SRC_SYS_SET_NAME,
+    in0.TRANS_DATE AS TRANS_DATE,
+    in1.CLSD_DATE AS CLSD_DATE,
+    in1.REC_END_DATE AS REC_END_DATE,
+    in1.REC_STRT_DATE AS REC_STRT_DATE,
+    in1.REOPENED_FLG AS REOPENED_FLG,
+    in1.prophecy_sk AS prophecy_sk,
+    in1.CLAIM_STATUS_CODE AS CLAIM_STATUS_CODE
+  
+  FROM `35_SDMmp_mdl_sdm_Lkp_GI_Claim_Reopen_Cnt_Mth_Agg_SOURCE_LKP_DATA_GI_CLAIM_TRANSACTION` AS in0
+  LEFT JOIN EXP_Calculates_Reopen_Count_JOIN AS in1
+     ON (in0.CLAIM_ID = in1.CLAIM_ID)
+    and (in0.CTL_SRC_SYS_SET_NAME = in1.CTL_SRC_SYS_SET_NAME)
+    and (in0.TRANS_DATE >= lag(in1.REC_STRT_DATE) OVER (PARTITION BY 1 ORDER BY 1 ASC NULLS FIRST))
+    and (in0.TRANS_DATE <= in1.REC_STRT_DATE)
+
+),
+
+EXP_Calculates_Reopen_Count AS (
+
+  SELECT 
+    CLAIM_ID AS CLAIM_ID,
+    REC_STRT_DATE AS REC_STRT_DATE,
+    CLAIM_STATUS_CODE AS CLAIM_STATUS_CODE,
+    REC_END_DATE AS REC_END_DATE,
+    CTL_SRC_SYS_SET_NAME AS CTL_SRC_SYS_SET_NAME,
+    CLSD_DATE AS CLSD_DATE,
+    REOPENED_FLG AS REOPENED_FLG,
+    (TO_TIMESTAMP(REC_STRT_DATE, 'yyyyMM')) AS REC_STRT_MTH_ID,
+    CASE
+      WHEN CAST(CTL_SRC_SYS_SET_NAME.isin('POLISY_S1', 'POLISY_S3', 'NZA', 'POLISY_S2') AS BOOLEAN)
+        THEN CASE
+          WHEN (CLAIM_ID = lag(CLAIM_ID) OVER (PARTITION BY 1 ORDER BY 1 ASC NULLS FIRST))
+          and (CTL_SRC_SYS_SET_NAME = lag(CTL_SRC_SYS_SET_NAME) OVER (PARTITION BY 1 ORDER BY 1 ASC NULLS FIRST))
+            THEN CASE
+              WHEN (lag(CLAIM_STATUS_CODE) OVER (PARTITION BY 1 ORDER BY 1 ASC NULLS FIRST) = 'C')
+              and (CLAIM_STATUS_CODE = 'A')
+                THEN 1
+              WHEN (CTL_SRC_SYS_SET_NAME = 'NZA')
+              and (lag(CLAIM_STATUS_CODE) OVER (PARTITION BY 1 ORDER BY 1 ASC NULLS FIRST) = 'C')
+              and (CLAIM_STATUS_CODE = 'C')
+              or CTL_SRC_SYS_SET_NAME.isin('POLISY_S1', 'POLISY_S2', 'POLISY_S3')
+              and (lag(CLAIM_STATUS_CODE) OVER (PARTITION BY 1 ORDER BY 1 ASC NULLS FIRST) = 'C')
+              and (CLAIM_STATUS_CODE = 'C')
+              and (REOPENED_FLG = 'R')
+                THEN CASE
+                  WHEN not(isnull(LOOKUP_VARIABLE_1))
+                    THEN 1
+                  ELSE 0
+                END
+              ELSE 0
+            END
+          ELSE 0
+        END
+      WHEN CAST(CTL_SRC_SYS_SET_NAME.isin('AMIA_AUS', 'AMIA_NZ') AS BOOLEAN)
+        THEN CASE
+          WHEN CLAIM_ID != lag(CLAIM_ID) OVER (PARTITION BY 1 ORDER BY 1 ASC NULLS FIRST)
+            THEN 0
+          WHEN CLSD_DATE = lag(CLSD_DATE) OVER (PARTITION BY 1 ORDER BY 1 ASC NULLS FIRST)
+            THEN 0
+          WHEN concat(CLAIM_STATUS_CODE, '', lag(CLAIM_STATUS_CODE) OVER (PARTITION BY 1 ORDER BY 1 ASC NULLS FIRST)) = 'FF'
+            THEN 1
+          WHEN CLAIM_STATUS_CODE != 'F'
+            THEN 1
+          ELSE 0
+        END
+      ELSE NULL
+    END AS REOPEN_COUNT,
+    prophecy_sk AS prophecy_sk
+  
+  FROM EXP_Calculates_Reopen_Count_LOOKUP_264 AS in0
+
+),
+
+AGG_Sum_Reopen_Cnt_By_Mth_expr_JOIN AS (
+
+  SELECT 
+    in1.REC_STRT_MTH_ID AS REC_STRT_MTH_ID,
+    in0.CTL_SRC_SYS_SET_NAME AS CTL_SRC_SYS_SET_NAME,
+    in0.REC_STRT_DATE AS REC_STRT_DATE,
+    in0.CLAIM_ID AS CLAIM_ID,
+    in0.CLSD_DATE AS CLSD_DATE,
+    in1.REOPEN_COUNT AS REOPEN_COUNT,
+    in0.prophecy_sk AS prophecy_sk,
+    in0.REOPENED_FLG AS REOPENED_FLG,
+    in0.REC_END_DATE AS REC_END_DATE,
+    in0.CLAIM_STATUS_CODE AS CLAIM_STATUS_CODE
+  
+  FROM SQ_sh_DIM_GI_CLAIM AS in0
+  INNER JOIN EXP_Calculates_Reopen_Count AS in1
+     ON (in0.prophecy_sk = in1.prophecy_sk)
+
+),
+
+AGG_Sum_Reopen_Cnt_By_Mth_expr_JOIN_EXPR_262 AS (
+
+  SELECT 
+    CTL_SRC_SYS_SET_NAME AS CTL_SRC_SYS_SET_NAME,
+    prophecy_sk AS prophecy_sk,
+    CLAIM_ID AS CLAIM_ID,
+    REC_STRT_MTH_ID AS REC_STRT_MTH_ID,
+    REC_STRT_DATE AS REC_STRT_DATE,
+    REOPEN_COUNT AS IN_REOPEN_COUNT,
+    CLAIM_STATUS_CODE AS CLAIM_STATUS_CODE
+  
+  FROM AGG_Sum_Reopen_Cnt_By_Mth_expr_JOIN AS in0
+
+),
+
+AGG_Sum_Reopen_Cnt_By_Mth AS (
+
+  SELECT 
+    first(CLAIM_STATUS_CODE) AS CLAIM_STATUS_CODE,
+    first(REC_STRT_DATE) AS REC_STRT_DATE,
+    SUM(IN_REOPEN_COUNT) AS REOPEN_COUNT_MTH,
+    MAX((
+      CASE
+        WHEN (IN_REOPEN_COUNT = 1)
+          THEN REC_STRT_DATE
+        ELSE NULL
+      END
+    )) AS LAST_REOPEN_DATE,
+    first(CLAIM_ID) AS CLAIM_ID,
+    first(CTL_SRC_SYS_SET_NAME) AS CTL_SRC_SYS_SET_NAME,
+    first(REC_STRT_MTH_ID) AS REC_STRT_MTH_ID
+  
+  FROM AGG_Sum_Reopen_Cnt_By_Mth_expr_JOIN_EXPR_262 AS in0
+  
+  GROUP BY 
+    CLAIM_ID, CTL_SRC_SYS_SET_NAME, REC_STRT_MTH_ID
+
+),
+
+FIL_Remove_Reopen_Counts_Equalling_Zero AS (
+
+  SELECT * 
+  
+  FROM AGG_Sum_Reopen_Cnt_By_Mth AS in0
+  
+  WHERE CAST((REOPEN_COUNT_MTH <> 0) AS BOOLEAN)
+
+),
+
+FIL_Remove_Reopen_Counts_Equalling_Zero_GENERATE_SK_0 AS (
+
+  SELECT 
+    (monotonically_increasing_id()) AS prophecy_sk,
+    *
+  
+  FROM FIL_Remove_Reopen_Counts_Equalling_Zero AS in0
+
+),
+
+EXP_Audit_Columns AS (
+
+  SELECT 
+    {{ var('PMWorkflowRunId') }} AS CTL_JOB_ID,
+    CURRENT_TIMESTAMP AS CTL_REC_CRTN_DATE,
+    prophecy_sk AS prophecy_sk
+  
+  FROM FIL_Remove_Reopen_Counts_Equalling_Zero_GENERATE_SK_0 AS in0
+
+),
+
+sh_DATA_GI_CLAIM_REOPEN_CNT_MTH_AGG_EXP_JOIN AS (
+
+  SELECT 
+    in1.REC_STRT_MTH_ID AS REC_STRT_MTH_ID,
+    in1.CTL_SRC_SYS_SET_NAME AS CTL_SRC_SYS_SET_NAME,
+    in1.LAST_REOPEN_DATE AS LAST_REOPEN_DATE,
+    in1.CLAIM_ID AS CLAIM_ID,
+    in0.CTL_REC_CRTN_DATE AS CTL_REC_CRTN_DATE,
+    in1.REOPEN_COUNT_MTH AS REOPEN_COUNT_MTH,
+    in0.prophecy_sk AS prophecy_sk,
+    in1.CLAIM_STATUS_CODE AS CLAIM_STATUS_CODE,
+    in0.CTL_JOB_ID AS CTL_JOB_ID
+  
+  FROM EXP_Audit_Columns AS in0
+  INNER JOIN FIL_Remove_Reopen_Counts_Equalling_Zero_GENERATE_SK_0 AS in1
+     ON (in0.prophecy_sk = in1.prophecy_sk)
+
+),
+
+sh_DATA_GI_CLAIM_REOPEN_CNT_MTH_AGG_EXP_JOIN_EXPR_261 AS (
+
+  SELECT 
+    CTL_JOB_ID AS CTL_JOB_ID,
+    CTL_REC_CRTN_DATE AS CTL_REC_CRTN_DATE,
+    prophecy_sk AS prophecy_sk,
+    REC_STRT_MTH_ID AS STATUS_MTH_ID,
+    REOPEN_COUNT_MTH AS COUNT_REOPENED,
+    CLAIM_STATUS_CODE AS CLAIM_STATUS_CODE,
+    CTL_SRC_SYS_SET_NAME AS CTL_SRC_SYS_SET_NAME,
+    LAST_REOPEN_DATE AS LAST_REOPEN_DATE,
+    CLAIM_ID AS CLAIM_ID
+  
+  FROM sh_DATA_GI_CLAIM_REOPEN_CNT_MTH_AGG_EXP_JOIN AS in0
+
+)
+
+SELECT *
+
+FROM sh_DATA_GI_CLAIM_REOPEN_CNT_MTH_AGG_EXP_JOIN_EXPR_261

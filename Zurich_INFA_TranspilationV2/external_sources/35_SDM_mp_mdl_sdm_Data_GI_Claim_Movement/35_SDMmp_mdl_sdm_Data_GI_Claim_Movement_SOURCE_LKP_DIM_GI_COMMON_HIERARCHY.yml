@@ -1,0 +1,18 @@
+entityType: ""
+providerType: "Databricks"
+fields:
+- name: "TO_REFERENCE_ID"
+  dataType:
+    type: "Integer"
+- name: "FROM_REFERENCE_ID"
+  dataType:
+    type: "Integer"
+- name: "HIERARCHY_TYPE_ID"
+  dataType:
+    type: "Integer"
+- name: "FROM_ITEM_TABLE"
+  dataType:
+    type: "String"
+- name: "TO_ITEM_TABLE"
+  dataType:
+    type: "String"

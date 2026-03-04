@@ -1,0 +1,391 @@
+{
+  "id" : "40_DM_ORAC_mp_data_refresh_master",
+  "metainfo" : {
+    "label" : "40_DM_ORAC_mp_data_refresh_master",
+    "autoLayout" : false,
+    "version" : 1,
+    "configuration" : {
+      "schema" : {
+        "type" : "record",
+        "fields" : [ {
+          "name" : "CTL_BATCH_ID",
+          "kind" : {
+            "type" : "int",
+            "value" : "0"
+          }
+        }, {
+          "name" : "MAXIMUM_DEGREE_OF_PARALLELISM",
+          "kind" : {
+            "type" : "int",
+            "value" : "0"
+          }
+        }, {
+          "name" : "TARGET_SCHEMA_LIST",
+          "kind" : {
+            "type" : "string",
+            "value" : "''"
+          }
+        }, {
+          "name" : "RETRY_FAILED_STEPS",
+          "kind" : {
+            "type" : "string",
+            "value" : "''"
+          }
+        }, {
+          "name" : "PMSourceFileDir",
+          "kind" : {
+            "type" : "string",
+            "value" : "''"
+          }
+        }, {
+          "name" : "execute_data_refresh_event",
+          "kind" : {
+            "type" : "string",
+            "value" : "''"
+          }
+        }, {
+          "name" : "PMTargetFileDir",
+          "kind" : {
+            "type" : "string",
+            "value" : "''"
+          }
+        } ]
+      }
+    },
+    "isTranspiledPipeline" : false,
+    "publishDiagnosticMetrics" : true,
+    "transpilerType" : "informatica",
+    "processesVsModelFiles" : {
+      "DUMMY_TARGET_EXP_DUMMY_TARGET_EXP_out0" : "models/40_DM_ORAC_mp_data_refresh_master/40_DM_ORAC_mp_data_refresh_master__DUMMY_TARGET_EXP.sql",
+      "EXP_set_parameters" : "models/40_DM_ORAC_mp_data_refresh_master/40_DM_ORAC_mp_data_refresh_master__EXP_set_parameters.sql",
+      "EXP_set_parameters_EXP_set_parameters_out0" : "models/40_DM_ORAC_mp_data_refresh_master/40_DM_ORAC_mp_data_refresh_master__EXP_set_parameters.sql",
+      "execute_data_refresh_event_execute_data_refresh_event_out0" : "models/40_DM_ORAC_mp_data_refresh_master/40_DM_ORAC_mp_data_refresh_master__DUMMY_TARGET_EXP.sql",
+      "DUMMY_TARGET_EXP" : "models/40_DM_ORAC_mp_data_refresh_master/40_DM_ORAC_mp_data_refresh_master__DUMMY_TARGET_EXP.sql",
+      "DUMMY_SOURCE_DUMMY_SOURCE_out0" : "models/40_DM_ORAC_mp_data_refresh_master/40_DM_ORAC_mp_data_refresh_master__EXP_set_parameters.sql"
+    }
+  },
+  "processes" : {
+    "EXP_set_parameters" : {
+      "id" : "EXP_set_parameters",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "40_DM_ORAC_mp_data_refresh_master__EXP_set_parameters",
+        "phase" : 1
+      },
+      "properties" : {
+        "modelName" : "40_DM_ORAC_mp_data_refresh_master__EXP_set_parameters"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "EXP_set_parameters_EXP_set_parameters_out0", "EXP_set_parameters", "DUMMY_SOURCE_DUMMY_SOURCE_out0" ],
+        "type" : "ephemeral",
+        "isTemporaryTable" : true,
+        "lastNodeProcessIds" : [ "EXP_set_parameters_EXP_set_parameters_out0" ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "40_DM_ORAC_mp_data_refresh_master__EXP_set_parameters_in_0",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "40_DM_ORAC_mp_data_refresh_master__EXP_set_parameters_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "DUMMY_SOURCE" : {
+      "id" : "DUMMY_SOURCE",
+      "component" : "OrchestrationSource",
+      "kind" : "SFTPSource",
+      "metadata" : {
+        "label" : "DUMMY_SOURCE",
+        "x" : 20,
+        "y" : 20,
+        "phase" : 1
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "sftp",
+          "id" : "transpiled_connection",
+          "properties" : {
+            "authMethod" : "password",
+            "username" : "transpiled_username",
+            "host" : "sftp.prophecy.io",
+            "id" : "transpiled_connection",
+            "port" : 22,
+            "password" : {
+              "kind" : "prophecy",
+              "properties" : {
+                "name" : "transpiled_secret",
+                "value" : "transpiled_secret"
+              },
+              "subKind" : "text",
+              "type" : "secret"
+            }
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "filePath" : {
+            "type" : "concat_operation",
+            "properties" : {
+              "elements" : [ {
+                "type" : "config",
+                "properties" : {
+                  "kind" : "prophecy",
+                  "name" : "PMSourceFileDir"
+                }
+              }, {
+                "type" : "literal",
+                "properties" : {
+                  "value" : "\\ORAC/dummy.csv"
+                }
+              } ]
+            }
+          }
+        },
+        "format" : {
+          "kind" : "csv",
+          "properties" : {
+            "schema" : {
+              "entityType" : "",
+              "providerType" : "Databricks",
+              "fields" : [ {
+                "name" : "DUMMY",
+                "dataType" : {
+                  "type" : "String"
+                }
+              } ]
+            }
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "DUMMY_SOURCE_out0",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "DUMMY",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : true
+      }
+    },
+    "DUMMY_TARGET" : {
+      "id" : "DUMMY_TARGET",
+      "component" : "OrchestrationTarget",
+      "kind" : "SFTPTarget",
+      "metadata" : {
+        "label" : "DUMMY_TARGET",
+        "x" : 820,
+        "y" : 20,
+        "phase" : 1
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "sftp",
+          "id" : "transpiled_connection",
+          "properties" : {
+            "authMethod" : "password",
+            "username" : "transpiled_username",
+            "host" : "sftp.prophecy.io",
+            "id" : "transpiled_connection",
+            "port" : 22,
+            "password" : {
+              "kind" : "prophecy",
+              "properties" : {
+                "name" : "transpiled_secret",
+                "value" : "transpiled_secret"
+              },
+              "subKind" : "text",
+              "type" : "secret"
+            }
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "filePath" : {
+            "type" : "concat_operation",
+            "properties" : {
+              "elements" : [ {
+                "type" : "config",
+                "properties" : {
+                  "kind" : "prophecy",
+                  "name" : "PMTargetFileDir"
+                }
+              }, {
+                "type" : "literal",
+                "properties" : {
+                  "value" : "/dummy_target1.out.xlsx"
+                }
+              } ]
+            }
+          }
+        },
+        "format" : {
+          "kind" : "xlsx",
+          "properties" : { }
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "DUMMY_TARGET_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "rJTN10WWcn3c4chGixkno",
+          "slug" : "out0"
+        } ]
+      }
+    },
+    "DUMMY_TARGET_EXP" : {
+      "id" : "DUMMY_TARGET_EXP",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "40_DM_ORAC_mp_data_refresh_master__DUMMY_TARGET_EXP",
+        "phase" : 1
+      },
+      "properties" : {
+        "modelName" : "40_DM_ORAC_mp_data_refresh_master__DUMMY_TARGET_EXP"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "DUMMY_TARGET_EXP_DUMMY_TARGET_EXP_out0", "DUMMY_TARGET_EXP", "execute_data_refresh_event_execute_data_refresh_event_out0" ],
+        "type" : "ephemeral",
+        "isTemporaryTable" : true,
+        "lastNodeProcessIds" : [ "DUMMY_TARGET_EXP_DUMMY_TARGET_EXP_out0" ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "40_DM_ORAC_mp_data_refresh_master__DUMMY_TARGET_EXP_in_0",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "40_DM_ORAC_mp_data_refresh_master__DUMMY_TARGET_EXP_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "execute_data_refresh_event" : {
+      "id" : "execute_data_refresh_event",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "execute_data_refresh_event",
+        "x" : 420,
+        "y" : 20,
+        "phase" : 0
+      },
+      "properties" : {
+        "ports" : null,
+        "scriptMethodHeader" : "def Script(spark: SparkSession, in0: DataFrame) -> DataFrame:",
+        "scriptMethodFooter" : "return out0",
+        "script" : "\nimport cx_Oracle\ndsn = dbutils.secrets.get(scope = {{execute_data_refresh_event}}, key = \"dsn\")\nusername = dbutils.secrets.get(scope = {{execute_data_refresh_event}}, key = \"username\")\npassword = dbutils.secrets.get(scope = {{execute_data_refresh_event}}, key = \"password\")\n\nresult = []\nfor row in in0.collect():\n  with cx_Oracle.connect(cfg.username, cfg.password, cfg.dsn) as connection:\n    with connection.cursor() as cursor:\n      ctl_batch_id = cursor.var(str)\n      maximum_degree_of_parallelism = cursor.var(str)\n      target_schema_list = cursor.var(str)\n      retry_failed_steps = cursor.var(str)\n      RETURN_VALUE = cursor.var(str)\n      cursor.callproc('ctl.execute_data_refresh_event', [row['ctl_batch_id'],row['maximum_degree_of_parallelism'],row['target_schema_list'],row['retry_failed_steps'],ctl_batch_id,maximum_degree_of_parallelism,target_schema_list,retry_failed_steps,RETURN_VALUE])\n      result += [Row(ctl_batch_id = row['ctl_batch_id'],maximum_degree_of_parallelism = row['maximum_degree_of_parallelism'],target_schema_list = row['target_schema_list'],retry_failed_steps = row['retry_failed_steps'],RETURN_VALUE = RETURN_VALUE)]\nout = spark.createDataFrame(result, \nStructType([\nStructField(\"ctl_batch_id\", IntegerType(), True),\nStructField(\"maximum_degree_of_parallelism\", IntegerType(), True),\nStructField(\"target_schema_list\", StringType(), True),\nStructField(\"retry_failed_steps\", StringType(), True),\nStructField(\"RETURN_VALUE\", IntegerType(), True)\n])\n)\n"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "execute_data_refresh_event_in0",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "DUMMY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ctl_batch_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "maximum_degree_of_parallelism",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "target_schema_list",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "retry_failed_steps",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "execute_data_refresh_event_out0",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "ctl_batch_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "RETURN_VALUE",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "retry_failed_steps",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "maximum_degree_of_parallelism",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "target_schema_list",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : true
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "edge_942",
+    "source" : "execute_data_refresh_event",
+    "sourcePort" : "execute_data_refresh_event_out0",
+    "target" : "DUMMY_TARGET_EXP",
+    "targetPort" : "40_DM_ORAC_mp_data_refresh_master__DUMMY_TARGET_EXP_in_0"
+  }, {
+    "id" : "edge_941",
+    "source" : "DUMMY_TARGET_EXP",
+    "sourcePort" : "40_DM_ORAC_mp_data_refresh_master__DUMMY_TARGET_EXP_out_0",
+    "target" : "DUMMY_TARGET",
+    "targetPort" : "DUMMY_TARGET_in0"
+  }, {
+    "id" : "edge_944",
+    "source" : "DUMMY_SOURCE",
+    "sourcePort" : "DUMMY_SOURCE_out0",
+    "target" : "EXP_set_parameters",
+    "targetPort" : "40_DM_ORAC_mp_data_refresh_master__EXP_set_parameters_in_0"
+  }, {
+    "id" : "edge_943",
+    "source" : "EXP_set_parameters",
+    "sourcePort" : "40_DM_ORAC_mp_data_refresh_master__EXP_set_parameters_out_0",
+    "target" : "execute_data_refresh_event",
+    "targetPort" : "execute_data_refresh_event_in0"
+  } ],
+  "component" : "Pipeline"
+}

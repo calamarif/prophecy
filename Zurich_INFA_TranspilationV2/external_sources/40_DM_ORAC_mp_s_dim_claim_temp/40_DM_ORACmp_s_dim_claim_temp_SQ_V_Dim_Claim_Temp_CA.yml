@@ -1,0 +1,222 @@
+entityType: ""
+providerType: "Databricks"
+fields:
+- name: "Claim_Loss_Location_Key"
+  dataType:
+    type: "String"
+- name: "Claim_Recovery_YN"
+  dataType:
+    type: "String"
+- name: "Claim_Time_Occurence"
+  dataType:
+    type: "Double"
+- name: "Claim_Recovery_Changed_YN"
+  dataType:
+    type: "String"
+- name: "Claim_Fraud_Type_Key"
+  dataType:
+    type: "String"
+- name: "Claim_UX_Type_Code"
+  dataType:
+    type: "String"
+- name: "Claim_Loss_Date_Modified_YN"
+  dataType:
+    type: "String"
+- name: "Claim_Investigator_Key"
+  dataType:
+    type: "String"
+- name: "Claim_Updated_Date_Key"
+  dataType:
+    type: "String"
+- name: "Claim_Loss_Date_Difference_Days_Number"
+  dataType:
+    type: "Integer"
+- name: "Claim_Status_Key"
+  dataType:
+    type: "String"
+- name: "Claim_Type_Key"
+  dataType:
+    type: "String"
+- name: "Claim_Liability_Date_Key"
+  dataType:
+    type: "Double"
+- name: "Catastrophe_Event_ICA_Key"
+  dataType:
+    type: "String"
+- name: "Claim_Date_Accepted_Key"
+  dataType:
+    type: "Double"
+- name: "Claim_Duplicate_Potential_YN"
+  dataType:
+    type: "String"
+- name: "Claim_Agg_Arrangement_Type_Key"
+  dataType:
+    type: "String"
+- name: "Claim_Gross_Incurred_Loss_Type_Key"
+  dataType:
+    type: "String"
+- name: "Claim_Handler_Key"
+  dataType:
+    type: "String"
+- name: "Claim_Non_Standard_Type_Key"
+  dataType:
+    type: "String"
+- name: "Claim_Updated_User_Key"
+  dataType:
+    type: "String"
+- name: "Risk_Class_Key"
+  dataType:
+    type: "String"
+- name: "Claim_Reopened_YN"
+  dataType:
+    type: "String"
+- name: "Claim_BGC_Status_Code"
+  dataType:
+    type: "String"
+- name: "Claim_Duplicate_Status_Key"
+  dataType:
+    type: "String"
+- name: "Claim_Reported_Date_Key"
+  dataType:
+    type: "Double"
+- name: "Policy_Period_Name"
+  dataType:
+    type: "String"
+- name: "Premium_Class_Key"
+  dataType:
+    type: "String"
+- name: "Policy_Incep_Date_Key"
+  dataType:
+    type: "Double"
+- name: "Claim_Branch_Key"
+  dataType:
+    type: "String"
+- name: "Claim_Assessor_Key"
+  dataType:
+    type: "String"
+- name: "Claim_Number"
+  dataType:
+    type: "String"
+- name: "Claim_State_Code"
+  dataType:
+    type: "String"
+- name: "Client_Key"
+  dataType:
+    type: "String"
+- name: "Claim_Status_Date_Key"
+  dataType:
+    type: "Double"
+- name: "Claim_Date_Rejected_Key"
+  dataType:
+    type: "Double"
+- name: "Global_LoB_Key"
+  dataType:
+    type: "String"
+- name: "Claim_Duplicate_Potential_Key"
+  dataType:
+    type: "String"
+- name: "Claim_Recovery_Changed_Date_Key"
+  dataType:
+    type: "String"
+- name: "Claim_Indemnity_Decision_Date_Key"
+  dataType:
+    type: "Double"
+- name: "Policy_Key"
+  dataType:
+    type: "String"
+- name: "Claim_Key"
+  dataType:
+    type: "String"
+- name: "Claim_Expiry_Date_Key"
+  dataType:
+    type: "Double"
+- name: "Claim_Solicitor_Key"
+  dataType:
+    type: "String"
+- name: "Product_Key"
+  dataType:
+    type: "String"
+- name: "Claim_Indemnity_Decision_Key"
+  dataType:
+    type: "String"
+- name: "Claim_Loss_Date_Modified_User_Key"
+  dataType:
+    type: "String"
+- name: "Claim_Loss_Date_Modified_Date_Key"
+  dataType:
+    type: "String"
+- name: "Claim_Liability_Status_Code"
+  dataType:
+    type: "String"
+- name: "ARPC_Incident_Number"
+  dataType:
+    type: "String"
+- name: "Company_Key"
+  dataType:
+    type: "String"
+- name: "Claim_Notified_Date_Key"
+  dataType:
+    type: "Double"
+- name: "Claim_Reopened_Last_Date_Key"
+  dataType:
+    type: "String"
+- name: "Claim_Portfolio_Key"
+  dataType:
+    type: "String"
+- name: "Claim_Loss_Orig_Date_Key"
+  dataType:
+    type: "Double"
+- name: "Broker_Account_Key"
+  dataType:
+    type: "String"
+- name: "Claim_Updated_Datetime"
+  dataType:
+    type: "String"
+- name: "Claim_UX_Arrangement_Description"
+  dataType:
+    type: "String"
+- name: "Industry_Class_ANZSIC_93_Key"
+  dataType:
+    type: "String"
+- name: "Risk_Key"
+  dataType:
+    type: "String"
+- name: "Claim_Division_Name"
+  dataType:
+    type: "String"
+- name: "Claim_Salvage_YN"
+  dataType:
+    type: "String"
+- name: "Claim_Duplicate_Loss_Days_Number"
+  dataType:
+    type: "Integer"
+- name: "Claim_Cyclone_Flag"
+  dataType:
+    type: "String"
+- name: "Client_Claim_Number"
+  dataType:
+    type: "String"
+- name: "Claim_Recovery_Abandonment_Reason_Key"
+  dataType:
+    type: "String"
+- name: "Claim_Postcode"
+  dataType:
+    type: "String"
+- name: "Claim_Vulnerable_Flag"
+  dataType:
+    type: "String"
+- name: "Claim_Cause_of_Loss_Description"
+  dataType:
+    type: "String"
+- name: "Claim_Closed_Date_Key"
+  dataType:
+    type: "Double"
+- name: "Claim_Agg_Arrangement_Key"
+  dataType:
+    type: "String"
+- name: "Claim_Loss_Date_Key"
+  dataType:
+    type: "Double"
+- name: "Claim_Duplicate_Loss_Days_Tolerance_Key"
+  dataType:
+    type: "Integer"

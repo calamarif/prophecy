@@ -1,0 +1,6 @@
+---
+version: 2
+models:
+- name: "35_SDM_mp_mdl_sdm_Lkp_GI_Claim_Reopen_Cnt_Mth_Agg__sh_DATA_GI_CLAIM_REOPEN_CNT_MTH_AGG"
+  tags:
+  - "prophecy_temp"

@@ -1,0 +1,15 @@
+entityType: ""
+providerType: "Databricks"
+fields:
+- name: "Claim_Key"
+  dataType:
+    type: "String"
+- name: "Claimant_Name"
+  dataType:
+    type: "String"
+- name: "Claim_Motor_Driver_Name"
+  dataType:
+    type: "String"
+- name: "Claim_Motor_Driver_Names_Text"
+  dataType:
+    type: "Integer"

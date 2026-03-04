@@ -1,0 +1,27 @@
+entityType: ""
+providerType: "Databricks"
+fields:
+- name: "CLAIM_TRAN_TYPE_CODE"
+  dataType:
+    type: "String"
+- name: "CLAIM_RI_TYPE_CODE"
+  dataType:
+    type: "String"
+- name: "REF_HK"
+  dataType:
+    type: "String"
+- name: "CLAIM_TRAN_TYPE_DESCRIPTION"
+  dataType:
+    type: "String"
+- name: "REF_BK"
+  dataType:
+    type: "String"
+- name: "CLAIM_TRAN_MODIFY_TYPE_CODE"
+  dataType:
+    type: "String"
+- name: "TRAN_TYPE_CODE"
+  dataType:
+    type: "String"
+- name: "CLAIM_TRAN_RECORD_CODE"
+  dataType:
+    type: "String"

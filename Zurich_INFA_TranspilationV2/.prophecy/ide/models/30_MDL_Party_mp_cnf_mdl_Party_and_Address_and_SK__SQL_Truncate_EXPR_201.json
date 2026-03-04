@@ -1,0 +1,129 @@
+{
+  "id" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__SQL_Truncate_EXPR_201",
+  "metainfo" : {
+    "label" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__SQL_Truncate_EXPR_201",
+    "autoLayout" : true,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "entityConfig" : {
+        "materialized" : "ephemeral",
+        "database" : "\"zurich_pov\"",
+        "schema" : "\"zurich\"",
+        "type" : "ModelConfig"
+      }
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "SQL_Truncate_EXPR_201_SQL_Truncate_EXPR_201_out0" : {
+      "id" : "SQL_Truncate_EXPR_201_SQL_Truncate_EXPR_201_out0",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "SQL_Truncate_EXPR_201"
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "\nSELECT *\n\nFROM SQL_Truncate_EXPR_201\n\n",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_4",
+          "slug" : "input_port_4"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_4",
+          "slug" : "output_port_4"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "SQL_Truncate_EXPR_201" : {
+      "id" : "SQL_Truncate_EXPR_201",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "SQL_Truncate_EXPR_201",
+        "x" : 420,
+        "y" : 20,
+        "phase" : 2
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "SQLError",
+            "_row_id" : null
+          },
+          "alias" : "ERROR_STRING",
+          "description" : null,
+          "_row_id" : "WYX4GKS9aUw7r4r2nkh2L"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "SQL_Truncate_EXPR_201_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "SQL_Truncate_EXPR_201_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "SQL_Truncate_SQL_Truncate_out0" : {
+      "id" : "SQL_Truncate_SQL_Truncate_out0",
+      "component" : "SQLStatement",
+      "metadata" : {
+        "label" : "SQL_Truncate"
+      },
+      "properties" : {
+        "fileTabs" : [ {
+          "path" : "output_port_3",
+          "id" : "output_port_3",
+          "language" : "sql",
+          "content" : "\nSELECT *\n\nFROM {{ prophecy_tmp_source('30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK', 'SQL_Truncate') }}\n\n"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_3",
+          "slug" : "input_port_3"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_3",
+          "slug" : "output_port_3"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "conn_SQL_Truncate_EXPR_201_SQL_Truncate_EXPR_201_out0_SQL_Truncate_EXPR_201_SQL_Truncate_EXPR_201_out0",
+    "source" : "SQL_Truncate_EXPR_201",
+    "sourcePort" : "SQL_Truncate_EXPR_201_out0",
+    "target" : "SQL_Truncate_EXPR_201_SQL_Truncate_EXPR_201_out0",
+    "targetPort" : "input_port_4",
+    "isWireless" : false
+  }, {
+    "id" : "edge_778",
+    "source" : "SQL_Truncate_SQL_Truncate_out0",
+    "sourcePort" : "output_port_3",
+    "target" : "SQL_Truncate_EXPR_201",
+    "targetPort" : "SQL_Truncate_EXPR_201_in0",
+    "isWireless" : false
+  } ],
+  "component" : "Model"
+}

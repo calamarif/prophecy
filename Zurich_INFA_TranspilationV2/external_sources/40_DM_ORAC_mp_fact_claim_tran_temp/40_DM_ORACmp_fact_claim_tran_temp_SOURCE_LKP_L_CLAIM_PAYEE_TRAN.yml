@@ -1,0 +1,24 @@
+entityType: ""
+providerType: "Databricks"
+fields:
+- name: "CLAIM_PAYEE_TRAN_BK"
+  dataType:
+    type: "String"
+- name: "CTL_JOB_ID"
+  dataType:
+    type: "Integer"
+- name: "CLAIM_PAYEE_BK"
+  dataType:
+    type: "String"
+- name: "CLAIM_PAYEE_TRAN_HK"
+  dataType:
+    type: "String"
+- name: "CTL_BATCH_ID"
+  dataType:
+    type: "Integer"
+- name: "CLAIM_PAYEE_HK"
+  dataType:
+    type: "String"
+- name: "CTL_LOAD_DM"
+  dataType:
+    type: "Timestamp"

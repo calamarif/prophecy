@@ -1,0 +1,33 @@
+entityType: ""
+providerType: "Databricks"
+fields:
+- name: "BTCH_ID"
+  dataType:
+    type: "Integer"
+- name: "REC_CRTN_DATE"
+  dataType:
+    type: "Timestamp"
+- name: "PROC_ID"
+  dataType:
+    type: "Integer"
+- name: "DATA_SRC_ID"
+  dataType:
+    type: "Integer"
+- name: "CLAIM_NUM"
+  dataType:
+    type: "String"
+- name: "BUSN_AREA_NAME"
+  dataType:
+    type: "String"
+- name: "CMPY_NUM"
+  dataType:
+    type: "String"
+- name: "RUN_ID"
+  dataType:
+    type: "Integer"
+- name: "CLAIM_ID"
+  dataType:
+    type: "Integer"
+- name: "CLAIM_PREFIX"
+  dataType:
+    type: "String"

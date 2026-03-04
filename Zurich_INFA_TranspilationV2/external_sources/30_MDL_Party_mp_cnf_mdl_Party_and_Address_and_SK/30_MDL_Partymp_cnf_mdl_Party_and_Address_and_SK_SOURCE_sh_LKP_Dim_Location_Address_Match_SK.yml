@@ -1,0 +1,12 @@
+entityType: ""
+providerType: "Databricks"
+fields:
+- name: "LOCATION_ID"
+  dataType:
+    type: "Integer"
+- name: "SOURCE"
+  dataType:
+    type: "String"
+- name: "SOURCE_ID"
+  dataType:
+    type: "String"

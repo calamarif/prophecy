@@ -1,0 +1,6 @@
+---
+version: 2
+models:
+- name: "30_MDL_AUTHORITIES_mp_myauthorities_stg_mdl_dnm_AU_NZ_MyAuthority_Delta__DNM_AUTH_AU_NZ_MYAUTHORITY_ALLUSERS_DELTA"
+  tags:
+  - "prophecy_temp"

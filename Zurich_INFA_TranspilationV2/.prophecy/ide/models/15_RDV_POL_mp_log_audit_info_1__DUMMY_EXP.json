@@ -1,0 +1,153 @@
+{
+  "id" : "15_RDV_POL_mp_log_audit_info_1__DUMMY_EXP",
+  "metainfo" : {
+    "label" : "15_RDV_POL_mp_log_audit_info_1__DUMMY_EXP",
+    "autoLayout" : true,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "entityConfig" : {
+        "materialized" : "ephemeral",
+        "database" : "\"zurich_pov\"",
+        "schema" : "\"zurich\"",
+        "type" : "ModelConfig"
+      }
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "DUMMY_EXP_DUMMY_EXP_out0" : {
+      "id" : "DUMMY_EXP_DUMMY_EXP_out0",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "DUMMY_EXP"
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "\nSELECT *\n\nFROM DUMMY_EXP\n\n",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_4",
+          "slug" : "input_port_4"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_4",
+          "slug" : "output_port_4"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "DUMMY_EXP" : {
+      "id" : "DUMMY_EXP",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "DUMMY_EXP",
+        "x" : 820,
+        "y" : 20,
+        "phase" : 1
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "EXECUTED_QUERY",
+            "_row_id" : null
+          },
+          "alias" : "NEWFIELD",
+          "description" : null,
+          "_row_id" : "-UKOkFx3jDNFrO_RBXRfb"
+        }, {
+          "expression" : {
+            "expression" : "ERROR_LOG",
+            "_row_id" : null
+          },
+          "alias" : "NEWFIELD1",
+          "description" : null,
+          "_row_id" : "NObDAVm3SJQBlTFgW2JeF"
+        }, {
+          "expression" : {
+            "expression" : "CAST(NULL AS string)",
+            "_row_id" : null
+          },
+          "alias" : "NEWFIELD2",
+          "description" : null,
+          "_row_id" : "YPuYLobQ5wmlabmVn0N8A"
+        }, {
+          "expression" : {
+            "expression" : "CAST(NULL AS string)",
+            "_row_id" : null
+          },
+          "alias" : "NEWFIELD3",
+          "description" : null,
+          "_row_id" : "JMNX3w3UakT1a3EZfdKFp"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "DUMMY_EXP_in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "DUMMY_EXP_out0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "EXPTRANS1_EXPTRANS1_out0" : {
+      "id" : "EXPTRANS1_EXPTRANS1_out0",
+      "component" : "SQLStatement",
+      "metadata" : {
+        "label" : "EXPTRANS1"
+      },
+      "properties" : {
+        "fileTabs" : [ {
+          "path" : "output_port_3",
+          "id" : "output_port_3",
+          "language" : "sql",
+          "content" : "\nSELECT *\n\nFROM {{ ref('15_RDV_POL_mp_log_audit_info_1__EXPTRANS1') }}\n\n"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_3",
+          "slug" : "input_port_3"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_3",
+          "slug" : "output_port_3"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "conn_DUMMY_EXP_DUMMY_EXP_out0_DUMMY_EXP_DUMMY_EXP_out0",
+    "source" : "DUMMY_EXP",
+    "sourcePort" : "DUMMY_EXP_out0",
+    "target" : "DUMMY_EXP_DUMMY_EXP_out0",
+    "targetPort" : "input_port_4",
+    "isWireless" : false
+  }, {
+    "id" : "edge_707",
+    "source" : "EXPTRANS1_EXPTRANS1_out0",
+    "sourcePort" : "output_port_3",
+    "target" : "DUMMY_EXP",
+    "targetPort" : "DUMMY_EXP_in0",
+    "isWireless" : false
+  } ],
+  "component" : "Model"
+}
