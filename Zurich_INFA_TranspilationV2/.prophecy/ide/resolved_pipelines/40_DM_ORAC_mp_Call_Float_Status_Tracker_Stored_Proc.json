@@ -256,8 +256,7 @@
       "visualMetaInfo" : {
         "visualProcessIds" : [ "INSERT_BROKER_ACCOUNT_FLOAT_STATUS_TRACKER_EXPR_356_INSERT_BROKER_ACCOUNT_FLOAT_STATUS_TRACKER_EXPR_356_out0", "INSERT_BROKER_ACCOUNT_FLOAT_STATUS_TRACKER_EXPR_356", "INSERT_BROKER_ACCOUNT_FLOAT_STATUS_TRACKER_INSERT_BROKER_ACCOUNT_FLOAT_STATUS_TRACKER_out0" ],
         "type" : "ephemeral",
-        "isTemporaryTable" : true,
-        "lastNodeProcessIds" : [ "INSERT_BROKER_ACCOUNT_FLOAT_STATUS_TRACKER_EXPR_356_INSERT_BROKER_ACCOUNT_FLOAT_STATUS_TRACKER_EXPR_356_out0" ]
+        "isTemporaryTable" : true
       },
       "ports" : {
         "inputs" : [ {

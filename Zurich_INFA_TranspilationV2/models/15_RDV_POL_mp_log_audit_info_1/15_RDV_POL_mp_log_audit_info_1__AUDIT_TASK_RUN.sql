@@ -2,8 +2,8 @@
   config({    
     "materialized": "table",
     "alias": "AUDIT_TASK_RUN",
-    "database": "qa_team",
-    "schema": "qa_orchestration"
+    "database": "zurich_pov",
+    "schema": "zurich"
   })
 }}
 

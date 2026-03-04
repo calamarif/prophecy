@@ -1,8 +1,8 @@
 {{
   config({    
     "materialized": "ephemeral",
-    "database": "qa_team",
-    "schema": "qa_orchestration"
+    "database": "zurich_pov",
+    "schema": "zurich"
   })
 }}
 

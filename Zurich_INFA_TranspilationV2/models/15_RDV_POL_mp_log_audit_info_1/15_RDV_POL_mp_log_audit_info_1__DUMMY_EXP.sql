@@ -1,8 +1,8 @@
 {{
   config({    
     "materialized": "ephemeral",
-    "database": "qa_team",
-    "schema": "qa_orchestration"
+    "database": "zurich_pov",
+    "schema": "zurich"
   })
 }}
 
@@ -19,8 +19,8 @@ DUMMY_EXP AS (
   SELECT 
     EXECUTED_QUERY AS NEWFIELD,
     ERROR_LOG AS NEWFIELD1,
-    CAST(NULL AS string) AS NEWFIELD2,
-    CAST(NULL AS string) AS NEWFIELD3
+    CAST(NULL AS STRING) AS NEWFIELD2,
+    CAST(NULL AS STRING) AS NEWFIELD3
   
   FROM EXPTRANS1 AS in0
 

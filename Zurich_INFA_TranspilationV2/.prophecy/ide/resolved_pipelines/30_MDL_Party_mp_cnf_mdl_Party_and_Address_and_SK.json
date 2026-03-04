@@ -137,8 +137,7 @@
       "visualMetaInfo" : {
         "visualProcessIds" : [ "SQL_Truncate_EXPR_201_SQL_Truncate_EXPR_201_out0", "SQL_Truncate_EXPR_201", "SQL_Truncate_SQL_Truncate_out0" ],
         "type" : "ephemeral",
-        "isTemporaryTable" : true,
-        "lastNodeProcessIds" : [ "SQL_Truncate_EXPR_201_SQL_Truncate_EXPR_201_out0" ]
+        "isTemporaryTable" : true
       },
       "ports" : {
         "inputs" : [ {
@@ -462,8 +461,7 @@
       "visualMetaInfo" : {
         "visualProcessIds" : [ "EXP_Flag_New_Batch_EXP_Flag_New_Batch_out0", "EXP_Flag_New_Batch", "EXP_collect_source_EXP_collect_source_out0" ],
         "type" : "ephemeral",
-        "isTemporaryTable" : true,
-        "lastNodeProcessIds" : [ "EXP_Flag_New_Batch_EXP_Flag_New_Batch_out0" ]
+        "isTemporaryTable" : true
       },
       "ports" : {
         "inputs" : [ {
@@ -490,8 +488,7 @@
       "visualMetaInfo" : {
         "visualProcessIds" : [ "sh_DIM_PARTY_ADDRESS", "SRT_First_Upd_Then_Ins_Addr_EXPR_196", "UNI_New_Existing_Addr", "UNI_New_Existing_Addr_EXPR_New_Insert", "UNI_New_Existing_Addr_EXPR_Existing_Insert", "UNI_New_Existing_Addr_EXPR_Existing_Update", "RTR_New_Updated_Addr_EXPR_New", "RTR_New_Updated_Addr_EXPR_Existing", "ObtPprkGkOvA64cyu90ow", "XNRmbhonNIjnZJWa202NJ", "RTR_New_Updated_Addr_JOIN_EXPR_194", "RTR_New_Updated_Addr_JOIN_merged", "30_MDL_Partymp_cnf_mdl_Party_and_Address_and_SK_SOURCE_LKP_Dyn_Party_Address_SOURCE_LKP_Dyn_Party_Address_out0", "LKP_Dyn_Party_Address_PRE_JOIN_JOIN_EXPR_192", "bF6hZ4twuP3ElTbibnLeL", "LKP_Dyn_Party_Address_PRE_JOIN_JOIN_merged", "30_MDL_Partymp_cnf_mdl_Party_and_Address_and_SK_SOURCE_sh_LKP_Dim_Location_Address_Match_SK_SOURCE_sh_LKP_Dim_Location_Address_Match_SK_out0", "FIL_Valid_Addresses", "RTR_New_Existing_SK_EXPR_All_RTR_New_Existing_SK_EXPR_All_out0", "FIL_Valid_Addresses_GENERATE_SK_EXPR_197" ],
         "type" : "table",
-        "isTemporaryTable" : false,
-        "lastNodeProcessIds" : [ "sh_DIM_PARTY_ADDRESS" ]
+        "isTemporaryTable" : false
       },
       "ports" : {
         "inputs" : [ {
@@ -926,8 +923,7 @@
       "visualMetaInfo" : {
         "visualProcessIds" : [ "RTR_New_Existing_SK_EXPR_All_RTR_New_Existing_SK_EXPR_All_out0", "RTR_New_Existing_SK_EXPR_All", "yDzIsXdmeIr7LhnqqSMxI", "RTR_New_Existing_SK_JOIN_EXPR_191_RTR_New_Existing_SK_JOIN_EXPR_191_out0" ],
         "type" : "ephemeral",
-        "isTemporaryTable" : true,
-        "lastNodeProcessIds" : [ "RTR_New_Existing_SK_EXPR_All_RTR_New_Existing_SK_EXPR_All_out0" ]
+        "isTemporaryTable" : true
       },
       "ports" : {
         "inputs" : [ {
@@ -1114,8 +1110,7 @@
       "visualMetaInfo" : {
         "visualProcessIds" : [ "EXP_collect_source_EXP_collect_source_out0", "EXP_collect_source", "30_MDL_Partymp_cnf_mdl_Party_and_Address_and_SK_sh_P_DIM_PARTY_ADDRESS_sh_P_DIM_PARTY_ADDRESS_out0" ],
         "type" : "ephemeral",
-        "isTemporaryTable" : true,
-        "lastNodeProcessIds" : [ "EXP_collect_source_EXP_collect_source_out0" ]
+        "isTemporaryTable" : true
       },
       "ports" : {
         "inputs" : [ {
@@ -1168,8 +1163,7 @@
       "visualMetaInfo" : {
         "visualProcessIds" : [ "sh_DIM_PARTY", "UNI_New_Existing_Party_EXPR_200", "UNI_New_Existing_Party", "UNI_New_Existing_Party_EXPR_Existing_Insert", "UNI_New_Existing_Party_EXPR_New_Insert", "UNI_New_Existing_Party_EXPR_Existing_Update", "RTR_New_SK_New_Existing_party_EXPR_Existing_Party", "RTR_New_SK_New_Existing_party_EXPR_New_Party", "zUhqcCJCfDVmbGJJVUFgN", "X45TqNqbHjj0AYN-tIYT5", "RTR_New_SK_New_Existing_party_JOIN_EXPR_193", "RTR_New_SK_New_Existing_party_JOIN", "LKP_Dyn_Dim_Party_JOIN_EXPR_199", "MIPEL8u_9etkN5TVSsAaI", "LKP_Dyn_Dim_Party_JOIN", "30_MDL_Partymp_cnf_mdl_Party_and_Address_and_SK_SOURCE_LKP_Dyn_Dim_Party_SOURCE_LKP_Dyn_Dim_Party_out0", "FIL_Remove_Pref_Party_Data", "FIL_Remove_Pref_Party_Data_GENERATE_SK_EXPR_203", "RTR_New_Existing_SK_EXPR_All_EXPR_205", "RTR_New_Existing_SK_EXPR_All_RTR_New_Existing_SK_EXPR_All_out0" ],
         "type" : "table",
-        "isTemporaryTable" : false,
-        "lastNodeProcessIds" : [ "sh_DIM_PARTY" ]
+        "isTemporaryTable" : false
       },
       "ports" : {
         "inputs" : [ {
@@ -1202,8 +1196,7 @@
       "visualMetaInfo" : {
         "visualProcessIds" : [ "sh_DIM_PARTY_SK", "UNI_Ins_Upd_SK", "UNI_Ins_Upd_SK_EXPR_New_SK", "UNI_Ins_Upd_SK_EXPR_Existing_SK", "RTR_New_Existing_SK_EXPR_New_SK", "RTR_New_Existing_SK_EXPR_Existing_SK", "EiOZcl2ZAfSQDN1C9mIpu", "RTR_New_Existing_SK_JOIN_EXPR_191_RTR_New_Existing_SK_JOIN_EXPR_191_out0", "QvK502OoTvnZbvT5dzZNn", "RTR_New_Existing_SK_JOIN_EXPR_191_RTR_New_Existing_SK_JOIN_EXPR_191_out0" ],
         "type" : "table",
-        "isTemporaryTable" : false,
-        "lastNodeProcessIds" : [ "sh_DIM_PARTY_SK" ]
+        "isTemporaryTable" : false
       },
       "ports" : {
         "inputs" : [ {
@@ -1233,8 +1226,7 @@
       "visualMetaInfo" : {
         "visualProcessIds" : [ "RTR_New_Existing_SK_JOIN_EXPR_191_RTR_New_Existing_SK_JOIN_EXPR_191_out0", "RTR_New_Existing_SK_JOIN_EXPR_191", "RTR_New_Existing_SK_JOIN_merged", "EXP_collect_source_EXP_collect_source_out0", "30_MDL_Partymp_cnf_mdl_Party_and_Address_and_SK_SOURCE_LKP_Dyn_Dim_Party_SK_SOURCE_LKP_Dyn_Dim_Party_SK_out0", "EXP_Is_Valid_Address", "EXP_collect_source_EXP_collect_source_out0", "EXP_Set_Default_TFN", "EXP_collect_source_EXP_collect_source_out0", "EXP_Is_Pref_Party_Data", "EXP_collect_source_EXP_collect_source_out0", "EXP_CTL_Columns", "EXP_collect_source_EXP_collect_source_out0" ],
         "type" : "ephemeral",
-        "isTemporaryTable" : true,
-        "lastNodeProcessIds" : [ "RTR_New_Existing_SK_JOIN_EXPR_191_RTR_New_Existing_SK_JOIN_EXPR_191_out0" ]
+        "isTemporaryTable" : true
       },
       "ports" : {
         "inputs" : [ {
@@ -1936,6 +1928,18 @@
     "target" : "RTR_New_Existing_SK_EXPR_All",
     "targetPort" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__RTR_New_Existing_SK_EXPR_All_in_0"
   }, {
+    "id" : "edge_778",
+    "source" : "SQL_Truncate",
+    "sourcePort" : "SQL_Truncate_out0",
+    "target" : "SQL_Truncate_EXPR_201",
+    "targetPort" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__SQL_Truncate_EXPR_201_in_0"
+  }, {
+    "id" : "edge_773",
+    "source" : "SQL_Truncate_EXPR_201",
+    "sourcePort" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__SQL_Truncate_EXPR_201_out_0",
+    "target" : "sh_Flat_File_SQL_Out",
+    "targetPort" : "sh_Flat_File_SQL_Out_in0"
+  }, {
     "id" : "edge_803",
     "source" : "sh_P_DIM_PARTY_ADDRESS",
     "sourcePort" : "sh_P_DIM_PARTY_ADDRESS_out0",
@@ -1983,18 +1987,6 @@
     "sourcePort" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__EXP_collect_source_out_0",
     "target" : "EXP_Flag_New_Batch",
     "targetPort" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__EXP_Flag_New_Batch_in_0"
-  }, {
-    "id" : "edge_778",
-    "source" : "SQL_Truncate",
-    "sourcePort" : "SQL_Truncate_out0",
-    "target" : "SQL_Truncate_EXPR_201",
-    "targetPort" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__SQL_Truncate_EXPR_201_in_0"
-  }, {
-    "id" : "edge_773",
-    "source" : "SQL_Truncate_EXPR_201",
-    "sourcePort" : "30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__SQL_Truncate_EXPR_201_out_0",
-    "target" : "sh_Flat_File_SQL_Out",
-    "targetPort" : "sh_Flat_File_SQL_Out_in0"
   } ],
   "component" : "Pipeline"
 }

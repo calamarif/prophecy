@@ -10,8 +10,8 @@
     "graphConfig" : {
       "entityConfig" : {
         "materialized" : "ephemeral",
-        "database" : "\"qa_team\"",
-        "schema" : "\"qa_orchestration\"",
+        "database" : "\"zurich_pov\"",
+        "schema" : "\"zurich\"",
         "type" : "ModelConfig"
       }
     },
@@ -684,20 +684,20 @@
       },
       "properties" : {
         "fileTabs" : [ {
-          "path" : "output_port_3",
-          "id" : "output_port_3",
+          "path" : "output_port_1",
+          "id" : "output_port_1",
           "language" : "sql",
           "content" : "\nSELECT *\n\nFROM {{ ref('30_MDL_Party_mp_cnf_mdl_Party_and_Address_and_SK__EXP_collect_source') }}\n\n"
         } ]
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "input_port_3",
-          "slug" : "input_port_3"
+          "id" : "input_port_1",
+          "slug" : "input_port_1"
         } ],
         "outputs" : [ {
-          "id" : "output_port_3",
-          "slug" : "output_port_3"
+          "id" : "output_port_1",
+          "slug" : "output_port_1"
         } ],
         "isCustomOutputSchema" : false,
         "autoUpdateOnRun" : false
@@ -1358,14 +1358,14 @@
   }, {
     "id" : "edge_807",
     "source" : "EXP_collect_source_EXP_collect_source_out0",
-    "sourcePort" : "output_port_3",
+    "sourcePort" : "output_port_1",
     "target" : "RTR_New_Existing_SK_JOIN_merged",
     "targetPort" : "RTR_New_Existing_SK_JOIN_merged_in1",
     "isWireless" : false
   }, {
     "id" : "edge_810",
     "source" : "EXP_collect_source_EXP_collect_source_out0",
-    "sourcePort" : "output_port_3",
+    "sourcePort" : "output_port_1",
     "target" : "RTR_New_Existing_SK_JOIN_merged",
     "targetPort" : "RTR_New_Existing_SK_JOIN_merged_in4",
     "isWireless" : false
@@ -1379,28 +1379,28 @@
   }, {
     "id" : "edge_783",
     "source" : "EXP_collect_source_EXP_collect_source_out0",
-    "sourcePort" : "output_port_3",
+    "sourcePort" : "output_port_1",
     "target" : "EXP_Is_Valid_Address",
     "targetPort" : "EXP_Is_Valid_Address_in0",
     "isWireless" : false
   }, {
     "id" : "edge_780",
     "source" : "EXP_collect_source_EXP_collect_source_out0",
-    "sourcePort" : "output_port_3",
+    "sourcePort" : "output_port_1",
     "target" : "EXP_Set_Default_TFN",
     "targetPort" : "EXP_Set_Default_TFN_in0",
     "isWireless" : false
   }, {
     "id" : "edge_776",
     "source" : "EXP_collect_source_EXP_collect_source_out0",
-    "sourcePort" : "output_port_3",
+    "sourcePort" : "output_port_1",
     "target" : "EXP_Is_Pref_Party_Data",
     "targetPort" : "EXP_Is_Pref_Party_Data_in0",
     "isWireless" : false
   }, {
     "id" : "edge_771",
     "source" : "EXP_collect_source_EXP_collect_source_out0",
-    "sourcePort" : "output_port_3",
+    "sourcePort" : "output_port_1",
     "target" : "EXP_CTL_Columns",
     "targetPort" : "EXP_CTL_Columns_in0",
     "isWireless" : false

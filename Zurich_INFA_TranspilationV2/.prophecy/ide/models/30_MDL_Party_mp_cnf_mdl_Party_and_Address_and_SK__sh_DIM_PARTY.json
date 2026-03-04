@@ -11,8 +11,8 @@
       "entityConfig" : {
         "alias" : "\"sh_DIM_PARTY\"",
         "materialized" : "table",
-        "database" : "\"qa_team\"",
-        "schema" : "\"qa_orchestration\"",
+        "database" : "\"zurich_pov\"",
+        "schema" : "\"zurich\"",
         "type" : "ModelConfig"
       }
     },

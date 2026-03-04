@@ -124,8 +124,7 @@
       "visualMetaInfo" : {
         "visualProcessIds" : [ "AUDIT_TASK_RUN", "AUDIT_TASK_RUN_EXP", "EXPTRANS1_EXPTRANS1_out0" ],
         "type" : "table",
-        "isTemporaryTable" : false,
-        "lastNodeProcessIds" : [ "AUDIT_TASK_RUN" ]
+        "isTemporaryTable" : false
       },
       "ports" : {
         "inputs" : [ {
@@ -219,8 +218,7 @@
       "visualMetaInfo" : {
         "visualProcessIds" : [ "EXPTRANS_EXPTRANS_out0", "EXPTRANS", "15_RDV_POLmp_log_audit_info_AUDIT_TASK_PARAM_AUDIT_TASK_PARAM_out0" ],
         "type" : "ephemeral",
-        "isTemporaryTable" : true,
-        "lastNodeProcessIds" : [ "EXPTRANS_EXPTRANS_out0" ]
+        "isTemporaryTable" : true
       },
       "ports" : {
         "inputs" : [ {
@@ -417,8 +415,7 @@
       "visualMetaInfo" : {
         "visualProcessIds" : [ "EXPTRANS1_EXPTRANS1_out0", "EXPTRANS1", "SQL_SQL_out0" ],
         "type" : "ephemeral",
-        "isTemporaryTable" : true,
-        "lastNodeProcessIds" : [ "EXPTRANS1_EXPTRANS1_out0" ]
+        "isTemporaryTable" : true
       },
       "ports" : {
         "inputs" : [ {
@@ -445,8 +442,7 @@
       "visualMetaInfo" : {
         "visualProcessIds" : [ "DUMMY_EXP_DUMMY_EXP_out0", "DUMMY_EXP", "EXPTRANS1_EXPTRANS1_out0" ],
         "type" : "ephemeral",
-        "isTemporaryTable" : true,
-        "lastNodeProcessIds" : [ "DUMMY_EXP_DUMMY_EXP_out0" ]
+        "isTemporaryTable" : true
       },
       "ports" : {
         "inputs" : [ {

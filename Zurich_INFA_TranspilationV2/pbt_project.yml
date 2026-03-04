@@ -54,15 +54,7 @@ sqlPipeline:
   author: avpreet@prophecy.io
   createdAt: '2026-02-26 05:37:26'
 dependencies: []
-projectDependencies:
-  '64560':
-    projectUID: 64560
-    projectName: prophecy_basics
-    repositoryPath: gitUri=https://github.com/prophecy-io/prophecy-basics&subPath=
-    version: 1.0.8.dev3
-    isDefault: true
-    author: null
-    createdAt: '2026-02-26 05:36:54'
+projectDependencies: {}
 flags:
   shouldAddDefaultDependenciesIfAbsent: true
 pipelineConfigurations: {}

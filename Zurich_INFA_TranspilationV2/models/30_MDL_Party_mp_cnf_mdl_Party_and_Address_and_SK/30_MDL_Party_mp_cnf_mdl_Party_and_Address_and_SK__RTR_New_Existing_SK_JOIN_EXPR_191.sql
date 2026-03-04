@@ -1,8 +1,8 @@
 {{
   config({    
     "materialized": "ephemeral",
-    "database": "qa_team",
-    "schema": "qa_orchestration"
+    "database": "zurich_pov",
+    "schema": "zurich"
   })
 }}
 
@@ -30,7 +30,7 @@ WITH EXP_collect_source AS (
 EXP_CTL_Columns AS (
 
   SELECT 
-    CAST(NULL AS string) AS CTL_SRC_SYS_SET_NAME,
+    CAST(NULL AS STRING) AS CTL_SRC_SYS_SET_NAME,
     IN_TRANSACTION_DATE AS IN_TRANSACTION_DATE,
     CURRENT_TIMESTAMP AS REC_START_DATE_SESSION,
     IN_TRANSACTION_DATE - INTERVAL -1 MICROSECOND AS REC_END_DATE_CLOSED,
@@ -64,7 +64,7 @@ EXP_Set_Default_TFN AS (
   SELECT 
     (
       CASE
-        WHEN ((TAX_FILE_NUM IS NULL) OR (CAST((LTRIM((RTRIM(TAX_FILE_NUM)))) AS string) = ''))
+        WHEN ((TAX_FILE_NUM IS NULL) OR (CAST((LTRIM((RTRIM(TAX_FILE_NUM)))) AS STRING) = ''))
           THEN '-'
         ELSE TAX_FILE_NUM
       END
