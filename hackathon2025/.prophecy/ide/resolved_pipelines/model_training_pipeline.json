@@ -1,0 +1,251 @@
+{
+  "id" : "model_training_pipeline",
+  "metainfo" : {
+    "label" : "model_training_pipeline",
+    "autoLayout" : false,
+    "version" : 1,
+    "configuration" : {
+      "schema" : {
+        "type" : "record",
+        "fields" : [ {
+          "name" : "test_size",
+          "kind" : {
+            "type" : "double",
+            "value" : "0.2"
+          }
+        }, {
+          "name" : "random_state",
+          "kind" : {
+            "type" : "int",
+            "value" : "42"
+          }
+        }, {
+          "name" : "model_type",
+          "kind" : {
+            "type" : "string",
+            "value" : "'logistic_regression'"
+          }
+        } ]
+      }
+    },
+    "isTranspiledPipeline" : false,
+    "processesVsModelFiles" : {
+      "fe_derived_featu##w6NdF5nZ" : "models/model_training_pipeline/model_training_pipeline__fe_derived_features.sql",
+      "churn_model_training_x48rBf3Rvq" : "models/model_training_pipeline/model_training_pipeline__fm_formatted_metrics.sql",
+      "fe_binary_featur##qCMj0h89" : "models/model_training_pipeline/model_training_pipeline__fe_derived_features.sql",
+      "khR1usQ1cX" : "models/model_training_pipeline/model_training_pipeline__fe_derived_features.sql",
+      "fm_formatted_met##oFaBiiU4" : "models/model_training_pipeline/model_training_pipeline__fm_formatted_metrics.sql",
+      "fe_categorical_e##V0Pbaru0" : "models/model_training_pipeline/model_training_pipeline__fe_derived_features.sql",
+      "fm_formatted_metrics_qYv6zGSc" : "models/model_training_pipeline/model_training_pipeline__fm_formatted_metrics.sql",
+      "dc_cleaned_data##frxjSOKr" : "models/model_training_pipeline/model_training_pipeline__fe_derived_features.sql",
+      "fe_renamed_colum##vrAaKhfd" : "models/model_training_pipeline/model_training_pipeline__fe_derived_features.sql",
+      "fe_derived_features_RSJVdrSu" : "models/model_training_pipeline/model_training_pipeline__fe_derived_features.sql"
+    }
+  },
+  "processes" : {
+    "fe_derived_featu##w6NdF5nZ" : {
+      "id" : "fe_derived_featu##w6NdF5nZ",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "model_training_pipeline__fe_derived_features",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "model_training_pipeline__fe_derived_features"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "fe_derived_features_RSJVdrSu", "fe_derived_featu##w6NdF5nZ", "fe_categorical_e##V0Pbaru0", "fe_binary_featur##qCMj0h89", "fe_renamed_colum##vrAaKhfd", "dc_cleaned_data##frxjSOKr", "khR1usQ1cX" ],
+        "type" : "ephemeral",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "model_training_pipeline__fe_derived_features_in_0",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "model_training_pipeline__fe_derived_features_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "EiDNzWACUM" : {
+      "id" : "EiDNzWACUM",
+      "component" : "Visualize",
+      "metadata" : {
+        "label" : "metrics_visualization",
+        "x" : 1820,
+        "y" : 20,
+        "phase" : 0
+      },
+      "properties" : {
+        "description" : null,
+        "label" : null
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "wlA7QdXiJc",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "pd3bmyrDkQ" : {
+      "id" : "pd3bmyrDkQ",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "save_model_to_file",
+        "x" : 1620,
+        "y" : 220,
+        "phase" : 0
+      },
+      "properties" : {
+        "ports" : null,
+        "script" : "# Model save confirmation - actual save happens in churn_model_training\nprint(\"Model has been saved to: /Volumes/westpac/callum/callums_volume/churn_models/churn_model.pkl\")\nprint(\"This file is overwritten on each pipeline run.\")\n\n# Pass through the input for downstream processing\nout0 = in0",
+        "scriptMethodFooter" : "return out0",
+        "scriptMethodHeader" : "def Script(spark: SparkSession, in0: DataFrame) -> DataFrame:"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "oaSMnGOAZq",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "DKgb8fcjKs",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "Egk6ffjt8g" : {
+      "id" : "Egk6ffjt8g",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "churn_model_training",
+        "x" : 1420,
+        "y" : 120,
+        "phase" : 0
+      },
+      "properties" : {
+        "ports" : null,
+        "script" : "import pickle\nimport os\nimport numpy as np\nimport pandas as pd\nfrom pyspark.sql.types import StructType, StructField, StringType, DoubleType, IntegerType\nfrom sklearn.linear_model import LogisticRegression\nfrom sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, roc_auc_score\nfrom sklearn.preprocessing import StandardScaler\n\n# Define feature columns (numeric features for the model)\nfeature_cols = [\n    'age_numeric', 'tenure_in_months', 'number_of_referrals',\n    'number_of_dependents', 'monthly_charge', 'total_charges',\n    'total_revenue', 'avg_monthly_long_distance_charges',\n    'avg_monthly_gb_download', 'total_refunds', 'total_extra_data_charges',\n    'total_long_distance_charges', 'is_married', 'has_phone_service',\n    'has_internet_service', 'has_online_security', 'has_online_backup',\n    'has_device_protection', 'has_premium_tech_support', 'has_streaming_tv',\n    'has_streaming_movies', 'has_streaming_music', 'has_unlimited_data',\n    'has_paperless_billing', 'contract_type_encoded', 'payment_method_encoded',\n    'internet_type_encoded'\n]\n\n# Convert Spark DataFrames to Pandas\ntrain_pdf = in0.toPandas()\ntest_pdf = in1.toPandas()\n\n# Filter to only existing columns\nexisting_cols = [c for c in feature_cols if c in train_pdf.columns]\nprint(f\"Using {len(existing_cols)} feature columns\")\n\n# Prepare training data\nX_train = train_pdf[existing_cols].fillna(0)\ny_train = train_pdf['churn_label'].fillna(0)\n\n# Prepare test data\nX_test = test_pdf[existing_cols].fillna(0)\ny_test = test_pdf['churn_label'].fillna(0)\n\n# Scale features\nscaler = StandardScaler()\nX_train_scaled = scaler.fit_transform(X_train)\nX_test_scaled = scaler.transform(X_test)\n\n# Train logistic regression model\nlr = LogisticRegression(max_iter=100, C=100, random_state=42)\nlr.fit(X_train_scaled, y_train)\n\n# Create model package with scaler and feature columns\nmodel_package = {\n    'model': lr,\n    'scaler': scaler,\n    'feature_columns': existing_cols\n}\n\n# Save model as pickle file (overwrites existing file)\nmodel_dir = \"/Volumes/westpac/callum/callums_volume/churn_models\"\nmodel_path = f\"{model_dir}/churn_model.pkl\"\n\n# Create directory if it doesn't exist\nos.makedirs(model_dir, exist_ok=True)\n\n# Save model using pickle (overwrite mode)\nwith open(model_path, 'wb') as f:\n    pickle.dump(model_package, f)\nprint(f\"Model saved to: {model_path}\")\n\n# Make predictions on test set\ny_pred = lr.predict(X_test_scaled)\ny_prob = lr.predict_proba(X_test_scaled)[:, 1]\n\n# Calculate metrics\naccuracy = accuracy_score(y_test, y_pred)\nprecision = precision_score(y_test, y_pred, average='weighted', zero_division=0)\nrecall = recall_score(y_test, y_pred, average='weighted', zero_division=0)\nf1 = f1_score(y_test, y_pred, average='weighted', zero_division=0)\ntry:\n    auc_roc = roc_auc_score(y_test, y_prob)\nexcept:\n    auc_roc = 0.0\n\nprint(f\"AUC-ROC: {auc_roc:.4f}\")\nprint(f\"Accuracy: {accuracy:.4f}\")\nprint(f\"Precision: {precision:.4f}\")\nprint(f\"Recall: {recall:.4f}\")\nprint(f\"F1 Score: {f1:.4f}\")\n\n# Create metrics DataFrame\nmetrics_schema = StructType([\n    StructField(\"metric_name\", StringType(), True),\n    StructField(\"metric_value\", DoubleType(), True)\n])\n\nmetrics_data = [\n    (\"AUC-ROC\", float(auc_roc)),\n    (\"Accuracy\", float(accuracy)),\n    (\"Precision\", float(precision)),\n    (\"Recall\", float(recall)),\n    (\"F1 Score\", float(f1))\n]\n\nmetrics_df = spark.createDataFrame(metrics_data, metrics_schema)\n\n# Create model output DataFrame with predictions\ntest_pdf['prediction'] = y_pred\ntest_pdf['probability'] = y_prob\noutput_cols = ['customer_id', 'churn_label', 'prediction', 'probability'] if 'customer_id' in test_pdf.columns else ['churn_label', 'prediction', 'probability']\nmodel_output_df = spark.createDataFrame(test_pdf[output_cols])\n\n# Assign output DataFrames - out0 goes to metrics formatter, out1 goes to model saver\nout0 = metrics_df\nout1 = model_output_df\n\nprint(f\"Model training completed successfully.\")",
+        "scriptMethodFooter" : "return (out0, out1)",
+        "scriptMethodHeader" : "def Script(spark: SparkSession, in0: DataFrame, in1: DataFrame) -> (DataFrame, DataFrame):"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "xdYhRlzkr1",
+          "slug" : "train_in"
+        }, {
+          "id" : "pmtglP1UIq",
+          "slug" : "test_in"
+        } ],
+        "outputs" : [ {
+          "id" : "x48rBf3Rvq",
+          "slug" : "model_out"
+        }, {
+          "id" : "JEJNV6lT7g",
+          "slug" : "metrics_out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "fm_formatted_met##oFaBiiU4" : {
+      "id" : "fm_formatted_met##oFaBiiU4",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "model_training_pipeline__fm_formatted_metrics",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "model_training_pipeline__fm_formatted_metrics"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "fm_formatted_metrics_qYv6zGSc", "fm_formatted_met##oFaBiiU4", "churn_model_training_x48rBf3Rvq" ],
+        "type" : "ephemeral",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "model_training_pipeline__fm_formatted_metrics_in_0",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "model_training_pipeline__fm_formatted_metrics_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "QA0BX4HymW" : {
+      "id" : "QA0BX4HymW",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "train_test_split",
+        "x" : 1220,
+        "y" : 120,
+        "phase" : 0
+      },
+      "properties" : {
+        "ports" : null,
+        "script" : "# Train/Test Split using randomSplit\n# Configurable test_size via pipeline parameter\ntest_size = 0.2  # Can be parameterized\ntrain_size = 1.0 - test_size\n\n# Split the data (no cache - serverless compute doesn't support PERSIST)\ntrain_df, test_df = in0.randomSplit([train_size, test_size], seed=42)\n\nprint(f\"Train/Test split completed with {test_size*100}% test size\")\n\n# Assign outputs\nout0 = train_df\nout1 = test_df",
+        "scriptMethodFooter" : "return (out0, out1)",
+        "scriptMethodHeader" : "def Script(spark: SparkSession, in0: DataFrame) -> (DataFrame, DataFrame):"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "6r2bJdFhqZ",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "1bWkNKfnIU",
+          "slug" : "train_out"
+        }, {
+          "id" : "CcTYmrK9oZ",
+          "slug" : "test_out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "x48rBf3Rvq_to_oaSMnGOAZq",
+    "source" : "Egk6ffjt8g",
+    "sourcePort" : "x48rBf3Rvq",
+    "target" : "pd3bmyrDkQ",
+    "targetPort" : "oaSMnGOAZq"
+  }, {
+    "id" : "CcTYmrK9oZ_to_pmtglP1UIq",
+    "source" : "QA0BX4HymW",
+    "sourcePort" : "CcTYmrK9oZ",
+    "target" : "Egk6ffjt8g",
+    "targetPort" : "pmtglP1UIq"
+  }, {
+    "id" : "1bWkNKfnIU_to_xdYhRlzkr1",
+    "source" : "QA0BX4HymW",
+    "sourcePort" : "1bWkNKfnIU",
+    "target" : "Egk6ffjt8g",
+    "targetPort" : "xdYhRlzkr1"
+  }, {
+    "id" : "x48rBf3Rvq_to_QUpbFiMxau",
+    "source" : "Egk6ffjt8g",
+    "sourcePort" : "x48rBf3Rvq",
+    "target" : "fm_formatted_met##oFaBiiU4",
+    "targetPort" : "model_training_pipeline__fm_formatted_metrics_in_0"
+  }, {
+    "id" : "GP7MlclXcc_to_wlA7QdXiJc",
+    "source" : "fm_formatted_met##oFaBiiU4",
+    "sourcePort" : "model_training_pipeline__fm_formatted_metrics_out_0",
+    "target" : "EiDNzWACUM",
+    "targetPort" : "wlA7QdXiJc"
+  }, {
+    "id" : "ttLKpRdLGb_to_6r2bJdFhqZ",
+    "source" : "fe_derived_featu##w6NdF5nZ",
+    "sourcePort" : "model_training_pipeline__fe_derived_features_out_0",
+    "target" : "QA0BX4HymW",
+    "targetPort" : "6r2bJdFhqZ"
+  } ],
+  "component" : "Pipeline"
+}

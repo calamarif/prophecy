@@ -1,0 +1,314 @@
+name: Hackathon_Telco_Churn
+description: ''
+version: 0.0.1
+author: callum@prophecy.io
+language: sql
+buildSystem: ''
+buildSystemDetails: null
+pipelines: {}
+datasets: {}
+templates: {}
+jobs: {}
+gemContainer:
+  languageVersion: ''
+  gemLibsVersion: ''
+  gems: {}
+  dependencies: null
+functions:
+  author: null
+  createdAt: '2026-03-03 22:14:47'
+  udfs: {}
+  udafs: {}
+  expressions: {}
+  airflowFunctions: {}
+  businessRules: {}
+subgraphs: {}
+sqlModels: {}
+sqlSnapshots: {}
+sqlTests: {}
+sqlMacros:
+  .prophecy/metadata/sqlmacros/generate_schema_name:
+    name: generate_schema_name
+    macroType: expression
+    description: null
+    author: callum@prophecy.io
+    files:
+    - macros/generate_schema_name.sql
+    - .prophecy/ide/macros/generate_schema_name.json
+    createdAt: '2026-03-03 22:14:50'
+  .prophecy/metadata/sqlmacros/prophecy_tmp_source:
+    name: prophecy_tmp_source
+    macroType: expression
+    description: null
+    author: callum@prophecy.io
+    files:
+    - macros/prophecy_tmp_source.sql
+    - .prophecy/ide/macros/prophecy_tmp_source.json
+    createdAt: '2026-03-03 22:15:34'
+  .prophecy/metadata/sqlmacros/ChurnInferenceGem:
+    name: ChurnInferenceGem
+    macroType: query
+    description: null
+    author: callum@prophecy.io
+    files:
+    - macros/ChurnInferenceGem.sql
+    - .prophecy/ide/macros/ChurnInferenceGem.json
+    - macros/macros.yml
+    - gems/ChurnInferenceGem.py
+    createdAt: '2026-03-04 01:18:57'
+  .prophecy/metadata/sqlmacros/default__ChurnInferenceGem:
+    name: default__ChurnInferenceGem
+    macroType: query
+    description: null
+    author: callum@prophecy.io
+    files:
+    - macros/ChurnInferenceGem.sql
+    createdAt: '2026-03-04 01:19:08'
+  .prophecy/metadata/sqlmacros/duckdb__ChurnInferenceGem:
+    name: duckdb__ChurnInferenceGem
+    macroType: query
+    description: null
+    author: callum@prophecy.io
+    files:
+    - macros/ChurnInferenceGem.sql
+    - macros/macros.yml
+    createdAt: '2026-03-04 01:19:08'
+  .prophecy/metadata/sqlmacros/snowflake__ChurnInferenceGem:
+    name: snowflake__ChurnInferenceGem
+    macroType: query
+    description: null
+    author: callum@prophecy.io
+    files:
+    - macros/ChurnInferenceGem.sql
+    createdAt: '2026-03-04 01:19:08'
+  .prophecy/metadata/sqlmacros/BRE_SQL_Gem:
+    name: BRE_SQL_Gem
+    macroType: query
+    description: null
+    author: callum@prophecy.io
+    files:
+    - macros/BRE_SQL_Gem.sql
+    - .prophecy/ide/macros/BRE_SQL_Gem.json
+    - macros/macros.yml
+    - gems/BRE_SQL_Gem.py
+    createdAt: '2026-03-04 05:54:22'
+sqlSeeds: {}
+sqlSources:
+  .prophecy/metadata/sqlsources/westpac_callum:
+    name: westpac_callum
+    description: null
+    author: callum@prophecy.io
+    files:
+    - prophecy-sources/sources.yml
+    createdAt: '2026-03-03 22:18:36'
+    tables:
+    - name: telecom_customer_churn
+      schema:
+        entityType: ''
+        providerType: databricks
+        fields:
+        - name: Customer ID
+          dataType:
+            type: String
+        - name: Gender
+          dataType:
+            type: String
+        - name: Age
+          dataType:
+            type: Bigint
+        - name: Married
+          dataType:
+            type: String
+        - name: Number of Dependents
+          dataType:
+            type: Bigint
+        - name: City
+          dataType:
+            type: String
+        - name: Zip Code
+          dataType:
+            type: Bigint
+        - name: Latitude
+          dataType:
+            type: Double
+        - name: Longitude
+          dataType:
+            type: Double
+        - name: Number of Referrals
+          dataType:
+            type: Bigint
+        - name: Tenure in Months
+          dataType:
+            type: Bigint
+        - name: Offer
+          dataType:
+            type: String
+        - name: Phone Service
+          dataType:
+            type: String
+        - name: Avg Monthly Long Distance Charges
+          dataType:
+            type: Double
+        - name: Multiple Lines
+          dataType:
+            type: String
+        - name: Internet Service
+          dataType:
+            type: String
+        - name: Internet Type
+          dataType:
+            type: String
+        - name: Avg Monthly GB Download
+          dataType:
+            type: Bigint
+        - name: Online Security
+          dataType:
+            type: String
+        - name: Online Backup
+          dataType:
+            type: String
+        - name: Device Protection Plan
+          dataType:
+            type: String
+        - name: Premium Tech Support
+          dataType:
+            type: String
+        - name: Streaming TV
+          dataType:
+            type: String
+        - name: Streaming Movies
+          dataType:
+            type: String
+        - name: Streaming Music
+          dataType:
+            type: String
+        - name: Unlimited Data
+          dataType:
+            type: String
+        - name: Contract
+          dataType:
+            type: String
+        - name: Paperless Billing
+          dataType:
+            type: String
+        - name: Payment Method
+          dataType:
+            type: String
+        - name: Monthly Charge
+          dataType:
+            type: Double
+        - name: Total Charges
+          dataType:
+            type: Double
+        - name: Total Refunds
+          dataType:
+            type: Double
+        - name: Total Extra Data Charges
+          dataType:
+            type: Bigint
+        - name: Total Long Distance Charges
+          dataType:
+            type: Double
+        - name: Total Revenue
+          dataType:
+            type: Double
+        - name: Customer Status
+          dataType:
+            type: String
+        - name: Churn Category
+          dataType:
+            type: String
+        - name: Churn Reason
+          dataType:
+            type: String
+      description: null
+      author: callum@prophecy.io
+      createdAt: '2026-03-03 22:18:36'
+      tableType: table
+    - name: telecom_data_dictionary
+      schema:
+        entityType: ''
+        providerType: databricks
+        fields:
+        - name: Table
+          dataType:
+            type: String
+        - name: Field
+          dataType:
+            type: String
+        - name: Description
+          dataType:
+            type: String
+      description: null
+      author: callum@prophecy.io
+      createdAt: '2026-03-03 22:31:02'
+      tableType: table
+    - name: telecom_zipcode_population
+      schema:
+        entityType: ''
+        providerType: databricks
+        fields:
+        - name: Zip Code
+          dataType:
+            type: Bigint
+        - name: Population
+          dataType:
+            type: Bigint
+      description: null
+      author: callum@prophecy.io
+      createdAt: '2026-03-03 22:31:56'
+      tableType: table
+sqlUnreferencedSources: {}
+sqlPipeline:
+  name: sqlPipeline
+  description: null
+  author: callum@prophecy.io
+  createdAt: '2026-03-03 22:14:47'
+dependencies: []
+projectDependencies:
+  '78064':
+    projectUID: 78064
+    projectName: prophecy_basics
+    repositoryPath: gitUri=https://github.com/prophecy-io/prophecy-basics&subPath=
+    version: 1.0.7
+    isDefault: true
+    author: null
+    createdAt: '2026-03-03 22:14:34'
+flags:
+  shouldAddDefaultDependenciesIfAbsent: false
+pipelineConfigurations: {}
+projectConfigurations: {}
+sqlOrchestratorPipelines:
+  .prophecy/metadata/sqlorchestratorpipeline/model_training_pipeline:
+    name: model_training_pipeline
+    schema: null
+    description: null
+    author: callum@prophecy.io
+    files:
+    - models/model_training_pipeline/schema.yml
+    - pipelines/model_training_pipeline.py
+    - models/model_training_pipeline/model_training_pipeline__fm_formatted_metrics.sql
+    - models/model_training_pipeline/model_training_pipeline__fe_derived_features.sql
+    - .prophecy/ide/pipelines/model_training_pipeline.json
+    createdAt: '2026-03-03 22:37:09'
+  .prophecy/metadata/sqlorchestratorpipeline/inference_pipeline:
+    name: inference_pipeline
+    schema: null
+    description: null
+    author: callum@prophecy.io
+    files:
+    - models/inference_pipeline/schema.yml
+    - .prophecy/ide/pipelines/inference_pipeline.json
+    - pipelines/inference_pipeline.py
+    - models/inference_pipeline/inference_pipeline__Join_1.sql
+    createdAt: '2026-03-03 23:58:10'
+sqlBusinessApps:
+  .prophecy/metadata/sqlbusinessapp/inference_pipeline_analysis:
+    name: inference_pipeline_analysis
+    schema: null
+    description: null
+    author: callum@prophecy.io
+    files:
+    - apps/inference_pipeline_analysis.json
+    createdAt: '2026-03-03 23:59:51'
+    sqlOrchestrationPipelineName: inference_pipeline

@@ -1,0 +1,162 @@
+{
+  "id" : "inference_pipeline__inf_derived_features",
+  "metainfo" : {
+    "label" : "inference_pipeline__inf_derived_features",
+    "autoLayout" : true,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "entityConfig" : {
+        "materialized" : "ephemeral",
+        "database" : "\"westpac\"",
+        "schema" : "\"callum\"",
+        "type" : "ModelConfig"
+      }
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "inf_derived_features_Uj2VKwbD" : {
+      "id" : "inf_derived_features_Uj2VKwbD",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "inf_derived_features"
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "\nSELECT *\n\nFROM inf_derived_features\n\n",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_2",
+          "slug" : "input_port_2"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_2",
+          "slug" : "output_port_2"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "inf_derived_feat##zdFFPRGV" : {
+      "id" : "inf_derived_feat##zdFFPRGV",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "inf_derived_features",
+        "x" : 1020,
+        "y" : 120,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ "acKGPv4o##tenure_in_months", "acKGPv4o##total_revenue", "acKGPv4o##total_charges", "acKGPv4o##total_refunds", "acKGPv4o##has_phone_service", "acKGPv4o##has_internet_service", "acKGPv4o##has_online_security", "acKGPv4o##has_online_backup", "acKGPv4o##has_device_protection", "acKGPv4o##has_premium_tech_support", "acKGPv4o##has_streaming_tv", "acKGPv4o##has_streaming_movies", "acKGPv4o##has_streaming_music", "acKGPv4o##has_unlimited_data", "acKGPv4o##age_numeric" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "*"
+          },
+          "_row_id" : "49585077"
+        }, {
+          "expression" : {
+            "expression" : "CASE\n  WHEN tenure_in_months > 0\n    THEN ROUND(total_revenue / tenure_in_months, 2)\n  ELSE 0\nEND"
+          },
+          "alias" : "avg_revenue_per_month",
+          "_row_id" : "1458246164"
+        }, {
+          "expression" : {
+            "expression" : "CASE\n  WHEN total_revenue > 0\n    THEN ROUND(total_charges / total_revenue, 4)\n  ELSE 0\nEND"
+          },
+          "alias" : "charges_to_revenue_ratio",
+          "_row_id" : "1837532212"
+        }, {
+          "expression" : {
+            "expression" : "CASE\n  WHEN total_charges > 0\n    THEN ROUND(total_refunds / total_charges, 4)\n  ELSE 0\nEND"
+          },
+          "alias" : "refund_rate",
+          "_row_id" : "1103063714"
+        }, {
+          "expression" : {
+            "expression" : "(\n  has_phone_service\n  + has_internet_service\n  + has_online_security\n  + has_online_backup\n  + has_device_protection\n  + has_premium_tech_support\n  + has_streaming_tv\n  + has_streaming_movies\n  + has_streaming_music\n  + has_unlimited_data\n)"
+          },
+          "alias" : "total_services_count",
+          "_row_id" : "2065742497"
+        }, {
+          "expression" : {
+            "expression" : "CASE\n  WHEN tenure_in_months <= 6\n    THEN 'New'\n  WHEN tenure_in_months <= 24\n    THEN 'Growing'\n  WHEN tenure_in_months <= 48\n    THEN 'Established'\n  ELSE 'Loyal'\nEND"
+          },
+          "alias" : "tenure_category",
+          "_row_id" : "1916230942"
+        }, {
+          "expression" : {
+            "expression" : "CASE\n  WHEN age_numeric < 25\n    THEN 'Young'\n  WHEN age_numeric < 45\n    THEN 'Middle'\n  WHEN age_numeric < 65\n    THEN 'Senior'\n  ELSE 'Elderly'\nEND"
+          },
+          "alias" : "age_group",
+          "_row_id" : "16877173"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "acKGPv4o",
+          "slug" : "inf_categorical_encoding"
+        } ],
+        "outputs" : [ {
+          "id" : "Uj2VKwbD",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "inf_categorical_encoding_iA8KmS5C" : {
+      "id" : "inf_categorical_encoding_iA8KmS5C",
+      "component" : "SQLStatement",
+      "metadata" : {
+        "label" : "inf_categorical_encoding"
+      },
+      "properties" : {
+        "fileTabs" : [ {
+          "path" : "output_port_0",
+          "id" : "output_port_0",
+          "language" : "sql",
+          "content" : "\nSELECT *\n\nFROM {{ ref('inference_pipeline__inf_categorical_encoding') }}\n\n"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_0",
+          "slug" : "input_port_0"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_0",
+          "slug" : "output_port_0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "conn_inf_derived_feat##zdFFPRGV_Uj2VKwbD_inf_derived_features_Uj2VKwbD",
+    "source" : "inf_derived_feat##zdFFPRGV",
+    "sourcePort" : "Uj2VKwbD",
+    "target" : "inf_derived_features_Uj2VKwbD",
+    "targetPort" : "input_port_2",
+    "isWireless" : false
+  }, {
+    "id" : "zVbREDZs",
+    "source" : "inf_categorical_encoding_iA8KmS5C",
+    "sourcePort" : "output_port_0",
+    "target" : "inf_derived_feat##zdFFPRGV",
+    "targetPort" : "acKGPv4o",
+    "isWireless" : false
+  } ],
+  "component" : "Model"
+}

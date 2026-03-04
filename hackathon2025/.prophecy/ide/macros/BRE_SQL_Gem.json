@@ -1,0 +1,93 @@
+{
+  "BRE_SQL_Gem" : {
+    "name" : "BRE_SQL_Gem",
+    "macroType" : "query",
+    "definition" : "    {% set rel_list = relation_name\n        if (relation_name is iterable and relation_name is not string)\n        else [relation_name] %}\n    {% set input_col_names = [] %}\n    {% for col in schema %}\n        {% do input_col_names.append(col.name) %}\n    {% endfor %}\n    {% set grouped = {} %}\n    {% for rule in rules %}\n        {% set out_col = rule.output_column %}\n        {% if out_col not in grouped %}\n            {% do grouped.update({out_col: []}) %}\n        {% endif %}\n        {% do grouped[out_col].append(rule) %}\n    {% endfor %}\n    {% set new_output_cols = [] %}\n    {% for out_col in grouped.keys() %}\n        {% if out_col not in input_col_names %}\n            {% do new_output_cols.append(out_col) %}\n        {% endif %}\n    {% endfor %}\n    {% set select_cols = [] %}\n    {% for col in schema %}\n        {% set col_name = col.name %}\n        {% if col_name in grouped %}\n            {% set when_clauses = [] %}\n            {% for rule in grouped[col_name] %}\n                {% set in_col  = rule.input_column | default('') %}\n                {% set cond    = rule.rule_condition | trim %}\n                {% set cond_lc = cond | lower %}\n                {% if cond[:1] in ['>', '<', '=', '!']\n                    or cond_lc.startswith('like ')\n                    or cond_lc.startswith('in (')\n                    or cond_lc.startswith('between ')\n                    or cond_lc.startswith('is ')\n                %}\n                    {% set full_cond = in_col ~ ' ' ~ cond %}\n                {% else %}\n                    {% set full_cond = cond %}\n                {% endif %}\n                {% do when_clauses.append('WHEN ' ~ full_cond ~ ' THEN ' ~ rule.rule_output_value) %}\n            {% endfor %}\n            {% do select_cols.append('CASE ' ~ (when_clauses | join(' ')) ~ ' ELSE ' ~ col_name ~ ' END AS ' ~ col_name) %}\n        {% else %}\n            {% do select_cols.append(col_name) %}\n        {% endif %}\n    {% endfor %}\n    {% for col_name in new_output_cols %}\n        {% set when_clauses = [] %}\n        {% for rule in grouped[col_name] %}\n            {% set in_col  = rule.input_column | default('') %}\n            {% set cond    = rule.rule_condition | trim %}\n            {% set cond_lc = cond | lower %}\n            {% if cond[:1] in ['>', '<', '=', '!']\n                or cond_lc.startswith('like ')\n                or cond_lc.startswith('in (')\n                or cond_lc.startswith('between ')\n                or cond_lc.startswith('is ')\n            %}\n                {% set full_cond = in_col ~ ' ' ~ cond %}\n            {% else %}\n                {% set full_cond = cond %}\n            {% endif %}\n            {% do when_clauses.append('WHEN ' ~ full_cond ~ ' THEN ' ~ rule.rule_output_value) %}\n        {% endfor %}\n        {% do select_cols.append('CASE ' ~ (when_clauses | join(' ')) ~ ' ELSE NULL END AS ' ~ col_name) %}\n    {% endfor %}\n    {% if select_cols | length > 0 %}\n    SELECT\n        {{ select_cols | join(',\\n        ') }}\n    FROM {{ rel_list | join(', ') }}\n    {% else %}\n    SELECT *\n    FROM {{ rel_list | join(', ') }}\n    {% endif %}",
+    "parameters" : {
+      "type" : "record",
+      "fields" : [ {
+        "name" : "relation_name",
+        "kind" : {
+          "type" : "value"
+        },
+        "optional" : false,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      }, {
+        "name" : "schema",
+        "kind" : {
+          "type" : "value"
+        },
+        "optional" : false,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      }, {
+        "name" : "rules",
+        "kind" : {
+          "type" : "value"
+        },
+        "optional" : false,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      } ]
+    },
+    "staleState" : "none",
+    "propertiesFile" : {
+      "name" : "macros",
+      "content" : "---\nversion: 2\nmacros:\n- name: \"ChurnInferenceGem\"\n  arguments:\n  - name: \"parameter1\"\n    type: \"value\"\n    description: \"{\\\"ProphecyType\\\": \\\"value\\\"}\"\n  macroType: \"query\"\n- name: \"duckdb__ChurnInferenceGem\"\n  arguments:\n  - name: \"relation_name\"\n    type: \"value\"\n    description: \"{\\\"ProphecyType\\\": \\\"value\\\"}\"\n  - name: \"schema\"\n    type: \"value\"\n    description: \"{\\\"ProphecyType\\\": \\\"value\\\"}\"\n  - name: \"featureColumns\"\n    type: \"value\"\n    description: \"{\\\"ProphecyType\\\": \\\"value\\\"}\"\n  - name: \"churnThreshold\"\n    type: \"value\"\n    description: \"{\\\"ProphecyType\\\": \\\"value\\\"}\"\n  - name: \"lowMedThreshold\"\n    type: \"value\"\n    description: \"{\\\"ProphecyType\\\": \\\"value\\\"}\"\n  - name: \"medHighThreshold\"\n    type: \"value\"\n    description: \"{\\\"ProphecyType\\\": \\\"value\\\"}\"\n  macroType: \"query\"\n- name: \"BRE_SQL_Gem\"\n  arguments:\n  - name: \"parameter1\"\n    type: \"value\"\n    description: \"{\\\"ProphecyType\\\": \\\"value\\\"}\"\n  macroType: \"query\"\n",
+      "path" : "Hackathon_Telco_Churn/macros/macros.yml",
+      "projectConfiguration" : null,
+      "folderConfiguration" : {
+        "version" : 2,
+        "macros" : [ {
+          "name" : "ChurnInferenceGem",
+          "arguments" : [ {
+            "name" : "parameter1",
+            "type" : "value",
+            "description" : "{\"ProphecyType\": \"value\"}"
+          } ],
+          "macroType" : "query"
+        }, {
+          "name" : "duckdb__ChurnInferenceGem",
+          "arguments" : [ {
+            "name" : "relation_name",
+            "type" : "value",
+            "description" : "{\"ProphecyType\": \"value\"}"
+          }, {
+            "name" : "schema",
+            "type" : "value",
+            "description" : "{\"ProphecyType\": \"value\"}"
+          }, {
+            "name" : "featureColumns",
+            "type" : "value",
+            "description" : "{\"ProphecyType\": \"value\"}"
+          }, {
+            "name" : "churnThreshold",
+            "type" : "value",
+            "description" : "{\"ProphecyType\": \"value\"}"
+          }, {
+            "name" : "lowMedThreshold",
+            "type" : "value",
+            "description" : "{\"ProphecyType\": \"value\"}"
+          }, {
+            "name" : "medHighThreshold",
+            "type" : "value",
+            "description" : "{\"ProphecyType\": \"value\"}"
+          } ],
+          "macroType" : "query"
+        }, {
+          "name" : "BRE_SQL_Gem",
+          "arguments" : [ {
+            "name" : "parameter1",
+            "type" : "value",
+            "description" : "{\"ProphecyType\": \"value\"}"
+          } ],
+          "macroType" : "query"
+        } ]
+      },
+      "packagesYml" : null,
+      "editable" : true
+    },
+    "version" : 0
+  }
+}

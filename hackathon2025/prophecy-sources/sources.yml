@@ -1,0 +1,149 @@
+---
+version: 2
+sources:
+- name: "westpac_callum"
+  database: "westpac"
+  schema: "callum"
+  tables:
+  - name: "telecom_customer_churn"
+    config:
+      tags:
+      - "pipeline:model_training_pipeline"
+      - "pipeline:inference_pipeline"
+    columns:
+    - name: "Customer ID"
+      dataType:
+        type: "String"
+    - name: "Gender"
+      dataType:
+        type: "String"
+    - name: "Age"
+      dataType:
+        type: "Bigint"
+    - name: "Married"
+      dataType:
+        type: "String"
+    - name: "Number of Dependents"
+      dataType:
+        type: "Bigint"
+    - name: "City"
+      dataType:
+        type: "String"
+    - name: "Zip Code"
+      dataType:
+        type: "Bigint"
+    - name: "Latitude"
+      dataType:
+        type: "Double"
+    - name: "Longitude"
+      dataType:
+        type: "Double"
+    - name: "Number of Referrals"
+      dataType:
+        type: "Bigint"
+    - name: "Tenure in Months"
+      dataType:
+        type: "Bigint"
+    - name: "Offer"
+      dataType:
+        type: "String"
+    - name: "Phone Service"
+      dataType:
+        type: "String"
+    - name: "Avg Monthly Long Distance Charges"
+      dataType:
+        type: "Double"
+    - name: "Multiple Lines"
+      dataType:
+        type: "String"
+    - name: "Internet Service"
+      dataType:
+        type: "String"
+    - name: "Internet Type"
+      dataType:
+        type: "String"
+    - name: "Avg Monthly GB Download"
+      dataType:
+        type: "Bigint"
+    - name: "Online Security"
+      dataType:
+        type: "String"
+    - name: "Online Backup"
+      dataType:
+        type: "String"
+    - name: "Device Protection Plan"
+      dataType:
+        type: "String"
+    - name: "Premium Tech Support"
+      dataType:
+        type: "String"
+    - name: "Streaming TV"
+      dataType:
+        type: "String"
+    - name: "Streaming Movies"
+      dataType:
+        type: "String"
+    - name: "Streaming Music"
+      dataType:
+        type: "String"
+    - name: "Unlimited Data"
+      dataType:
+        type: "String"
+    - name: "Contract"
+      dataType:
+        type: "String"
+    - name: "Paperless Billing"
+      dataType:
+        type: "String"
+    - name: "Payment Method"
+      dataType:
+        type: "String"
+    - name: "Monthly Charge"
+      dataType:
+        type: "Double"
+    - name: "Total Charges"
+      dataType:
+        type: "Double"
+    - name: "Total Refunds"
+      dataType:
+        type: "Double"
+    - name: "Total Extra Data Charges"
+      dataType:
+        type: "Bigint"
+    - name: "Total Long Distance Charges"
+      dataType:
+        type: "Double"
+    - name: "Total Revenue"
+      dataType:
+        type: "Double"
+    - name: "Customer Status"
+      dataType:
+        type: "String"
+    - name: "Churn Category"
+      dataType:
+        type: "String"
+    - name: "Churn Reason"
+      dataType:
+        type: "String"
+    type: "table"
+  - name: "telecom_data_dictionary"
+    columns:
+    - name: "Table"
+      dataType:
+        type: "String"
+    - name: "Field"
+      dataType:
+        type: "String"
+    - name: "Description"
+      dataType:
+        type: "String"
+    type: "table"
+  - name: "telecom_zipcode_population"
+    columns:
+    - name: "Zip Code"
+      dataType:
+        type: "Bigint"
+    - name: "Population"
+      dataType:
+        type: "Bigint"
+    type: "table"

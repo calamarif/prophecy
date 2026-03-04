@@ -1,0 +1,9 @@
+---
+version: 2
+models:
+- name: "model_training_pipeline__fe_derived_features"
+  tags:
+  - "prophecy_temp"
+- name: "model_training_pipeline__fm_formatted_metrics"
+  tags:
+  - "prophecy_temp"

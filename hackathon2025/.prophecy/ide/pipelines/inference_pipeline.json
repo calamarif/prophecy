@@ -1,0 +1,1220 @@
+{
+  "id" : "inference_pipeline",
+  "metainfo" : {
+    "label" : "inference_pipeline",
+    "autoLayout" : false,
+    "version" : 1,
+    "configuration" : {
+      "schema" : {
+        "type" : "record",
+        "fields" : [ ]
+      }
+    },
+    "isTranspiledPipeline" : false,
+    "processesVsModelFiles" : {
+      "inf_cleaned_data##PB2orZIw" : "models/inference_pipeline/inference_pipeline__Join_1.sql",
+      "akrPF-Ov2jSYn6mD1FSTR$$4nZeU1bL0KIJJuUD1nUHZ" : "models/inference_pipeline/inference_pipeline__Join_1.sql",
+      "inf_telecom_cust##HpxlFxcl" : "models/inference_pipeline/inference_pipeline__Join_1.sql",
+      "BdRFs_DnQW6mJRlIYZ00n$$uN7UYt89SkcJxqk7XPL0c" : "models/inference_pipeline/inference_pipeline__Join_1.sql",
+      "inf_renamed_colu##UgZsbjGh" : "models/inference_pipeline/inference_pipeline__Join_1.sql",
+      "inf_derived_feat##zdFFPRGV" : "models/inference_pipeline/inference_pipeline__Join_1.sql",
+      "inf_categorical_##oWj4QRq3" : "models/inference_pipeline/inference_pipeline__Join_1.sql",
+      "inf_binary_featu##y3fPfz6n" : "models/inference_pipeline/inference_pipeline__Join_1.sql",
+      "Join_1_SqBsx6s5BIGjWJD1oeqgL$$MggNzVOgaP7hIsNcpJyOe" : "models/inference_pipeline/inference_pipeline__Join_1.sql"
+    }
+  },
+  "processes" : {
+    "inf_cleaned_data##PB2orZIw" : {
+      "id" : "inf_cleaned_data##PB2orZIw",
+      "component" : "Macro",
+      "metadata" : {
+        "label" : "inf_cleaned_data",
+        "x" : 220,
+        "y" : 120,
+        "phase" : 0
+      },
+      "properties" : {
+        "macroName" : "DataCleansing",
+        "parameters" : [ {
+          "name" : "relation_name",
+          "value" : "'inf_telecom_customer_churn'"
+        }, {
+          "name" : "schema",
+          "value" : "[\n  { \"name\": \"Customer ID\", \"dataType\": \"string\" }, \n  { \"name\": \"Gender\", \"dataType\": \"string\" }, \n  { \"name\": \"Age\", \"dataType\": \"bigint\" }, \n  { \"name\": \"Married\", \"dataType\": \"string\" }, \n  { \"name\": \"Number of Dependents\", \"dataType\": \"bigint\" }, \n  { \"name\": \"City\", \"dataType\": \"string\" }, \n  { \"name\": \"Zip Code\", \"dataType\": \"bigint\" }, \n  { \"name\": \"Latitude\", \"dataType\": \"double\" }, \n  { \"name\": \"Longitude\", \"dataType\": \"double\" }, \n  { \"name\": \"Number of Referrals\", \"dataType\": \"bigint\" }, \n  { \"name\": \"Tenure in Months\", \"dataType\": \"bigint\" }, \n  { \"name\": \"Offer\", \"dataType\": \"string\" }, \n  { \"name\": \"Phone Service\", \"dataType\": \"string\" }, \n  { \"name\": \"Avg Monthly Long Distance Charges\", \"dataType\": \"double\" }, \n  { \"name\": \"Multiple Lines\", \"dataType\": \"string\" }, \n  { \"name\": \"Internet Service\", \"dataType\": \"string\" }, \n  { \"name\": \"Internet Type\", \"dataType\": \"string\" }, \n  { \"name\": \"Avg Monthly GB Download\", \"dataType\": \"bigint\" }, \n  { \"name\": \"Online Security\", \"dataType\": \"string\" }, \n  { \"name\": \"Online Backup\", \"dataType\": \"string\" }, \n  { \"name\": \"Device Protection Plan\", \"dataType\": \"string\" }, \n  { \"name\": \"Premium Tech Support\", \"dataType\": \"string\" }, \n  { \"name\": \"Streaming TV\", \"dataType\": \"string\" }, \n  { \"name\": \"Streaming Movies\", \"dataType\": \"string\" }, \n  { \"name\": \"Streaming Music\", \"dataType\": \"string\" }, \n  { \"name\": \"Unlimited Data\", \"dataType\": \"string\" }, \n  { \"name\": \"Contract\", \"dataType\": \"string\" }, \n  { \"name\": \"Paperless Billing\", \"dataType\": \"string\" }, \n  { \"name\": \"Payment Method\", \"dataType\": \"string\" }, \n  { \"name\": \"Monthly Charge\", \"dataType\": \"double\" }, \n  { \"name\": \"Total Charges\", \"dataType\": \"double\" }, \n  { \"name\": \"Total Refunds\", \"dataType\": \"double\" }, \n  { \"name\": \"Total Extra Data Charges\", \"dataType\": \"bigint\" }, \n  { \"name\": \"Total Long Distance Charges\", \"dataType\": \"double\" }, \n  { \"name\": \"Total Revenue\", \"dataType\": \"double\" }, \n  { \"name\": \"Customer Status\", \"dataType\": \"string\" }, \n  { \"name\": \"Churn Category\", \"dataType\": \"string\" }, \n  { \"name\": \"Churn Reason\", \"dataType\": \"string\" }\n]"
+        }, {
+          "name" : "modifyCase",
+          "value" : "'none'"
+        }, {
+          "name" : "columnNames",
+          "value" : "[\n  'Gender', \n  'Married', \n  'City', \n  'Offer', \n  'Phone Service', \n  'Multiple Lines', \n  'Internet Service', \n  'Internet Type', \n  'Online Security', \n  'Online Backup', \n  'Device Protection Plan', \n  'Premium Tech Support', \n  'Streaming TV', \n  'Streaming Movies', \n  'Streaming Music', \n  'Unlimited Data', \n  'Contract', \n  'Paperless Billing', \n  'Payment Method', \n  'Customer Status', \n  'Churn Category', \n  'Churn Reason'\n]"
+        }, {
+          "name" : "replaceNullTextFields",
+          "value" : "True"
+        }, {
+          "name" : "replaceNullTextWith",
+          "value" : "'Unknown'"
+        }, {
+          "name" : "replaceNullForNumericFields",
+          "value" : "True"
+        }, {
+          "name" : "replaceNullNumericWith",
+          "value" : "0"
+        }, {
+          "name" : "trimWhiteSpace",
+          "value" : "True"
+        }, {
+          "name" : "removeTabsLineBreaksAndDuplicateWhitespace",
+          "value" : "True"
+        }, {
+          "name" : "allWhiteSpace"
+        }, {
+          "name" : "cleanLetters"
+        }, {
+          "name" : "cleanPunctuations"
+        }, {
+          "name" : "cleanNumbers"
+        }, {
+          "name" : "removeRowNullAllCols"
+        }, {
+          "name" : "replaceNullDateFields"
+        }, {
+          "name" : "replaceNullDateWith"
+        }, {
+          "name" : "replaceNullTimeFields"
+        }, {
+          "name" : "replaceNullTimeWith"
+        } ],
+        "projectName" : "prophecy_basics"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "o7agYBJj",
+          "slug" : "inf_telecom_customer_churn"
+        } ],
+        "outputs" : [ {
+          "id" : "iJx39dOz",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "akrPF-Ov2jSYn6mD1FSTR$$4nZeU1bL0KIJJuUD1nUHZ" : {
+      "id" : "akrPF-Ov2jSYn6mD1FSTR$$4nZeU1bL0KIJJuUD1nUHZ",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "Join_1",
+        "x" : 1220,
+        "y" : 120,
+        "phase" : 0,
+        "comment" : "Combines detailed customer profiles with their age group classification to support customer segmentation and churn analysis.",
+        "autoUpdateComment" : true
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "expression" : "in1.customer_id = in0.customer_id"
+          },
+          "joinType" : "inner"
+        } ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "in0.customer_id"
+          },
+          "alias" : "customer_id",
+          "_row_id" : "477487500"
+        }, {
+          "expression" : {
+            "expression" : "in0.gender"
+          },
+          "alias" : "gender",
+          "_row_id" : "856206647"
+        }, {
+          "expression" : {
+            "expression" : "in0.age_numeric"
+          },
+          "alias" : "age_numeric",
+          "_row_id" : "1777745392"
+        }, {
+          "expression" : {
+            "expression" : "in0.married"
+          },
+          "alias" : "married",
+          "_row_id" : "735737871"
+        }, {
+          "expression" : {
+            "expression" : "in0.number_of_dependents"
+          },
+          "alias" : "number_of_dependents",
+          "_row_id" : "1504572769"
+        }, {
+          "expression" : {
+            "expression" : "in0.city"
+          },
+          "alias" : "city",
+          "_row_id" : "1515981176"
+        }, {
+          "expression" : {
+            "expression" : "in0.zip_code"
+          },
+          "alias" : "zip_code",
+          "_row_id" : "1117450615"
+        }, {
+          "expression" : {
+            "expression" : "in0.latitude"
+          },
+          "alias" : "latitude",
+          "_row_id" : "267506412"
+        }, {
+          "expression" : {
+            "expression" : "in0.longitude"
+          },
+          "alias" : "longitude",
+          "_row_id" : "1603514614"
+        }, {
+          "expression" : {
+            "expression" : "in0.number_of_referrals"
+          },
+          "alias" : "number_of_referrals",
+          "_row_id" : "1000514698"
+        }, {
+          "expression" : {
+            "expression" : "in0.tenure_in_months"
+          },
+          "alias" : "tenure_in_months",
+          "_row_id" : "470214421"
+        }, {
+          "expression" : {
+            "expression" : "in0.offer"
+          },
+          "alias" : "offer",
+          "_row_id" : "544531870"
+        }, {
+          "expression" : {
+            "expression" : "in0.phone_service"
+          },
+          "alias" : "phone_service",
+          "_row_id" : "714575501"
+        }, {
+          "expression" : {
+            "expression" : "in0.avg_monthly_long_distance_charges"
+          },
+          "alias" : "avg_monthly_long_distance_charges",
+          "_row_id" : "285461518"
+        }, {
+          "expression" : {
+            "expression" : "in0.multiple_lines"
+          },
+          "alias" : "multiple_lines",
+          "_row_id" : "783209238"
+        }, {
+          "expression" : {
+            "expression" : "in0.internet_service"
+          },
+          "alias" : "internet_service",
+          "_row_id" : "312361054"
+        }, {
+          "expression" : {
+            "expression" : "in0.internet_type"
+          },
+          "alias" : "internet_type",
+          "_row_id" : "1859449193"
+        }, {
+          "expression" : {
+            "expression" : "in0.avg_monthly_gb_download"
+          },
+          "alias" : "avg_monthly_gb_download",
+          "_row_id" : "345734772"
+        }, {
+          "expression" : {
+            "expression" : "in0.online_security"
+          },
+          "alias" : "online_security",
+          "_row_id" : "1376318878"
+        }, {
+          "expression" : {
+            "expression" : "in0.online_backup"
+          },
+          "alias" : "online_backup",
+          "_row_id" : "181221003"
+        }, {
+          "expression" : {
+            "expression" : "in0.device_protection_plan"
+          },
+          "alias" : "device_protection_plan",
+          "_row_id" : "2088345097"
+        }, {
+          "expression" : {
+            "expression" : "in0.premium_tech_support"
+          },
+          "alias" : "premium_tech_support",
+          "_row_id" : "304287323"
+        }, {
+          "expression" : {
+            "expression" : "in0.streaming_tv"
+          },
+          "alias" : "streaming_tv",
+          "_row_id" : "958604976"
+        }, {
+          "expression" : {
+            "expression" : "in0.streaming_movies"
+          },
+          "alias" : "streaming_movies",
+          "_row_id" : "1822664622"
+        }, {
+          "expression" : {
+            "expression" : "in0.streaming_music"
+          },
+          "alias" : "streaming_music",
+          "_row_id" : "501840765"
+        }, {
+          "expression" : {
+            "expression" : "in0.unlimited_data"
+          },
+          "alias" : "unlimited_data",
+          "_row_id" : "2094962534"
+        }, {
+          "expression" : {
+            "expression" : "in0.contract"
+          },
+          "alias" : "contract",
+          "_row_id" : "774443417"
+        }, {
+          "expression" : {
+            "expression" : "in0.paperless_billing"
+          },
+          "alias" : "paperless_billing",
+          "_row_id" : "1119207582"
+        }, {
+          "expression" : {
+            "expression" : "in0.payment_method"
+          },
+          "alias" : "payment_method",
+          "_row_id" : "1104062625"
+        }, {
+          "expression" : {
+            "expression" : "in0.monthly_charge"
+          },
+          "alias" : "monthly_charge",
+          "_row_id" : "1559149601"
+        }, {
+          "expression" : {
+            "expression" : "in0.total_charges"
+          },
+          "alias" : "total_charges",
+          "_row_id" : "1795322109"
+        }, {
+          "expression" : {
+            "expression" : "in0.total_refunds"
+          },
+          "alias" : "total_refunds",
+          "_row_id" : "1867000362"
+        }, {
+          "expression" : {
+            "expression" : "in0.total_extra_data_charges"
+          },
+          "alias" : "total_extra_data_charges",
+          "_row_id" : "1879557767"
+        }, {
+          "expression" : {
+            "expression" : "in0.total_long_distance_charges"
+          },
+          "alias" : "total_long_distance_charges",
+          "_row_id" : "1019359679"
+        }, {
+          "expression" : {
+            "expression" : "in0.total_revenue"
+          },
+          "alias" : "total_revenue",
+          "_row_id" : "860343198"
+        }, {
+          "expression" : {
+            "expression" : "in0.customer_status"
+          },
+          "alias" : "customer_status",
+          "_row_id" : "2130766706"
+        }, {
+          "expression" : {
+            "expression" : "in0.churn_category"
+          },
+          "alias" : "churn_category",
+          "_row_id" : "611322369"
+        }, {
+          "expression" : {
+            "expression" : "in0.churn_reason"
+          },
+          "alias" : "churn_reason",
+          "_row_id" : "960514636"
+        }, {
+          "expression" : {
+            "expression" : "in0.is_married"
+          },
+          "alias" : "is_married",
+          "_row_id" : "749534653"
+        }, {
+          "expression" : {
+            "expression" : "in0.has_phone_service"
+          },
+          "alias" : "has_phone_service",
+          "_row_id" : "1716301460"
+        }, {
+          "expression" : {
+            "expression" : "in0.has_internet_service"
+          },
+          "alias" : "has_internet_service",
+          "_row_id" : "1840237904"
+        }, {
+          "expression" : {
+            "expression" : "in0.has_online_security"
+          },
+          "alias" : "has_online_security",
+          "_row_id" : "1416004989"
+        }, {
+          "expression" : {
+            "expression" : "in0.has_online_backup"
+          },
+          "alias" : "has_online_backup",
+          "_row_id" : "735137640"
+        }, {
+          "expression" : {
+            "expression" : "in0.has_device_protection"
+          },
+          "alias" : "has_device_protection",
+          "_row_id" : "1568647002"
+        }, {
+          "expression" : {
+            "expression" : "in0.has_premium_tech_support"
+          },
+          "alias" : "has_premium_tech_support",
+          "_row_id" : "644002088"
+        }, {
+          "expression" : {
+            "expression" : "in0.has_streaming_tv"
+          },
+          "alias" : "has_streaming_tv",
+          "_row_id" : "1168155621"
+        }, {
+          "expression" : {
+            "expression" : "in0.has_streaming_movies"
+          },
+          "alias" : "has_streaming_movies",
+          "_row_id" : "1230777012"
+        }, {
+          "expression" : {
+            "expression" : "in0.has_streaming_music"
+          },
+          "alias" : "has_streaming_music",
+          "_row_id" : "1682293428"
+        }, {
+          "expression" : {
+            "expression" : "in0.has_unlimited_data"
+          },
+          "alias" : "has_unlimited_data",
+          "_row_id" : "472519745"
+        }, {
+          "expression" : {
+            "expression" : "in0.has_paperless_billing"
+          },
+          "alias" : "has_paperless_billing",
+          "_row_id" : "1635940375"
+        }, {
+          "expression" : {
+            "expression" : "in0.churn_label"
+          },
+          "alias" : "churn_label",
+          "_row_id" : "592706161"
+        }, {
+          "expression" : {
+            "expression" : "in0.contract_type_encoded"
+          },
+          "alias" : "contract_type_encoded",
+          "_row_id" : "743070808"
+        }, {
+          "expression" : {
+            "expression" : "in0.payment_method_encoded"
+          },
+          "alias" : "payment_method_encoded",
+          "_row_id" : "719030345"
+        }, {
+          "expression" : {
+            "expression" : "in0.internet_type_encoded"
+          },
+          "alias" : "internet_type_encoded",
+          "_row_id" : "761574992"
+        }, {
+          "expression" : {
+            "expression" : "in0.avg_revenue_per_month"
+          },
+          "alias" : "avg_revenue_per_month",
+          "_row_id" : "1370268234"
+        }, {
+          "expression" : {
+            "expression" : "in0.charges_to_revenue_ratio"
+          },
+          "alias" : "charges_to_revenue_ratio",
+          "_row_id" : "453950336"
+        }, {
+          "expression" : {
+            "expression" : "in0.refund_rate"
+          },
+          "alias" : "refund_rate",
+          "_row_id" : "1861894106"
+        }, {
+          "expression" : {
+            "expression" : "in0.total_services_count"
+          },
+          "alias" : "total_services_count",
+          "_row_id" : "1470580722"
+        }, {
+          "expression" : {
+            "expression" : "in0.tenure_category"
+          },
+          "alias" : "tenure_category",
+          "_row_id" : "230496010"
+        }, {
+          "expression" : {
+            "expression" : "in1.age_group"
+          },
+          "alias" : "age_group",
+          "_row_id" : "1800908187"
+        } ],
+        "activeTab" : "conditions",
+        "columnsSelector" : [ "eYwEyYBN8tWeNJjpUFZfq$$N7fB_Nccqg1Rxm6vRQtGv##customer_id", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##customer_id", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##customer_id", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##gender", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##age_numeric", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##married", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##number_of_dependents", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##city", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##zip_code", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##latitude", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##longitude", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##number_of_referrals", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##tenure_in_months", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##offer", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##phone_service", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##avg_monthly_long_distance_charges", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##multiple_lines", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##internet_service", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##internet_type", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##avg_monthly_gb_download", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##online_security", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##online_backup", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##device_protection_plan", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##premium_tech_support", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##streaming_tv", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##streaming_movies", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##streaming_music", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##unlimited_data", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##contract", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##paperless_billing", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##payment_method", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##monthly_charge", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##total_charges", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##total_refunds", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##total_extra_data_charges", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##total_long_distance_charges", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##total_revenue", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##customer_status", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##churn_category", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##churn_reason", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##is_married", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##has_phone_service", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##has_internet_service", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##has_online_security", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##has_online_backup", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##has_device_protection", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##has_premium_tech_support", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##has_streaming_tv", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##has_streaming_movies", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##has_streaming_music", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##has_unlimited_data", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##has_paperless_billing", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##churn_label", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##contract_type_encoded", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##payment_method_encoded", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##internet_type_encoded", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##avg_revenue_per_month", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##charges_to_revenue_ratio", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##refund_rate", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##total_services_count", "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V##tenure_category", "eYwEyYBN8tWeNJjpUFZfq$$N7fB_Nccqg1Rxm6vRQtGv##age_group" ],
+        "headAlias" : "in0"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V",
+          "slug" : "in0"
+        }, {
+          "id" : "eYwEyYBN8tWeNJjpUFZfq$$N7fB_Nccqg1Rxm6vRQtGv",
+          "slug" : "in1"
+        } ],
+        "outputs" : [ {
+          "id" : "SqBsx6s5BIGjWJD1oeqgL$$MggNzVOgaP7hIsNcpJyOe",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "inf_telecom_cust##HpxlFxcl" : {
+      "id" : "inf_telecom_cust##HpxlFxcl",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "inf_telecom_customer_churn",
+        "x" : 20,
+        "y" : 120,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "telecom_customer_churn",
+          "sourceType" : "Table",
+          "sourceName" : "westpac_callum"
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "fSywCLCr",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      },
+      "index" : 0
+    },
+    "m1I2VSpASN" : {
+      "id" : "m1I2VSpASN",
+      "component" : "Visualize",
+      "metadata" : {
+        "label" : "churn_summary_by_risk",
+        "x" : 1620,
+        "y" : 20,
+        "phase" : 0
+      },
+      "properties" : {
+        "description" : null,
+        "label" : null
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Atf7RKFviV",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "1hbopgrCg9" : {
+      "id" : "1hbopgrCg9",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "load_and_predict",
+        "x" : 1420,
+        "y" : 120,
+        "phase" : 0
+      },
+      "properties" : {
+        "ports" : null,
+        "script" : "import pickle\nimport os\nimport numpy as np\nimport pandas as pd\nfrom pyspark.sql.types import StructType, StructField, StringType, DoubleType, IntegerType\n\n# Load the trained model package from pickle\nmodel_path = \"/Volumes/westpac/callum/callums_volume/churn_models/churn_model.pkl\"\n\nprint(f\"Loading model from: {model_path}\")\nwith open(model_path, 'rb') as f:\n    model_package = pickle.load(f)\n\n# Extract model components\nmodel = model_package['model']\nscaler = model_package['scaler']\nfeature_columns = model_package['feature_columns']\n\nprint(f\"Model loaded successfully. Using {len(feature_columns)} features.\")\n\n# Convert Spark DataFrame to Pandas for prediction\ninput_pdf = in0.toPandas()\nprint(f\"Input data has {len(input_pdf)} rows\")\n\n# Filter to existing feature columns\nexisting_cols = [c for c in feature_columns if c in input_pdf.columns]\nprint(f\"Found {len(existing_cols)} of {len(feature_columns)} expected feature columns\")\n\n# Prepare features\nX = input_pdf[existing_cols].fillna(0)\n\n# Scale features using the saved scaler\nX_scaled = scaler.transform(X)\n\n# Make predictions\ny_pred = model.predict(X_scaled)\ny_prob = model.predict_proba(X_scaled)[:, 1]\n\n# Add predictions to the dataframe\ninput_pdf['churn_prediction'] = y_pred\ninput_pdf['churn_probability'] = y_prob\n\n# Create risk category based on probability\ninput_pdf['churn_risk'] = pd.cut(\n    input_pdf['churn_probability'],\n    bins=[0, 0.3, 0.6, 1.0],\n    labels=['Low', 'Medium', 'High']\n)\n\n# Select output columns - include key identifiers and predictions\noutput_cols = [\n    'customer_id', 'city', 'tenure_in_months', 'contract', 'monthly_charge',\n    'total_revenue', 'total_services_count', 'tenure_category', 'age_group',\n    'churn_prediction', 'churn_probability', 'churn_risk'\n]\n\n# Filter to columns that exist\nfinal_cols = [c for c in output_cols if c in input_pdf.columns]\noutput_pdf = input_pdf[final_cols]\n\n# Convert back to Spark DataFrame\nout0 = spark.createDataFrame(output_pdf)\n\nprint(f\"Predictions complete. {int(y_pred.sum())} customers predicted to churn ({100*y_pred.mean():.1f}%)\")",
+        "scriptMethodFooter" : "return out0",
+        "scriptMethodHeader" : "def Script(spark: SparkSession, in0: DataFrame) -> DataFrame:"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "kAnasIdxzd",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "OFWfQ1xWtJ",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "BdRFs_DnQW6mJRlIYZ00n$$uN7UYt89SkcJxqk7XPL0c" : {
+      "id" : "BdRFs_DnQW6mJRlIYZ00n$$uN7UYt89SkcJxqk7XPL0c",
+      "component" : "BRE_SQL_Gem",
+      "metadata" : {
+        "label" : "assign_age_group",
+        "x" : 1020,
+        "y" : 220,
+        "phase" : 0,
+        "comment" : "Categorizes customers into age groups to enhance segmentation and analysis for targeted business strategies."
+      },
+      "properties" : {
+        "rules" : [ {
+          "kind" : "AddRule",
+          "AddRule" : {
+            "input_column" : "age_numeric",
+            "output_column" : "age_group",
+            "rule_condition" : "< 25",
+            "rule_output_value" : "'Young'"
+          }
+        }, {
+          "kind" : "AddRule",
+          "AddRule" : {
+            "input_column" : "age_numeric",
+            "output_column" : "age_group",
+            "rule_condition" : "<45",
+            "rule_output_value" : "'Middle'"
+          }
+        }, {
+          "kind" : "AddRule",
+          "AddRule" : {
+            "input_column" : "age_numeric",
+            "output_column" : "age_group",
+            "rule_condition" : "<65",
+            "rule_output_value" : "'Senior'"
+          }
+        }, {
+          "kind" : "AddRule",
+          "AddRule" : {
+            "input_column" : "age_numeric",
+            "output_column" : "age_group",
+            "rule_condition" : ">=65",
+            "rule_output_value" : "'Elderly'"
+          }
+        } ],
+        "schema" : "[{\"name\": \"customer_id\", \"dataType\": \"String\"}, {\"name\": \"gender\", \"dataType\": \"String\"}, {\"name\": \"age_numeric\", \"dataType\": \"Bigint\"}, {\"name\": \"married\", \"dataType\": \"String\"}, {\"name\": \"number_of_dependents\", \"dataType\": \"Bigint\"}, {\"name\": \"city\", \"dataType\": \"String\"}, {\"name\": \"zip_code\", \"dataType\": \"Bigint\"}, {\"name\": \"latitude\", \"dataType\": \"Double\"}, {\"name\": \"longitude\", \"dataType\": \"Double\"}, {\"name\": \"number_of_referrals\", \"dataType\": \"Bigint\"}, {\"name\": \"tenure_in_months\", \"dataType\": \"Bigint\"}, {\"name\": \"offer\", \"dataType\": \"String\"}, {\"name\": \"phone_service\", \"dataType\": \"String\"}, {\"name\": \"avg_monthly_long_distance_charges\", \"dataType\": \"Double\"}, {\"name\": \"multiple_lines\", \"dataType\": \"String\"}, {\"name\": \"internet_service\", \"dataType\": \"String\"}, {\"name\": \"internet_type\", \"dataType\": \"String\"}, {\"name\": \"avg_monthly_gb_download\", \"dataType\": \"Bigint\"}, {\"name\": \"online_security\", \"dataType\": \"String\"}, {\"name\": \"online_backup\", \"dataType\": \"String\"}, {\"name\": \"device_protection_plan\", \"dataType\": \"String\"}, {\"name\": \"premium_tech_support\", \"dataType\": \"String\"}, {\"name\": \"streaming_tv\", \"dataType\": \"String\"}, {\"name\": \"streaming_movies\", \"dataType\": \"String\"}, {\"name\": \"streaming_music\", \"dataType\": \"String\"}, {\"name\": \"unlimited_data\", \"dataType\": \"String\"}, {\"name\": \"contract\", \"dataType\": \"String\"}, {\"name\": \"paperless_billing\", \"dataType\": \"String\"}, {\"name\": \"payment_method\", \"dataType\": \"String\"}, {\"name\": \"monthly_charge\", \"dataType\": \"Double\"}, {\"name\": \"total_charges\", \"dataType\": \"Double\"}, {\"name\": \"total_refunds\", \"dataType\": \"Double\"}, {\"name\": \"total_extra_data_charges\", \"dataType\": \"Bigint\"}, {\"name\": \"total_long_distance_charges\", \"dataType\": \"Double\"}, {\"name\": \"total_revenue\", \"dataType\": \"Double\"}, {\"name\": \"customer_status\", \"dataType\": \"String\"}, {\"name\": \"churn_category\", \"dataType\": \"String\"}, {\"name\": \"churn_reason\", \"dataType\": \"String\"}, {\"name\": \"is_married\", \"dataType\": \"Integer\"}, {\"name\": \"has_phone_service\", \"dataType\": \"Integer\"}, {\"name\": \"has_internet_service\", \"dataType\": \"Integer\"}, {\"name\": \"has_online_security\", \"dataType\": \"Integer\"}, {\"name\": \"has_online_backup\", \"dataType\": \"Integer\"}, {\"name\": \"has_device_protection\", \"dataType\": \"Integer\"}, {\"name\": \"has_premium_tech_support\", \"dataType\": \"Integer\"}, {\"name\": \"has_streaming_tv\", \"dataType\": \"Integer\"}, {\"name\": \"has_streaming_movies\", \"dataType\": \"Integer\"}, {\"name\": \"has_streaming_music\", \"dataType\": \"Integer\"}, {\"name\": \"has_unlimited_data\", \"dataType\": \"Integer\"}, {\"name\": \"has_paperless_billing\", \"dataType\": \"Integer\"}, {\"name\": \"churn_label\", \"dataType\": \"Integer\"}, {\"name\": \"contract_type_encoded\", \"dataType\": \"Integer\"}, {\"name\": \"payment_method_encoded\", \"dataType\": \"Integer\"}, {\"name\": \"internet_type_encoded\", \"dataType\": \"Integer\"}]",
+        "relation_name" : [ "inf_categorical_encoding" ],
+        "_oldMacroProperties" : {
+          "macroName" : "BRE_SQL_Gem",
+          "projectName" : "Hackathon_Telco_Churn",
+          "parameters" : [ {
+            "name" : "relation_name",
+            "value" : "[\"inf_categorical_encoding\"]"
+          }, {
+            "name" : "schema",
+            "value" : "[{\"name\": \"customer_id\", \"dataType\": \"String\"}, {\"name\": \"gender\", \"dataType\": \"String\"}, {\"name\": \"age_numeric\", \"dataType\": \"Bigint\"}, {\"name\": \"married\", \"dataType\": \"String\"}, {\"name\": \"number_of_dependents\", \"dataType\": \"Bigint\"}, {\"name\": \"city\", \"dataType\": \"String\"}, {\"name\": \"zip_code\", \"dataType\": \"Bigint\"}, {\"name\": \"latitude\", \"dataType\": \"Double\"}, {\"name\": \"longitude\", \"dataType\": \"Double\"}, {\"name\": \"number_of_referrals\", \"dataType\": \"Bigint\"}, {\"name\": \"tenure_in_months\", \"dataType\": \"Bigint\"}, {\"name\": \"offer\", \"dataType\": \"String\"}, {\"name\": \"phone_service\", \"dataType\": \"String\"}, {\"name\": \"avg_monthly_long_distance_charges\", \"dataType\": \"Double\"}, {\"name\": \"multiple_lines\", \"dataType\": \"String\"}, {\"name\": \"internet_service\", \"dataType\": \"String\"}, {\"name\": \"internet_type\", \"dataType\": \"String\"}, {\"name\": \"avg_monthly_gb_download\", \"dataType\": \"Bigint\"}, {\"name\": \"online_security\", \"dataType\": \"String\"}, {\"name\": \"online_backup\", \"dataType\": \"String\"}, {\"name\": \"device_protection_plan\", \"dataType\": \"String\"}, {\"name\": \"premium_tech_support\", \"dataType\": \"String\"}, {\"name\": \"streaming_tv\", \"dataType\": \"String\"}, {\"name\": \"streaming_movies\", \"dataType\": \"String\"}, {\"name\": \"streaming_music\", \"dataType\": \"String\"}, {\"name\": \"unlimited_data\", \"dataType\": \"String\"}, {\"name\": \"contract\", \"dataType\": \"String\"}, {\"name\": \"paperless_billing\", \"dataType\": \"String\"}, {\"name\": \"payment_method\", \"dataType\": \"String\"}, {\"name\": \"monthly_charge\", \"dataType\": \"Double\"}, {\"name\": \"total_charges\", \"dataType\": \"Double\"}, {\"name\": \"total_refunds\", \"dataType\": \"Double\"}, {\"name\": \"total_extra_data_charges\", \"dataType\": \"Bigint\"}, {\"name\": \"total_long_distance_charges\", \"dataType\": \"Double\"}, {\"name\": \"total_revenue\", \"dataType\": \"Double\"}, {\"name\": \"customer_status\", \"dataType\": \"String\"}, {\"name\": \"churn_category\", \"dataType\": \"String\"}, {\"name\": \"churn_reason\", \"dataType\": \"String\"}, {\"name\": \"is_married\", \"dataType\": \"Integer\"}, {\"name\": \"has_phone_service\", \"dataType\": \"Integer\"}, {\"name\": \"has_internet_service\", \"dataType\": \"Integer\"}, {\"name\": \"has_online_security\", \"dataType\": \"Integer\"}, {\"name\": \"has_online_backup\", \"dataType\": \"Integer\"}, {\"name\": \"has_device_protection\", \"dataType\": \"Integer\"}, {\"name\": \"has_premium_tech_support\", \"dataType\": \"Integer\"}, {\"name\": \"has_streaming_tv\", \"dataType\": \"Integer\"}, {\"name\": \"has_streaming_movies\", \"dataType\": \"Integer\"}, {\"name\": \"has_streaming_music\", \"dataType\": \"Integer\"}, {\"name\": \"has_unlimited_data\", \"dataType\": \"Integer\"}, {\"name\": \"has_paperless_billing\", \"dataType\": \"Integer\"}, {\"name\": \"churn_label\", \"dataType\": \"Integer\"}, {\"name\": \"contract_type_encoded\", \"dataType\": \"Integer\"}, {\"name\": \"payment_method_encoded\", \"dataType\": \"Integer\"}, {\"name\": \"internet_type_encoded\", \"dataType\": \"Integer\"}]"
+          }, {
+            "name" : "rules",
+            "value" : "[{\"input_column\": \"age_numeric\", \"output_column\": \"age_group\", \"rule_condition\": \"< 25\", \"rule_output_value\": \"'Young'\"}, {\"input_column\": \"age_numeric\", \"output_column\": \"age_group\", \"rule_condition\": \"<45\", \"rule_output_value\": \"'Middle'\"}, {\"input_column\": \"age_numeric\", \"output_column\": \"age_group\", \"rule_condition\": \"<65\", \"rule_output_value\": \"'Senior'\"}, {\"input_column\": \"age_numeric\", \"output_column\": \"age_group\", \"rule_condition\": \">=65\", \"rule_output_value\": \"'Elderly'\"}]"
+          } ]
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "jCmoXaydLBrzWHMuDsj7H$$U5kp9MPRqvpdqwQjjbc0D",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "1SBR-MNKsjcu8MpK71iJ0$$riKNurDZlC7HujSwb8A2Z",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      },
+      "componentInfo" : {
+        "gemId" : "BRE_SQL_Gem_Hackathon_Telco_Churn",
+        "name" : "BRE_SQL_Gem",
+        "projectName" : "Hackathon_Telco_Churn",
+        "sourceProjectName" : "Hackathon_Telco_Churn"
+      }
+    },
+    "inf_renamed_colu##UgZsbjGh" : {
+      "id" : "inf_renamed_colu##UgZsbjGh",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "inf_renamed_columns",
+        "x" : 420,
+        "y" : 120,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ "RR82jSgI##Customer ID", "RR82jSgI##Gender", "RR82jSgI##Age", "RR82jSgI##Married", "RR82jSgI##Number of Dependents", "RR82jSgI##City", "RR82jSgI##Zip Code", "RR82jSgI##Latitude", "RR82jSgI##Longitude", "RR82jSgI##Number of Referrals", "RR82jSgI##Tenure in Months", "RR82jSgI##Offer", "RR82jSgI##Phone Service", "RR82jSgI##Avg Monthly Long Distance Charges", "RR82jSgI##Multiple Lines", "RR82jSgI##Internet Service", "RR82jSgI##Internet Type", "RR82jSgI##Avg Monthly GB Download", "RR82jSgI##Online Security", "RR82jSgI##Online Backup", "RR82jSgI##Device Protection Plan", "RR82jSgI##Premium Tech Support", "RR82jSgI##Streaming TV", "RR82jSgI##Streaming Movies", "RR82jSgI##Streaming Music", "RR82jSgI##Unlimited Data", "RR82jSgI##Contract", "RR82jSgI##Paperless Billing", "RR82jSgI##Payment Method", "RR82jSgI##Monthly Charge", "RR82jSgI##Total Charges", "RR82jSgI##Total Refunds", "RR82jSgI##Total Extra Data Charges", "RR82jSgI##Total Long Distance Charges", "RR82jSgI##Total Revenue", "RR82jSgI##Customer Status", "RR82jSgI##Churn Category", "RR82jSgI##Churn Reason" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "`Customer ID`"
+          },
+          "alias" : "customer_id",
+          "_row_id" : "1534275494"
+        }, {
+          "expression" : {
+            "expression" : "`Gender`"
+          },
+          "alias" : "gender",
+          "_row_id" : "1551006271"
+        }, {
+          "expression" : {
+            "expression" : "`Age`"
+          },
+          "alias" : "age_numeric",
+          "_row_id" : "1562401846"
+        }, {
+          "expression" : {
+            "expression" : "`Married`"
+          },
+          "alias" : "married",
+          "_row_id" : "794435361"
+        }, {
+          "expression" : {
+            "expression" : "`Number of Dependents`"
+          },
+          "alias" : "number_of_dependents",
+          "_row_id" : "1605919028"
+        }, {
+          "expression" : {
+            "expression" : "`City`"
+          },
+          "alias" : "city",
+          "_row_id" : "1959583366"
+        }, {
+          "expression" : {
+            "expression" : "`Zip Code`"
+          },
+          "alias" : "zip_code",
+          "_row_id" : "1699420962"
+        }, {
+          "expression" : {
+            "expression" : "`Latitude`"
+          },
+          "alias" : "latitude",
+          "_row_id" : "648079745"
+        }, {
+          "expression" : {
+            "expression" : "`Longitude`"
+          },
+          "alias" : "longitude",
+          "_row_id" : "172470959"
+        }, {
+          "expression" : {
+            "expression" : "`Number of Referrals`"
+          },
+          "alias" : "number_of_referrals",
+          "_row_id" : "701901088"
+        }, {
+          "expression" : {
+            "expression" : "`Tenure in Months`"
+          },
+          "alias" : "tenure_in_months",
+          "_row_id" : "270816856"
+        }, {
+          "expression" : {
+            "expression" : "`Offer`"
+          },
+          "alias" : "offer",
+          "_row_id" : "640079680"
+        }, {
+          "expression" : {
+            "expression" : "`Phone Service`"
+          },
+          "alias" : "phone_service",
+          "_row_id" : "1506036453"
+        }, {
+          "expression" : {
+            "expression" : "`Avg Monthly Long Distance Charges`"
+          },
+          "alias" : "avg_monthly_long_distance_charges",
+          "_row_id" : "1033643176"
+        }, {
+          "expression" : {
+            "expression" : "`Multiple Lines`"
+          },
+          "alias" : "multiple_lines",
+          "_row_id" : "699753984"
+        }, {
+          "expression" : {
+            "expression" : "`Internet Service`"
+          },
+          "alias" : "internet_service",
+          "_row_id" : "68210363"
+        }, {
+          "expression" : {
+            "expression" : "`Internet Type`"
+          },
+          "alias" : "internet_type",
+          "_row_id" : "998928984"
+        }, {
+          "expression" : {
+            "expression" : "`Avg Monthly GB Download`"
+          },
+          "alias" : "avg_monthly_gb_download",
+          "_row_id" : "1334949491"
+        }, {
+          "expression" : {
+            "expression" : "`Online Security`"
+          },
+          "alias" : "online_security",
+          "_row_id" : "690232871"
+        }, {
+          "expression" : {
+            "expression" : "`Online Backup`"
+          },
+          "alias" : "online_backup",
+          "_row_id" : "1710539523"
+        }, {
+          "expression" : {
+            "expression" : "`Device Protection Plan`"
+          },
+          "alias" : "device_protection_plan",
+          "_row_id" : "2143911803"
+        }, {
+          "expression" : {
+            "expression" : "`Premium Tech Support`"
+          },
+          "alias" : "premium_tech_support",
+          "_row_id" : "1786600137"
+        }, {
+          "expression" : {
+            "expression" : "`Streaming TV`"
+          },
+          "alias" : "streaming_tv",
+          "_row_id" : "568540054"
+        }, {
+          "expression" : {
+            "expression" : "`Streaming Movies`"
+          },
+          "alias" : "streaming_movies",
+          "_row_id" : "1261058952"
+        }, {
+          "expression" : {
+            "expression" : "`Streaming Music`"
+          },
+          "alias" : "streaming_music",
+          "_row_id" : "1396804083"
+        }, {
+          "expression" : {
+            "expression" : "`Unlimited Data`"
+          },
+          "alias" : "unlimited_data",
+          "_row_id" : "1574197338"
+        }, {
+          "expression" : {
+            "expression" : "`Contract`"
+          },
+          "alias" : "contract",
+          "_row_id" : "172237851"
+        }, {
+          "expression" : {
+            "expression" : "`Paperless Billing`"
+          },
+          "alias" : "paperless_billing",
+          "_row_id" : "1871724966"
+        }, {
+          "expression" : {
+            "expression" : "`Payment Method`"
+          },
+          "alias" : "payment_method",
+          "_row_id" : "471619708"
+        }, {
+          "expression" : {
+            "expression" : "`Monthly Charge`"
+          },
+          "alias" : "monthly_charge",
+          "_row_id" : "252083707"
+        }, {
+          "expression" : {
+            "expression" : "`Total Charges`"
+          },
+          "alias" : "total_charges",
+          "_row_id" : "784049728"
+        }, {
+          "expression" : {
+            "expression" : "`Total Refunds`"
+          },
+          "alias" : "total_refunds",
+          "_row_id" : "907464601"
+        }, {
+          "expression" : {
+            "expression" : "`Total Extra Data Charges`"
+          },
+          "alias" : "total_extra_data_charges",
+          "_row_id" : "1911756757"
+        }, {
+          "expression" : {
+            "expression" : "`Total Long Distance Charges`"
+          },
+          "alias" : "total_long_distance_charges",
+          "_row_id" : "1699448853"
+        }, {
+          "expression" : {
+            "expression" : "`Total Revenue`"
+          },
+          "alias" : "total_revenue",
+          "_row_id" : "1167775758"
+        }, {
+          "expression" : {
+            "expression" : "`Customer Status`"
+          },
+          "alias" : "customer_status",
+          "_row_id" : "1519744126"
+        }, {
+          "expression" : {
+            "expression" : "`Churn Category`"
+          },
+          "alias" : "churn_category",
+          "_row_id" : "1698518940"
+        }, {
+          "expression" : {
+            "expression" : "`Churn Reason`"
+          },
+          "alias" : "churn_reason",
+          "_row_id" : "1701263314"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "RR82jSgI",
+          "slug" : "inf_cleaned_data"
+        } ],
+        "outputs" : [ {
+          "id" : "Pf9LzNxO",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "inf_derived_feat##zdFFPRGV" : {
+      "id" : "inf_derived_feat##zdFFPRGV",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "inf_derived_features",
+        "x" : 1020,
+        "y" : 20,
+        "phase" : 0,
+        "comment" : "Calculates customer revenue trends, service usage, refund rates, and classifies customers by how long they have stayed.",
+        "autoUpdateComment" : true
+      },
+      "properties" : {
+        "columnsSelector" : [ "ZcHKuZbg##tenure_in_months", "ZcHKuZbg##total_revenue", "ZcHKuZbg##total_charges", "ZcHKuZbg##total_refunds", "ZcHKuZbg##has_phone_service", "ZcHKuZbg##has_internet_service", "ZcHKuZbg##has_online_security", "ZcHKuZbg##has_online_backup", "ZcHKuZbg##has_device_protection", "ZcHKuZbg##has_premium_tech_support", "ZcHKuZbg##has_streaming_tv", "ZcHKuZbg##has_streaming_movies", "ZcHKuZbg##has_streaming_music", "ZcHKuZbg##has_unlimited_data" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "*"
+          },
+          "_row_id" : "577379072"
+        }, {
+          "expression" : {
+            "expression" : "CASE\n  WHEN tenure_in_months > 0\n    THEN ROUND(total_revenue / tenure_in_months, 2)\n  ELSE 0\nEND"
+          },
+          "alias" : "avg_revenue_per_month",
+          "_row_id" : "254413352"
+        }, {
+          "expression" : {
+            "expression" : "CASE\n  WHEN total_revenue > 0\n    THEN ROUND(total_charges / total_revenue, 4)\n  ELSE 0\nEND"
+          },
+          "alias" : "charges_to_revenue_ratio",
+          "_row_id" : "2076859068"
+        }, {
+          "expression" : {
+            "expression" : "CASE\n  WHEN total_charges > 0\n    THEN ROUND(total_refunds / total_charges, 4)\n  ELSE 0\nEND"
+          },
+          "alias" : "refund_rate",
+          "_row_id" : "1131364048"
+        }, {
+          "expression" : {
+            "expression" : "(\n  has_phone_service\n  + has_internet_service\n  + has_online_security\n  + has_online_backup\n  + has_device_protection\n  + has_premium_tech_support\n  + has_streaming_tv\n  + has_streaming_movies\n  + has_streaming_music\n  + has_unlimited_data\n)"
+          },
+          "alias" : "total_services_count",
+          "_row_id" : "1249368104"
+        }, {
+          "expression" : {
+            "expression" : "CASE\n  WHEN tenure_in_months <= 6\n    THEN 'New'\n  WHEN tenure_in_months <= 24\n    THEN 'Growing'\n  WHEN tenure_in_months <= 48\n    THEN 'Established'\n  ELSE 'Loyal'\nEND"
+          },
+          "alias" : "tenure_category",
+          "_row_id" : "168699156"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "ZcHKuZbg",
+          "slug" : "inf_categorical_encoding"
+        } ],
+        "outputs" : [ {
+          "id" : "HRRavzqU",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "inf_categorical_##oWj4QRq3" : {
+      "id" : "inf_categorical_##oWj4QRq3",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "inf_categorical_encoding",
+        "x" : 820,
+        "y" : 120,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ "Ixm757NK##contract", "Ixm757NK##payment_method", "Ixm757NK##internet_type" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "*"
+          },
+          "_row_id" : "262984244"
+        }, {
+          "expression" : {
+            "expression" : "CASE\n  WHEN UPPER(contract) LIKE '%MONTH-TO-MONTH%'\n    THEN 0\n  WHEN UPPER(contract) LIKE '%ONE YEAR%'\n    THEN 1\n  WHEN UPPER(contract) LIKE '%TWO YEAR%'\n    THEN 2\n  ELSE 0\nEND"
+          },
+          "alias" : "contract_type_encoded",
+          "_row_id" : "791909966"
+        }, {
+          "expression" : {
+            "expression" : "CASE\n  WHEN UPPER(payment_method) LIKE '%BANK%'\n    THEN 1\n  WHEN UPPER(payment_method) LIKE '%CREDIT%'\n    THEN 2\n  WHEN UPPER(payment_method) LIKE '%MAILED%'\n    THEN 0\n  ELSE 0\nEND"
+          },
+          "alias" : "payment_method_encoded",
+          "_row_id" : "1266793012"
+        }, {
+          "expression" : {
+            "expression" : "CASE\n  WHEN internet_type IS NULL OR UPPER(internet_type) = 'NONE' OR UPPER(internet_type) = 'UNKNOWN'\n    THEN 0\n  WHEN UPPER(internet_type) LIKE '%DSL%'\n    THEN 1\n  WHEN UPPER(internet_type) LIKE '%FIBER%'\n    THEN 2\n  WHEN UPPER(internet_type) LIKE '%CABLE%'\n    THEN 3\n  ELSE 0\nEND"
+          },
+          "alias" : "internet_type_encoded",
+          "_row_id" : "1793148027"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Ixm757NK",
+          "slug" : "inf_binary_features"
+        } ],
+        "outputs" : [ {
+          "id" : "iCCA2NpF",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "inf_binary_featu##y3fPfz6n" : {
+      "id" : "inf_binary_featu##y3fPfz6n",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "inf_binary_features",
+        "x" : 620,
+        "y" : 120,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ "BFF20MyI##married", "BFF20MyI##phone_service", "BFF20MyI##internet_service", "BFF20MyI##online_security", "BFF20MyI##online_backup", "BFF20MyI##device_protection_plan", "BFF20MyI##premium_tech_support", "BFF20MyI##streaming_tv", "BFF20MyI##streaming_movies", "BFF20MyI##streaming_music", "BFF20MyI##unlimited_data", "BFF20MyI##paperless_billing", "BFF20MyI##customer_status" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "*"
+          },
+          "_row_id" : "2144687554"
+        }, {
+          "expression" : {
+            "expression" : "CASE\n  WHEN UPPER(married) = 'YES'\n    THEN 1\n  ELSE 0\nEND"
+          },
+          "alias" : "is_married",
+          "_row_id" : "1022897283"
+        }, {
+          "expression" : {
+            "expression" : "CASE\n  WHEN UPPER(phone_service) = 'YES'\n    THEN 1\n  ELSE 0\nEND"
+          },
+          "alias" : "has_phone_service",
+          "_row_id" : "932211491"
+        }, {
+          "expression" : {
+            "expression" : "CASE\n  WHEN UPPER(internet_service) = 'YES'\n    THEN 1\n  ELSE 0\nEND"
+          },
+          "alias" : "has_internet_service",
+          "_row_id" : "58212453"
+        }, {
+          "expression" : {
+            "expression" : "CASE\n  WHEN UPPER(online_security) = 'YES'\n    THEN 1\n  ELSE 0\nEND"
+          },
+          "alias" : "has_online_security",
+          "_row_id" : "227322394"
+        }, {
+          "expression" : {
+            "expression" : "CASE\n  WHEN UPPER(online_backup) = 'YES'\n    THEN 1\n  ELSE 0\nEND"
+          },
+          "alias" : "has_online_backup",
+          "_row_id" : "2011152110"
+        }, {
+          "expression" : {
+            "expression" : "CASE\n  WHEN UPPER(device_protection_plan) = 'YES'\n    THEN 1\n  ELSE 0\nEND"
+          },
+          "alias" : "has_device_protection",
+          "_row_id" : "2145997652"
+        }, {
+          "expression" : {
+            "expression" : "CASE\n  WHEN UPPER(premium_tech_support) = 'YES'\n    THEN 1\n  ELSE 0\nEND"
+          },
+          "alias" : "has_premium_tech_support",
+          "_row_id" : "1560946283"
+        }, {
+          "expression" : {
+            "expression" : "CASE\n  WHEN UPPER(streaming_tv) = 'YES'\n    THEN 1\n  ELSE 0\nEND"
+          },
+          "alias" : "has_streaming_tv",
+          "_row_id" : "1027653048"
+        }, {
+          "expression" : {
+            "expression" : "CASE\n  WHEN UPPER(streaming_movies) = 'YES'\n    THEN 1\n  ELSE 0\nEND"
+          },
+          "alias" : "has_streaming_movies",
+          "_row_id" : "264917017"
+        }, {
+          "expression" : {
+            "expression" : "CASE\n  WHEN UPPER(streaming_music) = 'YES'\n    THEN 1\n  ELSE 0\nEND"
+          },
+          "alias" : "has_streaming_music",
+          "_row_id" : "1640075603"
+        }, {
+          "expression" : {
+            "expression" : "CASE\n  WHEN UPPER(unlimited_data) = 'YES'\n    THEN 1\n  ELSE 0\nEND"
+          },
+          "alias" : "has_unlimited_data",
+          "_row_id" : "562245525"
+        }, {
+          "expression" : {
+            "expression" : "CASE\n  WHEN UPPER(paperless_billing) = 'YES'\n    THEN 1\n  ELSE 0\nEND"
+          },
+          "alias" : "has_paperless_billing",
+          "_row_id" : "1598547826"
+        }, {
+          "expression" : {
+            "expression" : "CASE\n  WHEN UPPER(customer_status) = 'CHURNED'\n    THEN 1\n  ELSE 0\nEND"
+          },
+          "alias" : "churn_label",
+          "_row_id" : "1433871996"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "BFF20MyI",
+          "slug" : "inf_renamed_columns"
+        } ],
+        "outputs" : [ {
+          "id" : "fMYLXtYH",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "Tzcyoi3i19" : {
+      "id" : "Tzcyoi3i19",
+      "component" : "Visualize",
+      "metadata" : {
+        "label" : "churn_predictions_detail",
+        "x" : 1620,
+        "y" : 220,
+        "phase" : 0
+      },
+      "properties" : {
+        "description" : null,
+        "label" : null
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "guRnpwcxqX",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ ],
+        "isCustomOutputSchema" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "OFWfQ1xWtJ_to_guRnpwcxqX",
+    "source" : "1hbopgrCg9",
+    "sourcePort" : "OFWfQ1xWtJ",
+    "target" : "Tzcyoi3i19",
+    "targetPort" : "guRnpwcxqX"
+  }, {
+    "id" : "OFWfQ1xWtJ_to_Atf7RKFviV",
+    "source" : "1hbopgrCg9",
+    "sourcePort" : "OFWfQ1xWtJ",
+    "target" : "m1I2VSpASN",
+    "targetPort" : "Atf7RKFviV"
+  }, {
+    "id" : "Hf1kLl7z",
+    "source" : "inf_telecom_cust##HpxlFxcl",
+    "sourcePort" : "fSywCLCr",
+    "target" : "inf_cleaned_data##PB2orZIw",
+    "targetPort" : "o7agYBJj",
+    "isWireless" : false
+  }, {
+    "id" : "FQW9z53U",
+    "source" : "inf_cleaned_data##PB2orZIw",
+    "sourcePort" : "iJx39dOz",
+    "target" : "inf_renamed_colu##UgZsbjGh",
+    "targetPort" : "RR82jSgI",
+    "isWireless" : false
+  }, {
+    "id" : "FGt5Ou5K",
+    "source" : "inf_renamed_colu##UgZsbjGh",
+    "sourcePort" : "Pf9LzNxO",
+    "target" : "inf_binary_featu##y3fPfz6n",
+    "targetPort" : "BFF20MyI",
+    "isWireless" : false
+  }, {
+    "id" : "GpMjAwk2",
+    "source" : "inf_binary_featu##y3fPfz6n",
+    "sourcePort" : "fMYLXtYH",
+    "target" : "inf_categorical_##oWj4QRq3",
+    "targetPort" : "Ixm757NK",
+    "isWireless" : false
+  }, {
+    "id" : "FCtIXvIGlW_to_EWNUbjtdlV",
+    "source" : "inf_categorical_##oWj4QRq3",
+    "sourcePort" : "iCCA2NpF",
+    "target" : "inf_derived_feat##zdFFPRGV",
+    "targetPort" : "ZcHKuZbg"
+  }, {
+    "id" : "68U03nODnxvMm09Q1SWdB",
+    "source" : "inf_categorical_##oWj4QRq3",
+    "sourcePort" : "iCCA2NpF",
+    "target" : "BdRFs_DnQW6mJRlIYZ00n$$uN7UYt89SkcJxqk7XPL0c",
+    "targetPort" : "jCmoXaydLBrzWHMuDsj7H$$U5kp9MPRqvpdqwQjjbc0D"
+  }, {
+    "id" : "YtSedvZIL4tpLh4ffTTC1$$OuZCZvic_diV0dpqS3yi9",
+    "source" : "BdRFs_DnQW6mJRlIYZ00n$$uN7UYt89SkcJxqk7XPL0c",
+    "sourcePort" : "1SBR-MNKsjcu8MpK71iJ0$$riKNurDZlC7HujSwb8A2Z",
+    "target" : "akrPF-Ov2jSYn6mD1FSTR$$4nZeU1bL0KIJJuUD1nUHZ",
+    "targetPort" : "eYwEyYBN8tWeNJjpUFZfq$$N7fB_Nccqg1Rxm6vRQtGv"
+  }, {
+    "id" : "3j4Musow6Qmn_qhru_sew",
+    "source" : "inf_derived_feat##zdFFPRGV",
+    "sourcePort" : "HRRavzqU",
+    "target" : "akrPF-Ov2jSYn6mD1FSTR$$4nZeU1bL0KIJJuUD1nUHZ",
+    "targetPort" : "_1ki1MTVtYABFUoT6gne4$$cCcZvrY4VVaulOsUTEF0V"
+  }, {
+    "id" : "KGnxBDvloLGPtSckdqz0v",
+    "source" : "akrPF-Ov2jSYn6mD1FSTR$$4nZeU1bL0KIJJuUD1nUHZ",
+    "sourcePort" : "SqBsx6s5BIGjWJD1oeqgL$$MggNzVOgaP7hIsNcpJyOe",
+    "target" : "1hbopgrCg9",
+    "targetPort" : "kAnasIdxzd"
+  } ],
+  "component" : "Pipeline"
+}
